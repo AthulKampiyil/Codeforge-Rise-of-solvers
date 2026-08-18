@@ -1,0 +1,43 @@
+# Development environment — mirrors SADD 11.1:
+# single FastAPI instance, single Postgres + Redis container,
+# mocked judge adapters (set JUDGE_MODE=mock in .env).
+version: "3.9"
+services:
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports: ["8000:8000"]
+    env_file: .env
+    depends_on: [postgres, redis]
+    volumes: ["./backend/app:/app/app"]
+
+  worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.worker
+    env_file: .env
+    depends_on: [postgres, redis]
+
+  frontend:
+    build: ./frontend
+    ports: ["5173:5173"]
+    env_file: .env
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: codeforge
+      POSTGRES_USER: codeforge
+      POSTGRES_PASSWORD: codeforge
+    ports: ["5432:5432"]
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+    # No volume by default — SADD 11.1 (v1.1): Redis is not a durable
+    # store for gameplay state; safe to lose on restart.
+
+volumes:
+  pgdata:

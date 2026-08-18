@@ -1,0 +1,1 @@
+// App entrypoint — router + providers.
