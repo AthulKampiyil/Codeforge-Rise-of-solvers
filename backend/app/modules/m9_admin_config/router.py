@@ -7,4 +7,9 @@ from fastapi import APIRouter
 
 router = APIRouter(prefix="/admin_config", tags=["m9_admin_config"])
 
-# TODO: define endpoints per SRS REQ-IDs mapped to this module (see SADD 4.2)
+
+@router.get("/")
+def get_admin_config():
+    """Stub: Get admin configuration (TODO Sprint 2)."""
+    return {"message": "Admin configuration coming in Sprint 2"}
+
