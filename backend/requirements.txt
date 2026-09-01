@@ -5,8 +5,10 @@ alembic
 psycopg2-binary
 redis
 pydantic-settings
+pydantic[email]
 python-jose[cryptography]
 passlib[bcrypt]
 websockets
 httpx
 pytest
+

@@ -7,4 +7,9 @@ from fastapi import APIRouter
 
 router = APIRouter(prefix="/war_room", tags=["m6_war_room"])
 
-# TODO: define endpoints per SRS REQ-IDs mapped to this module (see SADD 4.2)
+
+@router.get("/")
+def get_war_room():
+    """Stub: Get guild war room (TODO Sprint 2)."""
+    return {"message": "Guild war room coming in Sprint 2"}
+
