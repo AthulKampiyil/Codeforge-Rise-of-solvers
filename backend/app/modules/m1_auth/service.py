@@ -61,7 +61,7 @@ class AuthService:
         """
         # Check if already linked
         existing = self.judge_repo.get_by_user_and_judge(user_id, judge_name)
-        if existing and existing.verified:
+        if existing:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail=f"Already linked to {judge_name.value}"

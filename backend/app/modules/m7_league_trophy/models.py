@@ -3,8 +3,8 @@ import uuid
 import enum
 from datetime import datetime
 from sqlalchemy import Column, String, Integer, DateTime, ForeignKey, Enum, Float
-from sqlalchemy.dialects.postgresql import UUID
-from app.db.base import Base
+from app.db.guid import GUID
+from app.db.base_class import Base
 
 
 class LeagueTier(str, enum.Enum):
@@ -21,8 +21,8 @@ class Trophy(Base):
     """Trophy earned by user (REQ-7.x)."""
     __tablename__ = "trophies"
 
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    user_id = Column(UUID(as_uuid=True), ForeignKey("users.id"), nullable=False, index=True)
+    id = Column(GUID, primary_key=True, default=uuid.uuid4)
+    user_id = Column(GUID, ForeignKey("users.id"), nullable=False, index=True)
     tier = Column(Enum(LeagueTier), nullable=False)
     points = Column(Integer, default=0, nullable=False)  # Points in current tier
     trophy_count = Column(Integer, default=0, nullable=False)  # Trophies earned
@@ -30,7 +30,6 @@ class Trophy(Base):
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
 
-# Trophy thresholds (tunable placeholders for Sprint 2)
 TROPHY_THRESHOLDS = {
     LeagueTier.bronze: {"min_points": 0, "max_points": 100},
     LeagueTier.silver: {"min_points": 100, "max_points": 250},
@@ -39,4 +38,3 @@ TROPHY_THRESHOLDS = {
     LeagueTier.diamond: {"min_points": 1000, "max_points": 2000},
     LeagueTier.legend: {"min_points": 2000, "max_points": 99999},
 }
-

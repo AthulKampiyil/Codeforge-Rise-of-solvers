@@ -7,18 +7,33 @@ from jose import JWTError, jwt
 from fastapi import HTTPException, status
 from app.core.config import settings
 
+import bcrypt
+
+# Patch bcrypt for passlib compatibility with bcrypt >= 4.1.0
+if not hasattr(bcrypt, '__about__'):
+    bcrypt.__about__ = type('about', (), {'__version__': getattr(bcrypt, '__version__', '4.1.0')})
+
+_original_hashpw = bcrypt.hashpw
+def _safe_hashpw(password: bytes, salt: bytes) -> bytes:
+    if isinstance(password, bytes) and len(password) > 72:
+        password = password[:72]
+    return _original_hashpw(password, salt)
+bcrypt.hashpw = _safe_hashpw
+
 # Password hashing context (bcrypt per NFR-3.2)
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
 def hash_password(password: str) -> str:
     """Hash a plaintext password with bcrypt (NFR-3.2)."""
-    return pwd_context.hash(password)
+    pwd_str = password.encode('utf-8')[:72].decode('utf-8', errors='ignore')
+    return pwd_context.hash(pwd_str)
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
     """Verify a plaintext password against a hashed one."""
-    return pwd_context.verify(plain_password, hashed_password)
+    pwd_str = plain_password.encode('utf-8')[:72].decode('utf-8', errors='ignore')
+    return pwd_context.verify(pwd_str, hashed_password)
 
 
 def create_access_token(user_id: UUID | str, expires_delta: timedelta | None = None) -> str:

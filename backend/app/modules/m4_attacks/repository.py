@@ -2,7 +2,7 @@
 
 Owns: all direct DB queries for this module's tables.
 """
-from typing import List, Optional
+from typing import List, Optional, Any
 from datetime import datetime
 from sqlalchemy.orm import Session
 from app.modules.m4_attacks.models import Attack, AttackStatus, AttackCooldown
@@ -26,15 +26,26 @@ class AttackRepository:
             Attack.defender_user_id == user_id
         ).order_by(Attack.created_at.desc()).limit(limit).all()
 
-    def create_attack(self, attacker_user_id: str, defender_user_id: str, challenge_topic: Optional[str] = None) -> Attack:
+    def create_attack(
+        self,
+        attacker_user_id: str,
+        defender_user_id: str,
+        challenge_topic: Optional[str] = None,
+        attack_id: Optional[Any] = None
+    ) -> Attack:
         """Create a new attack record."""
-        attack = Attack(
-            attacker_user_id=attacker_user_id,
-            defender_user_id=defender_user_id,
-            challenge_topic=challenge_topic
-        )
+        kwargs = {
+            "attacker_user_id": attacker_user_id,
+            "defender_user_id": defender_user_id,
+            "challenge_topic": challenge_topic
+        }
+        if attack_id is not None:
+            kwargs["id"] = attack_id
+
+        attack = Attack(**kwargs)
         self.db.add(attack)
         self.db.commit()
+        self.db.refresh(attack)
         return attack
 
     def update_attack_status(self, attack_id: str, status: AttackStatus, score: int = 0):
@@ -46,6 +57,7 @@ class AttackRepository:
             if status in [AttackStatus.success, AttackStatus.failed]:
                 attack.resolved_at = datetime.utcnow()
             self.db.commit()
+            self.db.refresh(attack)
         return attack
 
 
@@ -66,14 +78,25 @@ class AttackCooldownRepository:
         cooldown = AttackCooldown(user_id=user_id, cooldown_minutes=cooldown_minutes)
         self.db.add(cooldown)
         self.db.commit()
+        self.db.refresh(cooldown)
         return cooldown
 
     def update_last_attack(self, user_id: str):
         """Update last attack timestamp."""
         cooldown = self.get_cooldown(user_id)
-        if cooldown:
-            cooldown.last_attack_at = datetime.utcnow()
-            self.db.commit()
-        else:
-            self.create_cooldown(user_id)
+        if not cooldown:
+            cooldown = self.create_cooldown(user_id)
+        cooldown.last_attack_at = datetime.utcnow()
+        self.db.commit()
+        self.db.refresh(cooldown)
+        return cooldown
 
+    def update_last_attack_at(self, user_id: str, last_attack_at: Optional[datetime] = None):
+        """Update last_attack_at timestamp directly."""
+        cooldown = self.get_cooldown(user_id)
+        if not cooldown:
+            cooldown = self.create_cooldown(user_id)
+        cooldown.last_attack_at = last_attack_at or datetime.utcnow()
+        self.db.commit()
+        self.db.refresh(cooldown)
+        return cooldown

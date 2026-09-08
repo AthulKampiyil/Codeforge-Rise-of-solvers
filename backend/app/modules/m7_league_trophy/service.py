@@ -37,10 +37,10 @@ class LeagueService:
 
         Uses TROPHY_THRESHOLDS dictionary to determine tier.
         """
-        for tier, thresholds in sorted(TROPHY_THRESHOLDS.items(), key=lambda x: x[1]["min_points"]):
-            if thresholds["min_points"] <= points <= thresholds["max_points"]:
+        for tier, thresholds in sorted(TROPHY_THRESHOLDS.items(), key=lambda x: x[1]["min_points"], reverse=True):
+            if points >= thresholds["min_points"]:
                 return tier
-        return LeagueTier.legend
+        return LeagueTier.bronze
 
     def add_points(self, user_id: str, points: int) -> Optional[Trophy]:
         """

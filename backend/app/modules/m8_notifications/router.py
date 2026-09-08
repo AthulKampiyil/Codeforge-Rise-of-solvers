@@ -56,21 +56,7 @@ def mark_notification_read(
         return {"error": "Invalid notification ID"}
 
 
-@router.websocket("/ws")
-async def websocket_endpoint(websocket: WebSocket, token: str = Query(None)):
-    """WebSocket endpoint for realtime notifications.
-    
-    Authentication:
-    - Pass JWT token via query param: ws://localhost:8000/notifications/ws?token=<token>
-    - Or via Authorization header
-    
-    Events broadcasted:
-    - attack_received: {"event_type": "attack_received", "attacker_id": "...", ...}
-    - attack_resolved: {"event_type": "attack_resolved", "success": true, ...}
-    - territory_lost: {"event_type": "territory_lost", "zone_name": "...", ...}
-    - league_promotion: {"event_type": "league_promotion", "new_tier": "gold", ...}
-    """
-    # Verify token and get user
+async def handle_ws_session(websocket: WebSocket, token: str):
     if not token:
         await websocket.close(code=1008, reason="Token required")
         return
@@ -86,8 +72,6 @@ async def websocket_endpoint(websocket: WebSocket, token: str = Query(None)):
 
     await websocket.accept()
 
-    # Register connection
-    from app.db.session import get_db
     for db in get_db():
         service = NotificationService(db)
         connection_record = service.register_connection(user_id, websocket, f"ws-{user_id}")
@@ -95,16 +79,16 @@ async def websocket_endpoint(websocket: WebSocket, token: str = Query(None)):
 
     try:
         while True:
-            # Keep connection alive and listen for client messages
             data = await websocket.receive_text()
-            
-            # Echo received message (for keepalive/ping)
             if data == "ping":
                 await websocket.send_text("pong")
-
     except WebSocketDisconnect:
-        # Unregister connection on disconnect
         service.unregister_connection(user_id, websocket)
     except Exception:
         service.unregister_connection(user_id, websocket)
 
+
+@router.websocket("/ws")
+async def websocket_endpoint(websocket: WebSocket, token: str = Query(None)):
+    """WebSocket endpoint for realtime notifications (/notifications/ws)."""
+    await handle_ws_session(websocket, token)

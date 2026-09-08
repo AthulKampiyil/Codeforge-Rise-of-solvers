@@ -3,7 +3,7 @@
 FastAPI route definitions for guild management.
 Owns: HTTP-facing endpoints only. Delegate business logic to service.py.
 """
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, status
 from typing import Annotated, List
 from sqlalchemy.orm import Session
 from app.core.dependencies import get_current_user
@@ -17,7 +17,7 @@ from app.modules.m5_guild_territory.schemas import (
 router = APIRouter(prefix="/guilds", tags=["m5_guild_territory"])
 
 
-@router.post("", response_model=GuildOut, status_code=201)
+@router.post("", response_model=GuildOut, status_code=status.HTTP_201_CREATED)
 def create_guild(
     guild_data: GuildCreate,
     current_user: Annotated[User, Depends(get_current_user)],
@@ -64,6 +64,69 @@ def get_my_guild(
     return GuildDetailOut(**guild_dict)
 
 
+@router.post("/{guild_id}/join-request", status_code=201)
+def request_join_guild(
+    guild_id: str,
+    current_user: Annotated[User, Depends(get_current_user)],
+    db: Annotated[Session, Depends(get_db)]
+) -> dict:
+    """Submit a request to join a guild (REQ-5.2)."""
+    service = GuildService(db)
+    try:
+        req = service.request_to_join(guild_id, str(current_user.id))
+        return {"message": "Join request submitted", "request_id": str(req.id)}
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.get("/{guild_id}/requests")
+def list_join_requests(
+    guild_id: str,
+    current_user: Annotated[User, Depends(get_current_user)],
+    db: Annotated[Session, Depends(get_db)]
+) -> list:
+    """List pending join requests for a guild (Leader/Officer only)."""
+    service = GuildService(db)
+    membership = service.membership_repo.get_membership(guild_id, current_user.id)
+    if not membership or membership.role not in ["leader", "officer"]:
+        raise HTTPException(status_code=403, detail="Only leaders/officers can view join requests")
+    
+    reqs = service.get_pending_requests(guild_id)
+    return [{"id": str(r.id), "user_id": str(r.user_id), "status": r.status, "created_at": r.created_at.isoformat()} for r in reqs]
+
+
+@router.post("/{guild_id}/requests/{request_id}/approve")
+def approve_join_request(
+    guild_id: str,
+    request_id: str,
+    current_user: Annotated[User, Depends(get_current_user)],
+    db: Annotated[Session, Depends(get_db)]
+) -> dict:
+    """Approve a pending join request (REQ-5.2)."""
+    service = GuildService(db)
+    try:
+        membership = service.approve_join_request(request_id, str(current_user.id))
+        return {"message": "Join request approved", "membership_id": str(membership.id)}
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.post("/{guild_id}/requests/{request_id}/reject")
+def reject_join_request(
+    guild_id: str,
+    request_id: str,
+    current_user: Annotated[User, Depends(get_current_user)],
+    db: Annotated[Session, Depends(get_db)]
+) -> dict:
+    """Reject a pending join request (REQ-5.2)."""
+    service = GuildService(db)
+    try:
+        service.reject_join_request(request_id, str(current_user.id))
+        return {"message": "Join request rejected"}
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
 @router.get("/{guild_id}", response_model=GuildDetailOut)
 def get_guild(
     guild_id: str,
@@ -95,7 +158,6 @@ def add_guild_member(
     if not guild:
         raise HTTPException(status_code=404, detail="Guild not found")
 
-    # Check if current user is leader or officer
     membership = service.membership_repo.get_membership(guild.id, current_user.id)
     if not membership or membership.role not in ["leader", "officer"]:
         raise HTTPException(status_code=403, detail="Only leaders/officers can add members")
@@ -120,7 +182,6 @@ def remove_guild_member(
     if not guild:
         raise HTTPException(status_code=404, detail="Guild not found")
 
-    # Check if current user is leader or officer
     membership = service.membership_repo.get_membership(guild.id, current_user.id)
     if not membership or membership.role not in ["leader", "officer"]:
         raise HTTPException(status_code=403, detail="Only leaders/officers can remove members")
@@ -141,5 +202,3 @@ def get_all_zones(
     service = GuildService(db)
     zones = service.get_all_zones()
     return [TerritoryZoneOut.model_validate(z) for z in zones]
-
-

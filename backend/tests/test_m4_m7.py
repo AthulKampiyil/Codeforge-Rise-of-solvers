@@ -12,15 +12,14 @@ from app.modules.m4_attacks.service import AttackService
 from app.modules.m7_league_trophy.models import Trophy, LeagueTier, TROPHY_THRESHOLDS
 from app.modules.m7_league_trophy.repository import TrophyRepository
 from app.modules.m7_league_trophy.service import LeagueService
-from passlib.context import CryptContext
+from app.db.base import Base
+from app.core.security import hash_password
 
 # Setup: In-memory SQLite for testing
 DATABASE_URL = "sqlite:///:memory:"
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 Base.metadata.create_all(bind=engine)
 TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
 @pytest.fixture
@@ -44,7 +43,7 @@ def test_user(db: Session) -> User:
         id=uuid4(),
         username="testuser",
         email="test@example.com",
-        hashed_password=pwd_context.hash("password123"),
+        hashed_password=hash_password("password123"),
         is_active=True,
         is_admin=False
     )
@@ -61,7 +60,7 @@ def test_user2(db: Session) -> User:
         id=uuid4(),
         username="defender",
         email="defender@example.com",
-        hashed_password=pwd_context.hash("password123"),
+        hashed_password=hash_password("password123"),
         is_active=True,
         is_admin=False
     )
