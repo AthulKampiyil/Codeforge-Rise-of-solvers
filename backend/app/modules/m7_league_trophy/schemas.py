@@ -1,25 +1,24 @@
-"""League & Trophy Progression (REQ-7.x) — Pydantic request/response schemas."""
-from pydantic import BaseModel
+"""League & Trophy Progression (REQ-7.x) — Pydantic schemas."""
 from datetime import datetime
 
+from pydantic import BaseModel
 
-class TrophyOut(BaseModel):
-    """Trophy/league status response (REQ-7.x)."""
-    tier: str
-    points: int
+
+class LeagueProfileOut(BaseModel):
+    """REQ-7.4: current league, trophy count, progress."""
+    user_id: str
     trophy_count: int
+    league_tier: str
     updated_at: datetime
 
     class Config:
         from_attributes = True
 
 
-class LeagueStandingOut(BaseModel):
-    """User's position in league leaderboard (TODO Sprint 2)."""
+class LeaderboardEntryOut(BaseModel):
+    """REQ-7.5: global/guild leaderboard row."""
     user_id: str
     username: str
-    tier: str
-    points: int
     trophy_count: int
+    league_tier: str
     rank: int
-

@@ -3,125 +3,72 @@
 Owns: orchestration/business rules for this module.
 Cross-module calls must go through another module's service.py,
 never its repository.py or models.py directly (SADD 4.1 coupling rule).
+
+NOTE: Real matchmaking (SADD 7.3.1.1), problem curation (REQ-4.2), and
+Elo-based resolution (SADD 7.3.1.3) land in plan.md Phase 7. This file
+currently implements only the cooldown gate against the corrected
+schema (users.attack_cooldown_expires_at, SADD 7.2.1) so the endpoint
+shape is stable for the frontend to build against.
 """
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import List, Optional
+
 from sqlalchemy.orm import Session
-from app.modules.m4_attacks.models import Attack, AttackStatus, AttackCooldown
-from app.modules.m4_attacks.repository import AttackRepository, AttackCooldownRepository
-from app.modules.m1_auth.models import User
+
+from app.core.errors import CooldownActive, InvalidAttackTarget
+from app.modules.m4_attacks.models import Attack, AttackStatus
+from app.modules.m4_attacks.repository import AttackRepository, CooldownRepository
+
+DEFAULT_COOLDOWN_MINUTES = 60  # TODO (Phase 10): read from game_balance_config
 
 
 class AttackService:
-    """
-    Business logic for village attacks (REQ-4.1–4.4).
-
-    Responsibilities:
-    - Matchmaking (find attack targets)
-    - Attack resolution (simulated challenge)
-    - Cooldown management (prevent spam)
-    """
+    """Business logic for village attacks (REQ-4.1–4.4)."""
 
     def __init__(self, db: Session):
         self.db = db
         self.attack_repo = AttackRepository(db)
-        self.cooldown_repo = AttackCooldownRepository(db)
+        self.cooldown_repo = CooldownRepository(db)
 
     def find_attack_targets(self, user_id: str, limit: int = 10) -> List[dict]:
-        """
-        Find potential attack targets via matchmaking (REQ-4.2).
-
-        TODO (Sprint 2): Implement real strength-based matchmaking.
-        For Sprint 1: Return random users with non-zero solved_count.
-
-        Returns:
-            List of target users with stats
-        """
-        # TODO: Implement real matchmaking algorithm
-        # For now, return empty list (stub for Sprint 2)
+        """TODO (Phase 7): SADD 7.3.1.1 matchmaking band over VillageProfile.defense_rating."""
         return []
 
-    def start_attack(self, attacker_user_id: str, defender_user_id: str, challenge_topic: Optional[str] = None) -> Optional[Attack]:
-        """
-        Initiate an attack, checking cooldown (REQ-4.1, REQ-4.4).
-
-        Steps:
-        1. Check if attacker is on cooldown
-        2. If not on cooldown, create Attack record
-        3. Update attacker's last_attack_at
-        4. Return attack or error
-
-        Returns:
-            Attack object or None if cooldown active
-        """
-        if not self.can_attack(attacker_user_id):
-            return None
-
-        attack = self.attack_repo.create_attack(attacker_user_id, defender_user_id, challenge_topic)
-        self.cooldown_repo.update_last_attack(attacker_user_id)
-        return attack
-
-    def can_attack(self, user_id: str) -> bool:
-        """
-        Check if user is still on cooldown (REQ-4.4).
-
-        Returns:
-            True if user can attack, False if on cooldown
-        """
-        cooldown = self.cooldown_repo.get_cooldown(user_id)
-        if not cooldown or not cooldown.last_attack_at:
-            return True
-
-        elapsed = datetime.utcnow() - cooldown.last_attack_at
-        remaining = timedelta(minutes=cooldown.cooldown_minutes) - elapsed
-        return remaining.total_seconds() <= 0
-
     def get_cooldown_status(self, user_id: str) -> dict:
+        """Check cooldown against the PostgreSQL source of truth (SADD 7.2.1)."""
+        expires_at = self.cooldown_repo.get_cooldown_expiry(user_id)
+        now = datetime.now(timezone.utc)
+
+        if not expires_at or expires_at <= now:
+            return {"can_attack": True, "next_available_at": None}
+
+        return {"can_attack": False, "next_available_at": expires_at}
+
+    def start_attack(self, attacker_user_id: str, target_user_id: str) -> Attack:
         """
-        Get user's current cooldown status (REQ-4.4).
+        Launch an attack (REQ-4.1, REQ-4.4).
 
-        Returns:
-        {
-            "can_attack": bool,
-            "cooldown_minutes": int,
-            "next_available_at": ISO datetime or null
-        }
+        TODO (Phase 7): validate target via matchmaking, curate a real
+        problem set, and use the write-through Redis cache. For now
+        this performs the write-through cooldown update directly
+        against Postgres (correct, just not yet cached).
         """
-        cooldown = self.cooldown_repo.get_cooldown(user_id)
-        if not cooldown or not cooldown.last_attack_at:
-            return {
-                "can_attack": True,
-                "cooldown_minutes": cooldown.cooldown_minutes if cooldown else 30,
-                "next_available_at": None,
-            }
+        if attacker_user_id == target_user_id:
+            raise InvalidAttackTarget("Cannot attack yourself")
 
-        elapsed = datetime.utcnow() - cooldown.last_attack_at
-        remaining = timedelta(minutes=cooldown.cooldown_minutes) - elapsed
+        status = self.get_cooldown_status(attacker_user_id)
+        if not status["can_attack"]:
+            raise CooldownActive(
+                "You are on cooldown.",
+                next_available_at=status["next_available_at"].isoformat(),
+            )
 
-        if remaining.total_seconds() <= 0:
-            return {
-                "can_attack": True,
-                "cooldown_minutes": cooldown.cooldown_minutes,
-                "next_available_at": None,
-            }
-        else:
-            next_available = cooldown.last_attack_at + timedelta(minutes=cooldown.cooldown_minutes)
-            return {
-                "can_attack": False,
-                "cooldown_minutes": cooldown.cooldown_minutes,
-                "next_available_at": next_available.isoformat(),
-            }
+        cooldown_expires = datetime.now(timezone.utc) + timedelta(minutes=DEFAULT_COOLDOWN_MINUTES)
+        self.cooldown_repo.set_cooldown_expiry(attacker_user_id, cooldown_expires)
+
+        return self.attack_repo.create_attack(attacker_user_id, target_user_id)
 
     def resolve_attack(self, attack_id: str, success: bool, score: int = 0) -> Optional[Attack]:
-        """
-        Resolve an attack (success or failure) (REQ-4.1).
-
-        TODO (Sprint 2): Implement real challenge resolution.
-        For Sprint 1: Just mark as success/failed with placeholder score.
-
-        Returns:
-            Updated Attack object
-        """
-        status = AttackStatus.success if success else AttackStatus.failed
-        return self.attack_repo.update_attack_status(attack_id, status, score)
-
+        """TODO (Phase 7): SADD 7.3.1.3 Elo trophy calculation on resolution."""
+        status = AttackStatus.resolved
+        return self.attack_repo.update_status(attack_id, status, score)

@@ -25,8 +25,14 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-# Set database URL from environment
-config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
+# Set database URL from environment — but respect a URL already set
+# programmatically (e.g. by tests/conftest.py pointing at a test
+# database) rather than unconditionally overwriting it. Without this
+# guard, running alembic upgrade via a programmatic Config() object
+# (as the test harness does) silently migrates the dev database
+# instead of the test one.
+if not config.get_main_option("sqlalchemy.url"):
+    config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
 
 # Set target metadata for autogenerate
 target_metadata = Base.metadata

@@ -1,7 +1,6 @@
 # Development environment — mirrors SADD 11.1:
 # single FastAPI instance, single Postgres + Redis container,
 # mocked judge adapters (set JUDGE_MODE=mock in .env).
-version: "3.9"
 services:
   api:
     build:
@@ -9,20 +8,31 @@ services:
       dockerfile: Dockerfile
     ports: ["8000:8000"]
     env_file: .env
-    depends_on: [postgres, redis]
-    volumes: ["./backend/app:/app/app"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes: ["./backend/app:/app/app", "./backend/alembic:/app/alembic"]
 
   worker:
     build:
       context: ./backend
       dockerfile: Dockerfile.worker
     env_file: .env
-    depends_on: [postgres, redis]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
     ports: ["5173:5173"]
     env_file: .env
+    volumes: ["./frontend:/app", "/app/node_modules"]
 
   postgres:
     image: postgres:16-alpine
@@ -32,10 +42,20 @@ services:
       POSTGRES_PASSWORD: codeforge
     ports: ["5432:5432"]
     volumes: ["pgdata:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U codeforge -d codeforge"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
 
   redis:
     image: redis:7-alpine
     ports: ["6379:6379"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
     # No volume by default — SADD 11.1 (v1.1): Redis is not a durable
     # store for gameplay state; safe to lose on restart.
 

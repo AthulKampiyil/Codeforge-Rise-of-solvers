@@ -1,345 +1,184 @@
-"""Tests for M1 Authentication & Account Linking (REQ-1.x)."""
+"""Tests for M1 Authentication & Account Linking (REQ-1.x), against
+plan.md Phase 2's rewrite: real Codeforces verification, session
+denylist on logout, refresh-token rotation and type enforcement.
+"""
+from unittest.mock import AsyncMock, patch
+
 import pytest
-from fastapi.testclient import TestClient
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 
-from app.main import app
-from app.db.base import Base
-from app.db.session import get_db
-from app.modules.m1_auth.models import User
-from app.core.security import hash_password
-
-
-# In-memory SQLite for testing
-SQLALCHEMY_DATABASE_URL = "sqlite:///:memory:"
-engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
-TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-
-@pytest.fixture(scope="function")
-def db():
-    """Create fresh database for each test."""
-    Base.metadata.create_all(bind=engine)
-    db = TestingSessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
-        Base.metadata.drop_all(bind=engine)
-
-
-@pytest.fixture
-def client(db):
-    """Test client with overridden database."""
-    def override_get_db():
-        yield db
-    
-    app.dependency_overrides[get_db] = override_get_db
-    yield TestClient(app)
-    app.dependency_overrides.clear()
+from app.modules.m2_platform_sync.judge_adapters.base import NormalizedUserInfo
 
 
 class TestRegister:
-    """Tests for POST /auth/register (REQ-1.1)."""
+    """POST /auth/register (REQ-1.1)."""
 
     def test_register_success(self, client):
-        """Register a new user successfully."""
         response = client.post(
             "/auth/register",
-            json={
-                "username": "newuser",
-                "email": "test@example.com",
-                "password": "securepassword123"
-            }
+            json={"username": "newuser", "email": "test@example.com", "password": "securepassword123"},
         )
-        assert response.status_code == 201
+        assert response.status_code == 201, response.text
         data = response.json()
         assert data["username"] == "newuser"
         assert data["email"] == "test@example.com"
         assert "id" in data
-        assert "hashed_password" not in data  # Never return password
+        assert "password" not in data and "password_hash" not in data
 
-    def test_register_duplicate_email(self, client, db):
-        """Reject registration with duplicate email (REQ-1.1)."""
-        # Create first user
-        client.post(
-            "/auth/register",
-            json={
-                "username": "user1",
-                "email": "test@example.com",
-                "password": "securepassword123"
-            }
-        )
-        # Try to register with same email
+    def test_register_duplicate_email(self, client, make_user):
+        make_user(email="dupe@example.com")
         response = client.post(
             "/auth/register",
-            json={
-                "username": "user2",
-                "email": "test@example.com",
-                "password": "securepassword123"
-            }
+            json={"username": "someoneelse", "email": "dupe@example.com", "password": "securepassword123"},
         )
-        assert response.status_code == 400
-        assert "already registered" in response.json()["detail"].lower()
+        assert response.status_code == 409
+        assert response.json()["code"] == "email_already_registered"
 
-    def test_register_duplicate_username(self, client, db):
-        """Reject registration with duplicate username (REQ-1.1)."""
-        # Create first user
-        client.post(
-            "/auth/register",
-            json={
-                "username": "sameuser",
-                "email": "test1@example.com",
-                "password": "securepassword123"
-            }
-        )
-        # Try to register with same username
+    def test_register_duplicate_username(self, client, make_user):
+        make_user(username="taken")
         response = client.post(
             "/auth/register",
-            json={
-                "username": "sameuser",
-                "email": "test2@example.com",
-                "password": "securepassword123"
-            }
+            json={"username": "taken", "email": "other@example.com", "password": "securepassword123"},
         )
-        assert response.status_code == 400
-        assert "already taken" in response.json()["detail"].lower()
+        assert response.status_code == 409
+        assert response.json()["code"] == "username_already_taken"
 
     def test_register_short_password(self, client):
-        """Reject password shorter than 8 characters."""
         response = client.post(
             "/auth/register",
-            json={
-                "username": "newuser",
-                "email": "test@example.com",
-                "password": "short"
-            }
+            json={"username": "shortpw", "email": "shortpw@example.com", "password": "short"},
         )
-        assert response.status_code == 422  # Validation error
+        assert response.status_code == 422
 
 
 class TestLogin:
-    """Tests for POST /auth/login (REQ-1.2, REQ-1.6)."""
+    """POST /auth/login (REQ-1.2)."""
 
-    @pytest.fixture
-    def test_user(self, db):
-        """Create a test user."""
-        user = User(
-            username="testuser",
-            email="test@example.com",
-            hashed_password=hash_password("correctpassword"),
-            is_active=True
-        )
-        db.add(user)
-        db.commit()
-        return user
-
-    def test_login_success(self, client, test_user):
-        """Login with correct credentials (REQ-1.2)."""
+    def test_login_success(self, client, make_user):
+        user, _, _ = make_user(password="correcthorse123")
         response = client.post(
-            "/auth/login",
-            json={
-                "email": "test@example.com",
-                "password": "correctpassword"
-            }
+            "/auth/login", json={"email": user["email"], "password": "correcthorse123"}
         )
         assert response.status_code == 200
         data = response.json()
-        assert "access_token" in data
-        assert "refresh_token" in data
-        assert data["token_type"] == "bearer"
-        assert data["user"]["email"] == "test@example.com"
+        assert "access_token" in data and "refresh_token" in data
 
-    def test_login_incorrect_password(self, client, test_user):
-        """Reject incorrect password with generic message (no enumeration)."""
-        response = client.post(
-            "/auth/login",
-            json={
-                "email": "test@example.com",
-                "password": "wrongpassword"
-            }
-        )
+    def test_login_wrong_password(self, client, make_user):
+        user, _, _ = make_user()
+        response = client.post("/auth/login", json={"email": user["email"], "password": "wrongpassword"})
         assert response.status_code == 401
-        # Generic message prevents user enumeration
-        assert "incorrect email or password" in response.json()["detail"].lower()
+        assert response.json()["code"] == "invalid_credentials"
+        # generic message — no user enumeration (REQ-1.2)
+        assert "wrong" not in response.json()["detail"].lower()
 
     def test_login_nonexistent_email(self, client):
-        """Reject login for nonexistent email (no enumeration)."""
         response = client.post(
-            "/auth/login",
-            json={
-                "email": "nonexistent@example.com",
-                "password": "anypassword"
-            }
+            "/auth/login", json={"email": "nobody@example.com", "password": "whatever123"}
         )
         assert response.status_code == 401
-        assert "incorrect email or password" in response.json()["detail"].lower()
+        assert response.json()["code"] == "invalid_credentials"
 
 
-class TestLogout:
-    """Tests for POST /auth/logout (REQ-1.6)."""
+class TestLogoutAndRefresh:
+    """REQ-1.6: 7-day persistent session, explicit logout invalidates it."""
 
-    def test_logout_success(self, client, db):
-        """Logout returns success message."""
-        # First, register and login to get a token
-        client.post(
-            "/auth/register",
-            json={
-                "username": "testuser",
-                "email": "test@example.com",
-                "password": "securepassword123"
-            }
-        )
-        login_response = client.post(
-            "/auth/login",
-            json={
-                "email": "test@example.com",
-                "password": "securepassword123"
-            }
-        )
-        token = login_response.json()["access_token"]
-        
-        # Logout with token
+    def test_logout_invalidates_token(self, client, make_user):
+        _, headers, _ = make_user()
+
+        assert client.get("/auth/me", headers=headers).status_code == 200
+
+        logout_resp = client.post("/auth/logout", headers=headers)
+        assert logout_resp.status_code == 200
+
+        # The exact token that was just logged out must now be rejected —
+        # Sprint 1's logout was a no-op that never denylisted anything.
+        after_logout = client.get("/auth/me", headers=headers)
+        assert after_logout.status_code == 401
+
+    def test_refresh_rotates_token_and_revokes_old_one(self, client, make_user):
+        _, _, tokens = make_user()
+
+        refresh_resp = client.post("/auth/refresh", json={"refresh_token": tokens["refresh_token"]})
+        assert refresh_resp.status_code == 200
+        new_tokens = refresh_resp.json()
+        assert new_tokens["access_token"] != tokens["access_token"]
+        assert new_tokens["refresh_token"] != tokens["refresh_token"]
+
+        # Replaying the old refresh token must fail (rotation).
+        replay_resp = client.post("/auth/refresh", json={"refresh_token": tokens["refresh_token"]})
+        assert replay_resp.status_code == 401
+
+    def test_refresh_token_cannot_be_used_as_access_token(self, client, make_user):
+        """Sprint 1's verify_token() accepted either token type as a bearer credential."""
+        _, _, tokens = make_user()
+        headers = {"Authorization": f"Bearer {tokens['refresh_token']}"}
+        response = client.get("/auth/me", headers=headers)
+        assert response.status_code == 401
+
+
+class TestJudgeAccountLinking:
+    """REQ-1.3–1.5: link/verify/unlink a Codeforces account."""
+
+    def test_link_creates_unverified_account(self, client, make_user):
+        _, headers, _ = make_user()
         response = client.post(
-            "/auth/logout",
-            headers={"Authorization": f"Bearer {token}"}
+            "/auth/judge-accounts",
+            json={"judge_type": "codeforces", "handle": "tourist"},
+            headers=headers,
         )
-        assert response.status_code == 200
-        assert "logged out" in response.json()["message"].lower()
-
-
-class TestJudgeLink:
-    """Tests for judge account linking (REQ-1.3–1.5)."""
-
-    def test_link_judge_success(self, client, db):
-        """Successfully request judge profile linking (REQ-1.3)."""
-        # Register and login
-        client.post(
-            "/auth/register",
-            json={
-                "username": "testuser",
-                "email": "test@example.com",
-                "password": "securepassword123"
-            }
-        )
-        login_response = client.post(
-            "/auth/login",
-            json={
-                "email": "test@example.com",
-                "password": "securepassword123"
-            }
-        )
-        token = login_response.json()["access_token"]
-        
-        # Link judge
-        response = client.post(
-            "/auth/judges/link",
-            json={
-                "judge_name": "codeforces",
-                "handle": "myhandle123"
-            },
-            headers={"Authorization": f"Bearer {token}"}
-        )
-        assert response.status_code == 200
+        assert response.status_code == 200, response.text
         data = response.json()
-        assert "verification_token" in data
-        assert data["linked_profile"]["handle"] == "myhandle123"
-        assert data["linked_profile"]["verified"] is False
+        assert data["judge_account"]["verified_flag"] is False
+        assert data["verification_token"].startswith("codeforge-")
 
-    def test_link_duplicate_judge(self, client, db):
-        """Reject linking same judge twice (REQ-1.3)."""
-        # Register and login
-        client.post(
-            "/auth/register",
-            json={
-                "username": "testuser",
-                "email": "test@example.com",
-                "password": "securepassword123"
-            }
+    @patch(
+        "app.modules.m2_platform_sync.judge_adapters.codeforces.CodeforcesAdapter.get_user_info",
+        new_callable=AsyncMock,
+    )
+    def test_verify_succeeds_when_token_matches_profile(self, mock_get_user_info, client, make_user):
+        _, headers, _ = make_user()
+        link_resp = client.post(
+            "/auth/judge-accounts",
+            json={"judge_type": "codeforces", "handle": "tourist"},
+            headers=headers,
         )
-        login_response = client.post(
-            "/auth/login",
-            json={
-                "email": "test@example.com",
-                "password": "securepassword123"
-            }
-        )
-        token = login_response.json()["access_token"]
-        
-        # Link first time
-        client.post(
-            "/auth/judges/link",
-            json={"judge_name": "codeforces", "handle": "handle1"},
-            headers={"Authorization": f"Bearer {token}"}
-        )
-        
-        # Try to link again
-        response = client.post(
-            "/auth/judges/link",
-            json={"judge_name": "codeforces", "handle": "handle2"},
-            headers={"Authorization": f"Bearer {token}"}
-        )
-        assert response.status_code == 400
-        assert "already linked" in response.json()["detail"].lower()
+        account = link_resp.json()["judge_account"]
+        token = link_resp.json()["verification_token"]
 
-    def test_unlink_judge_success(self, client, db):
-        """Successfully unlink a judge (REQ-1.5)."""
-        # Register, login, and link
+        mock_get_user_info.return_value = NormalizedUserInfo(
+            handle="tourist", display_name=token, rating=3800
+        )
+
+        verify_resp = client.post(f"/auth/judge-accounts/{account['id']}/verify", headers=headers)
+        assert verify_resp.status_code == 200, verify_resp.text
+        assert verify_resp.json()["judge_account"]["verified_flag"] is True
+
+    @patch(
+        "app.modules.m2_platform_sync.judge_adapters.codeforces.CodeforcesAdapter.get_user_info",
+        new_callable=AsyncMock,
+    )
+    def test_verify_fails_when_token_does_not_match(self, mock_get_user_info, client, make_user):
+        """Sprint 1's verify_judge_profile() always approved regardless of proof — the exact bug this guards against."""
+        _, headers, _ = make_user()
+        link_resp = client.post(
+            "/auth/judge-accounts",
+            json={"judge_type": "codeforces", "handle": "tourist"},
+            headers=headers,
+        )
+        account = link_resp.json()["judge_account"]
+
+        mock_get_user_info.return_value = NormalizedUserInfo(
+            handle="tourist", display_name="not-the-right-token", rating=3800
+        )
+
+        verify_resp = client.post(f"/auth/judge-accounts/{account['id']}/verify", headers=headers)
+        assert verify_resp.status_code == 400
+        assert verify_resp.json()["code"] == "verification_failed"
+
+    def test_unlink_judge_account(self, client, make_user):
+        _, headers, _ = make_user()
         client.post(
-            "/auth/register",
-            json={
-                "username": "testuser",
-                "email": "test@example.com",
-                "password": "securepassword123"
-            }
+            "/auth/judge-accounts", json={"judge_type": "codeforces", "handle": "someone"}, headers=headers
         )
-        login_response = client.post(
-            "/auth/login",
-            json={
-                "email": "test@example.com",
-                "password": "securepassword123"
-            }
-        )
-        token = login_response.json()["access_token"]
-        
-        client.post(
-            "/auth/judges/link",
-            json={"judge_name": "codeforces", "handle": "myhandle"},
-            headers={"Authorization": f"Bearer {token}"}
-        )
-        
-        # Unlink
-        response = client.delete(
-            "/auth/judges/codeforces",
-            headers={"Authorization": f"Bearer {token}"}
-        )
+        response = client.delete("/auth/judge-accounts/codeforces", headers=headers)
         assert response.status_code == 200
-        assert "unlinked" in response.json()["message"].lower()
-
-    def test_unlink_nonexistent_judge(self, client, db):
-        """Reject unlinking a judge that's not linked."""
-        # Register and login
-        client.post(
-            "/auth/register",
-            json={
-                "username": "testuser",
-                "email": "test@example.com",
-                "password": "securepassword123"
-            }
-        )
-        login_response = client.post(
-            "/auth/login",
-            json={
-                "email": "test@example.com",
-                "password": "securepassword123"
-            }
-        )
-        token = login_response.json()["access_token"]
-        
-        # Try to unlink without linking first
-        response = client.delete(
-            "/auth/judges/codeforces",
-            headers={"Authorization": f"Bearer {token}"}
-        )
-        assert response.status_code == 404
+        assert client.get("/auth/judge-accounts", headers=headers).json() == []

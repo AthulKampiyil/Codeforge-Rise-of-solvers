@@ -1,141 +1,149 @@
-"""Authentication & Account Linking (REQ-1.x)
-
-FastAPI route definitions for this module.
-Owns: HTTP-facing endpoints only. Delegate business logic to service.py.
-"""
+"""Authentication & Account Linking (REQ-1.x) — FastAPI routes."""
 from typing import Annotated
+
 from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
+from redis.asyncio import Redis
 from sqlalchemy.orm import Session
-from app.db.session import get_db
+
 from app.core.dependencies import get_current_user
-from app.modules.m1_auth.service import AuthService
+from app.core.redis import get_redis
+from app.core.security import verify_access_token
+from app.db.session import get_db
+from app.modules.m1_auth.models import JudgeType, User
+from app.modules.m1_auth.repository import JudgeAccountRepository
 from app.modules.m1_auth.schemas import (
-    UserCreate, UserLogin, TokenResponse, LogoutResponse,
-    JudgeLinkRequest, JudgeLinkResponse, UserOut, LinkedJudgeProfileOut
+    JudgeAccountOut,
+    JudgeLinkRequest,
+    JudgeLinkResponse,
+    JudgeVerifyResponse,
+    LogoutResponse,
+    RefreshRequest,
+    TokenResponse,
+    UserCreate,
+    UserLogin,
+    UserOut,
 )
-from app.modules.m1_auth.models import User
+from app.modules.m1_auth.service import AuthService
 
 router = APIRouter(prefix="/auth", tags=["m1_auth"])
+security = HTTPBearer()
 
 
 @router.post("/register", response_model=UserOut, status_code=status.HTTP_201_CREATED)
-def register(
-    payload: UserCreate,
-    db: Annotated[Session, Depends(get_db)]
-):
-    """
-    Register a new user (REQ-1.1).
-    
-    - Email and username must be unique
-    - Password must be at least 8 characters
-    - Password is hashed with bcrypt (NFR-3.2), never stored plaintext
-    """
+def register(payload: UserCreate, db: Annotated[Session, Depends(get_db)]):
+    """Register a new user (REQ-1.1)."""
     service = AuthService(db)
-    user = service.register(payload)
-    return user
+    return service.register(payload)
 
 
 @router.post("/login", response_model=TokenResponse)
-def login(
-    payload: UserLogin,
-    db: Annotated[Session, Depends(get_db)]
-):
-    """
-    Login and receive JWT tokens (REQ-1.2, REQ-1.6).
-    
-    - Access token valid for 7 days of idle time (REQ-1.6)
-    - Refresh token for session renewal
-    - Returns generic "Incorrect email or password" to prevent user enumeration
-    """
+def login(payload: UserLogin, db: Annotated[Session, Depends(get_db)]):
+    """Login and receive JWT tokens (REQ-1.2, REQ-1.6)."""
     service = AuthService(db)
     user = service.authenticate(payload)
     access_token, refresh_token = service.issue_tokens(str(user.id))
     return TokenResponse(
         access_token=access_token,
         refresh_token=refresh_token,
-        user=UserOut.from_orm(user)
+        user=UserOut.model_validate(user),
+    )
+
+
+@router.post("/refresh", response_model=TokenResponse)
+async def refresh(
+    payload: RefreshRequest,
+    db: Annotated[Session, Depends(get_db)],
+    redis: Annotated[Redis, Depends(get_redis)],
+):
+    """Rotate a refresh token for a new access/refresh pair (REQ-1.6)."""
+    service = AuthService(db)
+    access_token, new_refresh_token = await service.refresh(redis, payload.refresh_token)
+    from app.core.security import decode_token
+    user_id = decode_token(access_token)["sub"]
+    user = service.user_repo.get_by_id(user_id)
+    return TokenResponse(
+        access_token=access_token,
+        refresh_token=new_refresh_token,
+        user=UserOut.model_validate(user),
     )
 
 
 @router.post("/logout", response_model=LogoutResponse)
-def logout(
-    current_user: Annotated[User, Depends(get_current_user)],
-    db: Annotated[Session, Depends(get_db)]
+async def logout(
+    credentials: Annotated[HTTPAuthorizationCredentials, Depends(security)],
+    db: Annotated[Session, Depends(get_db)],
+    redis: Annotated[Redis, Depends(get_redis)],
 ):
     """
     Logout and invalidate session (REQ-1.6).
-    
-    TODO: In a real system, we'd blacklist the token here using Redis.
-    For Sprint 1, this is a stub endpoint that always succeeds.
+
+    Denylists this access token's jti in Redis so it is rejected on
+    every subsequent request, even though it hasn't expired yet.
     """
-    # TODO (Sprint 2): Blacklist token in Redis
+    payload = verify_access_token(credentials.credentials)
+    service = AuthService(db)
+    await service.logout(redis, payload["jti"], payload["exp"])
     return LogoutResponse()
 
 
-@router.post("/judges/link", response_model=JudgeLinkResponse)
+@router.get("/me", response_model=UserOut)
+def get_me(current_user: Annotated[User, Depends(get_current_user)]):
+    return current_user
+
+
+@router.post("/judge-accounts", response_model=JudgeLinkResponse)
 def request_judge_link(
     payload: JudgeLinkRequest,
     current_user: Annotated[User, Depends(get_current_user)],
-    db: Annotated[Session, Depends(get_db)]
+    db: Annotated[Session, Depends(get_db)],
 ):
-    """
-    Request judge profile linking (REQ-1.3, REQ-1.4).
-    
-    Generates a one-time verification token that the user must submit
-    as a comment/proof on the judge platform to prove handle ownership.
-    
-    TODO (Sprint 2): Wire verification to M2 judge adapters
-    to confirm the token actually appears on the judge platform.
-    """
+    """Request judge account linking (REQ-1.3, REQ-1.4)."""
     service = AuthService(db)
-    profile, token = service.request_judge_link(
-        str(current_user.id),
-        payload.judge_name,
-        payload.handle
-    )
+    account, token = service.request_judge_link(str(current_user.id), payload.judge_type, payload.handle)
     return JudgeLinkResponse(
         verification_token=token,
-        linked_profile=LinkedJudgeProfileOut.from_orm(profile)
+        judge_account=JudgeAccountOut.model_validate(account),
     )
 
 
-@router.delete("/judges/{judge_name}", response_model=dict)
-def unlink_judge(
-    judge_name: str,
+@router.post("/judge-accounts/{judge_account_id}/verify", response_model=JudgeVerifyResponse)
+async def verify_judge_account(
+    judge_account_id: str,
     current_user: Annotated[User, Depends(get_current_user)],
-    db: Annotated[Session, Depends(get_db)]
+    db: Annotated[Session, Depends(get_db)],
 ):
-    """
-    Unlink a judge profile (REQ-1.5).
-    
-    Only the user who linked the judge can unlink it.
-    """
-    from app.modules.m1_auth.models import JudgeName
-    
+    """Complete ownership verification (REQ-1.4, NFR-3.1)."""
+    service = AuthService(db)
+    account = await service.verify_judge_account(judge_account_id)
+    return JudgeVerifyResponse(judge_account=JudgeAccountOut.model_validate(account))
+
+
+@router.get("/judge-accounts", response_model=list[JudgeAccountOut])
+def get_my_judge_accounts(
+    current_user: Annotated[User, Depends(get_current_user)],
+    db: Annotated[Session, Depends(get_db)],
+):
+    """Get all linked judge accounts for the current user."""
+    repo = JudgeAccountRepository(db)
+    return repo.get_by_user(str(current_user.id))
+
+
+@router.delete("/judge-accounts/{judge_type}")
+def unlink_judge(
+    judge_type: str,
+    current_user: Annotated[User, Depends(get_current_user)],
+    db: Annotated[Session, Depends(get_db)],
+):
+    """Unlink a judge account (REQ-1.5)."""
     try:
-        judge = JudgeName(judge_name)
+        judge = JudgeType(judge_type)
     except ValueError:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail=f"Invalid judge name. Supported: {', '.join([j.value for j in JudgeName])}"
+            detail=f"Invalid judge type. Supported: {', '.join(j.value for j in JudgeType)}",
         )
-    
+
     service = AuthService(db)
     service.unlink_judge(str(current_user.id), judge)
-    return {"message": f"Unlinked from {judge_name}"}
-
-
-@router.get("/judges/me", response_model=list[LinkedJudgeProfileOut])
-def get_my_judges(
-    current_user: Annotated[User, Depends(get_current_user)],
-    db: Annotated[Session, Depends(get_db)]
-):
-    """
-    Get all linked judge profiles for the current user.
-    """
-    service = AuthService(db)
-    from app.modules.m1_auth.repository import LinkedJudgeProfileRepository
-    repo = LinkedJudgeProfileRepository(db)
-    profiles = repo.get_by_user(str(current_user.id))
-    return [LinkedJudgeProfileOut.from_orm(p) for p in profiles]
-
+    return {"message": f"Unlinked from {judge_type}"}

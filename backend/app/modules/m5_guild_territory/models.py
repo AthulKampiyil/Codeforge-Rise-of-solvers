@@ -1,77 +1,107 @@
-"""Guild & Territory Models (REQ-5.x)
+"""Guild & Territory Models (REQ-5.x) — SADD ER: GUILD, GUILD_MEMBERSHIP,
+TERRITORY_ZONE, ZONE_CONTRIBUTION, plus GUILD_JOIN_REQUEST (implied by
+REQ-5.2's approve/reject flow, SADD 5.2 approveJoin()).
 
-ORM models for guild management and territory control.
-Owns: M5 data schema. Used by repository layer.
+Full territory scoring/hysteresis (SADD 7.3.1.2) lands in plan.md
+Phase 8; this module defines the Phase 1 schema baseline.
 """
-from uuid import uuid4
-from enum import Enum
-from sqlalchemy import Column, String, UUID, DateTime, ForeignKey, UniqueConstraint, Index
+import enum
+import uuid
+from datetime import datetime, timezone
+
+from sqlalchemy import Column, DateTime, Enum, ForeignKey, Numeric, String, UniqueConstraint
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import relationship
-from datetime import datetime
+
 from app.db.base import Base
+from app.db.types import GUID
 
 
-class GuildRole(str, Enum):
-    """Guild membership roles."""
+def utcnow() -> datetime:
+    return datetime.now(timezone.utc)
+
+
+class GuildRole(str, enum.Enum):
     leader = "leader"
     officer = "officer"
     member = "member"
 
 
 class Guild(Base):
-    """Guild entity representing player organization."""
+    """SADD 6.4 GUILD entity (REQ-5.1)."""
     __tablename__ = "guilds"
 
-    id = Column(UUID(), primary_key=True, default=uuid4)
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
     name = Column(String(50), unique=True, nullable=False, index=True)
-    owner_id = Column(UUID(), ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
     description = Column(String(500), nullable=True)
-    created_at = Column(DateTime(), nullable=False, default=datetime.utcnow)
-    updated_at = Column(DateTime(), nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at = Column(DateTime(timezone=True), default=utcnow, nullable=False)
+    updated_at = Column(DateTime(timezone=True), default=utcnow, onupdate=utcnow, nullable=False)
 
-    # Relationships
     memberships = relationship("GuildMembership", back_populates="guild", cascade="all, delete-orphan")
     zones = relationship("TerritoryZone", back_populates="owning_guild")
 
-    __table_args__ = (
-        Index("idx_guilds_owner", "owner_id"),
-    )
-
 
 class GuildMembership(Base):
-    """Guild membership record (user + role)."""
+    """SADD 6.4 GUILD_MEMBERSHIP (business rule: one active guild per user)."""
     __tablename__ = "guild_memberships"
 
-    id = Column(UUID(), primary_key=True, default=uuid4)
-    guild_id = Column(UUID(), ForeignKey("guilds.id", ondelete="CASCADE"), nullable=False)
-    user_id = Column(UUID(), ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
-    role = Column(String(20), nullable=False, default=GuildRole.member)  # leader, officer, member
-    joined_at = Column(DateTime(), nullable=False, default=datetime.utcnow)
+    guild_id = Column(GUID(), ForeignKey("guilds.id", ondelete="CASCADE"), primary_key=True)
+    user_id = Column(GUID(), ForeignKey("users.id", ondelete="RESTRICT"), primary_key=True)
+    role = Column(Enum(GuildRole, name="guild_role"), nullable=False, default=GuildRole.member)
+    joined_at = Column(DateTime(timezone=True), default=utcnow, nullable=False)
 
-    # Relationships
     guild = relationship("Guild", back_populates="memberships")
 
     __table_args__ = (
-        UniqueConstraint("guild_id", "user_id", name="uq_guild_memberships_guild_user"),
-        Index("idx_guild_memberships_user", "user_id"),
-        Index("idx_guild_memberships_guild", "guild_id"),
+        # Enforces "at most one active guild per solver" (SADD 6.5.3)
+        # at the schema level via a unique index on user_id alone.
+        UniqueConstraint("user_id", name="uq_guild_memberships_one_guild_per_user"),
     )
+
+
+class JoinRequestStatus(str, enum.Enum):
+    pending = "pending"
+    approved = "approved"
+    rejected = "rejected"
+
+
+class GuildJoinRequest(Base):
+    """Implied by REQ-5.2 ('request to join... approve or reject') and
+    SADD 5.2 `approveJoin(request_id)` — not itself a Fig 6.1 entity,
+    but required to realize the requirement as specified.
+    """
+    __tablename__ = "guild_join_requests"
+
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    guild_id = Column(GUID(), ForeignKey("guilds.id", ondelete="CASCADE"), nullable=False, index=True)
+    user_id = Column(GUID(), ForeignKey("users.id", ondelete="RESTRICT"), nullable=False, index=True)
+    status = Column(Enum(JoinRequestStatus, name="join_request_status"), default=JoinRequestStatus.pending, nullable=False)
+    decided_by = Column(GUID(), ForeignKey("users.id", ondelete="RESTRICT"), nullable=True)
+    decided_at = Column(DateTime(timezone=True), nullable=True)
+    created_at = Column(DateTime(timezone=True), default=utcnow, nullable=False)
 
 
 class TerritoryZone(Base):
-    """Territory zone that can be owned by guilds."""
+    """SADD 6.4 TERRITORY_ZONE, with topic_affinity for SADD 7.3.1.2 scoring."""
     __tablename__ = "territory_zones"
 
-    id = Column(UUID(), primary_key=True, default=uuid4)
-    zone_name = Column(String(50), unique=True, nullable=False, index=True)
-    owning_guild_id = Column(UUID(), ForeignKey("guilds.id", ondelete="SET NULL"), nullable=True)
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    name = Column(String(50), unique=True, nullable=False, index=True)
+    topic_affinity = Column(JSONB, nullable=False, default=dict)  # {topic_name: weight}, weights sum to 1.0
+    owning_guild_id = Column(GUID(), ForeignKey("guilds.id", ondelete="SET NULL"), nullable=True, index=True)
+    map_polygon = Column(JSONB, nullable=True)  # Phaser WarMapScene geometry
     description = Column(String(500), nullable=True)
-    created_at = Column(DateTime(), nullable=False, default=datetime.utcnow)
-    updated_at = Column(DateTime(), nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at = Column(DateTime(timezone=True), default=utcnow, nullable=False)
+    updated_at = Column(DateTime(timezone=True), default=utcnow, onupdate=utcnow, nullable=False)
 
-    # Relationships
     owning_guild = relationship("Guild", back_populates="zones")
 
-    __table_args__ = (
-        Index("idx_territory_zones_owner", "owning_guild_id"),
-    )
+
+class ZoneContribution(Base):
+    """SADD 6.4 ZONE_CONTRIBUTION — atomic upsert target (SADD 6.5.1)."""
+    __tablename__ = "zone_contributions"
+
+    zone_id = Column(GUID(), ForeignKey("territory_zones.id", ondelete="CASCADE"), primary_key=True)
+    guild_id = Column(GUID(), ForeignKey("guilds.id", ondelete="CASCADE"), primary_key=True)
+    aggregated_score = Column(Numeric, default=0, nullable=False)
+    updated_at = Column(DateTime(timezone=True), default=utcnow, onupdate=utcnow, nullable=False)

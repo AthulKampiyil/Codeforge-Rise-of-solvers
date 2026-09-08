@@ -1,96 +1,114 @@
-"""Notification & WebSocket Schemas (REQ-8.x)
+"""Notification & Realtime Gateway — event envelope (SADD Appendix B.1).
 
-Pydantic models for WebSocket events and notifications.
-Owns: HTTP-facing contract for M8. Used by router layer.
+Every WebSocket message uses the common envelope:
+    {event_type, event_id, version, timestamp, payload}
+
+Six event types are implemented. Three are verbatim from SADD
+Appendix B.1 (ATTACK_INCOMING, TERRITORY_ZONE_CHANGED, VILLAGE_UPDATED);
+three more (ATTACK_RESOLVED, LEAGUE_TIER_CHANGED, SYNC_STATUS_CHANGED)
+are additions the SADD's own flows require but only implies — REQ-4.5
+says "notify the target solver... and summarize the outcome" (needs a
+resolution event, not just the incoming one), REQ-7.3 says "promote or
+demote... and notifies them", and REQ-2.4's "degraded: <judge>" status
+needs a push, not just a poll. Recorded as a SADD v1.2 Appendix B.1
+addendum in plan.md Phase 14.
 """
-from pydantic import BaseModel, ConfigDict
-from typing import Optional, Dict, Any
-from datetime import datetime
+import uuid
+from datetime import datetime, timezone
+from enum import Enum
+from typing import Any, Optional
 from uuid import UUID
 
-
-class WebSocketEventBase(BaseModel):
-    """Base WebSocket event."""
-    event_type: str
-    timestamp: datetime
-    user_id: UUID
+from pydantic import BaseModel, Field
 
 
-class AttackReceivedEvent(WebSocketEventBase):
-    """Attack received notification."""
-    attacker_id: UUID
+class EventType(str, Enum):
+    ATTACK_INCOMING = "ATTACK_INCOMING"
+    ATTACK_RESOLVED = "ATTACK_RESOLVED"
+    TERRITORY_ZONE_CHANGED = "TERRITORY_ZONE_CHANGED"
+    VILLAGE_UPDATED = "VILLAGE_UPDATED"
+    LEAGUE_TIER_CHANGED = "LEAGUE_TIER_CHANGED"
+    SYNC_STATUS_CHANGED = "SYNC_STATUS_CHANGED"
+
+
+class EventEnvelope(BaseModel):
+    """SADD Appendix B.1 common envelope."""
+    event_type: EventType
+    event_id: UUID = Field(default_factory=uuid.uuid4)
+    version: str = "1.0"
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    payload: dict[str, Any]
+
+
+# --- Payload shapes (for construction call sites; not sent as-is) ----------
+
+class AttackIncomingPayload(BaseModel):
+    """SADD Appendix B.1, verbatim."""
+    attack_id: UUID
+    attacker_user_id: UUID
     attacker_username: str
-    challenge_topic: str
+    attacker_defense_rating: float
+    target_user_id: UUID
+    curated_problem_count: int
+    attack_window_expires_at: Optional[datetime]
+
+
+class AttackResolvedPayload(BaseModel):
+    """Addition — REQ-4.5's "summarize the outcome" needs a second event
+    beyond the incoming notice."""
     attack_id: UUID
+    attacker_user_id: UUID
+    target_user_id: UUID
+    solved_fraction: float
+    attacker_trophy_delta: int
+    target_trophy_delta: int
 
 
-class AttackResolvedEvent(WebSocketEventBase):
-    """Attack resolution notification."""
-    attack_id: UUID
-    success: bool
-    score: int
-
-
-class TerritoryLostEvent(WebSocketEventBase):
-    """Territory lost notification."""
+class TerritoryZoneChangedPayload(BaseModel):
+    """SADD Appendix B.1, verbatim."""
     zone_id: UUID
     zone_name: str
-    losing_guild_id: UUID
-    winning_guild_id: Optional[UUID]
+    previous_owner_guild_id: Optional[UUID]
+    new_owner_guild_id: UUID
+    guild_scores: list[dict[str, Any]]
 
 
-class TerritoryGainedEvent(WebSocketEventBase):
-    """Territory gained notification."""
-    zone_id: UUID
-    zone_name: str
-    guild_id: UUID
+class VillageUpdatedPayload(BaseModel):
+    """SADD Appendix B.1, verbatim."""
+    user_id: UUID
+    topic_id: UUID
+    topic_name: str
+    previous_level: int
+    new_level: int
+    new_defense_rating: float
+    source: str  # "sync" | "attack_resolution"
+    source_ref_id: UUID
 
 
-class GuildInvitationEvent(WebSocketEventBase):
-    """Guild invitation notification."""
-    guild_id: UUID
-    guild_name: str
-    inviter_id: UUID
-    inviter_username: str
-
-
-class GuildMemberJoinedEvent(WebSocketEventBase):
-    """Guild member joined notification."""
-    guild_id: UUID
-    guild_name: str
-    new_member_id: UUID
-    new_member_username: str
-    role: str
-
-
-class SyncCompleteEvent(WebSocketEventBase):
-    """Judge sync completion notification."""
-    judge_name: str
-    total_problems_synced: int
-    new_problems: int
-
-
-class LeaguePromotionEvent(WebSocketEventBase):
-    """League tier promotion notification."""
-    old_tier: str
+class LeagueTierChangedPayload(BaseModel):
+    """Addition — REQ-7.3 "promotes or demotes... and notifies them"."""
+    user_id: UUID
+    previous_tier: str
     new_tier: str
-    points: int
+    trophy_count: int
+
+
+class SyncStatusChangedPayload(BaseModel):
+    """Addition — REQ-2.4 status indicator, pushed rather than polled only."""
+    user_id: UUID
+    judge_account_id: UUID
+    judge_name: str
+    status: str  # up_to_date | in_progress | failed | degraded
+    last_error: Optional[str]
 
 
 class NotificationOut(BaseModel):
-    """Notification record response."""
-    model_config = ConfigDict(from_attributes=True)
-
     id: UUID
     user_id: UUID
     event_type: str
-    payload: Optional[str]
+    payload: Optional[dict]
     is_read: bool
     created_at: datetime
 
-
-class ConnectionStatusOut(BaseModel):
-    """WebSocket connection status response."""
-    user_id: UUID
-    is_connected: bool
-    last_connection: Optional[datetime]
+    class Config:
+        from_attributes = True

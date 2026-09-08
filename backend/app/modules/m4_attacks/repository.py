@@ -1,79 +1,90 @@
 """Async Village Attacks (REQ-4.x) — data access layer.
 
-Owns: all direct DB queries for this module's tables.
+NOTE: Full atomic write-through/read-through cooldown caching (SADD
+7.2.1) and matchmaking queries (SADD 7.3.1.1) land in plan.md Phase 7.
 """
+from datetime import datetime, timezone
 from typing import List, Optional
-from datetime import datetime
+
 from sqlalchemy.orm import Session
-from app.modules.m4_attacks.models import Attack, AttackStatus, AttackCooldown
+
+from app.modules.m1_auth.models import User
+from app.modules.m4_attacks.models import Attack, AttackProblemSet, AttackStatus
 
 
 class AttackRepository:
-    """Data access layer for attack records."""
-
     def __init__(self, db: Session):
         self.db = db
 
     def get_attacks_by_attacker(self, user_id: str, limit: int = 20) -> List[Attack]:
-        """Fetch recent attacks by a user."""
         return self.db.query(Attack).filter(
             Attack.attacker_user_id == user_id
-        ).order_by(Attack.created_at.desc()).limit(limit).all()
+        ).order_by(Attack.started_at.desc()).limit(limit).all()
 
-    def get_attacks_by_defender(self, user_id: str, limit: int = 20) -> List[Attack]:
-        """Fetch recent attacks against a user."""
+    def get_attacks_by_target(self, user_id: str, limit: int = 20) -> List[Attack]:
         return self.db.query(Attack).filter(
-            Attack.defender_user_id == user_id
-        ).order_by(Attack.created_at.desc()).limit(limit).all()
+            Attack.target_user_id == user_id
+        ).order_by(Attack.started_at.desc()).limit(limit).all()
 
-    def create_attack(self, attacker_user_id: str, defender_user_id: str, challenge_topic: Optional[str] = None) -> Attack:
-        """Create a new attack record."""
+    def get_by_id(self, attack_id: str) -> Optional[Attack]:
+        return self.db.query(Attack).filter(Attack.id == attack_id).first()
+
+    def create_attack(self, attacker_user_id: str, target_user_id: str) -> Attack:
         attack = Attack(
             attacker_user_id=attacker_user_id,
-            defender_user_id=defender_user_id,
-            challenge_topic=challenge_topic
+            target_user_id=target_user_id,
+            status=AttackStatus.created,
         )
         self.db.add(attack)
         self.db.commit()
+        self.db.refresh(attack)
         return attack
 
-    def update_attack_status(self, attack_id: str, status: AttackStatus, score: int = 0):
-        """Update attack status and score."""
-        attack = self.db.query(Attack).filter(Attack.id == attack_id).first()
+    def update_status(self, attack_id: str, status: AttackStatus, score: int = 0) -> Optional[Attack]:
+        attack = self.get_by_id(attack_id)
         if attack:
             attack.status = status
             attack.score = score
-            if status in [AttackStatus.success, AttackStatus.failed]:
-                attack.resolved_at = datetime.utcnow()
+            if status == AttackStatus.resolved:
+                attack.resolved_at = datetime.now(timezone.utc)
             self.db.commit()
         return attack
 
 
-class AttackCooldownRepository:
-    """Data access layer for attack cooldowns."""
+class AttackProblemSetRepository:
+    def __init__(self, db: Session):
+        self.db = db
+
+    def get_by_attack(self, attack_id: str) -> List[AttackProblemSet]:
+        return self.db.query(AttackProblemSet).filter(AttackProblemSet.attack_id == attack_id).all()
+
+    def create(self, attack_id: str, problem_ext_id: str, **kwargs) -> AttackProblemSet:
+        problem = AttackProblemSet(attack_id=attack_id, problem_ext_id=problem_ext_id, **kwargs)
+        self.db.add(problem)
+        self.db.commit()
+        return problem
+
+
+class CooldownRepository:
+    """
+    Thin repository over users.attack_cooldown_expires_at (SADD 7.2.1).
+
+    NOTE: This exposes only the PostgreSQL source-of-truth read/write.
+    The Redis read-through/write-through cache described in SADD 7.2.1
+    is added in plan.md Phase 7 — until then every check hits Postgres
+    directly, which is correct but not yet optimized for the NFR-1.3
+    latency budget under load.
+    """
 
     def __init__(self, db: Session):
         self.db = db
 
-    def get_cooldown(self, user_id: str) -> Optional[AttackCooldown]:
-        """Fetch cooldown record for a user."""
-        return self.db.query(AttackCooldown).filter(
-            AttackCooldown.user_id == user_id
-        ).first()
+    def get_cooldown_expiry(self, user_id: str) -> Optional[datetime]:
+        user = self.db.query(User).filter(User.id == user_id).first()
+        return user.attack_cooldown_expires_at if user else None
 
-    def create_cooldown(self, user_id: str, cooldown_minutes: int = 30) -> AttackCooldown:
-        """Create a new cooldown record."""
-        cooldown = AttackCooldown(user_id=user_id, cooldown_minutes=cooldown_minutes)
-        self.db.add(cooldown)
-        self.db.commit()
-        return cooldown
-
-    def update_last_attack(self, user_id: str):
-        """Update last attack timestamp."""
-        cooldown = self.get_cooldown(user_id)
-        if cooldown:
-            cooldown.last_attack_at = datetime.utcnow()
+    def set_cooldown_expiry(self, user_id: str, expires_at: datetime) -> None:
+        user = self.db.query(User).filter(User.id == user_id).first()
+        if user:
+            user.attack_cooldown_expires_at = expires_at
             self.db.commit()
-        else:
-            self.create_cooldown(user_id)
-

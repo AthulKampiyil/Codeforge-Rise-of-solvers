@@ -1,7 +1,10 @@
+"""Authentication & Account Linking (REQ-1.x) — Pydantic schemas."""
 import uuid
 from datetime import datetime
+
 from pydantic import BaseModel, EmailStr, Field
-from app.modules.m1_auth.models import JudgeName
+
+from app.modules.m1_auth.models import JudgeType
 
 
 class UserCreate(BaseModel):
@@ -38,23 +41,27 @@ class TokenResponse(BaseModel):
     user: UserOut
 
 
+class RefreshRequest(BaseModel):
+    refresh_token: str
+
+
 class LogoutResponse(BaseModel):
-    """Logout confirmation."""
     message: str = "Logged out successfully"
 
 
 class JudgeLinkRequest(BaseModel):
     """Judge account linking request (REQ-1.3)."""
-    judge_name: JudgeName
+    judge_type: JudgeType
     handle: str = Field(..., min_length=1, max_length=255)
 
 
-class LinkedJudgeProfileOut(BaseModel):
-    """Linked judge profile response."""
+class JudgeAccountOut(BaseModel):
+    """Linked judge account response."""
     id: uuid.UUID
-    judge_name: JudgeName
+    judge_type: JudgeType
     handle: str
-    verified: bool
+    verified_flag: bool
+    last_sync_at: datetime | None
     created_at: datetime
 
     class Config:
@@ -62,7 +69,15 @@ class LinkedJudgeProfileOut(BaseModel):
 
 
 class JudgeLinkResponse(BaseModel):
-    """Judge linking response with verification token (REQ-1.4)."""
+    """Judge linking response with verification instructions (REQ-1.4)."""
     verification_token: str
-    message: str = "Link request created. Submit this token as a comment on a solved problem to verify."
-    linked_profile: LinkedJudgeProfileOut
+    message: str = (
+        "Set your Codeforces profile First Name to this token, "
+        "then call the verify endpoint."
+    )
+    judge_account: JudgeAccountOut
+
+
+class JudgeVerifyResponse(BaseModel):
+    message: str = "Judge account verified"
+    judge_account: JudgeAccountOut

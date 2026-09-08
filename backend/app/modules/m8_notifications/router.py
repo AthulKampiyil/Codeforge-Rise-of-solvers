@@ -1,110 +1,96 @@
-"""Notification & WebSocket Router (REQ-8.x)
-
-FastAPI route definitions for WebSocket and notifications.
-Owns: HTTP-facing endpoints and WebSocket handler.
-"""
-from fastapi import APIRouter, Depends, WebSocket, WebSocketDisconnect, Query
+"""Notification & Realtime Gateway — FastAPI routes + WebSocket endpoint."""
 from typing import Annotated
+
+from fastapi import APIRouter, Depends, Query, WebSocket, WebSocketDisconnect
+from redis.asyncio import Redis
 from sqlalchemy.orm import Session
-from app.core.dependencies import get_current_user
-from app.core.security import verify_token
+
+from app.core.dependencies import get_current_active_user
+from app.core.logging import get_logger
+from app.core.redis import get_redis
+from app.core.security import verify_access_token
 from app.db.session import get_db
 from app.modules.m1_auth.models import User
-from app.modules.m8_notifications.service import NotificationService
-from app.modules.m8_notifications.schemas import NotificationOut, ConnectionStatusOut
-from uuid import UUID
+from app.modules.m8_notifications.schemas import NotificationOut
+from app.modules.m8_notifications.service import NotificationService, registry
+
+logger = get_logger(__name__)
 
 router = APIRouter(prefix="/notifications", tags=["m8_notifications"])
 
 
-@router.get("/status", response_model=ConnectionStatusOut)
-def get_connection_status(
-    current_user: Annotated[User, Depends(get_current_user)],
-    db: Annotated[Session, Depends(get_db)]
-) -> ConnectionStatusOut:
-    """Get WebSocket connection status for current user."""
-    service = NotificationService(db)
-    status = service.get_connection_status(current_user.id)
-    return ConnectionStatusOut(**status)
-
-
-@router.get("/history")
+@router.get("", response_model=list[NotificationOut])
 def get_notification_history(
+    current_user: Annotated[User, Depends(get_current_active_user)],
+    db: Annotated[Session, Depends(get_db)],
     limit: int = Query(50, ge=1, le=200),
-    current_user: Annotated[User, Depends(get_current_user)] = None,
-    db: Annotated[Session, Depends(get_db)] = None
-) -> list:
-    """Get notification history for current user."""
+):
     service = NotificationService(db)
-    notifications = service.get_user_notifications(current_user.id, limit=limit)
-    return [NotificationOut.model_validate(n) for n in notifications]
+    return [NotificationOut.model_validate(n) for n in service.get_user_notifications(str(current_user.id), limit)]
 
 
-@router.post("/mark-read/{notification_id}")
+@router.get("/unread-count")
+def get_unread_count(
+    current_user: Annotated[User, Depends(get_current_active_user)],
+    db: Annotated[Session, Depends(get_db)],
+):
+    service = NotificationService(db)
+    return {"unread_count": service.get_unread_count(str(current_user.id))}
+
+
+@router.post("/{notification_id}/read")
 def mark_notification_read(
     notification_id: str,
-    current_user: Annotated[User, Depends(get_current_user)] = None,
-    db: Annotated[Session, Depends(get_db)] = None
-) -> dict:
-    """Mark a notification as read."""
+    current_user: Annotated[User, Depends(get_current_active_user)],
+    db: Annotated[Session, Depends(get_db)],
+):
     service = NotificationService(db)
-    try:
-        notif_uuid = UUID(notification_id)
-        service.mark_as_read(notif_uuid)
-        return {"message": "Marked as read"}
-    except (ValueError, AttributeError):
-        return {"error": "Invalid notification ID"}
+    notification = service.mark_as_read(notification_id, str(current_user.id))
+    if not notification:
+        return {"message": "Notification not found"}
+    return {"message": "Marked as read"}
 
 
-@router.websocket("/ws")
-async def websocket_endpoint(websocket: WebSocket, token: str = Query(None)):
-    """WebSocket endpoint for realtime notifications.
-    
-    Authentication:
-    - Pass JWT token via query param: ws://localhost:8000/notifications/ws?token=<token>
-    - Or via Authorization header
-    
-    Events broadcasted:
-    - attack_received: {"event_type": "attack_received", "attacker_id": "...", ...}
-    - attack_resolved: {"event_type": "attack_resolved", "success": true, ...}
-    - territory_lost: {"event_type": "territory_lost", "zone_name": "...", ...}
-    - league_promotion: {"event_type": "league_promotion", "new_tier": "gold", ...}
+# The WebSocket route lives at /ws/events per SADD Appendix B, mounted
+# directly on the app (not under /notifications) in main.py.
+ws_router = APIRouter(tags=["m8_notifications"])
+
+
+@ws_router.websocket("/ws/events")
+async def websocket_events(websocket: WebSocket, token: str = Query(...)):
     """
-    # Verify token and get user
-    if not token:
-        await websocket.close(code=1008, reason="Token required")
-        return
+    Realtime event channel (SADD Appendix B: WS /ws/events).
 
+    Auth: `?token=<jwt access token>`. On connect, registers this
+    socket in the process-local ConnectionRegistry and a Redis presence
+    key with a heartbeat TTL; on disconnect, both are cleaned up.
+    """
     try:
-        user_id = verify_token(token)
-        if not user_id:
-            await websocket.close(code=1008, reason="Invalid token")
-            return
+        payload = verify_access_token(token)
+        user_id = payload["sub"]
     except Exception:
         await websocket.close(code=1008, reason="Invalid token")
         return
 
     await websocket.accept()
+    registry.add(user_id, websocket)
 
-    # Register connection
-    from app.db.session import get_db
-    for db in get_db():
-        service = NotificationService(db)
-        connection_record = service.register_connection(user_id, websocket, f"ws-{user_id}")
-        break
+    from app.core.redis import get_async_redis
+
+    redis: Redis = get_async_redis()
+    presence_key = f"ws:online:{user_id}"
+    await redis.setex(presence_key, 60, "1")
 
     try:
         while True:
-            # Keep connection alive and listen for client messages
             data = await websocket.receive_text()
-            
-            # Echo received message (for keepalive/ping)
             if data == "ping":
+                await redis.setex(presence_key, 60, "1")  # heartbeat refresh
                 await websocket.send_text("pong")
-
     except WebSocketDisconnect:
-        # Unregister connection on disconnect
-        service.unregister_connection(user_id, websocket)
+        pass
     except Exception:
-        service.unregister_connection(user_id, websocket)
-
+        logger.exception("websocket_error", user_id=user_id)
+    finally:
+        registry.remove(user_id, websocket)
+        await redis.aclose()

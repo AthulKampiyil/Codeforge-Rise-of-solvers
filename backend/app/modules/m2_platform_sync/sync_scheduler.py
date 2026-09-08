@@ -1,11 +1,22 @@
-"""Recurring + on-demand sync scheduling (REQ-2.1, REQ-2.2)."""
-from datetime import datetime, timedelta
+"""Recurring + on-demand sync scheduling (REQ-2.1, REQ-2.2).
+
+NOTE: This is the Sprint-1-equivalent sync path updated to compile
+against the Phase 1 schema (JudgeAccount, SolvedProblem) and the new
+JudgeAdapter interface. The full SADD 4.4 hardening — CircuitBreaker,
+tenacity retry/backoff, PostgreSQL Dead-Letter Queue, rate limiting —
+and the real village-leveling formula (SADD 7.3.1) are plan.md Phase 4
+and Phase 5 respectively. Until then this preserves working, idempotent
+sync behavior on the corrected schema.
+"""
+from datetime import datetime, timezone
 from typing import Optional
-from sqlalchemy import select
+
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
-from app.modules.m1_auth.models import User, LinkedJudgeProfile, JudgeName
-from app.modules.m2_platform_sync.models import SyncLog, SyncStatus
+
+from app.modules.m1_auth.models import JudgeAccount, JudgeType, User
 from app.modules.m2_platform_sync.judge_adapters.codeforces import CodeforcesAdapter
+from app.modules.m2_platform_sync.models import SolvedProblem, SyncLog, SyncStatus
 from app.modules.m2_platform_sync.topic_tagger import TopicTagger
 from app.modules.m3_village.models import Topic, VillageTopicProgress
 
@@ -16,6 +27,7 @@ class SyncScheduler:
 
     Responsibilities:
     - Fetch submissions from Codeforces (isolated adapter per SADD 4.3)
+    - Persist immutable SolvedProblem facts (idempotent via unique constraint)
     - Map problem tags to topics (via TopicTagger, isolated per SADD 4.3)
     - Update VillageTopicProgress
     - Log sync status and errors
@@ -26,145 +38,124 @@ class SyncScheduler:
         self.adapter = CodeforcesAdapter()
         self.tagger = TopicTagger()
 
-    async def sync_user_judge(self, user_id: str, judge_name: JudgeName) -> bool:
+    async def sync_judge_account(self, judge_account_id: str) -> bool:
         """
-        Sync one user's linked judge profile.
-
-        Steps:
-        1. Fetch LinkedJudgeProfile and verify verified=true
-        2. Call judge adapter to fetch submissions
-        3. For each submission, extract tags → topics → update VillageTopicProgress
-        4. Log sync status (up_to_date, failed)
+        Sync one linked judge account.
 
         Returns:
             True if sync succeeded, False otherwise
         """
-        try:
-            # Fetch linked profile
-            linked_profile = self.db.query(LinkedJudgeProfile).filter(
-                LinkedJudgeProfile.user_id == user_id,
-                LinkedJudgeProfile.judge_name == judge_name,
-            ).first()
+        account = self.db.query(JudgeAccount).filter(JudgeAccount.id == judge_account_id).first()
 
-            if not linked_profile:
-                self._update_sync_log(user_id, judge_name.value, SyncStatus.failed, "Profile not linked")
-                return False
-
-            if not linked_profile.verified:
-                self._update_sync_log(user_id, judge_name.value, SyncStatus.failed, "Profile not verified")
-                return False
-
-            # Fetch submissions from judge
-            if judge_name == JudgeName.codeforces:
-                result = await self.adapter.get_submissions(linked_profile.handle)
-            else:
-                # TODO (Sprint 2): Implement LeetCode and CodeChef adapters
-                self._update_sync_log(user_id, judge_name.value, SyncStatus.failed, f"Adapter not implemented: {judge_name.value}")
-                return False
-
-            if result.get("status") != "OK":
-                error_msg = result.get("error", "Unknown error")
-                self._update_sync_log(user_id, judge_name.value, SyncStatus.failed, error_msg)
-                return False
-
-            # Process submissions and update topics
-            submissions = result.get("result", [])
-            for submission in submissions:
-                tags = self.adapter.extract_problem_tags(submission)
-                topics = self.tagger.map_tags(tags)
-
-                for topic_name in topics:
-                    self._update_village_progress(user_id, topic_name)
-
-            # Log successful sync
-            self._update_sync_log(user_id, judge_name.value, SyncStatus.up_to_date, None)
-            return True
-
-        except Exception as e:
-            self._update_sync_log(user_id, judge_name.value, SyncStatus.failed, str(e))
+        if not account:
             return False
 
-    async def sync_all_users(self) -> dict:
-        """
-        Sync all users' linked profiles (intended for background worker job).
+        if account.judge_type != JudgeType.codeforces:
+            self._update_sync_log(account, SyncStatus.failed, f"Adapter not implemented: {account.judge_type.value}")
+            return False
 
-        Returns:
-            Summary: {"total": int, "succeeded": int, "failed": int}
-        """
+        if not account.verified_flag:
+            self._update_sync_log(account, SyncStatus.failed, "Account not verified")
+            return False
+
+        try:
+            solves = await self.adapter.get_submissions(account.handle, since=account.last_sync_at)
+
+            for solve in solves:
+                if not self._persist_solved_problem(account.id, solve):
+                    continue  # already recorded (idempotent re-sync, REQ-2.5)
+
+                topics = self.tagger.map_tags(solve.topic_tags)
+                for topic_name in topics:
+                    self._update_village_progress(account.user_id, topic_name)
+
+            account.last_sync_at = datetime.now(timezone.utc)
+            self.db.commit()
+
+            self._update_sync_log(account, SyncStatus.up_to_date, None)
+            return True
+
+        except Exception as e:  # noqa: BLE001 — real classification is Phase 4's CircuitBreaker
+            self._update_sync_log(account, SyncStatus.failed, str(e))
+            return False
+
+    async def sync_all_accounts(self) -> dict:
+        """Sync all verified judge accounts (intended for the background worker)."""
         summary = {"total": 0, "succeeded": 0, "failed": 0}
 
-        # Fetch all users with verified linked profiles
-        linked_profiles = self.db.query(LinkedJudgeProfile).filter(
-            LinkedJudgeProfile.verified == True
-        ).all()
+        accounts = self.db.query(JudgeAccount).filter(JudgeAccount.verified_flag == True).all()  # noqa: E712
 
-        for profile in linked_profiles:
+        for account in accounts:
             summary["total"] += 1
-            success = await self.sync_user_judge(profile.user_id, profile.judge_name)
-            if success:
-                summary["succeeded"] += 1
-            else:
-                summary["failed"] += 1
+            success = await self.sync_judge_account(str(account.id))
+            summary["succeeded" if success else "failed"] += 1
 
         return summary
+
+    def _persist_solved_problem(self, judge_account_id, solve) -> bool:
+        """
+        Insert an immutable SolvedProblem fact. Returns False if it
+        already existed (idempotent re-sync — REQ-2.5).
+        """
+        record = SolvedProblem(
+            judge_account_id=judge_account_id,
+            problem_ext_id=solve.problem_ext_id,
+            topic_tags=solve.topic_tags,
+            rating=solve.rating,
+            solved_at=solve.solved_at,
+        )
+        self.db.add(record)
+        try:
+            self.db.flush()
+            return True
+        except IntegrityError:
+            self.db.rollback()
+            return False
 
     def _update_village_progress(self, user_id: str, topic_name: str):
         """
         Create or increment VillageTopicProgress for a user+topic.
 
-        Updates solved_count and recomputes level (floor(sqrt(count))).
+        TODO (plan.md Phase 5): replace this floor(sqrt) placeholder
+        with the points-based leveling formula (SADD 7.3.1 derivative:
+        triangular growth against topics.base_threshold).
         """
-        # Get or create topic
         topic = self.db.query(Topic).filter(Topic.name == topic_name).first()
         if not topic:
-            topic = Topic(name=topic_name)
-            self.db.add(topic)
-            self.db.flush()
+            return  # topics are seeded (plan.md Phase 1); an unmapped tag yields no topic
 
-        # Get or create progress record
         progress = self.db.query(VillageTopicProgress).filter(
             VillageTopicProgress.user_id == user_id,
             VillageTopicProgress.topic_id == topic.id,
         ).first()
 
         if not progress:
-            progress = VillageTopicProgress(
-                user_id=user_id,
-                topic_id=topic.id,
-                solved_count=1,
-                level=1
-            )
+            progress = VillageTopicProgress(user_id=user_id, topic_id=topic.id, progress_points=1, level=1)
             self.db.add(progress)
         else:
-            progress.solved_count += 1
-            progress.level = int(progress.solved_count ** 0.5)  # floor(sqrt(count))
+            progress.progress_points += 1
+            progress.level = int(progress.progress_points ** 0.5)
 
         self.db.commit()
 
-    def _update_sync_log(self, user_id: str, judge_name: str, status: SyncStatus, error: Optional[str]):
-        """
-        Create or update sync log entry.
-        """
-        log = self.db.query(SyncLog).filter(
-            SyncLog.user_id == user_id,
-            SyncLog.judge_name == judge_name,
-        ).first()
+    def _update_sync_log(self, account: JudgeAccount, status: SyncStatus, error: Optional[str]):
+        log = self.db.query(SyncLog).filter(SyncLog.judge_account_id == account.id).first()
 
         if not log:
             log = SyncLog(
-                user_id=user_id,
-                judge_name=judge_name,
+                user_id=account.user_id,
+                judge_account_id=account.id,
+                judge_name=account.judge_type.value,
                 status=status,
                 last_error=error,
-                last_synced_at=datetime.utcnow() if status == SyncStatus.up_to_date else None,
+                last_synced_at=datetime.now(timezone.utc) if status == SyncStatus.up_to_date else None,
             )
             self.db.add(log)
         else:
             log.status = status
             log.last_error = error
             if status == SyncStatus.up_to_date:
-                log.last_synced_at = datetime.utcnow()
-            log.updated_at = datetime.utcnow()
+                log.last_synced_at = datetime.now(timezone.utc)
+            log.updated_at = datetime.now(timezone.utc)
 
         self.db.commit()
-

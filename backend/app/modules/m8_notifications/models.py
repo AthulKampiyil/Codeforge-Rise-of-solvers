@@ -1,56 +1,34 @@
-"""Notification & WebSocket Models (REQ-8.x)
+"""Notification & Realtime Gateway — persistence for notification history.
 
-ORM models for notification tracking and WebSocket connection management.
-Owns: M8 data schema. Used by service layer.
+SADD 4.4 makes M8 a stateless gateway over Redis pub/sub — connection
+state (who's online, which local process holds their socket) lives in
+Redis/process memory, NOT in Postgres. Sprint 1's WebSocketConnection
+table is dropped: persisting a DB row on every connect/disconnect is
+both the wrong layer (SADD says Redis) and a write-amplification
+problem under load. Only the notification *history* (for the bell
+icon / audit trail) is durable.
 """
-from uuid import uuid4
-from enum import Enum
-from sqlalchemy import Column, String, UUID, DateTime, Boolean, ForeignKey, Index
-from datetime import datetime
+import uuid
+from datetime import datetime, timezone
+
+from sqlalchemy import Boolean, Column, DateTime, ForeignKey, String
+from sqlalchemy.dialects.postgresql import JSONB
+
 from app.db.base import Base
+from app.db.types import GUID
 
 
-class NotificationEventType(str, Enum):
-    """WebSocket notification event types."""
-    attack_received = "attack_received"
-    attack_resolved = "attack_resolved"
-    territory_lost = "territory_lost"
-    territory_gained = "territory_gained"
-    guild_invitation = "guild_invitation"
-    guild_member_joined = "guild_member_joined"
-    sync_complete = "sync_complete"
-    league_promotion = "league_promotion"
-
-
-class WebSocketConnection(Base):
-    """Track active WebSocket connections for users."""
-    __tablename__ = "websocket_connections"
-
-    id = Column(UUID(), primary_key=True, default=uuid4)
-    user_id = Column(UUID(), ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
-    session_id = Column(String(100), nullable=False, index=True)
-    connected_at = Column(DateTime(), nullable=False, default=datetime.utcnow)
-    disconnected_at = Column(DateTime(), nullable=True)
-    is_active = Column(Boolean(), nullable=False, default=True)
-
-    __table_args__ = (
-        Index("idx_websocket_connections_user", "user_id"),
-        Index("idx_websocket_connections_active", "is_active"),
-    )
+def utcnow() -> datetime:
+    return datetime.now(timezone.utc)
 
 
 class Notification(Base):
-    """Notification record for audit/history."""
+    """Durable notification record (audit/history, REQ-4.5 "summarize the outcome")."""
     __tablename__ = "notifications"
 
-    id = Column(UUID(), primary_key=True, default=uuid4)
-    user_id = Column(UUID(), ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
-    event_type = Column(String(50), nullable=False)  # attack_received, territory_lost, etc.
-    payload = Column(String(1000), nullable=True)  # JSON serialized event data
-    is_read = Column(Boolean(), nullable=False, default=False)
-    created_at = Column(DateTime(), nullable=False, default=datetime.utcnow)
-
-    __table_args__ = (
-        Index("idx_notifications_user", "user_id"),
-        Index("idx_notifications_created", "created_at"),
-    )
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    user_id = Column(GUID(), ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+    event_type = Column(String(50), nullable=False)
+    payload = Column(JSONB, nullable=True)
+    is_read = Column(Boolean, default=False, nullable=False)
+    created_at = Column(DateTime(timezone=True), default=utcnow, nullable=False, index=True)

@@ -1,24 +1,24 @@
-"""Async Village Attacks (REQ-4.x) — Pydantic request/response schemas."""
-from pydantic import BaseModel
+"""Async Village Attacks (REQ-4.x) — Pydantic schemas."""
 from datetime import datetime
 from typing import Optional
 
+from pydantic import BaseModel
+
 
 class AttackRequest(BaseModel):
-    """Request to attack a defender (REQ-4.1)."""
-    defender_user_id: str
-    challenge_topic: Optional[str] = None
+    """Request to attack a target (REQ-4.1)."""
+    target_user_id: str
 
 
 class AttackOut(BaseModel):
-    """Attack response (REQ-4.1)."""
     id: str
     attacker_user_id: str
-    defender_user_id: str
+    target_user_id: str
     status: str
     score: int
-    challenge_topic: Optional[str]
-    created_at: datetime
+    solved_fraction: Optional[float]
+    started_at: datetime
+    window_expires_at: Optional[datetime]
     resolved_at: Optional[datetime]
 
     class Config:
@@ -26,17 +26,12 @@ class AttackOut(BaseModel):
 
 
 class AttackTargetOut(BaseModel):
-    """Matchmaking target for attacking (REQ-4.2)."""
+    """Matchmaking candidate (REQ-4.1). Populated for real in plan.md Phase 7."""
     id: str
     username: str
-    level: int  # Average level from village
-    total_solved: int
     defense_rating: float
 
 
 class AttackCooldownStatusOut(BaseModel):
-    """Cooldown status (REQ-4.4)."""
     can_attack: bool
-    cooldown_minutes: int
     next_available_at: Optional[datetime]
-

@@ -3,20 +3,20 @@
 Owns: orchestration/business rules for this module.
 Cross-module calls must go through another module's service.py,
 never its repository.py or models.py directly (SADD 4.1 coupling rule).
+
+NOTE: The real defense-rating and leveling formulas (SADD 7.3.1) land
+in plan.md Phase 5, along with VillageProfile maintenance and the
+VILLAGE_UPDATED realtime event. This file currently reports progress
+as tracked by sync_scheduler.py's placeholder leveling logic.
 """
 from sqlalchemy.orm import Session
-from app.modules.m3_village.models import VillageTopicProgress, Topic
+
+from app.modules.m3_village.models import Topic
 from app.modules.m3_village.repository import VillageRepository
 
 
 class VillageService:
-    """
-    Business logic for personal code village progression (REQ-3.1–3.4).
-
-    Responsibilities:
-    - Get user's village profile (all topics + levels)
-    - Calculate aggregate stats (defense rating placeholder for Sprint 2)
-    """
+    """Business logic for personal code village progression (REQ-3.1–3.4)."""
 
     def __init__(self, db: Session):
         self.db = db
@@ -26,24 +26,10 @@ class VillageService:
         """
         Get user's complete village profile (REQ-3.4).
 
-        Returns:
-        {
-            "user_id": UUID string,
-            "total_solved": int (sum of all topics' solved_count),
-            "average_level": float,
-            "topics": [
-                {
-                    "id": UUID,
-                    "name": string,
-                    "solved_count": int,
-                    "level": int (floor(sqrt(solved_count)))
-                },
-                ...
-            ],
-            "defense_rating": float  # TODO (Sprint 2): implement real calculation
-        }
+        TODO (plan.md Phase 5): source defense_rating from
+        VillageProfile (materialized, matchmaking-indexed) instead of
+        computing it ad hoc here.
         """
-        # Fetch all progress records for user
         progress_records = self.repo.get_all_by_user(user_id)
 
         if not progress_records:
@@ -52,7 +38,7 @@ class VillageService:
                 "total_solved": 0,
                 "average_level": 0.0,
                 "topics": [],
-                "defense_rating": 0.0,  # TODO: real calculation in Sprint 2
+                "defense_rating": 0.0,
             }
 
         topics = []
@@ -65,10 +51,12 @@ class VillageService:
                 topics.append({
                     "id": str(progress.topic_id),
                     "name": topic.name,
-                    "solved_count": progress.solved_count,
+                    "display_name": topic.display_name,
+                    "structure_key": topic.structure_key,
+                    "progress_points": progress.progress_points,
                     "level": progress.level,
                 })
-                total_solved += progress.solved_count
+                total_solved += progress.progress_points
                 total_level += progress.level
 
         average_level = total_level / len(progress_records) if progress_records else 0.0
@@ -77,17 +65,6 @@ class VillageService:
             "user_id": user_id,
             "total_solved": total_solved,
             "average_level": round(average_level, 2),
-            "topics": sorted(topics, key=lambda t: t["level"], reverse=True),  # Sorted by level DESC
-            "defense_rating": 0.0,  # TODO: real calculation in Sprint 2
+            "topics": sorted(topics, key=lambda t: t["level"], reverse=True),
+            "defense_rating": 0.0,  # TODO (Phase 5): SADD 7.3.1 formula
         }
-
-    def get_topic_leaderboard(self, topic_name: str, limit: int = 10) -> list[dict]:
-        """
-        Get top users for a specific topic (placeholder for future leaderboard features).
-
-        Returns:
-            List of {"user_id": UUID, "handle": str, "level": int, "solved_count": int}
-        """
-        # TODO (Sprint 2): Implement leaderboard with user names/handles
-        return []
-
