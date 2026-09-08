@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 
 from sqlalchemy import Boolean, Column, DateTime, Enum, Float, ForeignKey, Integer, String
 
-from app.db.base import Base
+from app.db.base_class import Base
 from app.db.types import GUID
 
 
