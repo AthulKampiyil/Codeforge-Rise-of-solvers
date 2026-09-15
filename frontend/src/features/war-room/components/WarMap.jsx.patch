@@ -1,0 +1,108 @@
+--- frontend/src/features/war-room/components/WarMap.jsx
++++ frontend/src/features/war-room/components/WarMap.jsx
+@@ -1,6 +1,49 @@
+ import React from 'react';
++import Phaser from 'phaser';
++import WarMapScene from '../../../game/WarMapScene';
++
++function WarMapCanvas() {
++    React.useEffect(() => {
++        const config = {
++            type: Phaser.AUTO,
++            width: 800,
++            height: 600,
++            parent: 'phaser-container',
++            scene: [WarMapScene],
++            transparent: true,
++            scale: {
++                mode: Phaser.Scale.FIT,
++                autoCenter: Phaser.Scale.CENTER_BOTH
++            }
++        };
++        const game = new Phaser.Game(config);
++
++        game.events.once('step', () => {
++            const scene = game.scene.getScene('WarMapScene');
++            if (scene) {
++                scene.updateZones([
++                    { name: "Northmere Capital", owning_guild_id: "Guild_Spade", map_polygon: [[100, 100], [200, 100], [200, 200], [100, 200]], influence: 100 },
++                    { name: "Frozen Archives", owning_guild_id: "Guild_Heart", map_polygon: [[200, 100], [300, 100], [300, 200], [200, 200]], influence: 45 },
++                    { name: "Iron Peaks", owning_guild_id: "Guild_Diamond", map_polygon: [[300, 100], [400, 100], [400, 200], [300, 200]], influence: 75 },
++                    { name: "Thornvale", owning_guild_id: "123", map_polygon: [[100, 200], [200, 200], [200, 300], [100, 300]], influence: 15 },
++                    { name: "The Nexus", owning_guild_id: null, map_polygon: [[200, 200], [300, 200], [300, 300], [200, 300]], influence: 0 },
++                    { name: "Rivergate", owning_guild_id: "123", map_polygon: [[300, 200], [400, 200], [400, 300], [300, 300]], influence: 20 },
++                    { name: "Sunken Library", owning_guild_id: null, map_polygon: [[100, 300], [200, 300], [200, 400], [100, 400]], influence: 0 },
++                    { name: "Codewall", owning_guild_id: "Guild_Diamond", map_polygon: [[200, 300], [400, 300], [400, 400], [200, 400]], influence: 10 },
++                ]);
++            }
++        });
++
++        return () => {
++            game.destroy(true);
++        };
++    }, []);
++
++    return <div id="phaser-container" style={{width: '100%', height: '100%'}}></div>;
++}
+ 
+ export default function WarMap() {
+     return (
+         <div style={{flex: '1', display: 'flex', gap: '16px', padding: '18px 22px', minHeight: '0'}}>
+ 
+     <div className="panel" style={{flex: '1', minWidth: '0'}}>
+@@ -14,19 +57,7 @@
+       </div>
+ 
+       <div style={{flex: '1', position: 'relative', background: '#0b0f15', overflow: 'hidden'}}>
+-        <svg viewBox="0 0 1060 660" preserveAspectRatio="xMidYMid meet" style={{width: '100%', height: '100%', display: 'block'}}>
+-          <polygon points="60,80 300,40 280,180 120,240" fill="rgba(92,102,115,.10)" stroke="#5c6673" strokeWidth="1.4"></polygon>
+-          <polygon points="300,40 520,30 560,170 420,230 280,180" fill="rgba(74,144,201,.13)" stroke="#4a90c9" strokeWidth="1.4"></polygon>
+-          <polygon points="520,30 800,60 820,200 560,170" fill="rgba(201,162,39,.15)" stroke="#c9a227" strokeWidth="2.2"></polygon>
+-          <polygon points="800,60 1010,110 1000,290 820,200" fill="rgba(201,74,74,.13)" stroke="#c94a4a" strokeWidth="1.4"></polygon>
+-          <polygon points="420,230 560,170 820,200 780,380 500,400" fill="rgba(74,144,201,.13)" stroke="#4a90c9" strokeWidth="2.2" strokeDasharray="7 4"></polygon>
+-          <polygon points="120,240 280,180 420,230 500,400 300,470 100,400" fill="rgba(74,201,127,.11)" stroke="#4ac97f" strokeWidth="1.4"></polygon>
+-          <polygon points="300,470 500,400 780,380 760,560 420,620" fill="rgba(201,162,39,.15)" stroke="#c9a227" strokeWidth="2.2"></polygon>
+-          <polygon points="780,380 1000,290 1010,520 760,560" fill="rgba(201,74,74,.13)" stroke="#c94a4a" strokeWidth="1.4"></polygon>
+-
+-          <text x="150" y="150" fill="#e6e9ee" fontFamily="Georgia, serif" fontSize="16">Frozen Archives</text>
+-          <text x="150" y="170" fill="#5c6673" fontFamily="ui-monospace, Menlo, monospace" fontSize="12">unclaimed</text>
+-
+-          <text x="345" y="118" fill="#e6e9ee" fontFamily="Georgia, serif" fontSize="16">Northmere Capital</text>
+-
+-          <text x="350" y="138" fill="#4a90c9" fontFamily="ui-monospace, Menlo, monospace" fontSize="12">Nullbyte Syndicate</text>
+-
+-          <text x="660" y="118" fill="#e6e9ee" fontFamily="Georgia, serif" fontSize="16">Iron Peaks</text>
+-
+-          <text x="660" y="138" fill="#c9a227" fontFamily="ui-monospace, Menlo, monospace" fontSize="12">Ironforge Union</text>
+-
+-          <text x="890" y="160" fill="#e6e9ee" fontFamily="Georgia, serif" fontSize="16">The Nexus</text>
+-
+-          <text x="890" y="180" fill="#c94a4a" fontFamily="ui-monospace, Menlo, monospace" fontSize="12">Ironpeak Circle</text>
+-
+-          <text x="210" y="320" fill="#e6e9ee" fontFamily="Georgia, serif" fontSize="16">Thornvale</text>
+-
+-          <text x="210" y="340" fill="#4ac97f" fontFamily="ui-monospace, Menlo, monospace" fontSize="12">Verdant Order</text>
+-
+-          <text x="560" y="520" fill="#e6e9ee" fontFamily="Georgia, serif" fontSize="16">Rivergate</text>
+-
+-          <text x="560" y="540" fill="#c9a227" fontFamily="ui-monospace, Menlo, monospace" fontSize="12">Ironforge Union</text>
+-
+-          <text x="910" y="440" fill="#e6e9ee" fontFamily="Georgia, serif" fontSize="16">Sunken Library</text>
+-
+-          <text x="910" y="460" fill="#c94a4a" fontFamily="ui-monospace, Menlo, monospace" fontSize="12">Ironpeak Circle</text>
+-
+-        </svg>
+-
+-        {/* hover tooltip, drawn over the canvas */}
+-        <div className="panel" style={{position: 'absolute', left: '492px', top: '308px', width: '214px', background: 'rgba(20,26,34,.97)'}}>
+-          <div className="panel-b" style={{padding: '10px 12px', gap: '5px'}}>
+-            <div style={{fontSize: '12.5px', fontWeight: 'bold'}}>Codewall</div>
+-            <div className="mono inf" style={{fontSize: '10.5px'}}>Nullbyte Syndicate</div>
+-            <div style={{height: '1px', background: '#2a323d', margin: '4px 0'}}></div>
+-            <div className="dim mono" style={{fontSize: '10.5px'}}>score 3,122</div>
+-            <div className="dim" style={{fontSize: '10.5px'}}>click for the full breakdown</div>
+-          </div>
+-        </div>
++        <WarMapCanvas />
+ 
+         {/* legend: owner is never colour alone (SADD 8.1) */}

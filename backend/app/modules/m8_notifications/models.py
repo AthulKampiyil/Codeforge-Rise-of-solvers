@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from sqlalchemy import Boolean, Column, DateTime, ForeignKey, String
 from sqlalchemy.dialects.postgresql import JSONB
 
-from app.db.base import Base
+from app.db.base_class import Base
 from app.db.types import GUID
 
 

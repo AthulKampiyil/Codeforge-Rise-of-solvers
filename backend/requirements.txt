@@ -17,6 +17,10 @@ pydantic[email]==2.10.2
 # Auth
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
+# passlib 1.7.4's bcrypt backend breaks on bcrypt>=4.1 (its load-time
+# self-test passes an 80-char string and bcrypt 4.1+ raises instead of
+# truncating). Pin to the last compatible release.
+bcrypt==4.0.1
 
 # Realtime
 websockets==13.1

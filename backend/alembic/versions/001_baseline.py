@@ -28,23 +28,36 @@ def upgrade() -> None:
     # Enum types (created explicitly so their names are stable and
     # match the `name=` given on each model's sa.Enum(), per SADD 6.4)
     # ------------------------------------------------------------------
-    judge_type = postgresql.ENUM("codeforces", "leetcode", "codechef", name="judge_type")
-    sync_status = postgresql.ENUM("up_to_date", "in_progress", "failed", "degraded", name="sync_status")
+    # create_type=False: these are created explicitly by the .create()
+    # loop below; without this flag op.create_table would emit a second
+    # CREATE TYPE for every column that references one (DuplicateObject).
+    judge_type = postgresql.ENUM(
+        "codeforces", "leetcode", "codechef", name="judge_type", create_type=False
+    )
+    sync_status = postgresql.ENUM(
+        "up_to_date", "in_progress", "failed", "degraded", name="sync_status", create_type=False
+    )
     dlq_failure_reason = postgresql.ENUM(
         "rate_limited", "circuit_open", "parse_error", "auth_expired", "unknown",
-        name="dlq_failure_reason",
+        name="dlq_failure_reason", create_type=False,
     )
     attack_status = postgresql.ENUM(
-        "created", "in_progress", "completed", "abandoned", "resolved", name="attack_status"
+        "created", "in_progress", "completed", "abandoned", "resolved",
+        name="attack_status", create_type=False,
     )
-    guild_role = postgresql.ENUM("leader", "officer", "member", name="guild_role")
-    join_request_status = postgresql.ENUM("pending", "approved", "rejected", name="join_request_status")
+    guild_role = postgresql.ENUM(
+        "leader", "officer", "member", name="guild_role", create_type=False
+    )
+    join_request_status = postgresql.ENUM(
+        "pending", "approved", "rejected", name="join_request_status", create_type=False
+    )
     league_tier = postgresql.ENUM(
-        "bronze", "silver", "gold", "platinum", "diamond", "legend", name="league_tier"
+        "bronze", "silver", "gold", "platinum", "diamond", "legend",
+        name="league_tier", create_type=False,
     )
     trophy_event_type = postgresql.ENUM(
         "attack_win", "attack_loss", "successful_defense", "failed_defense",
-        "attack_abandoned", "practice_milestone", name="trophy_event_type",
+        "attack_abandoned", "practice_milestone", name="trophy_event_type", create_type=False,
     )
 
     bind = op.get_bind()

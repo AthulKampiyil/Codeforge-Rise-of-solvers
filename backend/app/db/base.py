@@ -1,7 +1,9 @@
-"""SQLAlchemy declarative Base + import hook for all module models."""
-from sqlalchemy.orm import declarative_base
+"""Alembic aggregator: re-exports Base and imports every module's models.
 
-Base = declarative_base()
+Import `Base` from `app.db.base_class` in model modules, never from here —
+this module imports the models themselves and would cycle.
+"""
+from app.db.base_class import Base  # noqa: F401
 
 # Import all models so they're registered with Base.metadata
 # (needed for Alembic autogenerate). Order follows SADD 4.5's acyclic
