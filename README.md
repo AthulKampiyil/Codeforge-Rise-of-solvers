@@ -71,6 +71,16 @@ docker compose up --build
 - Frontend: http://localhost:5173
 - Postgres: localhost:5432 / Redis: localhost:6379
 
+**`docker compose up` fails with "permission denied while trying to connect to
+the Docker daemon socket"?** Your user isn't in the `docker` group yet:
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+Then fully log out and back in (a new terminal isn't enough — group
+membership is read at login) before retrying.
+
 ## Why this structure (validate against the docs)
 
 See the design-rationale table in the project chat / PR description that
