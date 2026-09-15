@@ -31,6 +31,13 @@ export default class WarMapScene extends Phaser.Scene {
         this.renderLegend();
     }
 
+    setDisplayMode(mode, contestedOnly, filteredGuild = null) {
+        this.mapMode = mode;
+        this.contestedOnly = contestedOnly;
+        this.filteredGuild = filteredGuild;
+        this.renderZones();
+    }
+
     getGuildColor(guildId) {
         if (!guildId) return 0x2a323d; // unowned neutral
         if (!this.guildColors[guildId]) {
@@ -100,17 +107,46 @@ export default class WarMapScene extends Phaser.Scene {
         this.zonesData.forEach(zone => {
             if (!zone.map_polygon) return;
             
-            const isOwned = !!zone.owning_guild_id;
-            const factionColor = this.getGuildColor(zone.owning_guild_id);
-            const hoverColor = 0xffffff;
-            const baseThickness = 2;
+            let isOwned = !!zone.owning_guild_id;
+            let factionColor = this.getGuildColor(zone.owning_guild_id);
+            let hoverColor = 0xffffff;
+            let baseThickness = 2;
+
+            const isFilteredOut = this.filteredGuild && (
+                (this.filteredGuild === 'unclaimed' && isOwned) || 
+                (this.filteredGuild !== 'unclaimed' && zone.owning_guild_id !== this.filteredGuild)
+            );
 
             const graphics = this.add.graphics();
             
             const drawPoly = (fillAlpha, currentLineThickness, currentLineColor) => {
+                if (isFilteredOut) {
+                    fillAlpha = 0;
+                    currentLineThickness = 1;
+                    currentLineColor = 0x2a323d;
+                }
                 graphics.clear();
                 
-                graphics.fillStyle(factionColor, fillAlpha);
+                if (this.contestedOnly && !zone.is_contested) {
+                    fillAlpha = 0;
+                    currentLineThickness = 1;
+                    currentLineColor = 0x2a323d;
+                }
+
+                if (this.mapMode === 'affinity') {
+                    // Just make it a uniform heat for now if affinity is chosen
+                    const heatColors = [0x000000, 0xef4444, 0xf59e0b, 0x10b981];
+                    const affinityVal = zone.influence || 0;
+                    let heatColor = heatColors[0];
+                    if (affinityVal > 75) heatColor = heatColors[3];
+                    else if (affinityVal > 45) heatColor = heatColors[2];
+                    else if (affinityVal > 0) heatColor = heatColors[1];
+                    
+                    graphics.fillStyle(heatColor, fillAlpha === 0 ? 0 : 0.4);
+                } else {
+                    graphics.fillStyle(factionColor, fillAlpha);
+                }
+                
                 graphics.beginPath();
                 zone.map_polygon.forEach((pt, i) => {
                     if (i === 0) graphics.moveTo(pt[0], pt[1]);
@@ -119,7 +155,7 @@ export default class WarMapScene extends Phaser.Scene {
                 graphics.closePath();
                 graphics.fillPath();
 
-                if (zone.is_contested) {
+                if (zone.is_contested && (!this.contestedOnly || this.contestedOnly)) {
                     graphics.lineStyle(currentLineThickness, 0x8b96a5, 1);
                     const polyPoints = zone.map_polygon;
                     for (let i = 0; i < polyPoints.length; i++) {
@@ -158,14 +194,19 @@ export default class WarMapScene extends Phaser.Scene {
             // Initial draw
             drawPoly(isOwned ? 0.15 : 0.05, baseThickness, factionColor);
 
-            // Label
+            // Label - Zone Name
             const centerX = zone.map_polygon.reduce((sum, pt) => sum + pt[0], 0) / zone.map_polygon.length;
             const centerY = zone.map_polygon.reduce((sum, pt) => sum + pt[1], 0) / zone.map_polygon.length;
             
-            const labelText = zone.name + '\n' + (isOwned ? (zone.owning_guild_id.replace('Guild_', '') + (zone.is_contested ? ' (contested)' : '')) : 'unclaimed');
-            const label = this.add.text(centerX, centerY, labelText, {
-                fontFamily: 'monospace', fontSize: '11px', fill: isOwned ? '#' + factionColor.toString(16).padStart(6,'0') : '#8b949e', align: 'center', lineSpacing: 4
-            }).setOrigin(0.5).setAlpha(isOwned ? 1 : 0.6);
+            const nameLabel = this.add.text(centerX, centerY - 6, zone.name.toUpperCase(), {
+                fontFamily: 'sans-serif', fontSize: '11px', fontStyle: 'bold', fill: '#ffffff', align: 'center', letterSpacing: 1
+            }).setOrigin(0.5).setAlpha(isFilteredOut ? 0.2 : (isOwned ? 1 : 0.6));
+
+            // Label - Owner Name
+            const ownerText = isOwned ? (zone.owning_guild_id.replace('Guild_', '') + (zone.is_contested ? ' (contested)' : '')) : 'unclaimed';
+            const ownerLabel = this.add.text(centerX, centerY + 8, ownerText, {
+                fontFamily: 'monospace', fontSize: '11px', fill: isOwned ? '#' + factionColor.toString(16).padStart(6,'0') : '#8b949e', align: 'center'
+            }).setOrigin(0.5).setAlpha(isFilteredOut ? 0.2 : (isOwned ? 1 : 0.6));
 
             // Interactive area
             const phaserPoints = zone.map_polygon.map(pt => new Phaser.Math.Vector2(pt[0], pt[1]));
@@ -198,7 +239,7 @@ export default class WarMapScene extends Phaser.Scene {
                 this.game.events.emit('ZONE_CLICKED', zone);
             });
 
-            this.zoneObjects.push(graphics, label);
+            this.zoneObjects.push(graphics, nameLabel, ownerLabel);
         });
     }
 }
