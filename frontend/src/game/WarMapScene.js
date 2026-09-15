@@ -157,11 +157,11 @@ export default class WarMapScene extends Phaser.Scene {
             }).setOrigin(0.5).setAlpha(isOwned ? 1 : 0.6);
 
             // Interactive area
-            const phaserPoly = new Phaser.Geom.Polygon(zone.map_polygon.map(pt => new Phaser.Math.Vector2(pt[0], pt[1])));
-            const interactiveArea = this.add.polygon(0, 0, zone.map_polygon, 0x000000, 0).setOrigin(0, 0);
-            interactiveArea.setInteractive(phaserPoly, Phaser.Geom.Polygon.Contains);
+            const phaserPoints = zone.map_polygon.map(pt => new Phaser.Math.Vector2(pt[0], pt[1]));
+            const phaserPoly = new Phaser.Geom.Polygon(phaserPoints);
+            graphics.setInteractive(phaserPoly, Phaser.Geom.Polygon.Contains);
             
-            interactiveArea.on('pointerover', (pointer) => {
+            graphics.on('pointerover', (pointer) => {
                 drawPoly(0.6, baseThickness + 2, hoverColor);
                 
                 // Tooltip
@@ -173,16 +173,16 @@ export default class WarMapScene extends Phaser.Scene {
                 this.tweens.add({ targets: this.tooltip, alpha: 1, duration: 100, ease: 'Power2' });
             });
 
-            interactiveArea.on('pointermove', (pointer) => {
+            graphics.on('pointermove', (pointer) => {
                 this.tooltip.setPosition(pointer.x, pointer.y - 15);
             });
 
-            interactiveArea.on('pointerout', () => {
+            graphics.on('pointerout', () => {
                 drawPoly(isOwned ? 0.4 : 0.1, baseThickness, factionColor);
                 this.tweens.add({ targets: this.tooltip, alpha: 0, duration: 100, ease: 'Power2' });
             });
 
-            interactiveArea.on('pointerdown', () => {
+            graphics.on('pointerdown', () => {
                 // Show detail panel
                 let detailStr = `${zone.name.toUpperCase()}\n\n`;
                 detailStr += `Owner: ${zone.owning_guild_id ? zone.owning_guild_id.substring(0,8) : 'None'}\n\n`;
@@ -206,7 +206,7 @@ export default class WarMapScene extends Phaser.Scene {
                 this.detailPanel.setAlpha(1);
             });
 
-            this.zoneObjects.push(graphics, label, interactiveArea);
+            this.zoneObjects.push(graphics, label);
         });
     }
 }
