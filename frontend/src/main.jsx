@@ -9,7 +9,14 @@ import Phaser from 'phaser';
 import WarMapScene from './game/WarMapScene';
 import './wireframe.css';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            retry: false,
+            refetchOnWindowFocus: false
+        }
+    }
+});
 
 function App() {
     const [view, setView] = useState('guild');

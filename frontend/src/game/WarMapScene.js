@@ -76,16 +76,7 @@ export default class WarMapScene extends Phaser.Scene {
         this.tooltipTitle = tooltipTitle;
         this.tooltipOwner = tooltipOwner;
 
-        // Detail Panel
-        this.detailPanel = this.add.container(550, 50).setDepth(200).setAlpha(0);
-        const detailBg = this.add.rectangle(0, 0, 230, 300, 0x0d1117, 0.95).setOrigin(0, 0).setStrokeStyle(1, 0x4ac97f);
-        this.detailText = this.add.text(15, 15, '', {
-            fontFamily: 'sans-serif', fontSize: '12px', fill: '#ffffff', wordWrap: { width: 200 }
-        });
-        const closeBtn = this.add.text(210, 10, 'X', { fontFamily: 'sans-serif', fontSize: '14px', fill: '#ff4444' })
-            .setInteractive()
-            .on('pointerdown', () => this.detailPanel.setAlpha(0));
-        this.detailPanel.add([detailBg, this.detailText, closeBtn]);
+        // Detail panel is handled by React UI. We emit ZONE_CLICKED.
 
         // Render zones
         this.renderZones();
@@ -203,27 +194,8 @@ export default class WarMapScene extends Phaser.Scene {
             });
 
             graphics.on('pointerdown', () => {
-                // Show detail panel
-                let detailStr = `${zone.name.toUpperCase()}\n\n`;
-                detailStr += `Owner: ${zone.owning_guild_id ? zone.owning_guild_id.substring(0,8) : 'None'}\n\n`;
-                
-                detailStr += `TOPIC AFFINITY:\n`;
-                if (zone.topic_affinity) {
-                    Object.entries(zone.topic_affinity).forEach(([topic, weight]) => {
-                        detailStr += `- ${topic}: ${weight}\n`;
-                    });
-                }
-                
-                detailStr += `\nGUILD CONTRIBUTIONS:\n`;
-                if (zone.scores) {
-                    let sortedScores = Object.entries(zone.scores).sort((a,b) => b[1] - a[1]);
-                    sortedScores.forEach(([gid, score]) => {
-                        detailStr += `- Guild ${gid.substring(0,4)}: ${Math.floor(score)}\n`;
-                    });
-                }
-                
-                this.detailText.setText(detailStr);
-                this.detailPanel.setAlpha(1);
+                // Emit event for React wrapper instead of showing a Phaser popup
+                this.game.events.emit('ZONE_CLICKED', zone);
             });
 
             this.zoneObjects.push(graphics, label);
