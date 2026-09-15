@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Phaser from 'phaser';
 import WarMapScene from '../../../game/WarMapScene';
 
-function WarMapCanvas({ mapMode, contestedOnly, onZoneClick }) {
+function WarMapCanvas({ mapMode, contestedOnly, filteredGuild, onZoneClick }) {
+    const gameRef = React.useRef(null);
+
     useEffect(() => {
         const config = {
             type: Phaser.AUTO,
@@ -17,6 +19,7 @@ function WarMapCanvas({ mapMode, contestedOnly, onZoneClick }) {
             }
         };
         const game = new Phaser.Game(config);
+        gameRef.current = game;
 
         game.events.once('step', () => {
             const scene = game.scene.getScene('WarMapScene');
@@ -40,18 +43,18 @@ function WarMapCanvas({ mapMode, contestedOnly, onZoneClick }) {
 
         return () => {
             game.destroy(true);
+            gameRef.current = null;
         };
     }, [onZoneClick]);
 
     useEffect(() => {
-        const game = document.querySelector('#phaser-container canvas')?.__phaser;
-        if (game) {
-            const scene = game.scene.getScene('WarMapScene');
+        if (gameRef.current) {
+            const scene = gameRef.current.scene.getScene('WarMapScene');
             if (scene && scene.setDisplayMode) {
-                scene.setDisplayMode(mapMode, contestedOnly);
+                scene.setDisplayMode(mapMode, contestedOnly, filteredGuild);
             }
         }
-    }, [mapMode, contestedOnly]);
+    }, [mapMode, contestedOnly, filteredGuild]);
 
     return <div id="phaser-container" style={{width: '100%', height: '100%'}}></div>;
 }
