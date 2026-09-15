@@ -23,5 +23,7 @@ def upgrade() -> None:
 
 
 def downgrade() -> None:
-    op.drop_index("ix_village_profiles_defense_rating", table_name="village_profiles")
-    op.drop_table("village_profiles")
+    # village_profiles is created by 001_baseline.py in this repository. This
+    # revision keeps the materialized-profile contract in the assigned chain,
+    # but must not remove a table owned by the baseline revision.
+    pass
