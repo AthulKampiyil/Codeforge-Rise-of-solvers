@@ -1,70 +1,72 @@
-"""Personal Code Village Management (REQ-3.x) — business logic.
+"""Business logic for the materialized personal code village."""
+from datetime import datetime, timezone
 
-Owns: orchestration/business rules for this module.
-Cross-module calls must go through another module's service.py,
-never its repository.py or models.py directly (SADD 4.1 coupling rule).
-
-NOTE: The real defense-rating and leveling formulas (SADD 7.3.1) land
-in plan.md Phase 5, along with VillageProfile maintenance and the
-VILLAGE_UPDATED realtime event. This file currently reports progress
-as tracked by sync_scheduler.py's placeholder leveling logic.
-"""
 from sqlalchemy.orm import Session
 
-from app.modules.m3_village.models import Topic
+from app.modules.m1_auth.models import JudgeAccount, User
+from app.modules.m2_platform_sync.models import SolvedProblem
+from app.modules.m3_village.formulas import defense_rating, points_to_next_level, progress_percent
 from app.modules.m3_village.repository import VillageRepository
+from app.modules.m9_admin_config.models import GameBalanceConfig
+
+
+DEFAULT_BALANCE = {
+    "village.defense_base": 100,
+    "village.defense_level_weight": 10,
+    "village.defense_solved_weight": 0.25,
+}
 
 
 class VillageService:
-    """Business logic for personal code village progression (REQ-3.1–3.4)."""
-
     def __init__(self, db: Session):
         self.db = db
         self.repo = VillageRepository(db)
 
-    def get_user_village(self, user_id: str) -> dict:
-        """
-        Get user's complete village profile (REQ-3.4).
+    def _balance(self, key: str):
+        row = self.db.query(GameBalanceConfig).filter(GameBalanceConfig.key == key).first()
+        return row.value if row is not None else DEFAULT_BALANCE[key]
 
-        TODO (plan.md Phase 5): source defense_rating from
-        VillageProfile (materialized, matchmaking-indexed) instead of
-        computing it ad hoc here.
-        """
+    def _solved_count(self, user_id: str) -> int:
+        return self.db.query(SolvedProblem).join(
+            JudgeAccount, JudgeAccount.id == SolvedProblem.judge_account_id
+        ).filter(JudgeAccount.user_id == user_id).count()
+
+    def recompute_profile(self, user_id: str):
         progress_records = self.repo.get_all_by_user(user_id)
+        total_solved = self._solved_count(user_id)
+        total_level = sum(progress.level for progress in progress_records)
+        average_level = round(total_level / len(progress_records), 2) if progress_records else 0.0
+        defense = defense_rating(
+            self._balance("village.defense_base"),
+            self._balance("village.defense_level_weight"),
+            self._balance("village.defense_solved_weight"),
+            [progress.level for progress in progress_records],
+            total_solved,
+        )
+        return self.repo.save_profile(
+            user_id,
+            defense_rating=round(defense, 2),
+            total_solved=total_solved,
+            average_level=average_level,
+            last_recomputed_at=datetime.now(timezone.utc),
+        )
 
-        if not progress_records:
-            return {
-                "user_id": user_id,
-                "total_solved": 0,
-                "average_level": 0.0,
-                "topics": [],
-                "defense_rating": 0.0,
-            }
-
+    def get_user_village(self, user_id: str) -> dict:
+        profile = self.repo.get_profile(user_id) or self.recompute_profile(user_id)
+        user = self.db.query(User).filter(User.id == user_id).first()
         topics = []
-        total_solved = 0
-        total_level = 0
-
-        for progress in progress_records:
-            topic = self.db.query(Topic).filter(Topic.id == progress.topic_id).first()
-            if topic:
-                topics.append({
-                    "id": str(progress.topic_id),
-                    "name": topic.name,
-                    "display_name": topic.display_name,
-                    "structure_key": topic.structure_key,
-                    "progress_points": progress.progress_points,
-                    "level": progress.level,
-                })
-                total_solved += progress.progress_points
-                total_level += progress.level
-
-        average_level = total_level / len(progress_records) if progress_records else 0.0
-
+        for topic, progress in self.repo.get_topics_with_progress(user_id):
+            points = progress.progress_points if progress else 0
+            level = progress.level if progress else 0
+            topics.append({
+                "id": str(topic.id), "name": topic.name, "display_name": topic.display_name,
+                "structure_key": topic.structure_key, "progress_points": points, "level": level,
+                "points_to_next_level": points_to_next_level(points, topic.base_threshold),
+                "progress_pct": progress_percent(points, topic.base_threshold),
+            })
         return {
-            "user_id": user_id,
-            "total_solved": total_solved,
-            "average_level": round(average_level, 2),
+            "user_id": user_id, "username": user.username if user else None,
+            "total_solved": profile.total_solved, "average_level": profile.average_level,
             "topics": sorted(topics, key=lambda t: t["level"], reverse=True),
-            "defense_rating": 0.0,  # TODO (Phase 5): SADD 7.3.1 formula
+            "defense_rating": profile.defense_rating,
         }
