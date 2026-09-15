@@ -62,6 +62,7 @@ function WarMapCanvas({ mapMode, contestedOnly, filteredGuild, onZoneClick }) {
 export default function WarMap() {
     const [mapMode, setMapMode] = useState('owner');
     const [contestedOnly, setContestedOnly] = useState(false);
+    const [filteredGuild, setFilteredGuild] = useState(null);
     const [selectedZone, setSelectedZone] = useState({
         name: "The Nexus", 
         is_contested: true,
