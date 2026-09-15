@@ -6,7 +6,7 @@ export default class WarMapScene extends Phaser.Scene {
         this.zonesData = [];
         this.zoneObjects = [];
         this.guildColors = {}; // guild_id -> color hex
-        this.colorPalette = [0x8b5cf6, 0xef4444, 0x10b981, 0x3b82f6, 0xf59e0b, 0xec4899, 0x06b6d4];
+        this.colorPalette = [0x4a90c9, 0xc9a227, 0xc94a4a, 0x4ac97f, 0x8b5cf6, 0xf59e0b, 0xec4899];
         this.nextColorIdx = 0;
     }
 
@@ -56,8 +56,7 @@ export default class WarMapScene extends Phaser.Scene {
         }).setAlpha(0.9);
 
         // Legend (Accessibility - Never color alone)
-        this.legendContainer = this.add.container(20, 500);
-        this.renderLegend();
+        // Handled by React UI
 
         // Tooltip container
         this.tooltip = this.add.container(0, 0).setDepth(100).setAlpha(0);
@@ -100,20 +99,7 @@ export default class WarMapScene extends Phaser.Scene {
     }
 
     renderLegend() {
-        this.legendContainer.removeAll(true);
-        const legendBg = this.add.rectangle(0, 0, 250, 20 + Object.keys(this.guildColors).length * 20, 0x0d1117, 0.8).setOrigin(0, 0).setStrokeStyle(1, 0x4ac97f);
-        this.legendContainer.add(legendBg);
-        
-        this.add.text(10, 10, 'LEGEND', { fontFamily: 'sans-serif', fontSize: '12px', fontStyle: 'bold', fill: '#ffffff' }, this.legendContainer);
-        
-        let y = 30;
-        Object.entries(this.guildColors).forEach(([guildId, color]) => {
-            const hexColor = '#' + color.toString(16).padStart(6, '0');
-            const colorBox = this.add.rectangle(15, y + 6, 10, 10, color).setOrigin(0, 0);
-            const label = this.add.text(35, y, `Guild ${guildId.substring(0,6)}`, { fontFamily: 'monospace', fontSize: '11px', fill: '#ffffff' });
-            this.legendContainer.add([colorBox, label]);
-            y += 20;
-        });
+        // Legend is handled by React wrapper in WarMap.jsx
     }
 
     renderZones() {
@@ -132,9 +118,8 @@ export default class WarMapScene extends Phaser.Scene {
             
             const drawPoly = (fillAlpha, currentLineThickness, currentLineColor) => {
                 graphics.clear();
-                graphics.lineStyle(currentLineThickness, currentLineColor, 0.9);
-                graphics.fillStyle(factionColor, fillAlpha);
                 
+                graphics.fillStyle(factionColor, fillAlpha);
                 graphics.beginPath();
                 zone.map_polygon.forEach((pt, i) => {
                     if (i === 0) graphics.moveTo(pt[0], pt[1]);
@@ -142,18 +127,53 @@ export default class WarMapScene extends Phaser.Scene {
                 });
                 graphics.closePath();
                 graphics.fillPath();
-                graphics.strokePath();
+
+                if (zone.is_contested) {
+                    graphics.lineStyle(currentLineThickness, 0x8b96a5, 1);
+                    const polyPoints = zone.map_polygon;
+                    for (let i = 0; i < polyPoints.length; i++) {
+                        const p1 = new Phaser.Math.Vector2(polyPoints[i][0], polyPoints[i][1]);
+                        const p2 = new Phaser.Math.Vector2(polyPoints[(i + 1) % polyPoints.length][0], polyPoints[(i + 1) % polyPoints.length][1]);
+                        const dist = p1.distance(p2);
+                        const dashLen = 8;
+                        const gapLen = 8;
+                        const chunks = Math.floor(dist / (dashLen + gapLen));
+                        const dx = (p2.x - p1.x) / dist;
+                        const dy = (p2.y - p1.y) / dist;
+                        
+                        let cx = p1.x;
+                        let cy = p1.y;
+                        for (let j = 0; j < chunks; j++) {
+                            graphics.beginPath();
+                            graphics.moveTo(cx, cy);
+                            graphics.lineTo(cx + dx * dashLen, cy + dy * dashLen);
+                            graphics.strokePath();
+                            cx += dx * (dashLen + gapLen);
+                            cy += dy * (dashLen + gapLen);
+                        }
+                    }
+                } else {
+                    graphics.lineStyle(currentLineThickness, currentLineColor, 0.9);
+                    graphics.beginPath();
+                    zone.map_polygon.forEach((pt, i) => {
+                        if (i === 0) graphics.moveTo(pt[0], pt[1]);
+                        else graphics.lineTo(pt[0], pt[1]);
+                    });
+                    graphics.closePath();
+                    graphics.strokePath();
+                }
             };
 
             // Initial draw
-            drawPoly(isOwned ? 0.4 : 0.1, baseThickness, factionColor);
+            drawPoly(isOwned ? 0.15 : 0.05, baseThickness, factionColor);
 
             // Label
             const centerX = zone.map_polygon.reduce((sum, pt) => sum + pt[0], 0) / zone.map_polygon.length;
             const centerY = zone.map_polygon.reduce((sum, pt) => sum + pt[1], 0) / zone.map_polygon.length;
             
-            const label = this.add.text(centerX, centerY, zone.name.toUpperCase(), {
-                fontFamily: 'sans-serif', fontSize: '11px', fontStyle: 'bold', fill: '#ffffff', letterSpacing: 1
+            const labelText = zone.name + '\n' + (isOwned ? (zone.owning_guild_id.replace('Guild_', '') + (zone.is_contested ? ' (contested)' : '')) : 'unclaimed');
+            const label = this.add.text(centerX, centerY, labelText, {
+                fontFamily: 'monospace', fontSize: '11px', fill: isOwned ? '#' + factionColor.toString(16).padStart(6,'0') : '#8b949e', align: 'center', lineSpacing: 4
             }).setOrigin(0.5).setAlpha(isOwned ? 1 : 0.6);
 
             // Interactive area

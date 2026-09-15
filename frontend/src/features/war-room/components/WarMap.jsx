@@ -22,14 +22,14 @@ function WarMapCanvas() {
             const scene = game.scene.getScene('WarMapScene');
             if (scene) {
                 scene.updateZones([
-                    { name: "Northmere Capital", owning_guild_id: "Guild_Spade", map_polygon: [[100, 100], [200, 100], [200, 200], [100, 200]], influence: 100 },
-                    { name: "Frozen Archives", owning_guild_id: "Guild_Heart", map_polygon: [[200, 100], [300, 100], [300, 200], [200, 200]], influence: 45 },
-                    { name: "Iron Peaks", owning_guild_id: "Guild_Diamond", map_polygon: [[300, 100], [400, 100], [400, 200], [300, 200]], influence: 75 },
-                    { name: "Thornvale", owning_guild_id: "123", map_polygon: [[100, 200], [200, 200], [200, 300], [100, 300]], influence: 15 },
-                    { name: "The Nexus", owning_guild_id: null, map_polygon: [[200, 200], [300, 200], [300, 300], [200, 300]], influence: 0 },
-                    { name: "Rivergate", owning_guild_id: "123", map_polygon: [[300, 200], [400, 200], [400, 300], [300, 300]], influence: 20 },
-                    { name: "Sunken Library", owning_guild_id: null, map_polygon: [[100, 300], [200, 300], [200, 400], [100, 400]], influence: 0 },
-                    { name: "Codewall", owning_guild_id: "Guild_Diamond", map_polygon: [[200, 300], [400, 300], [400, 400], [200, 400]], influence: 10 },
+                    { name: "Frozen Archives", owning_guild_id: null, map_polygon: [[60, 170], [170, 140], [240, 260], [70, 270]], influence: 0 },
+                    { name: "Northmere Capital", owning_guild_id: "Guild_Nullbyte", map_polygon: [[170, 140], [290, 130], [290, 230], [240, 260]], influence: 100 },
+                    { name: "Iron Peaks", owning_guild_id: "Guild_Ironforge", map_polygon: [[290, 130], [440, 150], [430, 245], [290, 230]], influence: 75 },
+                    { name: "Codewall", owning_guild_id: "Guild_Ironpeak", map_polygon: [[440, 150], [540, 180], [550, 450], [420, 360], [430, 245]], influence: 45 },
+                    { name: "Thornvale", owning_guild_id: "Guild_Verdant", map_polygon: [[70, 270], [240, 260], [160, 420], [60, 370]], influence: 15 },
+                    { name: "The Nexus", owning_guild_id: null, map_polygon: [[240, 260], [290, 230], [430, 245], [420, 360], [270, 370], [160, 420]], influence: 0, is_contested: true, scores: {"Guild_Nullbyte": 3180, "Guild_Ironforge": 2744} },
+                    { name: "Rivergate", owning_guild_id: "Guild_Ironforge", map_polygon: [[160, 420], [270, 370], [400, 500], [165, 520]], influence: 20 },
+                    { name: "Sunken Library", owning_guild_id: "Guild_Ironpeak", map_polygon: [[270, 370], [420, 360], [550, 450], [400, 500]], influence: 10 },
                 ]);
             }
         });
