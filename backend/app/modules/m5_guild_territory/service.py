@@ -32,6 +32,22 @@ class GuildService:
         from app.modules.m3_village.service import VillageService
         village_svc = VillageService(self.membership_repo.db)
         
+        decay_per_day_row = self.membership_repo.db.execute(
+            text("SELECT value FROM game_balance_config WHERE key = 'territory.decay_per_day'")
+        ).fetchone()
+        decay_per_day = 0.02
+        if decay_per_day_row and decay_per_day_row[0] is not None:
+            try: decay_per_day = float(decay_per_day_row[0])
+            except (ValueError, TypeError): pass
+            
+        decay_floor_row = self.membership_repo.db.execute(
+            text("SELECT value FROM game_balance_config WHERE key = 'territory.decay_floor'")
+        ).fetchone()
+        decay_floor = 0.50
+        if decay_floor_row and decay_floor_row[0] is not None:
+            try: decay_floor = float(decay_floor_row[0])
+            except (ValueError, TypeError): pass
+
         for z in zones:
             guild_score = 0.0
             for m in members:
@@ -42,9 +58,9 @@ class GuildService:
                 if row and row[0]:
                     from datetime import datetime, timezone
                     days = (datetime.now(timezone.utc) - row[0].replace(tzinfo=timezone.utc)).days
-                    decay = max(0.50, 1.0 - 0.02 * days)
+                    decay = max(decay_floor, 1.0 - decay_per_day * days)
                 else:
-                    decay = 0.50
+                    decay = decay_floor
                     
                 village = village_svc.get_user_village(str(m.user_id))
                 member_score = 0.0
@@ -158,6 +174,12 @@ class GuildService:
         return self.guild_repo.get_guild_by_id(membership.guild_id)
 
     def get_guild_members(self, guild_id) -> list:
+        from app.modules.m3_village.service import VillageService
+        from app.modules.m4_attacks.service import AttackService
+        
+        village_svc = VillageService(self.membership_repo.db)
+        attack_svc = AttackService(self.membership_repo.db)
+        
         memberships = self.membership_repo.get_memberships_by_guild(guild_id)
         result = []
         for m in memberships:
@@ -167,15 +189,27 @@ class GuildService:
             ).fetchone()
             username = row[0] if row else "Unknown"
             
+            level = "—"
+            solved_count = "—"
+            if hasattr(village_svc, "get_user_village"):
+                v_profile = village_svc.get_user_village(str(m.user_id))
+                if v_profile:
+                    level = v_profile.get("average_level", "—")
+                    solved_count = v_profile.get("total_solved", "—")
+            
+            attack_count = "—"
+            if hasattr(attack_svc, "get_attack_count"):
+                attack_count = attack_svc.get_attack_count(str(m.user_id))
+            
             result.append({
                 "guild_id": m.guild_id,
                 "user_id": m.user_id,
                 "role": m.role.value if hasattr(m.role, 'value') else m.role,
                 "joined_at": m.joined_at,
                 "username": username,
-                "level": "—",
-                "solved_count": "—",
-                "attack_count": "—",
+                "level": level,
+                "solved_count": solved_count,
+                "attack_count": attack_count,
             })
         return result
 
