@@ -116,6 +116,15 @@ class NotGuildMember(ForbiddenError):
     code = "not_guild_member"
 
 
+# --- M9 Admin & Config ---------------------------------------------------
+class ConfigKeyNotFound(NotFoundError):
+    code = "config_key_not_found"
+
+
+class ConfigTypeMismatch(ValidationDomainError):
+    code = "config_type_mismatch"
+
+
 def register_exception_handlers(app: FastAPI) -> None:
     """Register the single translation point from DomainError -> HTTP response."""
 
