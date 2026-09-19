@@ -53,6 +53,15 @@ class AttackRepository:
             .all()
         )
 
+    def get_attack_count(self, user_id: str) -> int:
+        return (
+            self.db.query(func.count(Attack.id))
+            .filter(Attack.attacker_user_id == user_id)
+            .scalar()
+            or 0
+        )
+
+
     def create_attack(
         self,
         attacker_user_id: str,

@@ -79,6 +79,14 @@ class AttackService:
             pass
         return default
 
+    def get_attack_count(self, user_id: str) -> int:
+        """Return total attacks launched by user (for guild roster REQ-5.1)."""
+        return self.attack_repo.get_attack_count(user_id)
+
+    def get_user_attack_count(self, user_id: str) -> int:
+        """Alias for get_attack_count."""
+        return self.attack_repo.get_attack_count(user_id)
+
     def get_cooldown_status(self, user_id: str) -> dict:
         """
         Check cooldown against the PostgreSQL source of truth (SADD §7.2.1).
@@ -86,6 +94,8 @@ class AttackService:
         """
         cooldown_minutes = int(self.get_config("attack.cooldown_minutes", DEFAULT_COOLDOWN_MINUTES))
         expires_at = self.cooldown_repo.get_cooldown_expiry(user_id)
+        if expires_at and expires_at.tzinfo is None:
+            expires_at = expires_at.replace(tzinfo=timezone.utc)
         now = datetime.now(timezone.utc)
 
         if not expires_at or expires_at <= now:
@@ -104,6 +114,24 @@ class AttackService:
             "remaining_seconds": remaining_seconds,
         }
 
+    def _get_defense_rating(self, user_id: str) -> float:
+        """Fetch defense rating from VillageService, falling back to VillageProfile table."""
+        try:
+            village = self.village_svc.get_user_village(user_id)
+            rating = float(village.get("defense_rating", 0.0))
+            if rating > 0.0:
+                return rating
+        except Exception:
+            pass
+        try:
+            from app.modules.m3_village.models import VillageProfile
+            vp = self.db.query(VillageProfile).filter(VillageProfile.user_id == user_id).first()
+            if vp and vp.defense_rating:
+                return float(vp.defense_rating)
+        except Exception:
+            pass
+        return 0.0
+
     def find_attack_targets(self, user_id: str, limit: int = 10) -> List[dict]:
         """
         SADD §7.3.1.1 matchmaking tolerance band over defense_rating.
@@ -113,13 +141,12 @@ class AttackService:
         3. Excludes self, 24h recent attack targets, 15m defense grace targets, suspended users
         4. Widens band by widen_step (0.05) until min_candidates (3) met or max_tolerance (0.30) hit
         """
-        attacker_village = self.village_svc.get_user_village(user_id)
-        attacker_rating = float(attacker_village.get("defense_rating", 0.0))
-
+        attacker_rating = self._get_defense_rating(user_id)
         attacker_profile = self.league_svc.get_or_create_profile(user_id)
         attacker_tier = attacker_profile.league_tier.value
 
         base_tol = float(self.get_config("matchmaking.base_tolerance", DEFAULT_MATCHMAKING_BASE_TOLERANCE))
+
         tier_map = self.get_config("matchmaking.tier_adjustment", DEFAULT_TIER_ADJUSTMENTS)
         tier_adj = float(tier_map.get(attacker_tier, 0.0))
         tolerance = base_tol + tier_adj
@@ -317,10 +344,8 @@ class AttackService:
             solved_fraction = 1.0 if success_override else 0.0
 
         # Retrieve participant ratings
-        attacker_village = self.village_svc.get_user_village(str(attack.attacker_user_id))
-        target_village = self.village_svc.get_user_village(str(attack.target_user_id))
-        r_attacker = float(attacker_village.get("defense_rating", 0.0))
-        r_target = float(target_village.get("defense_rating", 0.0))
+        r_attacker = self._get_defense_rating(str(attack.attacker_user_id))
+        r_target = self._get_defense_rating(str(attack.target_user_id))
 
         # Retrieve K-factor from attacker's league tier
         attacker_profile = self.league_svc.get_or_create_profile(str(attack.attacker_user_id))
@@ -440,6 +465,9 @@ class AttackService:
 
         # On-demand resolution check if window elapsed
         now = datetime.now(timezone.utc)
+        if attack.window_expires_at and attack.window_expires_at.tzinfo is None:
+            attack.window_expires_at = attack.window_expires_at.replace(tzinfo=timezone.utc)
+
         if (
             attack.status == AttackStatus.in_progress
             and attack.window_expires_at
@@ -456,10 +484,8 @@ class AttackService:
             remaining_seconds = max(0, int((attack.window_expires_at - now).total_seconds()))
 
         # Outcome projection preview
-        attacker_village = self.village_svc.get_user_village(str(attack.attacker_user_id))
-        target_village = self.village_svc.get_user_village(str(attack.target_user_id))
-        r_att = float(attacker_village.get("defense_rating", 0.0))
-        r_tgt = float(target_village.get("defense_rating", 0.0))
+        r_att = self._get_defense_rating(str(attack.attacker_user_id))
+        r_tgt = self._get_defense_rating(str(attack.target_user_id))
 
         attacker_profile = self.league_svc.get_or_create_profile(str(attack.attacker_user_id))
         k = self.league_svc.get_k_factor(attacker_profile.league_tier)

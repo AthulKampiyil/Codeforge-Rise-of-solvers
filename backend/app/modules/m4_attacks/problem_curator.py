@@ -79,13 +79,15 @@ class ProblemSetCurator:
                     sa.text("SELECT id, name, display_name FROM topics ORDER BY created_at ASC LIMIT :cnt"),
                     {"cnt": count},
                 ).fetchall()
-                return [{"id": str(r[0]), "name": r[1], "level": 0, "progress_points": 0} for r in rows]
+                if rows:
+                    return [{"id": str(r[0]), "name": r[1], "level": 0, "progress_points": 0} for r in rows]
             except Exception:
-                return [
-                    {"id": None, "name": "math", "level": 0, "progress_points": 0},
-                    {"id": None, "name": "arrays", "level": 0, "progress_points": 0},
-                    {"id": None, "name": "strings", "level": 0, "progress_points": 0},
-                ]
+                pass
+            return [
+                {"id": None, "name": "math", "level": 0, "progress_points": 0},
+                {"id": None, "name": "arrays", "level": 0, "progress_points": 0},
+                {"id": None, "name": "strings", "level": 0, "progress_points": 0},
+            ][:count]
 
         # Weakest topics: lowest level first, fewest points first
         weakest = sorted(topics, key=lambda t: (t.get("level", 0), t.get("progress_points", 0)))
