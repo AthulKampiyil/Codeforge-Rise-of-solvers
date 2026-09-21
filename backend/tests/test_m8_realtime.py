@@ -10,6 +10,7 @@ import asyncio
 
 import pytest
 
+from app.modules.m1_auth.models import User
 from app.modules.m8_notifications.schemas import EventType
 from app.modules.m8_notifications.service import (
     CHANNEL,
@@ -17,6 +18,18 @@ from app.modules.m8_notifications.service import (
     NotificationService,
     run_subscriber_loop,
 )
+
+# notifications.user_id is a UUID column with a FK to users.id — real,
+# persisted users are required wherever a value actually gets persisted.
+USER_1 = "11111111-1111-1111-1111-111111111111"
+USER_2 = "22222222-2222-2222-2222-222222222222"
+
+
+def _ensure_user(db, user_id: str) -> None:
+    if db.get(User, user_id) is not None:
+        return
+    db.add(User(id=user_id, username=f"u{user_id[:8]}", email=f"{user_id[:8]}@example.com", password_hash="fake_hash"))
+    db.commit()
 
 
 class FakeWebSocket:
@@ -72,10 +85,12 @@ class TestPubSubFanOut:
         """
         import app.modules.m8_notifications.service as service_module
 
+        _ensure_user(db, USER_1)
+
         registry = ConnectionRegistry()
         service_module.registry = registry  # this "process" holds the socket below
         ws = FakeWebSocket()
-        registry.add("user-1", ws)
+        registry.add(USER_1, ws)
 
         subscriber_task = asyncio.create_task(run_subscriber_loop(redis_client))
         await asyncio.sleep(0.1)  # let the SUBSCRIBE land before publishing
@@ -84,8 +99,8 @@ class TestPubSubFanOut:
         await notification_service.publish(
             redis_client,
             EventType.ATTACK_INCOMING,
-            {"attack_id": "a1", "target_user_id": "user-1"},
-            user_ids=["user-1"],
+            {"attack_id": "a1", "target_user_id": USER_1},
+            user_ids=[USER_1],
         )
 
         for _ in range(20):
@@ -101,18 +116,19 @@ class TestPubSubFanOut:
 
         assert len(ws.sent) == 1
         assert ws.sent[0]["event_type"] == "ATTACK_INCOMING"
-        assert ws.sent[0]["payload"]["target_user_id"] == "user-1"
+        assert ws.sent[0]["payload"]["target_user_id"] == USER_1
 
     async def test_publish_persists_notification_for_targeted_users(self, redis_client, db):
+        _ensure_user(db, USER_1)
         notification_service = NotificationService(db)
         await notification_service.publish(
             redis_client,
             EventType.LEAGUE_TIER_CHANGED,
-            {"user_id": "user-1", "new_tier": "silver"},
-            user_ids=["user-1"],
+            {"user_id": USER_1, "new_tier": "silver"},
+            user_ids=[USER_1],
         )
 
-        history = notification_service.get_user_notifications("user-1")
+        history = notification_service.get_user_notifications(USER_1)
         assert len(history) == 1
         assert history[0].event_type == "LEAGUE_TIER_CHANGED"
 
