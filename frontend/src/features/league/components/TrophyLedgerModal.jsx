@@ -14,7 +14,7 @@ export default function TrophyLedgerModal({ isOpen, onClose }) {
   const { data: ledger, isLoading, error } = useTrophyLedger(50);
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} title="📜 Trophy Audit Ledger (SADD App. D)">
+    <Modal open={isOpen} onClose={onClose} title="📜 Trophy Audit Ledger (SADD App. D)">
       <div className="flex flex-col gap-4">
         <p className="text-xs text-slate-400">
           Append-only immutable record of every trophy mutation and resulting balance.

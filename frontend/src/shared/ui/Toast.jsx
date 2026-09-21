@@ -9,6 +9,7 @@ const VARIANT_BORDER = {
   success: "border-success/60",
   danger: "border-danger/60",
   info: "border-info/60",
+  warning: "border-gold/60",
 };
 
 let nextId = 0;

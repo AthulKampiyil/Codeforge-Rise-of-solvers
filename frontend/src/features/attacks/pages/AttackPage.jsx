@@ -19,16 +19,12 @@ export default function AttackPage() {
   // Listen for realtime attacks
   useAttackRealtime(
     (payload) => {
-      toast?.show({
-        title: "⚔️ Attack Incoming!",
-        message: `${payload.attacker_username} is attacking your village!`,
+      toast?.show(`⚔️ Attack Incoming! ${payload.attacker_username} is attacking your village!`, {
         variant: "warning",
       });
     },
     (payload) => {
-      toast?.show({
-        title: "Battle Resolved",
-        message: `Attack ${payload.attack_id.slice(0, 8)} has concluded.`,
+      toast?.show(`Battle Resolved — attack ${payload.attack_id.slice(0, 8)} has concluded.`, {
         variant: "info",
       });
       refetchCooldown();
@@ -39,9 +35,7 @@ export default function AttackPage() {
   const handleLaunch = async (targetUserId) => {
     try {
       const attack = await launchMutation.mutateAsync(targetUserId);
-      toast?.show({
-        title: "Attack Launched!",
-        message: "Your attack has started. Solve the curated problems before time runs out!",
+      toast?.show("Attack launched! Solve the curated problems before time runs out.", {
         variant: "success",
       });
       navigate(`/attack/${attack.id}`);
@@ -49,9 +43,7 @@ export default function AttackPage() {
       if (err.status === 429) {
         refetchCooldown();
       } else {
-        toast?.show({
-          title: "Attack Failed",
-          message: err.detail || err.message || "Failed to launch attack.",
+        toast?.show(err.detail || err.message || "Failed to launch attack.", {
           variant: "danger",
         });
       }

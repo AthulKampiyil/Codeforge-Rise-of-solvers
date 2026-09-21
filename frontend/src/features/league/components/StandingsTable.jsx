@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Badge, Tabs } from "../../../shared/ui/index.js";
 
 const SCOPE_TABS = [
-  { id: "global", label: "Global Solvers" },
-  { id: "guild", label: "Guild Standings" },
+  { key: "global", label: "Global Solvers" },
+  { key: "guild", label: "Guild Standings" },
 ];
 
 export default function StandingsTable({
@@ -41,7 +41,7 @@ export default function StandingsTable({
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-between">
-        <Tabs tabs={SCOPE_TABS} activeTab={activeTab} onChange={handleTabChange} />
+        <Tabs tabs={SCOPE_TABS} activeKey={activeTab} onChange={handleTabChange} />
         <span className="text-xs text-slate-400">
           Rankings update dynamically on attack resolution
         </span>

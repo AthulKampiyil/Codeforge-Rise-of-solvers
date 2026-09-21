@@ -17,19 +17,16 @@ export default function AttackDetailPage() {
   const handleResolve = async (isAbandoned = false) => {
     try {
       await resolveMutation.mutateAsync({ attackId, isAbandoned });
-      toast?.show({
-        title: isAbandoned ? "Attack Abandoned" : "Attack Resolved",
-        message: isAbandoned
-          ? "Attack forfeited. Flat abandon penalty applied."
+      toast?.show(
+        isAbandoned
+          ? "Attack abandoned — flat abandon penalty applied."
           : "Battle concluded and trophy deltas recorded to ledger.",
-        variant: isAbandoned ? "warning" : "success",
-      });
+        { variant: isAbandoned ? "warning" : "success" }
+      );
       setShowAbandonModal(false);
       refetch();
     } catch (err) {
-      toast?.show({
-        title: "Resolution Failed",
-        message: err.detail || err.message || "Could not resolve attack.",
+      toast?.show(err.detail || err.message || "Could not resolve attack.", {
         variant: "danger",
       });
     }
@@ -160,7 +157,7 @@ export default function AttackDetailPage() {
 
       {/* Abandon Confirmation Modal */}
       <Modal
-        isOpen={showAbandonModal}
+        open={showAbandonModal}
         onClose={() => setShowAbandonModal(false)}
         title="Abandon Battle?"
       >
