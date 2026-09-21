@@ -1,24 +1,21 @@
-const API = import.meta.env.VITE_API_URL || "";
-export async function getSyncStatus() {
-  const response = await fetch(`${API}/platform_sync/status`, { credentials: "include" });
-  if (!response.ok) throw new Error("Unable to load sync status");
-  return response.json();
+import { apiClient, ApiError } from "../../../shared/api/client.js";
+
+export function getSyncStatus() {
+  return apiClient.get("/platform_sync/status");
 }
 
 export async function requestSync() {
-  const response = await fetch(`${API}/platform_sync/sync`, {
-    method: "POST", credentials: "include",
-  });
-  if (!response.ok) {
-    const error = new Error("Sync request failed");
-    error.status = response.status;
-    try {
-      const body = await response.json();
-      error.retryAfter = body.detail?.retry_after_seconds;
-    } catch {
-      // The status code is still useful when the server has no JSON body.
+  try {
+    return await apiClient.post("/platform_sync/sync");
+  } catch (err) {
+    if (err instanceof ApiError) {
+      const error = new Error("Sync request failed");
+      error.status = err.status;
+      // 429's body is {"detail": {"code": "sync_cooldown", "retry_after_seconds": N}} —
+      // client.js's ApiError already unwraps the outer "detail" for us.
+      error.retryAfter = err.detail?.retry_after_seconds;
+      throw error;
     }
-    throw error;
+    throw err;
   }
-  return response.json();
 }

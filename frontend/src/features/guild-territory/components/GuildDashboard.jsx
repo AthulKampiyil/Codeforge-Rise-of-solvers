@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { 
-    fetchMyGuild, 
-    fetchAllGuilds, 
-    createGuild, 
-    requestToJoin, 
-    fetchJoinRequests, 
-    approveRequest, 
-    rejectRequest, 
-    fetchTerritoryZones 
+import {
+    fetchMyGuild,
+    fetchAllGuilds,
+    createGuild,
+    requestToJoin,
+    fetchJoinRequests,
+    approveRequest,
+    rejectRequest,
+    fetchTerritoryZones
 } from '../api/guildApi';
+import { useAuth } from '../../../shared/auth/AuthContext.jsx';
 
 function GuildDashboard() {
     const queryClient = useQueryClient();
     const [tab, setTab] = useState('ROSTER');
     const [createName, setCreateName] = useState('');
-    
-    // Mock user for now since AuthContext is not available
-    const user = { id: "1", username: "CurrentUser" };
+
+    const { user } = useAuth();
 
     const { data: guild, isLoading: guildLoading } = useQuery({
         queryKey: ['myGuild'],

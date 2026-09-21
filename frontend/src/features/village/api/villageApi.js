@@ -1,12 +1,13 @@
-const API = import.meta.env.VITE_API_URL || "";
+import { apiClient } from "../../../shared/api/client.js";
 
-export async function getVillage() {
-  const response = await fetch(`${API}/village/me`, { credentials: "include" });
-  if (!response.ok) throw new Error("Unable to load village");
-  return response.json();
+export function getVillage() {
+  return apiClient.get("/village/me");
 }
 
 export async function getTrophies() {
-  const response = await fetch(`${API}/league/me`, { credentials: "include" });
-  return response.ok ? response.json() : { trophy_count: 0 };
+  try {
+    return await apiClient.get("/league/me");
+  } catch {
+    return { trophy_count: 0 };
+  }
 }

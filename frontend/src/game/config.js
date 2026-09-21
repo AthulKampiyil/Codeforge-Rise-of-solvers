@@ -1,13 +1,10 @@
 // Shared Phaser game config (canvas size, physics off, scene registry).
-// VillageScene (M3, Niranjan) and WarMapScene (M5, Athul) are still
-// empty stub files as of the seed commit — imported here so both are
-// registered the moment either lane adds a real `export default class
-// ... extends Phaser.Scene`. Filtered so an unfinished stub (no export
-// yet) doesn't crash Phaser.Game() in the meantime.
+// VillageScene (M3, Niranjan) and WarMapScene (M5, Athul) are both real
+// scenes now, registered here so either can be launched by key.
 import Phaser from "phaser";
 
-import VillageScene from "./scenes/VillageScene.js";
-import WarMapScene from "./scenes/WarMapScene.js";
+import VillageScene from "./VillageScene.js";
+import WarMapScene from "./WarMapScene.js";
 
 const REGISTERED_SCENES = [VillageScene, WarMapScene].filter((scene) => typeof scene === "function");
 

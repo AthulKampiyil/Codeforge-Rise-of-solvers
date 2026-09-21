@@ -1,73 +1,38 @@
-const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
-
-function getAuthHeaders() {
-    const token = localStorage.getItem('token');
-    return {
-        'Content-Type': 'application/json',
-        ...(token ? { Authorization: `Bearer ${token}` } : {})
-    };
-}
+import { apiClient } from "../../../shared/api/client.js";
 
 export async function fetchMyGuild() {
-    const res = await fetch(`${baseUrl}/guilds/me`, { headers: getAuthHeaders() });
-    if (res.status === 404) return null;
-    if (!res.ok) throw new Error("Failed to fetch my guild");
-    return await res.json();
+    try {
+        return await apiClient.get("/guilds/me");
+    } catch (err) {
+        if (err.status === 404) return null;
+        throw err;
+    }
 }
 
-export async function fetchAllGuilds() {
-    const res = await fetch(`${baseUrl}/guilds`, { headers: getAuthHeaders() });
-    if (!res.ok) throw new Error("Failed to fetch all guilds");
-    return await res.json();
+export function fetchAllGuilds() {
+    return apiClient.get("/guilds");
 }
 
-export async function createGuild(name, description = "") {
-    const res = await fetch(`${baseUrl}/guilds`, {
-        method: "POST",
-        headers: getAuthHeaders(),
-        body: JSON.stringify({ name, description })
-    });
-    if (!res.ok) throw new Error("Failed to create guild");
-    return await res.json();
+export function createGuild(name, description = "") {
+    return apiClient.post("/guilds", { name, description });
 }
 
-export async function requestToJoin(guildId) {
-    const res = await fetch(`${baseUrl}/guilds/${guildId}/join-requests`, {
-        method: "POST",
-        headers: getAuthHeaders()
-    });
-    if (!res.ok) throw new Error("Failed to request to join");
-    return await res.json();
+export function requestToJoin(guildId) {
+    return apiClient.post(`/guilds/${guildId}/join-requests`);
 }
 
-export async function fetchJoinRequests(guildId) {
-    const res = await fetch(`${baseUrl}/guilds/${guildId}/join-requests`, {
-        headers: getAuthHeaders()
-    });
-    if (!res.ok) throw new Error("Failed to fetch join requests");
-    return await res.json();
+export function fetchJoinRequests(guildId) {
+    return apiClient.get(`/guilds/${guildId}/join-requests`);
 }
 
-export async function approveRequest(guildId, requestId) {
-    const res = await fetch(`${baseUrl}/guilds/${guildId}/join-requests/${requestId}/approve`, {
-        method: "POST",
-        headers: getAuthHeaders()
-    });
-    if (!res.ok) throw new Error("Failed to approve request");
-    return await res.json();
+export function approveRequest(guildId, requestId) {
+    return apiClient.post(`/guilds/${guildId}/join-requests/${requestId}/approve`);
 }
 
-export async function rejectRequest(guildId, requestId) {
-    const res = await fetch(`${baseUrl}/guilds/${guildId}/join-requests/${requestId}/reject`, {
-        method: "POST",
-        headers: getAuthHeaders()
-    });
-    if (!res.ok) throw new Error("Failed to reject request");
-    return await res.json();
+export function rejectRequest(guildId, requestId) {
+    return apiClient.post(`/guilds/${guildId}/join-requests/${requestId}/reject`);
 }
 
-export async function fetchTerritoryZones() {
-    const res = await fetch(`${baseUrl}/guilds/territory/zones`, { headers: getAuthHeaders() });
-    if (!res.ok) throw new Error("Failed to fetch territory zones");
-    return await res.json();
+export function fetchTerritoryZones() {
+    return apiClient.get("/guilds/territory/zones");
 }

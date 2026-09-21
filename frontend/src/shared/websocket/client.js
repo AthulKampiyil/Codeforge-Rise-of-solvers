@@ -20,7 +20,7 @@ class RealtimeClient {
     this.shouldReconnect = true;
     this.isConnecting = true;
 
-    const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
     const wsUrl = baseUrl.replace(/^http/, 'ws') + `/ws/events?token=${token}`;
 
     this.ws = new WebSocket(wsUrl);

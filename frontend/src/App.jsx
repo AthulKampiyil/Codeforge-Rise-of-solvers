@@ -1,9 +1,12 @@
 // Root layout — full top nav, frozen after the seed commit (docs/
 // WORK_SPLIT_50.md §6). Every lane adds screens under routes/index.jsx,
 // never here.
+import { useEffect } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 
 import { useAuth } from "./shared/auth/AuthContext.jsx";
+import { getAccessToken } from "./shared/api/client.js";
+import { realtimeClient } from "./shared/websocket/client.js";
 
 const NAV_LINKS = [
   { to: "/village", label: "Village" },
@@ -22,6 +25,16 @@ function navLinkClassName({ isActive }) {
 export default function App() {
   const { isAuthenticated, user, logout } = useAuth();
   const navigate = useNavigate();
+
+  // One realtime socket for the whole authenticated session (SADD Appendix
+  // B.1) — every screen subscribes via useRealtimeEvent, but the connection
+  // itself lives here so navigating between them doesn't drop it.
+  useEffect(() => {
+    if (!isAuthenticated) return undefined;
+    const token = getAccessToken();
+    if (token) realtimeClient.connect(token);
+    return () => realtimeClient.disconnect();
+  }, [isAuthenticated]);
 
   async function handleLogout() {
     await logout();

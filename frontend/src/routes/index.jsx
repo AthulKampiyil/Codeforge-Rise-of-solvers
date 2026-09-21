@@ -8,7 +8,13 @@ import LoginPage from "../features/auth/pages/LoginPage.jsx";
 import RegisterPage from "../features/auth/pages/RegisterPage.jsx";
 import OnboardingPage from "../features/auth/pages/OnboardingPage.jsx";
 import AdminPage from "../features/admin/pages/AdminPage.jsx";
-import PlaceholderPage from "../pages/_Placeholder.jsx";
+import { VillageDashboard } from "../features/village/components/VillageDashboard.jsx";
+import WarMap from "../features/war-room/components/WarMap.jsx";
+import GuildDashboard from "../features/guild-territory/components/GuildDashboard.jsx";
+import WarRoom from "../features/war-room/components/WarRoom.jsx";
+import AttackPage from "../features/attacks/pages/AttackPage.jsx";
+import AttackDetailPage from "../features/attacks/pages/AttackDetailPage.jsx";
+import LeagueStandingsPage from "../features/league/pages/LeagueStandingsPage.jsx";
 import RequireAuth from "../shared/auth/RequireAuth.jsx";
 
 export const router = createBrowserRouter([
@@ -20,7 +26,7 @@ export const router = createBrowserRouter([
         index: true,
         element: (
           <RequireAuth>
-            <PlaceholderPage title="Village" owner="Niranjan" figure="Fig 3.1" />
+            <VillageDashboard />
           </RequireAuth>
         ),
       },
@@ -38,7 +44,7 @@ export const router = createBrowserRouter([
         path: "village",
         element: (
           <RequireAuth>
-            <PlaceholderPage title="Village" owner="Niranjan" figure="Fig 3.1" />
+            <VillageDashboard />
           </RequireAuth>
         ),
       },
@@ -46,7 +52,7 @@ export const router = createBrowserRouter([
         path: "war-map",
         element: (
           <RequireAuth>
-            <PlaceholderPage title="War Map" owner="Athul" figure="Fig 3.1" />
+            <WarMap />
           </RequireAuth>
         ),
       },
@@ -54,7 +60,7 @@ export const router = createBrowserRouter([
         path: "guild",
         element: (
           <RequireAuth>
-            <PlaceholderPage title="Guild" owner="Athul" figure="Fig 3.2" />
+            <GuildDashboard />
           </RequireAuth>
         ),
       },
@@ -62,7 +68,7 @@ export const router = createBrowserRouter([
         path: "guild/browse",
         element: (
           <RequireAuth>
-            <PlaceholderPage title="Browse Guilds" owner="Athul" />
+            <GuildDashboard />
           </RequireAuth>
         ),
       },
@@ -70,7 +76,7 @@ export const router = createBrowserRouter([
         path: "attack",
         element: (
           <RequireAuth>
-            <PlaceholderPage title="Attacks" owner="Hari" />
+            <AttackPage />
           </RequireAuth>
         ),
       },
@@ -78,7 +84,7 @@ export const router = createBrowserRouter([
         path: "attack/:attackId",
         element: (
           <RequireAuth>
-            <PlaceholderPage title="Attack Detail" owner="Hari" />
+            <AttackDetailPage />
           </RequireAuth>
         ),
       },
@@ -86,7 +92,7 @@ export const router = createBrowserRouter([
         path: "league",
         element: (
           <RequireAuth>
-            <PlaceholderPage title="Standings" owner="Hari" figure="Fig 3.3" />
+            <LeagueStandingsPage />
           </RequireAuth>
         ),
       },
@@ -94,7 +100,7 @@ export const router = createBrowserRouter([
         path: "war-room/:guildId",
         element: (
           <RequireAuth>
-            <PlaceholderPage title="War Room" owner="Deferred past 50% (docs/WORK_SPLIT_50.md)" />
+            <WarRoom />
           </RequireAuth>
         ),
       },

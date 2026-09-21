@@ -2,6 +2,8 @@
 __pycache__/
 *.pyc
 .venv/
+venv/
+venv312/
 *.egg-info/
 
 # Node
@@ -11,6 +13,7 @@ dist/
 
 # Env
 .env
+.env.local
 
 # OS
 .DS_Store

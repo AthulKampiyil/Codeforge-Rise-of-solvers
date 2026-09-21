@@ -29,7 +29,8 @@ class VillageRepository:
             self.db.add(profile)
         for key, value in values.items():
             setattr(profile, key, value)
-        self.db.flush()
+        self.db.commit()
+        self.db.refresh(profile)
         return profile
 
     def get_topics_with_progress(self, user_id: str):
