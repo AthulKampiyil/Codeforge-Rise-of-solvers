@@ -48,6 +48,20 @@ export default class WarMapScene extends Phaser.Scene {
     }
 
     create() {
+        // Defensive workaround: under this app's dev setup (Vite + React 18
+        // StrictMode double-invoking this component's mount effect), newly
+        // setInteractive()'d objects land in InputPlugin's internal
+        // `_pendingInsertion` queue and, for reasons that trace back to that
+        // double-boot rather than to anything in this scene, never get
+        // flushed into the active `_list` InputPlugin.preUpdate() normally
+        // flushes each frame — so every zone renders and looks clickable but
+        // silently eats every pointer event forever. Forcing that flush
+        // every frame here costs nothing and makes hover/click reliable
+        // regardless of why Phaser's own per-frame wiring didn't fire.
+        this.events.on('update', () => {
+            if (this.input._pendingInsertion.length > 0) this.input.preUpdate();
+        });
+
         this.cameras.main.setBackgroundColor('#05080c');
 
         // Hex grid or subtle dot grid
@@ -94,6 +108,8 @@ export default class WarMapScene extends Phaser.Scene {
             this.renderZones();
             this.renderLegend();
         });
+
+        this.events.once('shutdown', () => this.input.setDefaultCursor('default'));
     }
 
     renderLegend() {
@@ -203,7 +219,8 @@ export default class WarMapScene extends Phaser.Scene {
             }).setOrigin(0.5).setAlpha(isFilteredOut ? 0.2 : (isOwned ? 1 : 0.6));
 
             // Label - Owner Name
-            const ownerText = isOwned ? (zone.owning_guild_id.replace('Guild_', '') + (zone.is_contested ? ' (contested)' : '')) : 'unclaimed';
+            const ownerName = zone.owning_guild_name || (isOwned ? zone.owning_guild_id.slice(0, 8) : null);
+            const ownerText = isOwned ? (ownerName + (zone.is_contested ? ' (contested)' : '')) : 'unclaimed';
             const ownerLabel = this.add.text(centerX, centerY + 8, ownerText, {
                 fontFamily: 'monospace', fontSize: '11px', fill: isOwned ? '#' + factionColor.toString(16).padStart(6,'0') : '#8b949e', align: 'center'
             }).setOrigin(0.5).setAlpha(isFilteredOut ? 0.2 : (isOwned ? 1 : 0.6));
@@ -214,14 +231,15 @@ export default class WarMapScene extends Phaser.Scene {
             graphics.setInteractive(phaserPoly, Phaser.Geom.Polygon.Contains);
             
             graphics.on('pointerover', (pointer) => {
+                this.input.setDefaultCursor('pointer');
                 drawPoly(0.6, baseThickness + 2, hoverColor);
-                
+
                 // Tooltip
                 this.tooltip.setPosition(pointer.x, pointer.y - 15);
                 this.tooltipTitle.setText(zone.name);
-                this.tooltipOwner.setText(isOwned ? 'OWNER: Guild ' + zone.owning_guild_id.substring(0,8) : 'STATUS: UNCLAIMED');
+                this.tooltipOwner.setText(isOwned ? 'OWNER: ' + (zone.owning_guild_name || zone.owning_guild_id.substring(0, 8)) : 'STATUS: UNCLAIMED');
                 this.tooltipOwner.setColor(isOwned ? '#' + factionColor.toString(16).padStart(6,'0') : '#8b949e');
-                
+
                 this.tweens.add({ targets: this.tooltip, alpha: 1, duration: 100, ease: 'Power2' });
             });
 
@@ -230,6 +248,7 @@ export default class WarMapScene extends Phaser.Scene {
             });
 
             graphics.on('pointerout', () => {
+                this.input.setDefaultCursor('default');
                 drawPoly(isOwned ? 0.4 : 0.1, baseThickness, factionColor);
                 this.tweens.add({ targets: this.tooltip, alpha: 0, duration: 100, ease: 'Power2' });
             });

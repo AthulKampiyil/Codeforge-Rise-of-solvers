@@ -20,6 +20,15 @@ function VillageCanvas() {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    // Defensive clear + a forced scale.refresh() once layout has settled:
+    // see WarMapScene.create()/WarMap.jsx for the full explanation. In
+    // short, under this app's dev setup a Phaser instance can be booted
+    // (or, under React 18 StrictMode, double-booted) before its container's
+    // real CSS size has settled, so RESIZE mode's initial measurement — and
+    // any leftover <canvas> from a StrictMode-cleaned-up first instance —
+    // both need to be corrected rather than trusted.
+    containerRef.current.innerHTML = "";
+
     const game = new Phaser.Game({
       type: Phaser.AUTO,
       parent: containerRef.current,
@@ -29,7 +38,15 @@ function VillageCanvas() {
       scene: [VillageScene],
       scale: { mode: Phaser.Scale.RESIZE, autoCenter: Phaser.Scale.CENTER_BOTH },
     });
-    return () => game.destroy(true);
+
+    game.events.once("step", () => game.scale.refresh());
+    const handleWindowResize = () => game.scale.refresh();
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+      game.destroy(true);
+    };
   }, []);
 
   return <div ref={containerRef} className="village-canvas" aria-label="Personal code village" />;

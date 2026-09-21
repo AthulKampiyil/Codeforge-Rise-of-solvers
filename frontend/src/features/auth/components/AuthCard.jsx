@@ -3,7 +3,7 @@
 // auth-platform.md §3): match the panel/border treatment from Fig 3.2.
 export default function AuthCard({ title, subtitle, children, footer }) {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-bg px-4">
+    <div className="flex min-h-full items-center justify-center bg-bg px-4 py-10">
       <div className="w-full max-w-sm rounded-lg border border-border bg-panel p-6 shadow-xl">
         <h1 className="font-display text-2xl text-slate-100">{title}</h1>
         {subtitle && <p className="mt-1 text-sm text-slate-400">{subtitle}</p>}

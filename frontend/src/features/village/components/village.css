@@ -1,5 +1,5 @@
-.village-layout { min-height: 100vh; display: grid; grid-template-columns: minmax(260px, 320px) 1fr; background: #11151d; color: #e9eef5; font-family: Inter, system-ui, sans-serif; }
-.village-sidebar { padding: 28px 22px; background: #171c26; border-right: 1px solid #2b3441; }
+.village-layout { height: 100%; min-height: 0; display: grid; grid-template-columns: minmax(260px, 320px) 1fr; background: #11151d; color: #e9eef5; font-family: Inter, system-ui, sans-serif; }
+.village-sidebar { padding: 28px 22px; background: #171c26; border-right: 1px solid #2b3441; overflow-y: auto; }
 .player-card { display: flex; align-items: center; gap: 12px; padding-bottom: 25px; border-bottom: 1px solid #2b3441; }
 .avatar-chip { width: 42px; height: 42px; display: grid; place-items: center; border: 2px solid #d5a95f; border-radius: 50%; color: #f0c777; font-weight: 800; }
 .player-card strong, .player-card span, .stat-row span { display: block; }.player-card span { margin-top: 4px; color: #8793a5; font-size: 12px; }

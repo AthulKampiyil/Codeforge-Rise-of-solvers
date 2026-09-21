@@ -78,11 +78,11 @@ export default function OnboardingPage() {
   }
 
   if (isChecking) {
-    return <div className="flex h-screen items-center justify-center text-slate-400">Loading…</div>;
+    return <div className="flex h-full items-center justify-center text-slate-400">Loading…</div>;
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-bg px-4">
+    <div className="flex min-h-full items-center justify-center bg-bg px-4 py-10">
       <div className="w-full max-w-md rounded-lg border border-border bg-panel p-6 shadow-xl">
         <StepCounter step={step} />
         <h1 className="mt-1 font-display text-2xl text-slate-100">Link your Codeforces account</h1>

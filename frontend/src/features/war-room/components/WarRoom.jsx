@@ -58,7 +58,7 @@ export default function WarRoom() {
       </div>
     </div>
 
-    <div style={{flex: '1', display: 'flex', gap: '16px', minHeight: '0'}}>
+    <div style={{height: '100%', display: 'flex', gap: '16px', minHeight: '0'}}>
       <div className="panel" style={{flex: '1', minWidth: '0'}}>
         <div className="panel-h">
           <div className="panel-t">Member &times; topic strength</div>

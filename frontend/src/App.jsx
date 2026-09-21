@@ -42,8 +42,8 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-bg">
-      <header className="flex items-center justify-between border-b border-border bg-panel px-6 py-3">
+    <div className="flex h-screen flex-col overflow-hidden bg-bg">
+      <header className="flex flex-shrink-0 items-center justify-between border-b border-border bg-panel px-6 py-3">
         <NavLink to="/" className="font-display text-lg tracking-wide text-slate-100">
           CODEFORGE
         </NavLink>
@@ -78,7 +78,7 @@ export default function App() {
         </div>
       </header>
 
-      <main>
+      <main className="min-h-0 flex-1 overflow-y-auto">
         <Outlet />
       </main>
     </div>
