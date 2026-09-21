@@ -10,6 +10,7 @@ from app.core.errors import (
     EmailAlreadyRegistered,
     InvalidCredentials,
     UsernameAlreadyTaken,
+    UserNotFound,
     VerificationFailed,
     VerificationTokenNotFound,
 )
@@ -155,3 +156,19 @@ class AuthService:
 
     def get_user_judge_accounts(self, user_id: str) -> list[JudgeAccount]:
         return self.judge_repo.get_by_user(user_id)
+
+    def list_users(self, search: str | None, suspended: bool | None, limit: int, offset: int) -> list[User]:
+        """List/search users (UC-11 admin moderation). Called by M9's
+        admin router through this service, per the SADD 4.1 coupling
+        rule — M9 never queries the `users` table directly."""
+        return self.user_repo.search(search, suspended, limit, offset)
+
+    def set_user_suspension(self, user_id: str, suspended: bool) -> User:
+        """Suspend/unsuspend a user (UC-11). A suspended user is rejected
+        by `get_current_active_user` on their next request, is excluded
+        from attack matchmaking, and stops counting toward guild
+        contributions."""
+        user = self.user_repo.set_suspended(user_id, suspended)
+        if user is None:
+            raise UserNotFound("User not found")
+        return user

@@ -34,6 +34,20 @@ class UserRepository:
             self.db.refresh(user)
         return user
 
+    def search(self, search: Optional[str], suspended: Optional[bool], limit: int, offset: int) -> list[User]:
+        """List/search users for admin moderation (UC-11). `search` matches
+        username or email (case-insensitive substring); `suspended` filters
+        by suspension state when given."""
+        query = self.db.query(User)
+        if search:
+            like = f"%{search}%"
+            query = query.filter(
+                (User.username.ilike(like)) | (User.email.ilike(like))
+            )
+        if suspended is not None:
+            query = query.filter(User.is_suspended == suspended)
+        return query.order_by(User.created_at.desc()).offset(offset).limit(limit).all()
+
 
 class JudgeAccountRepository:
     """Judge account linking repository (REQ-1.3–1.5)."""

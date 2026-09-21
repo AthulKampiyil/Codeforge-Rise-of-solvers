@@ -82,12 +82,25 @@ async def redis_client():
 @pytest.fixture
 def client(db, redis_client):
     """TestClient with get_db and get_redis overridden to the test fixtures."""
+    import redis.asyncio as aioredis
+
     from app.core.redis import get_redis
     from app.db.session import get_db
     from app.main import app
 
     async def override_get_redis():
-        yield redis_client
+        # A fresh connection per call, not the `redis_client` fixture's
+        # instance: TestClient runs each request on its own anyio portal
+        # event loop, distinct from the loop pytest-asyncio opened
+        # `redis_client`'s connections on. Reusing that instance here
+        # raises "Future attached to a different loop" the moment a
+        # handler awaits it. Both clients still point at the same real
+        # Redis server/db, so state set by one is visible to the other.
+        conn = aioredis.from_url(TEST_REDIS_URL, decode_responses=True)
+        try:
+            yield conn
+        finally:
+            await conn.aclose()
 
     app.dependency_overrides[get_db] = lambda: db
     app.dependency_overrides[get_redis] = override_get_redis

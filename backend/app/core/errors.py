@@ -75,6 +75,10 @@ class VerificationFailed(ValidationDomainError):
     code = "verification_failed"
 
 
+class UserNotFound(NotFoundError):
+    code = "user_not_found"
+
+
 # --- M2 Sync -----------------------------------------------------------
 class JudgeUnavailable(DomainError):
     status_code = status.HTTP_503_SERVICE_UNAVAILABLE
@@ -114,6 +118,15 @@ class NotGuildLeader(ForbiddenError):
 
 class NotGuildMember(ForbiddenError):
     code = "not_guild_member"
+
+
+# --- M9 Admin & Config ---------------------------------------------------
+class ConfigKeyNotFound(NotFoundError):
+    code = "config_key_not_found"
+
+
+class ConfigTypeMismatch(ValidationDomainError):
+    code = "config_type_mismatch"
 
 
 def register_exception_handlers(app: FastAPI) -> None:

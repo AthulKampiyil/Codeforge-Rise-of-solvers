@@ -114,6 +114,29 @@ class TestLogoutAndRefresh:
         response = client.get("/auth/me", headers=headers)
         assert response.status_code == 401
 
+    async def test_logout_denylists_token_with_bounded_ttl(self, client, make_user, redis_client):
+        """
+        The denylist entry must expire alongside the token's own natural
+        expiry (REQ-1.6), not sit in Redis forever — otherwise every
+        logout leaks memory for the life of the deployment.
+        """
+        from app.core.security import decode_token
+
+        _, headers, tokens = make_user()
+        access_payload = decode_token(tokens["access_token"])
+
+        assert client.post("/auth/logout", headers=headers).status_code == 200
+
+        denylist_key = f"auth:denylist:{access_payload['jti']}"
+        ttl = await redis_client.ttl(denylist_key)
+        # Present, and bounded by the access token's ~7-day idle expiry
+        # (REQ-1.6) rather than unset (-1, meaning "never expires").
+        assert 0 < ttl <= 7 * 24 * 60 * 60
+
+        # And the exact denylisted token is rejected before it would
+        # otherwise have naturally expired.
+        assert client.get("/auth/me", headers=headers).status_code == 401
+
 
 class TestJudgeAccountLinking:
     """REQ-1.3–1.5: link/verify/unlink a Codeforces account."""

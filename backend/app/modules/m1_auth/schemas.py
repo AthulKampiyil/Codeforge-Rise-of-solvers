@@ -27,6 +27,7 @@ class UserOut(BaseModel):
     email: EmailStr
     is_active: bool
     is_admin: bool
+    is_suspended: bool
     created_at: datetime
 
     class Config:
