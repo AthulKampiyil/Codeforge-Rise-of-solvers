@@ -75,6 +75,10 @@ class VerificationFailed(ValidationDomainError):
     code = "verification_failed"
 
 
+class UserNotFound(NotFoundError):
+    code = "user_not_found"
+
+
 # --- M2 Sync -----------------------------------------------------------
 class JudgeUnavailable(DomainError):
     status_code = status.HTTP_503_SERVICE_UNAVAILABLE

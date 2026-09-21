@@ -6,7 +6,7 @@ from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from redis.asyncio import Redis
 from sqlalchemy.orm import Session
 
-from app.core.dependencies import get_current_user
+from app.core.dependencies import get_current_active_user, get_current_user
 from app.core.redis import get_redis
 from app.core.security import verify_access_token
 from app.db.session import get_db
@@ -95,7 +95,7 @@ def get_me(current_user: Annotated[User, Depends(get_current_user)]):
 @router.post("/judge-accounts", response_model=JudgeLinkResponse)
 def request_judge_link(
     payload: JudgeLinkRequest,
-    current_user: Annotated[User, Depends(get_current_user)],
+    current_user: Annotated[User, Depends(get_current_active_user)],
     db: Annotated[Session, Depends(get_db)],
 ):
     """Request judge account linking (REQ-1.3, REQ-1.4)."""
@@ -110,7 +110,7 @@ def request_judge_link(
 @router.post("/judge-accounts/{judge_account_id}/verify", response_model=JudgeVerifyResponse)
 async def verify_judge_account(
     judge_account_id: str,
-    current_user: Annotated[User, Depends(get_current_user)],
+    current_user: Annotated[User, Depends(get_current_active_user)],
     db: Annotated[Session, Depends(get_db)],
 ):
     """Complete ownership verification (REQ-1.4, NFR-3.1)."""
@@ -121,7 +121,7 @@ async def verify_judge_account(
 
 @router.get("/judge-accounts", response_model=list[JudgeAccountOut])
 def get_my_judge_accounts(
-    current_user: Annotated[User, Depends(get_current_user)],
+    current_user: Annotated[User, Depends(get_current_active_user)],
     db: Annotated[Session, Depends(get_db)],
 ):
     """Get all linked judge accounts for the current user."""
@@ -132,7 +132,7 @@ def get_my_judge_accounts(
 @router.delete("/judge-accounts/{judge_type}")
 def unlink_judge(
     judge_type: str,
-    current_user: Annotated[User, Depends(get_current_user)],
+    current_user: Annotated[User, Depends(get_current_active_user)],
     db: Annotated[Session, Depends(get_db)],
 ):
     """Unlink a judge account (REQ-1.5)."""

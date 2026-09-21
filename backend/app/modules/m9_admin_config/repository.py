@@ -51,3 +51,13 @@ class AdminAuditLogRepository:
         self.db.commit()
         self.db.refresh(entry)
         return entry
+
+    def list(self, limit: int, offset: int) -> list[AdminAuditLog]:
+        """Paginated browse of the audit trail (NFR-3.5), newest first."""
+        return (
+            self.db.query(AdminAuditLog)
+            .order_by(AdminAuditLog.created_at.desc())
+            .offset(offset)
+            .limit(limit)
+            .all()
+        )

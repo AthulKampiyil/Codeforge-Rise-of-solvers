@@ -94,3 +94,51 @@ class GameBalanceConfig:
             details={"old_value": old_value, "new_value": coerced},
         )
         return updated
+
+
+class AdminModeration:
+    """UC-11 user moderation + audit-log browsing.
+
+    User mutations are delegated to M1's `AuthService` rather than
+    touching `app.modules.m1_auth.repository`/`models` directly — the
+    SADD 4.1 coupling rule (a module may only call another module's
+    `service.py`).
+    """
+
+    def __init__(self, db: Session):
+        self.db = db
+        self.audit_repo = AdminAuditLogRepository(db)
+
+    def list_users(self, search: str | None, suspended: bool | None, limit: int, offset: int):
+        from app.modules.m1_auth.service import AuthService
+
+        return AuthService(self.db).list_users(search, suspended, limit, offset)
+
+    def suspend_user(self, user_id: str, reason: str, admin_user_id: str):
+        from app.modules.m1_auth.service import AuthService
+
+        user = AuthService(self.db).set_user_suspension(user_id, True)
+        self.audit_repo.create(
+            admin_user_id=admin_user_id,
+            action="suspend_user",
+            target_type="user",
+            target_id=user_id,
+            details={"reason": reason},
+        )
+        return user
+
+    def unsuspend_user(self, user_id: str, admin_user_id: str):
+        from app.modules.m1_auth.service import AuthService
+
+        user = AuthService(self.db).set_user_suspension(user_id, False)
+        self.audit_repo.create(
+            admin_user_id=admin_user_id,
+            action="unsuspend_user",
+            target_type="user",
+            target_id=user_id,
+            details=None,
+        )
+        return user
+
+    def list_audit_log(self, limit: int, offset: int):
+        return self.audit_repo.list(limit, offset)

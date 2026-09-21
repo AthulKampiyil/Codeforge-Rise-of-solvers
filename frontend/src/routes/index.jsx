@@ -7,6 +7,7 @@ import App from "../App.jsx";
 import LoginPage from "../features/auth/pages/LoginPage.jsx";
 import RegisterPage from "../features/auth/pages/RegisterPage.jsx";
 import OnboardingPage from "../features/auth/pages/OnboardingPage.jsx";
+import AdminPage from "../features/admin/pages/AdminPage.jsx";
 import PlaceholderPage from "../pages/_Placeholder.jsx";
 import RequireAuth from "../shared/auth/RequireAuth.jsx";
 
@@ -101,10 +102,7 @@ export const router = createBrowserRouter([
         path: "admin",
         element: (
           <RequireAuth adminOnly>
-            <PlaceholderPage
-              title="Admin Config"
-              owner="Ashar — API-only for 50% (PUT /admin/config/{key})"
-            />
+            <AdminPage />
           </RequireAuth>
         ),
       },
