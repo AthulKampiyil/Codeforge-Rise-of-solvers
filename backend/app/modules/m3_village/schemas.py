@@ -24,6 +24,8 @@ class VillageTopicProgressOut(BaseModel):
     structure_key: str
     progress_points: int
     level: int
+    points_to_next_level: int = 0
+    progress_pct: float = 0.0
 
     class Config:
         from_attributes = True
@@ -36,3 +38,4 @@ class VillageProfileOut(BaseModel):
     average_level: float
     topics: list[VillageTopicProgressOut]
     defense_rating: float
+    username: str | None = None

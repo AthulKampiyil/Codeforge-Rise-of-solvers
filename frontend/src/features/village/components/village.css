@@ -1,0 +1,10 @@
+.village-layout { min-height: 100vh; display: grid; grid-template-columns: minmax(260px, 320px) 1fr; background: #11151d; color: #e9eef5; font-family: Inter, system-ui, sans-serif; }
+.village-sidebar { padding: 28px 22px; background: #171c26; border-right: 1px solid #2b3441; }
+.player-card { display: flex; align-items: center; gap: 12px; padding-bottom: 25px; border-bottom: 1px solid #2b3441; }
+.avatar-chip { width: 42px; height: 42px; display: grid; place-items: center; border: 2px solid #d5a95f; border-radius: 50%; color: #f0c777; font-weight: 800; }
+.player-card strong, .player-card span, .stat-row span { display: block; }.player-card span { margin-top: 4px; color: #8793a5; font-size: 12px; }
+.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); padding: 24px 0; border-bottom: 1px solid #2b3441; text-align: center; }.stat-row b { display: block; font: 700 20px ui-monospace, monospace; }.stat-row span { margin-top: 5px; color: #778397; font: 10px ui-monospace, monospace; letter-spacing: .08em; }
+.influence-heading { display: flex; justify-content: space-between; padding: 27px 0 16px; color: #aeb8c7; font: 11px ui-monospace, monospace; letter-spacing: .08em; }.influence-heading em { color: #d5a95f; font-style: normal; }
+.topic-row { margin: 15px 0; }.topic-label { display: flex; justify-content: space-between; margin-bottom: 7px; font-size: 13px; }.topic-label small { color: #7e8a9c; font: 11px ui-monospace, monospace; }.topic-track { height: 5px; overflow: hidden; background: #2d3744; border-radius: 3px; }.topic-track i { display: block; height: 100%; background: linear-gradient(90deg, #4ec3a1, #d5a95f); border-radius: inherit; }.topic-delta { display: block; margin-top: 5px; color: #67c9aa; font: 10px ui-monospace, monospace; }
+.village-stage { display: grid; place-items: center; min-width: 0; background: radial-gradient(circle at 50% 42%, #26394a, #11151d 68%); }.village-canvas { width: 100%; height: 100%; min-height: 560px; }
+@media (max-width: 700px) { .village-layout { grid-template-columns: 1fr; }.village-sidebar { border-right: 0; border-bottom: 1px solid #2b3441; }.village-stage { min-height: 480px; } }

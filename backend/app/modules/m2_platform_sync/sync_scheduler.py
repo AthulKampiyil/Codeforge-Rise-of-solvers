@@ -10,6 +10,8 @@ sync behavior on the corrected schema.
 """
 from datetime import datetime, timezone
 from typing import Optional
+import inspect
+import uuid
 
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
@@ -19,6 +21,9 @@ from app.modules.m2_platform_sync.judge_adapters.codeforces import CodeforcesAda
 from app.modules.m2_platform_sync.models import SolvedProblem, SyncLog, SyncStatus
 from app.modules.m2_platform_sync.topic_tagger import TopicTagger
 from app.modules.m3_village.models import Topic, VillageTopicProgress
+from app.modules.m3_village.formulas import level_for, points_for
+from app.modules.m3_village.service import VillageService
+from app.modules.m8_notifications.schemas import EventType
 
 
 class SyncScheduler:
@@ -33,10 +38,11 @@ class SyncScheduler:
     - Log sync status and errors
     """
 
-    def __init__(self, db: Session):
+    def __init__(self, db: Session, event_publisher=None):
         self.db = db
         self.adapter = CodeforcesAdapter()
         self.tagger = TopicTagger()
+        self.event_publisher = event_publisher
 
     async def sync_judge_account(self, judge_account_id: str) -> bool:
         """
@@ -67,7 +73,22 @@ class SyncScheduler:
 
                 topics = self.tagger.map_tags(solve.topic_tags)
                 for topic_name in topics:
-                    self._update_village_progress(account.user_id, topic_name)
+                    change = self._update_village_progress(account.user_id, topic_name, solve.rating)
+                    if change and self.event_publisher:
+                        topic, previous_level, new_level, defense = change
+                        payload = {
+                            "user_id": account.user_id,
+                            "topic_id": topic.id,
+                            "topic_name": topic.name,
+                            "previous_level": previous_level,
+                            "new_level": new_level,
+                            "new_defense_rating": defense,
+                            "source": "sync",
+                            "source_ref_id": uuid.uuid5(uuid.NAMESPACE_URL, str(solve.problem_ext_id)),
+                        }
+                        result = self.event_publisher(EventType.VILLAGE_UPDATED, payload, [account.user_id])
+                        if inspect.isawaitable(result):
+                            await result
 
             account.last_sync_at = datetime.now(timezone.utc)
             self.db.commit()
@@ -112,31 +133,35 @@ class SyncScheduler:
             self.db.rollback()
             return False
 
-    def _update_village_progress(self, user_id: str, topic_name: str):
+    def _update_village_progress(self, user_id: str, topic_name: str, rating: int | None = None):
         """
         Create or increment VillageTopicProgress for a user+topic.
 
-        TODO (plan.md Phase 5): replace this floor(sqrt) placeholder
-        with the points-based leveling formula (SADD 7.3.1 derivative:
-        triangular growth against topics.base_threshold).
+        Progress points are rating-weighted and levels use triangular costs.
         """
         topic = self.db.query(Topic).filter(Topic.name == topic_name).first()
         if not topic:
-            return  # topics are seeded (plan.md Phase 1); an unmapped tag yields no topic
+            return None  # topics are seeded; an unmapped tag yields no topic
 
         progress = self.db.query(VillageTopicProgress).filter(
             VillageTopicProgress.user_id == user_id,
             VillageTopicProgress.topic_id == topic.id,
         ).first()
 
+        previous_level = progress.level if progress else 0
+        earned = points_for(rating)
         if not progress:
-            progress = VillageTopicProgress(user_id=user_id, topic_id=topic.id, progress_points=1, level=1)
+            progress = VillageTopicProgress(user_id=user_id, topic_id=topic.id, progress_points=earned, level=0)
             self.db.add(progress)
         else:
-            progress.progress_points += 1
-            progress.level = int(progress.progress_points ** 0.5)
+            progress.progress_points += earned
+        self.db.flush()
+        progress.level = level_for(progress.progress_points, topic.base_threshold)
 
+        village_service = VillageService(self.db)
+        profile = village_service.recompute_profile(user_id)
         self.db.commit()
+        return (topic, previous_level, progress.level, profile.defense_rating) if progress.level != previous_level else None
 
     def _update_sync_log(self, account: JudgeAccount, status: SyncStatus, error: Optional[str]):
         log = self.db.query(SyncLog).filter(SyncLog.judge_account_id == account.id).first()

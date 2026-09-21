@@ -10,7 +10,7 @@ import sqlalchemy as sa
 import json
 
 revision = '003_zone_polygons'
-down_revision = '002_seed'
+down_revision = '002'
 branch_labels = None
 depends_on = None
 
