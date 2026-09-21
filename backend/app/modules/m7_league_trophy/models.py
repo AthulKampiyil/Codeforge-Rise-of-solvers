@@ -61,5 +61,7 @@ class TrophyLedger(Base):
     user_id = Column(GUID(), ForeignKey("users.id", ondelete="RESTRICT"), nullable=False, index=True)
     event_type = Column(Enum(TrophyEventType, name="trophy_event_type"), nullable=False)
     delta = Column(Integer, nullable=False)
+    resulting_balance = Column(Integer, nullable=True)
     source_ref_id = Column(GUID(), nullable=True)  # e.g. the triggering attack_id
     created_at = Column(DateTime(timezone=True), default=utcnow, nullable=False)
+
