@@ -9,6 +9,7 @@ import { AuthProvider } from "./shared/auth/AuthContext.jsx";
 import { ToastProvider } from "./shared/ui/index.js";
 import { router } from "./routes/index.jsx";
 import "./index.css";
+import "./wireframe.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
