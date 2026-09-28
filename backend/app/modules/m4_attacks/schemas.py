@@ -1,22 +1,23 @@
 """Async Village Attacks (REQ-4.x) — Pydantic schemas."""
 from datetime import datetime
 from typing import List, Optional
+from uuid import UUID
 
 from pydantic import BaseModel
 
 
 class AttackRequest(BaseModel):
     """Request to launch attack on target (REQ-4.1)."""
-    target_user_id: str
+    target_user_id: UUID
 
 
 class AttackProblemOut(BaseModel):
     """Curated problem item with Open on Codeforces URL (REQ-4.2)."""
-    id: str
+    id: UUID
     problem_ext_id: str
     problem_name: Optional[str] = None
     problem_url: Optional[str] = None
-    topic_id: Optional[str] = None
+    topic_id: Optional[UUID] = None
     rating: Optional[int] = None
     solved_flag: bool = False
     solved_at: Optional[datetime] = None
@@ -27,9 +28,9 @@ class AttackProblemOut(BaseModel):
 
 class AttackOut(BaseModel):
     """Basic attack outcome/record (REQ-4.1)."""
-    id: str
-    attacker_user_id: str
-    target_user_id: str
+    id: UUID
+    attacker_user_id: UUID
+    target_user_id: UUID
     status: str
     score: int
     solved_fraction: Optional[float] = None
@@ -55,7 +56,7 @@ class AttackDetailOut(AttackOut):
 
 class AttackTargetOut(BaseModel):
     """Matchmaking candidate with strength indicator (REQ-4.1)."""
-    id: str
+    id: UUID
     username: str
     defense_rating: float
     level: Optional[int] = None

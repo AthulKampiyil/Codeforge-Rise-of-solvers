@@ -1,3 +1,4 @@
+from uuid import UUID
 """League & Trophy Progression (REQ-7.x) — Pydantic schemas."""
 from datetime import datetime
 from typing import Optional
@@ -7,7 +8,7 @@ from pydantic import BaseModel
 
 class LeagueProfileOut(BaseModel):
     """REQ-7.4: current league, trophy count, progress."""
-    user_id: str
+    user_id: UUID
     trophy_count: int
     league_tier: str
     rank: int = 1
@@ -23,7 +24,7 @@ class LeagueProfileOut(BaseModel):
 
 class LeaderboardEntryOut(BaseModel):
     """REQ-7.5: global/guild leaderboard row."""
-    user_id: str
+    user_id: UUID
     username: str
     trophy_count: int
     league_tier: str
@@ -32,8 +33,8 @@ class LeaderboardEntryOut(BaseModel):
 
 class TrophyLedgerEntryOut(BaseModel):
     """SADD App. D auditable mutation entry."""
-    id: str
-    user_id: str
+    id: UUID
+    user_id: UUID
     event_type: str
     delta: int
     resulting_balance: Optional[int] = None
