@@ -87,6 +87,14 @@ class AttackService:
         """Alias for get_attack_count."""
         return self.attack_repo.get_attack_count(user_id)
 
+    def get_due_attack_ids(self, limit: int = 50) -> List[str]:
+        """
+        Worker "what's due" query: ids of attacks whose resolution window
+        has elapsed (SADD §7.6). The worker feeds each to
+        resolve_attack(is_abandoned=True).
+        """
+        return [str(a.id) for a in self.attack_repo.get_due_for_resolution(limit=limit)]
+
     def get_cooldown_status(self, user_id: str) -> dict:
         """
         Check cooldown against the PostgreSQL source of truth (SADD §7.2.1).

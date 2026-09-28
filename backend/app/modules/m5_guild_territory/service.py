@@ -2,11 +2,14 @@
 
 Business logic for guild management and territory control.
 """
+from datetime import datetime, timedelta, timezone
+from typing import List, Optional
 from uuid import UUID, uuid4
 
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 
+from app.core.config import settings
 from app.core.errors import ConflictError, ForbiddenError, GuildNameTaken, NotFoundError
 from app.modules.m5_guild_territory.models import Guild, GuildRole, JoinRequestStatus
 from app.modules.m5_guild_territory.repository import (
@@ -25,6 +28,29 @@ class GuildService:
         self.membership_repo = GuildMembershipRepository(db)
         self.join_request_repo = GuildJoinRequestRepository(db)
         self.territory_repo = TerritoryRepository(db)
+
+    def get_membership_role(self, guild_id: UUID, user_id: UUID) -> Optional[str]:
+        """
+        Role of user_id in guild_id, or None if they are not a member.
+
+        Exposed here so other modules (e.g. M6's role gate) can authorise
+        without reaching into this module's repository (SADD §4.1).
+        """
+        membership = self.membership_repo.get_membership(guild_id, user_id)
+        if not membership:
+            return None
+        role = membership.role
+        return role.value if hasattr(role, "value") else str(role)
+
+    def get_due_guild_ids(self, limit: int = 25) -> List[UUID]:
+        """
+        Worker "what's due" query: guilds whose zone contributions are
+        stale enough to warrant a rescore + ownership reconciliation.
+        """
+        cutoff = datetime.now(timezone.utc) - timedelta(
+            minutes=settings.TERRITORY_RECALC_INTERVAL_MINUTES
+        )
+        return self.territory_repo.get_guild_ids_due_for_rescore(cutoff, limit=limit)
 
     def recalculate_guild_zone_scores(self, guild_id: UUID):
         members = self.membership_repo.get_memberships_by_guild(guild_id)

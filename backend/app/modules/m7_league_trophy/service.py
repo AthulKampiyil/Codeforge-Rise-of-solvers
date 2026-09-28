@@ -138,6 +138,32 @@ class LeagueService:
         self.db.refresh(profile)
         return profile, ledger_entry, tier_changed
 
+    def reconcile_profiles(self, limit: int = 200) -> int:
+        """
+        Worker reconciliation pass. Trophy movement is event-driven via
+        record_trophy_event(); this only repairs drift, it never
+        re-applies trophy deltas.
+
+        Two drift classes are repaired:
+        1. A user has TrophyLedger rows but no league_profiles row.
+        2. A profile's league_tier no longer matches tier_for(trophy_count)
+           (e.g. an admin retuned league thresholds at runtime).
+
+        Returns the number of profiles repaired.
+        """
+        repaired = 0
+        for user_id in self.profile_repo.get_profiles_with_ledger_but_no_profile(limit=limit):
+            self.get_or_create_profile(user_id)
+            repaired += 1
+
+        for profile in self.profile_repo.get_all_for_reconcile(limit=limit):
+            expected_tier = self.tier_for(profile.trophy_count)
+            if profile.league_tier != expected_tier:
+                self.profile_repo.set_tier(str(profile.user_id), expected_tier)
+                repaired += 1
+
+        return repaired
+
     def _publish_tier_change(
         self, user_id: str, old_tier: LeagueTier, new_tier: LeagueTier, trophy_count: int
     ) -> None:

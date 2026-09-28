@@ -4,9 +4,11 @@ NOTE: Zone-score aggregation and ownership-resolution queries (SADD
 6.5.1, 7.3.1.2) land in plan.md Phase 8. This module currently exposes
 straightforward CRUD matching the Phase 1 schema.
 """
+from datetime import datetime
 from typing import List, Optional
 from uuid import UUID
 
+from sqlalchemy import text
 from sqlalchemy.orm import Session
 
 from app.modules.m5_guild_territory.models import (
@@ -130,3 +132,29 @@ class TerritoryRepository:
 
     def get_zones_by_guild(self, guild_id) -> List[TerritoryZone]:
         return self.db.query(TerritoryZone).filter(TerritoryZone.owning_guild_id == guild_id).all()
+
+    def get_guild_ids_due_for_rescore(self, older_than: datetime, limit: int = 25) -> List[UUID]:
+        """
+        Worker "what's due" query: guilds whose zone contributions are
+        stale (or entirely missing) and therefore need a rescore.
+
+        Territory score decays daily (SADD §7.3.1.2), so a guild is due
+        once its last contribution write is older than the reconciliation
+        interval. A guild with no contribution rows at all is always due.
+        """
+        rows = self.db.execute(
+            text(
+                """
+                SELECT g.id
+                FROM guilds g
+                LEFT JOIN zone_contributions c ON c.guild_id = g.id
+                GROUP BY g.id
+                HAVING MIN(c.updated_at) IS NULL OR MIN(c.updated_at) <= :cutoff
+                ORDER BY MIN(c.updated_at) ASC NULLS FIRST
+                LIMIT :limit
+                """
+            ),
+            {"cutoff": older_than, "limit": limit},
+        ).fetchall()
+        return [row[0] for row in rows]
+

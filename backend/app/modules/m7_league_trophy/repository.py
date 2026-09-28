@@ -67,6 +67,29 @@ class LeagueProfileRepository:
             self.db.refresh(profile)
         return profile
 
+    def get_all_for_reconcile(self, limit: int = 200) -> List[LeagueProfile]:
+        """
+        Worker reconciliation query: a bounded page of profiles to re-check
+        against the current league thresholds.
+        """
+        return self.db.query(LeagueProfile).order_by(LeagueProfile.updated_at.asc()).limit(limit).all()
+
+    def get_profiles_with_ledger_but_no_profile(self, limit: int = 200) -> List[str]:
+        """
+        Worker reconciliation query: users with trophy ledger entries but
+        no league_profiles row (drift from a rolled-back migration or an
+        interrupted write).
+        """
+        rows = (
+            self.db.query(TrophyLedger.user_id)
+            .outerjoin(LeagueProfile, LeagueProfile.user_id == TrophyLedger.user_id)
+            .filter(LeagueProfile.user_id.is_(None))
+            .distinct()
+            .limit(limit)
+            .all()
+        )
+        return [str(row[0]) for row in rows]
+
     def get_user_rank(self, user_id: str) -> int:
         """Compute 1-based rank based on trophy count."""
         profile = self.get(user_id)

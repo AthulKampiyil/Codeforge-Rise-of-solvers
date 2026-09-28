@@ -63,6 +63,10 @@ class Settings(BaseSettings):
 
     # Worker
     WORKER_TICK_SECONDS: int = 30
+    TERRITORY_RECALC_INTERVAL_MINUTES: int = 60
+    ATTACK_RESOLUTION_BATCH_SIZE: int = 50
+    TERRITORY_RECALC_BATCH_SIZE: int = 25
+    LEAGUE_RECONCILE_BATCH_SIZE: int = 200
 
     class Config:
         env_file = ".env"

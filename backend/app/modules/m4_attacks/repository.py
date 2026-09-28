@@ -101,6 +101,28 @@ class AttackRepository:
             self.db.refresh(attack)
         return attack
 
+    def get_due_for_resolution(self, limit: int = 50) -> List[Attack]:
+        """
+        Worker "what's due" query: attacks whose resolution window has
+        elapsed but that are still open (SADD §7.6).
+
+        The worker passes these to AttackService.resolve_attack() as
+        abandoned, so an expired window always terminates in a trophy
+        movement instead of an attack that hangs open forever.
+        """
+        now = datetime.now(timezone.utc)
+        return (
+            self.db.query(Attack)
+            .filter(
+                Attack.status.in_([AttackStatus.created, AttackStatus.in_progress]),
+                Attack.window_expires_at.isnot(None),
+                Attack.window_expires_at <= now,
+            )
+            .order_by(Attack.window_expires_at.asc())
+            .limit(limit)
+            .all()
+        )
+
     def get_recent_attack_targets(
         self, attacker_user_id: str, window_hours: int = 24
     ) -> Set[str]:

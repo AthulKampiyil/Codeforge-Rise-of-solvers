@@ -85,6 +85,8 @@ GAME_BALANCE_DEFAULTS = [
     ("territory.hysteresis_margin", 0.05, "float", "Required lead before zone ownership flips (SADD 7.3.1.2)."),
     ("territory.decay_per_day", 0.02, "float", "Daily activity-decay rate applied to inactive members' contribution."),
     ("territory.decay_floor", 0.50, "float", "Minimum activity-decay multiplier."),
+    ("war_room.contested_margin", 0.20, "float", "Fractional gap to the leading guild score at which a zone counts as contested (REQ-6.1)."),
+    ("war_room.alignment_topic_count", 2, "int", "How many of a member's top topics and a zone's top affinity topics are intersected for the align highlight (REQ-6.2)."),
     ("village.defense_base", 100, "int", "Base defense rating before topic/solve contributions (SADD 7.3.1)."),
     ("village.defense_level_weight", 10, "int", "Defense rating points per topic level."),
     ("village.defense_solved_weight", 0.25, "float", "Defense rating points per total problem solved."),
