@@ -22,25 +22,28 @@ def test_negative_login_flow(driver):
     """NEGATIVE TEST: Ensure invalid credentials show an error message."""
     driver.get("http://localhost:5173/login")
     
-    # Find email and password inputs
     email_input = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "//input[@type='email']"))
     )
     password_input = driver.find_element(By.XPATH, "//input[@type='password']")
     submit_button = driver.find_element(By.XPATH, "//button[@type='submit']")
     
-    # Enter INVALID credentials
-    email_input.send_keys("hacker@example.com")
-    password_input.send_keys("totallywrongpassword123")
+    # STUDENT SPECIFIC TEST DATA: Roll No 2024BCD0037
+    student_roll_no = "2024BCD0037"
+    
+    # Enter INVALID credentials using the Roll No to prove it is student-specific
+    email_input.send_keys(f"{student_roll_no}@student.edu")
+    password_input.send_keys(f"wrongpass_{student_roll_no}")
     
     # Submit form
     submit_button.click()
     
     # Wait for the error message to appear on screen
-    # Since the frontend catches login errors and sets setError("Invalid credentials.")
     error_message = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "//p[@role='alert' and contains(text(), 'Invalid credentials.')]"))
     )
     
     # Assert that the error message is displayed
     assert error_message.is_displayed()
+    import time
+    time.sleep(5)  # Pause to let the user take a screenshot

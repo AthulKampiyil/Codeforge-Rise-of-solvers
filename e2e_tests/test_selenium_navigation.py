@@ -19,6 +19,10 @@ def driver():
     driver.quit()
 
 def test_home_page_and_navigation(driver):
+    """
+    Test Case: UI Navigation
+    Submitted by: Roll No 2024BCD0037
+    """
     driver.get("http://localhost:5173")
     
     # Wait for the CODEFORGE logo/title
