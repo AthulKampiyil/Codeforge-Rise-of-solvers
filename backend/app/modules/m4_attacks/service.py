@@ -87,6 +87,25 @@ class AttackService:
         """Alias for get_attack_count."""
         return self.attack_repo.get_attack_count(user_id)
 
+    def get_due_attacks(self, before: Optional[datetime] = None) -> List[Attack]:
+        """Query all attacks whose window has elapsed and are due for resolution."""
+        return self.attack_repo.get_due_attacks(before=before)
+
+    def resolve_due_attacks(self, before: Optional[datetime] = None) -> int:
+        """
+        Worker batch job: find and resolve all expired attacks.
+        Returns the count of successfully resolved attacks.
+        """
+        due_attacks = self.get_due_attacks(before=before)
+        resolved_count = 0
+        for attack in due_attacks:
+            try:
+                self.resolve_attack(str(attack.id), is_abandoned=False)
+                resolved_count += 1
+            except Exception:
+                logger.exception(f"failed_to_resolve_due_attack: {attack.id}")
+        return resolved_count
+
     def get_cooldown_status(self, user_id: str) -> dict:
         """
         Check cooldown against the PostgreSQL source of truth (SADD §7.2.1).
@@ -115,18 +134,11 @@ class AttackService:
         }
 
     def _get_defense_rating(self, user_id: str) -> float:
-        """Fetch defense rating from VillageService, falling back to VillageProfile table."""
-        try:
-            village = self.village_svc.get_user_village(user_id)
-            rating = float(village.get("defense_rating", 0.0))
-            if rating > 0.0:
-                return rating
-        except Exception:
-            pass
+        """Fetch defense rating from VillageProfile table, or 0.0 if not present."""
         try:
             from app.modules.m3_village.models import VillageProfile
             vp = self.db.query(VillageProfile).filter(VillageProfile.user_id == user_id).first()
-            if vp and vp.defense_rating:
+            if vp and vp.defense_rating is not None:
                 return float(vp.defense_rating)
         except Exception:
             pass

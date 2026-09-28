@@ -152,3 +152,47 @@ def test_tier_k_factors():
     assert k_factors["gold"] == 32
     assert k_factors["platinum"] == 24
     assert k_factors["legend"] == 16
+
+
+def test_trophy_delta_exact_defense_threshold_edge():
+    """Verify boundary condition at exact defense_threshold = 0.34."""
+    r_attacker = 1200.0
+    r_target = 1200.0
+    k = 32
+
+    # f = 0.34 is >= threshold -> Case 1 (attack victory with fractional score)
+    delta_att_34, delta_tgt_34 = calculate_trophy_delta(
+        r_attacker, r_target, solved_fraction=0.34, k_factor=k, defense_threshold=0.34
+    )
+    # round(32 * (0.34 - 0.5)) = round(-5.12) = -5
+    assert delta_att_34 == -5
+    assert delta_tgt_34 == 5
+
+    # f = 0.33 is < threshold -> Case 2 (successful defense, f treated as 0.0)
+    delta_att_33, delta_tgt_33 = calculate_trophy_delta(
+        r_attacker, r_target, solved_fraction=0.33, k_factor=k, defense_threshold=0.34
+    )
+    # round(32 * (0 - 0.5)) = -16
+    assert delta_att_33 == -16
+    assert delta_tgt_33 == 16
+
+
+def test_trophy_delta_large_rating_gap():
+    """Verify stable delta calculation with large rating disparities."""
+    # Attacker 500 vs Defender 2500, solved 3/3 (f = 1.0)
+    d_att, d_tgt = calculate_trophy_delta(500.0, 2500.0, solved_fraction=1.0, k_factor=32)
+    assert d_att > 30
+    assert d_tgt < -30
+
+    # Attacker 2500 vs Defender 500, solved 0/3 (f = 0.0)
+    d_att_loss, d_tgt_win = calculate_trophy_delta(2500.0, 500.0, solved_fraction=0.0, k_factor=32)
+    assert d_att_loss < -30
+    assert d_tgt_win > 30
+
+
+def test_trophy_delta_zero_ratings():
+    """Verify fallback handling when ratings are 0.0."""
+    d_att, d_tgt = calculate_trophy_delta(0.0, 0.0, solved_fraction=0.667, k_factor=32)
+    assert d_att == 5
+    assert d_tgt == -5
+

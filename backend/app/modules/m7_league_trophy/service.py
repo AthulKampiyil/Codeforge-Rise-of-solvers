@@ -100,6 +100,36 @@ class LeagueService:
             user_id, starting_trophies=starting_trophies, starting_tier=starting_tier
         )
 
+    def get_due_tier_reconciliations(self) -> List[LeagueProfile]:
+        """
+        Worker query: find all profiles whose stored league_tier differs from the tier
+        computed from their trophy_count.
+        """
+        profiles = self.profile_repo.get_all_profiles()
+        due = []
+        for p in profiles:
+            expected_tier = self.tier_for(p.trophy_count)
+            if p.league_tier != expected_tier:
+                due.append(p)
+        return due
+
+    def reconcile_league_tiers(self) -> int:
+        """
+        Worker reconciliation pass: ensures all league_profiles have their
+        league_tier in sync with their trophy_count per game_balance_config thresholds.
+        Returns the count of reconciled profiles.
+        """
+        due_profiles = self.get_due_tier_reconciliations()
+        reconciled_count = 0
+        for profile in due_profiles:
+            old_tier = profile.league_tier
+            new_tier = self.tier_for(profile.trophy_count)
+            if old_tier != new_tier:
+                self.profile_repo.set_tier(str(profile.user_id), new_tier)
+                self._publish_tier_change(str(profile.user_id), old_tier, new_tier, profile.trophy_count)
+                reconciled_count += 1
+        return reconciled_count
+
     def record_trophy_event(
         self,
         user_id: str,

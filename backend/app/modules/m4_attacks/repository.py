@@ -62,6 +62,23 @@ class AttackRepository:
         )
 
 
+    def get_due_attacks(self, before: Optional[datetime] = None) -> List[Attack]:
+        """
+        Query attacks in created or in_progress status whose window has expired.
+        Worker uses this query to resolve due attacks.
+        """
+        if before is None:
+            before = datetime.now(timezone.utc)
+        return (
+            self.db.query(Attack)
+            .filter(
+                Attack.status.in_([AttackStatus.created, AttackStatus.in_progress]),
+                Attack.window_expires_at.isnot(None),
+                Attack.window_expires_at <= before,
+            )
+            .all()
+        )
+
     def create_attack(
         self,
         attacker_user_id: str,
