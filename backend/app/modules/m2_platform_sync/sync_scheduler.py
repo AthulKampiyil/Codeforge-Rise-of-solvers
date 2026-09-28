@@ -18,7 +18,8 @@ from sqlalchemy.orm import Session
 
 from app.modules.m1_auth.models import JudgeAccount, JudgeType, User
 from app.modules.m2_platform_sync.judge_adapters.codeforces import CodeforcesAdapter
-from app.modules.m2_platform_sync.models import SolvedProblem, SyncLog, SyncStatus
+from app.modules.m2_platform_sync.models import DlqFailureReason, SolvedProblem, SyncLog, SyncStatus
+from app.modules.m2_platform_sync.service import PlatformSyncService
 from app.modules.m2_platform_sync.topic_tagger import TopicTagger
 from app.modules.m3_village.models import Topic, VillageTopicProgress
 from app.modules.m3_village.formulas import level_for, points_for
@@ -43,6 +44,7 @@ class SyncScheduler:
         self.adapter = CodeforcesAdapter()
         self.tagger = TopicTagger()
         self.event_publisher = event_publisher
+        self.sync_service = PlatformSyncService()
 
     async def sync_judge_account(self, judge_account_id: str) -> bool:
         """
@@ -93,10 +95,30 @@ class SyncScheduler:
             account.last_sync_at = datetime.now(timezone.utc)
             self.db.commit()
 
+            # Clear from dead-letter queue if it was previously parked there
+            self.sync_service.clear_dlq(self.db, account.id)
             self._update_sync_log(account, SyncStatus.up_to_date, None)
             return True
 
         except Exception as e:  # noqa: BLE001 — real classification is Phase 4's CircuitBreaker
+            err_msg = str(e).lower()
+            if "429" in err_msg or "rate limit" in err_msg:
+                reason = DlqFailureReason.rate_limited
+            elif "circuit" in err_msg:
+                reason = DlqFailureReason.circuit_open
+            elif "json" in err_msg or "decode" in err_msg or "parse" in err_msg:
+                reason = DlqFailureReason.parse_error
+            elif "401" in err_msg or "403" in err_msg or "auth" in err_msg or "token" in err_msg:
+                reason = DlqFailureReason.auth_expired
+            else:
+                reason = DlqFailureReason.unknown
+
+            self.sync_service.send_to_dlq(
+                self.db,
+                account.id,
+                reason,
+                error_snapshot={"error": str(e), "timestamp": datetime.now(timezone.utc).isoformat()},
+            )
             self._update_sync_log(account, SyncStatus.failed, str(e))
             return False
 
@@ -118,6 +140,13 @@ class SyncScheduler:
         Insert an immutable SolvedProblem fact. Returns False if it
         already existed (idempotent re-sync — REQ-2.5).
         """
+        exists = self.db.query(SolvedProblem).filter(
+            SolvedProblem.judge_account_id == judge_account_id,
+            SolvedProblem.problem_ext_id == solve.problem_ext_id,
+        ).first()
+        if exists:
+            return False
+
         record = SolvedProblem(
             judge_account_id=judge_account_id,
             problem_ext_id=solve.problem_ext_id,
@@ -127,10 +156,10 @@ class SyncScheduler:
         )
         self.db.add(record)
         try:
-            self.db.flush()
+            with self.db.begin_nested():
+                self.db.flush()
             return True
         except IntegrityError:
-            self.db.rollback()
             return False
 
     def _update_village_progress(self, user_id: str, topic_name: str, rating: int | None = None):

@@ -1,11 +1,12 @@
 """Business logic for the materialized personal code village."""
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 from sqlalchemy.orm import Session
 
 from app.modules.m1_auth.models import JudgeAccount, User
 from app.modules.m2_platform_sync.models import SolvedProblem
 from app.modules.m3_village.formulas import defense_rating, points_to_next_level, progress_percent
+from app.modules.m3_village.models import VillageProfile
 from app.modules.m3_village.repository import VillageRepository
 from app.modules.m9_admin_config.models import GameBalanceConfig
 
@@ -70,3 +71,15 @@ class VillageService:
             "topics": sorted(topics, key=lambda t: t["level"], reverse=True),
             "defense_rating": profile.defense_rating,
         }
+
+    def get_stale_profiles(self, older_than_minutes: int = 1440, limit: int = 50) -> list[VillageProfile]:
+        """Find village profiles due for background refresh."""
+        cutoff = datetime.now(timezone.utc) - timedelta(minutes=older_than_minutes)
+        return (
+            self.db.query(VillageProfile)
+            .filter(VillageProfile.last_recomputed_at <= cutoff)
+            .order_by(VillageProfile.last_recomputed_at.asc())
+            .limit(limit)
+            .all()
+        )
+
