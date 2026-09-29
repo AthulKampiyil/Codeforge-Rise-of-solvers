@@ -769,7 +769,7 @@ Files: `backend/app/modules/m6_war_room/*`. No new tables — M6 is a read-only 
 M5 and M3, per SADD §4.4.
 
 ```
-GET /guilds/{id}/war-room        require_guild_role(Leader, Officer)   # NFR-3.3
+GET /war_room/{guild_id}          require_guild_role(Leader, Officer)   # NFR-3.3
 {
   "guild": {...},
   "contested_zones": [ { zone, our_score, leading_guild, leading_score,

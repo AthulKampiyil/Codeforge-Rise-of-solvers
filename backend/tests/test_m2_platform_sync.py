@@ -41,35 +41,56 @@ USER_STATUS_URL = f"{settings.CODEFORCES_API_BASE}/user.status"
 
 
 class TestTopicTagger:
+    """The tagger must target the seeded topics table vocabulary
+    (plan.md §4.6). A name that is not seeded silently drops progress."""
+
     def test_map_tags_dp(self):
-        assert TopicTagger.map_tags(["dp", "trees"]) == {"dynamic-programming", "data-structures"}
+        assert TopicTagger.map_tags(["dp", "trees"]) == {"dynamic-programming", "trees"}
 
     def test_map_tags_math(self):
-        assert TopicTagger.map_tags(["math", "number-theory"]) == {"mathematics"}
+        assert TopicTagger.map_tags(["math", "number theory"]) == {"math"}
 
     def test_map_tags_strings(self):
-        assert TopicTagger.map_tags(["strings", "pattern-matching"]) == {"strings"}
+        assert TopicTagger.map_tags(["strings", "string suffix structures"]) == {"strings"}
 
     def test_map_tags_greedy(self):
-        assert TopicTagger.map_tags(["greedy", "optimization"]) == {"greedy", "optimization"}
+        assert TopicTagger.map_tags(["greedy"]) == {"greedy"}
 
     def test_map_tags_graphs(self):
-        assert TopicTagger.map_tags(["graphs", "graph"]) == {"algorithms"}
+        assert TopicTagger.map_tags(["graphs", "dfs and similar"]) == {"graphs"}
 
-    def test_map_tags_unknown_tag_ignored(self):
-        assert TopicTagger.map_tags(["unknown-tag"]) == set()
+    def test_map_tags_implementation_family_to_arrays(self):
+        assert TopicTagger.map_tags(
+            ["implementation", "sortings", "two pointers", "binary search", "brute force"]
+        ) == {"arrays"}
+
+    def test_map_tags_underscore_and_hyphen_variants(self):
+        assert TopicTagger.map_tags(["data-structures", "data_structures"]) == {"data-structures"}
+
+    def test_every_mapped_topic_is_seeded(self):
+        assert set(TopicTagger.TAG_TO_TOPIC.values()) <= TopicTagger.FIXED_TOPICS
+
+    def test_map_tags_unknown_tag_ignored_and_counted(self):
+        TopicTagger.UNMAPPED_TAG_COUNTER.clear()
+        assert TopicTagger.map_tags(["zzzunknown"]) == set()
+        assert TopicTagger.UNMAPPED_TAG_COUNTER["zzzunknown"] == 1
 
     def test_map_tags_empty(self):
         assert TopicTagger.map_tags([]) == set()
 
-    def test_get_topic_by_name_valid(self):
+    def test_get_topic_by_name_seeded_topics(self):
         assert TopicTagger.get_topic_by_name("dynamic-programming") == "dynamic-programming"
         assert TopicTagger.get_topic_by_name("strings") == "strings"
+        assert TopicTagger.get_topic_by_name("math") == "math"
 
     def test_get_topic_by_name_invalid(self):
         assert TopicTagger.get_topic_by_name("nonexistent") is None
-        # Judge tags are not village topics; map_tags does that translation.
-        assert TopicTagger.get_topic_by_name("dp") is None
+
+    def test_get_topic_by_name_rejects_unseeded_legacy_topics(self):
+        # These were in the old pre-seed map; they must not resolve.
+        assert TopicTagger.get_topic_by_name("algorithms") is None
+        assert TopicTagger.get_topic_by_name("mathematics") is None
+        assert TopicTagger.get_topic_by_name("optimization") is None
 
     def test_get_topic_by_name_case_insensitive(self):
         assert TopicTagger.get_topic_by_name("Dynamic-Programming") == "dynamic-programming"

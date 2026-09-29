@@ -95,28 +95,15 @@ async def job_retry_dlq(db: Session) -> dict:
 async def job_resolve_expired_attacks(db: Session) -> dict:
     """Resolve attacks whose window has elapsed (SADD §7.6).
 
-    resolve_attack() is idempotent on already-resolved attacks, so a
-    repeated pass over the same batch is safe.
+    M4 owns both the "what's due" query and the batch loop behind
+    resolve_due_attacks(), so the worker only schedules it. The batch is
+    idempotent: resolve_attack() returns immediately on an already-resolved
+    attack, so a repeated pass is safe.
     """
     from app.modules.m4_attacks.service import AttackService
 
-    attack_service = AttackService(db)
-    due_ids = attack_service.get_due_attack_ids(limit=settings.ATTACK_RESOLUTION_BATCH_SIZE)
-
-    resolved = 0
-    for attack_id in due_ids:
-        try:
-            attack_service.resolve_attack(attack_id, is_abandoned=True)
-            resolved += 1
-        except Exception as exc:  # noqa: BLE001 — one bad attack must not stall the batch
-            db.rollback()
-            logger.warning(
-                "attack_resolution_failed",
-                attack_id=attack_id,
-                error=str(exc),
-            )
-
-    return {"due": len(due_ids), "resolved": resolved}
+    resolved = AttackService(db).resolve_due_attacks()
+    return {"resolved": resolved}
 
 
 # ── M5: territory ──────────────────────────────────────────────────────
