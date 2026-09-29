@@ -93,11 +93,14 @@ class LeagueService:
         k_map = self.get_config("trophy.k_factor", DEFAULT_K_FACTORS)
         return int(k_map.get(tier_str, 32))
 
-    def get_or_create_profile(self, user_id: str) -> LeagueProfile:
+    def get_or_create_profile(self, user_id: str, commit: bool = True) -> LeagueProfile:
         starting_trophies = int(self.get_config("league.starting_trophies", DEFAULT_STARTING_TROPHIES))
         starting_tier = self.tier_for(starting_trophies)
         return self.profile_repo.get_or_create(
-            user_id, starting_trophies=starting_trophies, starting_tier=starting_tier
+            user_id,
+            starting_trophies=starting_trophies,
+            starting_tier=starting_tier,
+            commit=commit,
         )
 
     def record_trophy_event(
@@ -106,17 +109,18 @@ class LeagueService:
         event_type: TrophyEventType,
         delta: int,
         source_ref_id: Optional[Any] = None,
+        commit: bool = True,
     ) -> tuple[LeagueProfile, TrophyLedger, bool]:
         """
         SADD §7.2 / App. D: TrophyLedger is the ONLY write path into league_profiles.
         Every mutation creates an auditable ledger entry and updates the balance atomically.
         If a tier boundary is crossed, publishes LEAGUE_TIER_CHANGED.
         """
-        profile = self.get_or_create_profile(user_id)
+        profile = self.get_or_create_profile(user_id, commit=commit)
         old_tier = profile.league_tier
 
         # Atomic mutation
-        new_balance = self.profile_repo.atomic_update_trophy_count(user_id, delta)
+        new_balance = self.profile_repo.atomic_update_trophy_count(user_id, delta, commit=commit)
 
         # Append to audit ledger with resulting balance
         ledger_entry = self.ledger_repo.append(
@@ -125,14 +129,16 @@ class LeagueService:
             delta=delta,
             resulting_balance=new_balance,
             source_ref_id=source_ref_id,
+            commit=commit,
         )
 
         # Check for tier crossing
         new_tier = self.tier_for(new_balance)
         tier_changed = new_tier != old_tier
         if tier_changed:
-            self.profile_repo.set_tier(user_id, new_tier)
-            self._publish_tier_change(user_id, old_tier, new_tier, new_balance)
+            self.profile_repo.set_tier(user_id, new_tier, commit=commit)
+            if commit:
+                self._publish_tier_change(user_id, old_tier, new_tier, new_balance)
 
         # Refresh profile to reflect current values
         self.db.refresh(profile)
@@ -163,6 +169,12 @@ class LeagueService:
                 repaired += 1
 
         return repaired
+
+    def publish_tier_change(
+        self, user_id: str, old_tier: LeagueTier, new_tier: LeagueTier, trophy_count: int
+    ) -> None:
+        """Publish a tier change after a caller-owned transaction commits."""
+        self._publish_tier_change(user_id, old_tier, new_tier, trophy_count)
 
     def _publish_tier_change(
         self, user_id: str, old_tier: LeagueTier, new_tier: LeagueTier, trophy_count: int

@@ -23,7 +23,11 @@ class LeagueProfileRepository:
         return self.db.query(LeagueProfile).filter(LeagueProfile.user_id == user_id).first()
 
     def create(
-        self, user_id: str, trophy_count: int = 300, tier: LeagueTier = LeagueTier.bronze
+        self,
+        user_id: str,
+        trophy_count: int = 300,
+        tier: LeagueTier = LeagueTier.bronze,
+        commit: bool = True,
     ) -> LeagueProfile:
         profile = LeagueProfile(
             user_id=user_id,
@@ -32,38 +36,64 @@ class LeagueProfileRepository:
             updated_at=datetime.now(timezone.utc),
         )
         self.db.add(profile)
-        self.db.commit()
+        if commit:
+            self.db.commit()
+        else:
+            self.db.flush()
         self.db.refresh(profile)
         return profile
 
     def get_or_create(
-        self, user_id: str, starting_trophies: int = 300, starting_tier: LeagueTier = LeagueTier.bronze
+        self,
+        user_id: str,
+        starting_trophies: int = 300,
+        starting_tier: LeagueTier = LeagueTier.bronze,
+        commit: bool = True,
     ) -> LeagueProfile:
         profile = self.get(user_id)
         if not profile:
-            profile = self.create(user_id, trophy_count=starting_trophies, tier=starting_tier)
+            profile = self.create(
+                user_id,
+                trophy_count=starting_trophies,
+                tier=starting_tier,
+                commit=commit,
+            )
         return profile
 
-    def atomic_update_trophy_count(self, user_id: str, delta: int) -> int:
+    def atomic_update_trophy_count(self, user_id: str, delta: int, commit: bool = True) -> int:
         """
         SADD §6.5.1 atomic single-statement increment preventing lost updates.
         Trophy count cannot drop below 0.
         """
-        profile = self.get_or_create(user_id)
+        profile = (
+            self.db.query(LeagueProfile)
+            .filter(LeagueProfile.user_id == user_id)
+            .with_for_update()
+            .populate_existing()
+            .first()
+        )
+        if not profile:
+            profile = self.get_or_create(user_id, commit=commit)
         new_balance = max(0, profile.trophy_count + delta)
         profile.trophy_count = new_balance
         profile.updated_at = datetime.now(timezone.utc)
-        self.db.commit()
+        if commit:
+            self.db.commit()
+        else:
+            self.db.flush()
         self.db.refresh(profile)
         return new_balance
 
-    def set_tier(self, user_id: str, tier: LeagueTier) -> Optional[LeagueProfile]:
+    def set_tier(self, user_id: str, tier: LeagueTier, commit: bool = True) -> Optional[LeagueProfile]:
         """Idempotent tier update."""
         profile = self.get(user_id)
         if profile and profile.league_tier != tier:
             profile.league_tier = tier
             profile.updated_at = datetime.now(timezone.utc)
-            self.db.commit()
+            if commit:
+                self.db.commit()
+            else:
+                self.db.flush()
             self.db.refresh(profile)
         return profile
 
@@ -176,6 +206,7 @@ class TrophyLedgerRepository:
         delta: int,
         resulting_balance: Optional[int] = None,
         source_ref_id: Optional[Any] = None,
+        commit: bool = True,
     ) -> TrophyLedger:
         """Append an auditable mutation row to trophy_ledger (SADD App. D)."""
         entry = TrophyLedger(
@@ -187,7 +218,10 @@ class TrophyLedgerRepository:
             created_at=datetime.now(timezone.utc),
         )
         self.db.add(entry)
-        self.db.commit()
+        if commit:
+            self.db.commit()
+        else:
+            self.db.flush()
         self.db.refresh(entry)
         return entry
 
