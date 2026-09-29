@@ -205,3 +205,123 @@ def test_tier_transition_on_ledger_write(db):
     assert profile.trophy_count == 405
     assert profile.league_tier == LeagueTier.silver
     assert ledger.resulting_balance == 405
+
+
+def test_due_attacks_query_and_resolution(db):
+    """Verify worker query get_due_attacks and batch resolver resolve_due_attacks."""
+    att = _create_solver(db, "att_due")
+    tgt1 = _create_solver(db, "tgt_due_1")
+    tgt2 = _create_solver(db, "tgt_due_2")
+
+    service = AttackService(db)
+
+    # Expired attack (started 25h ago, 24h window)
+    expired_attack = Attack(
+        attacker_user_id=att.id,
+        target_user_id=tgt1.id,
+        status=AttackStatus.in_progress,
+        started_at=datetime.now(timezone.utc) - timedelta(hours=25),
+        window_expires_at=datetime.now(timezone.utc) - timedelta(hours=1),
+    )
+    db.add(expired_attack)
+
+    # Active attack in future
+    active_attack = Attack(
+        attacker_user_id=att.id,
+        target_user_id=tgt2.id,
+        status=AttackStatus.in_progress,
+        started_at=datetime.now(timezone.utc),
+        window_expires_at=datetime.now(timezone.utc) + timedelta(hours=23),
+    )
+    db.add(active_attack)
+    db.commit()
+
+    # Worker query should only return the expired attack
+    due = service.get_due_attacks()
+    due_ids = [str(a.id) for a in due]
+    assert str(expired_attack.id) in due_ids
+    assert str(active_attack.id) not in due_ids
+
+    # Batch resolution executes and marks expired attack as resolved
+    resolved_count = service.resolve_due_attacks()
+    assert resolved_count >= 1
+
+    db.refresh(expired_attack)
+    db.refresh(active_attack)
+    assert expired_attack.status == AttackStatus.resolved
+    assert active_attack.status == AttackStatus.in_progress
+
+
+def test_get_attack_detail_auto_resolves_expired_window(db):
+    """Calling get_attack_detail on an expired attack auto-resolves it on-demand."""
+    att = _create_solver(db, "att_detail_exp")
+    tgt = _create_solver(db, "tgt_detail_exp")
+
+    service = AttackService(db)
+    attack = Attack(
+        attacker_user_id=att.id,
+        target_user_id=tgt.id,
+        status=AttackStatus.in_progress,
+        started_at=datetime.now(timezone.utc) - timedelta(hours=25),
+        window_expires_at=datetime.now(timezone.utc) - timedelta(hours=1),
+    )
+    db.add(attack)
+    db.commit()
+    db.refresh(attack)
+
+    detail = service.get_attack_detail(str(attack.id))
+    assert detail["status"] == AttackStatus.resolved.value
+    assert detail["resolved_at"] is not None
+    assert detail["attacker_username"] == "att_detail_exp"
+    assert detail["target_username"] == "tgt_detail_exp"
+
+
+def test_cannot_attack_suspended_or_inactive_user(db):
+    """Attacking a suspended or inactive target raises InvalidAttackTarget."""
+    attacker = _create_solver(db, "valid_attacker")
+    suspended = _create_solver(db, "suspended_target")
+    suspended.is_suspended = True
+    db.commit()
+
+    service = AttackService(db)
+    with pytest.raises(InvalidAttackTarget):
+        service.start_attack(str(attacker.id), str(suspended.id))
+
+
+def test_cannot_attack_self(db):
+    """Self-attack raises InvalidAttackTarget."""
+    attacker = _create_solver(db, "self_attacker")
+    service = AttackService(db)
+    with pytest.raises(InvalidAttackTarget):
+        service.start_attack(str(attacker.id), str(attacker.id))
+
+
+def test_cooldown_expiry_recovery(db):
+    """Once cooldown timestamp passes, can_attack becomes True."""
+    attacker = _create_solver(db, "cd_recover_user")
+    service = AttackService(db)
+
+    # Set cooldown in the past
+    past_time = datetime.now(timezone.utc) - timedelta(minutes=5)
+    service.cooldown_repo.set_cooldown_expiry(str(attacker.id), past_time)
+
+    status = service.get_cooldown_status(str(attacker.id))
+    assert status["can_attack"] is True
+    assert status["remaining_seconds"] == 0
+
+
+def test_get_attacks_by_attacker_and_target_history(db):
+    """Repository returns history for both attacker and defender perspectives."""
+    att = _create_solver(db, "hist_attacker")
+    tgt = _create_solver(db, "hist_target")
+
+    service = AttackService(db)
+    atk1 = service.start_attack(str(att.id), str(tgt.id))
+
+    by_attacker = service.attack_repo.get_attacks_by_attacker(str(att.id))
+    by_target = service.attack_repo.get_attacks_by_target(str(tgt.id))
+
+    assert any(str(a.id) == str(atk1.id) for a in by_attacker)
+    assert any(str(a.id) == str(atk1.id) for a in by_target)
+    assert service.get_attack_count(str(att.id)) >= 1
+

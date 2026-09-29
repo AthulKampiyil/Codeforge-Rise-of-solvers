@@ -22,6 +22,10 @@ class LeagueProfileRepository:
     def get(self, user_id: str) -> Optional[LeagueProfile]:
         return self.db.query(LeagueProfile).filter(LeagueProfile.user_id == user_id).first()
 
+    def get_all_profiles(self) -> List[LeagueProfile]:
+        """Retrieve all league profiles for reconciliation."""
+        return self.db.query(LeagueProfile).all()
+
     def create(
         self,
         user_id: str,

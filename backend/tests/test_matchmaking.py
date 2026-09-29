@@ -231,3 +231,74 @@ def test_matchmaking_relative_strength_labels(db):
     assert targets_map[str(t_strong.id)]["relative_strength"] == "stronger"
     assert targets_map[str(t_even.id)]["relative_strength"] == "even"
     assert targets_map[str(t_weak.id)]["relative_strength"] == "weaker"
+
+
+def test_matchmaking_empty_village_fallback(db):
+    """Matchmaking works smoothly when users do not yet have a VillageProfile record."""
+    attacker = _create_user(db, "attacker_noprov")
+    t1 = _create_user(db, "target_noprov_1")
+    t2 = _create_user(db, "target_noprov_2")
+
+    service = AttackService(db)
+    targets = service.find_attack_targets(str(attacker.id), limit=10)
+    assert len(targets) >= 2
+    target_ids = [t["id"] for t in targets]
+    assert str(t1.id) in target_ids
+    assert str(t2.id) in target_ids
+    targets_map = {t["id"]: t for t in targets}
+    assert targets_map[str(t1.id)]["defense_rating"] == 0.0
+    assert targets_map[str(t2.id)]["defense_rating"] == 0.0
+
+
+def test_matchmaking_combined_exclusions(db):
+    """Verify combined exclusion of self, suspended users, recent attacks, and defense grace."""
+    attacker = _create_user(db, "att_comb")
+    _set_village_profile(db, attacker.id, defense_rating=1000.0)
+
+    # Valid candidate
+    t_valid = _create_user(db, "target_valid_comb")
+    _set_village_profile(db, t_valid.id, defense_rating=1000.0)
+
+    # Suspended candidate
+    t_susp = _create_user(db, "target_susp_comb", is_suspended=True)
+    _set_village_profile(db, t_susp.id, defense_rating=1000.0)
+
+    # Inactive candidate
+    t_inact = _create_user(db, "target_inact_comb", is_active=False)
+    _set_village_profile(db, t_inact.id, defense_rating=1000.0)
+
+    # Recent target (<24h)
+    t_rec = _create_user(db, "target_rec_comb")
+    _set_village_profile(db, t_rec.id, defense_rating=1000.0)
+    atk_rec = Attack(
+        attacker_user_id=attacker.id,
+        target_user_id=t_rec.id,
+        status=AttackStatus.resolved,
+        started_at=datetime.now(timezone.utc) - timedelta(hours=2),
+    )
+    db.add(atk_rec)
+
+    # Grace target (<15m by anyone)
+    t_grace = _create_user(db, "target_grace_comb")
+    _set_village_profile(db, t_grace.id, defense_rating=1000.0)
+    other_user = _create_user(db, "other_attacker_comb")
+    atk_grace = Attack(
+        attacker_user_id=other_user.id,
+        target_user_id=t_grace.id,
+        status=AttackStatus.in_progress,
+        started_at=datetime.now(timezone.utc) - timedelta(minutes=5),
+    )
+    db.add(atk_grace)
+    db.commit()
+
+    service = AttackService(db)
+    targets = service.find_attack_targets(str(attacker.id), limit=10)
+    t_ids = [t["id"] for t in targets]
+
+    assert str(t_valid.id) in t_ids
+    assert str(attacker.id) not in t_ids
+    assert str(t_susp.id) not in t_ids
+    assert str(t_inact.id) not in t_ids
+    assert str(t_rec.id) not in t_ids
+    assert str(t_grace.id) not in t_ids
+

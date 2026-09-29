@@ -15,7 +15,6 @@ from app.modules.m1_auth.models import User
 from app.modules.m3_village.models import VillageProfile
 from app.modules.m4_attacks.models import Attack, AttackProblemSet, AttackStatus
 
-
 class AttackRepository:
     def __init__(self, db: Session):
         self.db = db
@@ -61,6 +60,22 @@ class AttackRepository:
             or 0
         )
 
+    def get_due_attacks(self, before: Optional[datetime] = None) -> List[Attack]:
+        """
+        Query attacks in created or in_progress status whose window has expired.
+        Worker uses this query to resolve due attacks.
+        """
+        if before is None:
+            before = datetime.now(timezone.utc)
+        return (
+            self.db.query(Attack)
+            .filter(
+                Attack.status.in_([AttackStatus.created, AttackStatus.in_progress]),
+                Attack.window_expires_at.isnot(None),
+                Attack.window_expires_at <= before,
+            )
+            .all()
+        )
 
     def create_attack(
         self,
@@ -100,28 +115,6 @@ class AttackRepository:
             self.db.commit()
             self.db.refresh(attack)
         return attack
-
-    def get_due_for_resolution(self, limit: int = 50) -> List[Attack]:
-        """
-        Worker "what's due" query: attacks whose resolution window has
-        elapsed but that are still open (SADD §7.6).
-
-        The worker passes these to AttackService.resolve_attack() as
-        abandoned, so an expired window always terminates in a trophy
-        movement instead of an attack that hangs open forever.
-        """
-        now = datetime.now(timezone.utc)
-        return (
-            self.db.query(Attack)
-            .filter(
-                Attack.status.in_([AttackStatus.created, AttackStatus.in_progress]),
-                Attack.window_expires_at.isnot(None),
-                Attack.window_expires_at <= now,
-            )
-            .order_by(Attack.window_expires_at.asc())
-            .limit(limit)
-            .all()
-        )
 
     def get_recent_attack_targets(
         self, attacker_user_id: str, window_hours: int = 24
@@ -204,7 +197,6 @@ class AttackRepository:
             )
         return results
 
-
 class AttackProblemSetRepository:
     def __init__(self, db: Session):
         self.db = db
@@ -248,7 +240,6 @@ class AttackProblemSetRepository:
             self.db.commit()
             self.db.refresh(problem)
         return problem
-
 
 class CooldownRepository:
     """Thin repository over users.attack_cooldown_expires_at (SADD §7.2.1)."""

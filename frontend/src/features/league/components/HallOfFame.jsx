@@ -1,8 +1,10 @@
-export default function HallOfFame() {
-  const pastChampions = [
-    { season: "Season II", winner: "ByteKnights", mvp: "tourist_fan", trophies: "3,420 🏆", starGuild: "Algorithm Guild" },
-    { season: "Season I", winner: "BitShift Empire", mvp: "graph_master", trophies: "3,150 🏆", starGuild: "Binary Treehouse" },
-  ];
+const DEFAULT_CHAMPIONS = [
+  { season: "Season II", winner: "ByteKnights", mvp: "tourist_fan", trophies: "3,420 🏆", starGuild: "Algorithm Guild" },
+  { season: "Season I", winner: "BitShift Empire", mvp: "graph_master", trophies: "3,150 🏆", starGuild: "Binary Treehouse" },
+];
+
+export default function HallOfFame({ champions = DEFAULT_CHAMPIONS }) {
+  const pastChampions = champions && champions.length > 0 ? champions : DEFAULT_CHAMPIONS;
 
   return (
     <div className="rounded-xl border border-border bg-panel p-5">

@@ -21,11 +21,36 @@ from fastapi.testclient import TestClient
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
 
-TEST_DATABASE_URL = os.environ.get(
-    "TEST_DATABASE_URL",
-    "postgresql://codeforge:codeforge@localhost:5432/codeforge_test",
-)
+def _detect_db_url() -> str:
+    if "TEST_DATABASE_URL" in os.environ:
+        return os.environ["TEST_DATABASE_URL"]
+    # Prefer the app's compose port (5432) before legacy/stale local fallbacks.
+    for port in (5432, 5433):
+        candidate = f"postgresql://codeforge:codeforge@localhost:{port}/codeforge_test"
+        try:
+            eng = create_engine(candidate)
+            with eng.connect() as conn:
+                pass
+            eng.dispose()
+            return candidate
+        except Exception:
+            continue
+    return "postgresql://codeforge:codeforge@localhost:5432/codeforge_test"
+
+def _detect_redis_available() -> bool:
+    import socket
+    try:
+        s = socket.create_connection(("localhost", 6379), timeout=0.2)
+        s.close()
+        return True
+    except Exception:
+        return False
+
+TEST_DATABASE_URL = _detect_db_url()
 TEST_REDIS_URL = os.environ.get("TEST_REDIS_URL", "redis://localhost:6379/15")
+_REDIS_AVAILABLE = _detect_redis_available()
+
+_fake_redis_server = None
 
 
 @pytest.fixture(scope="session")
@@ -70,9 +95,16 @@ def db(engine):
 @pytest_asyncio.fixture
 async def redis_client():
     """Redis client on a dedicated DB index, flushed before/after each test."""
-    import redis.asyncio as aioredis
+    global _fake_redis_server
+    if _REDIS_AVAILABLE:
+        import redis.asyncio as aioredis
+        client = aioredis.from_url(TEST_REDIS_URL, decode_responses=True)
+    else:
+        import fakeredis.aioredis
+        if _fake_redis_server is None:
+            _fake_redis_server = fakeredis.FakeServer()
+        client = fakeredis.aioredis.FakeRedis(server=_fake_redis_server, decode_responses=True)
 
-    client = aioredis.from_url(TEST_REDIS_URL, decode_responses=True)
     await client.flushdb()
     yield client
     await client.flushdb()
@@ -89,18 +121,22 @@ def client(db, redis_client):
     from app.main import app
 
     async def override_get_redis():
-        # A fresh connection per call, not the `redis_client` fixture's
-        # instance: TestClient runs each request on its own anyio portal
-        # event loop, distinct from the loop pytest-asyncio opened
-        # `redis_client`'s connections on. Reusing that instance here
-        # raises "Future attached to a different loop" the moment a
-        # handler awaits it. Both clients still point at the same real
-        # Redis server/db, so state set by one is visible to the other.
-        conn = aioredis.from_url(TEST_REDIS_URL, decode_responses=True)
-        try:
-            yield conn
-        finally:
-            await conn.aclose()
+        global _fake_redis_server
+        if _REDIS_AVAILABLE:
+            conn = aioredis.from_url(TEST_REDIS_URL, decode_responses=True)
+            try:
+                yield conn
+            finally:
+                await conn.aclose()
+        else:
+            import fakeredis.aioredis
+            if _fake_redis_server is None:
+                _fake_redis_server = fakeredis.FakeServer()
+            conn = fakeredis.aioredis.FakeRedis(server=_fake_redis_server, decode_responses=True)
+            try:
+                yield conn
+            finally:
+                await conn.aclose()
 
     app.dependency_overrides[get_db] = lambda: db
     app.dependency_overrides[get_redis] = override_get_redis

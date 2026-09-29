@@ -35,7 +35,9 @@ export default function TargetCard({ target, canAttack, onLaunch, isLaunching })
       </div>
 
       <div className="mt-4 flex items-center justify-between border-t border-border/50 pt-3">
-        <span className="text-xs text-slate-400">3 Curated Problems</span>
+        <span className="text-xs text-slate-400">
+          {target.problem_count || target.curated_problems_count || 3} Curated Problems
+        </span>
         <button
           onClick={() => onLaunch(target.id)}
           disabled={!canAttack || isLaunching}
