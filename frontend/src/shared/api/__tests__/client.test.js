@@ -64,16 +64,16 @@ describe("apiClient & token management", () => {
       json: async () => ({ code: "not_found", detail: "Item does not exist" }),
     });
 
-    await expect(apiClient.get("/missing")).rejects.toThrow(ApiError);
-    try {
-      await apiClient.get("/missing");
-    } catch (err) {
-      if (err instanceof ApiError) {
-        expect(err.status).toBe(404);
-        expect(err.code).toBe("not_found");
-        expect(err.detail).toBe("Item does not exist");
-      }
-    }
+    // Catch the single rejection rather than re-issuing the request: the
+    // mock above is a one-shot, so a second call would fall through to the
+    // real network and raise a TypeError that is not an ApiError, which
+    // would skip these assertions and pass vacuously.
+    const err = await apiClient.get("/missing").catch((e) => e);
+
+    expect(err).toBeInstanceOf(ApiError);
+    expect(err.status).toBe(404);
+    expect(err.code).toBe("not_found");
+    expect(err.detail).toBe("Item does not exist");
   });
 
   describe("401 -> refresh -> retry flow (REQ-1.6)", () => {

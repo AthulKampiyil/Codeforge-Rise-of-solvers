@@ -275,3 +275,28 @@ def test_contributions_cover_every_zone_the_guild_scores_in(war_room):
     }
     for m in result.members:
         assert {c.zone_id for c in m.zone_contributions} == expected
+
+
+# ── Router contract ───────────────────────────────────────────────────
+# The service-level tests above call WarRoomService directly, so the router
+# itself (path shape, dependency wiring, status codes) is covered here.
+
+
+def test_get_war_room_over_http(client, db, make_user):
+    leader, auth_headers, _ = make_user("wr_http_leader")
+    _, outsider_headers, _ = make_user("wr_http_outsider")
+
+    from app.modules.m5_guild_territory.service import GuildService
+
+    guild = GuildService(db).create_guild("War Room HTTP", leader["id"], "Testing")
+
+    ok = client.get(f"/war_room/{guild.id}", headers=auth_headers)
+    assert ok.status_code == 200, ok.text
+    body = ok.json()
+    assert body["guild_id"] == str(guild.id)
+    assert "contested_zones" in body
+    assert [m["username"] for m in body["members"]] == ["wr_http_leader"]
+    assert body["members"][0]["role"] == GuildRole.leader.value
+
+    denied = client.get(f"/war_room/{guild.id}", headers=outsider_headers)
+    assert denied.status_code == 403

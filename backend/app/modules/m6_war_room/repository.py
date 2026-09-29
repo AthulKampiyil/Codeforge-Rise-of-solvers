@@ -59,6 +59,31 @@ class WarRoomRepository:
             for r in rows
         ]
 
+    def get_member_roles(self, guild_id: UUID) -> dict[str, str]:
+        """user_id -> role string for every member of the guild.
+
+        Roles live in M5's guild_memberships, not in the member summaries,
+        which join through users to keep the sync timestamp aggregation in
+        one query. Fetching the map separately keeps that query intact.
+        """
+        rows = self.db.execute(
+            text("SELECT user_id, role FROM guild_memberships WHERE guild_id = :gid"),
+            {"gid": guild_id},
+        ).fetchall()
+        return {str(r.user_id): str(r.role) for r in rows}
+
+    def get_zone_owners(self) -> dict[str, Optional[str]]:
+        """zone_id -> owning_guild_id for every zone.
+
+        Owning guild is M5's resolved state on territory_zones; the scoreboard
+        in get_all_zone_scores() is the raw per-guild contribution, so a zone
+        can have scores without a resolved owner.
+        """
+        rows = self.db.execute(
+            text("SELECT id, owning_guild_id FROM territory_zones")
+        ).fetchall()
+        return {str(r.id): (str(r.owning_guild_id) if r.owning_guild_id else None) for r in rows}
+
     def get_league_tier(self, user_id: str) -> str:
         """League tier for a member, defaulting to the entry tier."""
         row = self.db.execute(

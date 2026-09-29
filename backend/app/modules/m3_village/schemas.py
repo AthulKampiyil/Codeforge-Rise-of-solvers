@@ -1,3 +1,4 @@
+from uuid import UUID
 """Personal Code Village Management (REQ-3.x) — Pydantic schemas."""
 from datetime import datetime
 
@@ -5,7 +6,7 @@ from pydantic import BaseModel
 
 
 class TopicOut(BaseModel):
-    id: str
+    id: UUID
     name: str
     display_name: str
     structure_key: str
@@ -18,7 +19,7 @@ class TopicOut(BaseModel):
 
 class VillageTopicProgressOut(BaseModel):
     """Individual topic progress in a user's village (REQ-3.1, REQ-3.2)."""
-    id: str
+    id: UUID
     name: str
     display_name: str
     structure_key: str
@@ -33,7 +34,7 @@ class VillageTopicProgressOut(BaseModel):
 
 class VillageProfileOut(BaseModel):
     """User's complete village profile (REQ-3.3, REQ-3.4)."""
-    user_id: str
+    user_id: UUID
     total_solved: int
     average_level: float
     topics: list[VillageTopicProgressOut]

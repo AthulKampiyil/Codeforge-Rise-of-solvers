@@ -1,4 +1,7 @@
-"""M6 War Room router — REQ-6.1–6.3."""
+"""M6 War Room router — REQ-6.1–6.3.
+
+Owns HTTP-facing endpoints only; business logic lives in service.py.
+"""
 from typing import Annotated
 from uuid import UUID
 

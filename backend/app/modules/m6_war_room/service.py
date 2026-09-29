@@ -112,6 +112,8 @@ class WarRoomService:
 
         our_zones = self.repo.get_zone_contributions(guild_id)
         all_zone_scores = self.repo.get_all_zone_scores()
+        zone_owners = self.repo.get_zone_owners()
+        member_roles = self.repo.get_member_roles(guild_id)
 
         # ── Contested zones ────────────────────────────────────────────
         contested_zones: list[ContestedZoneOut] = []
@@ -147,6 +149,8 @@ class WarRoomService:
                     leading_score=round(leading_score, 2),
                     gap_pct=gap_pct,
                     top_affinity_topics=top_affinity,
+                    owner_guild_id=zone_owners.get(zone_id_str),
+                    scores=scores,
                 )
             )
 
@@ -184,6 +188,7 @@ class WarRoomService:
                     topic_levels=topic_levels,
                     zone_contributions=zone_contributions,
                     aligns_with_contested=aligns,
+                    role=member_roles.get(user_id, "member"),
                 )
             )
 
@@ -191,6 +196,7 @@ class WarRoomService:
             guild=guild,
             contested_zones=contested_zones,
             members=members,
+            guild_id=str(guild_id),
         )
 
     def _zone_leader(self, scores: dict[str, float]) -> tuple[Optional[str], float]:

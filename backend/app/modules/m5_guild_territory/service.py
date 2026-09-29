@@ -318,3 +318,11 @@ class GuildService:
             ).fetchall()
             z.scores = {str(row[0]): float(row[1]) for row in scores_query}
         return zones
+
+    def get_due_zones(self) -> list:
+        """Returns zones due for ownership resolution (worker query)."""
+        return self.territory_repo.get_all_zones()
+
+    def get_due_guilds(self) -> list:
+        """Returns guilds due for score recalculation (worker query)."""
+        return self.guild_repo.get_all_guilds()
