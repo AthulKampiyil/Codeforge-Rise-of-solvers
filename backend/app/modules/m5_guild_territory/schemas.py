@@ -31,9 +31,9 @@ class GuildMembershipOut(BaseModel):
     
     # New fields for Wave 1
     username: str
-    level: Union[int, str]
-    solved_count: Union[int, str]
-    attack_count: Union[int, str]
+    level: Union[float, int, str]
+    solved_count: Union[float, int, str]
+    attack_count: Union[float, int, str]
 
 
 class GuildDetailOut(GuildOut):
