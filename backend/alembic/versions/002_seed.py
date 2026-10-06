@@ -75,6 +75,8 @@ GAME_BALANCE_DEFAULTS = [
     ("trophy.defense_threshold", 0.34, "float", "Solved-fraction below which an attack counts as a successful defense."),
     ("trophy.abandon_penalty", 5, "int", "Flat trophy penalty for an attack abandoned with zero submissions."),
     ("trophy.elo_divisor", 400, "int", "Elo expected-score divisor (SADD 7.3.1.3)."),
+    ("trophy.practice_solve", 2, "int", "Base trophies for a problem accepted on the judge, scaled up per 400 rating points above 800."),
+    ("trophy.practice_backfill_days", 30, "int", "How far back a first sync may award practice trophies. Stops a first-time history import from granting a season's trophies at once; 0 disables backfill entirely."),
     (
         "league.thresholds",
         {"bronze": 0, "silver": 400, "gold": 800, "platinum": 1300, "diamond": 1900, "legend": 2600},

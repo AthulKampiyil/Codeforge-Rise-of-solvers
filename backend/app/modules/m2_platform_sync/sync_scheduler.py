@@ -16,6 +16,7 @@ import uuid
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
+from app.core.logging import get_logger
 from app.modules.m1_auth.models import JudgeAccount, JudgeType, User
 from app.modules.m2_platform_sync.judge_adapters.codeforces import CodeforcesAdapter
 from app.modules.m2_platform_sync.models import DlqFailureReason, SolvedProblem, SyncLog, SyncStatus
@@ -24,7 +25,11 @@ from app.modules.m2_platform_sync.topic_tagger import TopicTagger
 from app.modules.m3_village.models import Topic, VillageTopicProgress
 from app.modules.m3_village.formulas import level_for, points_for
 from app.modules.m3_village.service import VillageService
+from app.modules.m7_league_trophy.models import TrophyEventType
+from app.modules.m7_league_trophy.service import LeagueService
 from app.modules.m8_notifications.schemas import EventType
+
+logger = get_logger(__name__)
 
 
 class SyncScheduler:
@@ -68,36 +73,82 @@ class SyncScheduler:
 
         try:
             solves = await self.adapter.get_submissions(account.handle, since=account.last_sync_at)
+            league_svc = LeagueService(self.db)
+            backfill_cutoff = league_svc.practice_backfill_cutoff()
+            # Captured up front so a tier crossing caused by these awards can
+            # still be published after the commit. record_trophy_event is
+            # called with commit=False below (the awards and the solve facts
+            # must land in one transaction), which suppresses its own
+            # LEAGUE_TIER_CHANGED publish, so we owe the event here.
+            existing_profile = league_svc.profile_repo.get(str(account.user_id))
+            tier_before = existing_profile.league_tier if existing_profile else None
+            trophies_awarded = 0
 
             for solve in solves:
-                if not self._persist_solved_problem(account.id, solve):
+                record = self._persist_solved_problem(account.id, solve)
+                if record is None:
                     continue  # already recorded (idempotent re-sync, REQ-2.5)
+
+                # A solve is the one thing a player does outside attacking, so
+                # it has to move trophies too — otherwise solving problems is
+                # worth nothing in the league and the only way to gain is to
+                # attack someone. Muted during history backfill so a first
+                # sync doesn't hand out a season's trophies at once.
+                if backfill_cutoff is None or solve.solved_at >= backfill_cutoff:
+                    league_svc.record_trophy_event(
+                        user_id=str(account.user_id),
+                        event_type=TrophyEventType.practice_milestone,
+                        delta=league_svc.practice_solve_trophy(solve.rating),
+                        source_ref_id=record.id,
+                        commit=False,
+                    )
+                    trophies_awarded += 1
 
                 topics = self.tagger.map_tags(solve.topic_tags)
                 for topic_name in topics:
                     change = self._update_village_progress(account.user_id, topic_name, solve.rating)
                     if change and self.event_publisher:
                         topic, previous_level, new_level, defense = change
+                        # Every value is stringified on the way out. The event
+                        # publisher JSON-encodes this payload for Redis and the
+                        # notification table, and a raw UUID raises
+                        # "Object of type UUID is not JSON serializable" —
+                        # which aborted the whole sync request with a 500 the
+                        # first time a solve changed a topic level. Unit tests
+                        # inject a fake publisher that never encodes, so only
+                        # the real NotificationService path caught this.
                         payload = {
-                            "user_id": account.user_id,
-                            "topic_id": topic.id,
+                            "user_id": str(account.user_id),
+                            "topic_id": str(topic.id),
                             "topic_name": topic.name,
                             "previous_level": previous_level,
                             "new_level": new_level,
                             "new_defense_rating": defense,
                             "source": "sync",
-                            "source_ref_id": uuid.uuid5(uuid.NAMESPACE_URL, str(solve.problem_ext_id)),
+                            "source_ref_id": str(uuid.uuid5(uuid.NAMESPACE_URL, str(solve.problem_ext_id))),
                         }
-                        result = self.event_publisher(EventType.VILLAGE_UPDATED, payload, [account.user_id])
+                        result = self.event_publisher(EventType.VILLAGE_UPDATED, payload, [str(account.user_id)])
                         if inspect.isawaitable(result):
                             await result
 
             account.last_sync_at = datetime.now(timezone.utc)
             self.db.commit()
 
+            if trophies_awarded and tier_before is not None:
+                self.db.refresh(existing_profile)
+                if existing_profile.league_tier != tier_before:
+                    league_svc.publish_tier_change(
+                        str(account.user_id), tier_before,
+                        existing_profile.league_tier, existing_profile.trophy_count,
+                    )
+
             # Clear from dead-letter queue if it was previously parked there
             self.sync_service.clear_dlq(self.db, account.id)
             self._update_sync_log(account, SyncStatus.up_to_date, None)
+            logger.info(
+                "judge sync complete account=%s new_solves=%d trophies_awarded=%d",
+                account.handle, len(solves), trophies_awarded,
+            )
             return True
 
         except Exception as e:  # noqa: BLE001 — real classification is Phase 4's CircuitBreaker
@@ -135,17 +186,22 @@ class SyncScheduler:
 
         return summary
 
-    def _persist_solved_problem(self, judge_account_id, solve) -> bool:
+    def _persist_solved_problem(self, judge_account_id, solve) -> Optional[SolvedProblem]:
         """
-        Insert an immutable SolvedProblem fact. Returns False if it
-        already existed (idempotent re-sync — REQ-2.5).
+        Insert an immutable SolvedProblem fact.
+
+        Returns the new row, or None if it already existed (idempotent
+        re-sync — REQ-2.5). The row is returned rather than a bare bool so
+        the caller can anchor its trophy ledger entry to a real
+        SOLVED_PROBLEM id, keeping the award auditable and traceable back to
+        the exact problem that earned it.
         """
         exists = self.db.query(SolvedProblem).filter(
             SolvedProblem.judge_account_id == judge_account_id,
             SolvedProblem.problem_ext_id == solve.problem_ext_id,
         ).first()
         if exists:
-            return False
+            return None
 
         record = SolvedProblem(
             judge_account_id=judge_account_id,
@@ -158,9 +214,9 @@ class SyncScheduler:
         try:
             with self.db.begin_nested():
                 self.db.flush()
-            return True
+            return record
         except IntegrityError:
-            return False
+            return None
 
     def _update_village_progress(self, user_id: str, topic_name: str, rating: int | None = None):
         """

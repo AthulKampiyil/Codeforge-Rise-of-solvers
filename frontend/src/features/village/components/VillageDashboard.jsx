@@ -3,17 +3,22 @@ import React, { useEffect, useRef, useState } from "react";
 import { getTrophies, getVillage } from "../api/villageApi";
 import { useRealtimeEvent } from "../../../shared/websocket/client";
 import VillageScene from "../../../game/VillageScene";
+import { SyncStatus } from "../../sync-status/components/SyncStatus.jsx";
 import { VillageSidebar } from "./VillageSidebar";
 
 export function VillageDashboard({ SceneComponent }) {
   const [village, setVillage] = useState(null);
   const [trophies, setTrophies] = useState(0);
   const refresh = () => getVillage().then((data) => { setVillage(data); window.dispatchEvent(new CustomEvent("codeforge:village-state", { detail: data })); }).catch(() => setVillage({ topics: [] }));
-  useEffect(() => { refresh(); getTrophies().then((data) => setTrophies(data.trophy_count ?? data.trophies ?? 0)); }, []);
+  const refreshTrophies = () => getTrophies().then((data) => setTrophies(data.trophy_count ?? data.trophies ?? 0));
+  useEffect(() => { refresh(); refreshTrophies(); }, []);
+  // An on-demand sync writes topic levels + trophies server-side, so both
+  // have to be re-read once it lands or the sidebar shows pre-sync numbers.
+  const refreshAll = () => { refresh(); refreshTrophies(); };
   // The realtime socket itself is connected once for the whole session in
   // App.jsx — this just subscribes to the event this screen cares about.
   useRealtimeEvent("VILLAGE_UPDATED", refresh);
-  return <main className="village-layout"><VillageSidebar village={village} trophies={trophies} /><section className="village-stage">{SceneComponent ? <SceneComponent village={village} /> : <VillageCanvas />}</section></main>;
+  return <main className="village-layout"><div className="village-sidebar-column"><VillageSidebar village={village} trophies={trophies} /><SyncStatus onRefresh={refreshAll} /></div><section className="village-stage">{SceneComponent ? <SceneComponent village={village} /> : <VillageCanvas />}</section></main>;
 }
 
 function VillageCanvas() {

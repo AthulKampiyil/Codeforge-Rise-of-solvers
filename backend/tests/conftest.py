@@ -39,16 +39,26 @@ def _detect_db_url() -> str:
 
 def _detect_redis_available() -> bool:
     import socket
+    from urllib.parse import urlparse
+    # Probe the host that TEST_REDIS_URL actually points at. Hardcoding
+    # localhost meant a run against a non-local Redis (e.g. the compose
+    # service) silently fell through to the fakeredis branch below, and
+    # fakeredis isn't in requirements.txt — so the run died with a
+    # ModuleNotFoundError instead of just using the real Redis.
+    host = urlparse(TEST_REDIS_URL).hostname or "localhost"
+    port = urlparse(TEST_REDIS_URL).port or 6379
     try:
-        s = socket.create_connection(("localhost", 6379), timeout=0.2)
+        s = socket.create_connection((host, port), timeout=0.5)
         s.close()
         return True
     except Exception:
         return False
 
+
 TEST_DATABASE_URL = _detect_db_url()
 TEST_REDIS_URL = os.environ.get("TEST_REDIS_URL", "redis://localhost:6379/15")
 _REDIS_AVAILABLE = _detect_redis_available()
+
 
 _fake_redis_server = None
 

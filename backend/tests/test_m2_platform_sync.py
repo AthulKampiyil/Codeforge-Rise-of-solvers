@@ -32,6 +32,8 @@ from app.modules.m2_platform_sync.sync_scheduler import SyncScheduler
 from app.modules.m2_platform_sync.topic_tagger import TopicTagger
 from app.modules.m3_village.models import Topic, VillageProfile, VillageTopicProgress
 from app.modules.m3_village.service import VillageService
+from app.modules.m7_league_trophy.models import LeagueProfile, TrophyEventType, TrophyLedger
+from app.modules.m7_league_trophy.service import DEFAULT_STARTING_TROPHIES, LeagueService
 from app.modules.m8_notifications.schemas import EventType, VillageUpdatedPayload
 
 USER_STATUS_URL = f"{settings.CODEFORCES_API_BASE}/user.status"
@@ -362,16 +364,27 @@ class TestSyncSchedulerHappyPath:
         log = db.query(SyncLog).filter(SyncLog.judge_account_id == ja.id).one()
         assert log.status == SyncStatus.up_to_date
 
-    async def test_judge_transport_failure_does_not_park_the_account(self, db: Session):
-        """A 503 is not the account's fault — it must not enter the DLQ."""
+    async def test_judge_outage_fails_the_sync_without_losing_the_accounts_data(self, db: Session):
+        """A 503 is the judge's fault, not the account's — but it must still be
+        a *failed* sync, not a silent success.
+
+        This used to assert `True` and an empty DLQ, which meant a Codeforces
+        outage looked like a healthy up_to_date sync that had simply found
+        nothing new, and nothing anywhere recorded that the fetch never
+        happened. Failing it is what lets the watermark stay put so the
+        missed solves are retried on the next sync.
+        """
         user = _make_user(db)
         ja = _make_judge_account(db, user.id)
         respx.get(USER_STATUS_URL).mock(return_value=httpx.Response(503))
 
         with respx.mock:
-            assert await SyncScheduler(db).sync_judge_account(str(ja.id)) is True
+            assert await SyncScheduler(db).sync_judge_account(str(ja.id)) is False
 
-        assert db.query(SyncDeadLetter).filter(SyncDeadLetter.judge_account_id == ja.id).count() == 0
+        # Recorded rather than lost, so there is a durable trace to retry from.
+        assert db.query(SyncDeadLetter).filter(SyncDeadLetter.judge_account_id == ja.id).count() == 1
+        db.refresh(ja)
+        assert ja.last_sync_at is None
 
 
 class TestSyncSchedulerLeveling:
@@ -423,7 +436,7 @@ class TestSyncSchedulerLeveling:
         assert len(events) == 1
         event_type, payload, recipients = events[0]
         assert event_type == EventType.VILLAGE_UPDATED
-        assert recipients == [user.id]
+        assert recipients == [str(user.id)]
         assert payload["topic_name"] == "dynamic-programming"
         assert payload["previous_level"] == 0
         assert payload["new_level"] == 1
@@ -653,3 +666,199 @@ class TestGetStaleProfiles:
         assert profile.total_solved == 0
         assert profile.average_level == 0.0
         assert profile.defense_rating == 100.0
+
+
+class TestSyncAwardsPracticeTrophies:
+    """REQ-7.1 — solving a problem has to move trophies, not just village XP.
+
+    Before this, TrophyLedger was only ever written by M4's attack
+    resolution, so the only way to gain trophies was to attack someone.
+    A solver could grind Codeforces forever and their trophy count would
+    never budge, and the sync button would appear to do nothing.
+    """
+
+    def _ledger(self, db: Session, user_id) -> list[TrophyLedger]:
+        return (
+            db.query(TrophyLedger)
+            .filter(
+                TrophyLedger.user_id == user_id,
+                TrophyLedger.event_type == TrophyEventType.practice_milestone,
+            )
+            .order_by(TrophyLedger.created_at)
+            .all()
+        )
+
+    async def test_new_solve_awards_a_practice_milestone_trophy(self, db: Session):
+        user = _make_user(db)
+        ja = _make_judge_account(db, user.id)
+        _mock_submissions(_sub("1", rating=2400))
+
+        with respx.mock:
+            assert await SyncScheduler(db).sync_judge_account(str(ja.id)) is True
+
+        entries = self._ledger(db, user.id)
+        assert len(entries) == 1
+        # base 2 + (2400 - 800) // 400 difficulty steps
+        assert entries[0].delta == 6
+        assert entries[0].resulting_balance == DEFAULT_STARTING_TROPHIES + 6
+
+        profile = db.query(LeagueProfile).filter(LeagueProfile.user_id == user.id).one()
+        assert profile.trophy_count == DEFAULT_STARTING_TROPHIES + 6
+
+    async def test_ledger_entry_is_anchored_to_the_solved_problem(self, db: Session):
+        """The award must be traceable back to the exact problem that earned it."""
+        user = _make_user(db)
+        ja = _make_judge_account(db, user.id)
+        _mock_submissions(_sub("4242", rating=1600))
+
+        with respx.mock:
+            await SyncScheduler(db).sync_judge_account(str(ja.id))
+
+        solved = db.query(SolvedProblem).filter(SolvedProblem.judge_account_id == ja.id).one()
+        assert self._ledger(db, user.id)[0].source_ref_id == solved.id
+
+    async def test_trophy_scales_with_problem_difficulty(self, db: Session):
+        assert LeagueService(db).practice_solve_trophy(800) == 2
+        assert LeagueService(db).practice_solve_trophy(1200) == 3
+        assert LeagueService(db).practice_solve_trophy(2000) == 5
+        # Unrated problems (Contest B, gyms) still earn the base amount.
+        assert LeagueService(db).practice_solve_trophy(None) == 2
+
+    async def test_resync_does_not_award_the_same_problem_twice(self, db: Session):
+        """REQ-2.5 idempotency has to cover trophies, not just SolvedProblem rows."""
+        user = _make_user(db)
+        ja = _make_judge_account(db, user.id)
+        _mock_submissions(_sub("1", rating=2400))
+
+        with respx.mock:
+            await SyncScheduler(db).sync_judge_account(str(ja.id))
+            _reset_sync_watermark(db, ja)
+            await SyncScheduler(db).sync_judge_account(str(ja.id))
+
+        assert len(self._ledger(db, user.id)) == 1
+        profile = db.query(LeagueProfile).filter(LeagueProfile.user_id == user.id).one()
+        assert profile.trophy_count == DEFAULT_STARTING_TROPHIES + 6
+
+    async def test_first_sync_backfill_does_not_award_a_seasons_worth_of_trophies(self, db: Session):
+        """A first sync imports years of history — it must not dump the whole
+        archive into the league. Village progress still counts it."""
+        user = _make_user(db)
+        ja = _make_judge_account(db, user.id)
+        old = _sub("1", rating=2400, age_minutes=60 * 24 * 90)  # 90 days ago
+        _mock_submissions(old)
+
+        with respx.mock:
+            assert await SyncScheduler(db).sync_judge_account(str(ja.id)) is True
+
+        assert self._ledger(db, user.id) == []
+        # The solve itself is still recorded and still builds the village.
+        assert db.query(SolvedProblem).filter(SolvedProblem.judge_account_id == ja.id).count() == 1
+        assert _progress(db, user.id, "dynamic-programming") is not None
+
+    async def test_a_solve_inside_the_backfill_window_does_award(self, db: Session):
+        user = _make_user(db)
+        ja = _make_judge_account(db, user.id)
+        _mock_submissions(_sub("1", rating=2400, age_minutes=60 * 24 * 3))
+
+        with respx.mock:
+            await SyncScheduler(db).sync_judge_account(str(ja.id))
+
+        assert len(self._ledger(db, user.id)) == 1
+
+    async def test_village_and_trophies_both_move(self, db: Session):
+        """The sync button's whole promise: the sidebar numbers actually change."""
+        user = _make_user(db)
+        ja = _make_judge_account(db, user.id)
+        _mock_submissions(_sub("1", rating=2400), _sub("2", rating=2400), _sub("3", rating=2400))
+
+        with respx.mock:
+            await SyncScheduler(db).sync_judge_account(str(ja.id))
+
+        profile = db.query(VillageProfile).filter(VillageProfile.user_id == user.id).one()
+        assert profile.total_solved == 3
+        assert profile.defense_rating > 100.0
+        assert len(self._ledger(db, user.id)) == 3
+
+
+class TestSyncReportsJudgeFailuresHonestly:
+    """A judge outage must never be reported as a healthy no-op sync."""
+
+    async def test_judge_unavailable_marks_the_sync_failed(self, db: Session):
+        user = _make_user(db)
+        ja = _make_judge_account(db, user.id)
+        respx.get(USER_STATUS_URL).mock(return_value=httpx.Response(503))
+
+        with respx.mock:
+            assert await SyncScheduler(db).sync_judge_account(str(ja.id)) is False
+
+        log = db.query(SyncLog).filter(SyncLog.judge_account_id == ja.id).one()
+        assert log.status == SyncStatus.failed
+        assert log.last_synced_at is None
+        # The watermark must not advance, or the missed solves would be
+        # filtered out of the next sync and never recovered.
+        db.refresh(ja)
+        assert ja.last_sync_at is None
+
+    async def test_empty_history_is_still_a_successful_sync(self, db: Session):
+        """A reachable judge with nothing new is the real 'up to date' case."""
+        user = _make_user(db)
+        ja = _make_judge_account(db, user.id)
+        _mock_submissions()
+
+        with respx.mock:
+            assert await SyncScheduler(db).sync_judge_account(str(ja.id)) is True
+
+        log = db.query(SyncLog).filter(SyncLog.judge_account_id == ja.id).one()
+        assert log.status == SyncStatus.up_to_date
+        assert log.last_synced_at is not None
+
+
+class TestSyncEventPayloadIsSerialisable:
+    """The VILLAGE_UPDATED payload has to survive real JSON encoding.
+
+    Every other publisher in this codebase injects a fake publisher that
+    only appends to a list, so a payload full of raw UUID objects passed
+    every test — and then blew up with "Object of type UUID is not JSON
+    serializable" the first time a real sync crossed a topic level,
+    failing the whole sync request with a 500. These tests encode the
+    payload exactly the way the real event bus does.
+    """
+
+    async def test_payload_survives_json_encoding(self, db: Session):
+        import json
+
+        user = _make_user(db)
+        ja = _make_judge_account(db, user.id)
+        payloads: list[dict] = []
+        # Three solves clear DP's 14-point threshold; one solve does not, and
+        # no level change means no event to encode.
+        _mock_submissions(_sub("1", rating=2400), _sub("2", rating=2400), _sub("3", rating=2400))
+
+        def json_encoding_publisher(event_type, payload, recipients):
+            # This is the real transport's contract, not a test convenience.
+            json.dumps(payload)
+            payloads.append(payload)
+
+        with respx.mock:
+            await SyncScheduler(db, event_publisher=json_encoding_publisher).sync_judge_account(str(ja.id))
+
+        assert len(payloads) == 1
+        for key in ("user_id", "topic_id", "source_ref_id"):
+            assert isinstance(payloads[0][key], str), f"{key} must be a string, got {type(payloads[0][key])}"
+
+    async def test_recipients_are_json_serialisable(self, db: Session):
+        import json
+
+        user = _make_user(db)
+        ja = _make_judge_account(db, user.id)
+        seen: list = []
+        _mock_submissions(_sub("1", rating=2400), _sub("2", rating=2400), _sub("3", rating=2400))
+
+        def publisher(event_type, payload, recipients):
+            json.dumps(recipients)
+            seen.extend(recipients)
+
+        with respx.mock:
+            await SyncScheduler(db, event_publisher=publisher).sync_judge_account(str(ja.id))
+
+        assert seen == [str(user.id)]

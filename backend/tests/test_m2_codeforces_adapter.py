@@ -14,6 +14,7 @@ import respx
 
 from app.core.config import settings
 from app.modules.m2_platform_sync.judge_adapters.base import (
+    JudgeUnavailableError,
     NormalizedSolve,
     NormalizedUserInfo,
 )
@@ -185,24 +186,37 @@ class TestGetSubmissions:
         assert await CodeforcesAdapter().get_submissions("tourist") == []
 
     @respx.mock
-    async def test_api_level_failure_returns_empty_list(self):
+    async def test_api_level_failure_raises(self):
+        # A judge-level FAILED response means the sync could not happen, which
+        # is not the same as "nothing new". Returning [] here previously made
+        # the scheduler report a healthy up_to_date sync that persisted nothing.
         respx.get(USER_STATUS_URL).mock(
             return_value=httpx.Response(200, json={"status": "FAILED", "comment": "handle not found"})
         )
 
-        assert await CodeforcesAdapter().get_submissions("ghost") == []
+        with pytest.raises(JudgeUnavailableError, match="handle not found"):
+            await CodeforcesAdapter().get_submissions("ghost")
 
     @respx.mock
-    async def test_http_error_returns_empty_list(self):
+    async def test_http_error_raises(self):
         respx.get(USER_STATUS_URL).mock(return_value=httpx.Response(429))
 
-        assert await CodeforcesAdapter().get_submissions("tourist") == []
+        with pytest.raises(JudgeUnavailableError):
+            await CodeforcesAdapter().get_submissions("tourist")
 
     @respx.mock
-    async def test_transport_error_returns_empty_list(self):
+    async def test_transport_error_raises(self):
         respx.get(USER_STATUS_URL).mock(side_effect=httpx.ReadTimeout("timed out"))
 
-        assert await CodeforcesAdapter().get_submissions("tourist") == []
+        with pytest.raises(JudgeUnavailableError):
+            await CodeforcesAdapter().get_submissions("tourist")
+
+    @respx.mock
+    async def test_non_json_body_raises_parse_error(self):
+        respx.get(USER_STATUS_URL).mock(return_value=httpx.Response(200, text="<html>maintenance</html>"))
+
+        with pytest.raises(JudgeUnavailableError, match="non-JSON"):
+            await CodeforcesAdapter().get_submissions("tourist")
 
 
 # ── Adapter registry (SADD 5.4 — Codeforces-only build) ───────────────

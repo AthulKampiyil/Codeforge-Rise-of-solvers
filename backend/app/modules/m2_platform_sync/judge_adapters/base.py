@@ -30,6 +30,17 @@ class NormalizedSolve:
     solved_at: datetime
 
 
+class JudgeUnavailableError(RuntimeError):
+    """The judge could not be reached, or answered with a failure.
+
+    Distinct from "this account has no new submissions", which is a
+    successful empty result. Adapters must raise this instead of
+    returning an empty list on failure, so the sync scheduler can record
+    a real failure (and dead-letter the account) rather than reporting a
+    healthy no-op sync.
+    """
+
+
 class JudgeAdapter(ABC):
     """Common interface every judge integration must implement."""
 

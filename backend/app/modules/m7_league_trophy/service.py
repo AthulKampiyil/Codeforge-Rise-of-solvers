@@ -7,7 +7,7 @@ never its repository.py or models.py directly (SADD 4.1 coupling rule).
 SADD §7.2 / App. D: TrophyLedger is the ONLY write path into league_profiles.
 """
 import asyncio
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, List, Optional
 from uuid import UUID
 
@@ -43,6 +43,18 @@ DEFAULT_K_FACTORS = {
 DEFAULT_DEFENSE_THRESHOLD = 0.34
 DEFAULT_ABANDON_PENALTY = 5
 DEFAULT_ELO_DIVISOR = 400
+DEFAULT_PRACTICE_SOLVE_TROPHY = 2
+# Mirrors m3_village.formulas.points_for() so a harder problem is worth more
+# in both currencies. 800 is Codeforces' baseline rating and each step covers
+# another 400 points (i.e. +1 trophy per difficulty band).
+PRACTICE_SOLVE_RATING_STEP = 400
+PRACTICE_SOLVE_RATING_FLOOR = 800
+# A user's first sync imports their entire Codeforces history in one shot.
+# Awarding a trophy for every historical problem would hand out a season's
+# worth of practice trophies at once and rocket them up the leaderboard, so
+# backfill only counts problems solved inside this window. Solves arriving on
+# later syncs are always inside it, so genuinely new work is always scored.
+DEFAULT_PRACTICE_BACKFILL_DAYS = 30
 
 
 class LeagueService:
@@ -92,6 +104,26 @@ class LeagueService:
         tier_str = tier.value if hasattr(tier, "value") else str(tier).lower()
         k_map = self.get_config("trophy.k_factor", DEFAULT_K_FACTORS)
         return int(k_map.get(tier_str, 32))
+
+    def practice_solve_trophy(self, rating: int | None) -> int:
+        """Trophies for one newly-synced accepted problem (REQ-7.1).
+
+        Base value is admin-tunable via `trophy.practice_solve`, then scaled
+        by problem difficulty the same way village progress points are.
+        """
+        base = int(self.get_config("trophy.practice_solve", DEFAULT_PRACTICE_SOLVE_TROPHY))
+        return base + max(0, ((rating or 0) - PRACTICE_SOLVE_RATING_FLOOR) // PRACTICE_SOLVE_RATING_STEP)
+
+    def practice_backfill_cutoff(self):
+        """Oldest solve still eligible for a practice trophy on a first sync.
+
+        Returns None when backfill is disabled (a non-positive window), which
+        means only problems solved from now on can earn trophies.
+        """
+        days = int(self.get_config("trophy.practice_backfill_days", DEFAULT_PRACTICE_BACKFILL_DAYS))
+        if days <= 0:
+            return None
+        return datetime.now(timezone.utc) - timedelta(days=days)
 
     def get_or_create_profile(self, user_id: str, commit: bool = True) -> LeagueProfile:
         starting_trophies = int(self.get_config("league.starting_trophies", DEFAULT_STARTING_TROPHIES))

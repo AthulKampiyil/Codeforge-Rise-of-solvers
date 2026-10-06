@@ -8,6 +8,28 @@
   font-family: 'Inter', system-ui, sans-serif;
 }
 
+/* Wraps the sidebar + sync-status bar so they share the layout's first grid
+   column. Without it, adding the bar would become a third grid child and
+   wrap onto a new row under the 2-column template. */
+.village-sidebar-column {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #1e293b;
+}
+
+.village-sidebar-column .village-sidebar {
+  flex: 1 1 auto;
+  min-height: 0;
+  box-shadow: none;
+}
+
+.village-sidebar-column > .sync-status {
+  flex: 0 0 auto;
+  padding: 10px 24px;
+  border-top: 1px solid #334155;
+}
+
 .village-sidebar {
   padding: 32px 24px;
   background: #1e293b;

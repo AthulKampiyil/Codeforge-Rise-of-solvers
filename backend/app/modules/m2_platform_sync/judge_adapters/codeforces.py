@@ -25,6 +25,7 @@ import httpx
 from app.core.config import settings
 from app.modules.m2_platform_sync.judge_adapters.base import (
     JudgeAdapter,
+    JudgeUnavailableError,
     NormalizedSolve,
     NormalizedUserInfo,
 )
@@ -73,6 +74,14 @@ class CodeforcesAdapter(JudgeAdapter):
         (keeping the earliest accepted submission), and — when `since`
         is given — stops considering submissions at or before it
         (Codeforces returns newest-first).
+
+        Raises on transport/HTTP failure rather than returning an empty
+        list. An unreachable judge and a user with nothing new to report
+        both look like `[]` to the caller, and the sync scheduler treats
+        "no solves" as success — so swallowing the error here made a
+        Codeforces outage show up as a healthy "up_to_date" sync that
+        silently persisted nothing. Letting it propagate lets the
+        scheduler record a real failure and park the account in the DLQ.
         """
         try:
             async with httpx.AsyncClient() as client:
@@ -83,11 +92,15 @@ class CodeforcesAdapter(JudgeAdapter):
                 )
                 response.raise_for_status()
                 data = response.json()
-        except httpx.HTTPError:
-            return []
+        except httpx.HTTPError as exc:
+            raise JudgeUnavailableError(f"Codeforces user.status failed for {handle}: {exc}") from exc
+        except ValueError as exc:
+            raise JudgeUnavailableError(f"Codeforces returned a non-JSON body for {handle}: {exc}") from exc
 
         if data.get("status") != "OK":
-            return []
+            raise JudgeUnavailableError(
+                f"Codeforces user.status returned {data.get('status')!r} for {handle}: {data.get('comment', '')}"
+            )
 
         submissions = data.get("result", [])
         accepted = [s for s in submissions if s.get("verdict") == "OK"]
