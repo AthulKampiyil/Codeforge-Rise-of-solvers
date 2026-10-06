@@ -49,6 +49,13 @@ def disable_recent_attack_cooldown():
     else:
         cfg_cd = GameBalanceConfig(key="attack.cooldown_minutes", value="0", value_type="float")
         db.add(cfg_cd)
+
+    cfg_tol = db.query(GameBalanceConfig).filter(GameBalanceConfig.key == "matchmaking.max_tolerance").first()
+    if cfg_tol:
+        cfg_tol.value = "100.0"
+    else:
+        cfg_tol = GameBalanceConfig(key="matchmaking.max_tolerance", value="100.0", value_type="float")
+        db.add(cfg_tol)
     
     db.commit()
 
@@ -58,4 +65,3 @@ try:
     print("Done")
 finally:
     db.close()
-
