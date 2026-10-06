@@ -70,8 +70,7 @@ class SyncScheduler:
             solves = await self.adapter.get_submissions(account.handle, since=account.last_sync_at)
 
             for solve in solves:
-                if not self._persist_solved_problem(account.id, solve):
-                    continue  # already recorded (idempotent re-sync, REQ-2.5)
+                self._persist_solved_problem(account.id, solve)
 
                 # SADD §7.3.1.2: Cross-reference with active AttackProblemSets
                 from app.modules.m4_attacks.models import Attack, AttackProblemSet, AttackStatus
