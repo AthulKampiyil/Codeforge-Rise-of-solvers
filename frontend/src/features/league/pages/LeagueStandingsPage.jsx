@@ -8,14 +8,17 @@ import SeasonHeader from "../components/SeasonHeader.jsx";
 import StandingsTable from "../components/StandingsTable.jsx";
 import TierProgressCard from "../components/TierProgressCard.jsx";
 import TrophyLedgerModal from "../components/TrophyLedgerModal.jsx";
-import { useLeaderboard, useLeagueRealtime, useMyLeagueProfile } from "../hooks/useLeague.js";
+import { useLeaderboard, useLeagueRealtime, useMyLeagueProfile, useSeason } from "../hooks/useLeague.js";
 
 export default function LeagueStandingsPage() {
   const { user } = useAuth();
   const [scope, setScope] = useState("global");
   const [isLedgerOpen, setIsLedgerOpen] = useState(false);
 
+
   const { data: myProfile, isLoading: profileLoading } = useMyLeagueProfile();
+  const { data: season } = useSeason();
+
   const { data: leaderboard, isLoading: leaderboardLoading, refetch } = useLeaderboard(scope, 50, 0);
 
   // Realtime updates on tier changed
@@ -31,7 +34,9 @@ export default function LeagueStandingsPage() {
   return (
     <div className="mx-auto flex max-w-7xl flex-col gap-6 p-6">
       {/* Season Header Chip & Banner */}
-      <SeasonHeader />
+      <SeasonHeader 
+        seasonLabel={season ? `${season.season_name} · Week ${season.current_week}` : "Loading Season..."} 
+      />
 
       {/* Solver's Tier Progression & Division Status */}
       {profileLoading ? (

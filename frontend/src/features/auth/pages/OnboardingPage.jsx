@@ -65,6 +65,16 @@ export default function OnboardingPage() {
     try {
       const data = await verifyJudgeAccount(judgeAccount.id);
       setJudgeAccount(data.judge_account);
+      
+      // Auto-trigger the first sync
+      try {
+        const { requestSync } = await import("../../sync-status/api/syncApi.js");
+        await requestSync();
+      } catch (syncErr) {
+        // Just ignore sync errors, the worker will retry or they can click it manually
+        console.warn("Auto-sync failed:", syncErr);
+      }
+
       setStep(3);
     } catch (err) {
       setError(

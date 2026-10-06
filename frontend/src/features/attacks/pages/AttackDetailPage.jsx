@@ -5,6 +5,7 @@ import LiveProgress from "../components/LiveProgress.jsx";
 import OutcomePreview from "../components/OutcomePreview.jsx";
 import ProblemCard from "../components/ProblemCard.jsx";
 import { useAttackDetail, useResolveAttack } from "../hooks/useAttacks.js";
+import { requestSync } from "../../sync-status/api/syncApi.js";
 import { useState } from "react";
 
 export default function AttackDetailPage() {
@@ -13,6 +14,24 @@ export default function AttackDetailPage() {
   const { data: attack, isLoading, error, refetch } = useAttackDetail(attackId);
   const resolveMutation = useResolveAttack();
   const [showAbandonModal, setShowAbandonModal] = useState(false);
+  const [isSyncing, setIsSyncing] = useState(false);
+
+  const handleSync = async () => {
+    setIsSyncing(true);
+    try {
+      await requestSync();
+      await refetch();
+      toast?.show("Sync complete. Attack state updated.", { variant: "success" });
+    } catch (err) {
+      if (err.status === 429) {
+        toast?.show(`Sync is on cooldown. Try again in ${Math.ceil(err.retryAfter / 60)}m.`, { variant: "warning" });
+      } else {
+        toast?.show("Sync failed.", { variant: "danger" });
+      }
+    } finally {
+      setIsSyncing(false);
+    }
+  };
 
   const handleResolve = async (isAbandoned = false) => {
     try {
@@ -81,10 +100,11 @@ export default function AttackDetailPage() {
 
         <div className="flex items-center gap-2">
           <button
-            onClick={() => refetch()}
-            className="rounded-md border border-border bg-panel px-3 py-1.5 text-xs text-slate-300 hover:border-gold/50"
+            onClick={handleSync}
+            disabled={isSyncing}
+            className="rounded-md border border-border bg-panel px-3 py-1.5 text-xs text-slate-300 hover:border-gold/50 disabled:opacity-50"
           >
-            🔄 Sync Status
+            {isSyncing ? "Syncing..." : "🔄 Sync Status"}
           </button>
           {isInProgress && (
             <>

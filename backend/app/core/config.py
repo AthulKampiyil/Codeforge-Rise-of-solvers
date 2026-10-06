@@ -58,7 +58,7 @@ class Settings(BaseSettings):
 
     # Sync scheduling (resolves SRS Appendix C TBD-7)
     SYNC_POLL_INTERVAL_MINUTES: int = 360
-    ONDEMAND_SYNC_COOLDOWN_SECONDS: int = 300  # REQ-2.2: once per 5 min
+    ONDEMAND_SYNC_COOLDOWN_SECONDS: int = 0  # REQ-2.2: Demo mode (no cooldown)
     DLQ_SWEEP_MINUTES: int = 15
 
     # Worker

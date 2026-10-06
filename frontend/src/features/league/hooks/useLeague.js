@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 
-import { getLeaderboard, getMyLeagueProfile, getTrophyLedger } from "../api/leagueApi.js";
+import { getLeaderboard, getSeason, getMyLeagueProfile, getTrophyLedger } from "../api/leagueApi.js";
 
 /**
  * Hook to retrieve user's league profile, tier, rank, and progression.
@@ -57,4 +57,16 @@ export function useLeagueRealtime(onTierChanged) {
     window.addEventListener("codeforge:realtime", handleRealtimeMessage);
     return () => window.removeEventListener("codeforge:realtime", handleRealtimeMessage);
   }, [queryClient, onTierChanged]);
+}
+
+
+/**
+ * Hook to retrieve current season metadata.
+ */
+export function useSeason() {
+  return useQuery({
+    queryKey: ["league", "season"],
+    queryFn: getSeason,
+    refetchInterval: 300000,
+  });
 }

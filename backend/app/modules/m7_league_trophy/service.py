@@ -66,6 +66,41 @@ class LeagueService:
             pass
         return default
 
+
+    def get_current_season(self) -> dict:
+        """Return current season metadata."""
+        from datetime import datetime, timezone, timedelta
+        
+        # Fallback values if not seeded
+        default_start = (datetime.now(timezone.utc) - timedelta(days=45)).isoformat()
+        default_end = (datetime.now(timezone.utc) + timedelta(days=45)).isoformat()
+        
+        name = self.get_config("season.name", "Season III")
+        start_str = self.get_config("season.start", default_start)
+        end_str = self.get_config("season.end", default_end)
+        
+        # Parse ISO strings safely
+        try:
+            start_date = datetime.fromisoformat(start_str.replace("Z", "+00:00"))
+        except:
+            start_date = datetime.now(timezone.utc) - timedelta(days=45)
+            
+        try:
+            end_date = datetime.fromisoformat(end_str.replace("Z", "+00:00"))
+        except:
+            end_date = datetime.now(timezone.utc) + timedelta(days=45)
+
+        now = datetime.now(timezone.utc)
+        delta = now - start_date
+        current_week = max(1, (delta.days // 7) + 1)
+        
+        return {
+            "season_name": name,
+            "season_start": start_date,
+            "season_end": end_date,
+            "current_week": current_week
+        }
+
     def get_thresholds(self) -> Dict[LeagueTier, int]:
         raw = self.get_config("league.thresholds", None)
         if isinstance(raw, dict):

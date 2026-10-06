@@ -20,3 +20,10 @@ export function getLeaderboard({ scope = "global", limit = 50, offset = 0 } = {}
 export function getTrophyLedger(limit = 50) {
   return apiClient.get(`/league/ledger?limit=${limit}`);
 }
+
+/**
+ * Fetch current season metadata.
+ */
+export function getSeason() {
+  return apiClient.get("/league/season");
+}

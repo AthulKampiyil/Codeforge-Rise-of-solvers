@@ -8,6 +8,7 @@ from app.core.dependencies import get_current_active_user
 from app.db.session import get_db
 from app.modules.m1_auth.models import User
 from app.modules.m7_league_trophy.schemas import (
+    SeasonOut,
     LeaderboardEntryOut,
     LeagueProfileOut,
     TrophyLedgerEntryOut,
@@ -53,3 +54,13 @@ def get_my_trophy_ledger(
     service = LeagueService(db)
     entries = service.get_ledger_history(str(current_user.id), limit=limit)
     return [TrophyLedgerEntryOut(**entry) for entry in entries]
+
+
+@router.get("/season", response_model=SeasonOut)
+def get_season(
+    current_user: Annotated[User, Depends(get_current_active_user)],
+    db: Annotated[Session, Depends(get_db)]
+):
+    """Return current season metadata."""
+    service = LeagueService(db)
+    return SeasonOut(**service.get_current_season())

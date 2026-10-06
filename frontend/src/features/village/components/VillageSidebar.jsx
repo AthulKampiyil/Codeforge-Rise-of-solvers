@@ -1,4 +1,5 @@
 import React from "react";
+import { SyncStatus } from "../../sync-status/components/SyncStatus";
 import "./village.css";
 
 export function VillageSidebar({ village, trophies = 0, attacks = "—" }) {
@@ -24,6 +25,10 @@ export function VillageSidebar({ village, trophies = 0, attacks = "—" }) {
           </div>
         ))}
       </div>
+      <div style={{ marginTop: "auto", paddingTop: "1rem" }}>
+        <SyncStatus />
+      </div>
     </aside>
   );
 }
+

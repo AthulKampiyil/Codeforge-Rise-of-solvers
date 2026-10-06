@@ -271,7 +271,25 @@ class AttackService:
         # Curate problem set from target's weakest topics
         problem_set_size = int(self.get_config("attack.problem_set_size", DEFAULT_PROBLEM_SET_SIZE))
         problems = self.curator.curate_problem_set(target_user_id, set_size=problem_set_size)
+        
+        # Check if attacker already solved any of these
+        from app.modules.m2_platform_sync.models import SolvedProblem
+        from app.modules.m1_auth.models import JudgeAccount
+        attacker_accounts = self.db.query(JudgeAccount).filter(JudgeAccount.user_id == attacker_user_id).all()
+        account_ids = [acc.id for acc in attacker_accounts]
+        
         for prob in problems:
+            solved_flag = False
+            solved_at = None
+            if account_ids:
+                sp = self.db.query(SolvedProblem).filter(
+                    SolvedProblem.judge_account_id.in_(account_ids),
+                    SolvedProblem.problem_ext_id == prob["problem_ext_id"]
+                ).first()
+                if sp:
+                    solved_flag = True
+                    solved_at = sp.solved_at
+
             self.problem_repo.create(
                 attack_id=str(attack.id),
                 problem_ext_id=prob["problem_ext_id"],
@@ -279,7 +297,11 @@ class AttackService:
                 problem_url=prob["problem_url"],
                 topic_id=prob.get("topic_id"),
                 rating=prob.get("rating"),
+                solved_flag=solved_flag,
+                solved_at=solved_at,
             )
+
+        self.db.commit()
 
         # Publish ATTACK_INCOMING event to target
         self._publish_attack_incoming(attack, len(problems))

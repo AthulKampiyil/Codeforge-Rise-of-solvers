@@ -43,3 +43,9 @@ class TrophyLedgerEntryOut(BaseModel):
 
     class Config:
         from_attributes = True
+
+class SeasonOut(BaseModel):
+    season_name: str
+    season_start: datetime
+    season_end: datetime
+    current_week: int

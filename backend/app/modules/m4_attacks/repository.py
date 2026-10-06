@@ -217,6 +217,8 @@ class AttackProblemSetRepository:
         problem_url: Optional[str] = None,
         topic_id: Optional[Any] = None,
         rating: Optional[int] = None,
+        solved_flag: bool = False,
+        solved_at: Optional[datetime] = None,
     ) -> AttackProblemSet:
         problem = AttackProblemSet(
             attack_id=attack_id,
@@ -225,7 +227,8 @@ class AttackProblemSetRepository:
             problem_url=problem_url,
             topic_id=topic_id,
             rating=rating,
-            solved_flag=False,
+            solved_flag=solved_flag,
+            solved_at=solved_at,
         )
         self.db.add(problem)
         self.db.commit()
