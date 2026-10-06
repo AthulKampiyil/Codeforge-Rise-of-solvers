@@ -256,7 +256,7 @@ class GuildService:
         self._require_leader_or_officer(guild_id, approver_id)
 
         request = self.join_request_repo.get_by_id(request_id)
-        if not request or request.guild_id != guild_id:
+        if not request or str(request.guild_id) != str(guild_id):
             raise NotFoundError("Join request not found")
         if request.status != JoinRequestStatus.pending:
             raise ConflictError("This request has already been decided.")
@@ -272,7 +272,7 @@ class GuildService:
     def reject_join_request(self, guild_id, request_id, approver_id):
         self._require_leader_or_officer(guild_id, approver_id)
         request = self.join_request_repo.get_by_id(request_id)
-        if not request or request.guild_id != guild_id:
+        if not request or str(request.guild_id) != str(guild_id):
             raise NotFoundError("Join request not found")
         return self.join_request_repo.decide(request_id, JoinRequestStatus.rejected, approver_id)
 
