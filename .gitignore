@@ -18,3 +18,8 @@ dist/
 # OS
 .DS_Store
 dump.rdb
+
+# Local Data & Logs
+.data/
+.logs/
+

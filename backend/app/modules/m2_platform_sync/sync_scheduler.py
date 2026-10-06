@@ -73,20 +73,35 @@ class SyncScheduler:
                 if not self._persist_solved_problem(account.id, solve):
                     continue  # already recorded (idempotent re-sync, REQ-2.5)
 
+                # SADD §7.3.1.2: Cross-reference with active AttackProblemSets
+                from app.modules.m4_attacks.models import Attack, AttackProblemSet, AttackStatus
+                active_attacks = self.db.query(Attack).filter(
+                    Attack.attacker_user_id == account.user_id,
+                    Attack.status == AttackStatus.in_progress
+                ).all()
+                for atk in active_attacks:
+                    ap_set = self.db.query(AttackProblemSet).filter(
+                        AttackProblemSet.attack_id == atk.id,
+                        AttackProblemSet.problem_ext_id == solve.problem_ext_id
+                    ).first()
+                    if ap_set and not ap_set.solved_flag:
+                        ap_set.solved_flag = True
+                        ap_set.solved_at = solve.solved_at
+
                 topics = self.tagger.map_tags(solve.topic_tags)
                 for topic_name in topics:
                     change = self._update_village_progress(account.user_id, topic_name, solve.rating)
                     if change and self.event_publisher:
                         topic, previous_level, new_level, defense = change
                         payload = {
-                            "user_id": account.user_id,
-                            "topic_id": topic.id,
+                            "user_id": str(account.user_id),
+                            "topic_id": str(topic.id),
                             "topic_name": topic.name,
                             "previous_level": previous_level,
                             "new_level": new_level,
                             "new_defense_rating": defense,
                             "source": "sync",
-                            "source_ref_id": uuid.uuid5(uuid.NAMESPACE_URL, str(solve.problem_ext_id)),
+                            "source_ref_id": str(uuid.uuid5(uuid.NAMESPACE_URL, str(solve.problem_ext_id))),
                         }
                         result = self.event_publisher(EventType.VILLAGE_UPDATED, payload, [account.user_id])
                         if inspect.isawaitable(result):
