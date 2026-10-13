@@ -1,0 +1,410 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "localization/texts.csv": "affdf43926df044cb3c09d833b07365aa01ea99985771afa5fa0dd926f36c569",
+    "logic/obstacles.csv": "d79e96e2a973402f1a6b24f5e41c2de9ce2e8143479318a346ba2e299268044f",
+    "sc/buildings.sc": "f73ec949fc070bc03175d6bb3af8b62d8f607094bf2b343c9846a499a35be0ed",
+    "sc/buildings_38.sctx": "e4b0578148ace20088abb1a5cf3db99b1a2b4a55eb3532f8c8c6a155a71f8912"
+  },
+  "obstacles": [
+    {
+      "id": "pine-tree",
+      "name": "Tree",
+      "export": "env_pinetree_1",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 2000,
+      "seconds": 10,
+      "regrowWeight": 20,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/pine-tree.png",
+        "width": 100,
+        "height": 110,
+        "originX": 0.52,
+        "originY": 0.2545454545454545,
+        "rgbaSha256": "c4f603c3aaffc4244e95bc44cc35c8309d03d194e740a1df9a71a8569894c766"
+      }
+    },
+    {
+      "id": "square-bush",
+      "name": "Bush",
+      "export": "env_square_bush_a",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 250,
+      "seconds": 10,
+      "regrowWeight": 20,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/square-bush.png",
+        "width": 98,
+        "height": 79,
+        "originX": 0.4897959183673469,
+        "originY": 0.0,
+        "rgbaSha256": "0e499e752793ff230e85a5c62e909aeed62768491813ae8a85dc77ee63c4fed3"
+      }
+    },
+    {
+      "id": "square-tree",
+      "name": "Tree",
+      "export": "env_square_tree_a",
+      "size": 3,
+      "resource": "elixir",
+      "cost": 7500,
+      "seconds": 15,
+      "regrowWeight": 5,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/square-tree.png",
+        "width": 96,
+        "height": 117,
+        "originX": 0.5208333333333334,
+        "originY": 0.2222222222222222,
+        "rgbaSha256": "428c0ebfb79de12e7aef3d62b6869848d21dc66d86eaa2906242bb8114e9988a"
+      }
+    },
+    {
+      "id": "square-tree-2",
+      "name": "Tree",
+      "export": "env_square_tree_b",
+      "size": 3,
+      "resource": "elixir",
+      "cost": 10000,
+      "seconds": 15,
+      "regrowWeight": 5,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/square-tree-2.png",
+        "width": 100,
+        "height": 130,
+        "originX": 0.57,
+        "originY": 0.3,
+        "rgbaSha256": "066474148c16a60dc3426f6301867c74437c4cc5c02c5bdfad60b2b1eb1b4e57"
+      }
+    },
+    {
+      "id": "tree-trunk-1",
+      "name": "Trunk",
+      "export": "env_treetrunk_a",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 1000,
+      "seconds": 10,
+      "regrowWeight": 10,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/tree-trunk-1.png",
+        "width": 72,
+        "height": 85,
+        "originX": 0.5138888888888888,
+        "originY": 0.18823529411764706,
+        "rgbaSha256": "036d694114f70fa7868efc216c3a8fee9eda3085b05cfb0d5e57330c6ef344d6"
+      }
+    },
+    {
+      "id": "tree-trunk-2",
+      "name": "Trunk",
+      "export": "env_treetrunk_b",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 1000,
+      "seconds": 10,
+      "regrowWeight": 10,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/tree-trunk-2.png",
+        "width": 47,
+        "height": 73,
+        "originX": 0.425531914893617,
+        "originY": 0.2054794520547945,
+        "rgbaSha256": "10615bb5c1ff0954606f50e44f55ad4420d928e7a0924cb6d9e1a535c49b8891"
+      }
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushroom",
+      "export": "env_mushrooms",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 100,
+      "seconds": 10,
+      "regrowWeight": 10,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/mushrooms.png",
+        "width": 75,
+        "height": 61,
+        "originX": 0.5066666666666667,
+        "originY": -0.16393442622950818,
+        "rgbaSha256": "e8b4cc056918bbf2ff726d9dd70ad63a8ceac23fa2af182a2e85901f2ec5ba4d"
+      }
+    },
+    {
+      "id": "fallen-tree",
+      "name": "Trunk",
+      "export": "env_fallen_tree",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 1000,
+      "seconds": 10,
+      "regrowWeight": 20,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/fallen-tree.png",
+        "width": 90,
+        "height": 68,
+        "originX": 0.5555555555555556,
+        "originY": -0.08823529411764706,
+        "rgbaSha256": "e206e379f2c47bd86dc84f97c74bda6c2b2fdcbff6d582fae5ad012d820a20dd"
+      }
+    },
+    {
+      "id": "small-stone-1",
+      "name": "Stone",
+      "export": "env_small_stone_a",
+      "size": 2,
+      "resource": "gold",
+      "cost": 500,
+      "seconds": 10,
+      "regrowWeight": 0,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/small-stone-1.png",
+        "width": 71,
+        "height": 51,
+        "originX": 0.4788732394366197,
+        "originY": -0.3137254901960784,
+        "rgbaSha256": "38449453a28cbb85d5bd8cd3ba78cfb8e40fdc211d6c54a6b30fbf2f8830a848"
+      }
+    },
+    {
+      "id": "small-stone-2",
+      "name": "Stone",
+      "export": "env_small_stone_b",
+      "size": 2,
+      "resource": "gold",
+      "cost": 500,
+      "seconds": 10,
+      "regrowWeight": 0,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/small-stone-2.png",
+        "width": 71,
+        "height": 56,
+        "originX": 0.49295774647887325,
+        "originY": -0.23214285714285715,
+        "rgbaSha256": "a631bf785049b84b6336e9de117bb918db67d31a10c6ed6b785ada4a0b0eb443"
+      }
+    },
+    {
+      "id": "small-stone-3",
+      "name": "Stone",
+      "export": "env_small_stone_c",
+      "size": 2,
+      "resource": "gold",
+      "cost": 500,
+      "seconds": 10,
+      "regrowWeight": 0,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/small-stone-3.png",
+        "width": 72,
+        "height": 58,
+        "originX": 0.5694444444444444,
+        "originY": -0.25862068965517243,
+        "rgbaSha256": "fa97d42a4c677fef6874643d1e373dc3972f22bf1b2490289269a363fce724ef"
+      }
+    },
+    {
+      "id": "small-stone-4",
+      "name": "Stone",
+      "export": "env_small_stone_d",
+      "size": 2,
+      "resource": "gold",
+      "cost": 500,
+      "seconds": 10,
+      "regrowWeight": 0,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/small-stone-4.png",
+        "width": 67,
+        "height": 50,
+        "originX": 0.5373134328358209,
+        "originY": -0.34,
+        "rgbaSha256": "deaec363120cb4ca09080ca76363aa24d56675f9e5ffa907114209ff6bd74b59"
+      }
+    },
+    {
+      "id": "large-stone",
+      "name": "Stone",
+      "export": "env_large_stone",
+      "size": 3,
+      "resource": "gold",
+      "cost": 20000,
+      "seconds": 15,
+      "regrowWeight": 0,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/large-stone.png",
+        "width": 125,
+        "height": 101,
+        "originX": 0.496,
+        "originY": -0.0891089108910891,
+        "rgbaSha256": "9a207325938aed16e4c1ec67fc6a855aa0da0ab6b13b3fb59b17f88da828665f"
+      }
+    },
+    {
+      "id": "large-stone2",
+      "name": "Stone",
+      "export": "env_large_stone_b",
+      "size": 3,
+      "resource": "gold",
+      "cost": 20000,
+      "seconds": 15,
+      "regrowWeight": 0,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/large-stone2.png",
+        "width": 128,
+        "height": 114,
+        "originX": 0.515625,
+        "originY": 0.03508771929824561,
+        "rgbaSha256": "9783c26cecb6b25ed740331864067a63afdb371ae7ad6bc349ee47f4a14b14eb"
+      }
+    },
+    {
+      "id": "stone-pillar-1",
+      "name": "Stone",
+      "export": "env_stonepillar_a",
+      "size": 2,
+      "resource": "gold",
+      "cost": 10000,
+      "seconds": 15,
+      "regrowWeight": 0,
+      "loot": "gems",
+      "art": {
+        "path": "assets/obstacles-native/stone-pillar-1.png",
+        "width": 76,
+        "height": 73,
+        "originX": 0.5131578947368421,
+        "originY": 0.0136986301369863,
+        "rgbaSha256": "cb2062af8b3e60b01dfe399502b2e8de6f64410068279d3bd4eb1c381cbb9e3d"
+      }
+    },
+    {
+      "id": "sharp-stone-1",
+      "name": "Stone",
+      "export": "env_sharpstone_1",
+      "size": 2,
+      "resource": "gold",
+      "cost": 10000,
+      "seconds": 10,
+      "regrowWeight": 0,
+      "art": {
+        "path": "assets/obstacles-native/sharp-stone-1.png",
+        "width": 68,
+        "height": 56,
+        "originX": 0.5147058823529411,
+        "originY": -0.19642857142857142,
+        "rgbaSha256": "423aa5c9fea42d5ace7bcff496358801f02382fc8b59d356a676132160685411"
+      }
+    },
+    {
+      "id": "sharp-stone-2",
+      "name": "Stone",
+      "export": "env_sharpstone_2",
+      "size": 2,
+      "resource": "gold",
+      "cost": 10000,
+      "seconds": 10,
+      "regrowWeight": 0,
+      "art": {
+        "path": "assets/obstacles-native/sharp-stone-2.png",
+        "width": 64,
+        "height": 50,
+        "originX": 0.546875,
+        "originY": -0.32,
+        "rgbaSha256": "30719cd7eab6d6f17d5fe1cf35889c18b31fb9592a673d06604532ca5987eea4"
+      }
+    },
+    {
+      "id": "sharp-stone-3",
+      "name": "Stone",
+      "export": "env_sharpstone_3",
+      "size": 2,
+      "resource": "gold",
+      "cost": 10000,
+      "seconds": 10,
+      "regrowWeight": 0,
+      "art": {
+        "path": "assets/obstacles-native/sharp-stone-3.png",
+        "width": 53,
+        "height": 43,
+        "originX": 0.49056603773584906,
+        "originY": -0.5116279069767442,
+        "rgbaSha256": "cd34b8873e917bc64bec130eda9862cde15703e6e21004fb7abed19936f690be"
+      }
+    },
+    {
+      "id": "sharp-stone-4",
+      "name": "Stone",
+      "export": "env_sharpstone_4",
+      "size": 3,
+      "resource": "gold",
+      "cost": 10000,
+      "seconds": 10,
+      "regrowWeight": 0,
+      "art": {
+        "path": "assets/obstacles-native/sharp-stone-4.png",
+        "width": 107,
+        "height": 95,
+        "originX": 0.5420560747663551,
+        "originY": -0.06315789473684211,
+        "rgbaSha256": "a04c899a04b3ad87f4ebf6ad1a3d5085d912c8a0afec100f637947e9246e116b"
+      }
+    },
+    {
+      "id": "sharp-stone-5",
+      "name": "Stone",
+      "export": "env_sharpstone_5",
+      "size": 3,
+      "resource": "gold",
+      "cost": 10000,
+      "seconds": 10,
+      "regrowWeight": 0,
+      "art": {
+        "path": "assets/obstacles-native/sharp-stone-5.png",
+        "width": 122,
+        "height": 97,
+        "originX": 0.5409836065573771,
+        "originY": -0.05154639175257732,
+        "rgbaSha256": "6634dbcf3e237716ce358be238cea7ff8cb2917eb33a00f89f325143587c983c"
+      }
+    },
+    {
+      "id": "bonus-gembox",
+      "name": "Gem Box",
+      "export": "bonus_gembox",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 1000,
+      "seconds": 30,
+      "regrowWeight": 0,
+      "loot": "gems",
+      "lootCount": 25,
+      "appearanceHours": 168,
+      "minRespawnHours": 24,
+      "art": {
+        "path": "assets/obstacles-native/bonus-gembox.png",
+        "width": 122,
+        "height": 184,
+        "originX": 0.3360655737704918,
+        "originY": 0.5978260869565217,
+        "rgbaSha256": "3e5c3e29ca6d7650889f51cf58b2eb8378b5be9016fbafbd5d01e97bad2ebc12"
+      }
+    }
+  ]
+}

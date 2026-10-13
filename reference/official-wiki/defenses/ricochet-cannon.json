@@ -1,0 +1,93 @@
+{
+ "title": "Ricochet Cannon",
+ "url": "https://clashofclans.fandom.com/wiki/Ricochet_Cannon",
+ "revid": 624465,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Ricochet Cannon",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 360,
+   "damagePerHitPrimary": 288,
+   "secondaryChainDamage": 201.6,
+   "hitpoints": 5400,
+   "cost": 12000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 16
+  },
+  {
+   "level": 2,
+   "dps": 390,
+   "damagePerHitPrimary": 312,
+   "secondaryChainDamage": 218.4,
+   "hitpoints": 5700,
+   "cost": 13000000,
+   "buildSeconds": 691200,
+   "xp": 831,
+   "townHall": 16
+  },
+  {
+   "level": 3,
+   "dps": 405,
+   "damagePerHitPrimary": 324,
+   "secondaryChainDamage": 226.8,
+   "hitpoints": 6000,
+   "cost": 17500000,
+   "buildSeconds": 777600,
+   "xp": 881,
+   "townHall": 17
+  },
+  {
+   "level": 4,
+   "dps": 412,
+   "damagePerHitPrimary": 329.6,
+   "secondaryChainDamage": 230.72,
+   "hitpoints": 6100,
+   "cost": 26500000,
+   "buildSeconds": 1166400,
+   "xp": 1080,
+   "townHall": 18
+  }
+ ],
+ "supercharges": [
+  {
+   "charge": 1,
+   "dps": 420,
+   "damagePerHitPrimary": 336,
+   "secondaryChainDamage": 235.2,
+   "hitpoints": 6100,
+   "cost": 12000000,
+   "buildSeconds": 518400,
+   "xp": 720,
+   "townHall": 18
+  },
+  {
+   "charge": 2,
+   "dps": 420,
+   "damagePerHitPrimary": 336,
+   "secondaryChainDamage": 235.2,
+   "hitpoints": 6250,
+   "cost": 10000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 16,
+  "size": "3x3",
+  "range": 9,
+  "attackSeconds": 0.8,
+  "targets": "ground",
+  "damageType": "ricochet",
+  "bounces": 1,
+  "bounceRangeTiles": 3.5,
+  "bounceDamagePercent": 70,
+  "mergeFrom": "2x Cannon level 21 (not geared up)"
+ },
+ "mismatches": [],
+ "progressionMismatches": []
+}

@@ -1,0 +1,80 @@
+{
+ "title": "Logger",
+ "url": "https://clashofclans.fandom.com/wiki/Logger",
+ "revid": 625039,
+ "retrieved": "2026-09-15",
+ "category": "townhall-weapon",
+ "clientName": "Guardian Logger (guardians.csv Logger)",
+ "clientTable": "characters.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 230,
+   "damagePerHit": 575,
+   "hitpoints": 8000,
+   "postHitTileRange": 5
+  },
+  {
+   "level": 2,
+   "dps": 260,
+   "damagePerHit": 650,
+   "hitpoints": 9000,
+   "postHitTileRange": 5,
+   "cost": 18000000,
+   "buildSeconds": 604800
+  },
+  {
+   "level": 3,
+   "dps": 290,
+   "damagePerHit": 725,
+   "hitpoints": 10000,
+   "postHitTileRange": 5,
+   "cost": 22000000,
+   "buildSeconds": 777600
+  },
+  {
+   "level": 4,
+   "dps": 320,
+   "damagePerHit": 800,
+   "hitpoints": 11000,
+   "postHitTileRange": 6,
+   "cost": 26000000,
+   "buildSeconds": 950400
+  },
+  {
+   "level": 5,
+   "dps": 350,
+   "damagePerHit": 875,
+   "hitpoints": 12000,
+   "postHitTileRange": 6,
+   "cost": 28000000,
+   "buildSeconds": 1123200
+  }
+ ],
+ "constants": {
+  "townHall": 18,
+  "range": 7,
+  "attackSeconds": 2.5,
+  "targets": "ground & air",
+  "movementSpeed": 8,
+  "patrolRadiusTiles": 14,
+  "triggerRadiusTiles": 15,
+  "pushbackTiles": 1.5,
+  "postHitRangeTiles": {
+   "1-3": 5,
+   "4-5": 6
+  },
+  "piercing": true,
+  "deathDamage": 0,
+  "isHero": false
+ },
+ "mismatches": [
+  {
+   "field": "damageRadius",
+   "level": "all",
+   "wiki": "?? (undocumented)",
+   "client": "PenetratingRadius 180 (1.8 tiles)",
+   "note": "client value fills the wiki gap"
+  }
+ ]
+}

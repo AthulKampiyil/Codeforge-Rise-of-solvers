@@ -1,0 +1,309 @@
+{
+ "title": "Noble Iron",
+ "url": "https://clashofclans.fandom.com/wiki/Noble_Iron",
+ "revid": 621029,
+ "retrieved": "2026-09-15",
+ "clientName": "Noble Iron",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Minion Prince",
+ "summary": "Prince Common passive item (Blacksmith 5): his first 5 → 10 shots after deployment reach 10 → 12 tiles and deal +350 → +770 damage; passive attack speed and flat +500 HP.",
+ "constants": {
+  "wiki": {
+   "User": "Minion Prince",
+   "Ability Type": "Passive",
+   "Rarity": "Common",
+   "Unlock Requirement": "Blacksmith level 5"
+  },
+  "client": {
+   "Rarity": "COMMON",
+   "AllowedCharacters": "Minion Prince;",
+   "MainAbilities": "MPTurboStart",
+   "levelRows": 18,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "damagePerShotIncrease": {
+   "wikiHeader": "Ability Attributes / Damage per Shot Increase",
+   "unit": "damage points"
+  },
+  "attackRange": {
+   "wikiHeader": "Ability Attributes / Attack Range",
+   "unit": "count/points"
+  },
+  "numberOfAttacks": {
+   "wikiHeader": "Ability Attributes / Number of Attacks",
+   "unit": "count/points"
+  },
+  "attackSpeedIncreasePercent": {
+   "wikiHeader": "Hero Boosts / Attack Speed Increase",
+   "unit": "percent"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damagePerShotIncrease": 350,
+   "attackRange": 10,
+   "numberOfAttacks": 5,
+   "attackSpeedIncreasePercent": 6,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 2,
+   "damagePerShotIncrease": 350,
+   "attackRange": 10,
+   "numberOfAttacks": 5,
+   "attackSpeedIncreasePercent": 7,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 3,
+   "damagePerShotIncrease": 420,
+   "attackRange": 10.5,
+   "numberOfAttacks": 6,
+   "attackSpeedIncreasePercent": 7,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 4,
+   "damagePerShotIncrease": 420,
+   "attackRange": 10.5,
+   "numberOfAttacks": 6,
+   "attackSpeedIncreasePercent": 8,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 5,
+   "damagePerShotIncrease": 420,
+   "attackRange": 10.5,
+   "numberOfAttacks": 6,
+   "attackSpeedIncreasePercent": 9,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 6,
+   "damagePerShotIncrease": 490,
+   "attackRange": 11,
+   "numberOfAttacks": 6,
+   "attackSpeedIncreasePercent": 9,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 7,
+   "damagePerShotIncrease": 490,
+   "attackRange": 11,
+   "numberOfAttacks": 6,
+   "attackSpeedIncreasePercent": 10,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 8,
+   "damagePerShotIncrease": 490,
+   "attackRange": 11,
+   "numberOfAttacks": 6,
+   "attackSpeedIncreasePercent": 11,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 9,
+   "damagePerShotIncrease": 560,
+   "attackRange": 11,
+   "numberOfAttacks": 7,
+   "attackSpeedIncreasePercent": 11,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 10,
+   "damagePerShotIncrease": 560,
+   "attackRange": 11,
+   "numberOfAttacks": 7,
+   "attackSpeedIncreasePercent": 12,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 11,
+   "damagePerShotIncrease": 560,
+   "attackRange": 11,
+   "numberOfAttacks": 7,
+   "attackSpeedIncreasePercent": 13,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 12,
+   "damagePerShotIncrease": 630,
+   "attackRange": 11.5,
+   "numberOfAttacks": 8,
+   "attackSpeedIncreasePercent": 13,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 13,
+   "damagePerShotIncrease": 630,
+   "attackRange": 11.5,
+   "numberOfAttacks": 8,
+   "attackSpeedIncreasePercent": 14,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 14,
+   "damagePerShotIncrease": 630,
+   "attackRange": 11.5,
+   "numberOfAttacks": 8,
+   "attackSpeedIncreasePercent": 15,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 15,
+   "damagePerShotIncrease": 700,
+   "attackRange": 11.5,
+   "numberOfAttacks": 8,
+   "attackSpeedIncreasePercent": 15,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 16,
+   "damagePerShotIncrease": 700,
+   "attackRange": 11.5,
+   "numberOfAttacks": 8,
+   "attackSpeedIncreasePercent": 16,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 17,
+   "damagePerShotIncrease": 700,
+   "attackRange": 11.5,
+   "numberOfAttacks": 8,
+   "attackSpeedIncreasePercent": 17,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 18,
+   "damagePerShotIncrease": 770,
+   "attackRange": 12,
+   "numberOfAttacks": 10,
+   "attackSpeedIncreasePercent": 18,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 7
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "numberOfAttacks",
+   "level": 15,
+   "wiki": 8,
+   "client": 9,
+   "note": "levels 15–17: client DeactivateAfterNumberOfHits tier 6 = 9"
+  }
+ ],
+ "clientColumns": [
+  "MainAbilities:special_abilities[MPTurboStart].AttackRange",
+  "MainAbilities:special_abilities[MPTurboStart].ExtraDamageFlat",
+  "character_items.AttackSpeedPercentage",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

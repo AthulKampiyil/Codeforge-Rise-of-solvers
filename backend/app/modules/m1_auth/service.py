@@ -1,10 +1,46 @@
+"""Authentication & Account Linking (REQ-1.x) — business logic."""
 import secrets
-from fastapi import HTTPException, status
+import uuid
+from datetime import datetime, timezone
+
+from redis.asyncio import Redis
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
-from app.modules.m1_auth.repository import UserRepository, LinkedJudgeProfileRepository
-from app.modules.m1_auth.models import JudgeName
+
+from app.core.errors import (
+    AlreadyLinked,
+    EmailAlreadyRegistered,
+    InvalidCredentials,
+    UsernameAlreadyTaken,
+    UserNotFound,
+    ValidationDomainError,
+    VerificationFailed,
+    VerificationTokenNotFound,
+)
+from app.core.security import (
+    create_access_token,
+    create_refresh_token,
+    hash_password,
+    verify_password,
+    verify_refresh_token,
+)
+from app.core.config import settings
+from app.modules.m1_auth.models import JudgeAccount, JudgeType, User
+from app.modules.m1_auth.repository import AuthSessionRepository, JudgeAccountRepository, UserRepository
 from app.modules.m1_auth.schemas import UserCreate, UserLogin
-from app.core.security import hash_password, verify_password, create_access_token, create_refresh_token
+from app.modules.m2_platform_sync.service import PlatformSyncService
+
+
+_LOGOUT_LUA = """
+redis.call('set', KEYS[1], '1', 'EX', ARGV[1])
+if ARGV[2] ~= '' then
+  redis.call('set', 'auth:denylist:' .. ARGV[2], '1', 'EX', ARGV[3])
+end
+if ARGV[4] ~= '' then
+  redis.call('set', 'auth:denylist:' .. ARGV[4], '1', 'EX', ARGV[5])
+end
+return 1
+"""
 
 
 class AuthService:
@@ -12,101 +48,202 @@ class AuthService:
 
     def __init__(self, db: Session):
         self.user_repo = UserRepository(db)
-        self.judge_repo = LinkedJudgeProfileRepository(db)
+        self.judge_repo = JudgeAccountRepository(db)
+        self.session_repo = AuthSessionRepository(db)
+        self.sync_service = PlatformSyncService()
         self.db = db
 
-    def register(self, payload: UserCreate):
+    def register(self, payload: UserCreate) -> User:
         """Register a new user (REQ-1.1, NFR-3.2)."""
         if self.user_repo.get_by_email(payload.email):
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail="Email already registered"
-            )
+            raise EmailAlreadyRegistered("Email already registered")
         if self.user_repo.get_by_username(payload.username):
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail="Username already taken"
-            )
+            raise UsernameAlreadyTaken("Username already taken")
 
-        user = self.user_repo.create(
+        return self.user_repo.create(
             username=payload.username,
             email=payload.email,
-            hashed_password=hash_password(payload.password),
+            password_hash=hash_password(payload.password),
         )
-        return user
 
-    def authenticate(self, payload: UserLogin):
-        """Authenticate user (REQ-1.2, reject without user enumeration)."""
+    def authenticate(self, payload: UserLogin) -> User:
+        """Authenticate user (REQ-1.2). Generic error to prevent user enumeration."""
         user = self.user_repo.get_by_email(payload.email)
-        if not user or not verify_password(payload.password, user.hashed_password):
-            # Generic error message to prevent user enumeration
-            raise HTTPException(
-                status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Incorrect email or password"
-            )
+        if not user or not verify_password(payload.password, user.password_hash):
+            raise InvalidCredentials("Incorrect email or password")
         return user
 
-    def issue_tokens(self, user_id: str):
+    def issue_tokens(self, user_id: str) -> tuple[str, str]:
         """Issue access & refresh tokens (REQ-1.6: 7-day idle validity)."""
-        access_token = create_access_token(user_id)
-        refresh_token = create_refresh_token(user_id)
+        sid = str(uuid.uuid4())
+        access_token, _ = create_access_token(user_id, sid=sid)
+        refresh_token, refresh_jti = create_refresh_token(user_id, sid=sid)
+        refresh_claims = verify_refresh_token(refresh_token)
+        self.session_repo.create(
+            sid, user_id, refresh_jti,
+            datetime.fromtimestamp(refresh_claims["exp"], tz=timezone.utc),
+        )
         return access_token, refresh_token
 
-    def request_judge_link(self, user_id: str, judge_name: JudgeName, handle: str):
+    async def logout(
+        self,
+        redis: Redis,
+        sid: str,
+        access_jti: str | None = None,
+        access_exp: int | None = None,
+        refresh_jti: str | None = None,
+        refresh_exp: int | None = None,
+        user_id: str | None = None,
+    ) -> None:
         """
-        Request judge profile linking (REQ-1.3, REQ-1.4).
-        
-        Generates a one-time verification token the user must submit
-        as proof of handle ownership on the judge platform.
+        Revoke the complete session and any supplied access/refresh JTIs.
+        The session marker remains through at least the maximum configured
+        refresh-token lifetime; individual JTI markers expire with tokens.
         """
-        # Check if already linked
-        existing = self.judge_repo.get_by_user_and_judge(user_id, judge_name)
-        if existing and existing.verified:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail=f"Already linked to {judge_name.value}"
+        now = int(datetime.now(timezone.utc).timestamp())
+        session_remaining = max(1, settings.REFRESH_TOKEN_EXPIRE_DAYS * 86400)
+        if not self.session_repo.revoke(sid, user_id):
+            # Idempotent logout succeeds for an already revoked persisted session.
+            if self.session_repo.is_active(sid):
+                raise RuntimeError("Session revocation was not recorded")
+        try:
+            await redis.eval(
+                _LOGOUT_LUA,
+                1,
+                f"auth:session-revoked:{sid}",
+                session_remaining,
+                access_jti or "",
+                max(1, (access_exp or now) - now),
+                refresh_jti or "",
+                max(1, (refresh_exp or now) - now),
             )
+        except Exception:
+            # PostgreSQL already committed revocation. Redis is only a cache;
+            # cache outage must not turn a successful durable logout into failure.
+            pass
 
-        # Generate verification token
-        verification_token = secrets.token_urlsafe(32)
+    async def refresh(self, redis: Redis, refresh_token: str) -> tuple[str, str]:
+        """
+        Rotate a refresh token (REQ-1.6 session renewal).
 
-        # Create profile (unverified)
-        profile = self.judge_repo.create(
-            user_id=user_id,
-            judge_name=judge_name,
-            handle=handle,
-            verification_token=verification_token
+        The old refresh token's jti is denylisted immediately so it
+        cannot be replayed after rotation.
+        """
+        payload = verify_refresh_token(refresh_token)
+        user_id = payload["sub"]
+
+        user = self.user_repo.get_by_id(user_id)
+        if not user or not user.is_active or user.is_suspended:
+            raise InvalidCredentials("User no longer exists")
+
+        access_token, _ = create_access_token(user_id, sid=payload["sid"])
+        new_refresh_token, new_refresh_jti = create_refresh_token(user_id, sid=payload["sid"])
+        new_exp = verify_refresh_token(new_refresh_token)["exp"]
+        rotated = self.session_repo.rotate(
+            payload["sid"], user_id, payload["jti"], new_refresh_jti,
+            datetime.fromtimestamp(new_exp, tz=timezone.utc),
         )
+        if not rotated:
+            raise InvalidCredentials("Refresh token has been revoked")
+        remaining = max(1, payload["exp"] - int(datetime.now(timezone.utc).timestamp()))
+        try:
+            await redis.setex(f"auth:denylist:{payload['jti']}", remaining, "1")
+        except Exception:
+            pass
+        return access_token, new_refresh_token
 
-        return profile, verification_token
+    def request_judge_link(self, user_id: str, judge_type: JudgeType, handle: str) -> tuple[JudgeAccount, str]:
+        """
+        Request judge account linking (REQ-1.3, REQ-1.4).
 
-    def verify_judge_profile(self, verification_token: str):
+        Generates a one-time verification token the user must place in
+        their Codeforces profile "First Name" field to prove ownership.
         """
-        Verify a judge profile by token (REQ-1.4).
-        
-        TODO: This will be wired to M2's judge adapters in Sprint 2
-        to confirm the user actually posted the verification token
-        on the judge platform. For now, stub as always-pass with a
-        TODO comment for whoever wires it up.
+        if judge_type is not JudgeType.codeforces:
+            raise ValidationDomainError("Only Codeforces accounts can be linked")
+
+        existing = self.judge_repo.get_by_user_and_judge(user_id, judge_type)
+        if existing and existing.verified_flag:
+            raise AlreadyLinked(f"Already linked to {judge_type.value}")
+
+        verification_token = f"codeforge-{secrets.token_urlsafe(12)}"
+
+        if existing:
+            self.judge_repo.delete(existing.id)
+
+        account = self.judge_repo.create(
+            user_id=user_id,
+            judge_type=judge_type,
+            handle=handle,
+            verification_token=verification_token,
+        )
+        return account, verification_token
+
+    async def verify_judge_account(self, judge_account_id: str, user_id: str) -> JudgeAccount:
         """
-        profile = self.judge_repo.get_by_verification_token(verification_token)
-        if not profile:
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail="Verification token not found"
+        Verify a judge account by checking the token against the judge's
+        public profile (REQ-1.4, NFR-3.1).
+
+        No credentials are ever transmitted or stored (NFR-3.2) — only
+        the public handle and a comparison against a public profile field.
+        """
+        # Scope lookup to the authenticated owner so foreign and missing IDs
+        # produce the same not-found response without exposing account data.
+        account = self.judge_repo.get_by_id_and_user(judge_account_id, user_id)
+        if not account:
+            raise VerificationTokenNotFound("Judge account not found")
+
+        # Verification is idempotent for the owner. The proof token is cleared
+        # after success, so a repeated request must not re-fetch/re-check it.
+        if account.verified_flag:
+            return account
+
+        if not self.sync_service.has_adapter(account.judge_type):
+            raise VerificationFailed(f"{account.judge_type.value} is not yet supported")
+
+        judge_type = account.judge_type
+        handle = account.handle
+        # Release the read transaction before crossing the network boundary.
+        # In particular, rate-gate busy responses must not pin a DB connection.
+        self.db.commit()
+        user_info = await self.sync_service.fetch_user_info(judge_type, handle)
+        if user_info is None or user_info.display_name != account.verification_token:
+            raise VerificationFailed(
+                "Verification token not found on profile. "
+                f"Set your Codeforces First Name to '{account.verification_token}' and try again."
             )
 
-        # TODO (Sprint 2): Call M2 adapter to confirm token posted on judge
-        # For now, always approve (stub).
-        verified_profile = self.judge_repo.verify(profile.id)
-        return verified_profile
+        try:
+            # Codeforces is case-insensitive; use the handle returned by the
+            # authoritative profile rather than the request's casing.
+            return self.judge_repo.mark_verified(account.id, user_id, user_info.handle)
+        except IntegrityError as exc:
+            raise AlreadyLinked("This Codeforces identity is already linked to another user") from exc
 
-    def unlink_judge(self, user_id: str, judge_name: JudgeName) -> bool:
-        """Unlink a judge profile (REQ-1.5)."""
-        profile = self.judge_repo.get_by_user_and_judge(user_id, judge_name)
-        if not profile:
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"No linked profile for {judge_name.value}"
-            )
-        return self.judge_repo.delete(profile.id)
+    def unlink_judge(self, user_id: str, judge_type: JudgeType) -> bool:
+        """Unlink a judge account (REQ-1.5)."""
+        account = self.judge_repo.get_by_user_and_judge(user_id, judge_type)
+        if not account:
+            raise VerificationTokenNotFound(f"No linked account for {judge_type.value}")
+        if account.verified_flag and self.judge_repo.has_solve_or_reward_history(account.id):
+            raise AlreadyLinked("This verified judge identity has solve or reward history and cannot be unlinked")
+        return self.judge_repo.delete(account.id)
+
+    def get_user_judge_accounts(self, user_id: str) -> list[JudgeAccount]:
+        return self.judge_repo.get_by_user(user_id)
+
+    def list_users(self, search: str | None, suspended: bool | None, limit: int, offset: int) -> list[User]:
+        """List/search users (UC-11 admin moderation). Called by M9's
+        admin router through this service, per the SADD 4.1 coupling
+        rule — M9 never queries the `users` table directly."""
+        return self.user_repo.search(search, suspended, limit, offset)
+
+    def set_user_suspension(self, user_id: str, suspended: bool, *, commit: bool = True) -> User:
+        """Suspend/unsuspend a user (UC-11). A suspended user is rejected
+        by `get_current_active_user` on their next request, is excluded
+        from attack matchmaking, and stops counting toward guild
+        contributions."""
+        user = self.user_repo.set_suspended(user_id, suspended, commit=commit)
+        if user is None:
+            raise UserNotFound("User not found")
+        return user

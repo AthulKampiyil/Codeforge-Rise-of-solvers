@@ -1,0 +1,478 @@
+{
+ "title": "Magic Mirror",
+ "url": "https://clashofclans.fandom.com/wiki/Magic_Mirror",
+ "revid": 621024,
+ "retrieved": "2026-09-15",
+ "clientName": "Magic Mirror",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Archer Queen",
+ "summary": "Queen Epic active item: summons 1 → 2 temporary Queen clones with fixed stats and makes her invisible for 1 s; passive HP and recovery.",
+ "constants": {
+  "wiki": {
+   "User": "Archer Queen",
+   "Ability Type": "Active",
+   "Rarity": "Epic",
+   "Unlock Requirement": "Buy in Anime Clash event for 3,100 Magic Medal; Buy in Dark Deal event for 3,100 Mischief Medal; Buy in Meltdown Mayhem event for 3,100 Ember Medal; Buy in Equipment Blast event for 3,100 Relic Medal; or purchasable from the Trader for 1,500 Gem",
+   "Invisibility": "1s"
+  },
+  "client": {
+   "Rarity": "EPIC",
+   "AllowedCharacters": "Archer Queen;",
+   "MainAbilities": "AQCloningCloak",
+   "Claimable": "TRUE",
+   "levelRows": 27,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    10
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "clones": {
+   "wikiHeader": "Ability Attributes / Clones",
+   "unit": "count/points"
+  },
+  "cloneDurationSeconds": {
+   "wikiHeader": "Ability Attributes / Clone Duration",
+   "unit": "seconds"
+  },
+  "cloneDPS": {
+   "wikiHeader": "Ability Attributes / Clone DPS",
+   "unit": "damage per second"
+  },
+  "cloneHealth": {
+   "wikiHeader": "Ability Attributes / Clone Health",
+   "unit": "hitpoints"
+  },
+  "hpRecoveryIncrease": {
+   "wikiHeader": "Hero Boost / HP Recovery Increase",
+   "unit": "hitpoints"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boost / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostStarryOre": {
+   "wikiHeader": "Upgrade Cost / Starry Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "clones": 1,
+   "cloneDurationSeconds": 20,
+   "cloneDPS": 136,
+   "cloneHealth": 580,
+   "hpRecoveryIncrease": 198,
+   "hitpointIncrease": 88,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "clones": 1,
+   "cloneDurationSeconds": 20,
+   "cloneDPS": 136,
+   "cloneHealth": 580,
+   "hpRecoveryIncrease": 229,
+   "hitpointIncrease": 96,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "clones": 1,
+   "cloneDurationSeconds": 20,
+   "cloneDPS": 206,
+   "cloneHealth": 873,
+   "hpRecoveryIncrease": 250,
+   "hitpointIncrease": 113,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "clones": 1,
+   "cloneDurationSeconds": 20,
+   "cloneDPS": 206,
+   "cloneHealth": 873,
+   "hpRecoveryIncrease": 271,
+   "hitpointIncrease": 131,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "clones": 1,
+   "cloneDurationSeconds": 20,
+   "cloneDPS": 206,
+   "cloneHealth": 873,
+   "hpRecoveryIncrease": 294,
+   "hitpointIncrease": 157,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "clones": 1,
+   "cloneDurationSeconds": 20,
+   "cloneDPS": 276,
+   "cloneHealth": 1166,
+   "hpRecoveryIncrease": 317,
+   "hitpointIncrease": 184,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "clones": 1,
+   "cloneDurationSeconds": 20,
+   "cloneDPS": 276,
+   "cloneHealth": 1166,
+   "hpRecoveryIncrease": 344,
+   "hitpointIncrease": 228,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "clones": 1,
+   "cloneDurationSeconds": 20,
+   "cloneDPS": 276,
+   "cloneHealth": 1166,
+   "hpRecoveryIncrease": 372,
+   "hitpointIncrease": 272,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "clones": 1,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 346,
+   "cloneHealth": 1459,
+   "hpRecoveryIncrease": 397,
+   "hitpointIncrease": 307,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "upgradeCostStarryOre": 10,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "clones": 1,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 346,
+   "cloneHealth": 1459,
+   "hpRecoveryIncrease": 423,
+   "hitpointIncrease": 342,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 11,
+   "clones": 1,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 346,
+   "cloneHealth": 1459,
+   "hpRecoveryIncrease": 448,
+   "hitpointIncrease": 377,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 12,
+   "clones": 1,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 416,
+   "cloneHealth": 1752,
+   "hpRecoveryIncrease": 474,
+   "hitpointIncrease": 412,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "upgradeCostStarryOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 13,
+   "clones": 1,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 416,
+   "cloneHealth": 1752,
+   "hpRecoveryIncrease": 498,
+   "hitpointIncrease": 448,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 14,
+   "clones": 1,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 416,
+   "cloneHealth": 1752,
+   "hpRecoveryIncrease": 529,
+   "hitpointIncrease": 483,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 15,
+   "clones": 1,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 486,
+   "cloneHealth": 2045,
+   "hpRecoveryIncrease": 560,
+   "hitpointIncrease": 518,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 30,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 16,
+   "clones": 1,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 486,
+   "cloneHealth": 2045,
+   "hpRecoveryIncrease": 591,
+   "hitpointIncrease": 553,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 17,
+   "clones": 1,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 486,
+   "cloneHealth": 2045,
+   "hpRecoveryIncrease": 622,
+   "hitpointIncrease": 588,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 18,
+   "clones": 2,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 556,
+   "cloneHealth": 2338,
+   "hpRecoveryIncrease": 652,
+   "hitpointIncrease": 624,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 50,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 19,
+   "clones": 2,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 556,
+   "cloneHealth": 2338,
+   "hpRecoveryIncrease": 679,
+   "hitpointIncrease": 650,
+   "upgradeCostShinyOre": 2800,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 20,
+   "clones": 2,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 556,
+   "cloneHealth": 2338,
+   "hpRecoveryIncrease": 706,
+   "hitpointIncrease": 676,
+   "upgradeCostShinyOre": 2900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 21,
+   "clones": 2,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 626,
+   "cloneHealth": 2631,
+   "hpRecoveryIncrease": 732,
+   "hitpointIncrease": 703,
+   "upgradeCostShinyOre": 3000,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 100,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 22,
+   "clones": 2,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 626,
+   "cloneHealth": 2631,
+   "hpRecoveryIncrease": 759,
+   "hitpointIncrease": 729,
+   "upgradeCostShinyOre": 3100,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 23,
+   "clones": 2,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 626,
+   "cloneHealth": 2631,
+   "hpRecoveryIncrease": 784,
+   "hitpointIncrease": 756,
+   "upgradeCostShinyOre": 3200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 24,
+   "clones": 2,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 696,
+   "cloneHealth": 2924,
+   "hpRecoveryIncrease": 811,
+   "hitpointIncrease": 782,
+   "upgradeCostShinyOre": 3300,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 120,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 25,
+   "clones": 2,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 696,
+   "cloneHealth": 2924,
+   "hpRecoveryIncrease": 838,
+   "hitpointIncrease": 808,
+   "upgradeCostShinyOre": 3400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 26,
+   "clones": 2,
+   "cloneDurationSeconds": 25,
+   "cloneDPS": 696,
+   "cloneHealth": 2924,
+   "hpRecoveryIncrease": 864,
+   "hitpointIncrease": 835,
+   "upgradeCostShinyOre": 3500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 27,
+   "clones": 2,
+   "cloneDurationSeconds": 30,
+   "cloneDPS": 765,
+   "cloneHealth": 3216,
+   "hpRecoveryIncrease": 891,
+   "hitpointIncrease": 861,
+   "upgradeCostShinyOre": 3600,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 150,
+   "blacksmithLevelRequired": 9
+  }
+ ],
+ "subpages": [],
+ "mismatches": [],
+ "clientColumns": [
+  "MainAbilities:special_abilities[AQCloningCloak] → GivenAbility:special_abilities[ClonedArcherQueenAbility].DPS",
+  "MainAbilities:special_abilities[AQCloningCloak] → GivenAbility:special_abilities[ClonedArcherQueenAbility].DeactivateAfterTime",
+  "MainAbilities:special_abilities[AQCloningCloak] → GivenAbility:special_abilities[ClonedArcherQueenAbility].HealthOverride",
+  "MainAbilities:special_abilities[AQCloningCloak].TroopCount",
+  "character_items.HealOnActivation",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

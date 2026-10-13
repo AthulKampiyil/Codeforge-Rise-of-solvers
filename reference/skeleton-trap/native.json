@@ -1,0 +1,2012 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "sc/buildings.sc": "f73ec949fc070bc03175d6bb3af8b62d8f607094bf2b343c9846a499a35be0ed",
+    "sc/buildings_66.sctx": "c65a2f6e362edfd51d5fc634d5a6c30ec353bd936fa06fa8775b856aeb7baff0",
+    "logic/traps.csv": "757ca07de02b26b2071b52bb3cb495df2f0ae879731a859d3102ca3552dd528c",
+    "logic/characters.csv": "5c3acc5b46ff9e7978f406b540264e65c93a846b69d03cd43326a9853703cb89"
+  },
+  "rows": [
+    {
+      "Name": "Skeleton Trap",
+      "GlobalID": "12000008",
+      "Level": "1",
+      "TID": "TID_TRAP_HALLOWEEN_SKEL",
+      "InfoTID": "TID_TRAP_HALLOWEEN_SKEL_INFO",
+      "SWF": "sc/buildings.sc",
+      "ExportName": "troop_trap_land_lvl1_setup",
+      "ExportNameAir": "troop_trap_air_lvl1_setup",
+      "ExportNameBuildAnim": "bomb_upg",
+      "ExportNameBuildAnimAir": "bomb_upg",
+      "ExportNameBroken": "troop_trap_land_lvl1_unarmed",
+      "ExportNameBrokenAir": "troop_trap_land_lvl1_unarmed",
+      "BigPicture": "skele_trap_land_lvl1_info",
+      "BigPictureSWF": "sc/ui.sc",
+      "Damage": "0",
+      "DamageRadius": "0",
+      "TriggerRadius": "500",
+      "Width": "1",
+      "Height": "1",
+      "Passable": "TRUE",
+      "BuildResource": "Gold",
+      "BuildTimeD": "0",
+      "BuildTimeH": "0",
+      "BuildTimeM": "0",
+      "BuildCost": "6000",
+      "TownHallLevel": "1",
+      "EjectVictims": "FALSE",
+      "MinTriggerHousingLimit": "1",
+      "ExportNameTriggered": "troop_trap_land_lvl1",
+      "ExportNameTriggeredAir": "troop_trap_air_lvl1",
+      "ActionFrame": "37",
+      "PickUpEffect": "Skeleton Trap Pick Up",
+      "PlacingEffect": "Skeleton Trap Placing",
+      "AppearEffect": "Skeleton Trap",
+      "ToggleAttackModeEffect": "Skeleton Trap Target",
+      "AirTrigger": "FALSE",
+      "GroundTrigger": "TRUE",
+      "StrengthWeight": "160",
+      "SpawnedCharGround": "Trap Skeleton",
+      "SpawnedCharAir": "Trap Air Skeleton",
+      "NumSpawns": "2",
+      "SpawnInitialDelayMs": "600",
+      "TimeBetweenSpawnsMs": "150",
+      "SpawnLvl": "1",
+      "HasAltMode": "TRUE",
+      "HintPriority": "75",
+      "PreviewScenario": "Trap2",
+      "AltPreviewScenario": "Air Bomb"
+    },
+    {
+      "Level": "2",
+      "ExportName": "troop_trap_land_lvl1_setup",
+      "ExportNameAir": "troop_trap_air_lvl1_setup",
+      "ExportNameBuildAnim": "bomb_upg",
+      "ExportNameBuildAnimAir": "bomb_upg",
+      "ExportNameBroken": "troop_trap_land_lvl1_unarmed",
+      "ExportNameBrokenAir": "troop_trap_land_lvl1_unarmed",
+      "BuildTimeD": "0",
+      "BuildTimeH": "5",
+      "BuildTimeM": "0",
+      "BuildCost": "250000",
+      "TownHallLevel": "8",
+      "ExportNameTriggered": "troop_trap_land_lvl1",
+      "ExportNameTriggeredAir": "troop_trap_air_lvl1",
+      "StrengthWeight": "240",
+      "NumSpawns": "3",
+      "SpawnLvl": "1"
+    },
+    {
+      "Level": "3",
+      "ExportName": "troop_trap_land_lvl3_setup",
+      "ExportNameAir": "troop_trap_air_lvl3_setup",
+      "ExportNameBuildAnim": "bomb_upg",
+      "ExportNameBuildAnimAir": "bomb_upg",
+      "ExportNameBroken": "troop_trap_land_lvl3_unarmed",
+      "ExportNameBrokenAir": "troop_trap_land_lvl3_unarmed",
+      "BuildTimeD": "0",
+      "BuildTimeH": "8",
+      "BuildTimeM": "0",
+      "BuildCost": "400000",
+      "TownHallLevel": "9",
+      "ExportNameTriggered": "troop_trap_land_lvl3",
+      "ExportNameTriggeredAir": "troop_trap_air_lvl3",
+      "StrengthWeight": "320",
+      "NumSpawns": "4",
+      "SpawnLvl": "1"
+    },
+    {
+      "Level": "4",
+      "ExportName": "troop_trap_land_lvl3_setup",
+      "ExportNameAir": "troop_trap_air_lvl3_setup",
+      "ExportNameBuildAnim": "bomb_upg",
+      "ExportNameBuildAnimAir": "bomb_upg",
+      "ExportNameBroken": "troop_trap_land_lvl3_unarmed",
+      "ExportNameBrokenAir": "troop_trap_land_lvl3_unarmed",
+      "BuildTimeD": "0",
+      "BuildTimeH": "12",
+      "BuildTimeM": "0",
+      "BuildCost": "1000000",
+      "TownHallLevel": "10",
+      "ExportNameTriggered": "troop_trap_land_lvl3",
+      "ExportNameTriggeredAir": "troop_trap_air_lvl3",
+      "StrengthWeight": "400",
+      "NumSpawns": "5",
+      "SpawnLvl": "1"
+    },
+    {
+      "Level": "5",
+      "ExportName": "troop_trap_land_lvl4_setup",
+      "ExportNameAir": "troop_trap_air_lvl4_setup",
+      "ExportNameBuildAnim": "bomb_upg",
+      "ExportNameBuildAnimAir": "bomb_upg",
+      "ExportNameBroken": "troop_trap_land_lvl4_unarmed",
+      "ExportNameBrokenAir": "troop_trap_land_lvl4_unarmed",
+      "BuildTimeD": "7",
+      "BuildTimeH": "0",
+      "BuildTimeM": "0",
+      "BuildCost": "18000000",
+      "TownHallLevel": "18",
+      "ExportNameTriggered": "troop_trap_land_lvl4",
+      "ExportNameTriggeredAir": "troop_trap_air_lvl4",
+      "StrengthWeight": "480",
+      "NumSpawns": "5",
+      "SpawnLvl": "2"
+    }
+  ],
+  "supportedLevels": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "tiers": {
+    "1": {
+      "atlas": {
+        "path": "assets/buildings/skeleton-trap-native/1-atlas.png",
+        "width": 190,
+        "height": 190,
+        "columns": 8,
+        "frames": 35,
+        "bounds": [
+          -46,
+          -45,
+          49,
+          50
+        ],
+        "pixelsPerNativeUnit": 2,
+        "rgbaSha256": "1c345610bc884bfbb6633968fd9c72360e4d1903fb5097086b172b6f0e0e286b"
+      },
+      "clips": {
+        "ground": {
+          "export": "troop_trap_land_lvl1_setup",
+          "id": 24750,
+          "fps": 24,
+          "count": 35,
+          "frames": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "air": {
+          "export": "troop_trap_air_lvl1_setup",
+          "id": 24759,
+          "fps": 24,
+          "count": 35,
+          "frames": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "spent": {
+          "export": "troop_trap_land_lvl1_unarmed",
+          "id": 24748,
+          "fps": 24,
+          "count": 35,
+          "frames": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "ground-trigger": {
+          "export": "troop_trap_land_lvl1",
+          "id": 24751,
+          "fps": 24,
+          "count": 43,
+          "frames": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            15,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21
+          ]
+        },
+        "air-trigger": {
+          "export": "troop_trap_air_lvl1",
+          "id": 24760,
+          "fps": 24,
+          "count": 43,
+          "frames": [
+            3,
+            4,
+            5,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            31,
+            31,
+            32,
+            33,
+            34,
+            19,
+            20,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21
+          ]
+        }
+      },
+      "frames": [
+        {
+          "index": 0,
+          "rgbaSha256": "dd2628cb9c6e7ecd87a738fea551bfc55e91bce5863691e7f140bec7004b06ea",
+          "alphaBounds": [
+            9,
+            35,
+            140,
+            175
+          ]
+        },
+        {
+          "index": 1,
+          "rgbaSha256": "4b3628dcce679181796cb175cbb41fe5334df0d712709911adb087cead5a10e6",
+          "alphaBounds": [
+            9,
+            35,
+            140,
+            175
+          ]
+        },
+        {
+          "index": 2,
+          "rgbaSha256": "bf363cd13484f520d58c0aa08261d7d7625701cd64a94543b7c0af90168afd8a",
+          "alphaBounds": [
+            9,
+            39,
+            177,
+            170
+          ]
+        },
+        {
+          "index": 3,
+          "rgbaSha256": "4db0fe2e75a79f4a1d58dd3c501aa873ad2b8dae77d78c535f6b1d60250955c6",
+          "alphaBounds": null
+        },
+        {
+          "index": 4,
+          "rgbaSha256": "7e60363d5fea2e06b634b4930f4eb688b1f7e044cb0a3569809fda17cb1483d0",
+          "alphaBounds": [
+            71,
+            124,
+            103,
+            140
+          ]
+        },
+        {
+          "index": 5,
+          "rgbaSha256": "9fae2d17019ff4a31fe5270a18d4c4e3c7566daae6ce95db9108c62ffde1a479",
+          "alphaBounds": [
+            53,
+            120,
+            117,
+            151
+          ]
+        },
+        {
+          "index": 6,
+          "rgbaSha256": "9d820293a8bdb817662e9263860e8990d5d2cf420ec4618ca5c9e9ff17c63def",
+          "alphaBounds": [
+            30,
+            97,
+            140,
+            169
+          ]
+        },
+        {
+          "index": 7,
+          "rgbaSha256": "417dd198ac506ad7af6495670226d70148e908770d651881a87b3f0880460fba",
+          "alphaBounds": [
+            23,
+            80,
+            140,
+            169
+          ]
+        },
+        {
+          "index": 8,
+          "rgbaSha256": "6050eda93c2201eae31bea4010926cbfb22deadbab2925436a4e5119fc7f18af",
+          "alphaBounds": [
+            16,
+            42,
+            140,
+            177
+          ]
+        },
+        {
+          "index": 9,
+          "rgbaSha256": "14b40283719d9e5c23190cb21dab3b6b8d272b48ebf0bb154dc454bbcad5d2de",
+          "alphaBounds": [
+            9,
+            4,
+            140,
+            186
+          ]
+        },
+        {
+          "index": 10,
+          "rgbaSha256": "fe3b06328a466966f4b09c40b8e58b531f8ee90b425bf7c3481614709782c9c8",
+          "alphaBounds": [
+            9,
+            26,
+            140,
+            179
+          ]
+        },
+        {
+          "index": 11,
+          "rgbaSha256": "d311d99f241da13bb7c5697637928909227e53f8987599597468494e5b796fff",
+          "alphaBounds": [
+            9,
+            48,
+            140,
+            172
+          ]
+        },
+        {
+          "index": 12,
+          "rgbaSha256": "c8427c3e201afe89ec1f9851a94f2031e7257328e1931ab8a5ec36df94529214",
+          "alphaBounds": [
+            9,
+            38,
+            140,
+            175
+          ]
+        },
+        {
+          "index": 13,
+          "rgbaSha256": "bc668cdb6cb9b775aece14f046c8f0d85a22cc72abb7323fbdb431389add52ee",
+          "alphaBounds": [
+            9,
+            28,
+            140,
+            178
+          ]
+        },
+        {
+          "index": 14,
+          "rgbaSha256": "2f71f95329e2327cea481daa5d738a8aa45b2cb2a966e8e2639ac29bc9f04a1f",
+          "alphaBounds": [
+            9,
+            31,
+            140,
+            177
+          ]
+        },
+        {
+          "index": 15,
+          "rgbaSha256": "c4b70ce3cd3ea5f58f993f394c342fa7de5365a7b0762e9318d1260ae09006c5",
+          "alphaBounds": [
+            9,
+            35,
+            140,
+            176
+          ]
+        },
+        {
+          "index": 16,
+          "rgbaSha256": "1bb6ec3eae473b977bc5f16ac01fa24937d1fdeeb0d9f815c2e9f3b118ff2c89",
+          "alphaBounds": [
+            9,
+            35,
+            140,
+            176
+          ]
+        },
+        {
+          "index": 17,
+          "rgbaSha256": "984f371f91d8e6b1a73ef7e2fa73b02922b89c2357facccdc6d26be4a2289369",
+          "alphaBounds": [
+            12,
+            35,
+            140,
+            176
+          ]
+        },
+        {
+          "index": 18,
+          "rgbaSha256": "309da8945589a72f16c231c1e287a36f8918fe0a3cb612be1131e5954e33b5ea",
+          "alphaBounds": [
+            14,
+            35,
+            140,
+            176
+          ]
+        },
+        {
+          "index": 19,
+          "rgbaSha256": "2dd6e1e64fafea63f570f5f2be9870d10585444690f3df1347967232ef7d2d36",
+          "alphaBounds": [
+            5,
+            39,
+            186,
+            171
+          ]
+        },
+        {
+          "index": 20,
+          "rgbaSha256": "7d418fbbf8ce47a15a74122eb82f2952af91554185d1e4c56dd058d1f9d54ff9",
+          "alphaBounds": [
+            7,
+            39,
+            181,
+            171
+          ]
+        },
+        {
+          "index": 21,
+          "rgbaSha256": "40736a4f1da16adc7578659a2899d9bb270de64efd67cf688287f9a6f2989dee",
+          "alphaBounds": [
+            8,
+            39,
+            176,
+            171
+          ]
+        },
+        {
+          "index": 22,
+          "rgbaSha256": "6e33fc2eece10650a1c232b6e1c47f0a51dbae20824555087fb2705da5671378",
+          "alphaBounds": [
+            30,
+            97,
+            140,
+            169
+          ]
+        },
+        {
+          "index": 23,
+          "rgbaSha256": "af7b2bfe6dbb68c66d1e93da94acf4e7384e4c50cfcc645645a943dd9df984aa",
+          "alphaBounds": [
+            23,
+            80,
+            140,
+            169
+          ]
+        },
+        {
+          "index": 24,
+          "rgbaSha256": "42b1b9910e78ec005f2ed60450e4f750fe807dc6c9af89dcd5684faa42fc3f6e",
+          "alphaBounds": [
+            16,
+            42,
+            140,
+            177
+          ]
+        },
+        {
+          "index": 25,
+          "rgbaSha256": "0b8508a869cc38e47a0d26fe2e89a214c9d40102cbdaa380d07e8f8c3c4c4aaa",
+          "alphaBounds": [
+            9,
+            4,
+            140,
+            186
+          ]
+        },
+        {
+          "index": 26,
+          "rgbaSha256": "974731e9cbe9dcfd3cc063437736fab2ff08f6182c9c8a30a084da98d5a43452",
+          "alphaBounds": [
+            9,
+            26,
+            140,
+            179
+          ]
+        },
+        {
+          "index": 27,
+          "rgbaSha256": "c6122fc46e35e84a22399c1a07a6fab09e831f335ad79fb77c2ed8ad6061802b",
+          "alphaBounds": [
+            9,
+            48,
+            140,
+            172
+          ]
+        },
+        {
+          "index": 28,
+          "rgbaSha256": "523140384445fc3efe6aea6e32a63c4effdfddeadbb9596d9d8dde4bb657527d",
+          "alphaBounds": [
+            9,
+            38,
+            140,
+            175
+          ]
+        },
+        {
+          "index": 29,
+          "rgbaSha256": "7fda815732c3b3dec4103f65ec971b57361ff13538f6b6361ce2ab417430c523",
+          "alphaBounds": [
+            9,
+            28,
+            140,
+            178
+          ]
+        },
+        {
+          "index": 30,
+          "rgbaSha256": "d30cf739f463c4aff471a04d844408a8b64c2f821aa4b1aa82233de1bdd7f914",
+          "alphaBounds": [
+            9,
+            31,
+            140,
+            177
+          ]
+        },
+        {
+          "index": 31,
+          "rgbaSha256": "965f9e9963c14639d394131f2a174d38cb90c29dc6b6821309e983a5da4c7a8a",
+          "alphaBounds": [
+            9,
+            35,
+            140,
+            176
+          ]
+        },
+        {
+          "index": 32,
+          "rgbaSha256": "c29ecbe161340b8608d757e5dce333d722283deeaf3d25ff643a7400ec36351f",
+          "alphaBounds": [
+            9,
+            35,
+            140,
+            176
+          ]
+        },
+        {
+          "index": 33,
+          "rgbaSha256": "bd7442afe61f7e085f965ae18316b41e2af5c73215573a9654977598ae09d0d5",
+          "alphaBounds": [
+            12,
+            35,
+            140,
+            176
+          ]
+        },
+        {
+          "index": 34,
+          "rgbaSha256": "394e06e56e0af9596340e3e61b60fd8278e2ae86ce84f613ce342dd521ed8053",
+          "alphaBounds": [
+            14,
+            35,
+            140,
+            176
+          ]
+        }
+      ]
+    },
+    "3": {
+      "atlas": {
+        "path": "assets/buildings/skeleton-trap-native/3-atlas.png",
+        "width": 190,
+        "height": 196,
+        "columns": 8,
+        "frames": 35,
+        "bounds": [
+          -46,
+          -45,
+          49,
+          53
+        ],
+        "pixelsPerNativeUnit": 2,
+        "rgbaSha256": "65604562838d3df514bcf4fb435ee307eb66dc89a19df0b2e58c4f47d15c1760"
+      },
+      "clips": {
+        "ground": {
+          "export": "troop_trap_land_lvl3_setup",
+          "id": 24744,
+          "fps": 24,
+          "count": 35,
+          "frames": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "air": {
+          "export": "troop_trap_air_lvl3_setup",
+          "id": 24756,
+          "fps": 24,
+          "count": 35,
+          "frames": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "spent": {
+          "export": "troop_trap_land_lvl3_unarmed",
+          "id": 24742,
+          "fps": 24,
+          "count": 35,
+          "frames": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "ground-trigger": {
+          "export": "troop_trap_land_lvl3",
+          "id": 24746,
+          "fps": 24,
+          "count": 43,
+          "frames": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            15,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21
+          ]
+        },
+        "air-trigger": {
+          "export": "troop_trap_air_lvl3",
+          "id": 24757,
+          "fps": 24,
+          "count": 43,
+          "frames": [
+            3,
+            4,
+            5,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            31,
+            31,
+            32,
+            33,
+            34,
+            19,
+            20,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21
+          ]
+        }
+      },
+      "frames": [
+        {
+          "index": 0,
+          "rgbaSha256": "76cc64652109f22680678ed69d65e3bba2bc4416d5843ca3a0acde406c5c8c0a",
+          "alphaBounds": [
+            10,
+            36,
+            142,
+            179
+          ]
+        },
+        {
+          "index": 1,
+          "rgbaSha256": "c545bc5aaba9489c564995ea3f36b0523628d2feadc3e78cc5b85099a37572a5",
+          "alphaBounds": [
+            10,
+            36,
+            142,
+            179
+          ]
+        },
+        {
+          "index": 2,
+          "rgbaSha256": "2bff25e458c454343d9bee6da89fc9362203f6823967d5112133dd8a0861dd97",
+          "alphaBounds": [
+            9,
+            40,
+            177,
+            179
+          ]
+        },
+        {
+          "index": 3,
+          "rgbaSha256": "8c31a1541e172df6bec2096cd5bf56b887b9ccd6be3cfe8a80a3dcc9240ef3d1",
+          "alphaBounds": null
+        },
+        {
+          "index": 4,
+          "rgbaSha256": "ee3b96e36b1023f824f3a4c7d9c0bf4dcf2755fba58fa2a06d6079eec2aeb71d",
+          "alphaBounds": [
+            71,
+            124,
+            103,
+            140
+          ]
+        },
+        {
+          "index": 5,
+          "rgbaSha256": "83e96a9a49db9ce55528191fbe62645f26fd1d80e27fd1f0632dcafe94a97e59",
+          "alphaBounds": [
+            53,
+            120,
+            117,
+            151
+          ]
+        },
+        {
+          "index": 6,
+          "rgbaSha256": "dc3bed2222c6ebfeac63bbd5d24824672e7d6c54b7b77a44bbaf362b98b05e4c",
+          "alphaBounds": [
+            31,
+            97,
+            140,
+            169
+          ]
+        },
+        {
+          "index": 7,
+          "rgbaSha256": "d208ae1854dd3668ef50f7bc5308b5bb528d9cd2f1f17a118baeb021ac005cb6",
+          "alphaBounds": [
+            24,
+            81,
+            140,
+            170
+          ]
+        },
+        {
+          "index": 8,
+          "rgbaSha256": "d11c87e340bfcf54f277ae3cb29d96b223360a3bc446c5186400299e09425785",
+          "alphaBounds": [
+            17,
+            43,
+            140,
+            181
+          ]
+        },
+        {
+          "index": 9,
+          "rgbaSha256": "a3de5e790e0e882d504390b54988be7f11e883ceed63bc89bab017d5e7dd6bec",
+          "alphaBounds": [
+            11,
+            6,
+            142,
+            191
+          ]
+        },
+        {
+          "index": 10,
+          "rgbaSha256": "4772fc99901c0159c613724c20fd5fdce9bfd837d145dd76c33bfe41d8aa7052",
+          "alphaBounds": [
+            11,
+            28,
+            142,
+            183
+          ]
+        },
+        {
+          "index": 11,
+          "rgbaSha256": "7e87035f439a89493ba88fb850a69614c67940e41357257b2fe71238900e82a2",
+          "alphaBounds": [
+            11,
+            49,
+            142,
+            175
+          ]
+        },
+        {
+          "index": 12,
+          "rgbaSha256": "16a7c896563417e0198b051a483f5af02b80ab6c444e795ae4fabb0ab9625933",
+          "alphaBounds": [
+            11,
+            39,
+            142,
+            179
+          ]
+        },
+        {
+          "index": 13,
+          "rgbaSha256": "0c354a329b0bbb958057dba57659ca3ce891a6d3f34e247ec726fd5f3c00403b",
+          "alphaBounds": [
+            11,
+            29,
+            142,
+            183
+          ]
+        },
+        {
+          "index": 14,
+          "rgbaSha256": "2cfba0f813aeb7c9d86d0bc9b38dc93a4bf3aeafacbea2e8f8efd2f4202c5cf4",
+          "alphaBounds": [
+            11,
+            33,
+            142,
+            181
+          ]
+        },
+        {
+          "index": 15,
+          "rgbaSha256": "1a2fd19495cb3fc521188ffb4317f95ee38d41fd0d4a139a2f098383cd7f9455",
+          "alphaBounds": [
+            11,
+            36,
+            142,
+            180
+          ]
+        },
+        {
+          "index": 16,
+          "rgbaSha256": "3825ed50b7c3cfa8ac849f2f40eda7219389ef01a4e795bc858e48e1d9a2ab34",
+          "alphaBounds": [
+            10,
+            36,
+            142,
+            180
+          ]
+        },
+        {
+          "index": 17,
+          "rgbaSha256": "3139b41d416db612475744e0f42b155400d5528d7dea2f73cb103f1765a4ef04",
+          "alphaBounds": [
+            13,
+            36,
+            140,
+            180
+          ]
+        },
+        {
+          "index": 18,
+          "rgbaSha256": "2a46b6fb2fd44942aa70e63dc44fc000e29925b137f89c6508b7a8e105921eca",
+          "alphaBounds": [
+            16,
+            36,
+            140,
+            180
+          ]
+        },
+        {
+          "index": 19,
+          "rgbaSha256": "2456eecc0861663b2f0328407c0e570fe0100d1931f713526c771fb633f88947",
+          "alphaBounds": [
+            5,
+            40,
+            186,
+            179
+          ]
+        },
+        {
+          "index": 20,
+          "rgbaSha256": "4b9446f03448921f4145b25935741ef4ef1515d43d27d759c13553805d6940ab",
+          "alphaBounds": [
+            7,
+            40,
+            181,
+            179
+          ]
+        },
+        {
+          "index": 21,
+          "rgbaSha256": "daca83d2c9d1d91ec419c3ebef4093f1da3d16589dfd980b3c08f40bb38f01e1",
+          "alphaBounds": [
+            8,
+            40,
+            176,
+            179
+          ]
+        },
+        {
+          "index": 22,
+          "rgbaSha256": "7bf830d2b24a88bfba1c283ce8f560ff40fb90b83904dd9de91c78d155321155",
+          "alphaBounds": [
+            31,
+            97,
+            140,
+            169
+          ]
+        },
+        {
+          "index": 23,
+          "rgbaSha256": "2ccd3b6fc4fc177c51a2d20fe76894e364decedbe3b25327e9bcae14a4cec856",
+          "alphaBounds": [
+            24,
+            81,
+            140,
+            170
+          ]
+        },
+        {
+          "index": 24,
+          "rgbaSha256": "1b6b624b8e98b5cb9b84b741b03eb08c27110f46b06111596a4982f10c790b38",
+          "alphaBounds": [
+            17,
+            43,
+            140,
+            181
+          ]
+        },
+        {
+          "index": 25,
+          "rgbaSha256": "dbc5894e2f909d6ebeaa5fced914e727f32be16111cd00d575fa50cb87ad4044",
+          "alphaBounds": [
+            11,
+            6,
+            142,
+            191
+          ]
+        },
+        {
+          "index": 26,
+          "rgbaSha256": "6c37eb6fde67cfb3f8a4acdea5a763a12d9bd9f1d77e688fdc979c86ab9021ac",
+          "alphaBounds": [
+            11,
+            28,
+            142,
+            183
+          ]
+        },
+        {
+          "index": 27,
+          "rgbaSha256": "d6acc26574af31e26f206ea45b0c0b5fcaaf48fbc07e9d144d5b18af1f0a122d",
+          "alphaBounds": [
+            11,
+            49,
+            142,
+            175
+          ]
+        },
+        {
+          "index": 28,
+          "rgbaSha256": "15032c9481006dd4077113f99a28e391b56f56d4faa2bbd7a4b197a0e55d36cd",
+          "alphaBounds": [
+            11,
+            39,
+            142,
+            179
+          ]
+        },
+        {
+          "index": 29,
+          "rgbaSha256": "7c483ba28feb34d530d9454fdd0d2c49eb65ddb0b1a6bb85ad8f4202c4352502",
+          "alphaBounds": [
+            11,
+            29,
+            142,
+            183
+          ]
+        },
+        {
+          "index": 30,
+          "rgbaSha256": "5a7bc724a330e4e3606949871a72aa0d97216ceab95a9182d9bc06659ff65894",
+          "alphaBounds": [
+            11,
+            33,
+            142,
+            181
+          ]
+        },
+        {
+          "index": 31,
+          "rgbaSha256": "1b7e0b303626036847af45210bbeecd97bb5f45a9d289a79e1645be26c54c980",
+          "alphaBounds": [
+            11,
+            36,
+            142,
+            180
+          ]
+        },
+        {
+          "index": 32,
+          "rgbaSha256": "8114aa1af63bd69e7c05c6344125f380c89de0d51df19bb03dd7e03e6c007569",
+          "alphaBounds": [
+            10,
+            36,
+            142,
+            180
+          ]
+        },
+        {
+          "index": 33,
+          "rgbaSha256": "29359e5d5f9deefd0600a36dde1c14090d81df0a2a773698776ceafc66e57735",
+          "alphaBounds": [
+            13,
+            36,
+            140,
+            180
+          ]
+        },
+        {
+          "index": 34,
+          "rgbaSha256": "8da337cdaf05283482741de42825d2f18ae7dfbbe6257b416b2b178e92d3db75",
+          "alphaBounds": [
+            16,
+            36,
+            140,
+            180
+          ]
+        }
+      ]
+    },
+    "5": {
+      "atlas": {
+        "path": "assets/buildings/skeleton-trap-native/5-atlas.png",
+        "width": 190,
+        "height": 196,
+        "columns": 8,
+        "frames": 38,
+        "bounds": [
+          -46,
+          -45,
+          49,
+          53
+        ],
+        "pixelsPerNativeUnit": 2,
+        "rgbaSha256": "8f4d3f364f71511d8e7747398d6d56e5d88435461ddd814cc7dd690d725f67c1"
+      },
+      "clips": {
+        "ground": {
+          "export": "troop_trap_land_lvl4_setup",
+          "id": 24737,
+          "fps": 24,
+          "count": 35,
+          "frames": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "air": {
+          "export": "troop_trap_air_lvl4_setup",
+          "id": 24753,
+          "fps": 24,
+          "count": 35,
+          "frames": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "spent": {
+          "export": "troop_trap_land_lvl4_unarmed",
+          "id": 24735,
+          "fps": 24,
+          "count": 35,
+          "frames": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "ground-trigger": {
+          "export": "troop_trap_land_lvl4",
+          "id": 24739,
+          "fps": 24,
+          "count": 43,
+          "frames": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            15,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21
+          ]
+        },
+        "air-trigger": {
+          "export": "troop_trap_air_lvl4",
+          "id": 24754,
+          "fps": 24,
+          "count": 43,
+          "frames": [
+            3,
+            4,
+            5,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            31,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37,
+            37
+          ]
+        }
+      },
+      "frames": [
+        {
+          "index": 0,
+          "rgbaSha256": "564bed90be153b86431fb19290e8d4a271134aa8489dd5d47d146cd6cc629f1e",
+          "alphaBounds": [
+            10,
+            36,
+            142,
+            179
+          ]
+        },
+        {
+          "index": 1,
+          "rgbaSha256": "f787ccfad2531eb544c9a6627871d113305a6d630f13c32270a2abf7b0fb296c",
+          "alphaBounds": [
+            10,
+            36,
+            142,
+            179
+          ]
+        },
+        {
+          "index": 2,
+          "rgbaSha256": "5ba9e6c83360d6f44a2601a4a14a432460524e409572eb1613d839fc78020845",
+          "alphaBounds": [
+            9,
+            39,
+            177,
+            179
+          ]
+        },
+        {
+          "index": 3,
+          "rgbaSha256": "8c31a1541e172df6bec2096cd5bf56b887b9ccd6be3cfe8a80a3dcc9240ef3d1",
+          "alphaBounds": null
+        },
+        {
+          "index": 4,
+          "rgbaSha256": "d7ddf1a6909b6e01cc1a666d78f05fba0668e046314c06dd8c9f63701d1edd15",
+          "alphaBounds": [
+            71,
+            124,
+            103,
+            140
+          ]
+        },
+        {
+          "index": 5,
+          "rgbaSha256": "9a3727718ddfb1c0bfcdca654ced48c1e6c338d9dd956305097da4397716bc5e",
+          "alphaBounds": [
+            53,
+            120,
+            117,
+            151
+          ]
+        },
+        {
+          "index": 6,
+          "rgbaSha256": "3adb881e244be497e456a831070ddf976a085f6a7945ad9913f9519e637759a3",
+          "alphaBounds": [
+            31,
+            97,
+            140,
+            169
+          ]
+        },
+        {
+          "index": 7,
+          "rgbaSha256": "754f00a88d9ea894c0e2d9c40be32331c61ae9918d093bd03ccb2093d9c31293",
+          "alphaBounds": [
+            24,
+            81,
+            140,
+            171
+          ]
+        },
+        {
+          "index": 8,
+          "rgbaSha256": "a66897b5732a6c5d05b1e22f7c2884d6754bff997418dd08f9cd56c828f969cb",
+          "alphaBounds": [
+            17,
+            43,
+            140,
+            181
+          ]
+        },
+        {
+          "index": 9,
+          "rgbaSha256": "f53adbc661b37f544bf381d1a7a46ad6a28e70905d0d1ed3fe527d33398af6d8",
+          "alphaBounds": [
+            11,
+            6,
+            142,
+            191
+          ]
+        },
+        {
+          "index": 10,
+          "rgbaSha256": "8321420095a6ebdea300bcc9d0625b32cf17baa80772e52492fb2f54ccc712a2",
+          "alphaBounds": [
+            11,
+            28,
+            142,
+            183
+          ]
+        },
+        {
+          "index": 11,
+          "rgbaSha256": "0b0174d2b271d2db1e4460e96c0610300812db9eae2b7e60abc0926e1aa16859",
+          "alphaBounds": [
+            11,
+            49,
+            142,
+            175
+          ]
+        },
+        {
+          "index": 12,
+          "rgbaSha256": "58f437464a5939b00d3feb74da3f6357564ad3d18a55e2eda76ad763c37a6d68",
+          "alphaBounds": [
+            11,
+            39,
+            142,
+            179
+          ]
+        },
+        {
+          "index": 13,
+          "rgbaSha256": "ba8bd2496d7946eaf971a58f622e258b6b5e51e6a2a50055738180f2021452cf",
+          "alphaBounds": [
+            11,
+            29,
+            142,
+            183
+          ]
+        },
+        {
+          "index": 14,
+          "rgbaSha256": "ab5f64c25585e953258bb4c3c630a5fd7defd280951d1ce9ab23e582e7183a72",
+          "alphaBounds": [
+            11,
+            33,
+            142,
+            181
+          ]
+        },
+        {
+          "index": 15,
+          "rgbaSha256": "a8a9ef07746f3fa2ecd0704cd9b1ea7f2e2ee5d6828feb560683da7712447f8e",
+          "alphaBounds": [
+            11,
+            36,
+            142,
+            180
+          ]
+        },
+        {
+          "index": 16,
+          "rgbaSha256": "679d950f553d31c11f2d98cc67fb937e32a6425f192fdf080f79fd06d4fb83e3",
+          "alphaBounds": [
+            10,
+            36,
+            142,
+            180
+          ]
+        },
+        {
+          "index": 17,
+          "rgbaSha256": "9e8d92f3bb72c5c36a8a224b9594ac96727dd62288bf3dfb56c3356722c794da",
+          "alphaBounds": [
+            13,
+            36,
+            140,
+            180
+          ]
+        },
+        {
+          "index": 18,
+          "rgbaSha256": "faf2511a255596d3cc4797fb7541a6394084e7ded798787200603e475843686a",
+          "alphaBounds": [
+            16,
+            36,
+            140,
+            180
+          ]
+        },
+        {
+          "index": 19,
+          "rgbaSha256": "ff628c83b727e8078570c04e7b3b8148674a9915dfdd6cba96e850f1a975cd45",
+          "alphaBounds": [
+            5,
+            39,
+            185,
+            179
+          ]
+        },
+        {
+          "index": 20,
+          "rgbaSha256": "c938bb1cb8fd9a6744b5dd0d49d498ed36c08bada1a2d6d067c0d75207593451",
+          "alphaBounds": [
+            6,
+            39,
+            180,
+            179
+          ]
+        },
+        {
+          "index": 21,
+          "rgbaSha256": "b707c9e6a84246b56c2309c5f5e98853bc30a0860a2ddbc98a9c057593485e7a",
+          "alphaBounds": [
+            7,
+            39,
+            176,
+            179
+          ]
+        },
+        {
+          "index": 22,
+          "rgbaSha256": "a874c56ec34d203e3e51b2c9d0b16b93ad69ec7f2f566c31a659437a00eddbd9",
+          "alphaBounds": [
+            31,
+            97,
+            140,
+            169
+          ]
+        },
+        {
+          "index": 23,
+          "rgbaSha256": "91607073f78669bd4d6d93e1435d200de0659ea31b31a98b1d8374ffb2154e88",
+          "alphaBounds": [
+            24,
+            81,
+            140,
+            171
+          ]
+        },
+        {
+          "index": 24,
+          "rgbaSha256": "d698ebecf046e1fef50b7d328ce11c086bdd49e2ed4aae4ed3204e1aa4713278",
+          "alphaBounds": [
+            17,
+            43,
+            140,
+            181
+          ]
+        },
+        {
+          "index": 25,
+          "rgbaSha256": "f6197b89f5df069afaee18006210f30ef7a7fbccc1fad3c2e06e09ed3e47ea39",
+          "alphaBounds": [
+            11,
+            6,
+            142,
+            191
+          ]
+        },
+        {
+          "index": 26,
+          "rgbaSha256": "d6db7b7c88cd9c9817a549a054914ac19ae67bdbfbfef9c69b3a0aa56b5fc5b2",
+          "alphaBounds": [
+            11,
+            28,
+            142,
+            183
+          ]
+        },
+        {
+          "index": 27,
+          "rgbaSha256": "2e33e9e93af0a1be8fc6985a77b6794eba8047b6371a3a0bb844a52d819ccdfe",
+          "alphaBounds": [
+            11,
+            49,
+            142,
+            175
+          ]
+        },
+        {
+          "index": 28,
+          "rgbaSha256": "9bc14d7fe80d2c29515d4e4ce5e4064c4f1fa831ce522809635a10c90f6700b7",
+          "alphaBounds": [
+            11,
+            39,
+            142,
+            179
+          ]
+        },
+        {
+          "index": 29,
+          "rgbaSha256": "e4075e0e62a219bf75a28a409923b5f252a6a0e6e1002dfa795df40bfaca1a61",
+          "alphaBounds": [
+            11,
+            29,
+            142,
+            183
+          ]
+        },
+        {
+          "index": 30,
+          "rgbaSha256": "bf262a575cf7bc7764afc28c0bc099b0c68480fe623b8003c9de030ed29387a0",
+          "alphaBounds": [
+            11,
+            33,
+            142,
+            181
+          ]
+        },
+        {
+          "index": 31,
+          "rgbaSha256": "9786c1386644746bb43bb226b486255d4f40cda0a5e6accd76e6db36734da6cd",
+          "alphaBounds": [
+            11,
+            36,
+            142,
+            180
+          ]
+        },
+        {
+          "index": 32,
+          "rgbaSha256": "10f832b1a3036d18f04c69ebeabb1854cc75ae5da3ff7b5067303126a789fcc4",
+          "alphaBounds": [
+            10,
+            36,
+            142,
+            180
+          ]
+        },
+        {
+          "index": 33,
+          "rgbaSha256": "a1f8e7d8cba90226969fb82c48d2c02faf90edc99ab42fc3e77edf9ee261867b",
+          "alphaBounds": [
+            13,
+            36,
+            140,
+            180
+          ]
+        },
+        {
+          "index": 34,
+          "rgbaSha256": "90f61c7cfef15c4e7ab4a5db6f054896db57c073112c130e3615a4a40de63548",
+          "alphaBounds": [
+            16,
+            36,
+            140,
+            180
+          ]
+        },
+        {
+          "index": 35,
+          "rgbaSha256": "f4c1d4daf8f9441438b7276c87a70773db9924b28bdcd19abfd35c196fa8c767",
+          "alphaBounds": [
+            5,
+            39,
+            186,
+            179
+          ]
+        },
+        {
+          "index": 36,
+          "rgbaSha256": "7dd245edf172cc0f6f66408deb23bb5b255286e1f793dc12425bcaf86959d3fb",
+          "alphaBounds": [
+            6,
+            39,
+            181,
+            179
+          ]
+        },
+        {
+          "index": 37,
+          "rgbaSha256": "6249ea0e815bc7c299fbc72e81858d2cc080e3f8d0d40652f435a50a3f5c5d0f",
+          "alphaBounds": [
+            8,
+            39,
+            176,
+            179
+          ]
+        }
+      ]
+    }
+  },
+  "spawned": {
+    "ground": [
+      {
+        "level": 1,
+        "hp": 30,
+        "dps": 25,
+        "speed": 3.0,
+        "range": 0.4,
+        "rate": 0.7
+      },
+      {
+        "level": 2,
+        "hp": 45,
+        "dps": 30,
+        "speed": 3.0,
+        "range": 0.4,
+        "rate": 0.7
+      }
+    ],
+    "air": [
+      {
+        "level": 1,
+        "hp": 30,
+        "dps": 25,
+        "speed": 2.2,
+        "range": 0.0,
+        "rate": 0.7
+      },
+      {
+        "level": 2,
+        "hp": 45,
+        "dps": 30,
+        "speed": 2.2,
+        "range": 0.0,
+        "rate": 0.7
+      }
+    ]
+  },
+  "reconstruction": {
+    "sampling": "premultiplied bilinear at pixel centers",
+    "nestedTimelines": "elapsed frames since continuous placement; loop subclips",
+    "nativePlaybackVerified": false
+  }
+}

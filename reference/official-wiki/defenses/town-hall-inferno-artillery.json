@@ -1,0 +1,72 @@
+{
+ "title": "Town Hall/Inferno Artillery",
+ "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Inferno_Artillery",
+ "revid": 622642,
+ "retrieved": "2026-09-15",
+ "category": "townhall-weapon",
+ "clientName": "Townhall17",
+ "clientTable": "weapons.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dpsPerTarget": 40,
+   "damagePerHitPerTarget": 140,
+   "townHall": 17
+  },
+  {
+   "level": 2,
+   "dpsPerTarget": 45,
+   "damagePerHitPerTarget": 157.5,
+   "cost": 10000000,
+   "buildSeconds": 518400,
+   "xp": 720,
+   "townHall": 17
+  },
+  {
+   "level": 3,
+   "dpsPerTarget": 50,
+   "damagePerHitPerTarget": 175,
+   "cost": 12000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 17
+  },
+  {
+   "level": 4,
+   "dpsPerTarget": 55,
+   "damagePerHitPerTarget": 192.5,
+   "cost": 14000000,
+   "buildSeconds": 691200,
+   "xp": 831,
+   "townHall": 17
+  },
+  {
+   "level": 5,
+   "dpsPerTarget": 60,
+   "damagePerHitPerTarget": 210,
+   "cost": 18000000,
+   "buildSeconds": 864000,
+   "xp": 929,
+   "townHall": 17
+  }
+ ],
+ "constants": {
+  "townHall": 17,
+  "range": 12,
+  "minRange": 0,
+  "attackSeconds": 3.5,
+  "targets": "ground & air",
+  "numberOfTargets": 4,
+  "projectilesPerVolley": 4,
+  "homing": true,
+  "firePool": {
+   "maxDps": 75,
+   "durationSeconds": 6.8,
+   "stacks": false
+  },
+  "mergeFrom": "Town Hall 16 + Eagle Artillery level 7",
+  "activation": "battle start",
+  "deathDamage": 0
+ },
+ "mismatches": []
+}

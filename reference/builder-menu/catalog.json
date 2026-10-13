@@ -1,0 +1,14 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "localization/texts.csv": "affdf43926df044cb3c09d833b07365aa01ea99985771afa5fa0dd926f36c569"
+  },
+  "texts": {
+    "inProgress": "Upgrades in progress:",
+    "suggested": "Suggested upgrades:",
+    "other": "Other upgrades:",
+    "hint": "Here you can find suggestions for what to build or upgrade next!"
+  }
+}

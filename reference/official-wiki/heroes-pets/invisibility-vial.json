@@ -1,0 +1,267 @@
+{
+ "title": "Invisibility Vial",
+ "url": "https://clashofclans.fandom.com/wiki/Invisibility_Vial",
+ "revid": 623169,
+ "retrieved": "2026-09-15",
+ "clientName": "Invisibility Vial",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Archer Queen",
+ "summary": "Queen's starting active item: invisibility for 4.2 → 7.8 s with +340 → +1,740 damage per shot; passive HP.",
+ "constants": {
+  "wiki": {
+   "User": "Archer Queen",
+   "Ability Type": "Active",
+   "Rarity": "Common",
+   "Unlock Requirement": "Available by default"
+  },
+  "client": {
+   "Rarity": "COMMON",
+   "AllowedCharacters": "Archer Queen;",
+   "MainAbilities": "ArcherQueenInvisibility",
+   "levelRows": 18,
+   "abilityTierStartLevels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "abilityDurationSeconds": {
+   "wikiHeader": "Ability Attributes / Ability Duration",
+   "unit": "seconds"
+  },
+  "damagePerShotIncrease": {
+   "wikiHeader": "Ability Attributes / Damage per Shot Increase",
+   "unit": "damage points"
+  },
+  "heroHitpointIncrease": {
+   "wikiHeader": "Hero Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "abilityDurationSeconds": 4.2,
+   "damagePerShotIncrease": 340,
+   "heroHitpointIncrease": 80,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": null
+  },
+  {
+   "level": 2,
+   "abilityDurationSeconds": 4.2,
+   "damagePerShotIncrease": 440,
+   "heroHitpointIncrease": 100,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "abilityDurationSeconds": 4.8,
+   "damagePerShotIncrease": 540,
+   "heroHitpointIncrease": 120,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "abilityDurationSeconds": 4.8,
+   "damagePerShotIncrease": 640,
+   "heroHitpointIncrease": 140,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "abilityDurationSeconds": 4.8,
+   "damagePerShotIncrease": 730,
+   "heroHitpointIncrease": 170,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "abilityDurationSeconds": 5.4,
+   "damagePerShotIncrease": 820,
+   "heroHitpointIncrease": 200,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "abilityDurationSeconds": 5.4,
+   "damagePerShotIncrease": 920,
+   "heroHitpointIncrease": 250,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "abilityDurationSeconds": 5.4,
+   "damagePerShotIncrease": 1020,
+   "heroHitpointIncrease": 300,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "abilityDurationSeconds": 6,
+   "damagePerShotIncrease": 1120,
+   "heroHitpointIncrease": 340,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "abilityDurationSeconds": 6,
+   "damagePerShotIncrease": 1220,
+   "heroHitpointIncrease": 380,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 11,
+   "abilityDurationSeconds": 6,
+   "damagePerShotIncrease": 1310,
+   "heroHitpointIncrease": 420,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 12,
+   "abilityDurationSeconds": 6.6,
+   "damagePerShotIncrease": 1370,
+   "heroHitpointIncrease": 460,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 13,
+   "abilityDurationSeconds": 6.6,
+   "damagePerShotIncrease": 1430,
+   "heroHitpointIncrease": 500,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 14,
+   "abilityDurationSeconds": 6.6,
+   "damagePerShotIncrease": 1490,
+   "heroHitpointIncrease": 540,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 15,
+   "abilityDurationSeconds": 7.2,
+   "damagePerShotIncrease": 1560,
+   "heroHitpointIncrease": 580,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 16,
+   "abilityDurationSeconds": 7.2,
+   "damagePerShotIncrease": 1620,
+   "heroHitpointIncrease": 620,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 17,
+   "abilityDurationSeconds": 7.2,
+   "damagePerShotIncrease": 1680,
+   "heroHitpointIncrease": 660,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 18,
+   "abilityDurationSeconds": 7.8,
+   "damagePerShotIncrease": 1740,
+   "heroHitpointIncrease": 700,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 7
+  }
+ ],
+ "subpages": [],
+ "mismatches": [],
+ "clientColumns": [
+  "MainAbilities:special_abilities[ArcherQueenInvisibility].DeactivateAfterTime",
+  "MainAbilities:special_abilities[ArcherQueenInvisibility].ExtraDamageFlat",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

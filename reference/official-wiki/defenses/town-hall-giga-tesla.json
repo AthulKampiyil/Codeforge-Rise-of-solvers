@@ -1,0 +1,24 @@
+{
+ "title": "Town Hall/Giga Tesla",
+ "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Giga_Tesla",
+ "revid": 620077,
+ "retrieved": "2026-09-15",
+ "category": "townhall-weapon",
+ "clientName": "Townhall12",
+ "clientTable": "weapons.csv",
+ "levels": [],
+ "constants": {
+  "townHall": 12,
+  "range": 10,
+  "attackSeconds": 0.5,
+  "targets": "ground & air",
+  "numberOfTargets": 4,
+  "dpsPerTarget": 140,
+  "damagePerHit": 70,
+  "hitpoints": 7500,
+  "deathDamage": 500,
+  "deathDamageRadiusTiles": 4,
+  "activation": "damage taken or 51% destruction"
+ },
+ "mismatches": []
+}

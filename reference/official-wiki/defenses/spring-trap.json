@@ -1,0 +1,155 @@
+{
+ "title": "Spring Trap/Home Village",
+ "url": "https://clashofclans.fandom.com/wiki/Spring_Trap/Home_Village",
+ "revid": 623249,
+ "retrieved": "2026-09-15",
+ "category": "trap",
+ "clientName": "Spring Trap",
+ "clientTable": "traps.csv",
+ "levels": [
+  {
+   "level": 1,
+   "springCapacity": 10,
+   "damage": 0,
+   "cost": 2000,
+   "townHall": 4
+  },
+  {
+   "level": 2,
+   "springCapacity": 12,
+   "damage": 250,
+   "cost": 130000,
+   "buildSeconds": 3600,
+   "xp": 60,
+   "townHall": 7
+  },
+  {
+   "level": 3,
+   "springCapacity": 14,
+   "damage": 300,
+   "cost": 240000,
+   "buildSeconds": 7200,
+   "xp": 84,
+   "townHall": 8
+  },
+  {
+   "level": 4,
+   "springCapacity": 16,
+   "damage": 350,
+   "cost": 350000,
+   "buildSeconds": 10800,
+   "xp": 103,
+   "townHall": 9
+  },
+  {
+   "level": 5,
+   "springCapacity": 18,
+   "damage": 400,
+   "cost": 800000,
+   "buildSeconds": 14400,
+   "xp": 120,
+   "townHall": 10
+  },
+  {
+   "level": 6,
+   "springCapacity": 18,
+   "damage": 500,
+   "cost": 1000000,
+   "buildSeconds": 21600,
+   "xp": 146,
+   "townHall": 11
+  },
+  {
+   "level": 7,
+   "springCapacity": 18,
+   "damage": 600,
+   "cost": 1700000,
+   "buildSeconds": 28800,
+   "xp": 169,
+   "townHall": 12
+  },
+  {
+   "level": 8,
+   "springCapacity": 18,
+   "damage": 750,
+   "cost": 2000000,
+   "buildSeconds": 43200,
+   "xp": 207,
+   "townHall": 13
+  },
+  {
+   "level": 9,
+   "springCapacity": 18,
+   "damage": 900,
+   "cost": 3000000,
+   "buildSeconds": 64800,
+   "xp": 254,
+   "townHall": 14
+  },
+  {
+   "level": 10,
+   "springCapacity": 18,
+   "damage": 1050,
+   "cost": 4000000,
+   "buildSeconds": 86400,
+   "xp": 293,
+   "townHall": 15
+  },
+  {
+   "level": 11,
+   "springCapacity": 18,
+   "damage": 1200,
+   "cost": 6000000,
+   "buildSeconds": 172800,
+   "xp": 415,
+   "townHall": 16
+  },
+  {
+   "level": 12,
+   "springCapacity": 18,
+   "damage": 1300,
+   "cost": 13000000,
+   "buildSeconds": 259200,
+   "xp": 509,
+   "townHall": 17
+  },
+  {
+   "level": 13,
+   "springCapacity": 18,
+   "damage": 1400,
+   "cost": 16000000,
+   "buildSeconds": 950400,
+   "xp": 974,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 4,
+  "size": "1x1",
+  "triggerRadius": 1,
+  "targets": "ground",
+  "favoriteTarget": "highest housing space",
+  "damageModifierHeroesPetsSiege": 0.5,
+  "siegeCanBeLaunched": false,
+  "fastUnitSpeedImmunity": 32
+ },
+ "mismatches": [
+  {
+   "field": "townHall",
+   "level": 1,
+   "wiki": 4,
+   "client": 1,
+   "note": "client trap rows use TownHallLevel 1 for level 1 (availability comes from townhall_levels counts); the wiki lists the unlock Town Hall",
+   "table": "Statistics"
+  }
+ ],
+ "progressionMismatches": [
+  {
+   "field": "townhall",
+   "level": 1,
+   "wiki": 4,
+   "progression": 1,
+   "note": "client trap rows use TownHallLevel 1 for level 1 (availability comes from townhall_levels counts); the wiki lists the unlock Town Hall"
+  }
+ ]
+}

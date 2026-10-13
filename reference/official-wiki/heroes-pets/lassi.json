@@ -1,0 +1,213 @@
+{
+ "title": "L.A.S.S.I",
+ "url": "https://clashofclans.fandom.com/wiki/L.A.S.S.I",
+ "revid": 622251,
+ "retrieved": "2026-09-15",
+ "clientName": "LASSI",
+ "clientTable": "pets",
+ "category": "pet",
+ "summary": "Pet House 1 ground melee pet that stays close to its hero and jumps over Walls (High Jumper).",
+ "constants": {
+  "wiki": {
+   "Preferred Target": "Within 2.5 tiles of Hero",
+   "Targets": "Ground",
+   "Attack Type": "Single Target",
+   "Movement Speed": "32",
+   "Attack Speed": "0.9s",
+   "Pet House Level Required": "1",
+   "Range": "0.6 tiles",
+   "Special Ability": "High Jumper"
+  },
+  "client": {
+   "HousingSpace": "20",
+   "Speed": "400",
+   "AttackRange": "60",
+   "AttackSpeed": "900",
+   "IsFlying": "FALSE",
+   "AirTargets": "FALSE",
+   "GroundTargets": "TRUE",
+   "IsJumper": "TRUE",
+   "LeashLength": "200",
+   "SpecialAbilities": "BarkyPlaceholderAbility",
+   "TriggersTraps": "TRUE",
+   "FriendlyGroupWeight": "300",
+   "SpawnDelay": "100",
+   "UpgradeResource": "DarkElixir",
+   "MovementOffsetSpeed": "0",
+   "levelRows": 15,
+   "levelsByPetHouse": {
+    "Pet House 1": "10",
+    "Pet House 5": "15"
+   }
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "damagePerSecond": {
+   "wikiHeader": "Damage per Second",
+   "unit": "damage per second"
+  },
+  "damagePerHit": {
+   "wikiHeader": "Damage per Hit",
+   "unit": "damage points"
+  },
+  "hitpoints": {
+   "wikiHeader": "Hitpoints",
+   "unit": "hitpoints"
+  },
+  "upgradeCost": {
+   "wikiHeader": "Upgrade Cost",
+   "unit": "resource amount"
+  },
+  "upgradeTimeSeconds": {
+   "wikiHeader": "Upgrade Time",
+   "unit": "seconds"
+  },
+  "petHouseLevelRequired": {
+   "wikiHeader": "Pet House Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damagePerSecond": 160,
+   "damagePerHit": 144,
+   "hitpoints": 2800,
+   "upgradeCost": null,
+   "upgradeTimeSeconds": null,
+   "petHouseLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "damagePerSecond": 170,
+   "damagePerHit": 153,
+   "hitpoints": 2900,
+   "upgradeCost": 20000,
+   "upgradeTimeSeconds": 86400,
+   "petHouseLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "damagePerSecond": 180,
+   "damagePerHit": 162,
+   "hitpoints": 3000,
+   "upgradeCost": 30000,
+   "upgradeTimeSeconds": 129600,
+   "petHouseLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "damagePerSecond": 190,
+   "damagePerHit": 171,
+   "hitpoints": 3100,
+   "upgradeCost": 40000,
+   "upgradeTimeSeconds": 172800,
+   "petHouseLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "damagePerSecond": 200,
+   "damagePerHit": 180,
+   "hitpoints": 3200,
+   "upgradeCost": 50000,
+   "upgradeTimeSeconds": 216000,
+   "petHouseLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "damagePerSecond": 210,
+   "damagePerHit": 189,
+   "hitpoints": 3300,
+   "upgradeCost": 60000,
+   "upgradeTimeSeconds": 259200,
+   "petHouseLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "damagePerSecond": 220,
+   "damagePerHit": 198,
+   "hitpoints": 3400,
+   "upgradeCost": 70000,
+   "upgradeTimeSeconds": 302400,
+   "petHouseLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "damagePerSecond": 230,
+   "damagePerHit": 207,
+   "hitpoints": 3500,
+   "upgradeCost": 80000,
+   "upgradeTimeSeconds": 345600,
+   "petHouseLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "damagePerSecond": 240,
+   "damagePerHit": 216,
+   "hitpoints": 3600,
+   "upgradeCost": 90000,
+   "upgradeTimeSeconds": 388800,
+   "petHouseLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "damagePerSecond": 260,
+   "damagePerHit": 234,
+   "hitpoints": 3700,
+   "upgradeCost": 100000,
+   "upgradeTimeSeconds": 432000,
+   "petHouseLevelRequired": 1
+  },
+  {
+   "level": 11,
+   "damagePerSecond": 290,
+   "damagePerHit": 261,
+   "hitpoints": 3850,
+   "upgradeCost": 110000,
+   "upgradeTimeSeconds": 475200,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 12,
+   "damagePerSecond": 310,
+   "damagePerHit": 279,
+   "hitpoints": 3950,
+   "upgradeCost": 120000,
+   "upgradeTimeSeconds": 518400,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 13,
+   "damagePerSecond": 330,
+   "damagePerHit": 297,
+   "hitpoints": 4100,
+   "upgradeCost": 130000,
+   "upgradeTimeSeconds": 561600,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 14,
+   "damagePerSecond": 360,
+   "damagePerHit": 324,
+   "hitpoints": 4300,
+   "upgradeCost": 140000,
+   "upgradeTimeSeconds": 604800,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 15,
+   "damagePerSecond": 400,
+   "damagePerHit": 360,
+   "hitpoints": 4500,
+   "upgradeCost": 150000,
+   "upgradeTimeSeconds": 648000,
+   "petHouseLevelRequired": 5
+  }
+ ],
+ "subpages": [],
+ "mismatches": []
+}

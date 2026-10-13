@@ -1,0 +1,448 @@
+{
+  "effects": {
+    "Building Destroyed": [
+      {
+        "Name": "Building Destroyed",
+        "ParticleEmitter": "Building Destroyed",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/building_destroyed_01.ogg",
+        "Volume": "80",
+        "MinPitch": "85",
+        "MaxPitch": "95",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Smoke",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Wind Machine Attack": [
+      {
+        "Name": "Wind Machine Attack",
+        "ParticleEmitter": "wind_attack_particle",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "TRUE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "TRUE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/air_cannon_fire_04.ogg",
+        "Volume": "90",
+        "MinPitch": "95",
+        "MaxPitch": "105",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Wind Machine Pickup": [
+      {
+        "Name": "Wind Machine Pickup",
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "None",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/air_cannon_pickup_03.ogg",
+        "Volume": "70",
+        "MinPitch": "95",
+        "MaxPitch": "105",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Wind Machine Place": [
+      {
+        "Name": "Wind Machine Place",
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "None",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/air_cannon_place_02.ogg",
+        "Volume": "80",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ]
+  },
+  "particles": {
+    "Building Destroyed": [
+      {
+        "Name": "Building Destroyed",
+        "ParticleCount": "30",
+        "EmissionTime": "1",
+        "MinLife": "700",
+        "MaxLife": "1200",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "30",
+        "MaxVertAngle": "90",
+        "MinSpeed": "300",
+        "MaxSpeed": "1200",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "3000",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "TRUE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "debris1",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "0",
+        "Slowdown": "300",
+        "StartScale": "70",
+        "EndScale": "100",
+        "MinRotate": "20",
+        "MaxRotate": "90",
+        "ParticleFadeOutTime": "400",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "-180",
+        "StartAngleMax": "180",
+        "ScaleRandomMin": "80",
+        "ScaleRandomMax": "120",
+        "Alpha": "100",
+        "StartRadiusMin": "50",
+        "StartRadiusMax": "50"
+      },
+      {
+        "ParticleExportName": "debris2",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris3",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris4",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris5",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris6",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris7",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris8",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris9",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris10",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris11",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris12",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris13",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris14",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris15",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris16",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris17",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris18",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris19",
+        "AdditiveBlend": "FALSE"
+      }
+    ],
+    "Grass": [
+      {
+        "Name": "Grass",
+        "ParticleCount": "3",
+        "EmissionTime": "200",
+        "MinLife": "200",
+        "MaxLife": "600",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "20",
+        "MaxVertAngle": "90",
+        "MinSpeed": "200",
+        "MaxSpeed": "780",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "3000",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "g1",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "40",
+        "Slowdown": "0",
+        "StartScale": "30",
+        "EndScale": "60",
+        "MinRotate": "-30",
+        "MaxRotate": "30",
+        "ParticleFadeOutTime": "300",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "200",
+        "StartRadiusMax": "200"
+      },
+      {
+        "ParticleExportName": "g2",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "g3",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "g4",
+        "AdditiveBlend": "FALSE"
+      }
+    ],
+    "Smoke": [
+      {
+        "Name": "Smoke",
+        "ParticleCount": "10",
+        "EmissionTime": "100",
+        "MinLife": "1500",
+        "MaxLife": "2100",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "45",
+        "MaxVertAngle": "90",
+        "MinSpeed": "4000",
+        "MaxSpeed": "5000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "smoke01",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "300",
+        "Slowdown": "0",
+        "StartScale": "100",
+        "EndScale": "100",
+        "MinRotate": "-10",
+        "MaxRotate": "10",
+        "ParticleFadeOutTime": "3000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "-90",
+        "StartAngleMax": "90",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "40",
+        "StartRadiusMax": "40"
+      }
+    ],
+    "wind_attack_particle": [
+      {
+        "Name": "wind_attack_particle",
+        "ParticleCount": "10",
+        "EmissionTime": "10",
+        "MinLife": "800",
+        "MaxLife": "1500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "10",
+        "MaxSpeed": "20",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "100",
+        "TargetedEndZ": "0",
+        "Gravity": "-100",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "soft_smoke1",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "200",
+        "Slowdown": "0",
+        "StartScale": "5",
+        "EndScale": "33",
+        "MinRotate": "-180",
+        "MaxRotate": "180",
+        "ParticleFadeOutTime": "1800",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "1",
+        "FadeOutTime": "600",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "40",
+        "StartRadiusMax": "40"
+      }
+    ]
+  },
+  "sounds": {
+    "sfx/air_cannon_fire_04.ogg": {
+      "path": "assets/buildings/air-sweeper-native/air_cannon_fire_04.ogg",
+      "sha256": "795b231e88fb8178a93a0d9b90b1a505eb573336bf27f930d7cddfbaa893540e"
+    },
+    "sfx/air_cannon_pickup_03.ogg": {
+      "path": "assets/buildings/air-sweeper-native/air_cannon_pickup_03.ogg",
+      "sha256": "338e634b18c43c108ea5dec730fecb56737a4707bf70f9599f120f503fa662f7"
+    },
+    "sfx/air_cannon_place_02.ogg": {
+      "path": "assets/buildings/air-sweeper-native/air_cannon_place_02.ogg",
+      "sha256": "d6826884df5c66e012c782b8ab76a7fc9f26df89516ec651ffd3c6a93cc9e4e5"
+    },
+    "sfx/building_destroyed_01.ogg": {
+      "path": "assets/buildings/air-sweeper-native/building_destroyed_01.ogg",
+      "sha256": "fd8295765aa86ff5c7c6be1159cd8fc97aed3c858c29fbdb1af5e3d5c5ce7f04"
+    }
+  }
+}

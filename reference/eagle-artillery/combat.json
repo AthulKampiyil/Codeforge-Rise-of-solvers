@@ -1,0 +1,421 @@
+{
+  "globalId": 1000031,
+  "size": 4,
+  "levels": [
+    {
+      "level": 1,
+      "townhall": 11,
+      "hp": 4000,
+      "damage": 20,
+      "spellDamage": 225,
+      "projectile": "Artillery Ammo1",
+      "projectileExport": "doom_ammo_big_asset_lvl1",
+      "body": "doom_cannon_lvl1",
+      "upgrade": "doom_cannon_lvl1_upgrade"
+    },
+    {
+      "level": 2,
+      "townhall": 11,
+      "hp": 4400,
+      "damage": 25,
+      "spellDamage": 250,
+      "projectile": "Artillery Ammo2",
+      "projectileExport": "doom_ammo_big_asset_lvl2",
+      "body": "doom_cannon_lvl2",
+      "upgrade": "doom_cannon_lvl2_upgrade"
+    },
+    {
+      "level": 3,
+      "townhall": 12,
+      "hp": 4800,
+      "damage": 30,
+      "spellDamage": 275,
+      "projectile": "Artillery Ammo3",
+      "projectileExport": "doom_ammo_big_asset_lvl2",
+      "body": "doom_cannon_lvl3",
+      "upgrade": "doom_cannon_lvl3_upgrade"
+    },
+    {
+      "level": 4,
+      "townhall": 13,
+      "hp": 5200,
+      "damage": 35,
+      "spellDamage": 350,
+      "projectile": "Artillery Ammo4",
+      "projectileExport": "doom_ammo_big_asset_lvl2",
+      "body": "doom_cannon_lvl4",
+      "upgrade": "doom_cannon_lvl4_upgrade"
+    },
+    {
+      "level": 5,
+      "townhall": 14,
+      "hp": 5600,
+      "damage": 40,
+      "spellDamage": 425,
+      "projectile": "Artillery Ammo5",
+      "projectileExport": "doom_ammo_big_asset_lvl2",
+      "body": "doom_cannon_lvl5",
+      "upgrade": "doom_cannon_lvl5_upgrade"
+    },
+    {
+      "level": 6,
+      "townhall": 15,
+      "hp": 5900,
+      "damage": 45,
+      "spellDamage": 475,
+      "projectile": "Artillery Ammo6",
+      "projectileExport": "doom_ammo_big_asset_lvl2",
+      "body": "doom_cannon_lvl6",
+      "upgrade": "doom_cannon_lvl6_upgrade"
+    },
+    {
+      "level": 7,
+      "townhall": 16,
+      "hp": 6200,
+      "damage": 50,
+      "spellDamage": 525,
+      "projectile": "Artillery Ammo7",
+      "projectileExport": "doom_ammo_big_asset_lvl2",
+      "body": "doom_cannon_lvl7",
+      "upgrade": "doom_cannon_lvl6_upgrade"
+    }
+  ],
+  "attackRange": 5000,
+  "minAttackRange": 700,
+  "attackSpeedMs": 10000,
+  "cooldownOverrideMs": 6992,
+  "damageRadius": 300,
+  "pushback": 50,
+  "pushbackHousingLimit": 3,
+  "ammunition": 30,
+  "targetGroups": true,
+  "targetGroupsRadius": 500,
+  "wakeUpSpeedMs": 1125,
+  "wakeUpSpace": 200,
+  "burstCount": 3,
+  "burstDelayMs": 750,
+  "airTargets": true,
+  "groundTargets": true,
+  "projectile": {
+    "Speed": "500",
+    "StartHeight": "200",
+    "StartOffset": "0",
+    "IsBallistic": "TRUE",
+    "BallisticHeight": "5000",
+    "TrajectoryStyle": "1",
+    "FixedTravelTime": "5000",
+    "DamageDelay": "580",
+    "UseRotate": "TRUE",
+    "UseTopLayer": "TRUE",
+    "Scale": "100",
+    "Effect": "Artillery Trail",
+    "DontTrackTarget": "FALSE",
+    "HitSpellInheritAffectType": "FALSE"
+  },
+  "hitSpell": {
+    "radius": 75,
+    "numberOfHits": 1,
+    "timeBetweenHitsMs": 150,
+    "hitTimeMs": 0,
+    "deployTimeMs": 0,
+    "hitEffect": "Artillery Hit"
+  },
+  "effects": {
+    "attack": "Artillery Attack",
+    "hit": "Ancient Hit",
+    "preAttack": "Artillery PreAttack",
+    "noAmmo": "Artillery No Ammo",
+    "destroy": "Building Destroyed",
+    "trail": "Artillery Trail",
+    "spellHit": "Artillery Hit"
+  },
+  "exports": {
+    "base": "eagle_artillery_base",
+    "ruin": "destroyedBuilding_4m_base_rock",
+    "beamUp": "beam_up",
+    "beamDown": "beam_down"
+  },
+  "housing": {
+    "troops": {
+      "swordsman": {
+        "source": "Barbarian",
+        "housingSpace": 1,
+        "enemyGroupWeight": 100
+      },
+      "archer": {
+        "source": "Archer",
+        "housingSpace": 1,
+        "enemyGroupWeight": 100
+      },
+      "giant": {
+        "source": "Giant",
+        "housingSpace": 5,
+        "enemyGroupWeight": 500
+      },
+      "wizard": {
+        "source": "Wizard",
+        "housingSpace": 4,
+        "enemyGroupWeight": 200
+      },
+      "balloon": {
+        "source": "Balloon",
+        "housingSpace": 5,
+        "enemyGroupWeight": 500
+      },
+      "goblin": {
+        "source": "Goblin",
+        "housingSpace": 1,
+        "enemyGroupWeight": 50
+      },
+      "wallbreaker": {
+        "source": "Wall Breaker",
+        "housingSpace": 2,
+        "enemyGroupWeight": 50
+      },
+      "healer": {
+        "source": "Healer",
+        "housingSpace": 14,
+        "enemyGroupWeight": 30
+      },
+      "dragon": {
+        "source": "Dragon",
+        "housingSpace": 20,
+        "enemyGroupWeight": 2000
+      },
+      "pekka": {
+        "source": "PEKKA",
+        "housingSpace": 25,
+        "enemyGroupWeight": 2000
+      }
+    },
+    "hero": {
+      "source": "Barbarian King",
+      "housingSpace": 25,
+      "enemyGroupWeight": 2500
+    },
+    "spells": {
+      "rage": {
+        "source": "Rage",
+        "housingSpace": 2
+      },
+      "heal": {
+        "source": "Healing",
+        "housingSpace": 2
+      },
+      "lightning": {
+        "source": "Lightning",
+        "housingSpace": 1
+      },
+      "freeze": {
+        "source": "Freeze",
+        "housingSpace": 1
+      },
+      "invisibility": {
+        "source": "Invisibility",
+        "housingSpace": 1
+      },
+      "jump": {
+        "source": "Jump",
+        "housingSpace": 2
+      },
+      "clone": {
+        "source": "Clone",
+        "housingSpace": 3
+      },
+      "recall": {
+        "source": "Recall",
+        "housingSpace": 2
+      },
+      "revive": {
+        "source": "Revive",
+        "housingSpace": 2
+      }
+    },
+    "globals": {
+      "UNIT_HOUSING_COST_MULTIPLIER": 100,
+      "SPELL_HOUSING_COST_MULTIPLIER": 500,
+      "HERO_HOUSING_COST_MULTIPLIER": 100,
+      "ALLIANCE_UNIT_HOUSING_COST_MULTIPLIER": 0,
+      "PET_HOUSING_COST_MULTIPLIER": 0,
+      "UNIT_HOUSING_COST_MULTIPLIER_FOR_TOTAL": 100,
+      "SPELL_HOUSING_COST_MULTIPLIER_FOR_TOTAL": 0,
+      "HERO_HOUSING_COST_MULTIPLIER_FOR_TOTAL": 100,
+      "ALLIANCE_UNIT_HOUSING_COST_MULTIPLIER_FOR_TOTAL": 0
+    }
+  },
+  "turret": {
+    "1": {
+      "export": "doom_cannon_lvl1",
+      "upgrade": "doom_cannon_lvl1_upgrade",
+      "labels": {
+        "idle": 0,
+        "activating_start": 1,
+        "25": 25,
+        "50": 50,
+        "75": 75,
+        "activating_end": 100,
+        "battleidle_start": 101,
+        "battleidle_end": 121,
+        "attack_start": 122,
+        "attack_end": 123,
+        "load_start": 124,
+        "load_end": 232,
+        "deactivate_start": 233,
+        "deactivating_end": 241,
+        "empty": 242
+      }
+    },
+    "2": {
+      "export": "doom_cannon_lvl2",
+      "upgrade": "doom_cannon_lvl2_upgrade",
+      "labels": {
+        "idle": 0,
+        "activating_start": 1,
+        "25": 25,
+        "50": 50,
+        "75": 75,
+        "activating_end": 100,
+        "battleidle_start": 101,
+        "battleidle_end": 107,
+        "attack_start": 122,
+        "attack_end": 123,
+        "load_start": 124,
+        "load_end": 232,
+        "deactivate_start": 233,
+        "deactivating_end": 241,
+        "empty": 242
+      }
+    },
+    "3": {
+      "export": "doom_cannon_lvl3",
+      "upgrade": "doom_cannon_lvl3_upgrade",
+      "labels": {
+        "idle": 0,
+        "activating_start": 1,
+        "25": 25,
+        "50": 50,
+        "75": 75,
+        "activating_end": 100,
+        "battleidle_start": 101,
+        "battleidle_end": 107,
+        "attack_start": 122,
+        "attack_end": 123,
+        "load_start": 124,
+        "load_end": 232,
+        "deactivate_start": 233,
+        "deactivating_end": 241,
+        "empty": 242
+      }
+    },
+    "4": {
+      "export": "doom_cannon_lvl4",
+      "upgrade": "doom_cannon_lvl4_upgrade",
+      "labels": {
+        "idle": 0,
+        "activating_start": 1,
+        "25": 25,
+        "50": 50,
+        "75": 75,
+        "activating_end": 100,
+        "battleidle_start": 101,
+        "battleidle_end": 107,
+        "attack_start": 122,
+        "attack_end": 123,
+        "load_start": 124,
+        "load_end": 232,
+        "deactivate_start": 233,
+        "deactivating_end": 241,
+        "empty": 242
+      }
+    },
+    "5": {
+      "export": "doom_cannon_lvl5",
+      "upgrade": "doom_cannon_lvl5_upgrade",
+      "labels": {
+        "idle": 0,
+        "activating_start": 1,
+        "25": 25,
+        "50": 50,
+        "75": 75,
+        "activating_end": 100,
+        "battleidle_start": 101,
+        "battleidle_end": 107,
+        "attack_start": 122,
+        "attack_end": 123,
+        "load_start": 124,
+        "load_end": 232,
+        "deactivate_start": 233,
+        "deactivating_end": 241,
+        "empty": 242
+      }
+    },
+    "6": {
+      "export": "doom_cannon_lvl6",
+      "upgrade": "doom_cannon_lvl6_upgrade",
+      "labels": {
+        "idle": 0,
+        "activating_start": 1,
+        "25": 25,
+        "50": 50,
+        "75": 75,
+        "activating_end": 100,
+        "battleidle_start": 101,
+        "battleidle_end": 107,
+        "attack_start": 122,
+        "attack_end": 123,
+        "load_start": 124,
+        "load_end": 232,
+        "deactivate_start": 233,
+        "deactivating_end": 241,
+        "empty": 242
+      }
+    },
+    "7": {
+      "export": "doom_cannon_lvl7",
+      "upgrade": "doom_cannon_lvl6_upgrade",
+      "labels": {
+        "idle": 0,
+        "activating_start": 1,
+        "25": 25,
+        "50": 50,
+        "75": 75,
+        "activating_end": 100,
+        "battleidle_start": 101,
+        "battleidle_end": 107,
+        "attack_start": 122,
+        "attack_end": 123,
+        "load_start": 124,
+        "load_end": 232,
+        "deactivate_start": 233,
+        "deactivating_end": 241,
+        "empty": 242
+      }
+    }
+  },
+  "beams": {
+    "ExportNameBeamStart": {
+      "export": "beam_up",
+      "frames": 177,
+      "labels": {
+        "warmup": 0,
+        "warmupend": 99,
+        "loop": 100,
+        "loopend": 169,
+        "fadestart": 170,
+        "fadeend": 176
+      }
+    },
+    "ExportNameBeamEnd": {
+      "export": "beam_down",
+      "frames": 239,
+      "labels": {
+        "warmup": 0,
+        "warmupend": 99,
+        "loop": 100,
+        "loopend": 231,
+        "fadestart": 232,
+        "fadeend": 238
+      }
+    }
+  }
+}

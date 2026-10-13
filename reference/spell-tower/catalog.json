@@ -1,0 +1,5721 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "fingerprint.json": "ecb5b05d632831cd706e4e993158b63635445257ad254bec97c371b078e3044b",
+    "sc/buildings.sc": "f73ec949fc070bc03175d6bb3af8b62d8f607094bf2b343c9846a499a35be0ed",
+    "sc/buildings_1.sctx": "e931b617d748a541da10cfe7126b8b3fb77d13486ae0d97beb4abde2ef828f4a",
+    "sc/buildings_8.sctx": "588eba7d5739a5d9b53d3e14f2ab83bd170cad735363a81dd37bea7bcc0bb3bd",
+    "sc/buildings_17.sctx": "bce86a6857d43a6705833a6cb0a5ec269d8ff9990e8e15c5b9011422d59ab201",
+    "sc/buildings_25.sctx": "c290a82b3940513f16b55dba2305e875d923d4120c5997b6b6908c680ec8ca3d",
+    "sc/buildings_39.sctx": "dd27d9612fe135c3be364840eeabe45b53a229b24192246b56a08fa0606fdb16",
+    "logic/buildings.csv": "9aed5fed876e2914a22fa7fed688a651c691ab06170d60e2bda8dc9262fbccb1",
+    "logic/weapons.csv": "38f6891fd14c5287ede72f7a2e873e0648231bf63e29463a9b63f1b8142ec540",
+    "logic/projectiles.csv": "71cda0e457ad88a6772f6421a22419b24d6bcf78d0ed305f09184404889a72dc",
+    "logic/spells.csv": "385159e00327e6a1567cd91f1585b4ed0717d3f4475f0823398243482598289d",
+    "logic/effects.csv": "5c6d5b67d6407345123b8d55872ed77ee6697b466d20d1fa21e25a723c511e9f",
+    "logic/globals.csv": "16210fc28bfb86d00ea04d581a99fe98e128172017b2d4f637b8848c0cf20087",
+    "csv/particle_emitters.csv": "8d80bbf714386c4f24e6aed8f2eef671a2eac5c3b3ad41e4d275b757ced64cef",
+    "sfx/bottle_rage_magic_07v2.ogg": "0bc863901ae01414498d7c5a7bbcd37500fd6ef7b11769c13479e1dc6856693e",
+    "sfx/building_destroyed_01.ogg": "fd8295765aa86ff5c7c6be1159cd8fc97aed3c858c29fbdb1af5e3d5c5ce7f04",
+    "sfx/generic_hit_01.ogg": "5fca48e71d21be79eb6d40a1ca1ad3a002e3d69ba72388b2eb6a4d2ec10e5934",
+    "sfx/invis_spell_01.ogg": "266ee80074c090c734ea9481bff5b86a08eb1d07208730ee2ec3a8faa0b553c9",
+    "sfx/spell_tower_pickup_01.ogg": "4a085542b96e93b8492df95fd1bd965fb2b58ce757dca1e98a576d147b50e363",
+    "sfx/spell_tower_place_01.ogg": "4023132f45b405ac78105566b01f973a8b4a0e3dddc6a5d23dbcf99708ea4951",
+    "sfx/vial_poison_hit_gound_01.ogg": "b32c7facbb20c61c06b6a4c97dee8b59978e514a52f3753203f7dd90e3da8c04"
+  },
+  "building": [
+    {
+      "Name": "Spell Tower",
+      "GlobalID": "1000072",
+      "BuildingLevel": "1",
+      "TID": "TID_BUILDING_SPELL_TOWER",
+      "InfoTID": "TID_BUILDING_SPELL_TOWER_INFO",
+      "BuildingClass": "Defense",
+      "SWF": "sc/buildings.sc",
+      "ExportName": "spell_tower_lvl1",
+      "ExportNameConstruction": "generic_construction_state2",
+      "BuildTimeD": "7",
+      "BuildTimeH": "0",
+      "BuildTimeM": "0",
+      "BuildTimeS": "0",
+      "BuildResource": "Gold",
+      "BuildCost": "9000000",
+      "TownHallLevel": "15",
+      "CapitalHallLevel": "15",
+      "Width": "2",
+      "Height": "2",
+      "ExportNameBuildAnim": "air_mortar_upg",
+      "Hitpoints": "2500",
+      "RegenTime": "20",
+      "AttackRange": "800",
+      "DestroyEffect": "Building Destroyed",
+      "HitEffect": "Generic Hit",
+      "ExportNameDamaged": "destroyedBuilding_2l_pit_rockwood",
+      "BuildingW": "1",
+      "BuildingH": "1",
+      "ExportNameBase": "dark_tower_base",
+      "PickUpEffect": "Spell Tower Pickup",
+      "PlacingEffect": "Spell Tower Placing",
+      "StrengthWeight": "6250",
+      "HintPriority": "150",
+      "PreviewScenario": "NoCombatBuilding",
+      "UnlockWeaponMode": "SpellTowerRage",
+      "TargetingImmunityTotems": "TRUE"
+    },
+    {
+      "BuildingLevel": "2",
+      "ExportName": "spell_tower_lvl2_rage",
+      "BuildTimeD": "8",
+      "BuildTimeH": "0",
+      "BuildTimeM": "0",
+      "BuildTimeS": "0",
+      "BuildCost": "11000000",
+      "TownHallLevel": "15",
+      "CapitalHallLevel": "15",
+      "ExportNameBuildAnim": "air_mortar_upg",
+      "Hitpoints": "2800",
+      "StrengthWeight": "9800",
+      "PreviewScenario": "NoCombatBuilding",
+      "UnlockWeaponMode": "SpellTowerPoison",
+      "TargetingImmunityTotems": "TRUE"
+    },
+    {
+      "BuildingLevel": "3",
+      "ExportName": "spell_tower_lvl3_rage",
+      "BuildTimeD": "8",
+      "BuildTimeH": "12",
+      "BuildTimeM": "0",
+      "BuildTimeS": "0",
+      "BuildCost": "12000000",
+      "TownHallLevel": "15",
+      "CapitalHallLevel": "15",
+      "ExportNameBuildAnim": "air_mortar_upg",
+      "Hitpoints": "3100",
+      "StrengthWeight": "13950",
+      "PreviewScenario": "NoCombatBuilding",
+      "UnlockWeaponMode": "SpellTowerInvisibility",
+      "TargetingImmunityTotems": "TRUE"
+    },
+    {
+      "BuildingLevel": "4",
+      "ExportName": "spell_tower_lvl4_earthquake",
+      "BuildTimeD": "10",
+      "BuildTimeH": "0",
+      "BuildTimeM": "0",
+      "BuildTimeS": "0",
+      "BuildCost": "27000000",
+      "TownHallLevel": "17",
+      "CapitalHallLevel": "17",
+      "ExportNameBuildAnim": "air_mortar_upg",
+      "Hitpoints": "3200",
+      "StrengthWeight": "15000",
+      "PreviewScenario": "NoCombatBuilding",
+      "UnlockWeaponMode": "SpellTowerEarthquake",
+      "TargetingImmunityTotems": "TRUE"
+    }
+  ],
+  "weapons": {
+    "rage": [
+      {
+        "Name": "SpellTowerRage",
+        "Level": "1",
+        "TID": "TID_WEAPON_RAGE_SPELL",
+        "InfoTID": "TID_BUILDING_SPELL_TOWER_INFO",
+        "ShortTID": "TID_RAGE_TOWER_SHORT",
+        "SWF": "sc/buildings.sc",
+        "ExportName": "spell_tower_lvl1_rage",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildResource": "Gold",
+        "BuildCost": "0",
+        "AttackRange": "900",
+        "AttackSpeed": "70000",
+        "DPS": "1",
+        "CoolDownOverride": "68800",
+        "Projectile": "SpellTowerRageProjectile",
+        "AirTargets": "TRUE",
+        "GroundTargets": "TRUE",
+        "SelfAsAoeCenter": "TRUE",
+        "CopyOwnerUpgradeLevel": "TRUE",
+        "AttackCenterOnDeath": "TRUE",
+        "HighlightEffectRed": "230",
+        "HighlightEffectGreen": "0",
+        "HighlightEffectBlue": "230",
+        "PreviewScenario": "DefenseSpellTowerRage"
+      },
+      {
+        "Level": "2",
+        "ExportName": "spell_tower_lvl2_rage",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildResource": "Gold",
+        "BuildCost": "0"
+      },
+      {
+        "Level": "3",
+        "ExportName": "spell_tower_lvl3_rage",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildResource": "Gold",
+        "BuildCost": "0"
+      },
+      {
+        "Level": "4",
+        "ExportName": "spell_tower_lvl4_rage",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildResource": "Gold",
+        "BuildCost": "0"
+      }
+    ],
+    "poison": [
+      {
+        "Name": "SpellTowerPoison",
+        "Level": "1",
+        "TID": "TID_WEAPON_POISON_SPELL",
+        "InfoTID": "TID_BUILDING_SPELL_TOWER_INFO",
+        "ShortTID": "TID_POISON_TOWER_SHORT",
+        "SWF": "sc/buildings.sc",
+        "ExportName": "spell_tower_lvl1_poison",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildResource": "Gold",
+        "BuildCost": "0",
+        "AttackRange": "900",
+        "AttackSpeed": "70000",
+        "DPS": "1",
+        "CoolDownOverride": "68800",
+        "Projectile": "SpellTowerPoisonProjectile",
+        "AirTargets": "TRUE",
+        "GroundTargets": "TRUE",
+        "CopyOwnerUpgradeLevel": "TRUE",
+        "AttackCenterOnDeath": "TRUE",
+        "PreviewScenario": "DefenseSpellTowerPoison"
+      },
+      {
+        "Level": "2",
+        "ExportName": "spell_tower_lvl2_poison",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildResource": "Gold",
+        "BuildCost": "0"
+      },
+      {
+        "Level": "3",
+        "ExportName": "spell_tower_lvl3_poison",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildResource": "Gold",
+        "BuildCost": "0"
+      },
+      {
+        "Level": "4",
+        "ExportName": "spell_tower_lvl4_poison",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildResource": "Gold",
+        "BuildCost": "0"
+      }
+    ],
+    "invisibility": [
+      {
+        "Name": "SpellTowerInvisibility",
+        "Level": "1",
+        "TID": "TID_WEAPON_INVISIBILITY_SPELL",
+        "InfoTID": "TID_BUILDING_SPELL_TOWER_INFO",
+        "ShortTID": "TID_INVISIBILITY_TOWER_SHORT",
+        "SWF": "sc/buildings.sc",
+        "ExportName": "spell_tower_lvl1_invisibility",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildResource": "Gold",
+        "BuildCost": "0",
+        "AttackRange": "450",
+        "AttackSpeed": "50000",
+        "DPS": "1",
+        "CoolDownOverride": "48800",
+        "Projectile": "SpellTowerInvisibilityProjectile",
+        "AirTargets": "TRUE",
+        "GroundTargets": "TRUE",
+        "SelfAsAoeCenter": "TRUE",
+        "CustomTargetHitBuildingInRange": "TRUE",
+        "CopyOwnerUpgradeLevel": "TRUE",
+        "AttackCenterOnDeath": "TRUE",
+        "HighlightEffectRed": "0",
+        "HighlightEffectGreen": "210",
+        "HighlightEffectBlue": "180",
+        "PreviewScenario": "DefenseSpellTowerInvisibility"
+      },
+      {
+        "Level": "2",
+        "ExportName": "spell_tower_lvl2_invisibility",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildResource": "Gold",
+        "BuildCost": "0"
+      },
+      {
+        "Level": "3",
+        "ExportName": "spell_tower_lvl3_invisibility",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildResource": "Gold",
+        "BuildCost": "0"
+      },
+      {
+        "Level": "4",
+        "ExportName": "spell_tower_lvl4_invisibility",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildResource": "Gold",
+        "BuildCost": "0"
+      }
+    ]
+  },
+  "weaponGlobalIds": {
+    "rage": 49000009,
+    "poison": 49000008,
+    "invisibility": 49000007
+  },
+  "projectiles": {
+    "rage": [
+      {
+        "Name": "SpellTowerRageProjectile",
+        "SWF": "sc/buildings.sc",
+        "ExportName": "spell_bottle_rage",
+        "ScaleTimeline": "FALSE",
+        "DirectionCount": "0",
+        "ParticleEmitter": "rage_smokeRing5",
+        "RotateEmitter": "FALSE",
+        "RotateEffect": "FALSE",
+        "Speed": "500",
+        "StartHeight": "170",
+        "StartOffset": "0",
+        "IsBallistic": "TRUE",
+        "ShadowSWF": "sc/buildings.sc",
+        "RandomHitPositionOnCharacters": "FALSE",
+        "SmallRandomHitPositionOnBuildings": "FALSE",
+        "UseRotate": "FALSE",
+        "DirectionFrame": "FALSE",
+        "PlayOnce": "FALSE",
+        "UseTopLayer": "TRUE",
+        "Scale": "100",
+        "HitSpell": "Spell Tower Rage",
+        "HitSpellLevel": "1",
+        "HitSpellInheritAffectType": "TRUE",
+        "DontTrackTarget": "TRUE",
+        "BallisticHeight": "300",
+        "TrajectoryStyle": "4",
+        "FixedTravelTime": "800",
+        "MaxTravelTime": "0",
+        "DamageDelay": "0",
+        "DestroyedEffect": "Elixir Storage Destroyed",
+        "TargetPosRandomRadius": "0",
+        "SlowdownDefencePercent": "0",
+        "UseNormalizeLenghtFix": "FALSE",
+        "MaxBounceDistance": "0",
+        "StopToTargetTime": "0",
+        "SmoothDamage": "FALSE",
+        "StartOffsetFromGunBone": "FALSE",
+        "PenetratingHitBoxWidth": "0",
+        "MaxHitBuildings": "0",
+        "MaxHitObjects": "0",
+        "ReturningProjectile": "FALSE",
+        "RetargetRadius": "0",
+        "RetargetTimer": "0",
+        "UseParentAnimation3D": "FALSE",
+        "DepthBiasFront": "0",
+        "DepthBiasBack": "0",
+        "PullTarget": "FALSE",
+        "ProjectileEffectOffset": "0",
+        "SpellsBoostedByParent": "TRUE"
+      }
+    ],
+    "poison": [
+      {
+        "Name": "SpellTowerPoisonProjectile",
+        "SWF": "sc/buildings.sc",
+        "ExportName": "spell_bottle_poison",
+        "ScaleTimeline": "FALSE",
+        "DirectionCount": "0",
+        "ParticleEmitter": "Toxic_skull",
+        "RotateEmitter": "FALSE",
+        "RotateEffect": "FALSE",
+        "Speed": "100",
+        "StartHeight": "146",
+        "StartOffset": "0",
+        "IsBallistic": "TRUE",
+        "ShadowSWF": "sc/buildings.sc",
+        "RandomHitPositionOnCharacters": "FALSE",
+        "SmallRandomHitPositionOnBuildings": "FALSE",
+        "UseRotate": "FALSE",
+        "DirectionFrame": "FALSE",
+        "PlayOnce": "FALSE",
+        "UseTopLayer": "TRUE",
+        "Scale": "100",
+        "HitSpell": "Spell Tower Poison",
+        "HitSpellLevel": "1",
+        "HitSpellInheritAffectType": "TRUE",
+        "DontTrackTarget": "TRUE",
+        "BallisticHeight": "300",
+        "TrajectoryStyle": "4",
+        "FixedTravelTime": "800",
+        "MaxTravelTime": "0",
+        "DamageDelay": "0",
+        "DestroyedEffect": "Elixir Storage Destroyed",
+        "TargetPosRandomRadius": "0",
+        "SlowdownDefencePercent": "0",
+        "UseNormalizeLenghtFix": "FALSE",
+        "MaxBounceDistance": "0",
+        "StopToTargetTime": "0",
+        "SmoothDamage": "FALSE",
+        "StartOffsetFromGunBone": "FALSE",
+        "PenetratingHitBoxWidth": "0",
+        "MaxHitBuildings": "0",
+        "MaxHitObjects": "0",
+        "ReturningProjectile": "FALSE",
+        "RetargetRadius": "0",
+        "RetargetTimer": "0",
+        "UseParentAnimation3D": "FALSE",
+        "DepthBiasFront": "0",
+        "DepthBiasBack": "0",
+        "PullTarget": "FALSE",
+        "ProjectileEffectOffset": "0",
+        "SpellsBoostedByParent": "TRUE"
+      }
+    ],
+    "invisibility": [
+      {
+        "Name": "SpellTowerInvisibilityProjectile",
+        "SWF": "sc/buildings.sc",
+        "ExportName": "spell_bottle_invisibility",
+        "ScaleTimeline": "FALSE",
+        "DirectionCount": "0",
+        "RotateEmitter": "FALSE",
+        "RotateEffect": "FALSE",
+        "Speed": "100",
+        "StartHeight": "110",
+        "StartOffset": "0",
+        "IsBallistic": "TRUE",
+        "ShadowSWF": "sc/buildings.sc",
+        "RandomHitPositionOnCharacters": "FALSE",
+        "SmallRandomHitPositionOnBuildings": "FALSE",
+        "UseRotate": "FALSE",
+        "DirectionFrame": "FALSE",
+        "PlayOnce": "FALSE",
+        "UseTopLayer": "FALSE",
+        "Scale": "100",
+        "HitSpell": "Spell Tower Invisibility",
+        "HitSpellLevel": "1",
+        "HitSpellInheritAffectType": "TRUE",
+        "DontTrackTarget": "TRUE",
+        "BallisticHeight": "300",
+        "TrajectoryStyle": "4",
+        "FixedTravelTime": "800",
+        "MaxTravelTime": "0",
+        "DamageDelay": "0",
+        "DestroyedEffect": "Elixir Storage Destroyed",
+        "TargetPosRandomRadius": "0",
+        "SlowdownDefencePercent": "0",
+        "UseNormalizeLenghtFix": "FALSE",
+        "MaxBounceDistance": "0",
+        "StopToTargetTime": "0",
+        "SmoothDamage": "FALSE",
+        "StartOffsetFromGunBone": "FALSE",
+        "PenetratingHitBoxWidth": "0",
+        "MaxHitBuildings": "0",
+        "MaxHitObjects": "0",
+        "ReturningProjectile": "FALSE",
+        "RetargetRadius": "0",
+        "RetargetTimer": "0",
+        "UseParentAnimation3D": "FALSE",
+        "DepthBiasFront": "0",
+        "DepthBiasBack": "0",
+        "PullTarget": "FALSE",
+        "ProjectileEffectOffset": "0",
+        "SpellsBoostedByParent": "TRUE"
+      }
+    ]
+  },
+  "spells": {
+    "rage": [
+      {
+        "Name": "Spell Tower Rage",
+        "GlobalID": "26000046",
+        "Level": "1",
+        "TID": "TID_HASTE_TOWER",
+        "InfoTID": "TID_HASTE_INFO",
+        "DisableProduction": "TRUE",
+        "SpellForgeLevel": "1",
+        "LaboratoryLevel": "1",
+        "HousingSpace": "2",
+        "DeployTimeMS": "0",
+        "ChargingTimeMS": "300",
+        "HitTimeMS": "400",
+        "UpgradeTimeH": "12",
+        "UpgradeResource": "Elixir",
+        "UpgradeCost": "400000",
+        "BoostTimeMS": "1000",
+        "SpeedBoost": "30",
+        "SpeedBoost2": "15",
+        "DamageBoostPercent": "60",
+        "BuildingDamageBoostPercent": "60",
+        "Radius": "500",
+        "NumberOfHits": "60",
+        "RandomRadius": "400",
+        "TimeBetweenHitsMS": "300",
+        "IconSWF": "sc/ui.sc",
+        "IconExportName": "icon_spell_rage",
+        "BigPicture": "icon_spell_rage",
+        "DeployEffect": "Rage deploy ST",
+        "DeployEffect2": "Rage deploy top",
+        "RandomRadiusAffectsOnlyGfx": "TRUE",
+        "TargetInfoString": "TID_INFO_TARGET_TYPE_GROUND_AND_AIR",
+        "ImmunitySiegeMachines": "TRUE"
+      }
+    ],
+    "poison": [
+      {
+        "Name": "Spell Tower Poison",
+        "GlobalID": "26000044",
+        "Level": "1",
+        "TID": "TID_POISON_CLOUD_TOWER",
+        "InfoTID": "TID_POISON_CLOUD_INFO",
+        "DisableProduction": "TRUE",
+        "SpellForgeLevel": "1",
+        "LaboratoryLevel": "1",
+        "HousingSpace": "1",
+        "DeployTimeMS": "0",
+        "ChargingTimeMS": "0",
+        "HitTimeMS": "0",
+        "UpgradeTimeH": "8",
+        "UpgradeResource": "DarkElixir",
+        "UpgradeCost": "12000",
+        "BoostTimeMS": "500",
+        "SpeedBoost": "-35",
+        "SpeedBoost2": "-35",
+        "Radius": "500",
+        "NumberOfHits": "30",
+        "RandomRadius": "0",
+        "TimeBetweenHitsMS": "400",
+        "IconSWF": "sc/ui.sc",
+        "IconExportName": "icon_spell_toxic",
+        "BigPicture": "icon_spell_toxic",
+        "DeployEffect": "Toxic deploy ground halloween ST",
+        "DeployEffect2": "Toxic deploy halloween ST",
+        "RandomRadiusAffectsOnlyGfx": "TRUE",
+        "TargetInfoString": "TID_INFO_TARGET_TYPE_GROUND_AND_AIR",
+        "HeroDamageMultiplier": "20",
+        "PoisonDPS": "60",
+        "PoisonIncreaseSlowly": "FALSE",
+        "AttackSpeedBoost": "-25",
+        "BoostLinkedToPoison": "TRUE",
+        "PoisonAffectAir": "TRUE",
+        "BoostDefenders": "TRUE",
+        "ImmunitySiegeMachines": "TRUE",
+        "ImmunityTH_CC": "TRUE",
+        "ImmunityStorages": "TRUE",
+        "ImmunityWalls": "TRUE",
+        "ImmunityOtherBuildings": "TRUE"
+      }
+    ],
+    "invisibility": [
+      {
+        "Name": "Spell Tower Invisibility",
+        "GlobalID": "26000048",
+        "Level": "1",
+        "TID": "TID_INVISIBILITY_SPELL_TOWER",
+        "InfoTID": "TID_INVISIBILITY_SPELL_INFO",
+        "DisableProduction": "TRUE",
+        "SpellForgeLevel": "1",
+        "LaboratoryLevel": "1",
+        "HousingSpace": "1",
+        "DeployTimeMS": "0",
+        "ChargingTimeMS": "300",
+        "HitTimeMS": "400",
+        "UpgradeTimeH": "192",
+        "UpgradeResource": "Elixir",
+        "UpgradeCost": "8000000",
+        "BoostTimeMS": "0",
+        "SpeedBoost": "0",
+        "SpeedBoost2": "0",
+        "Damage": "0",
+        "Radius": "450",
+        "NumberOfHits": "18",
+        "RandomRadius": "200",
+        "TimeBetweenHitsMS": "250",
+        "IconSWF": "sc/ui.sc",
+        "IconExportName": "icon_spell_invisibility",
+        "BigPicture": "icon_spell_invisibility",
+        "DeployEffect": "Invisibility ST",
+        "RandomRadiusAffectsOnlyGfx": "TRUE",
+        "TargetInfoString": "TID_INFO_TARGET_TYPE_GROUND_AND_AIR",
+        "InvisibilityTime": "600",
+        "ImmunitySiegeMachines": "TRUE",
+        "ImmunityWalls": "TRUE"
+      }
+    ]
+  },
+  "globals": {
+    "rage": 50,
+    "speed": 50
+  },
+  "effects": {
+    "Building Destroyed": [
+      {
+        "Name": "Building Destroyed",
+        "ParticleEmitter": "Building Destroyed",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/building_destroyed_01.ogg",
+        "Volume": "80",
+        "MinPitch": "85",
+        "MaxPitch": "95",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Smoke",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Elixir Storage Destroyed": [
+      {
+        "Name": "Elixir Storage Destroyed",
+        "ParticleEmitter": "Elixir Storage Destroyed",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/building_destroyed_01.ogg",
+        "Volume": "80",
+        "MinPitch": "85",
+        "MaxPitch": "95",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Smoke",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Generic Hit": [
+      {
+        "Name": "Generic Hit",
+        "ParticleEmitter": "DefenceHit",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/generic_hit_01.ogg",
+        "Volume": "30",
+        "MinPitch": "95",
+        "MaxPitch": "105",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Invisibility ST": [
+      {
+        "Name": "Invisibility ST",
+        "ParticleEmitter": "invisibility_lvl6_ring",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/invis_spell_01.ogg",
+        "Volume": "90",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "113",
+        "LifeTimeScale": "90",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Explosion_3",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Explosion_flash",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "invisibility_lvl6_ring2",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "invisibility_lvl6_ring3",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "invisibility_lvl6_ring4",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Fire_balls",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "invisibility_lvl6_ring_lightrays",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "invisibility_triangle",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Rage deploy ST": [
+      {
+        "Name": "Rage deploy ST",
+        "ParticleEmitter": "rage_rangeRing3",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Ground",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/bottle_rage_magic_07v2.ogg",
+        "Volume": "90",
+        "MinPitch": "75",
+        "MaxPitch": "75",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "120",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "rage_glowPurple",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "rage_flyingLine1",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "rage_triangle",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "shield_circle_white",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "rage_rangeRing1_ST",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Rage deploy top": [
+      {
+        "Name": "Rage deploy top",
+        "ParticleEmitter": "rage_smokeRing",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "rage_flyingLine2",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "rage_flyingLine3",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "rage_flyingLine4",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "rage_flyingLine2",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "rage_flyingLine3",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "rage_glowParticles",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Explosion_3",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Explosion_flash",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "rage_smokeRing4",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "rage_smokeRing2",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "rage_smokeRing5",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "rage_smokeRing3",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "rage_glowParticles2",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Spell Tower Pickup": [
+      {
+        "Name": "Spell Tower Pickup",
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "TRUE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/spell_tower_pickup_01.ogg",
+        "Volume": "70",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Spell Tower Placing": [
+      {
+        "Name": "Spell Tower Placing",
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "TRUE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/spell_tower_place_01.ogg",
+        "Volume": "70",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Toxic deploy ground halloween ST": [
+      {
+        "Name": "Toxic deploy ground halloween ST",
+        "ParticleEmitter": "Toxic_glow",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Ground",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "125",
+        "LifeTimeScale": "75",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Toxic_rangeRing1",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Toxic_bubbles",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "poison_triangle",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Toxic deploy halloween ST": [
+      {
+        "Name": "Toxic deploy halloween ST",
+        "ParticleEmitter": "Toxic_cloud",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/vial_poison_hit_gound_01.ogg",
+        "Volume": "80",
+        "MinPitch": "97",
+        "MaxPitch": "97",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "125",
+        "LifeTimeScale": "75",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Toxic_skull",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Toxic_skull_halloween",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Toxic_swirl",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Toxic_sparks",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Explosion_3",
+        "EmitterDelayMs": "0"
+      }
+    ]
+  },
+  "particles": {
+    "Building Destroyed": [
+      {
+        "Name": "Building Destroyed",
+        "ParticleCount": "30",
+        "EmissionTime": "1",
+        "MinLife": "700",
+        "MaxLife": "1200",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "30",
+        "MaxVertAngle": "90",
+        "MinSpeed": "300",
+        "MaxSpeed": "1200",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "3000",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "TRUE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "debris1",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "0",
+        "Slowdown": "300",
+        "StartScale": "70",
+        "EndScale": "100",
+        "MinRotate": "20",
+        "MaxRotate": "90",
+        "ParticleFadeOutTime": "400",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "-180",
+        "StartAngleMax": "180",
+        "ScaleRandomMin": "80",
+        "ScaleRandomMax": "120",
+        "Alpha": "100",
+        "StartRadiusMin": "50",
+        "StartRadiusMax": "50"
+      },
+      {
+        "ParticleExportName": "debris2",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris3",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris4",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris5",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris6",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris7",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris8",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris9",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris10",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris11",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris12",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris13",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris14",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris15",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris16",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris17",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris18",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris19",
+        "AdditiveBlend": "FALSE"
+      }
+    ],
+    "DefenceHit": [
+      {
+        "Name": "DefenceHit",
+        "ParticleCount": "2",
+        "EmissionTime": "100",
+        "MinLife": "200",
+        "MaxLife": "1000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "45",
+        "MaxVertAngle": "90",
+        "MinSpeed": "4000",
+        "MaxSpeed": "5000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "s1",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "300",
+        "Slowdown": "0",
+        "StartScale": "50",
+        "EndScale": "100",
+        "MinRotate": "-15",
+        "MaxRotate": "15",
+        "ParticleFadeOutTime": "800",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      },
+      {
+        "ParticleExportName": "s2",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "s3",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "s4",
+        "AdditiveBlend": "FALSE"
+      }
+    ],
+    "Elixir Storage Destroyed": [
+      {
+        "Name": "Elixir Storage Destroyed",
+        "ParticleCount": "25",
+        "EmissionTime": "1",
+        "MinLife": "700",
+        "MaxLife": "1200",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "10",
+        "MaxVertAngle": "90",
+        "MinSpeed": "300",
+        "MaxSpeed": "1000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "3000",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "TRUE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "glassDebris2",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "0",
+        "Slowdown": "300",
+        "StartScale": "50",
+        "EndScale": "80",
+        "MinRotate": "20",
+        "MaxRotate": "90",
+        "ParticleFadeOutTime": "400",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "-180",
+        "StartAngleMax": "180",
+        "ScaleRandomMin": "80",
+        "ScaleRandomMax": "120",
+        "Alpha": "100",
+        "StartRadiusMin": "80",
+        "StartRadiusMax": "80"
+      },
+      {
+        "ParticleExportName": "glassDebris1",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "glassDebris3",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "glassDebris4",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris5",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris6",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris7",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris8",
+        "AdditiveBlend": "FALSE"
+      }
+    ],
+    "Explosion_3": [
+      {
+        "Name": "Explosion_3",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "700",
+        "MaxLife": "900",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "25",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "d5",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "100",
+        "EndScale": "100",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "900",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "Explosion_flash": [
+      {
+        "Name": "Explosion_flash",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "150",
+        "MaxLife": "150",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "250",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "spell_range_marker_3",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "300",
+        "EndScale": "350",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "100",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "Fire_balls": [
+      {
+        "Name": "Fire_balls",
+        "ParticleCount": "5",
+        "EmissionTime": "2",
+        "MinLife": "800",
+        "MaxLife": "1500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "90",
+        "MinSpeed": "600",
+        "MaxSpeed": "1500",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "10",
+        "TargetedEndZ": "0",
+        "Gravity": "1000",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "HorizontalAngle",
+        "BounceFromGround": "TRUE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "fireball3b",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "15",
+        "Slowdown": "0",
+        "StartScale": "8",
+        "EndScale": "10",
+        "MinRotate": "0",
+        "MaxRotate": "90",
+        "ParticleFadeOutTime": "1500",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "40",
+        "StartRadiusMax": "40"
+      }
+    ],
+    "Grass": [
+      {
+        "Name": "Grass",
+        "ParticleCount": "3",
+        "EmissionTime": "200",
+        "MinLife": "200",
+        "MaxLife": "600",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "20",
+        "MaxVertAngle": "90",
+        "MinSpeed": "200",
+        "MaxSpeed": "780",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "3000",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "g1",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "40",
+        "Slowdown": "0",
+        "StartScale": "30",
+        "EndScale": "60",
+        "MinRotate": "-30",
+        "MaxRotate": "30",
+        "ParticleFadeOutTime": "300",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "200",
+        "StartRadiusMax": "200"
+      },
+      {
+        "ParticleExportName": "g2",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "g3",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "g4",
+        "AdditiveBlend": "FALSE"
+      }
+    ],
+    "Smoke": [
+      {
+        "Name": "Smoke",
+        "ParticleCount": "10",
+        "EmissionTime": "100",
+        "MinLife": "1500",
+        "MaxLife": "2100",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "45",
+        "MaxVertAngle": "90",
+        "MinSpeed": "4000",
+        "MaxSpeed": "5000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "smoke01",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "300",
+        "Slowdown": "0",
+        "StartScale": "100",
+        "EndScale": "100",
+        "MinRotate": "-10",
+        "MaxRotate": "10",
+        "ParticleFadeOutTime": "3000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "-90",
+        "StartAngleMax": "90",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "40",
+        "StartRadiusMax": "40"
+      }
+    ],
+    "Toxic_bubbles": [
+      {
+        "Name": "Toxic_bubbles",
+        "ParticleCount": "40",
+        "EmissionTime": "16000",
+        "MinLife": "800",
+        "MaxLife": "1500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "1",
+        "MaxSpeed": "1",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "-3",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "toxic_bubble",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "5",
+        "Slowdown": "0",
+        "StartScale": "1",
+        "EndScale": "60",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "1",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "210",
+        "StartRadiusMax": "210"
+      }
+    ],
+    "Toxic_cloud": [
+      {
+        "Name": "Toxic_cloud",
+        "ParticleCount": "60",
+        "EmissionTime": "14000",
+        "MinLife": "3000",
+        "MaxLife": "5000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "1",
+        "MinSpeed": "80",
+        "MaxSpeed": "100",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "-50",
+        "TargetedEndZ": "0",
+        "Gravity": "-18",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "TRUE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "toxic_cloud_varA",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "20",
+        "Slowdown": "0",
+        "StartScale": "150",
+        "EndScale": "220",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "800",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "5",
+        "FadeOutTime": "100",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "70",
+        "ScaleRandomMax": "130",
+        "Alpha": "100",
+        "StartRadiusMin": "70",
+        "StartRadiusMax": "70"
+      },
+      {
+        "ParticleExportName": "toxic_cloud_varB",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "toxic_cloud_varC",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "toxic_cloud_varD",
+        "AdditiveBlend": "FALSE"
+      }
+    ],
+    "Toxic_glow": [
+      {
+        "Name": "Toxic_glow",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "17000",
+        "MaxLife": "17000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "360",
+        "MinSpeed": "1",
+        "MaxSpeed": "1",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "toxic_range_marker_3",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "200",
+        "EndScale": "200",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "3000",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "5",
+        "FadeOutTime": "100",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "1",
+        "StartRadiusMax": "1"
+      }
+    ],
+    "Toxic_rangeRing1": [
+      {
+        "Name": "Toxic_rangeRing1",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "17000",
+        "MaxLife": "17000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "toxic_rangeRing1",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "95",
+        "EndScale": "95",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "6000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "Toxic_skull": [
+      {
+        "Name": "Toxic_skull",
+        "ParticleCount": "16",
+        "EmissionTime": "16000",
+        "MinLife": "1000",
+        "MaxLife": "1200",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "360",
+        "MinSpeed": "1",
+        "MaxSpeed": "5",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "-20",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "toxic_skull",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "20",
+        "EndScale": "80",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "800",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "5",
+        "FadeOutTime": "100",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "80",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "210",
+        "StartRadiusMax": "210"
+      }
+    ],
+    "Toxic_skull_halloween": [
+      {
+        "Name": "Toxic_skull_halloween",
+        "ParticleCount": "10",
+        "EmissionTime": "3300",
+        "MinLife": "1800",
+        "MaxLife": "2500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "360",
+        "MinSpeed": "1",
+        "MaxSpeed": "5",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "-20",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "toxic_skull_halloween",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "20",
+        "EndScale": "80",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "800",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "800",
+        "FadeOutTime": "50",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "130",
+        "ScaleRandomMax": "180",
+        "Alpha": "100",
+        "StartRadiusMin": "210",
+        "StartRadiusMax": "210"
+      }
+    ],
+    "Toxic_sparks": [
+      {
+        "Name": "Toxic_sparks",
+        "ParticleCount": "70",
+        "EmissionTime": "14000",
+        "MinLife": "400",
+        "MaxLife": "800",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "50",
+        "MinSpeed": "30",
+        "MaxSpeed": "200",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "-200",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "spark",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "30",
+        "Slowdown": "0",
+        "StartScale": "100",
+        "EndScale": "10",
+        "MinRotate": "-90",
+        "MaxRotate": "90",
+        "ParticleFadeOutTime": "330",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "25",
+        "FadeOutTime": "100",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "70",
+        "ScaleRandomMax": "120",
+        "Alpha": "100",
+        "StartRadiusMin": "210",
+        "StartRadiusMax": "210"
+      }
+    ],
+    "Toxic_swirl": [
+      {
+        "Name": "Toxic_swirl",
+        "ParticleCount": "60",
+        "EmissionTime": "14000",
+        "MinLife": "1000",
+        "MaxLife": "1200",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "360",
+        "MinSpeed": "2",
+        "MaxSpeed": "3",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "-100",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "toxic_swirl",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "1",
+        "EndScale": "100",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "1200",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "5",
+        "FadeOutTime": "100",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "60",
+        "ScaleRandomMax": "110",
+        "Alpha": "100",
+        "StartRadiusMin": "210",
+        "StartRadiusMax": "210"
+      }
+    ],
+    "invisibility_lvl6_ring": [
+      {
+        "Name": "invisibility_lvl6_ring",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "5000",
+        "MaxLife": "5000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "spell_range_marker_invisibility",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "155",
+        "EndScale": "160",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "1000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "invisibility_lvl6_ring2": [
+      {
+        "Name": "invisibility_lvl6_ring2",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "5000",
+        "MaxLife": "5000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "spell_range_marker_2",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "155",
+        "EndScale": "155",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "1000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "invisibility_lvl6_ring3": [
+      {
+        "Name": "invisibility_lvl6_ring3",
+        "ParticleCount": "3",
+        "EmissionTime": "100",
+        "MinLife": "200",
+        "MaxLife": "200",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "1",
+        "MaxSpeed": "10",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "spell_range_marker_2",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "20",
+        "EndScale": "170",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "400",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "invisibility_lvl6_ring4": [
+      {
+        "Name": "invisibility_lvl6_ring4",
+        "ParticleCount": "18",
+        "EmissionTime": "4500",
+        "MinLife": "1500",
+        "MaxLife": "1500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "spell_range_marker_invisibility",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "160",
+        "EndScale": "175",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "5000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "invisibility_lvl6_ring_lightrays": [
+      {
+        "Name": "invisibility_lvl6_ring_lightrays",
+        "ParticleCount": "200",
+        "EmissionTime": "4500",
+        "MinLife": "400",
+        "MaxLife": "500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "1300",
+        "MaxSpeed": "1300",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "10",
+        "TargetedEndZ": "0",
+        "Gravity": "-1000",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "InvisibilitySpell_lightbeam",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "200",
+        "Slowdown": "0",
+        "StartScale": "30",
+        "EndScale": "200",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "550",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "275",
+        "StartRadiusMax": "275"
+      }
+    ],
+    "invisibility_triangle": [
+      {
+        "Name": "invisibility_triangle",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "5000",
+        "MaxLife": "5000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "invis_triangle",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "119",
+        "EndScale": "119",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "1700",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "45",
+        "StartRadiusMin": "200",
+        "StartRadiusMax": "200"
+      }
+    ],
+    "poison_triangle": [
+      {
+        "Name": "poison_triangle",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "16000",
+        "MaxLife": "16000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "poison_triangle",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "116",
+        "EndScale": "114",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "2000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "85",
+        "StartRadiusMin": "10",
+        "StartRadiusMax": "10"
+      }
+    ],
+    "rage_flyingLine1": [
+      {
+        "Name": "rage_flyingLine1",
+        "ParticleCount": "5",
+        "EmissionTime": "12000",
+        "MinLife": "8000",
+        "MaxLife": "8000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "rage_flyingLines",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "130",
+        "EndScale": "120",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "5000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "200",
+        "StartRadiusMax": "200"
+      }
+    ],
+    "rage_flyingLine2": [
+      {
+        "Name": "rage_flyingLine2",
+        "ParticleCount": "5",
+        "EmissionTime": "12000",
+        "MinLife": "8000",
+        "MaxLife": "8000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "-30",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "rage_flyingLines",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "2",
+        "Slowdown": "0",
+        "StartScale": "110",
+        "EndScale": "21",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "3000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "220",
+        "StartRadiusMax": "220"
+      }
+    ],
+    "rage_flyingLine3": [
+      {
+        "Name": "rage_flyingLine3",
+        "ParticleCount": "5",
+        "EmissionTime": "12000",
+        "MinLife": "8000",
+        "MaxLife": "8000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "-20",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "rage_flyingLines",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "2",
+        "Slowdown": "0",
+        "StartScale": "100",
+        "EndScale": "21",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "3000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "200",
+        "StartRadiusMax": "200"
+      }
+    ],
+    "rage_flyingLine4": [
+      {
+        "Name": "rage_flyingLine4",
+        "ParticleCount": "5",
+        "EmissionTime": "15000",
+        "MinLife": "4000",
+        "MaxLife": "5000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "-12",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "rage_flyingLines",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "3",
+        "Slowdown": "0",
+        "StartScale": "100",
+        "EndScale": "21",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "4000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "200",
+        "StartRadiusMax": "200"
+      }
+    ],
+    "rage_glowParticles": [
+      {
+        "Name": "rage_glowParticles",
+        "ParticleCount": "11",
+        "EmissionTime": "18500",
+        "MinLife": "800",
+        "MaxLife": "1500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "200",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "TRUE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "glowParticle",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "40",
+        "EndScale": "20",
+        "MinRotate": "-180",
+        "MaxRotate": "180",
+        "ParticleFadeOutTime": "500",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "200",
+        "StartRadiusMax": "200"
+      }
+    ],
+    "rage_glowParticles2": [
+      {
+        "Name": "rage_glowParticles2",
+        "ParticleCount": "11",
+        "EmissionTime": "18500",
+        "MinLife": "800",
+        "MaxLife": "1500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "200",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "-50",
+        "OrientToMovement": "TRUE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "glowParticle",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "80",
+        "EndScale": "20",
+        "MinRotate": "-180",
+        "MaxRotate": "180",
+        "ParticleFadeOutTime": "250",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "100",
+        "StartRadiusMax": "100"
+      }
+    ],
+    "rage_glowPurple": [
+      {
+        "Name": "rage_glowPurple",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "20000",
+        "MaxLife": "20000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "40",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "rage_glowPurple",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "1000",
+        "EndScale": "800",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "1000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "rage_rangeRing1_ST": [
+      {
+        "Name": "rage_rangeRing1_ST",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "20000",
+        "MaxLife": "20000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "rage_rangeRing1_ST",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "130",
+        "EndScale": "120",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "10000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "rage_rangeRing3": [
+      {
+        "Name": "rage_rangeRing3",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "20000",
+        "MaxLife": "20000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "3",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "spell_range_marker_2",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "190",
+        "EndScale": "169",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "40000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "rage_smokeRing": [
+      {
+        "Name": "rage_smokeRing",
+        "ParticleCount": "8",
+        "EmissionTime": "1",
+        "MinLife": "400",
+        "MaxLife": "1000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "3",
+        "MaxVertAngle": "5",
+        "MinSpeed": "3200",
+        "MaxSpeed": "4000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "-50",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "rage_purpleSmoke",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "22",
+        "Slowdown": "0",
+        "StartScale": "1",
+        "EndScale": "200",
+        "MinRotate": "-40",
+        "MaxRotate": "90",
+        "ParticleFadeOutTime": "700",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "-100",
+        "StartRadiusMax": "-100"
+      }
+    ],
+    "rage_smokeRing2": [
+      {
+        "Name": "rage_smokeRing2",
+        "ParticleCount": "8",
+        "EmissionTime": "1",
+        "MinLife": "400",
+        "MaxLife": "1000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "3",
+        "MaxVertAngle": "5",
+        "MinSpeed": "3200",
+        "MaxSpeed": "4000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "-50",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "rage_purpleSmoke",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "22",
+        "Slowdown": "0",
+        "StartScale": "1",
+        "EndScale": "200",
+        "MinRotate": "-180",
+        "MaxRotate": "180",
+        "ParticleFadeOutTime": "700",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "-100",
+        "StartRadiusMax": "-100"
+      }
+    ],
+    "rage_smokeRing3": [
+      {
+        "Name": "rage_smokeRing3",
+        "ParticleCount": "4",
+        "EmissionTime": "1",
+        "MinLife": "2500",
+        "MaxLife": "3000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "30",
+        "MaxVertAngle": "100",
+        "MinSpeed": "500",
+        "MaxSpeed": "1000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "-150",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "rage_purpleSmoke",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "33",
+        "Slowdown": "0",
+        "StartScale": "200",
+        "EndScale": "280",
+        "MinRotate": "-180",
+        "MaxRotate": "180",
+        "ParticleFadeOutTime": "23000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "1",
+        "StartRadiusMax": "1"
+      }
+    ],
+    "rage_smokeRing4": [
+      {
+        "Name": "rage_smokeRing4",
+        "ParticleCount": "10",
+        "EmissionTime": "1",
+        "MinLife": "2500",
+        "MaxLife": "3000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "10",
+        "MaxVertAngle": "20",
+        "MinSpeed": "300",
+        "MaxSpeed": "500",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "-100",
+        "TargetedEndZ": "0",
+        "Gravity": "-2",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "rage_purpleSmoke",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "22",
+        "Slowdown": "0",
+        "StartScale": "280",
+        "EndScale": "300",
+        "MinRotate": "-180",
+        "MaxRotate": "180",
+        "ParticleFadeOutTime": "23000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "1",
+        "StartRadiusMax": "1"
+      }
+    ],
+    "rage_smokeRing5": [
+      {
+        "Name": "rage_smokeRing5",
+        "ParticleCount": "3",
+        "EmissionTime": "1",
+        "MinLife": "2500",
+        "MaxLife": "3000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "30",
+        "MaxVertAngle": "100",
+        "MinSpeed": "200",
+        "MaxSpeed": "2000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "-75",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "rage_purpleSmoke",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "35",
+        "Slowdown": "0",
+        "StartScale": "100",
+        "EndScale": "140",
+        "MinRotate": "-180",
+        "MaxRotate": "180",
+        "ParticleFadeOutTime": "23000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "1",
+        "StartRadiusMax": "1"
+      }
+    ],
+    "rage_triangle": [
+      {
+        "Name": "rage_triangle",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "18000",
+        "MaxLife": "18000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "rage_triangle",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "142",
+        "EndScale": "130",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "3600",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "10",
+        "StartRadiusMax": "10"
+      }
+    ],
+    "shield_circle_white": [
+      {
+        "Name": "shield_circle_white",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "18000",
+        "MaxLife": "18000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "triangle_circle_small_white",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "142",
+        "EndScale": "130",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "3600",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "40",
+        "StartRadiusMin": "10",
+        "StartRadiusMax": "10"
+      }
+    ]
+  },
+  "sounds": {
+    "sfx/bottle_rage_magic_07v2.ogg": {
+      "path": "assets/buildings/spell-tower-native/bottle_rage_magic_07v2.ogg",
+      "sha256": "0bc863901ae01414498d7c5a7bbcd37500fd6ef7b11769c13479e1dc6856693e"
+    },
+    "sfx/building_destroyed_01.ogg": {
+      "path": "assets/buildings/spell-tower-native/building_destroyed_01.ogg",
+      "sha256": "fd8295765aa86ff5c7c6be1159cd8fc97aed3c858c29fbdb1af5e3d5c5ce7f04"
+    },
+    "sfx/generic_hit_01.ogg": {
+      "path": "assets/buildings/spell-tower-native/generic_hit_01.ogg",
+      "sha256": "5fca48e71d21be79eb6d40a1ca1ad3a002e3d69ba72388b2eb6a4d2ec10e5934"
+    },
+    "sfx/invis_spell_01.ogg": {
+      "path": "assets/buildings/spell-tower-native/invis_spell_01.ogg",
+      "sha256": "266ee80074c090c734ea9481bff5b86a08eb1d07208730ee2ec3a8faa0b553c9"
+    },
+    "sfx/spell_tower_pickup_01.ogg": {
+      "path": "assets/buildings/spell-tower-native/spell_tower_pickup_01.ogg",
+      "sha256": "4a085542b96e93b8492df95fd1bd965fb2b58ce757dca1e98a576d147b50e363"
+    },
+    "sfx/spell_tower_place_01.ogg": {
+      "path": "assets/buildings/spell-tower-native/spell_tower_place_01.ogg",
+      "sha256": "4023132f45b405ac78105566b01f973a8b4a0e3dddc6a5d23dbcf99708ea4951"
+    },
+    "sfx/vial_poison_hit_gound_01.ogg": {
+      "path": "assets/buildings/spell-tower-native/vial_poison_hit_gound_01.ogg",
+      "sha256": "b32c7facbb20c61c06b6a4c97dee8b59978e514a52f3753203f7dd90e3da8c04"
+    }
+  },
+  "graphEvidence": {
+    "exports": {
+      "InvisibilitySpell_lightbeam": 17357,
+      "air_mortar_upg": 979,
+      "d5": 18109,
+      "dark_tower_base": 2727,
+      "debris1": 18183,
+      "debris10": 18193,
+      "debris11": 18192,
+      "debris12": 18191,
+      "debris13": 18190,
+      "debris14": 18189,
+      "debris15": 18188,
+      "debris16": 18187,
+      "debris17": 18186,
+      "debris18": 18185,
+      "debris19": 18184,
+      "debris2": 18200,
+      "debris3": 18199,
+      "debris4": 18198,
+      "debris5": 18204,
+      "debris6": 18197,
+      "debris7": 18196,
+      "debris8": 18195,
+      "debris9": 18194,
+      "destroyedBuilding_2l_pit_rockwood": 12313,
+      "fireball3b": 18150,
+      "g1": 17941,
+      "g2": 17108,
+      "g3": 17106,
+      "g4": 17938,
+      "generic_construction_state2": 12090,
+      "glassDebris1": 18214,
+      "glassDebris2": 18211,
+      "glassDebris3": 18208,
+      "glassDebris4": 18205,
+      "glowParticle": 17344,
+      "invis_triangle": 17274,
+      "poison_triangle": 17273,
+      "rage_flyingLines": 17335,
+      "rage_glowPurple": 17025,
+      "rage_purpleSmoke": 17332,
+      "rage_rangeRing1_ST": 17323,
+      "rage_triangle": 17270,
+      "s1": 17534,
+      "s2": 17531,
+      "s3": 17527,
+      "s4": 17524,
+      "smoke01": 17520,
+      "spark": 17053,
+      "spell_bottle_invisibility": 8417,
+      "spell_bottle_poison": 8387,
+      "spell_bottle_rage": 8385,
+      "spell_range_marker_2": 17367,
+      "spell_range_marker_3": 17098,
+      "spell_range_marker_invisibility": 17354,
+      "spell_tower_lvl1": 8379,
+      "spell_tower_lvl1_invisibility": 8450,
+      "spell_tower_lvl1_poison": 8452,
+      "spell_tower_lvl1_rage": 8448,
+      "spell_tower_lvl2_invisibility": 8432,
+      "spell_tower_lvl2_poison": 8443,
+      "spell_tower_lvl2_rage": 8447,
+      "spell_tower_lvl3_invisibility": 8430,
+      "spell_tower_lvl3_poison": 8441,
+      "spell_tower_lvl3_rage": 8445,
+      "spell_tower_lvl4_earthquake": 8423,
+      "spell_tower_lvl4_invisibility": 8414,
+      "spell_tower_lvl4_poison": 8407,
+      "spell_tower_lvl4_rage": 8401,
+      "toxic_bubble": 17213,
+      "toxic_cloud_varA": 17212,
+      "toxic_cloud_varB": 17211,
+      "toxic_cloud_varC": 17210,
+      "toxic_cloud_varD": 17209,
+      "toxic_rangeRing1": 17202,
+      "toxic_range_marker_3": 17203,
+      "toxic_skull": 17198,
+      "toxic_skull_halloween": 17225,
+      "toxic_swirl": 17194,
+      "triangle_circle_small_white": 17264
+    },
+    "clips": 172,
+    "shapes": 178,
+    "sha256": "68a41d057d0c9407b8649e8b201d8916fb03f2ab3d16882baaae966cd404b149"
+  },
+  "textures": {
+    "1": {
+      "path": "assets/buildings/spell-tower-native/texture-1.png",
+      "sourceSize": [
+        490,
+        1016
+      ],
+      "bounds": [
+        0,
+        0,
+        157,
+        749
+      ],
+      "packing": "packed source regions",
+      "width": 128,
+      "height": 97,
+      "rgbaSha256": "d973be5d59af78a36b984af7b5e4d1d861e833c211cd366d34ac71e5975d3c90",
+      "regions": [
+        {
+          "bounds": [
+            0,
+            0,
+            40,
+            33
+          ],
+          "placement": [
+            71,
+            1
+          ],
+          "rgbaSha256": "9147f2c4b7062340dd3d72d5053dd5d716ce0659755df213ef2f40ea2cd36c21"
+        },
+        {
+          "bounds": [
+            89,
+            685,
+            157,
+            749
+          ],
+          "placement": [
+            1,
+            1
+          ],
+          "rgbaSha256": "e5b567b337f5344678a422c7400c668882a43a626de77511a75866bc7b25974a"
+        },
+        {
+          "bounds": [
+            116,
+            0,
+            157,
+            29
+          ],
+          "placement": [
+            1,
+            67
+          ],
+          "rgbaSha256": "13b1faf2247ac3a7968ffc8a251081f42ddf61086ba5ae139936898e2d690d9c"
+        }
+      ]
+    },
+    "8": {
+      "path": "assets/buildings/builder-hut-native/texture/texture-8.png",
+      "sourceSize": [
+        444,
+        448
+      ],
+      "bounds": [
+        223,
+        0,
+        270,
+        33
+      ],
+      "packing": "source layout",
+      "width": 47,
+      "height": 33,
+      "rgbaSha256": "6ec6bcf02e24f3504a54b5eea32ea1fb94e63e6949a4dcdc581f4a7e75b325b1",
+      "regions": [
+        {
+          "bounds": [
+            223,
+            0,
+            270,
+            33
+          ],
+          "placement": [
+            0,
+            0
+          ],
+          "rgbaSha256": "6ec6bcf02e24f3504a54b5eea32ea1fb94e63e6949a4dcdc581f4a7e75b325b1"
+        }
+      ]
+    },
+    "17": {
+      "path": "assets/buildings/spell-tower-native/texture-17.png",
+      "sourceSize": [
+        512,
+        812
+      ],
+      "bounds": [
+        0,
+        0,
+        512,
+        812
+      ],
+      "packing": "source layout",
+      "width": 512,
+      "height": 812,
+      "rgbaSha256": "b479d205ee8e6bd3866e990c66582778f012500bf28b29050ba28db4af087ba1",
+      "regions": [
+        {
+          "bounds": [
+            0,
+            103,
+            151,
+            228
+          ],
+          "placement": [
+            0,
+            103
+          ],
+          "rgbaSha256": "a27c30144fc9f4613c4917936d07d79c931eaefb6f9b91cf58ded56ea9d8cdd8"
+        },
+        {
+          "bounds": [
+            0,
+            233,
+            86,
+            278
+          ],
+          "placement": [
+            0,
+            233
+          ],
+          "rgbaSha256": "57ae6bd40e36f104d99b4389b0ed66cb4e246248db2ab56741918b0828a81109"
+        },
+        {
+          "bounds": [
+            0,
+            283,
+            86,
+            327
+          ],
+          "placement": [
+            0,
+            283
+          ],
+          "rgbaSha256": "266a81265886005e7203552cc5cee5d4ca34803cc76c73c74a33e46738092b89"
+        },
+        {
+          "bounds": [
+            0,
+            331,
+            83,
+            379
+          ],
+          "placement": [
+            0,
+            331
+          ],
+          "rgbaSha256": "47734a0740d2446d34d902ad396c8cd6c7959b816d08aa5712564a8d5975f60f"
+        },
+        {
+          "bounds": [
+            0,
+            383,
+            83,
+            430
+          ],
+          "placement": [
+            0,
+            383
+          ],
+          "rgbaSha256": "07f3c8a0f92e5cc9da22d4857725ba376e47457e69ea1c829c38d2a0776ba31a"
+        },
+        {
+          "bounds": [
+            0,
+            435,
+            83,
+            481
+          ],
+          "placement": [
+            0,
+            435
+          ],
+          "rgbaSha256": "2f293d30c38482cba636e1c7783cbb540c091b2eb2e1e3980da12e8c9a5fe8a2"
+        },
+        {
+          "bounds": [
+            0,
+            485,
+            83,
+            530
+          ],
+          "placement": [
+            0,
+            485
+          ],
+          "rgbaSha256": "943ccc6d461f2bd8eac435ea953e99bd08e39b3058b3196bb04882b60d97a851"
+        },
+        {
+          "bounds": [
+            0,
+            535,
+            82,
+            579
+          ],
+          "placement": [
+            0,
+            535
+          ],
+          "rgbaSha256": "2cbcb03f0a208a2e29cc24d217875a38df303096687130bcf70e6fdd8ea0f826"
+        },
+        {
+          "bounds": [
+            0,
+            583,
+            79,
+            628
+          ],
+          "placement": [
+            0,
+            583
+          ],
+          "rgbaSha256": "c4454a2827619bfab82621ad5406fec6b24363e3939f8a87412c01ff5b48d7a7"
+        },
+        {
+          "bounds": [
+            0,
+            633,
+            75,
+            678
+          ],
+          "placement": [
+            0,
+            633
+          ],
+          "rgbaSha256": "adcb0d7a0b0ebf1c7ed2fd1344642c7c9c26cbf5b084e896bd83f2f4a01377be"
+        },
+        {
+          "bounds": [
+            0,
+            683,
+            74,
+            728
+          ],
+          "placement": [
+            0,
+            683
+          ],
+          "rgbaSha256": "40c42db3a18cae03dd3eacd8c45074070711fb3313bd14b37c4dd11194bdeb0a"
+        },
+        {
+          "bounds": [
+            0,
+            733,
+            43,
+            808
+          ],
+          "placement": [
+            0,
+            733
+          ],
+          "rgbaSha256": "9b87bf13c598e3219255123ac77d3cb781797ee488d62180146997740424492e"
+        },
+        {
+          "bounds": [
+            47,
+            733,
+            93,
+            807
+          ],
+          "placement": [
+            47,
+            733
+          ],
+          "rgbaSha256": "f85655a557e6ccf4a62b7e509ef7b3215959c0d2845fd0a77922f29d0ac327a4"
+        },
+        {
+          "bounds": [
+            79,
+            643,
+            128,
+            715
+          ],
+          "placement": [
+            79,
+            643
+          ],
+          "rgbaSha256": "b232dd540bb97acb755a01820092e5c0d89ccaa5f12049349e90082450063144"
+        },
+        {
+          "bounds": [
+            83,
+            597,
+            133,
+            638
+          ],
+          "placement": [
+            83,
+            597
+          ],
+          "rgbaSha256": "c796c947843088cb608dec5237806d2025543c4dd200a9159e92aa4557316e70"
+        },
+        {
+          "bounds": [
+            87,
+            341,
+            148,
+            391
+          ],
+          "placement": [
+            87,
+            341
+          ],
+          "rgbaSha256": "55a77fb8c76d7d110a9ee6b06cd9202a5af0898b357f9a23c88c6f72c240dc3d"
+        },
+        {
+          "bounds": [
+            87,
+            395,
+            148,
+            440
+          ],
+          "placement": [
+            87,
+            395
+          ],
+          "rgbaSha256": "14a76dc1956aacf2a61cbb3337ac256c74f07ea712650a9495ad1877f28991e0"
+        },
+        {
+          "bounds": [
+            87,
+            445,
+            138,
+            517
+          ],
+          "placement": [
+            87,
+            445
+          ],
+          "rgbaSha256": "15f07ae0fd938a9ad21319214c9afcb60472800728f4311d4d87f4b3f6891bc5"
+        },
+        {
+          "bounds": [
+            87,
+            521,
+            138,
+            592
+          ],
+          "placement": [
+            87,
+            521
+          ],
+          "rgbaSha256": "cdb65f4dcb8f61aec1aba7e469d33e97a15031184c294bf7973b6fbe58d84cf0"
+        },
+        {
+          "bounds": [
+            91,
+            233,
+            151,
+            284
+          ],
+          "placement": [
+            91,
+            233
+          ],
+          "rgbaSha256": "5b18129fcf01dc5a350b5b8908d41de6d65237b4e29931f86c7861b1ea520ca8"
+        },
+        {
+          "bounds": [
+            91,
+            289,
+            150,
+            336
+          ],
+          "placement": [
+            91,
+            289
+          ],
+          "rgbaSha256": "a47788ff3c09088b22a293abc93f91f8ac86a2df1541f991bf19cffdd4f6c8f6"
+        },
+        {
+          "bounds": [
+            97,
+            747,
+            141,
+            812
+          ],
+          "placement": [
+            97,
+            747
+          ],
+          "rgbaSha256": "8ec2d6fd0869d6ffff50d9ab4746dc8159d6ba9d9f5f669c1d5b840418fc4708"
+        },
+        {
+          "bounds": [
+            133,
+            647,
+            205,
+            692
+          ],
+          "placement": [
+            133,
+            647
+          ],
+          "rgbaSha256": "3a39267cb94b5a73d8cd5cb6ad86b8b38dd6a304d5a6e7d5f09ce54b00d0b7a8"
+        },
+        {
+          "bounds": [
+            133,
+            697,
+            202,
+            742
+          ],
+          "placement": [
+            133,
+            697
+          ],
+          "rgbaSha256": "06aba121e5a34407be9c2b6a4f4b9cf1fa7e7d5e96455d2c4ba38ad2b7e7b0f0"
+        },
+        {
+          "bounds": [
+            143,
+            455,
+            213,
+            537
+          ],
+          "placement": [
+            143,
+            455
+          ],
+          "rgbaSha256": "12230772ef41811756c0d92dcb52bae3b4e42676c6de8e14e2e1082b10cb5940"
+        },
+        {
+          "bounds": [
+            143,
+            541,
+            213,
+            590
+          ],
+          "placement": [
+            143,
+            541
+          ],
+          "rgbaSha256": "8a6c816f30cc5697e923199c4c5de17faff7e029649b32eafd2161f489763b0d"
+        },
+        {
+          "bounds": [
+            143,
+            595,
+            213,
+            643
+          ],
+          "placement": [
+            143,
+            595
+          ],
+          "rgbaSha256": "332993fed57792a35c11f06a26ad00e4ce4419d9fb357dd1f00321c11c80e448"
+        },
+        {
+          "bounds": [
+            145,
+            747,
+            187,
+            812
+          ],
+          "placement": [
+            145,
+            747
+          ],
+          "rgbaSha256": "0416829e627b792c79db0811789eb91829583402f3ce5d2d1289116c899984eb"
+        },
+        {
+          "bounds": [
+            153,
+            353,
+            214,
+            401
+          ],
+          "placement": [
+            153,
+            353
+          ],
+          "rgbaSha256": "10b4e6529755f1382d148cc73706ea84755dc4b4ea37af596a752c3fcecba7b6"
+        },
+        {
+          "bounds": [
+            153,
+            405,
+            212,
+            450
+          ],
+          "placement": [
+            153,
+            405
+          ],
+          "rgbaSha256": "b2d09bbbdc2995b5051c16cb7178e779393feea8a34eafb076566728a736843e"
+        },
+        {
+          "bounds": [
+            155,
+            103,
+            219,
+            148
+          ],
+          "placement": [
+            155,
+            103
+          ],
+          "rgbaSha256": "9149a6eaef145eac7f540794301ca32219bd34e96c4f17933e08708e6de0db09"
+        },
+        {
+          "bounds": [
+            155,
+            153,
+            219,
+            194
+          ],
+          "placement": [
+            155,
+            153
+          ],
+          "rgbaSha256": "3f00884cc6f984aa38595cb2116a8e4b2ae9d46d0c99aacc4c5749542ce7228d"
+        },
+        {
+          "bounds": [
+            155,
+            199,
+            217,
+            249
+          ],
+          "placement": [
+            155,
+            199
+          ],
+          "rgbaSha256": "c4fbd200654e872ba0e57a727b5d09455da5e36061d506b90ad19a95cde36a95"
+        },
+        {
+          "bounds": [
+            155,
+            253,
+            217,
+            301
+          ],
+          "placement": [
+            155,
+            253
+          ],
+          "rgbaSha256": "10f13112367cf0738210781d3f03c15f248cc1c93bca6aa86d9c23c23618cbb6"
+        },
+        {
+          "bounds": [
+            155,
+            305,
+            217,
+            349
+          ],
+          "placement": [
+            155,
+            305
+          ],
+          "rgbaSha256": "0477fb923f08557465753b0af6909c2668bbec951982acf0b4d2938a5f267190"
+        },
+        {
+          "bounds": [
+            207,
+            699,
+            275,
+            738
+          ],
+          "placement": [
+            207,
+            699
+          ],
+          "rgbaSha256": "66a034d9f12519384d7c074648500508216ed22d03e473e5eb3e73f08b091e0a"
+        },
+        {
+          "bounds": [
+            207,
+            743,
+            251,
+            810
+          ],
+          "placement": [
+            207,
+            743
+          ],
+          "rgbaSha256": "65f74a870a96dffa46a38a008abedfb4c206ec2e5a11e8ee354e58245d750433"
+        },
+        {
+          "bounds": [
+            209,
+            651,
+            279,
+            695
+          ],
+          "placement": [
+            209,
+            651
+          ],
+          "rgbaSha256": "089648dcf41acc49ed6f338e5b2c85fe24c439cef8c15c57287968f8400bcc69"
+        },
+        {
+          "bounds": [
+            217,
+            411,
+            301,
+            456
+          ],
+          "placement": [
+            217,
+            411
+          ],
+          "rgbaSha256": "cbb6363fac6b7c64241b6dd6da1f3563e00c05d392a0aae928ff0c499ea83d23"
+        },
+        {
+          "bounds": [
+            217,
+            461,
+            301,
+            506
+          ],
+          "placement": [
+            217,
+            461
+          ],
+          "rgbaSha256": "7851b2570be229f67a9f3c04e004cf9657d6d0b05784415ea40bb2487df81a6d"
+        },
+        {
+          "bounds": [
+            217,
+            511,
+            294,
+            553
+          ],
+          "placement": [
+            217,
+            511
+          ],
+          "rgbaSha256": "0bd77a9e16f9102705b8ae0b3c71b4c2a93fd21c802070406576f2f7ebcf87d6"
+        },
+        {
+          "bounds": [
+            217,
+            557,
+            294,
+            598
+          ],
+          "placement": [
+            217,
+            557
+          ],
+          "rgbaSha256": "bd0373d18b6756f477e8b64476d0b51c45c5609a5e87d8763bebdd184acb1db3"
+        },
+        {
+          "bounds": [
+            217,
+            603,
+            290,
+            647
+          ],
+          "placement": [
+            217,
+            603
+          ],
+          "rgbaSha256": "176e8c7df859d058a63b8ff096fa575bfcea0366ae5b7054d2af10699faff735"
+        },
+        {
+          "bounds": [
+            219,
+            361,
+            303,
+            406
+          ],
+          "placement": [
+            219,
+            361
+          ],
+          "rgbaSha256": "d1b82877ffa3988b1bc21a713dbf3cde9fa0b158adfc09190e5dcb74aca28c46"
+        },
+        {
+          "bounds": [
+            221,
+            239,
+            316,
+            307
+          ],
+          "placement": [
+            221,
+            239
+          ],
+          "rgbaSha256": "ac076629a69b18b7395a0a83f56a48413818562c4e53a13bdd46bd9df31fa76e"
+        },
+        {
+          "bounds": [
+            221,
+            311,
+            305,
+            357
+          ],
+          "placement": [
+            221,
+            311
+          ],
+          "rgbaSha256": "3e1cb4b7df2e84f054e9fc3d007b9289daecbd485b05cdab5f91771baca85a27"
+        },
+        {
+          "bounds": [
+            223,
+            0,
+            388,
+            130
+          ],
+          "placement": [
+            223,
+            0
+          ],
+          "rgbaSha256": "d916aa3c4ae917b3a8d0a7f62516478f5756c5949becba5b0f6c49cffc81308d"
+        },
+        {
+          "bounds": [
+            223,
+            135,
+            365,
+            235
+          ],
+          "placement": [
+            223,
+            135
+          ],
+          "rgbaSha256": "c019af200b12a1579c2896dc569d2234de439c000dd2d0c1fa0a5a4aa15c2d5f"
+        },
+        {
+          "bounds": [
+            226,
+            100,
+            252,
+            127
+          ],
+          "placement": [
+            226,
+            100
+          ],
+          "rgbaSha256": "35f3938f5f048612c98d262ef8af79bf1fc62eb98c7e22f85d1d5d6b9d8c0aa0"
+        },
+        {
+          "bounds": [
+            255,
+            743,
+            302,
+            809
+          ],
+          "placement": [
+            255,
+            743
+          ],
+          "rgbaSha256": "6d310f56c3b7f3732aad3a10cf1bb6a1983a698414747e9fe3cb80e1b604c665"
+        },
+        {
+          "bounds": [
+            283,
+            663,
+            349,
+            712
+          ],
+          "placement": [
+            283,
+            663
+          ],
+          "rgbaSha256": "6c91a636696b1fd79703fec734bbfc5093150901ffe8dd0288150e8a52d42e5b"
+        },
+        {
+          "bounds": [
+            299,
+            539,
+            349,
+            582
+          ],
+          "placement": [
+            299,
+            539
+          ],
+          "rgbaSha256": "f8cbef8353f8c92c233a681c13bebe5e4eb97890b996fd0c24ea0b621eebbf34"
+        },
+        {
+          "bounds": [
+            299,
+            587,
+            348,
+            659
+          ],
+          "placement": [
+            299,
+            587
+          ],
+          "rgbaSha256": "cc140104a25f1ae21a3b96a6730569135b2b419c1ce490fac3940c00636f2764"
+        },
+        {
+          "bounds": [
+            305,
+            413,
+            357,
+            486
+          ],
+          "placement": [
+            305,
+            413
+          ],
+          "rgbaSha256": "6159a1d9fb72834cc0f72927b264bb257b9ba8ced7c7262012ef687c1c4e3749"
+        },
+        {
+          "bounds": [
+            305,
+            491,
+            355,
+            535
+          ],
+          "placement": [
+            305,
+            491
+          ],
+          "rgbaSha256": "d4fd3cb45f1d7a9533cfd92c07c87e823017b0e324c8822470a3ec8d46b71393"
+        },
+        {
+          "bounds": [
+            307,
+            717,
+            349,
+            765
+          ],
+          "placement": [
+            307,
+            717
+          ],
+          "rgbaSha256": "050e71eeff529e7c94746d1fe5b88293d03ee075e111b549cb0ee251385f7461"
+        },
+        {
+          "bounds": [
+            307,
+            769,
+            356,
+            812
+          ],
+          "placement": [
+            307,
+            769
+          ],
+          "rgbaSha256": "705ba93eb76e94c66500438ee34c122ff11632563de911ae72c028de7cf6e05a"
+        },
+        {
+          "bounds": [
+            309,
+            335,
+            362,
+            408
+          ],
+          "placement": [
+            309,
+            335
+          ],
+          "rgbaSha256": "e9eda500cf60b050e9d6ca551aa581f7174a21ddce1ccc6c56d4089896006336"
+        },
+        {
+          "bounds": [
+            353,
+            559,
+            426,
+            605
+          ],
+          "placement": [
+            353,
+            559
+          ],
+          "rgbaSha256": "f4fb2d0bc8e282e149291da57f719de7870dc01574de81533ee0374bb7bfed2f"
+        },
+        {
+          "bounds": [
+            353,
+            609,
+            424,
+            655
+          ],
+          "placement": [
+            353,
+            609
+          ],
+          "rgbaSha256": "09a161fb3e804e72d86b94a2582678b26512f7eacbae0468f97deb9c21dbdd82"
+        },
+        {
+          "bounds": [
+            353,
+            659,
+            424,
+            700
+          ],
+          "placement": [
+            353,
+            659
+          ],
+          "rgbaSha256": "fc5e132a7e47d107d0fc24cb7b1f05427fbbbf490c77906cc31e43c573aa1a72"
+        },
+        {
+          "bounds": [
+            353,
+            705,
+            423,
+            746
+          ],
+          "placement": [
+            353,
+            705
+          ],
+          "rgbaSha256": "bfd62b8b4fb44a615d4c5e5cb92430e13ee685199fd313c17bfa8ddfe8a64d86"
+        },
+        {
+          "bounds": [
+            359,
+            513,
+            437,
+            555
+          ],
+          "placement": [
+            359,
+            513
+          ],
+          "rgbaSha256": "04e2720a661865e12af310dda854857d02c07940a129bc63717120f08a70f8e1"
+        },
+        {
+          "bounds": [
+            361,
+            107,
+            385,
+            127
+          ],
+          "placement": [
+            361,
+            107
+          ],
+          "rgbaSha256": "04c57cedbc4e4e46634891537eba197d0bea4057d1e70ca17206776419143a7d"
+        },
+        {
+          "bounds": [
+            361,
+            417,
+            441,
+            460
+          ],
+          "placement": [
+            361,
+            417
+          ],
+          "rgbaSha256": "696189167c8433bf8cb0d59bcc45b4407d935bade348809906627ed369a977e0"
+        },
+        {
+          "bounds": [
+            361,
+            465,
+            440,
+            509
+          ],
+          "placement": [
+            361,
+            465
+          ],
+          "rgbaSha256": "01a78e030c1d484ec9c8c5782fc9ef0ca1ffbcd423442eca807c6ee6b871cf32"
+        },
+        {
+          "bounds": [
+            361,
+            751,
+            408,
+            800
+          ],
+          "placement": [
+            361,
+            751
+          ],
+          "rgbaSha256": "ed4b74f9d68256afbdcd9205f1fab5d93295e5dadde5b17823fd2ef50f672a1d"
+        },
+        {
+          "bounds": [
+            367,
+            367,
+            451,
+            412
+          ],
+          "placement": [
+            367,
+            367
+          ],
+          "rgbaSha256": "115c438089de9b2730afd8f036805841ad44fadb92a17020239b5a5b1e6a709d"
+        },
+        {
+          "bounds": [
+            369,
+            145,
+            470,
+            216
+          ],
+          "placement": [
+            369,
+            145
+          ],
+          "rgbaSha256": "9053ac8883a8fdaa5716d86372a95d14a9208f8e03e4e9e5f0c2ca7ca1e55274"
+        },
+        {
+          "bounds": [
+            369,
+            221,
+            468,
+            292
+          ],
+          "placement": [
+            369,
+            221
+          ],
+          "rgbaSha256": "b12182ae5646a6803c15c901ad75f4e4b571c29bf8fba2f108b48f2235733b06"
+        },
+        {
+          "bounds": [
+            369,
+            297,
+            459,
+            362
+          ],
+          "placement": [
+            369,
+            297
+          ],
+          "rgbaSha256": "e0a0eb3c2806a2446f9d8fd0520001d52665fcc420ff8e0be7b52de2aefdfe28"
+        },
+        {
+          "bounds": [
+            393,
+            0,
+            511,
+            140
+          ],
+          "placement": [
+            393,
+            0
+          ],
+          "rgbaSha256": "a9d6238d06ca5809f4a79a1fe05c00fe7f73fa8a1fe6df3b83c5e3d3e6c1cf93"
+        },
+        {
+          "bounds": [
+            396,
+            2,
+            417,
+            23
+          ],
+          "placement": [
+            396,
+            2
+          ],
+          "rgbaSha256": "0539e6c659112c3085735115e7b5e6737623d6a6f916a037dbebceb8da7d05ec"
+        },
+        {
+          "bounds": [
+            413,
+            751,
+            460,
+            799
+          ],
+          "placement": [
+            413,
+            751
+          ],
+          "rgbaSha256": "290328ce3ea78cf2dc57ec473282d4b893ebe15c881f1c51b250492c1eaf8ced"
+        },
+        {
+          "bounds": [
+            429,
+            615,
+            500,
+            659
+          ],
+          "placement": [
+            429,
+            615
+          ],
+          "rgbaSha256": "0fbb6514ea14d63fcabe87ac50d74ddcac719dd532cdfe018b72f8ac083b9af4"
+        },
+        {
+          "bounds": [
+            429,
+            663,
+            499,
+            711
+          ],
+          "placement": [
+            429,
+            663
+          ],
+          "rgbaSha256": "5794522420e000c5bacae2c9c00683fa885628aabb9cec15484b68d647b01a70"
+        },
+        {
+          "bounds": [
+            431,
+            561,
+            502,
+            610
+          ],
+          "placement": [
+            431,
+            561
+          ],
+          "rgbaSha256": "34d0c74889765146a5eb1251d9afcd112bc026c2521d58ca5c67fc2d432d6418"
+        },
+        {
+          "bounds": [
+            445,
+            427,
+            512,
+            506
+          ],
+          "placement": [
+            445,
+            427
+          ],
+          "rgbaSha256": "e9f9b452ce0f7a8c6ddd4b6f3b94c46567722ae997c66a7480aff156fb92b7c7"
+        },
+        {
+          "bounds": [
+            445,
+            511,
+            512,
+            556
+          ],
+          "placement": [
+            445,
+            511
+          ],
+          "rgbaSha256": "24f19dee2ce2414f5790e31c483dc878896a394416bb3d3f8c03b6de6848a0cd"
+        },
+        {
+          "bounds": [
+            463,
+            351,
+            512,
+            423
+          ],
+          "placement": [
+            463,
+            351
+          ],
+          "rgbaSha256": "63a48007c3e4beb81d6bf6e7cb431b822962c2c83b222105f183d508bb8b094d"
+        },
+        {
+          "bounds": [
+            465,
+            715,
+            512,
+            760
+          ],
+          "placement": [
+            465,
+            715
+          ],
+          "rgbaSha256": "5b20884c913c201b5633f29752194bb817de7e13c5ca1e458c3d2f46eb86a734"
+        },
+        {
+          "bounds": [
+            465,
+            765,
+            510,
+            811
+          ],
+          "placement": [
+            465,
+            765
+          ],
+          "rgbaSha256": "358b34076f9a6f6b19c0d77fea6287d5fd89a4ad03cade4dd4f88b7c7a5f3e86"
+        },
+        {
+          "bounds": [
+            473,
+            221,
+            512,
+            290
+          ],
+          "placement": [
+            473,
+            221
+          ],
+          "rgbaSha256": "232ff6c57b9139d2bd9af5e0ea40e3d6f101d6d7f232d568bb920dbb3845b8a9"
+        },
+        {
+          "bounds": [
+            473,
+            295,
+            512,
+            346
+          ],
+          "placement": [
+            473,
+            295
+          ],
+          "rgbaSha256": "8657241386457b55c9aeae8aa7bdf2fc5d56fd919c4f571c3ced6d38018afd77"
+        },
+        {
+          "bounds": [
+            475,
+            145,
+            509,
+            192
+          ],
+          "placement": [
+            475,
+            145
+          ],
+          "rgbaSha256": "760a3a105ef80611c0346effb9c0fffbf8bd0b5a69a2a766ebe57bd29d16cb1e"
+        }
+      ]
+    },
+    "25": {
+      "path": "assets/buildings/spell-tower-native/texture-25.png",
+      "sourceSize": [
+        3002,
+        3066
+      ],
+      "bounds": [
+        0,
+        0,
+        2255,
+        3020
+      ],
+      "packing": "packed source regions",
+      "width": 512,
+      "height": 261,
+      "rgbaSha256": "94b881acf418fbbd96fbca2ab2631b68b8648b0757e639099736260ec21ec63b",
+      "regions": [
+        {
+          "bounds": [
+            0,
+            1175,
+            45,
+            1238
+          ],
+          "placement": [
+            281,
+            139
+          ],
+          "rgbaSha256": "0ebc44ca7cc8243c2b1c672a2b9aa97e082e06415bda3564ef6de72dc61569ba"
+        },
+        {
+          "bounds": [
+            432,
+            2111,
+            562,
+            2247
+          ],
+          "placement": [
+            1,
+            1
+          ],
+          "rgbaSha256": "31999070328adb2ad1e405f8be0ad45c26dac56f8df236102d5084317d6bcc67"
+        },
+        {
+          "bounds": [
+            970,
+            2091,
+            1116,
+            2213
+          ],
+          "placement": [
+            266,
+            1
+          ],
+          "rgbaSha256": "abc6539b456e23e9e830f117734a72eeb7b8221c971c898b0b87a42f8a797b3b"
+        },
+        {
+          "bounds": [
+            1067,
+            1184,
+            1150,
+            1230
+          ],
+          "placement": [
+            413,
+            139
+          ],
+          "rgbaSha256": "ee548b2bc414e7de14f511871124f17d7709ec7098d608bf1bd76c2020c877dc"
+        },
+        {
+          "bounds": [
+            1315,
+            2954,
+            1359,
+            3020
+          ],
+          "placement": [
+            175,
+            139
+          ],
+          "rgbaSha256": "72ec0af2fa56b84d1a9cc526090cc0fbec6dba78674b64e294cf143764ba9e05"
+        },
+        {
+          "bounds": [
+            1352,
+            1489,
+            1398,
+            1542
+          ],
+          "placement": [
+            365,
+            139
+          ],
+          "rgbaSha256": "5c9ea728390a2621e4504e871cc5e908328c8eacb5909fda62c4a4faf02d0607"
+        },
+        {
+          "bounds": [
+            1816,
+            2232,
+            1851,
+            2291
+          ],
+          "placement": [
+            328,
+            139
+          ],
+          "rgbaSha256": "007015d4c6286dfef2f63c8d41cc62c0aa6a6e252e01f205db0afc2bc9e88dfd"
+        },
+        {
+          "bounds": [
+            1853,
+            0,
+            2025,
+            121
+          ],
+          "placement": [
+            1,
+            139
+          ],
+          "rgbaSha256": "8fd718c7e92f6797199f8912a30baaafcc25ad2768432f6ff1977805db77cab0"
+        },
+        {
+          "bounds": [
+            1944,
+            1099,
+            2002,
+            1162
+          ],
+          "placement": [
+            221,
+            139
+          ],
+          "rgbaSha256": "e813f31bd5a01196ed4c56176d5398f0091a3a62555a86f59d8bb55b6da58be0"
+        },
+        {
+          "bounds": [
+            2124,
+            2128,
+            2255,
+            2259
+          ],
+          "placement": [
+            133,
+            1
+          ],
+          "rgbaSha256": "3b6b95955524edba2d6065e3522baeb7ee03addfc4dc9de0aa1e7ac06df7267d"
+        }
+      ]
+    },
+    "39": {
+      "path": "assets/buildings/spell-tower-native/texture-39.png",
+      "sourceSize": [
+        1516,
+        2034
+      ],
+      "bounds": [
+        0,
+        0,
+        1507,
+        2034
+      ],
+      "packing": "packed source regions",
+      "width": 256,
+      "height": 830,
+      "rgbaSha256": "5c4f3b2e2752b414fb3fad7023e631fff70b7d13bc5fdf854588ed31b7d4f253",
+      "regions": [
+        {
+          "bounds": [
+            0,
+            0,
+            16,
+            15
+          ],
+          "placement": [
+            80,
+            801
+          ],
+          "rgbaSha256": "a9d3b90ea208cc5b0020e67afd465f505fe3887a45b238e8a5d826ded4dd617e"
+        },
+        {
+          "bounds": [
+            0,
+            90,
+            7,
+            98
+          ],
+          "placement": [
+            243,
+            801
+          ],
+          "rgbaSha256": "168b0fc33ced89b34f165240180f4d6e2b3e96f39c0869de4753564c14aa513e"
+        },
+        {
+          "bounds": [
+            20,
+            0,
+            27,
+            6
+          ],
+          "placement": [
+            1,
+            823
+          ],
+          "rgbaSha256": "30277f28da9a9a3a416b0b187a1d451cc0fb41e5c7084727d5506525676c9271"
+        },
+        {
+          "bounds": [
+            38,
+            1930,
+            77,
+            1958
+          ],
+          "placement": [
+            160,
+            738
+          ],
+          "rgbaSha256": "ab880aa8e9f1a4831a91c40b71cae75772ae236d618acb236def772372f11c9a"
+        },
+        {
+          "bounds": [
+            76,
+            423,
+            88,
+            437
+          ],
+          "placement": [
+            126,
+            801
+          ],
+          "rgbaSha256": "9b3ad1cf62f574098f9959c909a4d2f18a0b90d62d697cee24aed845e5361e90"
+        },
+        {
+          "bounds": [
+            76,
+            599,
+            98,
+            624
+          ],
+          "placement": [
+            95,
+            772
+          ],
+          "rgbaSha256": "33927e0e3abff4a0427fbd2bfa5b71917175471e58e2f2723838063701c1f1b4"
+        },
+        {
+          "bounds": [
+            112,
+            1730,
+            158,
+            1775
+          ],
+          "placement": [
+            1,
+            691
+          ],
+          "rgbaSha256": "fef373352340aae3d89749cf8c45df6cb9416a48f735266b8fbf61d4b8c5e8ef"
+        },
+        {
+          "bounds": [
+            120,
+            198,
+            143,
+            213
+          ],
+          "placement": [
+            34,
+            801
+          ],
+          "rgbaSha256": "54f4e7f68fa824b683b946c78534958f0fe033455091ca8e4f28a150f452207b"
+        },
+        {
+          "bounds": [
+            153,
+            1335,
+            216,
+            1398
+          ],
+          "placement": [
+            1,
+            314
+          ],
+          "rgbaSha256": "8c4ee8dcec85cb3e91bf6c2fcd51faf16d648ba3f5c532bb8d18a20909bb0e07"
+        },
+        {
+          "bounds": [
+            183,
+            1466,
+            241,
+            1523
+          ],
+          "placement": [
+            63,
+            574
+          ],
+          "rgbaSha256": "9eba7df71ea5648d3fe35b8ad51c8e02d0cfc9e0bb4f2d9106bce1a693eab888"
+        },
+        {
+          "bounds": [
+            195,
+            1986,
+            218,
+            2020
+          ],
+          "placement": [
+            166,
+            691
+          ],
+          "rgbaSha256": "e5f39862a0085e27a5610edf21961197740e849619d92e6ed82dfa756724f9fb"
+        },
+        {
+          "bounds": [
+            215,
+            0,
+            224,
+            8
+          ],
+          "placement": [
+            210,
+            801
+          ],
+          "rgbaSha256": "58f5a47fcb452a955499d62163155b46741527c304e65bfbe3c84f149ccaa20b"
+        },
+        {
+          "bounds": [
+            253,
+            2009,
+            278,
+            2034
+          ],
+          "placement": [
+            68,
+            772
+          ],
+          "rgbaSha256": "bf56b4eaafa43b1606aacd2a2ca77132af47a91bfb199d040454adc3508202f8"
+        },
+        {
+          "bounds": [
+            315,
+            1453,
+            375,
+            1510
+          ],
+          "placement": [
+            1,
+            574
+          ],
+          "rgbaSha256": "acd538415f030f14cd51d32a287bed051fae6131e0b75b8addb24df91921c1e7"
+        },
+        {
+          "bounds": [
+            328,
+            1322,
+            391,
+            1385
+          ],
+          "placement": [
+            66,
+            314
+          ],
+          "rgbaSha256": "5c4ed33fcd6d5e25da97ca4dcd4c438a9df5e1ebedde3bfc0d95f0b769ebf431"
+        },
+        {
+          "bounds": [
+            342,
+            413,
+            353,
+            424
+          ],
+          "placement": [
+            156,
+            801
+          ],
+          "rgbaSha256": "24e0eb5b772456410b6314542051112d1d665733c82df29a271634f7f140c66a"
+        },
+        {
+          "bounds": [
+            372,
+            210,
+            405,
+            328
+          ],
+          "placement": [
+            1,
+            194
+          ],
+          "rgbaSha256": "6a521a30da716395e38ed3fe9319f73354447a3f43807f1357db388293a9f2b9"
+        },
+        {
+          "bounds": [
+            374,
+            1941,
+            406,
+            1973
+          ],
+          "placement": [
+            1,
+            738
+          ],
+          "rgbaSha256": "b2b400bb4134db0a6197b78fadfd7bb382539e651dcb87a69c33806130b72084"
+        },
+        {
+          "bounds": [
+            379,
+            1477,
+            438,
+            1533
+          ],
+          "placement": [
+            123,
+            574
+          ],
+          "rgbaSha256": "af0e7797664e87b5595532dac9138058a38affc2d1ab4ad984b1127ef3841e4d"
+        },
+        {
+          "bounds": [
+            381,
+            16,
+            390,
+            24
+          ],
+          "placement": [
+            221,
+            801
+          ],
+          "rgbaSha256": "b0a1dad465e7d925db77e85fea890651f68105123b37f88b7621b107919ca597"
+        },
+        {
+          "bounds": [
+            384,
+            28,
+            389,
+            33
+          ],
+          "placement": [
+            18,
+            823
+          ],
+          "rgbaSha256": "cbdd7ef2069e4a34be6c3a5c27c93ff900055ca8193ef5997faea34ac579b8ef"
+        },
+        {
+          "bounds": [
+            450,
+            1427,
+            490,
+            1510
+          ],
+          "placement": [
+            149,
+            194
+          ],
+          "rgbaSha256": "14640f6075e0c219e78bc0c101c0b13fbbce35fc8019bfcedf473233098d3452"
+        },
+        {
+          "bounds": [
+            476,
+            1359,
+            508,
+            1477
+          ],
+          "placement": [
+            36,
+            194
+          ],
+          "rgbaSha256": "11d3b307f6c57944590d42c044152af0d246265e48ec719d09bfb03c45cb7837"
+        },
+        {
+          "bounds": [
+            480,
+            1836,
+            522,
+            1875
+          ],
+          "placement": [
+            49,
+            691
+          ],
+          "rgbaSha256": "a9da07535847a19ce535ded048dad8ef5565c9964394b7af5e99f4af8686b723"
+        },
+        {
+          "bounds": [
+            506,
+            137,
+            523,
+            146
+          ],
+          "placement": [
+            191,
+            801
+          ],
+          "rgbaSha256": "1c29d4e73884f06780fc33be6e60864bbd6e9d391920c0c9edd2891272d90556"
+        },
+        {
+          "bounds": [
+            511,
+            137,
+            581,
+            328
+          ],
+          "placement": [
+            1,
+            1
+          ],
+          "rgbaSha256": "2206f83c171353282fcdfc69b3fa5a9e0af47a6089225296ba90dec2c7607602"
+        },
+        {
+          "bounds": [
+            512,
+            1314,
+            575,
+            1377
+          ],
+          "placement": [
+            131,
+            314
+          ],
+          "rgbaSha256": "648f9035345dda932627b370d81ce9899a8f6b7d68cfa67777905e3e99af3795"
+        },
+        {
+          "bounds": [
+            593,
+            471,
+            610,
+            489
+          ],
+          "placement": [
+            15,
+            801
+          ],
+          "rgbaSha256": "cedb2297874058ef7d89d93669fe9c439d5cb19d4b9203413d3e80b2541b61aa"
+        },
+        {
+          "bounds": [
+            608,
+            1501,
+            659,
+            1562
+          ],
+          "placement": [
+            120,
+            509
+          ],
+          "rgbaSha256": "8d9c352ea3d623985a449066d2b06f36fb0fe754cc9008bc28179ca85ad48c82"
+        },
+        {
+          "bounds": [
+            624,
+            1418,
+            669,
+            1497
+          ],
+          "placement": [
+            191,
+            194
+          ],
+          "rgbaSha256": "2eaae18cbb873993e062654fffe3ec32b7c5777a53d2e2e2fa2dd3cdc0a6113f"
+        },
+        {
+          "bounds": [
+            656,
+            0,
+            678,
+            2
+          ],
+          "placement": [
+            43,
+            823
+          ],
+          "rgbaSha256": "c9d4ce26c7443abee1a415dd7e39e4bb84ce403e60ab79dd79828a6f4131d72d"
+        },
+        {
+          "bounds": [
+            681,
+            1928,
+            720,
+            1956
+          ],
+          "placement": [
+            201,
+            738
+          ],
+          "rgbaSha256": "f0e33fccf491851345b891f5490b393cec1324808fe123542c6a794b22564909"
+        },
+        {
+          "bounds": [
+            698,
+            0,
+            710,
+            27
+          ],
+          "placement": [
+            21,
+            772
+          ],
+          "rgbaSha256": "d08998e00287f907c81b2a29bb035cc77dd5100c21aac33692f55c5c3a5a367c"
+        },
+        {
+          "bounds": [
+            698,
+            31,
+            707,
+            39
+          ],
+          "placement": [
+            232,
+            801
+          ],
+          "rgbaSha256": "2b46275efba6c6250453ad438d27b9e6de472965760da9e0d15974e4caba4e89"
+        },
+        {
+          "bounds": [
+            701,
+            1846,
+            742,
+            1884
+          ],
+          "placement": [
+            123,
+            691
+          ],
+          "rgbaSha256": "8ce40ecd818aa2e5f1f65ef4056f8ab00328fe3b551cc301d58cf783f3989fc8"
+        },
+        {
+          "bounds": [
+            706,
+            1254,
+            724,
+            1281
+          ],
+          "placement": [
+            1,
+            772
+          ],
+          "rgbaSha256": "f2aab702ed09d9f51ed7f9da411162526e90e3e35e71b083bedd9bec5198a3e3"
+        },
+        {
+          "bounds": [
+            706,
+            1309,
+            769,
+            1372
+          ],
+          "placement": [
+            1,
+            379
+          ],
+          "rgbaSha256": "e0c69d4e5d7a7a7a111bca50b470f47691ce03fdf8cb08cb10918ffc6804f8d5"
+        },
+        {
+          "bounds": [
+            714,
+            0,
+            719,
+            4
+          ],
+          "placement": [
+            36,
+            823
+          ],
+          "rgbaSha256": "a9032c64b925215ed894ed5ade6a9cc188a630e372172bd96d70f80a632fcb2c"
+        },
+        {
+          "bounds": [
+            758,
+            422,
+            884,
+            555
+          ],
+          "placement": [
+            119,
+            1
+          ],
+          "rgbaSha256": "601bc635ac7f4e5b2c800ef9954bbbd2d681ca448867ed786016ebb3df040089"
+        },
+        {
+          "bounds": [
+            786,
+            241,
+            797,
+            263
+          ],
+          "placement": [
+            184,
+            772
+          ],
+          "rgbaSha256": "2776547c91aa1cb9e4305a6da882d6deb5617a1503ea16a3daac6324d4886c08"
+        },
+        {
+          "bounds": [
+            790,
+            328,
+            833,
+            414
+          ],
+          "placement": [
+            104,
+            194
+          ],
+          "rgbaSha256": "fd1dbb1047ca94819d5dc47b06200c65f03d4ef0b3d043a1f4959677d81faf65"
+        },
+        {
+          "bounds": [
+            801,
+            195,
+            845,
+            358
+          ],
+          "placement": [
+            73,
+            1
+          ],
+          "rgbaSha256": "3c5ddcdbeb3bede370ac32c961b52cbee66f2315578717128688edb0d456ee48"
+        },
+        {
+          "bounds": [
+            805,
+            201,
+            814,
+            212
+          ],
+          "placement": [
+            169,
+            801
+          ],
+          "rgbaSha256": "ff3a53932ab45e9d38c77a4b4ccf1018e502c75cdd6e6a8a95316954adfb83e9"
+        },
+        {
+          "bounds": [
+            810,
+            1470,
+            865,
+            1530
+          ],
+          "placement": [
+            173,
+            509
+          ],
+          "rgbaSha256": "740bceb4d9e4723470c27059ae28af9b3db67bb29911d854e08854647c3ac42e"
+        },
+        {
+          "bounds": [
+            827,
+            869,
+            848,
+            890
+          ],
+          "placement": [
+            210,
+            772
+          ],
+          "rgbaSha256": "a45213dd8a3d3b009576891bce16ff071885568ca311f3d21742c8b83db57ab2"
+        },
+        {
+          "bounds": [
+            837,
+            392,
+            849,
+            412
+          ],
+          "placement": [
+            1,
+            801
+          ],
+          "rgbaSha256": "0b414e33e9bc97510235c2956b029636159c1132f9b092f468af337063bf4825"
+        },
+        {
+          "bounds": [
+            896,
+            1486,
+            948,
+            1547
+          ],
+          "placement": [
+            66,
+            509
+          ],
+          "rgbaSha256": "20a17dec8c191241f7fc0ddcd955f52c75de653940b729ca5dc23f5a89843b5a"
+        },
+        {
+          "bounds": [
+            905,
+            1340,
+            968,
+            1403
+          ],
+          "placement": [
+            66,
+            379
+          ],
+          "rgbaSha256": "c5e63a53845c3fd244455166e73bf3edc60e28431765762fe3aa0c6f57d0af83"
+        },
+        {
+          "bounds": [
+            926,
+            2009,
+            948,
+            2034
+          ],
+          "placement": [
+            119,
+            772
+          ],
+          "rgbaSha256": "1fcf33c76d5a53c952405020aa16dbd70775f52a517b5ff89688c38547cdf7f6"
+        },
+        {
+          "bounds": [
+            974,
+            1300,
+            1037,
+            1363
+          ],
+          "placement": [
+            131,
+            379
+          ],
+          "rgbaSha256": "a62472c1a7ef60e6f279a74f2e8a3eeb4f0a22e3361fc3c987bad9fc3f9fc675"
+        },
+        {
+          "bounds": [
+            974,
+            1880,
+            997,
+            1909
+          ],
+          "placement": [
+            135,
+            738
+          ],
+          "rgbaSha256": "acf557b2f4919083a355432f83c44014cd31da7667336d29374468d5e182838d"
+        },
+        {
+          "bounds": [
+            980,
+            446,
+            1006,
+            460
+          ],
+          "placement": [
+            98,
+            801
+          ],
+          "rgbaSha256": "5d463745251ca917fedf3c0370ce17bce0747de24d37fa1499127a2d91918327"
+        },
+        {
+          "bounds": [
+            1008,
+            1953,
+            1039,
+            1985
+          ],
+          "placement": [
+            69,
+            738
+          ],
+          "rgbaSha256": "11d00def6e3257173a7e8b1527daca3931ad7f95c9d70cb347bad945e378f4f7"
+        },
+        {
+          "bounds": [
+            1034,
+            194,
+            1054,
+            216
+          ],
+          "placement": [
+            162,
+            772
+          ],
+          "rgbaSha256": "12fdbc8e563b30e5274ba1cfd282403d0aa6464f654c4236570ceecfcf5e6b9b"
+        },
+        {
+          "bounds": [
+            1058,
+            1570,
+            1108,
+            1626
+          ],
+          "placement": [
+            61,
+            633
+          ],
+          "rgbaSha256": "665c12b24f0c0ee7bd56f7a7921f976e6fcf6c25a820a3ad47404771fd87b477"
+        },
+        {
+          "bounds": [
+            1069,
+            1980,
+            1100,
+            2006
+          ],
+          "placement": [
+            35,
+            772
+          ],
+          "rgbaSha256": "7b8ef57e23772355b5bb0640756ba1cc006e6da59249bb3d02dfa8e40db3c7e1"
+        },
+        {
+          "bounds": [
+            1089,
+            632,
+            1108,
+            647
+          ],
+          "placement": [
+            59,
+            801
+          ],
+          "rgbaSha256": "11693c17a4323b2aa9266e63d7924c33e45de6c7bb02050c66924e0a5f299e96"
+        },
+        {
+          "bounds": [
+            1092,
+            23,
+            1098,
+            29
+          ],
+          "placement": [
+            10,
+            823
+          ],
+          "rgbaSha256": "8a4b29c1b908e1d25e56c18f6d662359c7d849e66bbec1dc71e40cd5c9feaab1"
+        },
+        {
+          "bounds": [
+            1153,
+            302,
+            1162,
+            313
+          ],
+          "placement": [
+            180,
+            801
+          ],
+          "rgbaSha256": "139adb089da984ffffb5061d8f6fb7152e2ef60ffab8ed7e7b92675d8f077b8b"
+        },
+        {
+          "bounds": [
+            1156,
+            1466,
+            1215,
+            1522
+          ],
+          "placement": [
+            184,
+            574
+          ],
+          "rgbaSha256": "a8e9a4646fce3d0615fa7aaeeef4d9f67598e8908b461dffbe47967c624c14de"
+        },
+        {
+          "bounds": [
+            1190,
+            357,
+            1201,
+            379
+          ],
+          "placement": [
+            197,
+            772
+          ],
+          "rgbaSha256": "87b89b7ace4afa8adb8e8cff7f33b1b379892660edb788aa3e83919cc126c530"
+        },
+        {
+          "bounds": [
+            1190,
+            394,
+            1207,
+            418
+          ],
+          "placement": [
+            143,
+            772
+          ],
+          "rgbaSha256": "6c6956779020e56fe9ee9abf0e238f8532256cf79308538c32df0451653b17ee"
+        },
+        {
+          "bounds": [
+            1235,
+            1611,
+            1287,
+            1663
+          ],
+          "placement": [
+            113,
+            633
+          ],
+          "rgbaSha256": "988a0de2f9ea0aea34a765a55e9913fb9d7ec0d27fd7d68656834f6e97333a90"
+        },
+        {
+          "bounds": [
+            1240,
+            1342,
+            1303,
+            1405
+          ],
+          "placement": [
+            1,
+            444
+          ],
+          "rgbaSha256": "579309989cc5f1e40f42951a20799a29df5ed96c41c85c85e96f61abf5483a99"
+        },
+        {
+          "bounds": [
+            1259,
+            0,
+            1268,
+            4
+          ],
+          "placement": [
+            25,
+            823
+          ],
+          "rgbaSha256": "e7f1031c6cda5c17d3b73abc4923107ca0546cdd2473e08480a55358e522b7f9"
+        },
+        {
+          "bounds": [
+            1263,
+            1010,
+            1284,
+            1031
+          ],
+          "placement": [
+            233,
+            772
+          ],
+          "rgbaSha256": "a5b8d61dc8a12ab267f225bc576057393c61c6f793130fa85c72a1d0bc1760e4"
+        },
+        {
+          "bounds": [
+            1306,
+            1603,
+            1364,
+            1650
+          ],
+          "placement": [
+            167,
+            633
+          ],
+          "rgbaSha256": "d086d4d0787c68ed0c33d81b32279ca0ca85d63a54050ecbb8b2b06d102ba8dd"
+        },
+        {
+          "bounds": [
+            1307,
+            1310,
+            1370,
+            1373
+          ],
+          "placement": [
+            66,
+            444
+          ],
+          "rgbaSha256": "518e09ba0f84d06e8a029db11c1f8289b5f8e7146ebd7816fc9e5a6771ff131e"
+        },
+        {
+          "bounds": [
+            1348,
+            127,
+            1362,
+            138
+          ],
+          "placement": [
+            140,
+            801
+          ],
+          "rgbaSha256": "56264c86df185cb0675e5b8db59ad8c8bbc5b7a299f078c70b7ac2d54daa8ac8"
+        },
+        {
+          "bounds": [
+            1373,
+            1967,
+            1404,
+            1998
+          ],
+          "placement": [
+            102,
+            738
+          ],
+          "rgbaSha256": "47857ea9549c2df8966581a74b62c3766142f11b80346bdd062545541db2021e"
+        },
+        {
+          "bounds": [
+            1374,
+            1310,
+            1437,
+            1373
+          ],
+          "placement": [
+            131,
+            444
+          ],
+          "rgbaSha256": "6c2c651473ff0a90d196d50dbea1fd64e8c42e20e2894c95d8739260cd176b8c"
+        },
+        {
+          "bounds": [
+            1379,
+            1931,
+            1413,
+            1963
+          ],
+          "placement": [
+            191,
+            691
+          ],
+          "rgbaSha256": "b32fd12c83332f9762daeb984a383a3cd8ef4ba2d6c354621a2b4b7e43c1f267"
+        },
+        {
+          "bounds": [
+            1417,
+            1941,
+            1449,
+            1973
+          ],
+          "placement": [
+            35,
+            738
+          ],
+          "rgbaSha256": "23dec908b91b1a90dca8eca5ca6fb9e22dd90cf4db93460568ff435505069cb4"
+        },
+        {
+          "bounds": [
+            1425,
+            1485,
+            1483,
+            1541
+          ],
+          "placement": [
+            1,
+            633
+          ],
+          "rgbaSha256": "d974b9d70784a0bd6ef2f7061c30102ac1fb21c58159cb52fa13a6498e516058"
+        },
+        {
+          "bounds": [
+            1441,
+            1310,
+            1504,
+            1373
+          ],
+          "placement": [
+            1,
+            509
+          ],
+          "rgbaSha256": "b44fb04aefb61ba0c61d691982ad12179083996bae8b59ea6f28accd141f7050"
+        },
+        {
+          "bounds": [
+            1453,
+            1922,
+            1481,
+            1961
+          ],
+          "placement": [
+            93,
+            691
+          ],
+          "rgbaSha256": "d549d33e1ff5244eda90a73e5fc3381801e6a210a72c5367c7f49d3869c24069"
+        },
+        {
+          "bounds": [
+            1475,
+            1377,
+            1507,
+            1493
+          ],
+          "placement": [
+            70,
+            194
+          ],
+          "rgbaSha256": "1c071fa5799bde998dbda55395c1e7a8706f8984fa9510afa44d51056ca5c9a2"
+        }
+      ]
+    }
+  },
+  "previews": [
+    {
+      "level": 1,
+      "weapon": "rage",
+      "export": "spell_tower_lvl1_rage",
+      "path": "assets/buildings/spell-tower-native/preview-1-rage.png",
+      "bounds": [
+        -70,
+        -70,
+        70,
+        90
+      ],
+      "width": 280,
+      "height": 320,
+      "pixelsPerNativeUnit": 2,
+      "frame": "idle",
+      "rgbaSha256": "dc43e7ffc35e6019186ba2bec9a8e1a978a01f6d7c024ddb874d406511d67a54"
+    },
+    {
+      "level": 2,
+      "weapon": "rage",
+      "export": "spell_tower_lvl2_rage",
+      "path": "assets/buildings/spell-tower-native/preview-2-rage.png",
+      "bounds": [
+        -70,
+        -70,
+        70,
+        90
+      ],
+      "width": 280,
+      "height": 320,
+      "pixelsPerNativeUnit": 2,
+      "frame": "idle",
+      "rgbaSha256": "f400268105b6aebc1b7b9ef85c3b33a2cfae7b8a430253d438be9d7ee5e74824"
+    },
+    {
+      "level": 3,
+      "weapon": "rage",
+      "export": "spell_tower_lvl3_rage",
+      "path": "assets/buildings/spell-tower-native/preview-3-rage.png",
+      "bounds": [
+        -70,
+        -70,
+        70,
+        90
+      ],
+      "width": 280,
+      "height": 320,
+      "pixelsPerNativeUnit": 2,
+      "frame": "idle",
+      "rgbaSha256": "49af949fe848929af80f4f5e85bd1970c00aba639b6dfa006a29c6decb149e41"
+    },
+    {
+      "level": 4,
+      "weapon": "rage",
+      "export": "spell_tower_lvl4_rage",
+      "path": "assets/buildings/spell-tower-native/preview-4-rage.png",
+      "bounds": [
+        -70,
+        -70,
+        70,
+        90
+      ],
+      "width": 280,
+      "height": 320,
+      "pixelsPerNativeUnit": 2,
+      "frame": "idle",
+      "rgbaSha256": "01a552c585ad10adf0bee13b709e57d27493a205904df503896049f9739b1ea0"
+    },
+    {
+      "level": 1,
+      "weapon": "poison",
+      "export": "spell_tower_lvl1_poison",
+      "path": "assets/buildings/spell-tower-native/preview-1-poison.png",
+      "bounds": [
+        -70,
+        -70,
+        70,
+        90
+      ],
+      "width": 280,
+      "height": 320,
+      "pixelsPerNativeUnit": 2,
+      "frame": "idle",
+      "rgbaSha256": "714de0ef83b60414958052969342908991dbe10b593dc88553e99aba75a35380"
+    },
+    {
+      "level": 2,
+      "weapon": "poison",
+      "export": "spell_tower_lvl2_poison",
+      "path": "assets/buildings/spell-tower-native/preview-2-poison.png",
+      "bounds": [
+        -70,
+        -70,
+        70,
+        90
+      ],
+      "width": 280,
+      "height": 320,
+      "pixelsPerNativeUnit": 2,
+      "frame": "idle",
+      "rgbaSha256": "ad477b951547b044e05842f8a18e46d18a4f3fd98d97f5f6a19613afabe19930"
+    },
+    {
+      "level": 3,
+      "weapon": "poison",
+      "export": "spell_tower_lvl3_poison",
+      "path": "assets/buildings/spell-tower-native/preview-3-poison.png",
+      "bounds": [
+        -70,
+        -70,
+        70,
+        90
+      ],
+      "width": 280,
+      "height": 320,
+      "pixelsPerNativeUnit": 2,
+      "frame": "idle",
+      "rgbaSha256": "ce629d3e35d9b5760e726299b4cbce9d06eab04a0450f5f2f0f4b623f1980e3d"
+    },
+    {
+      "level": 4,
+      "weapon": "poison",
+      "export": "spell_tower_lvl4_poison",
+      "path": "assets/buildings/spell-tower-native/preview-4-poison.png",
+      "bounds": [
+        -70,
+        -70,
+        70,
+        90
+      ],
+      "width": 280,
+      "height": 320,
+      "pixelsPerNativeUnit": 2,
+      "frame": "idle",
+      "rgbaSha256": "c10041e410c4cea0fa22d25a5ec0cad64bb6f19db229d6af6a2691ffb4f24cf2"
+    },
+    {
+      "level": 1,
+      "weapon": "invisibility",
+      "export": "spell_tower_lvl1_invisibility",
+      "path": "assets/buildings/spell-tower-native/preview-1-invisibility.png",
+      "bounds": [
+        -70,
+        -70,
+        70,
+        90
+      ],
+      "width": 280,
+      "height": 320,
+      "pixelsPerNativeUnit": 2,
+      "frame": "idle",
+      "rgbaSha256": "652c8583063d19a2967705fd0924804da658a18ae353e75af39344c6f6a02a79"
+    },
+    {
+      "level": 2,
+      "weapon": "invisibility",
+      "export": "spell_tower_lvl2_invisibility",
+      "path": "assets/buildings/spell-tower-native/preview-2-invisibility.png",
+      "bounds": [
+        -70,
+        -70,
+        70,
+        90
+      ],
+      "width": 280,
+      "height": 320,
+      "pixelsPerNativeUnit": 2,
+      "frame": "idle",
+      "rgbaSha256": "a21f6838001eed6cce5a544b387931fb4787169d0d4f5f9cc4a0b317954ffd5b"
+    },
+    {
+      "level": 3,
+      "weapon": "invisibility",
+      "export": "spell_tower_lvl3_invisibility",
+      "path": "assets/buildings/spell-tower-native/preview-3-invisibility.png",
+      "bounds": [
+        -70,
+        -70,
+        70,
+        90
+      ],
+      "width": 280,
+      "height": 320,
+      "pixelsPerNativeUnit": 2,
+      "frame": "idle",
+      "rgbaSha256": "b90920d2d2654e414d0bf9e7ce4087a84982fd0c3bdcc9092c2ba1f129139a68"
+    },
+    {
+      "level": 4,
+      "weapon": "invisibility",
+      "export": "spell_tower_lvl4_invisibility",
+      "path": "assets/buildings/spell-tower-native/preview-4-invisibility.png",
+      "bounds": [
+        -70,
+        -70,
+        70,
+        90
+      ],
+      "width": 280,
+      "height": 320,
+      "pixelsPerNativeUnit": 2,
+      "frame": "idle",
+      "rgbaSha256": "b1f72cb21d36eb6d47ce30066d956560663333edb223ffaa2d0b22f9147677e0"
+    }
+  ],
+  "reconstruction": {
+    "nativePlaybackVerified": false,
+    "scope": "Four building bodies, all twelve rage/poison/invisibility weapon bodies with their 1,236-frame turret_load state timeline, shared base/scaffold/upgrade/ruin, three spell bottles, every particle export referenced by the tower, bottle and spell effects, and seven sounds.",
+    "excluded": "The Earthquake weapon and spell (level-4 mode, absent from campaign placements) and the unreferenced spell_tower_<color> exports are retained only as source names.",
+    "preview": "Base plus weapon body at the idle label frame, density two; registration is local."
+  }
+}

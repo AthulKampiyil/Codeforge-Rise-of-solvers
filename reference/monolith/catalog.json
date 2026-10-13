@@ -1,0 +1,5871 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "fingerprint.json": "ecb5b05d632831cd706e4e993158b63635445257ad254bec97c371b078e3044b",
+    "sc/buildings.sc": "f73ec949fc070bc03175d6bb3af8b62d8f607094bf2b343c9846a499a35be0ed",
+    "sc/buildings_8.sctx": "588eba7d5739a5d9b53d3e14f2ab83bd170cad735363a81dd37bea7bcc0bb3bd",
+    "sc/buildings_18.sctx": "bd0c3b2eece3e9c43b2b3d61463e5b12ff4d274ae6adcc0ce33ceed63df58ffa",
+    "sc/buildings_25.sctx": "c290a82b3940513f16b55dba2305e875d923d4120c5997b6b6908c680ec8ca3d",
+    "sc/buildings_35.sctx": "35e6392104e55ed6e6b2635da517d0a5df28c947b2a2e34fb39d1550faf88a97",
+    "sc/buildings_39.sctx": "dd27d9612fe135c3be364840eeabe45b53a229b24192246b56a08fa0606fdb16",
+    "logic/buildings.csv": "9aed5fed876e2914a22fa7fed688a651c691ab06170d60e2bda8dc9262fbccb1",
+    "logic/projectiles.csv": "71cda0e457ad88a6772f6421a22419b24d6bcf78d0ed305f09184404889a72dc",
+    "logic/effects.csv": "5c6d5b67d6407345123b8d55872ed77ee6697b466d20d1fa21e25a723c511e9f",
+    "csv/particle_emitters.csv": "8d80bbf714386c4f24e6aed8f2eef671a2eac5c3b3ad41e4d275b757ced64cef",
+    "sfx/building_destroyed_01.ogg": "fd8295765aa86ff5c7c6be1159cd8fc97aed3c858c29fbdb1af5e3d5c5ce7f04",
+    "sfx/explosive_arrow_01v2.ogg": "2743212b46001112a8dedbc1aee1c944389d21f3f1144ba9e1c5edf3a9b79e4e",
+    "sfx/laser_loop_02.ogg": "e954f6fe9012932ab48cabc6b6e1aa10e4d6f1ee26376915fd40582cc87e8dd0",
+    "sfx/monolith_atk_sfx_01.ogg": "4923c7c54ad614cf619c8bc7e0c19e300193db4154ff1d07e0b20ebfb7c2553c",
+    "sfx/monolith_atk_sfx_02.ogg": "ba174cd645070219ced75945c5277b417a673aace10010c5ec994562c602cb1a",
+    "sfx/monolith_atk_sfx_03.ogg": "138e6b0654332ab5f651c257b9861e4a4eae98d1188d81a72eb7fc4adf70352d",
+    "sfx/monolith_pickup_01.ogg": "6b1a5813ce3283a678e569fc181cb8b8fa499f5e39bbb62c0b99e96733c1224d",
+    "sfx/monolith_place_01.ogg": "621f4fb11f0c79c0d2e7288e9630341834d599189a9798ecdb6f890b7ec03588"
+  },
+  "building": [
+    {
+      "Name": "Monolith",
+      "GlobalID": "1000077",
+      "BuildingLevel": "1",
+      "TID": "TID_BUILDING_MONOLITH",
+      "InfoTID": "TID_BUILDING_MONOLITH_INFO",
+      "BuildingClass": "Defense",
+      "SWF": "sc/buildings.sc",
+      "ExportName": "monolith_lvl_1",
+      "ExportNameConstruction": "tower_turret_const",
+      "BuildTimeD": "7",
+      "BuildTimeH": "0",
+      "BuildTimeM": "0",
+      "BuildTimeS": "0",
+      "BuildResource": "DarkElixir",
+      "BuildCost": "200000",
+      "TownHallLevel": "15",
+      "CapitalHallLevel": "15",
+      "Width": "3",
+      "Height": "3",
+      "ExportNameBuildAnim": "tower_turret_upg",
+      "ExportNameUpgradeAnim": "monolith_lvl_1_upgrade",
+      "Hitpoints": "4747",
+      "RegenTime": "25",
+      "AttackRange": "1100",
+      "AttackSpeed": "1500",
+      "CoolDownOverride": "750",
+      "DPS": "150",
+      "DestroyEffect": "Building Destroyed",
+      "AttackEffect": "Monolith Attack",
+      "HitEffect": "Explosive Arrow",
+      "Projectile": "MonolithProjectileMin;MonolithProjectileMed;MonolithProjectileMax",
+      "ExportNameDamaged": "destroyedBuilding_3l_base_rockwood",
+      "BuildingW": "2",
+      "BuildingH": "2",
+      "ExportNameBase": "dark_tower_base",
+      "AirTargets": "TRUE",
+      "GroundTargets": "TRUE",
+      "PickUpEffect": "Monolith Pickup",
+      "PlacingEffect": "Monolith Placing",
+      "DefenderCount": "1",
+      "DefenderZ": "155",
+      "StrengthWeight": "37615",
+      "HintPriority": "150",
+      "AnimationActionFrame": "5",
+      "DamagePermilHp": "110",
+      "ProjectileVariantByTargetMaxHP": "600;2500",
+      "DefaultProjectileVariant": "3",
+      "PreviewScenario": "Monolith"
+    },
+    {
+      "BuildingLevel": "2",
+      "ExportName": "monolith_lvl_2",
+      "BuildTimeD": "8",
+      "BuildTimeH": "0",
+      "BuildTimeM": "0",
+      "BuildTimeS": "0",
+      "BuildCost": "250000",
+      "TownHallLevel": "15",
+      "CapitalHallLevel": "15",
+      "ExportNameUpgradeAnim": "monolith_lvl_2_upgrade",
+      "Hitpoints": "5050",
+      "RegenTime": "26",
+      "DPS": "175",
+      "AttackEffect": "Monolith Attack",
+      "Projectile": "MonolithProjectileMin;MonolithProjectileMed;MonolithProjectileMax",
+      "DefenderCount": "1",
+      "DefenderZ": "155",
+      "StrengthWeight": "39163",
+      "DamagePermilHp": "120",
+      "ProjectileVariantByTargetMaxHP": "650;2750",
+      "DefaultProjectileVariant": "3"
+    },
+    {
+      "BuildingLevel": "3",
+      "ExportName": "monolith_lvl_3",
+      "BuildTimeD": "9",
+      "BuildTimeH": "0",
+      "BuildTimeM": "0",
+      "BuildTimeS": "0",
+      "BuildCost": "260000",
+      "TownHallLevel": "16",
+      "CapitalHallLevel": "16",
+      "ExportNameUpgradeAnim": "monolith_lvl_3_upgrade",
+      "Hitpoints": "5353",
+      "RegenTime": "26",
+      "DPS": "193",
+      "AttackEffect": "Monolith Attack",
+      "Projectile": "MonolithProjectileMin;MonolithProjectileMed;MonolithProjectileMax",
+      "DefenderCount": "1",
+      "DefenderZ": "155",
+      "StrengthWeight": "40750",
+      "DamagePermilHp": "130",
+      "ProjectileVariantByTargetMaxHP": "700;3000",
+      "DefaultProjectileVariant": "3"
+    },
+    {
+      "BuildingLevel": "4",
+      "ExportName": "monolith_lvl_4",
+      "BuildTimeD": "11",
+      "BuildTimeH": "0",
+      "BuildTimeM": "0",
+      "BuildTimeS": "0",
+      "BuildCost": "300000",
+      "TownHallLevel": "17",
+      "CapitalHallLevel": "17",
+      "ExportNameUpgradeAnim": "monolith_lvl_4_upgrade",
+      "Hitpoints": "5656",
+      "RegenTime": "26",
+      "DPS": "209",
+      "AttackEffect": "Monolith Attack",
+      "Projectile": "MonolithProjectileMin;MonolithProjectileMed;MonolithProjectileMax",
+      "DefenderCount": "1",
+      "DefenderZ": "155",
+      "StrengthWeight": "43000",
+      "DamagePermilHp": "140",
+      "ProjectileVariantByTargetMaxHP": "750;3250",
+      "DefaultProjectileVariant": "3"
+    },
+    {
+      "BuildingLevel": "5",
+      "ExportName": "monolith_lvl_5",
+      "BuildTimeD": "15",
+      "BuildTimeH": "0",
+      "BuildTimeM": "0",
+      "BuildTimeS": "0",
+      "BuildCost": "470000",
+      "TownHallLevel": "18",
+      "CapitalHallLevel": "18",
+      "ExportNameUpgradeAnim": "monolith_lvl_5_upgrade",
+      "Hitpoints": "5959",
+      "RegenTime": "26",
+      "DPS": "225",
+      "AttackEffect": "Monolith Attack",
+      "Projectile": "MonolithProjectileMin;MonolithProjectileMed;MonolithProjectileMax",
+      "DefenderCount": "1",
+      "DefenderZ": "155",
+      "StrengthWeight": "45500",
+      "DamagePermilHp": "150",
+      "ProjectileVariantByTargetMaxHP": "800;3500",
+      "DefaultProjectileVariant": "3"
+    }
+  ],
+  "projectiles": {
+    "MonolithProjectileMin": [
+      {
+        "Name": "MonolithProjectileMin",
+        "SWF": "sc/buildings.sc",
+        "ExportName": "monolith_projectile_min",
+        "ScaleTimeline": "TRUE",
+        "DirectionCount": "0",
+        "RotateEmitter": "FALSE",
+        "Effect": "MonolithProjectilTrailMinEffect",
+        "RotateEffect": "TRUE",
+        "SpawnEffect": "MonolithAtkMin",
+        "Speed": "2200",
+        "StartHeight": "220",
+        "StartOffset": "60",
+        "IsBallistic": "FALSE",
+        "RandomHitPositionOnCharacters": "FALSE",
+        "SmallRandomHitPositionOnBuildings": "FALSE",
+        "UseRotate": "TRUE",
+        "DirectionFrame": "TRUE",
+        "PlayOnce": "TRUE",
+        "UseTopLayer": "TRUE",
+        "Scale": "100",
+        "HitSpellLevel": "0",
+        "HitSpellInheritAffectType": "FALSE",
+        "DontTrackTarget": "FALSE",
+        "BallisticHeight": "0",
+        "TrajectoryStyle": "0",
+        "FixedTravelTime": "0",
+        "MaxTravelTime": "0",
+        "DamageDelay": "0",
+        "DestroyedEffect": "MonolithHitMin",
+        "TargetPosRandomRadius": "0",
+        "SlowdownDefencePercent": "0",
+        "UseNormalizeLenghtFix": "FALSE",
+        "MaxBounceDistance": "0",
+        "StopToTargetTime": "0",
+        "SmoothDamage": "FALSE",
+        "StartOffsetFromGunBone": "FALSE",
+        "PenetratingHitBoxWidth": "0",
+        "MaxHitBuildings": "0",
+        "MaxHitObjects": "0",
+        "ReturningProjectile": "FALSE",
+        "RetargetRadius": "0",
+        "RetargetTimer": "0",
+        "UseParentAnimation3D": "FALSE",
+        "DepthBiasFront": "0",
+        "DepthBiasBack": "0",
+        "PullTarget": "FALSE",
+        "ProjectileEffectOffset": "0",
+        "SpellsBoostedByParent": "TRUE"
+      }
+    ],
+    "MonolithProjectileMed": [
+      {
+        "Name": "MonolithProjectileMed",
+        "SWF": "sc/buildings.sc",
+        "ExportName": "monolith_projectile_med",
+        "ScaleTimeline": "TRUE",
+        "DirectionCount": "0",
+        "RotateEmitter": "TRUE",
+        "Effect": "MonolithProjectilTrailMedEffect",
+        "RotateEffect": "TRUE",
+        "SpawnEffect": "MonolithAtkMed",
+        "Speed": "2200",
+        "StartHeight": "220",
+        "StartOffset": "60",
+        "IsBallistic": "FALSE",
+        "RandomHitPositionOnCharacters": "FALSE",
+        "SmallRandomHitPositionOnBuildings": "FALSE",
+        "UseRotate": "TRUE",
+        "DirectionFrame": "TRUE",
+        "PlayOnce": "TRUE",
+        "UseTopLayer": "TRUE",
+        "Scale": "150",
+        "HitSpellLevel": "0",
+        "HitSpellInheritAffectType": "FALSE",
+        "DontTrackTarget": "FALSE",
+        "BallisticHeight": "0",
+        "TrajectoryStyle": "0",
+        "FixedTravelTime": "0",
+        "MaxTravelTime": "0",
+        "DamageDelay": "0",
+        "DestroyedEffect": "MonolithHitMed",
+        "TargetPosRandomRadius": "0",
+        "SlowdownDefencePercent": "0",
+        "UseNormalizeLenghtFix": "FALSE",
+        "MaxBounceDistance": "0",
+        "StopToTargetTime": "0",
+        "SmoothDamage": "FALSE",
+        "StartOffsetFromGunBone": "FALSE",
+        "PenetratingHitBoxWidth": "0",
+        "MaxHitBuildings": "0",
+        "MaxHitObjects": "0",
+        "ReturningProjectile": "FALSE",
+        "RetargetRadius": "0",
+        "RetargetTimer": "0",
+        "UseParentAnimation3D": "FALSE",
+        "DepthBiasFront": "0",
+        "DepthBiasBack": "0",
+        "PullTarget": "FALSE",
+        "ProjectileEffectOffset": "0",
+        "SpellsBoostedByParent": "TRUE"
+      }
+    ],
+    "MonolithProjectileMax": [
+      {
+        "Name": "MonolithProjectileMax",
+        "SWF": "sc/buildings.sc",
+        "ExportName": "monolith_projectile_max",
+        "ScaleTimeline": "TRUE",
+        "DirectionCount": "0",
+        "RotateEmitter": "TRUE",
+        "Effect": "MonolithProjectilTrailMaxEffect",
+        "RotateEffect": "TRUE",
+        "SpawnEffect": "MonolithAtkMax",
+        "Speed": "2200",
+        "StartHeight": "220",
+        "StartOffset": "60",
+        "IsBallistic": "FALSE",
+        "RandomHitPositionOnCharacters": "FALSE",
+        "SmallRandomHitPositionOnBuildings": "FALSE",
+        "UseRotate": "TRUE",
+        "DirectionFrame": "TRUE",
+        "PlayOnce": "TRUE",
+        "UseTopLayer": "TRUE",
+        "Scale": "200",
+        "HitSpellLevel": "0",
+        "HitSpellInheritAffectType": "FALSE",
+        "DontTrackTarget": "FALSE",
+        "BallisticHeight": "0",
+        "TrajectoryStyle": "0",
+        "FixedTravelTime": "0",
+        "MaxTravelTime": "0",
+        "DamageDelay": "0",
+        "DestroyedEffect": "MonolithHitMax",
+        "TargetPosRandomRadius": "0",
+        "SlowdownDefencePercent": "0",
+        "UseNormalizeLenghtFix": "FALSE",
+        "MaxBounceDistance": "0",
+        "StopToTargetTime": "0",
+        "SmoothDamage": "FALSE",
+        "StartOffsetFromGunBone": "FALSE",
+        "PenetratingHitBoxWidth": "0",
+        "MaxHitBuildings": "0",
+        "MaxHitObjects": "0",
+        "ReturningProjectile": "FALSE",
+        "RetargetRadius": "0",
+        "RetargetTimer": "0",
+        "UseParentAnimation3D": "FALSE",
+        "DepthBiasFront": "0",
+        "DepthBiasBack": "0",
+        "PullTarget": "FALSE",
+        "ProjectileEffectOffset": "0",
+        "SpellsBoostedByParent": "TRUE"
+      }
+    ]
+  },
+  "effects": {
+    "Building Destroyed": [
+      {
+        "Name": "Building Destroyed",
+        "ParticleEmitter": "Building Destroyed",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/building_destroyed_01.ogg",
+        "Volume": "80",
+        "MinPitch": "85",
+        "MaxPitch": "95",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Smoke",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Explosive Arrow": [
+      {
+        "Name": "Explosive Arrow",
+        "ParticleEmitter": "Explosive_arrow2",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/explosive_arrow_01v2.ogg",
+        "Volume": "65",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Arrow_Tower_lightFlash",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Hit",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "DefenceHit",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Explosive_arrow",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Arrow_Tower_lightFlash",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Monolith Attack": [
+      {
+        "Name": "Monolith Attack",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "TRUE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "TRUE",
+        "Looping": "TRUE",
+        "Beam": "TRUE",
+        "SpawnLimit": "20",
+        "MinLifeTime": "0",
+        "Sound": "sfx/laser_loop_02.ogg",
+        "Volume": "40",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "143",
+        "LifeTimeScale": "10",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Monolith Pickup": [
+      {
+        "Name": "Monolith Pickup",
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/monolith_pickup_01.ogg",
+        "Volume": "80",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Monolith Placing": [
+      {
+        "Name": "Monolith Placing",
+        "ParticleEmitter": "Place",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "TRUE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/monolith_place_01.ogg",
+        "Volume": "80",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "MonolithAtkMax": [
+      {
+        "Name": "MonolithAtkMax",
+        "IsoLayer": "None",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/monolith_atk_sfx_03.ogg",
+        "Volume": "75",
+        "MinPitch": "98",
+        "MaxPitch": "102",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "MonolithAtkMed": [
+      {
+        "Name": "MonolithAtkMed",
+        "IsoLayer": "None",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/monolith_atk_sfx_02.ogg",
+        "Volume": "60",
+        "MinPitch": "98",
+        "MaxPitch": "102",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "MonolithAtkMin": [
+      {
+        "Name": "MonolithAtkMin",
+        "IsoLayer": "None",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/monolith_atk_sfx_01.ogg",
+        "Volume": "45",
+        "MinPitch": "98",
+        "MaxPitch": "102",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "MonolithHitMax": [
+      {
+        "Name": "MonolithHitMax",
+        "ParticleEmitter": "MonolithSparkleHitMax",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "MonolithSmokeHiteMax",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "MonolithHitMed": [
+      {
+        "Name": "MonolithHitMed",
+        "ParticleEmitter": "MonolithSmokeHiteMed",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "MonolithSparkleHitMed",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "MonolithHitMin": [
+      {
+        "Name": "MonolithHitMin",
+        "ParticleEmitter": "MonolithSmokeHiteMin",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "MonolithSparkleHitMin",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "MonolithProjectilTrailMaxEffect": [
+      {
+        "Name": "MonolithProjectilTrailMaxEffect",
+        "ParticleEmitter": "MonolithProjectileTrailMax",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "TRUE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "TRUE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "MonolithProjectileTrailMax3",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "MonolithProjectilTrailMedEffect": [
+      {
+        "Name": "MonolithProjectilTrailMedEffect",
+        "ParticleEmitter": "MonolithProjectileTrailMed",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "TRUE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "TRUE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "MonolithProjectileTrailMed3",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "MonolithProjectilTrailMinEffect": [
+      {
+        "Name": "MonolithProjectilTrailMinEffect",
+        "ParticleEmitter": "MonolithProjectileTrailMin",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "TRUE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "TRUE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "MonolithProjectileTrailMin3",
+        "EmitterDelayMs": "0"
+      }
+    ]
+  },
+  "particles": {
+    "Arrow_Tower_lightFlash": [
+      {
+        "Name": "Arrow_Tower_lightFlash",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "160",
+        "MaxLife": "160",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "spell_range_marker_3",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "30",
+        "EndScale": "50",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "340",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "Building Destroyed": [
+      {
+        "Name": "Building Destroyed",
+        "ParticleCount": "30",
+        "EmissionTime": "1",
+        "MinLife": "700",
+        "MaxLife": "1200",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "30",
+        "MaxVertAngle": "90",
+        "MinSpeed": "300",
+        "MaxSpeed": "1200",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "3000",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "TRUE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "debris1",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "0",
+        "Slowdown": "300",
+        "StartScale": "70",
+        "EndScale": "100",
+        "MinRotate": "20",
+        "MaxRotate": "90",
+        "ParticleFadeOutTime": "400",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "-180",
+        "StartAngleMax": "180",
+        "ScaleRandomMin": "80",
+        "ScaleRandomMax": "120",
+        "Alpha": "100",
+        "StartRadiusMin": "50",
+        "StartRadiusMax": "50"
+      },
+      {
+        "ParticleExportName": "debris2",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris3",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris4",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris5",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris6",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris7",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris8",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris9",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris10",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris11",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris12",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris13",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris14",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris15",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris16",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris17",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris18",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "debris19",
+        "AdditiveBlend": "FALSE"
+      }
+    ],
+    "DefenceHit": [
+      {
+        "Name": "DefenceHit",
+        "ParticleCount": "2",
+        "EmissionTime": "100",
+        "MinLife": "200",
+        "MaxLife": "1000",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "45",
+        "MaxVertAngle": "90",
+        "MinSpeed": "4000",
+        "MaxSpeed": "5000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "s1",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "300",
+        "Slowdown": "0",
+        "StartScale": "50",
+        "EndScale": "100",
+        "MinRotate": "-15",
+        "MaxRotate": "15",
+        "ParticleFadeOutTime": "800",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      },
+      {
+        "ParticleExportName": "s2",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "s3",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "s4",
+        "AdditiveBlend": "FALSE"
+      }
+    ],
+    "Explosive_arrow": [
+      {
+        "Name": "Explosive_arrow",
+        "ParticleCount": "8",
+        "EmissionTime": "1",
+        "MinLife": "750",
+        "MaxLife": "900",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "80",
+        "MaxVertAngle": "100",
+        "MinSpeed": "200",
+        "MaxSpeed": "1000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "50",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "d5",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "60",
+        "Slowdown": "0",
+        "StartScale": "70",
+        "EndScale": "100",
+        "MinRotate": "0",
+        "MaxRotate": "30",
+        "ParticleFadeOutTime": "500",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "1",
+        "StartRadiusMax": "1"
+      }
+    ],
+    "Explosive_arrow2": [
+      {
+        "Name": "Explosive_arrow2",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "350",
+        "MaxLife": "350",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "1",
+        "MaxSpeed": "1",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "50",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "wizard_tower_explosion",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "20",
+        "Slowdown": "0",
+        "StartScale": "20",
+        "EndScale": "90",
+        "MinRotate": "-10",
+        "MaxRotate": "10",
+        "ParticleFadeOutTime": "400",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "Grass": [
+      {
+        "Name": "Grass",
+        "ParticleCount": "3",
+        "EmissionTime": "200",
+        "MinLife": "200",
+        "MaxLife": "600",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "20",
+        "MaxVertAngle": "90",
+        "MinSpeed": "200",
+        "MaxSpeed": "780",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "3000",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "g1",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "40",
+        "Slowdown": "0",
+        "StartScale": "30",
+        "EndScale": "60",
+        "MinRotate": "-30",
+        "MaxRotate": "30",
+        "ParticleFadeOutTime": "300",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "200",
+        "StartRadiusMax": "200"
+      },
+      {
+        "ParticleExportName": "g2",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "g3",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "g4",
+        "AdditiveBlend": "FALSE"
+      }
+    ],
+    "Hit": [
+      {
+        "Name": "Hit",
+        "ParticleCount": "2",
+        "EmissionTime": "1",
+        "MinLife": "100",
+        "MaxLife": "300",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "1",
+        "MaxSpeed": "1",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "Hit",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "60",
+        "EndScale": "120",
+        "MinRotate": "-10",
+        "MaxRotate": "10",
+        "ParticleFadeOutTime": "300",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "30",
+        "StartRadiusMax": "30"
+      },
+      {
+        "ParticleExportName": "s1",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "s2",
+        "AdditiveBlend": "FALSE"
+      }
+    ],
+    "MonolithProjectileTrailMax": [
+      {
+        "Name": "MonolithProjectileTrailMax",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "500",
+        "MaxLife": "500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "TRUE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "monolith_trail_particle_max_01",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "65",
+        "EndScale": "25",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "700",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "300",
+        "FadeOutTime": "700",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "80",
+        "ScaleRandomMax": "150",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "MonolithProjectileTrailMax3": [
+      {
+        "Name": "MonolithProjectileTrailMax3",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "500",
+        "MaxLife": "500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "TRUE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "monolith_trail_particle_max_02",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "150",
+        "EndScale": "10",
+        "MinRotate": "-360",
+        "MaxRotate": "360",
+        "ParticleFadeOutTime": "300",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "300",
+        "FadeOutTime": "700",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "80",
+        "ScaleRandomMax": "150",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      },
+      {
+        "ParticleExportName": "monolith_trail_particle_max_02",
+        "AdditiveBlend": "TRUE"
+      }
+    ],
+    "MonolithProjectileTrailMed": [
+      {
+        "Name": "MonolithProjectileTrailMed",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "400",
+        "MaxLife": "400",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "TRUE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "monolith_trail_particle_med_01",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "80",
+        "EndScale": "25",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "600",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "0",
+        "FadeOutTime": "600",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "80",
+        "ScaleRandomMax": "150",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "MonolithProjectileTrailMed3": [
+      {
+        "Name": "MonolithProjectileTrailMed3",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "400",
+        "MaxLife": "400",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "TRUE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "monolith_trail_particle_med_02",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "150",
+        "EndScale": "10",
+        "MinRotate": "-360",
+        "MaxRotate": "360",
+        "ParticleFadeOutTime": "0",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "200",
+        "FadeOutTime": "600",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "80",
+        "ScaleRandomMax": "150",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      },
+      {
+        "ParticleExportName": "monolith_trail_particle_med_02",
+        "AdditiveBlend": "TRUE"
+      }
+    ],
+    "MonolithProjectileTrailMin": [
+      {
+        "Name": "MonolithProjectileTrailMin",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "300",
+        "MaxLife": "300",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "TRUE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "monolith_trail_particle_min_01",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "80",
+        "EndScale": "25",
+        "MinRotate": "0",
+        "MaxRotate": "0",
+        "ParticleFadeOutTime": "600",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "100",
+        "FadeOutTime": "600",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "80",
+        "ScaleRandomMax": "150",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      }
+    ],
+    "MonolithProjectileTrailMin3": [
+      {
+        "Name": "MonolithProjectileTrailMin3",
+        "ParticleCount": "1",
+        "EmissionTime": "1",
+        "MinLife": "300",
+        "MaxLife": "300",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "0",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "0",
+        "MaxSpeed": "0",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "TRUE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "monolith_trail_particle_min_02",
+        "AdditiveBlend": "TRUE",
+        "Inertia": "0",
+        "Slowdown": "0",
+        "StartScale": "150",
+        "EndScale": "10",
+        "MinRotate": "-360",
+        "MaxRotate": "360",
+        "ParticleFadeOutTime": "0",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "100",
+        "FadeOutTime": "500",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "80",
+        "ScaleRandomMax": "150",
+        "Alpha": "100",
+        "StartRadiusMin": "0",
+        "StartRadiusMax": "0"
+      },
+      {
+        "ParticleExportName": "monolith_trail_particle_min_02",
+        "AdditiveBlend": "TRUE"
+      }
+    ],
+    "MonolithSmokeHiteMax": [
+      {
+        "Name": "MonolithSmokeHiteMax",
+        "ParticleCount": "10",
+        "EmissionTime": "100",
+        "MinLife": "400",
+        "MaxLife": "1500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "45",
+        "MaxVertAngle": "90",
+        "MinSpeed": "4000",
+        "MaxSpeed": "5000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "-50",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "monolith_trail_particle_max_02",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "100",
+        "Slowdown": "0",
+        "StartScale": "100",
+        "EndScale": "240",
+        "MinRotate": "-15",
+        "MaxRotate": "15",
+        "ParticleFadeOutTime": "600",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "10",
+        "StartRadiusMax": "10"
+      }
+    ],
+    "MonolithSmokeHiteMed": [
+      {
+        "Name": "MonolithSmokeHiteMed",
+        "ParticleCount": "10",
+        "EmissionTime": "100",
+        "MinLife": "400",
+        "MaxLife": "1500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "45",
+        "MaxVertAngle": "90",
+        "MinSpeed": "4000",
+        "MaxSpeed": "5000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "-50",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "monolith_trail_particle_med_02",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "100",
+        "Slowdown": "0",
+        "StartScale": "100",
+        "EndScale": "240",
+        "MinRotate": "-15",
+        "MaxRotate": "15",
+        "ParticleFadeOutTime": "600",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "10",
+        "StartRadiusMax": "10"
+      }
+    ],
+    "MonolithSmokeHiteMin": [
+      {
+        "Name": "MonolithSmokeHiteMin",
+        "ParticleCount": "10",
+        "EmissionTime": "100",
+        "MinLife": "400",
+        "MaxLife": "1500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "45",
+        "MaxVertAngle": "90",
+        "MinSpeed": "4000",
+        "MaxSpeed": "5000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "-50",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "monolith_trail_particle_min_02",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "100",
+        "Slowdown": "0",
+        "StartScale": "100",
+        "EndScale": "240",
+        "MinRotate": "-15",
+        "MaxRotate": "15",
+        "ParticleFadeOutTime": "600",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "10",
+        "StartRadiusMax": "10"
+      }
+    ],
+    "MonolithSparkleHitMax": [
+      {
+        "Name": "MonolithSparkleHitMax",
+        "ParticleCount": "10",
+        "EmissionTime": "100",
+        "MinLife": "800",
+        "MaxLife": "1500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "33",
+        "MaxVertAngle": "45",
+        "MinSpeed": "50",
+        "MaxSpeed": "100",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "-50",
+        "TargetedEndZ": "0",
+        "Gravity": "600",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "HorizontalAngle",
+        "BounceFromGround": "TRUE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "monolith_trail_particle_max_03",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "10",
+        "Slowdown": "0",
+        "StartScale": "80",
+        "EndScale": "50",
+        "MinRotate": "-5",
+        "MaxRotate": "5",
+        "ParticleFadeOutTime": "600",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "0",
+        "FadeOutTime": "600",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "100",
+        "StartRadiusMax": "100"
+      }
+    ],
+    "MonolithSparkleHitMed": [
+      {
+        "Name": "MonolithSparkleHitMed",
+        "ParticleCount": "10",
+        "EmissionTime": "100",
+        "MinLife": "800",
+        "MaxLife": "1500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "33",
+        "MaxVertAngle": "45",
+        "MinSpeed": "50",
+        "MaxSpeed": "100",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "-50",
+        "TargetedEndZ": "0",
+        "Gravity": "600",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "HorizontalAngle",
+        "BounceFromGround": "TRUE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "monolith_trail_particle_med_03",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "10",
+        "Slowdown": "0",
+        "StartScale": "80",
+        "EndScale": "50",
+        "MinRotate": "-5",
+        "MaxRotate": "5",
+        "ParticleFadeOutTime": "600",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "0",
+        "FadeOutTime": "600",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "100",
+        "StartRadiusMax": "100"
+      }
+    ],
+    "MonolithSparkleHitMin": [
+      {
+        "Name": "MonolithSparkleHitMin",
+        "ParticleCount": "10",
+        "EmissionTime": "100",
+        "MinLife": "800",
+        "MaxLife": "1500",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "33",
+        "MaxVertAngle": "45",
+        "MinSpeed": "50",
+        "MaxSpeed": "100",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "-50",
+        "TargetedEndZ": "0",
+        "Gravity": "600",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "HorizontalAngle",
+        "BounceFromGround": "TRUE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "monolith_trail_particle_min_03",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "10",
+        "Slowdown": "0",
+        "StartScale": "80",
+        "EndScale": "50",
+        "MinRotate": "-5",
+        "MaxRotate": "5",
+        "ParticleFadeOutTime": "600",
+        "ScaleTimeline": "FALSE",
+        "FadeInTime": "0",
+        "FadeOutTime": "600",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "100",
+        "StartRadiusMax": "100"
+      }
+    ],
+    "Place": [
+      {
+        "Name": "Place",
+        "ParticleCount": "3",
+        "EmissionTime": "50",
+        "MinLife": "200",
+        "MaxLife": "600",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "0",
+        "MaxVertAngle": "0",
+        "MinSpeed": "100",
+        "MaxSpeed": "400",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "d1",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "50",
+        "Slowdown": "0",
+        "StartScale": "0",
+        "EndScale": "130",
+        "MinRotate": "0",
+        "MaxRotate": "30",
+        "ParticleFadeOutTime": "200",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "0",
+        "StartAngleMax": "0",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "100",
+        "StartRadiusMax": "100"
+      },
+      {
+        "ParticleExportName": "d2",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "d3",
+        "AdditiveBlend": "FALSE"
+      },
+      {
+        "ParticleExportName": "d4",
+        "AdditiveBlend": "FALSE"
+      }
+    ],
+    "Smoke": [
+      {
+        "Name": "Smoke",
+        "ParticleCount": "10",
+        "EmissionTime": "100",
+        "MinLife": "1500",
+        "MaxLife": "2100",
+        "MinHorizAngle": "0",
+        "MaxHorizAngle": "360",
+        "MinVertAngle": "45",
+        "MaxVertAngle": "90",
+        "MinSpeed": "4000",
+        "MaxSpeed": "5000",
+        "StartX": "0",
+        "StartY": "0",
+        "StartZ": "0",
+        "TargetedEndZ": "0",
+        "Gravity": "0",
+        "OrientToMovement": "FALSE",
+        "OrientToParentType": "Disabled",
+        "BounceFromGround": "FALSE",
+        "IsIsoParticle": "FALSE",
+        "IsoLayer": "Object",
+        "ParticleSwf": "sc/buildings.sc",
+        "ParticleExportName": "smoke01",
+        "AdditiveBlend": "FALSE",
+        "Inertia": "300",
+        "Slowdown": "0",
+        "StartScale": "100",
+        "EndScale": "100",
+        "MinRotate": "-10",
+        "MaxRotate": "10",
+        "ParticleFadeOutTime": "3000",
+        "ScaleTimeline": "TRUE",
+        "FadeInTime": "0",
+        "FadeOutTime": "0",
+        "StartAngleMin": "-90",
+        "StartAngleMax": "90",
+        "ScaleRandomMin": "100",
+        "ScaleRandomMax": "100",
+        "Alpha": "100",
+        "StartRadiusMin": "40",
+        "StartRadiusMax": "40"
+      }
+    ]
+  },
+  "sounds": {
+    "sfx/building_destroyed_01.ogg": {
+      "path": "assets/buildings/monolith-native/building_destroyed_01.ogg",
+      "sha256": "fd8295765aa86ff5c7c6be1159cd8fc97aed3c858c29fbdb1af5e3d5c5ce7f04"
+    },
+    "sfx/explosive_arrow_01v2.ogg": {
+      "path": "assets/buildings/monolith-native/explosive_arrow_01v2.ogg",
+      "sha256": "2743212b46001112a8dedbc1aee1c944389d21f3f1144ba9e1c5edf3a9b79e4e"
+    },
+    "sfx/laser_loop_02.ogg": {
+      "path": "assets/buildings/monolith-native/laser_loop_02.ogg",
+      "sha256": "e954f6fe9012932ab48cabc6b6e1aa10e4d6f1ee26376915fd40582cc87e8dd0"
+    },
+    "sfx/monolith_atk_sfx_01.ogg": {
+      "path": "assets/buildings/monolith-native/monolith_atk_sfx_01.ogg",
+      "sha256": "4923c7c54ad614cf619c8bc7e0c19e300193db4154ff1d07e0b20ebfb7c2553c"
+    },
+    "sfx/monolith_atk_sfx_02.ogg": {
+      "path": "assets/buildings/monolith-native/monolith_atk_sfx_02.ogg",
+      "sha256": "ba174cd645070219ced75945c5277b417a673aace10010c5ec994562c602cb1a"
+    },
+    "sfx/monolith_atk_sfx_03.ogg": {
+      "path": "assets/buildings/monolith-native/monolith_atk_sfx_03.ogg",
+      "sha256": "138e6b0654332ab5f651c257b9861e4a4eae98d1188d81a72eb7fc4adf70352d"
+    },
+    "sfx/monolith_pickup_01.ogg": {
+      "path": "assets/buildings/monolith-native/monolith_pickup_01.ogg",
+      "sha256": "6b1a5813ce3283a678e569fc181cb8b8fa499f5e39bbb62c0b99e96733c1224d"
+    },
+    "sfx/monolith_place_01.ogg": {
+      "path": "assets/buildings/monolith-native/monolith_place_01.ogg",
+      "sha256": "621f4fb11f0c79c0d2e7288e9630341834d599189a9798ecdb6f890b7ec03588"
+    }
+  },
+  "graphEvidence": {
+    "exports": {
+      "Hit": 17835,
+      "d1": 18119,
+      "d2": 18118,
+      "d3": 18116,
+      "d4": 18112,
+      "d5": 18109,
+      "dark_tower_base": 2727,
+      "debris1": 18183,
+      "debris10": 18193,
+      "debris11": 18192,
+      "debris12": 18191,
+      "debris13": 18190,
+      "debris14": 18189,
+      "debris15": 18188,
+      "debris16": 18187,
+      "debris17": 18186,
+      "debris18": 18185,
+      "debris19": 18184,
+      "debris2": 18200,
+      "debris3": 18199,
+      "debris4": 18198,
+      "debris5": 18204,
+      "debris6": 18197,
+      "debris7": 18196,
+      "debris8": 18195,
+      "debris9": 18194,
+      "destroyedBuilding_3l_base_rockwood": 12293,
+      "g1": 17941,
+      "g2": 17108,
+      "g3": 17106,
+      "g4": 17938,
+      "monolith_lvl_1": 14742,
+      "monolith_lvl_1_upgrade": 14704,
+      "monolith_lvl_2": 14699,
+      "monolith_lvl_2_upgrade": 14661,
+      "monolith_lvl_3": 14656,
+      "monolith_lvl_3_upgrade": 14599,
+      "monolith_lvl_4": 14594,
+      "monolith_lvl_4_upgrade": 14537,
+      "monolith_lvl_5": 14532,
+      "monolith_lvl_5_upgrade": 14465,
+      "monolith_projectile_max": 17703,
+      "monolith_projectile_med": 17699,
+      "monolith_projectile_min": 17695,
+      "monolith_trail_particle_max_01": 17690,
+      "monolith_trail_particle_max_02": 17688,
+      "monolith_trail_particle_max_03": 17687,
+      "monolith_trail_particle_med_01": 17685,
+      "monolith_trail_particle_med_02": 17683,
+      "monolith_trail_particle_med_03": 17682,
+      "monolith_trail_particle_min_01": 17680,
+      "monolith_trail_particle_min_02": 17678,
+      "monolith_trail_particle_min_03": 17676,
+      "s1": 17534,
+      "s2": 17531,
+      "s3": 17527,
+      "s4": 17524,
+      "smoke01": 17520,
+      "spell_range_marker_3": 17098,
+      "tower_turret_const": 9778,
+      "tower_turret_upg": 9767,
+      "wizard_tower_explosion": 17077
+    },
+    "clips": 140,
+    "shapes": 286,
+    "sha256": "ae7fb99abea436e3c0c79ef8d1ec45679f27c739ae7f9cea51935ccad6156a74"
+  },
+  "textures": {
+    "8": {
+      "path": "assets/buildings/builder-hut-native/texture/texture-8.png",
+      "sourceSize": [
+        444,
+        448
+      ],
+      "bounds": [
+        223,
+        0,
+        270,
+        33
+      ],
+      "packing": "source layout",
+      "width": 47,
+      "height": 33,
+      "rgbaSha256": "6ec6bcf02e24f3504a54b5eea32ea1fb94e63e6949a4dcdc581f4a7e75b325b1",
+      "regions": [
+        {
+          "bounds": [
+            223,
+            0,
+            270,
+            33
+          ],
+          "placement": [
+            0,
+            0
+          ],
+          "rgbaSha256": "6ec6bcf02e24f3504a54b5eea32ea1fb94e63e6949a4dcdc581f4a7e75b325b1"
+        }
+      ]
+    },
+    "18": {
+      "path": "assets/buildings/monolith-native/texture-18.png",
+      "sourceSize": [
+        2552,
+        4056
+      ],
+      "bounds": [
+        317,
+        0,
+        2328,
+        4039
+      ],
+      "packing": "packed source regions",
+      "width": 512,
+      "height": 138,
+      "rgbaSha256": "5f097f6f33eae9375c2a9552cad08ab2fa4c5df5b2562c18f720d15e35e20ee2",
+      "regions": [
+        {
+          "bounds": [
+            317,
+            0,
+            358,
+            33
+          ],
+          "placement": [
+            336,
+            1
+          ],
+          "rgbaSha256": "ca28ab36355311c2bb744c74e5eca0e94df56e8d4fec36a280561e5acca3aa55"
+        },
+        {
+          "bounds": [
+            1676,
+            1989,
+            1807,
+            2120
+          ],
+          "placement": [
+            133,
+            1
+          ],
+          "rgbaSha256": "ffb2a5daa0ed8a8cf7ee099da5e37e58609abffe5511e4a34a5401d3497bdbb8"
+        },
+        {
+          "bounds": [
+            1811,
+            0,
+            1852,
+            29
+          ],
+          "placement": [
+            379,
+            1
+          ],
+          "rgbaSha256": "9de62d8292f42297c1c5b84f75b70c0b18ec9ac2ced0221787137b7f592d07e1"
+        },
+        {
+          "bounds": [
+            1944,
+            3975,
+            2012,
+            4039
+          ],
+          "placement": [
+            266,
+            1
+          ],
+          "rgbaSha256": "ee206dbd1b43b89f0558ff0afa7875dc6e6d622d6903088cb45d6794256f9360"
+        },
+        {
+          "bounds": [
+            2198,
+            1983,
+            2328,
+            2119
+          ],
+          "placement": [
+            1,
+            1
+          ],
+          "rgbaSha256": "4a62e0d560c806bc9ab07ffb16ac173e18529c05f89804f19e2ffec3a6b1d92a"
+        }
+      ]
+    },
+    "25": {
+      "path": "assets/buildings/monolith-native/texture-25.png",
+      "sourceSize": [
+        3002,
+        3066
+      ],
+      "bounds": [
+        0,
+        1099,
+        2756,
+        3020
+      ],
+      "packing": "packed source regions",
+      "width": 256,
+      "height": 407,
+      "rgbaSha256": "0fa14e664545be421443b0e5958f4655dca0785a7c0e7eac3e9b57fbbdafa24f",
+      "regions": [
+        {
+          "bounds": [
+            0,
+            1175,
+            45,
+            1238
+          ],
+          "placement": [
+            1,
+            343
+          ],
+          "rgbaSha256": "0ebc44ca7cc8243c2b1c672a2b9aa97e082e06415bda3564ef6de72dc61569ba"
+        },
+        {
+          "bounds": [
+            970,
+            2091,
+            1116,
+            2213
+          ],
+          "placement": [
+            1,
+            219
+          ],
+          "rgbaSha256": "abc6539b456e23e9e830f117734a72eeb7b8221c971c898b0b87a42f8a797b3b"
+        },
+        {
+          "bounds": [
+            1067,
+            1184,
+            1150,
+            1230
+          ],
+          "placement": [
+            133,
+            343
+          ],
+          "rgbaSha256": "ee548b2bc414e7de14f511871124f17d7709ec7098d608bf1bd76c2020c877dc"
+        },
+        {
+          "bounds": [
+            1315,
+            2954,
+            1359,
+            3020
+          ],
+          "placement": [
+            149,
+            219
+          ],
+          "rgbaSha256": "72ec0af2fa56b84d1a9cc526090cc0fbec6dba78674b64e294cf143764ba9e05"
+        },
+        {
+          "bounds": [
+            1352,
+            1489,
+            1398,
+            1542
+          ],
+          "placement": [
+            85,
+            343
+          ],
+          "rgbaSha256": "5c9ea728390a2621e4504e871cc5e908328c8eacb5909fda62c4a4faf02d0607"
+        },
+        {
+          "bounds": [
+            1816,
+            2232,
+            1851,
+            2291
+          ],
+          "placement": [
+            48,
+            343
+          ],
+          "rgbaSha256": "007015d4c6286dfef2f63c8d41cc62c0aa6a6e252e01f205db0afc2bc9e88dfd"
+        },
+        {
+          "bounds": [
+            1944,
+            1099,
+            2002,
+            1162
+          ],
+          "placement": [
+            195,
+            219
+          ],
+          "rgbaSha256": "e813f31bd5a01196ed4c56176d5398f0091a3a62555a86f59d8bb55b6da58be0"
+        },
+        {
+          "bounds": [
+            2587,
+            1581,
+            2756,
+            1797
+          ],
+          "placement": [
+            1,
+            1
+          ],
+          "rgbaSha256": "eaee65b2d1fb73949e257f916fa404bde748b9f2b90a26517d2f896874b741df"
+        }
+      ]
+    },
+    "35": {
+      "path": "assets/buildings/monolith-native/texture-35.png",
+      "sourceSize": [
+        752,
+        1530
+      ],
+      "bounds": [
+        0,
+        0,
+        752,
+        1530
+      ],
+      "packing": "source layout",
+      "width": 752,
+      "height": 1530,
+      "rgbaSha256": "fbaf841e7d36edccebeff523a6fce95e93e7d6194eb0c2ac1e53497d22fff6b9",
+      "regions": [
+        {
+          "bounds": [
+            0,
+            0,
+            20,
+            20
+          ],
+          "placement": [
+            0,
+            0
+          ],
+          "rgbaSha256": "f3364c90378aa805a0b94066002be71637c6cb6c15ce449e058b8af5a9e7c355"
+        },
+        {
+          "bounds": [
+            0,
+            0,
+            208,
+            142
+          ],
+          "placement": [
+            0,
+            0
+          ],
+          "rgbaSha256": "6d557db162f42e474e5df5998476b657fa237b2bfacd55a7e8d5446b18f4132d"
+        },
+        {
+          "bounds": [
+            0,
+            117,
+            106,
+            320
+          ],
+          "placement": [
+            0,
+            117
+          ],
+          "rgbaSha256": "9154159428c46afe907297d6eca5ec44c47b99ed02c7a94cea76195ad48fd80a"
+        },
+        {
+          "bounds": [
+            0,
+            338,
+            78,
+            479
+          ],
+          "placement": [
+            0,
+            338
+          ],
+          "rgbaSha256": "175c2842ccbbaa17f4450731341413f3304679fe86ac16f7779f5261105abece"
+        },
+        {
+          "bounds": [
+            0,
+            483,
+            72,
+            617
+          ],
+          "placement": [
+            0,
+            483
+          ],
+          "rgbaSha256": "1e5024c277042ff13d4f7a889b1772e1607839246a99de1bbf9b8aae329a0360"
+        },
+        {
+          "bounds": [
+            0,
+            621,
+            59,
+            757
+          ],
+          "placement": [
+            0,
+            621
+          ],
+          "rgbaSha256": "af6fb733d2cee880d975359a2994a428e29b4994c83682b30394b9fc9a23a14e"
+        },
+        {
+          "bounds": [
+            0,
+            761,
+            83,
+            853
+          ],
+          "placement": [
+            0,
+            761
+          ],
+          "rgbaSha256": "fd7e03cd9b538442bd38b2012af23176e7585e22c9af142c0d98ddaf9caff3d4"
+        },
+        {
+          "bounds": [
+            0,
+            857,
+            70,
+            940
+          ],
+          "placement": [
+            0,
+            857
+          ],
+          "rgbaSha256": "bc51b67a89c5cf1a7bd45c0e317da540471dafb245172bcd2911153636728ce6"
+        },
+        {
+          "bounds": [
+            0,
+            976,
+            52,
+            1043
+          ],
+          "placement": [
+            0,
+            976
+          ],
+          "rgbaSha256": "21de7061321cc0c6f82949c01aee16e1000dda030c66747056f28babd02ae574"
+        },
+        {
+          "bounds": [
+            0,
+            1047,
+            58,
+            1104
+          ],
+          "placement": [
+            0,
+            1047
+          ],
+          "rgbaSha256": "d65cc9c2f53f9cfc78411f2e736538622a7e11c0dbfaa20bc02c18685d0e935a"
+        },
+        {
+          "bounds": [
+            0,
+            1120,
+            55,
+            1177
+          ],
+          "placement": [
+            0,
+            1120
+          ],
+          "rgbaSha256": "d4092e3fc8a4755b0377bbc2c179ff4e866b903446b0b0481a6325a986beb4fe"
+        },
+        {
+          "bounds": [
+            0,
+            1224,
+            50,
+            1283
+          ],
+          "placement": [
+            0,
+            1224
+          ],
+          "rgbaSha256": "5589d180e4a866db0cb17627dd398e42a5eeb3c708e1f5d6c4322902ee4d9793"
+        },
+        {
+          "bounds": [
+            0,
+            1287,
+            49,
+            1346
+          ],
+          "placement": [
+            0,
+            1287
+          ],
+          "rgbaSha256": "a36d33927ecfec88b491abc5ca85bdd549a31875e01da137f93417e3ac440175"
+        },
+        {
+          "bounds": [
+            0,
+            1350,
+            50,
+            1407
+          ],
+          "placement": [
+            0,
+            1350
+          ],
+          "rgbaSha256": "250974698dc46b17f52e9f3cc9266dc958c293238a86ae6331a4a1c33f1b06e0"
+        },
+        {
+          "bounds": [
+            0,
+            1411,
+            44,
+            1467
+          ],
+          "placement": [
+            0,
+            1411
+          ],
+          "rgbaSha256": "a23392962a2f8135bba09b6131dd427b9b29b8500f71c12d7fcaa8206f065842"
+        },
+        {
+          "bounds": [
+            0,
+            1471,
+            46,
+            1518
+          ],
+          "placement": [
+            0,
+            1471
+          ],
+          "rgbaSha256": "5ad9a10bf15e8f3a5efa70c76f06ff85fe99146596675336b3d7561f13e08c96"
+        },
+        {
+          "bounds": [
+            24,
+            0,
+            30,
+            5
+          ],
+          "placement": [
+            24,
+            0
+          ],
+          "rgbaSha256": "2af11c617e3d5b6b113a4530e5caae0b704a7b5f370e9e0e19ce114d68558834"
+        },
+        {
+          "bounds": [
+            32,
+            1174,
+            85,
+            1232
+          ],
+          "placement": [
+            32,
+            1174
+          ],
+          "rgbaSha256": "cc80ca198760890d957600e4bfc169b4801a9df5cc9af8172c044c1cb3330087"
+        },
+        {
+          "bounds": [
+            42,
+            931,
+            96,
+            1000
+          ],
+          "placement": [
+            42,
+            931
+          ],
+          "rgbaSha256": "abc9b1f0b5364f8a14f1b2b08b44399e618c0878af97365c9134f69fef2d7270"
+        },
+        {
+          "bounds": [
+            45,
+            1254,
+            102,
+            1306
+          ],
+          "placement": [
+            45,
+            1254
+          ],
+          "rgbaSha256": "e4604921a16313ab0cfec1465a14cb0b76d4bbb07aa1ca943d6b53c46b056a4c"
+        },
+        {
+          "bounds": [
+            47,
+            1314,
+            98,
+            1371
+          ],
+          "placement": [
+            47,
+            1314
+          ],
+          "rgbaSha256": "2d4e68392e62789758a73ae4bb77ad4412261d9fcc1eb0b401cbe1ef332043b9"
+        },
+        {
+          "bounds": [
+            48,
+            1434,
+            96,
+            1484
+          ],
+          "placement": [
+            48,
+            1434
+          ],
+          "rgbaSha256": "c6ee6987462c6d28480cbb10f804f490a0a8209eaece053f697076e1d36bc994"
+        },
+        {
+          "bounds": [
+            50,
+            1085,
+            105,
+            1145
+          ],
+          "placement": [
+            50,
+            1085
+          ],
+          "rgbaSha256": "f3422d0d80bac9ee19dee960e379e0146b71e3d58c5569b89e55e8c6809f7b91"
+        },
+        {
+          "bounds": [
+            50,
+            1488,
+            95,
+            1530
+          ],
+          "placement": [
+            50,
+            1488
+          ],
+          "rgbaSha256": "d57f721371515d791c755c57599e81757018371b0109379d9eb7e681c0c89030"
+        },
+        {
+          "bounds": [
+            54,
+            254,
+            146,
+            389
+          ],
+          "placement": [
+            54,
+            254
+          ],
+          "rgbaSha256": "632d4bdc971959013be0421f78853746f5bbd689f4c7be2a9803502e7ae1e9df"
+        },
+        {
+          "bounds": [
+            54,
+            1004,
+            119,
+            1056
+          ],
+          "placement": [
+            54,
+            1004
+          ],
+          "rgbaSha256": "af51ae3e9225ae7092de1439fa8d5d3a47d33a995f4cba26f9656c66773d3f4f"
+        },
+        {
+          "bounds": [
+            54,
+            1375,
+            103,
+            1430
+          ],
+          "placement": [
+            54,
+            1375
+          ],
+          "rgbaSha256": "51d40e8eb56882201eef07e7577cd99326907d97bbcee706253252006677d471"
+        },
+        {
+          "bounds": [
+            63,
+            669,
+            147,
+            765
+          ],
+          "placement": [
+            63,
+            669
+          ],
+          "rgbaSha256": "84ff78e26cbafb857fc1bb301846c20ddb051eadf802b398144d061906e60ddf"
+        },
+        {
+          "bounds": [
+            70,
+            514,
+            142,
+            646
+          ],
+          "placement": [
+            70,
+            514
+          ],
+          "rgbaSha256": "a278836ec7a4a7318516ba5190a30c16ba8d96c122e4e200e572c36881671419"
+        },
+        {
+          "bounds": [
+            77,
+            842,
+            156,
+            933
+          ],
+          "placement": [
+            77,
+            842
+          ],
+          "rgbaSha256": "1aeda7a269f989ae19ee4a8e1388e81390b06c5d71de64d6e474b3d2a93bb843"
+        },
+        {
+          "bounds": [
+            79,
+            1138,
+            134,
+            1196
+          ],
+          "placement": [
+            79,
+            1138
+          ],
+          "rgbaSha256": "fe6825a5a7cf4977dca1a25f8940ee77dc45fe724d55ed7e385a41af6a6f88ef"
+        },
+        {
+          "bounds": [
+            80,
+            1204,
+            137,
+            1257
+          ],
+          "placement": [
+            80,
+            1204
+          ],
+          "rgbaSha256": "16749d95c6a27bffd7b8dcdbe3bbd7a9851d3c786948a490b74660577fc24124"
+        },
+        {
+          "bounds": [
+            82,
+            393,
+            177,
+            510
+          ],
+          "placement": [
+            82,
+            393
+          ],
+          "rgbaSha256": "38d4ae0bd4e484c501fea93265bc360777b497c12e957580aee8da912ef0a49d"
+        },
+        {
+          "bounds": [
+            87,
+            780,
+            136,
+            836
+          ],
+          "placement": [
+            87,
+            780
+          ],
+          "rgbaSha256": "10419618a36052b14752f63788275e0592649f46af4b6267bdf9cec73c8cae8f"
+        },
+        {
+          "bounds": [
+            94,
+            146,
+            143,
+            200
+          ],
+          "placement": [
+            94,
+            146
+          ],
+          "rgbaSha256": "d82baa5c63bbbdf7108196551cd90d9f215e56688f888bd939efa6382fe874a8"
+        },
+        {
+          "bounds": [
+            96,
+            1048,
+            153,
+            1106
+          ],
+          "placement": [
+            96,
+            1048
+          ],
+          "rgbaSha256": "971f0282a5d27913d93c4077344b04fb59d658a7ddd6b18c6dcf25d6ebc0518f"
+        },
+        {
+          "bounds": [
+            98,
+            1343,
+            155,
+            1394
+          ],
+          "placement": [
+            98,
+            1343
+          ],
+          "rgbaSha256": "6eaf4893b24fda0ec358d6409a2baf9f0f3a50f4b435c57726cfebb452388b0b"
+        },
+        {
+          "bounds": [
+            100,
+            937,
+            154,
+            1006
+          ],
+          "placement": [
+            100,
+            937
+          ],
+          "rgbaSha256": "c5842a0093a067a6ddc2abedc4beee1cbf09504d0408f700a4195018fc275b89"
+        },
+        {
+          "bounds": [
+            100,
+            1453,
+            150,
+            1501
+          ],
+          "placement": [
+            100,
+            1453
+          ],
+          "rgbaSha256": "96f2e201bb261ab411e20b8d74e2f57f2eaa0d4c12f65ef06d5b945464d52a5f"
+        },
+        {
+          "bounds": [
+            102,
+            1282,
+            154,
+            1339
+          ],
+          "placement": [
+            102,
+            1282
+          ],
+          "rgbaSha256": "76e173833777e95744bce731227ca798d12f5f23b51a2a42e573b9bb9649b357"
+        },
+        {
+          "bounds": [
+            102,
+            1398,
+            153,
+            1449
+          ],
+          "placement": [
+            102,
+            1398
+          ],
+          "rgbaSha256": "153c6f647b2f144ff1576344bdc125f52c90d6b8b505cf7f725bd432760fdd40"
+        },
+        {
+          "bounds": [
+            110,
+            204,
+            146,
+            246
+          ],
+          "placement": [
+            110,
+            204
+          ],
+          "rgbaSha256": "03afccec3854e290fd93b724a6e4a87032338b41d92dfa937c0de85c0d75f721"
+        },
+        {
+          "bounds": [
+            124,
+            1100,
+            180,
+            1158
+          ],
+          "placement": [
+            124,
+            1100
+          ],
+          "rgbaSha256": "111844b873ae7eb0f66310a74fd1773bfd190ff4dfe3ed5afffbc2ad4deabc8c"
+        },
+        {
+          "bounds": [
+            137,
+            720,
+            195,
+            855
+          ],
+          "placement": [
+            137,
+            720
+          ],
+          "rgbaSha256": "170e6e424f3a8ee563683ad57a7bf8c9c7652c9cca3f84301d600d19ad43e193"
+        },
+        {
+          "bounds": [
+            138,
+            598,
+            226,
+            691
+          ],
+          "placement": [
+            138,
+            598
+          ],
+          "rgbaSha256": "27e3c80eee3dd5622cefd78a9ca256b5c489dd62c8568c7775888f49aa8b2d23"
+        },
+        {
+          "bounds": [
+            138,
+            1162,
+            191,
+            1221
+          ],
+          "placement": [
+            138,
+            1162
+          ],
+          "rgbaSha256": "76e630a229be6465a59692ed1db603070ea089de6bf86366da4a43006bb3367c"
+        },
+        {
+          "bounds": [
+            139,
+            993,
+            191,
+            1058
+          ],
+          "placement": [
+            139,
+            993
+          ],
+          "rgbaSha256": "b6bca50199413a91d0d24aabeb5d31a98d818ee98d1193586c3ced0a714fffb6"
+        },
+        {
+          "bounds": [
+            141,
+            1225,
+            193,
+            1283
+          ],
+          "placement": [
+            141,
+            1225
+          ],
+          "rgbaSha256": "1a88f636f23b17f8360bc399323451d8eee4569112556618de731f54f689552f"
+        },
+        {
+          "bounds": [
+            150,
+            107,
+            269,
+            332
+          ],
+          "placement": [
+            150,
+            107
+          ],
+          "rgbaSha256": "8606cbcee64198395ce5166a34af13b47fb411447d0e32aa9099f202b6cf9899"
+        },
+        {
+          "bounds": [
+            154,
+            1475,
+            201,
+            1522
+          ],
+          "placement": [
+            154,
+            1475
+          ],
+          "rgbaSha256": "809e17f0954d6d921ccfb7f4d555a0496ff63c5d0e8965d58623ac7c4b82dbff"
+        },
+        {
+          "bounds": [
+            157,
+            1423,
+            208,
+            1471
+          ],
+          "placement": [
+            157,
+            1423
+          ],
+          "rgbaSha256": "428825569d8d5cc463fb6717501d30f8dbd7305e17040c79674583a170bcc9a6"
+        },
+        {
+          "bounds": [
+            158,
+            1287,
+            208,
+            1346
+          ],
+          "placement": [
+            158,
+            1287
+          ],
+          "rgbaSha256": "4eac2656fa8388107275e096ea7d55e0bd28a1a0cf0b032a67e088fc6782f640"
+        },
+        {
+          "bounds": [
+            159,
+            1363,
+            208,
+            1419
+          ],
+          "placement": [
+            159,
+            1363
+          ],
+          "rgbaSha256": "6b1463a95aaf940aad3e1ec1eebbd71b73be7356ed7b55095d4a7f458eec71a3"
+        },
+        {
+          "bounds": [
+            160,
+            893,
+            226,
+            974
+          ],
+          "placement": [
+            160,
+            893
+          ],
+          "rgbaSha256": "cba836cb7bd7b3e2f7f2541a7d5102b0225b100f2de61d0307b9132d5c001811"
+        },
+        {
+          "bounds": [
+            170,
+            1060,
+            227,
+            1118
+          ],
+          "placement": [
+            170,
+            1060
+          ],
+          "rgbaSha256": "3e13fbbb4ee7024f463c44f0a54afa72647ebfa963818084d40c3c0d70046859"
+        },
+        {
+          "bounds": [
+            175,
+            477,
+            264,
+            594
+          ],
+          "placement": [
+            175,
+            477
+          ],
+          "rgbaSha256": "ae5c8ed75010081f39919c6a258b8e32d6b505aeb937d560d3cc1a9b87c9a632"
+        },
+        {
+          "bounds": [
+            181,
+            430,
+            227,
+            473
+          ],
+          "placement": [
+            181,
+            430
+          ],
+          "rgbaSha256": "d844450e69acd9c35a7b6604c8c27ff0af63a7b55afcb766f6b0e5c766a9db2e"
+        },
+        {
+          "bounds": [
+            183,
+            311,
+            286,
+            426
+          ],
+          "placement": [
+            183,
+            311
+          ],
+          "rgbaSha256": "dce563cf5a5bb48f8b29ba23ab9fb88b6666217e611480cb7826fd068c8c82ed"
+        },
+        {
+          "bounds": [
+            195,
+            975,
+            251,
+            1039
+          ],
+          "placement": [
+            195,
+            975
+          ],
+          "rgbaSha256": "50c8281ce3669c20ebabf231c8c2362a9be0948d1d092cf2bc4db7d69bd91f04"
+        },
+        {
+          "bounds": [
+            195,
+            1176,
+            253,
+            1229
+          ],
+          "placement": [
+            195,
+            1176
+          ],
+          "rgbaSha256": "bd8d5d8b08c2a90ea16bb5785587dde00e603f4dd8d98160b001d4f55ff5e2b5"
+        },
+        {
+          "bounds": [
+            197,
+            1242,
+            249,
+            1299
+          ],
+          "placement": [
+            197,
+            1242
+          ],
+          "rgbaSha256": "64bc5f78a404071b8018a07456cd618d77c5cd237d5bbefdd52d3afa192fdde8"
+        },
+        {
+          "bounds": [
+            198,
+            779,
+            257,
+            909
+          ],
+          "placement": [
+            198,
+            779
+          ],
+          "rgbaSha256": "ebb52157b4e0a27ecfab840ee0958066c5e7cca33e02e5da03b25dad84bded41"
+        },
+        {
+          "bounds": [
+            199,
+            680,
+            283,
+            775
+          ],
+          "placement": [
+            199,
+            680
+          ],
+          "rgbaSha256": "b75f43095d5117751dc4c75001443a21dfa9c515160341f6db7b03bf75dd44ab"
+        },
+        {
+          "bounds": [
+            200,
+            1116,
+            257,
+            1172
+          ],
+          "placement": [
+            200,
+            1116
+          ],
+          "rgbaSha256": "68fb64154288d76bc3f5caf8420956783aac185962592b5984ddd2188ed31166"
+        },
+        {
+          "bounds": [
+            209,
+            0,
+            350,
+            200
+          ],
+          "placement": [
+            209,
+            0
+          ],
+          "rgbaSha256": "ba52b47125bdc68924a81d7e3a2a398207f8b1fda4b66c3cce84694c2c50a045"
+        },
+        {
+          "bounds": [
+            210,
+            1329,
+            267,
+            1380
+          ],
+          "placement": [
+            210,
+            1329
+          ],
+          "rgbaSha256": "16da8bf1a236b2870e9c8491ebd968bbbddac52a5227e80ec3b446dc73108cf2"
+        },
+        {
+          "bounds": [
+            212,
+            1384,
+            260,
+            1440
+          ],
+          "placement": [
+            212,
+            1384
+          ],
+          "rgbaSha256": "74e8a73edd56579c5315582627432d21a7a2acf4ec20b6372314e1b5a0381b4f"
+        },
+        {
+          "bounds": [
+            212,
+            1449,
+            260,
+            1498
+          ],
+          "placement": [
+            212,
+            1449
+          ],
+          "rgbaSha256": "739f222ee5e2b7c5270cffb505b2a04c24e1ace67063626ad070666b88efd957"
+        },
+        {
+          "bounds": [
+            221,
+            1035,
+            279,
+            1093
+          ],
+          "placement": [
+            221,
+            1035
+          ],
+          "rgbaSha256": "f439d437fba0ac8bfa2a092e12f8cfc84707c8de93c35cd2c8c665c49e199976"
+        },
+        {
+          "bounds": [
+            235,
+            905,
+            316,
+            971
+          ],
+          "placement": [
+            235,
+            905
+          ],
+          "rgbaSha256": "f46512556f41b552d1f5e6a1df984ea08eb6aa61c9260fa132d05a3996695f39"
+        },
+        {
+          "bounds": [
+            243,
+            1207,
+            299,
+            1261
+          ],
+          "placement": [
+            243,
+            1207
+          ],
+          "rgbaSha256": "fa770dc5e0aeb0372f2e629895f9dacb5898386d891df95ffa743f32d0c7852b"
+        },
+        {
+          "bounds": [
+            249,
+            204,
+            342,
+            340
+          ],
+          "placement": [
+            249,
+            204
+          ],
+          "rgbaSha256": "ad61b2a02debfb241983c35b3cdb142aaf13caa170692ef5f24d71532105f5bb"
+        },
+        {
+          "bounds": [
+            252,
+            1268,
+            304,
+            1325
+          ],
+          "placement": [
+            252,
+            1268
+          ],
+          "rgbaSha256": "89ca08e9d69b25944822bae778f95d404d866f151aa2ee7257e7bea05916d5b1"
+        },
+        {
+          "bounds": [
+            255,
+            562,
+            327,
+            685
+          ],
+          "placement": [
+            255,
+            562
+          ],
+          "rgbaSha256": "aab2b452b196ea42b50b90bd12659a5c8f767990cd957e91c717ab77dbe29a15"
+        },
+        {
+          "bounds": [
+            255,
+            975,
+            311,
+            1039
+          ],
+          "placement": [
+            255,
+            975
+          ],
+          "rgbaSha256": "651b5b5de456e7a4110eeedd829d01546c9aceccbcaf8f6f4adc5de406443d1e"
+        },
+        {
+          "bounds": [
+            258,
+            1088,
+            313,
+            1148
+          ],
+          "placement": [
+            258,
+            1088
+          ],
+          "rgbaSha256": "6e168dd32900a91515ab487758d4dd6f33270fdcdee2a98fe7c421a396ba5da2"
+        },
+        {
+          "bounds": [
+            260,
+            1407,
+            309,
+            1459
+          ],
+          "placement": [
+            260,
+            1407
+          ],
+          "rgbaSha256": "76379591f3b9e7258c04b5453ca55c1a7780d4228bf29485ca9db93f2d86f76a"
+        },
+        {
+          "bounds": [
+            264,
+            1463,
+            312,
+            1512
+          ],
+          "placement": [
+            264,
+            1463
+          ],
+          "rgbaSha256": "424975ae94eaa308bce0a48d11aa77ed5cdf4fd69a51a9680fe1724559ab9a96"
+        },
+        {
+          "bounds": [
+            267,
+            739,
+            327,
+            869
+          ],
+          "placement": [
+            267,
+            739
+          ],
+          "rgbaSha256": "cb585ec35cfd609ab215d95adddf234726f1a2e56b2b22bb71d7271df809da94"
+        },
+        {
+          "bounds": [
+            268,
+            382,
+            347,
+            514
+          ],
+          "placement": [
+            268,
+            382
+          ],
+          "rgbaSha256": "c33f730748cf69329c8a1dbc0fde5d4cffb056eb1f9898b85e28c4e58b9ee217"
+        },
+        {
+          "bounds": [
+            268,
+            518,
+            312,
+            557
+          ],
+          "placement": [
+            268,
+            518
+          ],
+          "rgbaSha256": "9f6888edab3d12301c2e216da5b0401a6e58ee14e80f30aa45faf6037d99c262"
+        },
+        {
+          "bounds": [
+            270,
+            1148,
+            327,
+            1203
+          ],
+          "placement": [
+            270,
+            1148
+          ],
+          "rgbaSha256": "845951973751e1df6262237209e8cc0f1e842b813c8b48ee878758c6a44d27d5"
+        },
+        {
+          "bounds": [
+            271,
+            1330,
+            322,
+            1387
+          ],
+          "placement": [
+            271,
+            1330
+          ],
+          "rgbaSha256": "39173b1214d04f422dcd33cee31bd50fc9d1e57058146b687a2c0f2b0c228405"
+        },
+        {
+          "bounds": [
+            303,
+            1226,
+            358,
+            1280
+          ],
+          "placement": [
+            303,
+            1226
+          ],
+          "rgbaSha256": "9787bc8330f58bfd8bf6927b2b2f2d040b9b2c37121e20d77c4eaf3d1bb350cf"
+        },
+        {
+          "bounds": [
+            308,
+            1284,
+            360,
+            1341
+          ],
+          "placement": [
+            308,
+            1284
+          ],
+          "rgbaSha256": "def6c9f4c51543c04d2017c0750a49aeb339998418c7d5c943e6b0bd62854453"
+        },
+        {
+          "bounds": [
+            310,
+            1373,
+            365,
+            1422
+          ],
+          "placement": [
+            310,
+            1373
+          ],
+          "rgbaSha256": "b8b440682046214670d9804d284f4a9b3d5ef458dbbe0c97a4cd8f2f708bc0da"
+        },
+        {
+          "bounds": [
+            312,
+            845,
+            400,
+            924
+          ],
+          "placement": [
+            312,
+            845
+          ],
+          "rgbaSha256": "8acf7aa2ecd76fc744e46b5eb6a5221f193182e48a52c0d82641a8ccef097f1b"
+        },
+        {
+          "bounds": [
+            312,
+            1028,
+            363,
+            1094
+          ],
+          "placement": [
+            312,
+            1028
+          ],
+          "rgbaSha256": "3253b9721d068e49a4e9feefd4db93e885cb555c6a7b62426cb938e193c59c9d"
+        },
+        {
+          "bounds": [
+            313,
+            1426,
+            364,
+            1474
+          ],
+          "placement": [
+            313,
+            1426
+          ],
+          "rgbaSha256": "f1559adad3f9c69ad225f25146d2bd689715a30119cd6a5515cadb8956006393"
+        },
+        {
+          "bounds": [
+            314,
+            284,
+            406,
+            419
+          ],
+          "placement": [
+            314,
+            284
+          ],
+          "rgbaSha256": "01f4d00ab5b7a8fbf6678d73878ad7b2a076c001abd6f9149f761baf82448179"
+        },
+        {
+          "bounds": [
+            316,
+            1478,
+            360,
+            1523
+          ],
+          "placement": [
+            316,
+            1478
+          ],
+          "rgbaSha256": "865f062bdbcd6c06ac2337b78dec415b3abec4913807b1dd1d64126e7e6c0374"
+        },
+        {
+          "bounds": [
+            317,
+            1098,
+            374,
+            1155
+          ],
+          "placement": [
+            317,
+            1098
+          ],
+          "rgbaSha256": "816d7e1e540f82112484ffe40b2e00dc2f49815580daa8f829748abca2a77c1c"
+        },
+        {
+          "bounds": [
+            320,
+            122,
+            429,
+            252
+          ],
+          "placement": [
+            320,
+            122
+          ],
+          "rgbaSha256": "a626da077d1ab1e7ee90a603a34fc807569a00cbede54a5fd219a8a8a2e8bdf5"
+        },
+        {
+          "bounds": [
+            320,
+            501,
+            399,
+            624
+          ],
+          "placement": [
+            320,
+            501
+          ],
+          "rgbaSha256": "5c375c659ae045827f92e6d5a0d73757d81747e7fe96fb72d4d3f0059b082ffb"
+        },
+        {
+          "bounds": [
+            320,
+            928,
+            376,
+            996
+          ],
+          "placement": [
+            320,
+            928
+          ],
+          "rgbaSha256": "eea5c3c61d4ccfd94d98c99b3f174da6087e13f42fbda53c951b4ac3c1e4ba7b"
+        },
+        {
+          "bounds": [
+            321,
+            628,
+            381,
+            764
+          ],
+          "placement": [
+            321,
+            628
+          ],
+          "rgbaSha256": "56d116436d25905b6eda6e2e5eed10c8ef8347abed819d73f90a5bf7de2c5f9d"
+        },
+        {
+          "bounds": [
+            331,
+            0,
+            389,
+            51
+          ],
+          "placement": [
+            331,
+            0
+          ],
+          "rgbaSha256": "acbf37f0a6f30223b842bb61868d19fb71b68cea8dcd4472b1d1b79aeb6a94f6"
+        },
+        {
+          "bounds": [
+            331,
+            1172,
+            388,
+            1226
+          ],
+          "placement": [
+            331,
+            1172
+          ],
+          "rgbaSha256": "5a3727be65ddaaa9ae8f162f65fa1ae0a45c6a8c00a8a8fc79c80a1f858cdcb2"
+        },
+        {
+          "bounds": [
+            347,
+            758,
+            440,
+            841
+          ],
+          "placement": [
+            347,
+            758
+          ],
+          "rgbaSha256": "568de6d5ce15bcfdce0a369e1c372434c86b263376a962335b7c5246da48c0c5"
+        },
+        {
+          "bounds": [
+            350,
+            994,
+            415,
+            1046
+          ],
+          "placement": [
+            350,
+            994
+          ],
+          "rgbaSha256": "f16c68cc749dcefcf048ffa61878c14aff7dc88676f712571eba976b67191f3d"
+        },
+        {
+          "bounds": [
+            354,
+            0,
+            555,
+            136
+          ],
+          "placement": [
+            354,
+            0
+          ],
+          "rgbaSha256": "afc1768b35d761b07eb28383498217fc9021b82395a5928a24e725984b08269f"
+        },
+        {
+          "bounds": [
+            358,
+            1325,
+            409,
+            1382
+          ],
+          "placement": [
+            358,
+            1325
+          ],
+          "rgbaSha256": "4b1fc73ae4e636eb519f9453c5491ba495adf7b13a9c8469250e917edcec46d4"
+        },
+        {
+          "bounds": [
+            360,
+            1236,
+            414,
+            1291
+          ],
+          "placement": [
+            360,
+            1236
+          ],
+          "rgbaSha256": "c3093deefaca9c2e77b501c1364ad16f00bc5dd40b34e9ad613bb59450c36312"
+        },
+        {
+          "bounds": [
+            364,
+            1447,
+            412,
+            1497
+          ],
+          "placement": [
+            364,
+            1447
+          ],
+          "rgbaSha256": "9b3f6858af4140da3dd879907e74ae1f99e47e29f720b069b5ad7dcddad3d49c"
+        },
+        {
+          "bounds": [
+            367,
+            1050,
+            422,
+            1111
+          ],
+          "placement": [
+            367,
+            1050
+          ],
+          "rgbaSha256": "2ef8786b03f24f9e78ddc6edf0592ab441454323486c48bdd8afe3464683f919"
+        },
+        {
+          "bounds": [
+            367,
+            1117,
+            424,
+            1173
+          ],
+          "placement": [
+            367,
+            1117
+          ],
+          "rgbaSha256": "ef771c841b8a1ccf31ba829f63baebbee65e3479689b2b8fad97b196cb9f6654"
+        },
+        {
+          "bounds": [
+            369,
+            1386,
+            415,
+            1443
+          ],
+          "placement": [
+            369,
+            1386
+          ],
+          "rgbaSha256": "e226833687d3e77985ed37b0b9a3c55f0540220ca0947a85f8bb93b1d99d70b3"
+        },
+        {
+          "bounds": [
+            370,
+            406,
+            475,
+            508
+          ],
+          "placement": [
+            370,
+            406
+          ],
+          "rgbaSha256": "6f781f1a2af737906a6346cc658cd82fa62200271f8801aec7b1b67a524fe11e"
+        },
+        {
+          "bounds": [
+            385,
+            671,
+            474,
+            761
+          ],
+          "placement": [
+            385,
+            671
+          ],
+          "rgbaSha256": "a27c931dc1b51f24742d8288c194ae02f454f40dc0f60ec6b14a9c784d4c7f32"
+        },
+        {
+          "bounds": [
+            391,
+            919,
+            461,
+            990
+          ],
+          "placement": [
+            391,
+            919
+          ],
+          "rgbaSha256": "3ba040459f74c03d4964d5b18bfcb6663e2a8e04192323869e2dfb9cdd22be05"
+        },
+        {
+          "bounds": [
+            392,
+            1177,
+            447,
+            1232
+          ],
+          "placement": [
+            392,
+            1177
+          ],
+          "rgbaSha256": "98a11162d391d788901f7bb25c9514d3895a8995b6757e9707ad44ee99a17f46"
+        },
+        {
+          "bounds": [
+            399,
+            536,
+            471,
+            667
+          ],
+          "placement": [
+            399,
+            536
+          ],
+          "rgbaSha256": "24bcd6a396c04775f541b5c9e72b3b3f6ee0d4dc25bb4775d5d0476a00fa4784"
+        },
+        {
+          "bounds": [
+            403,
+            217,
+            495,
+            352
+          ],
+          "placement": [
+            403,
+            217
+          ],
+          "rgbaSha256": "dd25c41112eb40db73997b5c8a5f4ae121c12bf73236ab284ec779de59a4ddc3"
+        },
+        {
+          "bounds": [
+            409,
+            1293,
+            469,
+            1342
+          ],
+          "placement": [
+            409,
+            1293
+          ],
+          "rgbaSha256": "fceda302e8988d03c6f797fe184e23303efabc1b41648bf918469ba72413a6b2"
+        },
+        {
+          "bounds": [
+            410,
+            356,
+            457,
+            401
+          ],
+          "placement": [
+            410,
+            356
+          ],
+          "rgbaSha256": "5893d92e9ffa9ae05b335680a24664125be79330911926ca8c7d43ffe3ad7a26"
+        },
+        {
+          "bounds": [
+            413,
+            821,
+            491,
+            915
+          ],
+          "placement": [
+            413,
+            821
+          ],
+          "rgbaSha256": "8124c982f11766cddb997235eb1801b2aa15919d9d08d0a26944f7cca104d44b"
+        },
+        {
+          "bounds": [
+            413,
+            1346,
+            470,
+            1397
+          ],
+          "placement": [
+            413,
+            1346
+          ],
+          "rgbaSha256": "c14e3fc8e26c999faaad67744ac059b2f90362c2e4a6ad265e7f37e81c88a01a"
+        },
+        {
+          "bounds": [
+            416,
+            1457,
+            466,
+            1505
+          ],
+          "placement": [
+            416,
+            1457
+          ],
+          "rgbaSha256": "e2ad5d90966986636d3924bb1b66073f4d6e3473ee734b922f1c99080dc58464"
+        },
+        {
+          "bounds": [
+            419,
+            1006,
+            471,
+            1071
+          ],
+          "placement": [
+            419,
+            1006
+          ],
+          "rgbaSha256": "771bc7d14471709377fb921e138ec0fa63ec27358d38c21b63405942934a3ab9"
+        },
+        {
+          "bounds": [
+            419,
+            1401,
+            469,
+            1453
+          ],
+          "placement": [
+            419,
+            1401
+          ],
+          "rgbaSha256": "f4e964e35fbd133818e038d81e643380048c0e45ae4f214a09e7ce9713c4120f"
+        },
+        {
+          "bounds": [
+            426,
+            1075,
+            482,
+            1134
+          ],
+          "placement": [
+            426,
+            1075
+          ],
+          "rgbaSha256": "ce3a93924c21d38e8785c0ef0f920c1922254f87b489827c31e52006763ef8a9"
+        },
+        {
+          "bounds": [
+            428,
+            1138,
+            488,
+            1191
+          ],
+          "placement": [
+            428,
+            1138
+          ],
+          "rgbaSha256": "35fb55e580764f5473e60ca9a80bb9d5dfd906b52e2cee200f48afb89dc0289a"
+        },
+        {
+          "bounds": [
+            433,
+            140,
+            484,
+            189
+          ],
+          "placement": [
+            433,
+            140
+          ],
+          "rgbaSha256": "8e13d74f127de4269f4431ac9bec9c31d0ef015a56d440dc97375b9e83910636"
+        },
+        {
+          "bounds": [
+            438,
+            1229,
+            488,
+            1289
+          ],
+          "placement": [
+            438,
+            1229
+          ],
+          "rgbaSha256": "9142fd7ff9d79215e3e751c95ed5acede956c8384bca3718075420fffaa9837b"
+        },
+        {
+          "bounds": [
+            461,
+            314,
+            561,
+            431
+          ],
+          "placement": [
+            461,
+            314
+          ],
+          "rgbaSha256": "735c36efd65d3f38dfc1d298991657a4bbf201275875af521cd979096ebf9a70"
+        },
+        {
+          "bounds": [
+            463,
+            483,
+            560,
+            588
+          ],
+          "placement": [
+            463,
+            483
+          ],
+          "rgbaSha256": "3b384c147bee9cafa036d1f5bfb904d9ae6da05697593339371b495a23651d32"
+        },
+        {
+          "bounds": [
+            465,
+            961,
+            519,
+            1030
+          ],
+          "placement": [
+            465,
+            961
+          ],
+          "rgbaSha256": "960486bc9bd0393085f2d47fc0c04a0abdee0f14a1bfe75c266947c6573fd916"
+        },
+        {
+          "bounds": [
+            466,
+            118,
+            576,
+            310
+          ],
+          "placement": [
+            466,
+            118
+          ],
+          "rgbaSha256": "b13249c79288158167664b8126324304f9a95c352ce9f0fe9e98d62ae5fa5c13"
+        },
+        {
+          "bounds": [
+            470,
+            1468,
+            516,
+            1519
+          ],
+          "placement": [
+            470,
+            1468
+          ],
+          "rgbaSha256": "cee73efa2acbc2c3b80d9dee0cfaf228172d727b4e1b5336e833ef6fb94e4203"
+        },
+        {
+          "bounds": [
+            471,
+            592,
+            544,
+            713
+          ],
+          "placement": [
+            471,
+            592
+          ],
+          "rgbaSha256": "c186cd7861f7c55be971f03e48090936d41fe1ff6d7ee6950e9ba7c7bdca3b1a"
+        },
+        {
+          "bounds": [
+            473,
+            1295,
+            529,
+            1347
+          ],
+          "placement": [
+            473,
+            1295
+          ],
+          "rgbaSha256": "ebc78a0b0092499af0b92a05a9b2e24794e1f57c95c9332e12909b3f89adbb4b"
+        },
+        {
+          "bounds": [
+            473,
+            1412,
+            521,
+            1464
+          ],
+          "placement": [
+            473,
+            1412
+          ],
+          "rgbaSha256": "5d606c5a5329b01f97f67b2292b9d51f5a2c898ce570ece8efbc4990322fd5f9"
+        },
+        {
+          "bounds": [
+            474,
+            717,
+            532,
+            852
+          ],
+          "placement": [
+            474,
+            717
+          ],
+          "rgbaSha256": "0d3239a3ee769f147bc1b4d232e8a48a9f4eafad437ca2e30c4f9cb6762d6fed"
+        },
+        {
+          "bounds": [
+            474,
+            1351,
+            525,
+            1408
+          ],
+          "placement": [
+            474,
+            1351
+          ],
+          "rgbaSha256": "e0da1aeb6b35bb9cce64a50f0c4486d48c122c4ce1c5fbbed510a99a645adc78"
+        },
+        {
+          "bounds": [
+            479,
+            435,
+            527,
+            479
+          ],
+          "placement": [
+            479,
+            435
+          ],
+          "rgbaSha256": "297ec392e1864dd2dbd6217c2c43254e3da7ef15bba5f1ce9f0d94003139a6d8"
+        },
+        {
+          "bounds": [
+            484,
+            880,
+            563,
+            965
+          ],
+          "placement": [
+            484,
+            880
+          ],
+          "rgbaSha256": "b42abd00d970acca0f8f7d5f2eacf79b9b65640c1dfb5b1b12df1c970e1f41f8"
+        },
+        {
+          "bounds": [
+            485,
+            1032,
+            543,
+            1090
+          ],
+          "placement": [
+            485,
+            1032
+          ],
+          "rgbaSha256": "e770ee1eae21a16bbca8298a4f2b2aae8d0e48db6265a43823d8f5db49d7b164"
+        },
+        {
+          "bounds": [
+            486,
+            1097,
+            543,
+            1154
+          ],
+          "placement": [
+            486,
+            1097
+          ],
+          "rgbaSha256": "b5f0a4db7393151d2aa9cfd49821bb97fc26cf1f142ca0c493d7d8e921fd574e"
+        },
+        {
+          "bounds": [
+            489,
+            1173,
+            542,
+            1232
+          ],
+          "placement": [
+            489,
+            1173
+          ],
+          "rgbaSha256": "fb517ee700ca1a502bcafc18ebf3cca50a0831ec1ba2676a748bae2b5c08693b"
+        },
+        {
+          "bounds": [
+            492,
+            1236,
+            546,
+            1291
+          ],
+          "placement": [
+            492,
+            1236
+          ],
+          "rgbaSha256": "6570768ba38034041827f3512f4a999f5df4931acecf99837beac907754dbde2"
+        },
+        {
+          "bounds": [
+            517,
+            0,
+            568,
+            51
+          ],
+          "placement": [
+            517,
+            0
+          ],
+          "rgbaSha256": "75c1862c5e5350352e8ff7005029b54c63ccc7e0dcddd647f42f0ae8a0153b1b"
+        },
+        {
+          "bounds": [
+            520,
+            1436,
+            570,
+            1484
+          ],
+          "placement": [
+            520,
+            1436
+          ],
+          "rgbaSha256": "4b4cb1f3a7fdb34b4ad4adf5d74a46969421a9bf258301157ed2427391f3664d"
+        },
+        {
+          "bounds": [
+            520,
+            1488,
+            564,
+            1530
+          ],
+          "placement": [
+            520,
+            1488
+          ],
+          "rgbaSha256": "0122846d3d5f619bb2c3f4256aac82723fb3d11e92c9a5725a4da4d8ad5607ac"
+        },
+        {
+          "bounds": [
+            523,
+            974,
+            576,
+            1042
+          ],
+          "placement": [
+            523,
+            974
+          ],
+          "rgbaSha256": "4e0c1c1b13da5f7a1db50c903ab97388d87652817bc5bcdaecca84fcbf3aee54"
+        },
+        {
+          "bounds": [
+            525,
+            1377,
+            574,
+            1431
+          ],
+          "placement": [
+            525,
+            1377
+          ],
+          "rgbaSha256": "04f490190fea1a3dfa3720f60989f8e0768c47d5da53dd19a046346c935cc027"
+        },
+        {
+          "bounds": [
+            529,
+            1306,
+            585,
+            1358
+          ],
+          "placement": [
+            529,
+            1306
+          ],
+          "rgbaSha256": "5aaa919efe0b0ba1460bbfd7a64fa16bf503b1bd3a6eb137db47f8101dca74bf"
+        },
+        {
+          "bounds": [
+            534,
+            1127,
+            592,
+            1182
+          ],
+          "placement": [
+            534,
+            1127
+          ],
+          "rgbaSha256": "300f7f15c1e2a57d1287f957f648c8dc7a7ba822418d69913029b0f966fd3c27"
+        },
+        {
+          "bounds": [
+            536,
+            763,
+            595,
+            893
+          ],
+          "placement": [
+            536,
+            763
+          ],
+          "rgbaSha256": "f1c63d214d48904d63e6ce21af9fea4d2a8c6cd1546001d2f42ddb55854ed4b1"
+        },
+        {
+          "bounds": [
+            536,
+            1065,
+            593,
+            1123
+          ],
+          "placement": [
+            536,
+            1065
+          ],
+          "rgbaSha256": "99d95c2e177defc67924abaa6396a3791c4a1ca5f593200f90ba98d22adec3b0"
+        },
+        {
+          "bounds": [
+            545,
+            398,
+            647,
+            503
+          ],
+          "placement": [
+            545,
+            398
+          ],
+          "rgbaSha256": "c4aaa95244de5d39510c1eb98c0327f2ce290804824a484f964932bea9c28bc0"
+        },
+        {
+          "bounds": [
+            546,
+            1195,
+            601,
+            1250
+          ],
+          "placement": [
+            546,
+            1195
+          ],
+          "rgbaSha256": "9276490aa56c4b57ce7acea7667542e44abeb3a5c5d3894a612b7144225cf248"
+        },
+        {
+          "bounds": [
+            547,
+            627,
+            607,
+            763
+          ],
+          "placement": [
+            547,
+            627
+          ],
+          "rgbaSha256": "fed1f172fa6280cecb57628be9ee63f5b2eb6fa39692330ccab505245fe7de07"
+        },
+        {
+          "bounds": [
+            550,
+            1254,
+            607,
+            1306
+          ],
+          "placement": [
+            550,
+            1254
+          ],
+          "rgbaSha256": "b518c0d8c118c40da706c00e74b9cc02bf4b1e30a96078e85aba917ea09a8224"
+        },
+        {
+          "bounds": [
+            559,
+            0,
+            692,
+            202
+          ],
+          "placement": [
+            559,
+            0
+          ],
+          "rgbaSha256": "7ed7687b61775c5e15d58253b35eba1ca7b50014e05261fdb2c123a0da788b9d"
+        },
+        {
+          "bounds": [
+            564,
+            507,
+            643,
+            630
+          ],
+          "placement": [
+            564,
+            507
+          ],
+          "rgbaSha256": "eefe33e3a6a7594027249436cfc6bbd26006e6939e1e6e9d9c635ddb5dcd4881"
+        },
+        {
+          "bounds": [
+            565,
+            345,
+            615,
+            390
+          ],
+          "placement": [
+            565,
+            345
+          ],
+          "rgbaSha256": "5a7e9edde4a2aaba2aa1756c89540ae27a074cedff275845103dfb96c78c57fb"
+        },
+        {
+          "bounds": [
+            565,
+            928,
+            621,
+            995
+          ],
+          "placement": [
+            565,
+            928
+          ],
+          "rgbaSha256": "6e85663e8c84878b2c0eea06f016d8936db0b6146a24b79e85277da0f6fa0aec"
+        },
+        {
+          "bounds": [
+            571,
+            1350,
+            622,
+            1407
+          ],
+          "placement": [
+            571,
+            1350
+          ],
+          "rgbaSha256": "b40d0d7afe99cb7c5153247e6fbf2b494271b764bc0bb581558d959d741fc587"
+        },
+        {
+          "bounds": [
+            572,
+            213,
+            665,
+            349
+          ],
+          "placement": [
+            572,
+            213
+          ],
+          "rgbaSha256": "3915465590b65d2f421af7ed61f3bf39d646ea8da9b26e36623f5530b0ba28b3"
+        },
+        {
+          "bounds": [
+            574,
+            1419,
+            622,
+            1471
+          ],
+          "placement": [
+            574,
+            1419
+          ],
+          "rgbaSha256": "bc3aea39a4e08d4273f0b81bad929f40e8142ff55e93f8a6a30f1568755d621d"
+        },
+        {
+          "bounds": [
+            574,
+            1475,
+            622,
+            1520
+          ],
+          "placement": [
+            574,
+            1475
+          ],
+          "rgbaSha256": "60582ecd5ade4edcedbcdac51ce238ba00f25d5ac4f0fa577a663e2677c475b4"
+        },
+        {
+          "bounds": [
+            580,
+            1000,
+            631,
+            1066
+          ],
+          "placement": [
+            580,
+            1000
+          ],
+          "rgbaSha256": "65134980c15398965598b8b1aa98a8f3a68d390c36cdfd0b5ada87dd380b55b3"
+        },
+        {
+          "bounds": [
+            588,
+            844,
+            669,
+            928
+          ],
+          "placement": [
+            588,
+            844
+          ],
+          "rgbaSha256": "a93d0a6f6e4f08f35dd1482e12af1327a2d5d34a5e5a5f5b8f1da99d5768fb35"
+        },
+        {
+          "bounds": [
+            593,
+            1149,
+            647,
+            1207
+          ],
+          "placement": [
+            593,
+            1149
+          ],
+          "rgbaSha256": "505a9a5734192ba6a575e1b2558ae52712898e8a5ffe229b9a3218741c2155cb"
+        },
+        {
+          "bounds": [
+            594,
+            1292,
+            648,
+            1346
+          ],
+          "placement": [
+            594,
+            1292
+          ],
+          "rgbaSha256": "f96ba524bbd21add61b2e05bafd80a959308d0492b3f0aa2df42eff486300466"
+        },
+        {
+          "bounds": [
+            597,
+            1086,
+            653,
+            1145
+          ],
+          "placement": [
+            597,
+            1086
+          ],
+          "rgbaSha256": "c104b2244ee6cae772eda0ec91d09a7a029d17b837a86fa76fadffc9b8433d5e"
+        },
+        {
+          "bounds": [
+            605,
+            1211,
+            658,
+            1268
+          ],
+          "placement": [
+            605,
+            1211
+          ],
+          "rgbaSha256": "1c05146e7f8e347e9aee93d43204bd39634c22b5b7143c4c8a22922fbab01c15"
+        },
+        {
+          "bounds": [
+            608,
+            702,
+            691,
+            798
+          ],
+          "placement": [
+            608,
+            702
+          ],
+          "rgbaSha256": "2199d7c3755dabd06724891d2d20bb736c5e31b430af4daf3fedd93ed7980fc4"
+        },
+        {
+          "bounds": [
+            624,
+            958,
+            678,
+            1027
+          ],
+          "placement": [
+            624,
+            958
+          ],
+          "rgbaSha256": "7f6e61632bff6b1a7cda33a6b7247dfe7583a81aaf68fcb1a35494753b94fec2"
+        },
+        {
+          "bounds": [
+            626,
+            1379,
+            674,
+            1435
+          ],
+          "placement": [
+            626,
+            1379
+          ],
+          "rgbaSha256": "946a3e2df82f8b4c23fa0a24c5756519c4423813d02ec71863a5e500ac5e0733"
+        },
+        {
+          "bounds": [
+            626,
+            1439,
+            674,
+            1489
+          ],
+          "placement": [
+            626,
+            1439
+          ],
+          "rgbaSha256": "a82c3fd7703cadaf7dfc71674fe18903491e54de77642330718f0a559c9e4951"
+        },
+        {
+          "bounds": [
+            631,
+            1031,
+            697,
+            1082
+          ],
+          "placement": [
+            631,
+            1031
+          ],
+          "rgbaSha256": "edf00572b7f044098d84772504d6703a502f55ab7016ec3cb4ddf5602e29d01a"
+        },
+        {
+          "bounds": [
+            632,
+            319,
+            737,
+            428
+          ],
+          "placement": [
+            632,
+            319
+          ],
+          "rgbaSha256": "63779fec00f7692e728af5b1e751161691287cb885041213198b24e27a0bdd3f"
+        },
+        {
+          "bounds": [
+            640,
+            553,
+            712,
+            676
+          ],
+          "placement": [
+            640,
+            553
+          ],
+          "rgbaSha256": "e3f65d05973f5329a3935e69c61406d8a19b8285334e504056f2192ff55b3c53"
+        },
+        {
+          "bounds": [
+            641,
+            115,
+            752,
+            320
+          ],
+          "placement": [
+            641,
+            115
+          ],
+          "rgbaSha256": "083d1e0b34f7647ac57aad877ad72218aac4091f5350e43dd6792bdcb3880956"
+        },
+        {
+          "bounds": [
+            642,
+            1248,
+            694,
+            1305
+          ],
+          "placement": [
+            642,
+            1248
+          ],
+          "rgbaSha256": "889268ce6afab0204a3b24ab2d28586d8e2734376793dca791fa7869888194cc"
+        },
+        {
+          "bounds": [
+            651,
+            432,
+            740,
+            549
+          ],
+          "placement": [
+            651,
+            432
+          ],
+          "rgbaSha256": "f4c05c8a48c4a62b114936632aecf2d9d93016c40d8df005ca93c4f831776825"
+        },
+        {
+          "bounds": [
+            651,
+            1169,
+            704,
+            1227
+          ],
+          "placement": [
+            651,
+            1169
+          ],
+          "rgbaSha256": "5b15cfa82e0c05fc02b98d3041ef12a0d53b716b0492dfc0644061a3679a5aa0"
+        },
+        {
+          "bounds": [
+            652,
+            1318,
+            703,
+            1375
+          ],
+          "placement": [
+            652,
+            1318
+          ],
+          "rgbaSha256": "ccd378c7c1a501c20477bd0b8d2b4631d752f5296f2fbd0474e8f656ef45f40e"
+        },
+        {
+          "bounds": [
+            657,
+            1099,
+            715,
+            1155
+          ],
+          "placement": [
+            657,
+            1099
+          ],
+          "rgbaSha256": "9229b6d38360f4178a52b8733b15957ce7d9f51043e80b5fb82b393204da6c19"
+        },
+        {
+          "bounds": [
+            662,
+            779,
+            721,
+            909
+          ],
+          "placement": [
+            662,
+            779
+          ],
+          "rgbaSha256": "433639f1e99799e6963707d47159bc5a73e9a6719a2da3afd3bf37975f8f29d2"
+        },
+        {
+          "bounds": [
+            666,
+            0,
+            750,
+            73
+          ],
+          "placement": [
+            666,
+            0
+          ],
+          "rgbaSha256": "1dfa158f11086a3671b5f0a18dc367635caa10f3949a1775d81907ecd0931a6b"
+        },
+        {
+          "bounds": [
+            671,
+            909,
+            752,
+            975
+          ],
+          "placement": [
+            671,
+            909
+          ],
+          "rgbaSha256": "7d2a08d21e71076b6c4e89d5e6eac082e4d37eb7a3622e44fd51d14c94af8b82"
+        },
+        {
+          "bounds": [
+            675,
+            1477,
+            721,
+            1521
+          ],
+          "placement": [
+            675,
+            1477
+          ],
+          "rgbaSha256": "7b2a2b6f438eb4b2e4b9c1b06db7d28b745d2b48ac04e2dd26470b396d98ca70"
+        },
+        {
+          "bounds": [
+            678,
+            1426,
+            730,
+            1473
+          ],
+          "placement": [
+            678,
+            1426
+          ],
+          "rgbaSha256": "6bce7f9563874c915b732145133bc6db1dae2cf192d0cc88cc9e66d85be5418c"
+        },
+        {
+          "bounds": [
+            682,
+            975,
+            734,
+            1041
+          ],
+          "placement": [
+            682,
+            975
+          ],
+          "rgbaSha256": "cfe4f0809cbcf3cb1735890f79de643543e4cefce07dca3e1a1e6a331dee18d1"
+        },
+        {
+          "bounds": [
+            692,
+            640,
+            752,
+            775
+          ],
+          "placement": [
+            692,
+            640
+          ],
+          "rgbaSha256": "1ae65b24444e06888e075c4278e9607b0dca249adebfd162103bfea41253bde4"
+        },
+        {
+          "bounds": [
+            696,
+            1268,
+            748,
+            1325
+          ],
+          "placement": [
+            696,
+            1268
+          ],
+          "rgbaSha256": "8cad7288d6a58196f09b2af16e7cad52e28e93a4945ff2209de4ade2888d661c"
+        },
+        {
+          "bounds": [
+            697,
+            1049,
+            752,
+            1110
+          ],
+          "placement": [
+            697,
+            1049
+          ],
+          "rgbaSha256": "ec5930f6bc6404ad8efaf54e637c447aa46c12232f52bb02015e7bf1a6c8a923"
+        },
+        {
+          "bounds": [
+            698,
+            1208,
+            752,
+            1264
+          ],
+          "placement": [
+            698,
+            1208
+          ],
+          "rgbaSha256": "e431b3e04ed35c62e211f9d149a726480ab75f76cef519f752134da9530e04b9"
+        },
+        {
+          "bounds": [
+            698,
+            1369,
+            751,
+            1422
+          ],
+          "placement": [
+            698,
+            1369
+          ],
+          "rgbaSha256": "c67b7104c7a1865a88db44e436fdad83555cd41a8c03fde7d9dcbf1e2bd63137"
+        },
+        {
+          "bounds": [
+            699,
+            1140,
+            752,
+            1200
+          ],
+          "placement": [
+            699,
+            1140
+          ],
+          "rgbaSha256": "74450aa22d4c3454fa92e21aec75b0015d7313e6dae5966d1b11ddc40047f55e"
+        },
+        {
+          "bounds": [
+            705,
+            553,
+            749,
+            597
+          ],
+          "placement": [
+            705,
+            553
+          ],
+          "rgbaSha256": "bd0ec0a3e854a2678bc3ffce1c25a1c5cb4beec09ce51a75945dbdc7bb264e73"
+        }
+      ]
+    },
+    "39": {
+      "path": "assets/buildings/monolith-native/texture-39.png",
+      "sourceSize": [
+        1516,
+        2034
+      ],
+      "bounds": [
+        0,
+        0,
+        1516,
+        2034
+      ],
+      "packing": "packed source regions",
+      "width": 512,
+      "height": 386,
+      "rgbaSha256": "1a79a6bb023ab2ec4a1ac6e8553e1827a6b053ce36e24f04faf1efb8a9fc8699",
+      "regions": [
+        {
+          "bounds": [
+            0,
+            0,
+            16,
+            15
+          ],
+          "placement": [
+            274,
+            360
+          ],
+          "rgbaSha256": "a9d3b90ea208cc5b0020e67afd465f505fe3887a45b238e8a5d826ded4dd617e"
+        },
+        {
+          "bounds": [
+            0,
+            90,
+            7,
+            98
+          ],
+          "placement": [
+            426,
+            360
+          ],
+          "rgbaSha256": "168b0fc33ced89b34f165240180f4d6e2b3e96f39c0869de4753564c14aa513e"
+        },
+        {
+          "bounds": [
+            20,
+            0,
+            27,
+            6
+          ],
+          "placement": [
+            435,
+            360
+          ],
+          "rgbaSha256": "30277f28da9a9a3a416b0b187a1d451cc0fb41e5c7084727d5506525676c9271"
+        },
+        {
+          "bounds": [
+            38,
+            1930,
+            77,
+            1958
+          ],
+          "placement": [
+            345,
+            313
+          ],
+          "rgbaSha256": "ab880aa8e9f1a4831a91c40b71cae75772ae236d618acb236def772372f11c9a"
+        },
+        {
+          "bounds": [
+            41,
+            1096,
+            101,
+            1193
+          ],
+          "placement": [
+            83,
+            1
+          ],
+          "rgbaSha256": "f2cda323402b6984727661651596ed5f5c3964efc1870cf3b0b3c6e0217341f9"
+        },
+        {
+          "bounds": [
+            76,
+            423,
+            88,
+            437
+          ],
+          "placement": [
+            320,
+            360
+          ],
+          "rgbaSha256": "9b3ad1cf62f574098f9959c909a4d2f18a0b90d62d697cee24aed845e5361e90"
+        },
+        {
+          "bounds": [
+            76,
+            599,
+            98,
+            624
+          ],
+          "placement": [
+            59,
+            360
+          ],
+          "rgbaSha256": "33927e0e3abff4a0427fbd2bfa5b71917175471e58e2f2723838063701c1f1b4"
+        },
+        {
+          "bounds": [
+            112,
+            1730,
+            158,
+            1775
+          ],
+          "placement": [
+            409,
+            254
+          ],
+          "rgbaSha256": "fef373352340aae3d89749cf8c45df6cb9416a48f735266b8fbf61d4b8c5e8ef"
+        },
+        {
+          "bounds": [
+            120,
+            198,
+            143,
+            213
+          ],
+          "placement": [
+            228,
+            360
+          ],
+          "rgbaSha256": "54f4e7f68fa824b683b946c78534958f0fe033455091ca8e4f28a150f452207b"
+        },
+        {
+          "bounds": [
+            127,
+            1614,
+            179,
+            1666
+          ],
+          "placement": [
+            243,
+            254
+          ],
+          "rgbaSha256": "fa53eb3ce168d0c122e2a078ae61dc38fdf6a4685ab025eddcbef160cc1399cf"
+        },
+        {
+          "bounds": [
+            183,
+            1466,
+            241,
+            1523
+          ],
+          "placement": [
+            1,
+            254
+          ],
+          "rgbaSha256": "9eba7df71ea5648d3fe35b8ad51c8e02d0cfc9e0bb4f2d9106bce1a693eab888"
+        },
+        {
+          "bounds": [
+            189,
+            1270,
+            257,
+            1331
+          ],
+          "placement": [
+            89,
+            190
+          ],
+          "rgbaSha256": "3f1a91d0a230c7e81e96972a189a6a2f6026f1d03fa88a4eebe0b9df122faec3"
+        },
+        {
+          "bounds": [
+            195,
+            1986,
+            218,
+            2020
+          ],
+          "placement": [
+            239,
+            313
+          ],
+          "rgbaSha256": "e5f39862a0085e27a5610edf21961197740e849619d92e6ed82dfa756724f9fb"
+        },
+        {
+          "bounds": [
+            215,
+            0,
+            224,
+            8
+          ],
+          "placement": [
+            393,
+            360
+          ],
+          "rgbaSha256": "58f5a47fcb452a955499d62163155b46741527c304e65bfbe3c84f149ccaa20b"
+        },
+        {
+          "bounds": [
+            219,
+            127,
+            237,
+            156
+          ],
+          "placement": [
+            325,
+            313
+          ],
+          "rgbaSha256": "d52c216c702592d9eaa4740fb2ff9d179c78bb93b680dc3ac575967c40c4f74c"
+        },
+        {
+          "bounds": [
+            222,
+            1996,
+            249,
+            2021
+          ],
+          "placement": [
+            480,
+            313
+          ],
+          "rgbaSha256": "819c7cad3c2bfd3b85a2f995ab0a55a816ff44efe9dd8677eba46c58222b5ea4"
+        },
+        {
+          "bounds": [
+            230,
+            950,
+            320,
+            1028
+          ],
+          "placement": [
+            233,
+            102
+          ],
+          "rgbaSha256": "c8dc3812d03424362106e7c0a0474f2e7d33bd3b44cf29459191414b44159341"
+        },
+        {
+          "bounds": [
+            247,
+            1113,
+            309,
+            1199
+          ],
+          "placement": [
+            350,
+            1
+          ],
+          "rgbaSha256": "5daf4d9ccf800a94d0ef4f72a31d6b52efd1b86ccb18fd5232d5b31103b71e4d"
+        },
+        {
+          "bounds": [
+            289,
+            881,
+            382,
+            964
+          ],
+          "placement": [
+            64,
+            102
+          ],
+          "rgbaSha256": "cacfdd85e1347e4683cbbda62e77e117990783b63137b67db78027771ba5fb94"
+        },
+        {
+          "bounds": [
+            301,
+            1888,
+            332,
+            1933
+          ],
+          "placement": [
+            457,
+            254
+          ],
+          "rgbaSha256": "de335dd7ed7c7e0db0e469b5261739df3280283329bb624a73f7660d01299db1"
+        },
+        {
+          "bounds": [
+            313,
+            1134,
+            385,
+            1206
+          ],
+          "placement": [
+            325,
+            102
+          ],
+          "rgbaSha256": "be247f8f1131a06c20de7a0d958611b5229e27dd09bfcd1e8035698ca4402ba7"
+        },
+        {
+          "bounds": [
+            315,
+            1453,
+            375,
+            1510
+          ],
+          "placement": [
+            409,
+            190
+          ],
+          "rgbaSha256": "acd538415f030f14cd51d32a287bed051fae6131e0b75b8addb24df91921c1e7"
+        },
+        {
+          "bounds": [
+            342,
+            413,
+            353,
+            424
+          ],
+          "placement": [
+            350,
+            360
+          ],
+          "rgbaSha256": "24e0eb5b772456410b6314542051112d1d665733c82df29a271634f7f140c66a"
+        },
+        {
+          "bounds": [
+            379,
+            1477,
+            438,
+            1533
+          ],
+          "placement": [
+            61,
+            254
+          ],
+          "rgbaSha256": "af0e7797664e87b5595532dac9138058a38affc2d1ab4ad984b1127ef3841e4d"
+        },
+        {
+          "bounds": [
+            380,
+            1257,
+            448,
+            1318
+          ],
+          "placement": [
+            159,
+            190
+          ],
+          "rgbaSha256": "30f971d98ec8e84dcc7af54d1802ed83c44db87ffc89258a336bb1d0d546ee1a"
+        },
+        {
+          "bounds": [
+            381,
+            16,
+            390,
+            24
+          ],
+          "placement": [
+            404,
+            360
+          ],
+          "rgbaSha256": "b0a1dad465e7d925db77e85fea890651f68105123b37f88b7621b107919ca597"
+        },
+        {
+          "bounds": [
+            384,
+            28,
+            389,
+            33
+          ],
+          "placement": [
+            452,
+            360
+          ],
+          "rgbaSha256": "cbdd7ef2069e4a34be6c3a5c27c93ff900055ca8193ef5997faea34ac579b8ef"
+        },
+        {
+          "bounds": [
+            387,
+            862,
+            467,
+            961
+          ],
+          "placement": [
+            1,
+            1
+          ],
+          "rgbaSha256": "5e503a6b8ef6e7a0227ddae0b53e76de4c2cf00747ba447739a491054a219f92"
+        },
+        {
+          "bounds": [
+            426,
+            1996,
+            453,
+            2021
+          ],
+          "placement": [
+            1,
+            360
+          ],
+          "rgbaSha256": "e2882fe61ad1d271381eb0a917c1f44b4010b1c0d6be545d9fb89d0679045f79"
+        },
+        {
+          "bounds": [
+            506,
+            137,
+            523,
+            146
+          ],
+          "placement": [
+            374,
+            360
+          ],
+          "rgbaSha256": "1c29d4e73884f06780fc33be6e60864bbd6e9d391920c0c9edd2891272d90556"
+        },
+        {
+          "bounds": [
+            582,
+            1687,
+            632,
+            1732
+          ],
+          "placement": [
+            357,
+            254
+          ],
+          "rgbaSha256": "0c24426361edae6b0f665cfce023123807a2facea51b9593542009000a44340a"
+        },
+        {
+          "bounds": [
+            608,
+            1501,
+            659,
+            1562
+          ],
+          "placement": [
+            299,
+            190
+          ],
+          "rgbaSha256": "8d9c352ea3d623985a449066d2b06f36fb0fe754cc9008bc28179ca85ad48c82"
+        },
+        {
+          "bounds": [
+            642,
+            1898,
+            677,
+            1935
+          ],
+          "placement": [
+            202,
+            313
+          ],
+          "rgbaSha256": "9e7691d422099edf6619b6569750abe9d79e24e7442c34c72b59a48c54eaf96d"
+        },
+        {
+          "bounds": [
+            681,
+            1928,
+            720,
+            1956
+          ],
+          "placement": [
+            386,
+            313
+          ],
+          "rgbaSha256": "f0e33fccf491851345b891f5490b393cec1324808fe123542c6a794b22564909"
+        },
+        {
+          "bounds": [
+            698,
+            31,
+            707,
+            39
+          ],
+          "placement": [
+            415,
+            360
+          ],
+          "rgbaSha256": "2b46275efba6c6250453ad438d27b9e6de472965760da9e0d15974e4caba4e89"
+        },
+        {
+          "bounds": [
+            706,
+            1254,
+            724,
+            1281
+          ],
+          "placement": [
+            427,
+            313
+          ],
+          "rgbaSha256": "f2aab702ed09d9f51ed7f9da411162526e90e3e35e71b083bedd9bec5198a3e3"
+        },
+        {
+          "bounds": [
+            714,
+            0,
+            719,
+            4
+          ],
+          "placement": [
+            470,
+            360
+          ],
+          "rgbaSha256": "a9032c64b925215ed894ed5ade6a9cc188a630e372172bd96d70f80a632fcb2c"
+        },
+        {
+          "bounds": [
+            759,
+            1090,
+            819,
+            1187
+          ],
+          "placement": [
+            145,
+            1
+          ],
+          "rgbaSha256": "fd642ec208e9ef400d35d6f91db330b1bc52a0dca31922a19291382a22ff3221"
+        },
+        {
+          "bounds": [
+            775,
+            1261,
+            843,
+            1322
+          ],
+          "placement": [
+            229,
+            190
+          ],
+          "rgbaSha256": "1acf5916f5ae9b2581f64be5d36d7d836362a5c0fd9183f1718784a34820a51d"
+        },
+        {
+          "bounds": [
+            786,
+            241,
+            797,
+            263
+          ],
+          "placement": [
+            181,
+            360
+          ],
+          "rgbaSha256": "2776547c91aa1cb9e4305a6da882d6deb5617a1503ea16a3daac6324d4886c08"
+        },
+        {
+          "bounds": [
+            805,
+            201,
+            814,
+            212
+          ],
+          "placement": [
+            363,
+            360
+          ],
+          "rgbaSha256": "ff3a53932ab45e9d38c77a4b4ccf1018e502c75cdd6e6a8a95316954adfb83e9"
+        },
+        {
+          "bounds": [
+            810,
+            1470,
+            865,
+            1530
+          ],
+          "placement": [
+            352,
+            190
+          ],
+          "rgbaSha256": "740bceb4d9e4723470c27059ae28af9b3db67bb29911d854e08854647c3ac42e"
+        },
+        {
+          "bounds": [
+            825,
+            894,
+            904,
+            986
+          ],
+          "placement": [
+            269,
+            1
+          ],
+          "rgbaSha256": "a657c1516c6bb08b12d714bd38f0ac50b0ccc580db121c6bc25709fa14deb546"
+        },
+        {
+          "bounds": [
+            852,
+            1850,
+            888,
+            1892
+          ],
+          "placement": [
+            67,
+            313
+          ],
+          "rgbaSha256": "00f9975dc7281a702358409e50c2c95092fbc497a8c0ce2b3937ec95245d0628"
+        },
+        {
+          "bounds": [
+            906,
+            1132,
+            967,
+            1218
+          ],
+          "placement": [
+            1,
+            102
+          ],
+          "rgbaSha256": "a7e1def748e882f2e53d094c9f303a18315d996f0c6c3cd21bdd9ee4f2d6b890"
+        },
+        {
+          "bounds": [
+            926,
+            2009,
+            948,
+            2034
+          ],
+          "placement": [
+            83,
+            360
+          ],
+          "rgbaSha256": "1fcf33c76d5a53c952405020aa16dbd70775f52a517b5ff89688c38547cdf7f6"
+        },
+        {
+          "bounds": [
+            970,
+            1099,
+            1042,
+            1179
+          ],
+          "placement": [
+            159,
+            102
+          ],
+          "rgbaSha256": "457d8bd87981c4bdd3f46eb09ac40955dacf0cd3a7fcbfb188a91df244e6f507"
+        },
+        {
+          "bounds": [
+            974,
+            1880,
+            997,
+            1909
+          ],
+          "placement": [
+            300,
+            313
+          ],
+          "rgbaSha256": "acf557b2f4919083a355432f83c44014cd31da7667336d29374468d5e182838d"
+        },
+        {
+          "bounds": [
+            980,
+            446,
+            1006,
+            460
+          ],
+          "placement": [
+            292,
+            360
+          ],
+          "rgbaSha256": "5d463745251ca917fedf3c0370ce17bce0747de24d37fa1499127a2d91918327"
+        },
+        {
+          "bounds": [
+            1046,
+            1111,
+            1108,
+            1197
+          ],
+          "placement": [
+            414,
+            1
+          ],
+          "rgbaSha256": "622eb09561608e4ba7223f016afdf9f59a0a0b744e7b9c543f189200bb9cd416"
+        },
+        {
+          "bounds": [
+            1069,
+            1980,
+            1100,
+            2006
+          ],
+          "placement": [
+            447,
+            313
+          ],
+          "rgbaSha256": "7b8ef57e23772355b5bb0640756ba1cc006e6da59249bb3d02dfa8e40db3c7e1"
+        },
+        {
+          "bounds": [
+            1089,
+            632,
+            1108,
+            647
+          ],
+          "placement": [
+            253,
+            360
+          ],
+          "rgbaSha256": "11693c17a4323b2aa9266e63d7924c33e45de6c7bb02050c66924e0a5f299e96"
+        },
+        {
+          "bounds": [
+            1092,
+            23,
+            1098,
+            29
+          ],
+          "placement": [
+            444,
+            360
+          ],
+          "rgbaSha256": "8a4b29c1b908e1d25e56c18f6d662359c7d849e66bbec1dc71e40cd5c9feaab1"
+        },
+        {
+          "bounds": [
+            1140,
+            1763,
+            1189,
+            1804
+          ],
+          "placement": [
+            105,
+            313
+          ],
+          "rgbaSha256": "aefd3c9d23dfe7ced762dbda4e3b30be80763e807a5fd9d62c05170ae1fb36e4"
+        },
+        {
+          "bounds": [
+            1156,
+            1466,
+            1215,
+            1522
+          ],
+          "placement": [
+            122,
+            254
+          ],
+          "rgbaSha256": "a8e9a4646fce3d0615fa7aaeeef4d9f67598e8908b461dffbe47967c624c14de"
+        },
+        {
+          "bounds": [
+            1174,
+            1093,
+            1234,
+            1190
+          ],
+          "placement": [
+            207,
+            1
+          ],
+          "rgbaSha256": "224b506c765c7df4f325b9b7521f47c7757f27bf54cf6be49007b58830d54772"
+        },
+        {
+          "bounds": [
+            1184,
+            1886,
+            1215,
+            1931
+          ],
+          "placement": [
+            1,
+            313
+          ],
+          "rgbaSha256": "be753ac718b9a1d01802a03f1890f17d68ebb3fa639d870e98d6e8a3d7678f00"
+        },
+        {
+          "bounds": [
+            1190,
+            394,
+            1207,
+            418
+          ],
+          "placement": [
+            137,
+            360
+          ],
+          "rgbaSha256": "6c6956779020e56fe9ee9abf0e238f8532256cf79308538c32df0451653b17ee"
+        },
+        {
+          "bounds": [
+            1246,
+            1409,
+            1297,
+            1479
+          ],
+          "placement": [
+            399,
+            102
+          ],
+          "rgbaSha256": "63859f2f9e05f4108ed50bb65c061bf756472309f6868b61ac96e9f07eb0563f"
+        },
+        {
+          "bounds": [
+            1259,
+            0,
+            1268,
+            4
+          ],
+          "placement": [
+            459,
+            360
+          ],
+          "rgbaSha256": "e7f1031c6cda5c17d3b73abc4923107ca0546cdd2473e08480a55358e522b7f9"
+        },
+        {
+          "bounds": [
+            1263,
+            1010,
+            1284,
+            1031
+          ],
+          "placement": [
+            194,
+            360
+          ],
+          "rgbaSha256": "a5b8d61dc8a12ab267f225bc576057393c61c6f793130fa85c72a1d0bc1760e4"
+        },
+        {
+          "bounds": [
+            1306,
+            1112,
+            1392,
+            1174
+          ],
+          "placement": [
+            1,
+            190
+          ],
+          "rgbaSha256": "2bcee50768e8e74b78745cb4c9a147135b87a9ede030bb35a848b60c9de322de"
+        },
+        {
+          "bounds": [
+            1306,
+            1603,
+            1364,
+            1650
+          ],
+          "placement": [
+            297,
+            254
+          ],
+          "rgbaSha256": "d086d4d0787c68ed0c33d81b32279ca0ca85d63a54050ecbb8b2b06d102ba8dd"
+        },
+        {
+          "bounds": [
+            1318,
+            1828,
+            1362,
+            1867
+          ],
+          "placement": [
+            156,
+            313
+          ],
+          "rgbaSha256": "850338d35bcc1239b5ed39ab9da2fbed0c90d14ac59ac2ee9565f67dc3bdac9e"
+        },
+        {
+          "bounds": [
+            1344,
+            1883,
+            1375,
+            1928
+          ],
+          "placement": [
+            34,
+            313
+          ],
+          "rgbaSha256": "4422009c65fced620910cb0175d2fc743f78323a9aea796c790582fd70f6cb2c"
+        },
+        {
+          "bounds": [
+            1348,
+            127,
+            1362,
+            138
+          ],
+          "placement": [
+            334,
+            360
+          ],
+          "rgbaSha256": "56264c86df185cb0675e5b8db59ad8c8bbc5b7a299f078c70b7ac2d54daa8ac8"
+        },
+        {
+          "bounds": [
+            1361,
+            2002,
+            1388,
+            2027
+          ],
+          "placement": [
+            30,
+            360
+          ],
+          "rgbaSha256": "0884edc215958595eb7270decbf9dc7337842bb92da24e3f09552026db33a148"
+        },
+        {
+          "bounds": [
+            1379,
+            1931,
+            1413,
+            1963
+          ],
+          "placement": [
+            264,
+            313
+          ],
+          "rgbaSha256": "b32fd12c83332f9762daeb984a383a3cd8ef4ba2d6c354621a2b4b7e43c1f267"
+        },
+        {
+          "bounds": [
+            1425,
+            1485,
+            1483,
+            1541
+          ],
+          "placement": [
+            183,
+            254
+          ],
+          "rgbaSha256": "d974b9d70784a0bd6ef2f7061c30102ac1fb21c58159cb52fa13a6498e516058"
+        },
+        {
+          "bounds": [
+            1430,
+            0,
+            1453,
+            22
+          ],
+          "placement": [
+            156,
+            360
+          ],
+          "rgbaSha256": "c2679664d48b0305e5374cfe59d0a8b11711d57a943c28b38a5dcb24228f1f2a"
+        },
+        {
+          "bounds": [
+            1435,
+            26,
+            1444,
+            44
+          ],
+          "placement": [
+            217,
+            360
+          ],
+          "rgbaSha256": "3c4791c30459ad231880e5c785c999d7566950fb1c73c66dd3edbd59fdf91e66"
+        },
+        {
+          "bounds": [
+            1488,
+            1877,
+            1516,
+            1901
+          ],
+          "placement": [
+            107,
+            360
+          ],
+          "rgbaSha256": "b891ad462e981b3ffa1b3763b0eb6f2a8a95c09027cd397dbe679d5ef67fe851"
+        }
+      ]
+    }
+  },
+  "previews": {
+    "1": {
+      "path": "assets/buildings/monolith-native/preview-1.png",
+      "bounds": [
+        -90,
+        -100,
+        90,
+        130
+      ],
+      "width": 360,
+      "height": 460,
+      "pixelsPerNativeUnit": 2,
+      "direction": 45,
+      "variant": 3,
+      "rgbaSha256": "390615649c52e8e65d1d7224eb4b6266a3d570699631732278a7a2e53051af08"
+    },
+    "2": {
+      "path": "assets/buildings/monolith-native/preview-2.png",
+      "bounds": [
+        -90,
+        -100,
+        90,
+        130
+      ],
+      "width": 360,
+      "height": 460,
+      "pixelsPerNativeUnit": 2,
+      "direction": 45,
+      "variant": 3,
+      "rgbaSha256": "e49e4138be76968923706164e370b1fe9a721941119f23699b20f1f951d50b79"
+    },
+    "3": {
+      "path": "assets/buildings/monolith-native/preview-3.png",
+      "bounds": [
+        -90,
+        -100,
+        90,
+        130
+      ],
+      "width": 360,
+      "height": 460,
+      "pixelsPerNativeUnit": 2,
+      "direction": 45,
+      "variant": 3,
+      "rgbaSha256": "340761ee5a42dce0723011826f6a049a33be8013ba336696d2b6a1cde189e71b"
+    },
+    "4": {
+      "path": "assets/buildings/monolith-native/preview-4.png",
+      "bounds": [
+        -90,
+        -100,
+        90,
+        130
+      ],
+      "width": 360,
+      "height": 460,
+      "pixelsPerNativeUnit": 2,
+      "direction": 45,
+      "variant": 3,
+      "rgbaSha256": "63b318367b7c28fcb6a5e82361c55c5fbc5459cf2fca1f0a723f4953dfef2a5f"
+    },
+    "5": {
+      "path": "assets/buildings/monolith-native/preview-5.png",
+      "bounds": [
+        -90,
+        -100,
+        90,
+        130
+      ],
+      "width": 360,
+      "height": 460,
+      "pixelsPerNativeUnit": 2,
+      "direction": 45,
+      "variant": 3,
+      "rgbaSha256": "cde53967f6c36314cc29fda477f1b3907ccfdb664ebccc810f239a0ada3ab89f"
+    }
+  },
+  "reconstruction": {
+    "nativePlaybackVerified": false,
+    "scope": "All five Monolith bodies and upgrade overlays, shared base/scaffold/ruin, three projectile tiers, every referenced particle export and eight referenced sounds.",
+    "controls": "turret selects one of 16 directional attack clips across 360 source frames; d1..d16 select the attack clip phase; projectile_0..2 are the three orb tiers (min, med, max). Direction mapping and orb-tier naming are local interpretations checked against rendered views.",
+    "preview": "Base plus body at turret frame 45 with orb tier 3, frame zero, density two; registration is local."
+  }
+}

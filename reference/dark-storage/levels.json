@@ -1,0 +1,119 @@
+[
+  {
+    "level": 1,
+    "townhall": 7,
+    "hp": 2000,
+    "capacity": 10000,
+    "cost": 250000,
+    "export": "darkelixir_storage_level1",
+    "seconds": 28800
+  },
+  {
+    "level": 2,
+    "townhall": 7,
+    "hp": 2200,
+    "capacity": 17500,
+    "cost": 500000,
+    "export": "darkelixir_storage_level2",
+    "seconds": 57600
+  },
+  {
+    "level": 3,
+    "townhall": 8,
+    "hp": 2400,
+    "capacity": 40000,
+    "cost": 1000000,
+    "export": "darkelixir_storage_level3",
+    "seconds": 86400
+  },
+  {
+    "level": 4,
+    "townhall": 8,
+    "hp": 2600,
+    "capacity": 75000,
+    "cost": 1500000,
+    "export": "darkelixir_storage_level4",
+    "seconds": 129600
+  },
+  {
+    "level": 5,
+    "townhall": 9,
+    "hp": 2900,
+    "capacity": 140000,
+    "cost": 2000000,
+    "export": "darkelixir_storage_level5",
+    "seconds": 144000
+  },
+  {
+    "level": 6,
+    "townhall": 9,
+    "hp": 3200,
+    "capacity": 180000,
+    "cost": 2400000,
+    "export": "darkelixir_storage_level6",
+    "seconds": 172800
+  },
+  {
+    "level": 7,
+    "townhall": 12,
+    "hp": 3500,
+    "capacity": 220000,
+    "cost": 3800000,
+    "export": "darkelixir_storage_level7",
+    "seconds": 259200
+  },
+  {
+    "level": 8,
+    "townhall": 13,
+    "hp": 3800,
+    "capacity": 280000,
+    "cost": 5400000,
+    "export": "darkelixir_storage_level8",
+    "seconds": 302400
+  },
+  {
+    "level": 9,
+    "townhall": 14,
+    "hp": 4100,
+    "capacity": 330000,
+    "cost": 6600000,
+    "export": "darkelixir_storage_level9",
+    "seconds": 345600
+  },
+  {
+    "level": 10,
+    "townhall": 15,
+    "hp": 4300,
+    "capacity": 360000,
+    "cost": 8000000,
+    "export": "darkelixir_storage_level10",
+    "seconds": 388800
+  },
+  {
+    "level": 11,
+    "townhall": 16,
+    "hp": 4500,
+    "capacity": 390000,
+    "cost": 10000000,
+    "export": "darkelixir_storage_level11",
+    "seconds": 432000
+  },
+  {
+    "level": 12,
+    "townhall": 17,
+    "hp": 4700,
+    "capacity": 420000,
+    "cost": 16000000,
+    "export": "darkelixir_storage_level12",
+    "seconds": 604800
+  },
+  {
+    "level": 13,
+    "townhall": 18,
+    "hp": 4800,
+    "capacity": 450000,
+    "cost": 25000000,
+    "export": "darkelixir_storage_level13",
+    "seconds": 1123200
+  }
+]

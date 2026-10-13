@@ -1,0 +1,235 @@
+{
+ "title": "Ruin Witch",
+ "page": "Ruin Witch",
+ "url": "https://clashofclans.fandom.com/wiki/Ruin_Witch",
+ "revid": 625328,
+ "retrieved": "2026-09-15",
+ "clientName": "Ruin Witch",
+ "clientVersion": "18.400.21",
+ "category": "dark-troop",
+ "constants": {
+  "housingSpace": 26,
+  "movementSpeedWiki": 12,
+  "internalSpeed": 150,
+  "tilesPerSecond": 1.5,
+  "attackRangeTiles": 0.8,
+  "attackRangeTilesClient": 0.8,
+  "attackSeconds": 2,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": null,
+  "targets": "ground",
+  "favoriteTarget": "Rubble",
+  "favoriteTargetTemplate": "Rubble",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": false,
+  "unlock": {
+   "building": "Dark Barracks",
+   "level": 13,
+   "townHall": 16
+  },
+  "vacuumMsClient": 4000,
+  "summonDelayMsClient": 2000,
+  "summonCooldownMsClient": 200,
+  "triggersTraps": true,
+  "healerWeight": 0
+ },
+ "client": {
+  "clientName": "Ruin Witch",
+  "housingSpace": 26,
+  "internalSpeed": 150,
+  "movementSpeedInGameExact": 12,
+  "movementSpeedInGameRounded": 12,
+  "tilesPerSecond": 1.5,
+  "attackRangeTiles": 0.8,
+  "attackSeconds": 2,
+  "targets": "ground",
+  "flying": false,
+  "jumpsWalls": false,
+  "favoriteTarget": "None",
+  "productionBuilding": "Dark Barracks",
+  "barracksLevel": 13,
+  "unlockTownHall": 16,
+  "triggersTraps": true,
+  "healerWeight": 0,
+  "secondarySpawnDist": 100,
+  "movementOffsetSpeed": 0,
+  "diesWhenSpawnLimitReached": true,
+  "consumeDebrisOnSummon": true,
+  "vacuumMs": 4000,
+  "debrisCompletionMs": 4000,
+  "summonDelayMs": 2000,
+  "summonCooldownMs": 200,
+  "summonPattern": "InFront"
+ },
+ "levels": [
+  {
+   "level": 1,
+   "summonLevel": 1,
+   "summonLimit": 10,
+   "hitpoints": 2300,
+   "dps": 25,
+   "damagePerHit": 50,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 2,
+   "summonLevel": 2,
+   "summonLimit": 10,
+   "hitpoints": 2550,
+   "dps": 26,
+   "damagePerHit": 52,
+   "researchCost": 220000,
+   "researchSeconds": 950400,
+   "researchTimeText": "11d",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 3,
+   "summonLevel": 3,
+   "summonLimit": 10,
+   "hitpoints": 2800,
+   "dps": 27,
+   "damagePerHit": 54,
+   "researchCost": 300000,
+   "researchSeconds": 1036800,
+   "researchTimeText": "12d",
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 4,
+   "summonLevel": 4,
+   "summonLimit": 10,
+   "hitpoints": 3050,
+   "dps": 28,
+   "damagePerHit": 56,
+   "researchCost": 380000,
+   "researchSeconds": 1339200,
+   "researchTimeText": "15d 12h",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 2300,
+   "dps": 25,
+   "damagePerHit": 50,
+   "summonLevel": 1,
+   "summonLimit": 8,
+   "summonLifetimeLimit": 8
+  },
+  {
+   "level": 2,
+   "hitpoints": 2550,
+   "dps": 26,
+   "damagePerHit": 52,
+   "researchCost": 220000,
+   "researchSeconds": 950400,
+   "laboratoryLevel": 14,
+   "summonLevel": 2,
+   "summonLimit": 8,
+   "summonLifetimeLimit": 8
+  },
+  {
+   "level": 3,
+   "hitpoints": 2800,
+   "dps": 27,
+   "damagePerHit": 54,
+   "researchCost": 300000,
+   "researchSeconds": 1036800,
+   "laboratoryLevel": 15,
+   "summonLevel": 3,
+   "summonLimit": 8,
+   "summonLifetimeLimit": 8
+  },
+  {
+   "level": 4,
+   "hitpoints": 3050,
+   "dps": 28,
+   "damagePerHit": 56,
+   "researchCost": 380000,
+   "researchSeconds": 1339200,
+   "laboratoryLevel": 16,
+   "summonLevel": 4,
+   "summonLimit": 8,
+   "summonLifetimeLimit": 8
+  }
+ ],
+ "spawned": {
+  "slug": "ruin-witch-ruin-knight",
+  "title": "Ruin Knight",
+  "clientName": "Ruin Knight",
+  "trigger": "one per cleared rubble pile, up to the summon limit",
+  "perLevelClient": {
+   "summonLimit": [
+    8,
+    8,
+    8,
+    8
+   ],
+   "summonLevel": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
+ },
+ "comparison": {
+  "checked": 36,
+  "matched": 31
+ },
+ "mismatches": [
+  {
+   "field": "summonLimit",
+   "level": 1,
+   "wiki": 10,
+   "client": 8,
+   "clientColumn": "characters.SummonLimit",
+   "note": "wiki history: raised from 8 to 10 on 2026-08-31; the pinned client predates it"
+  },
+  {
+   "field": "laboratoryLevel",
+   "level": 1,
+   "wiki": 14,
+   "client": null,
+   "clientColumn": "characters.LaboratoryLevel row 1 is a placeholder (research starts at level 2)",
+   "note": "wiki lists a laboratory requirement for level 1, which is not a research step"
+  },
+  {
+   "field": "summonLimit",
+   "level": 2,
+   "wiki": 10,
+   "client": 8,
+   "clientColumn": "characters.SummonLimit",
+   "note": "wiki history: raised from 8 to 10 on 2026-08-31; the pinned client predates it"
+  },
+  {
+   "field": "summonLimit",
+   "level": 3,
+   "wiki": 10,
+   "client": 8,
+   "clientColumn": "characters.SummonLimit",
+   "note": "wiki history: raised from 8 to 10 on 2026-08-31; the pinned client predates it"
+  },
+  {
+   "field": "summonLimit",
+   "level": 4,
+   "wiki": 10,
+   "client": 8,
+   "clientColumn": "characters.SummonLimit",
+   "note": "wiki history: raised from 8 to 10 on 2026-08-31; the pinned client predates it"
+  }
+ ],
+ "ambiguities": [
+  "Maximum knights: wiki 10 (history: raised from 8 to 10 on 2026-08-31); client 18.400.21 SummonLimit=8 and SummonLifetimeLimit=8, i.e. the pinned client predates that balance change.",
+  "Wiki statistics list \"Laboratory Level Required 14\" for level 1, which is not a research step (client row 1 LaboratoryLevel=1)."
+ ]
+}

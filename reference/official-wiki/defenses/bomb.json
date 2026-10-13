@@ -1,0 +1,174 @@
+{
+ "title": "Bomb",
+ "url": "https://clashofclans.fandom.com/wiki/Bomb",
+ "revid": 622989,
+ "retrieved": "2026-09-15",
+ "category": "trap",
+ "clientName": "Bomb",
+ "clientTable": "traps.csv",
+ "levels": [
+  {
+   "level": 1,
+   "damage": 20,
+   "cost": 400,
+   "townHall": 3
+  },
+  {
+   "level": 2,
+   "damage": 24,
+   "cost": 1000,
+   "buildSeconds": 60,
+   "xp": 7,
+   "townHall": 3
+  },
+  {
+   "level": 3,
+   "damage": 29,
+   "cost": 10000,
+   "buildSeconds": 300,
+   "xp": 17,
+   "townHall": 5
+  },
+  {
+   "level": 4,
+   "damage": 35,
+   "cost": 40000,
+   "buildSeconds": 2400,
+   "xp": 48,
+   "townHall": 7
+  },
+  {
+   "level": 5,
+   "damage": 42,
+   "cost": 100000,
+   "buildSeconds": 3600,
+   "xp": 60,
+   "townHall": 8
+  },
+  {
+   "level": 6,
+   "damage": 54,
+   "cost": 230000,
+   "buildSeconds": 7200,
+   "xp": 84,
+   "townHall": 9
+  },
+  {
+   "level": 7,
+   "damage": 72,
+   "cost": 330000,
+   "buildSeconds": 10800,
+   "xp": 103,
+   "townHall": 10
+  },
+  {
+   "level": 8,
+   "damage": 92,
+   "cost": 500000,
+   "buildSeconds": 14400,
+   "xp": 120,
+   "townHall": 11
+  },
+  {
+   "level": 9,
+   "damage": 125,
+   "cost": 750000,
+   "buildSeconds": 21600,
+   "xp": 146,
+   "townHall": 13
+  },
+  {
+   "level": 10,
+   "damage": 140,
+   "cost": 1300000,
+   "buildSeconds": 43200,
+   "xp": 207,
+   "townHall": 14
+  },
+  {
+   "level": 11,
+   "damage": 155,
+   "cost": 2500000,
+   "buildSeconds": 64800,
+   "xp": 254,
+   "townHall": 15
+  },
+  {
+   "level": 12,
+   "damage": 170,
+   "cost": 4000000,
+   "buildSeconds": 86400,
+   "xp": 293,
+   "townHall": 16
+  },
+  {
+   "level": 13,
+   "damage": 185,
+   "cost": 8500000,
+   "buildSeconds": 172800,
+   "xp": 415,
+   "townHall": 17
+  },
+  {
+   "level": 14,
+   "damage": 200,
+   "cost": 14000000,
+   "buildSeconds": 691200,
+   "xp": 831,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 3,
+  "size": "1x1",
+  "triggerRadius": 1.5,
+  "damageRadius": 3.0,
+  "splashTiles": 3.0,
+  "targets": "ground",
+  "triggerDelaySeconds": 1.5,
+  "knockbackHousingLimit": 3,
+  "favoriteTarget": "none"
+ },
+ "mismatches": [
+  {
+   "field": "townHall",
+   "level": 1,
+   "wiki": 3,
+   "client": 1,
+   "note": "client trap rows use TownHallLevel 1 for level 1 (availability comes from townhall_levels counts); the wiki lists the unlock Town Hall",
+   "table": "Statistics"
+  },
+  {
+   "field": "buildSeconds",
+   "level": 4,
+   "wiki": 2400,
+   "client": 1800,
+   "note": "level 4 build time: wiki 40m (XP 48) vs client 30m (XP 42)",
+   "table": "Statistics"
+  },
+  {
+   "field": "xp",
+   "level": 4,
+   "wiki": 48,
+   "client": 42,
+   "note": "follows the build time difference",
+   "table": "Statistics"
+  }
+ ],
+ "progressionMismatches": [
+  {
+   "field": "townhall",
+   "level": 1,
+   "wiki": 3,
+   "progression": 1,
+   "note": "client trap rows use TownHallLevel 1 for level 1 (availability comes from townhall_levels counts); the wiki lists the unlock Town Hall"
+  },
+  {
+   "field": "seconds",
+   "level": 4,
+   "wiki": 2400,
+   "progression": 1800.0,
+   "note": "level 4 build time differs (see above)"
+  }
+ ]
+}

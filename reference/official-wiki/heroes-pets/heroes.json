@@ -1,0 +1,63 @@
+{
+ "title": "Heroes",
+ "url": "https://clashofclans.fandom.com/wiki/Heroes",
+ "revid": 621611,
+ "retrieved": "2026-09-15",
+ "clientName": null,
+ "clientTable": null,
+ "category": "mechanic",
+ "summary": "Hub page: six Home Village heroes (plus two Builder Base heroes); cross-page hero rules for slots, abilities, equipment, defense and early-TH scaling.",
+ "constants": {
+  "wiki": {},
+  "client": {
+   "HERO_UPGRADE_CANCEL_MULTIPLIER": "50",
+   "HERO_RAGE_MULTIPLIER": "50",
+   "HERO_RAGE_SPEED_MULTIPLIER": "50",
+   "HERO_HOUSING_COST_MULTIPLIER": "100",
+   "HERO_DEFENCE_AUTO_HEAL": "TRUE",
+   "FREE_HERO_HEALTH_CAP": "1",
+   "HERO_HEALTH_SPEED_UP_COST_MULTIPLIER": "300",
+   "HERO_STOP_TIME": "5000",
+   "BOOSTER_HERO_POTION_ADD_LEVELS": "5",
+   "BOOSTER_HERO_POTION_DURATION": "3600",
+   "TAVERN_LEVEL_TO_HERO_SLOT_COUNT": [
+    [
+     1,
+     1
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     5,
+     3
+    ],
+    [
+     7,
+     4
+    ]
+   ],
+   "ScaleByTHPercent": {
+    "TH1": "25",
+    "TH2": "25",
+    "TH3": "25",
+    "TH4": "50",
+    "TH5": "75",
+    "TH6": "100",
+    "TH7": "100"
+   }
+  }
+ },
+ "fields": {},
+ "levels": [],
+ "mismatches": [
+  {
+   "field": "ScaleByTHPercent",
+   "level": "TH1–3",
+   "wiki": "not applicable (no heroes before TH4)",
+   "client": "25",
+   "note": "client defines a 25% value for TH1–3 that is unreachable in normal progression"
+  }
+ ]
+}

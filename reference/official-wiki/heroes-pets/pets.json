@@ -1,0 +1,30 @@
+{
+ "title": "Pets",
+ "url": "https://clashofclans.fandom.com/wiki/Pets",
+ "revid": 621456,
+ "retrieved": "2026-09-15",
+ "clientName": null,
+ "clientTable": "pets",
+ "category": "mechanic",
+ "summary": "Hub page: twelve Pet House pets that accompany a hero on attack; immortal between battles, one per hero, never defend.",
+ "constants": {
+  "wiki": {},
+  "client": {
+   "PET_HOUSING_COST_MULTIPLIER": "0",
+   "BOOSTER_PET_SHOP_SPEEDUP": "24",
+   "BOOSTER_PET_SHOP_DURATION": "3600",
+   "petHousingSpace": 20
+  }
+ },
+ "fields": {},
+ "levels": [],
+ "mismatches": [
+  {
+   "field": "clientOnlyPetRecords",
+   "level": null,
+   "wiki": "not listed",
+   "client": "Phoenix Egg",
+   "note": "helper/prototype records in pets.csv (Phoenix Egg is the Phoenix's egg form)"
+  }
+ ]
+}

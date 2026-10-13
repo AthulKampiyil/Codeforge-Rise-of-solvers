@@ -1,0 +1,267 @@
+{
+  "globalId": 1000067,
+  "size": 3,
+  "levels": [
+    {
+      "level": 1,
+      "townhall": 13,
+      "hp": 3600,
+      "dps": 125,
+      "spellDamage": 300,
+      "spellMinDamage": 100,
+      "projectile": "Scattershot Projectile 1",
+      "projectileExport": "ice_breaker_lvl1_projectile",
+      "trailEmitter": "Ice_Breaker_lvl1_trail_emitter",
+      "body": "ice_breaker_lvl1",
+      "upgrade": "ice_breaker_lvl1_upgrade",
+      "animationActionFrame": 5
+    },
+    {
+      "level": 2,
+      "townhall": 13,
+      "hp": 4200,
+      "dps": 150,
+      "spellDamage": 360,
+      "spellMinDamage": 120,
+      "projectile": "Scattershot Projectile 2",
+      "projectileExport": "ice_breaker_lvl2_projectile",
+      "trailEmitter": "Ice_Breaker_lvl1_trail_emitter",
+      "body": "ice_breaker_lvl2",
+      "upgrade": "ice_breaker_lvl2_upgrade",
+      "animationActionFrame": 5
+    },
+    {
+      "level": 3,
+      "townhall": 14,
+      "hp": 4800,
+      "dps": 170,
+      "spellDamage": 380,
+      "spellMinDamage": 130,
+      "projectile": "Scattershot Projectile 3",
+      "projectileExport": "ice_breaker_lvl2_projectile",
+      "trailEmitter": "Ice_Breaker_lvl1_trail_emitter",
+      "body": "ice_breaker_lvl3",
+      "upgrade": "ice_breaker_lvl3_upgrade",
+      "animationActionFrame": 5
+    },
+    {
+      "level": 4,
+      "townhall": 15,
+      "hp": 5100,
+      "dps": 175,
+      "spellDamage": 400,
+      "spellMinDamage": 140,
+      "projectile": "Scattershot Projectile 4",
+      "projectileExport": "ice_breaker_lvl2_projectile",
+      "trailEmitter": "Ice_Breaker_lvl1_trail_emitter",
+      "body": "ice_breaker_lvl4",
+      "upgrade": "ice_breaker_lvl4_upgrade",
+      "animationActionFrame": 5
+    },
+    {
+      "level": 5,
+      "townhall": 16,
+      "hp": 5410,
+      "dps": 180,
+      "spellDamage": 420,
+      "spellMinDamage": 150,
+      "projectile": "Scattershot Projectile 5",
+      "projectileExport": "ice_breaker_lvl5_projectile",
+      "trailEmitter": "Ice_Breaker_lvl1_trail_emitter",
+      "body": "ice_breaker_lvl5",
+      "upgrade": "ice_breaker_lvl5_upgrade",
+      "animationActionFrame": 5
+    },
+    {
+      "level": 6,
+      "townhall": 17,
+      "hp": 5600,
+      "dps": 185,
+      "spellDamage": 440,
+      "spellMinDamage": 155,
+      "projectile": "Scattershot Projectile 6",
+      "projectileExport": "ice_breaker_lvl6_projectile",
+      "trailEmitter": "Ice_Breaker_lvl1_trail_emitter",
+      "body": "ice_breaker_lvl6",
+      "upgrade": "ice_breaker_lvl6_upgrade",
+      "animationActionFrame": 5
+    },
+    {
+      "level": 7,
+      "townhall": 18,
+      "hp": 5800,
+      "dps": 190,
+      "spellDamage": 450,
+      "spellMinDamage": 160,
+      "projectile": "Scattershot Projectile 7",
+      "projectileExport": "ice_breaker_lvl7_projectile",
+      "trailEmitter": "e_scattershot_Trail_Blue",
+      "body": "ice_breaker_lvl7",
+      "upgrade": "ice_breaker_lvl7_upgrade",
+      "animationActionFrame": 5
+    }
+  ],
+  "attackRange": 1000,
+  "minAttackRange": 300,
+  "attackSpeedMs": 3228,
+  "cooldownOverrideMs": 1500,
+  "newTargetAttackDelayMs": 2200,
+  "damageRadius": 100,
+  "ammunition": 90,
+  "airTargets": true,
+  "groundTargets": true,
+  "projectile": {
+    "Speed": "1200",
+    "StartHeight": "190",
+    "StartOffset": "0",
+    "IsBallistic": "TRUE",
+    "BallisticHeight": "0",
+    "TrajectoryStyle": "0",
+    "FixedTravelTime": "0",
+    "DamageDelay": "0",
+    "UseRotate": "TRUE",
+    "UseTopLayer": "FALSE",
+    "Scale": "100",
+    "ShadowExportName": "simple_shadow_small",
+    "DontTrackTarget": "FALSE",
+    "SmoothDamage": "TRUE",
+    "HitSpellInheritAffectType": "TRUE",
+    "RandomHitPositionOnCharacters": "FALSE"
+  },
+  "hitSpell": {
+    "radius": 500,
+    "coneAngle": 90,
+    "minRadius": 100,
+    "numberOfHits": 1,
+    "hitTimeMs": 0,
+    "hitEffect": "Ice Breaker Hit lvl1"
+  },
+  "effects": {
+    "attack": "Ice Breaker Attack",
+    "destroy": "Building Destroyed",
+    "hit": "Ice Breaker Hit lvl1"
+  },
+  "exports": {
+    "base": "rapidfire_base",
+    "ruin": "destroyedBuilding_3l_pit_rockwood",
+    "cone": "ice_breaker_shard_cone_rotate",
+    "shadow": "simple_shadow_small"
+  },
+  "directions": {
+    "ice_breaker_lvl1": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    },
+    "ice_breaker_lvl1_upgrade": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    },
+    "ice_breaker_lvl2": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    },
+    "ice_breaker_lvl2_upgrade": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    },
+    "ice_breaker_lvl3": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    },
+    "ice_breaker_lvl3_upgrade": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    },
+    "ice_breaker_lvl4": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    },
+    "ice_breaker_lvl4_upgrade": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    },
+    "ice_breaker_lvl5": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    },
+    "ice_breaker_lvl5_upgrade": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    },
+    "ice_breaker_lvl6": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    },
+    "ice_breaker_lvl6_upgrade": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    },
+    "ice_breaker_lvl7": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    },
+    "ice_breaker_lvl7_upgrade": {
+      "views": 24,
+      "frames": 360,
+      "framesPerView": 15,
+      "fps": 30
+    }
+  },
+  "externalParticles": {
+    "e_scattershot_Trail_Blue": "sc/vfx_env.sc"
+  },
+  "miniLevels": [
+    {
+      "Name": "Scattershot Mini Levels",
+      "Level": "1",
+      "TargetBuilding": "Scattershot",
+      "RequiredTownHallLevel": "18",
+      "BuildTimeD": "5",
+      "BuildTimeH": "0",
+      "BuildTimeM": "0",
+      "BuildTimeS": "0",
+      "BuildResource": "Gold",
+      "BuildCost": "14500000",
+      "DPS": "3",
+      "ProjectileSpellDamageBoost": "3",
+      "StrengthWeight": "175",
+      "HintPriority": "25"
+    },
+    {
+      "Level": "2",
+      "BuildTimeD": "7",
+      "BuildTimeH": "0",
+      "BuildTimeM": "0",
+      "BuildTimeS": "0",
+      "BuildCost": "9500000",
+      "Hitpoints": "150",
+      "StrengthWeight": "350"
+    }
+  ]
+}

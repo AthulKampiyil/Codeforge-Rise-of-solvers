@@ -1,0 +1,193 @@
+{
+ "title": "Builder's Hut",
+ "url": "https://clashofclans.fandom.com/wiki/Builder%27s_Hut",
+ "revid": 625149,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Builders Hut",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "hitpoints": 250,
+   "cost": "Varies**",
+   "buildSeconds": "None",
+   "xp": 0,
+   "townHall": 1
+  },
+  {
+   "level": 2,
+   "dps": 80,
+   "damagePerHit": 32,
+   "repairPerSecond": 50,
+   "repairPerHit": 37.5,
+   "hitpoints": 1000,
+   "cost": 3000000,
+   "buildSeconds": 172800,
+   "xp": 415,
+   "townHall": 14
+  },
+  {
+   "level": 3,
+   "dps": 100,
+   "damagePerHit": 40,
+   "repairPerSecond": 60,
+   "repairPerHit": 45,
+   "hitpoints": 1300,
+   "cost": 4000000,
+   "buildSeconds": 259200,
+   "xp": 509,
+   "townHall": 14
+  },
+  {
+   "level": 4,
+   "dps": 120,
+   "damagePerHit": 48,
+   "repairPerSecond": 70,
+   "repairPerHit": 52.5,
+   "hitpoints": 1600,
+   "cost": 6000000,
+   "buildSeconds": 345600,
+   "xp": 587,
+   "townHall": 14
+  },
+  {
+   "level": 5,
+   "dps": 135,
+   "damagePerHit": 54,
+   "repairPerSecond": 80,
+   "repairPerHit": 60,
+   "hitpoints": 1800,
+   "cost": 7000000,
+   "buildSeconds": 432000,
+   "xp": 657,
+   "townHall": 15
+  },
+  {
+   "level": 6,
+   "dps": 150,
+   "damagePerHit": 60,
+   "repairPerSecond": 85,
+   "repairPerHit": 63.75,
+   "hitpoints": 1900,
+   "cost": 8000000,
+   "buildSeconds": 475200,
+   "xp": 689,
+   "townHall": 16
+  },
+  {
+   "level": 7,
+   "dps": 165,
+   "damagePerHit": 66,
+   "repairPerSecond": 90,
+   "repairPerHit": 67.5,
+   "hitpoints": 2000,
+   "cost": 15500000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 17
+  },
+  {
+   "level": 8,
+   "dps": 180,
+   "damagePerHit": 72,
+   "repairPerSecond": 95,
+   "repairPerHit": 71.25,
+   "hitpoints": 2100,
+   "cost": 24000000,
+   "buildSeconds": 1123200,
+   "xp": 1059,
+   "townHall": 18
+  }
+ ],
+ "supercharges": [
+  {
+   "charge": 1,
+   "dps": 187,
+   "damagePerHit": 74.8,
+   "repairPerSecond": 95,
+   "repairPerHit": 71.25,
+   "hitpoints": 2100,
+   "cost": 10000000,
+   "buildSeconds": 345600,
+   "xp": 587,
+   "townHall": 18
+  },
+  {
+   "charge": 2,
+   "dps": 187,
+   "damagePerHit": 74.8,
+   "repairPerSecond": 95,
+   "repairPerHit": 71.25,
+   "hitpoints": 2150,
+   "cost": 8000000,
+   "buildSeconds": 518400,
+   "xp": 720,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 1,
+  "weaponizeTownHall": 14,
+  "size": "2x2",
+  "range": 7,
+  "attackSeconds": 0.4,
+  "targets": "ground & air",
+  "damageType": "single target",
+  "repair": {
+   "rangeTiles": 7,
+   "repairIntervalSeconds": 0.75,
+   "movementSpeed": 20,
+   "stacking": [
+    1.0,
+    1.0,
+    0.9,
+    0.9,
+    0.7
+   ]
+  },
+  "maxCount": 5,
+  "gemPrices": [
+   0,
+   0,
+   500,
+   1000,
+   2000
+  ]
+ },
+ "mismatches": [
+  {
+   "field": "supercharge",
+   "level": "all",
+   "wiki": "available at max level",
+   "client": "not linked from building row",
+   "note": "Aug 31, 2026 charges are newer than the client snapshot",
+   "table": "Supercharges"
+  },
+  {
+   "field": "townHall",
+   "level": "C1",
+   "wiki": 18,
+   "client": 17,
+   "note": "unlinked client mini row says TH17 (older supercharge); live charges need TH18",
+   "table": "Supercharges"
+  },
+  {
+   "field": "cost",
+   "level": "C2",
+   "wiki": 8000000,
+   "client": 5000000,
+   "note": "unlinked client mini row charge 2 costs 5M (wiki 8M) and carries price/time discount percentages from the older TH17 supercharge",
+   "table": "Supercharges"
+  },
+  {
+   "field": "townHall",
+   "level": "C2",
+   "wiki": 18,
+   "client": 17,
+   "note": "unlinked client mini row says TH17 (older supercharge); live charges need TH18",
+   "table": "Supercharges"
+  }
+ ],
+ "progressionMismatches": []
+}

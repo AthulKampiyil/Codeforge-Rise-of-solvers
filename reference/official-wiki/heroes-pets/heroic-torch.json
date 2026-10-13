@@ -1,0 +1,484 @@
+{
+ "title": "Heroic Torch",
+ "url": "https://clashofclans.fandom.com/wiki/Heroic_Torch",
+ "revid": 623829,
+ "retrieved": "2026-09-15",
+ "clientName": "Heroic Torch",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Grand Warden",
+ "summary": "Warden Epic active item: for 16 → 27.5 s allies in his ring move faster, take 6% → 15% less damage and can pass through Walls; passive DPS, HP and recovery.",
+ "constants": {
+  "wiki": {
+   "User": "Grand Warden",
+   "Ability Type": "Active",
+   "Rarity": "Epic",
+   "Unlock Requirement": "Buy in Splash Bash event for 3,100 Splash Medal; Buy in Equipment Blast event for 3,100 Relic Medal; or purchasable from the Trader for 1,500 Gem"
+  },
+  "client": {
+   "Rarity": "EPIC",
+   "AllowedCharacters": "Grand Warden;",
+   "MainAbilities": "GWHeroicTorch",
+   "Claimable": "TRUE",
+   "levelRows": 27,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    10
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "abilityDurationSeconds": {
+   "wikiHeader": "Ability Attributes / Ability Duration",
+   "unit": "seconds"
+  },
+  "speedIncrease": {
+   "wikiHeader": "Ability Attributes / Speed Increase",
+   "unit": "wiki movement-speed units (client Speed / 12.5; displayed value truncated)"
+  },
+  "incomingDamageReductionPercent": {
+   "wikiHeader": "Ability Attributes / Incoming Damage Reduction %",
+   "unit": "percent"
+  },
+  "hpRecoveryIncrease": {
+   "wikiHeader": "Hero Boost / HP Recovery Increase",
+   "unit": "hitpoints"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boost / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boost / Hitpoint increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostStarryOre": {
+   "wikiHeader": "Upgrade Cost / Starry Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "abilityDurationSeconds": 16,
+   "speedIncrease": 5,
+   "incomingDamageReductionPercent": 6,
+   "hpRecoveryIncrease": 110,
+   "damagePerSecondIncrease": 12,
+   "hitpointIncrease": 35,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "abilityDurationSeconds": 16,
+   "speedIncrease": 5,
+   "incomingDamageReductionPercent": 6,
+   "hpRecoveryIncrease": 120,
+   "damagePerSecondIncrease": 13,
+   "hitpointIncrease": 40,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "abilityDurationSeconds": 17,
+   "speedIncrease": 6,
+   "incomingDamageReductionPercent": 7,
+   "hpRecoveryIncrease": 130,
+   "damagePerSecondIncrease": 14,
+   "hitpointIncrease": 42,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "abilityDurationSeconds": 17,
+   "speedIncrease": 6,
+   "incomingDamageReductionPercent": 7,
+   "hpRecoveryIncrease": 140,
+   "damagePerSecondIncrease": 16,
+   "hitpointIncrease": 45,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "abilityDurationSeconds": 17,
+   "speedIncrease": 6,
+   "incomingDamageReductionPercent": 7,
+   "hpRecoveryIncrease": 150,
+   "damagePerSecondIncrease": 18,
+   "hitpointIncrease": 50,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "abilityDurationSeconds": 18,
+   "speedIncrease": 6,
+   "incomingDamageReductionPercent": 8,
+   "hpRecoveryIncrease": 160,
+   "damagePerSecondIncrease": 20,
+   "hitpointIncrease": 52,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "abilityDurationSeconds": 18,
+   "speedIncrease": 6,
+   "incomingDamageReductionPercent": 8,
+   "hpRecoveryIncrease": 170,
+   "damagePerSecondIncrease": 22,
+   "hitpointIncrease": 55,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "abilityDurationSeconds": 18,
+   "speedIncrease": 6,
+   "incomingDamageReductionPercent": 8,
+   "hpRecoveryIncrease": 180,
+   "damagePerSecondIncrease": 24,
+   "hitpointIncrease": 60,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "abilityDurationSeconds": 19,
+   "speedIncrease": 7,
+   "incomingDamageReductionPercent": 9,
+   "hpRecoveryIncrease": 190,
+   "damagePerSecondIncrease": 27,
+   "hitpointIncrease": 63,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "upgradeCostStarryOre": 10,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "abilityDurationSeconds": 19,
+   "speedIncrease": 7,
+   "incomingDamageReductionPercent": 9,
+   "hpRecoveryIncrease": 200,
+   "damagePerSecondIncrease": 29,
+   "hitpointIncrease": 66,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 11,
+   "abilityDurationSeconds": 19,
+   "speedIncrease": 7,
+   "incomingDamageReductionPercent": 9,
+   "hpRecoveryIncrease": 210,
+   "damagePerSecondIncrease": 31,
+   "hitpointIncrease": 71,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 12,
+   "abilityDurationSeconds": 21,
+   "speedIncrease": 7,
+   "incomingDamageReductionPercent": 10,
+   "hpRecoveryIncrease": 220,
+   "damagePerSecondIncrease": 34,
+   "hitpointIncrease": 74,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "upgradeCostStarryOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 13,
+   "abilityDurationSeconds": 21,
+   "speedIncrease": 7,
+   "incomingDamageReductionPercent": 10,
+   "hpRecoveryIncrease": 230,
+   "damagePerSecondIncrease": 36,
+   "hitpointIncrease": 77,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 14,
+   "abilityDurationSeconds": 21,
+   "speedIncrease": 7,
+   "incomingDamageReductionPercent": 10,
+   "hpRecoveryIncrease": 240,
+   "damagePerSecondIncrease": 38,
+   "hitpointIncrease": 82,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 15,
+   "abilityDurationSeconds": 23,
+   "speedIncrease": 7,
+   "incomingDamageReductionPercent": 11,
+   "hpRecoveryIncrease": 250,
+   "damagePerSecondIncrease": 41,
+   "hitpointIncrease": 85,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 30,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 16,
+   "abilityDurationSeconds": 23,
+   "speedIncrease": 7,
+   "incomingDamageReductionPercent": 11,
+   "hpRecoveryIncrease": 260,
+   "damagePerSecondIncrease": 43,
+   "hitpointIncrease": 88,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 17,
+   "abilityDurationSeconds": 23,
+   "speedIncrease": 7,
+   "incomingDamageReductionPercent": 11,
+   "hpRecoveryIncrease": 270,
+   "damagePerSecondIncrease": 45,
+   "hitpointIncrease": 93,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 18,
+   "abilityDurationSeconds": 24,
+   "speedIncrease": 8,
+   "incomingDamageReductionPercent": 12,
+   "hpRecoveryIncrease": 285,
+   "damagePerSecondIncrease": 48,
+   "hitpointIncrease": 96,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 50,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 19,
+   "abilityDurationSeconds": 24,
+   "speedIncrease": 8,
+   "incomingDamageReductionPercent": 12,
+   "hpRecoveryIncrease": 295,
+   "damagePerSecondIncrease": 51,
+   "hitpointIncrease": 99,
+   "upgradeCostShinyOre": 2800,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 20,
+   "abilityDurationSeconds": 24,
+   "speedIncrease": 8,
+   "incomingDamageReductionPercent": 12,
+   "hpRecoveryIncrease": 305,
+   "damagePerSecondIncrease": 54,
+   "hitpointIncrease": 104,
+   "upgradeCostShinyOre": 2900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 21,
+   "abilityDurationSeconds": 25,
+   "speedIncrease": 8,
+   "incomingDamageReductionPercent": 13,
+   "hpRecoveryIncrease": 320,
+   "damagePerSecondIncrease": 58,
+   "hitpointIncrease": 107,
+   "upgradeCostShinyOre": 3000,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 100,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 22,
+   "abilityDurationSeconds": 25,
+   "speedIncrease": 8,
+   "incomingDamageReductionPercent": 13,
+   "hpRecoveryIncrease": 330,
+   "damagePerSecondIncrease": 61,
+   "hitpointIncrease": 110,
+   "upgradeCostShinyOre": 3100,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 23,
+   "abilityDurationSeconds": 25,
+   "speedIncrease": 8,
+   "incomingDamageReductionPercent": 13,
+   "hpRecoveryIncrease": 340,
+   "damagePerSecondIncrease": 64,
+   "hitpointIncrease": 115,
+   "upgradeCostShinyOre": 3200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 24,
+   "abilityDurationSeconds": 26,
+   "speedIncrease": 8,
+   "incomingDamageReductionPercent": 14,
+   "hpRecoveryIncrease": 355,
+   "damagePerSecondIncrease": 68,
+   "hitpointIncrease": 118,
+   "upgradeCostShinyOre": 3300,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 120,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 25,
+   "abilityDurationSeconds": 26,
+   "speedIncrease": 8,
+   "incomingDamageReductionPercent": 14,
+   "hpRecoveryIncrease": 365,
+   "damagePerSecondIncrease": 71,
+   "hitpointIncrease": 121,
+   "upgradeCostShinyOre": 3400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 26,
+   "abilityDurationSeconds": 26,
+   "speedIncrease": 8,
+   "incomingDamageReductionPercent": 14,
+   "hpRecoveryIncrease": 375,
+   "damagePerSecondIncrease": 74,
+   "hitpointIncrease": 126,
+   "upgradeCostShinyOre": 3500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 27,
+   "abilityDurationSeconds": 27.5,
+   "speedIncrease": 9,
+   "incomingDamageReductionPercent": 15,
+   "hpRecoveryIncrease": 390,
+   "damagePerSecondIncrease": 78,
+   "hitpointIncrease": 137,
+   "upgradeCostShinyOre": 3600,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 150,
+   "blacksmithLevelRequired": 9
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "wallWalking",
+   "level": null,
+   "wiki": "units can walk through Walls",
+   "client": "no visible column (InfoScreenAttribute1 25–35 unexplained)",
+   "note": "engine rule to verify"
+  }
+ ],
+ "clientColumns": [
+  "MainAbilities:special_abilities[GWHeroicTorch] → AuraSpell:spells[Heroic Torch Aura].ShieldProtectionPercent",
+  "MainAbilities:special_abilities[GWHeroicTorch] → AuraSpell:spells[Heroic Torch Aura].SpeedBoost",
+  "character_items.DPS",
+  "character_items.HealOnActivation",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

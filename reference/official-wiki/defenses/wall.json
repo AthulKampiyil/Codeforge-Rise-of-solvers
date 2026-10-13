@@ -1,0 +1,223 @@
+{
+ "title": "Wall/Home Village",
+ "url": "https://clashofclans.fandom.com/wiki/Wall/Home_Village",
+ "revid": 622801,
+ "retrieved": "2026-09-15",
+ "category": "building",
+ "clientName": "Wall",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "hitpoints": 100,
+   "costGold": 0,
+   "cumulativeCostGold": 0,
+   "townHall": 2
+  },
+  {
+   "level": 2,
+   "hitpoints": 200,
+   "costGold": 1000,
+   "cumulativeCostGold": 1000,
+   "costWallRing": 1,
+   "townHall": 2
+  },
+  {
+   "level": 3,
+   "hitpoints": 400,
+   "costGold": 5000,
+   "cumulativeCostGold": 6000,
+   "costWallRing": 1,
+   "townHall": 3
+  },
+  {
+   "level": 4,
+   "hitpoints": 800,
+   "costGold": 10000,
+   "cumulativeCostGold": 16000,
+   "costWallRing": 1,
+   "townHall": 4
+  },
+  {
+   "level": 5,
+   "hitpoints": 1200,
+   "costGold": 20000,
+   "cumulativeCostGold": 36000,
+   "costElixir": 20000,
+   "cumulativeCostElixir": 20000,
+   "costWallRing": 1,
+   "townHall": 5
+  },
+  {
+   "level": 6,
+   "hitpoints": 1800,
+   "costGold": 30000,
+   "cumulativeCostGold": 66000,
+   "costElixir": 30000,
+   "cumulativeCostElixir": 50000,
+   "costWallRing": 1,
+   "townHall": 6
+  },
+  {
+   "level": 7,
+   "hitpoints": 2400,
+   "costGold": 50000,
+   "cumulativeCostGold": 116000,
+   "costElixir": 50000,
+   "cumulativeCostElixir": 100000,
+   "costWallRing": 1,
+   "townHall": 7
+  },
+  {
+   "level": 8,
+   "hitpoints": 3000,
+   "costGold": 75000,
+   "cumulativeCostGold": 191000,
+   "costElixir": 75000,
+   "cumulativeCostElixir": 175000,
+   "costWallRing": 1,
+   "townHall": 8
+  },
+  {
+   "level": 9,
+   "hitpoints": 3500,
+   "costGold": 100000,
+   "cumulativeCostGold": 291000,
+   "costElixir": 100000,
+   "cumulativeCostElixir": 275000,
+   "costWallRing": 1,
+   "townHall": 9
+  },
+  {
+   "level": 10,
+   "hitpoints": 4000,
+   "costGold": 200000,
+   "cumulativeCostGold": 491000,
+   "costElixir": 200000,
+   "cumulativeCostElixir": 475000,
+   "costWallRing": 1,
+   "townHall": 9
+  },
+  {
+   "level": 11,
+   "hitpoints": 5000,
+   "costGold": 500000,
+   "cumulativeCostGold": 991000,
+   "costElixir": 500000,
+   "cumulativeCostElixir": 975000,
+   "costWallRing": 1,
+   "townHall": 10
+  },
+  {
+   "level": 12,
+   "hitpoints": 7000,
+   "costGold": 1000000,
+   "cumulativeCostGold": 1991000,
+   "costElixir": 1000000,
+   "cumulativeCostElixir": 1975000,
+   "costWallRing": 1,
+   "townHall": 11
+  },
+  {
+   "level": 13,
+   "hitpoints": 8000,
+   "costGold": 1500000,
+   "cumulativeCostGold": 3491000,
+   "costElixir": 1500000,
+   "cumulativeCostElixir": 3475000,
+   "costWallRing": 2,
+   "townHall": 12
+  },
+  {
+   "level": 14,
+   "hitpoints": 9000,
+   "costGold": 2000000,
+   "cumulativeCostGold": 5491000,
+   "costElixir": 2000000,
+   "cumulativeCostElixir": 5475000,
+   "costWallRing": 2,
+   "townHall": 13
+  },
+  {
+   "level": 15,
+   "hitpoints": 10000,
+   "costGold": 3000000,
+   "cumulativeCostGold": 8491000,
+   "costElixir": 3000000,
+   "cumulativeCostElixir": 8475000,
+   "costWallRing": 3,
+   "townHall": 14
+  },
+  {
+   "level": 16,
+   "hitpoints": 11000,
+   "costGold": 4000000,
+   "cumulativeCostGold": 12491000,
+   "costElixir": 4000000,
+   "cumulativeCostElixir": 12475000,
+   "costWallRing": 4,
+   "townHall": 15
+  },
+  {
+   "level": 17,
+   "hitpoints": 12000,
+   "costGold": 5000000,
+   "cumulativeCostGold": 17491000,
+   "costElixir": 5000000,
+   "cumulativeCostElixir": 17475000,
+   "costWallRing": 5,
+   "townHall": 16
+  },
+  {
+   "level": 18,
+   "hitpoints": 13000,
+   "costGold": 7000000,
+   "cumulativeCostGold": 24491000,
+   "costElixir": 7000000,
+   "cumulativeCostElixir": 24475000,
+   "costWallRing": 7,
+   "townHall": 17
+  },
+  {
+   "level": 19,
+   "hitpoints": 14000,
+   "costGold": 10000000,
+   "cumulativeCostGold": 34491000,
+   "costElixir": 10000000,
+   "cumulativeCostElixir": 34475000,
+   "costWallRing": 10,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 2,
+  "size": "1x1",
+  "maxPieces": 325,
+  "level19PieceCap": 275,
+  "upgradeSeconds": 0,
+  "alternateResourceFromLevel": 5,
+  "countsTowardDestruction": false,
+  "wallBypassUnits": [
+   "Hog Rider",
+   "Miner",
+   "Headhunter",
+   "Yetimite",
+   "Root Rider",
+   "Druid (human form)",
+   "Grand Warden",
+   "Royal Champion",
+   "Meteormite",
+   "ground pets except Mighty Yak"
+  ]
+ },
+ "mismatches": [
+  {
+   "field": "level19PieceCap",
+   "level": 19,
+   "wiki": 275,
+   "client": "not found in buildings/townhall_levels/globals",
+   "note": "the per-level piece cap is probably server-controlled; implement as data"
+  }
+ ],
+ "progressionMismatches": []
+}

@@ -1,0 +1,78 @@
+{
+ "title": "Longshot",
+ "url": "https://clashofclans.fandom.com/wiki/Longshot",
+ "revid": 625038,
+ "retrieved": "2026-09-15",
+ "category": "townhall-weapon",
+ "clientName": "Longshot (guardians.csv InfernoArtillery)",
+ "clientTable": "characters.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 330,
+   "damagePerHit": 594,
+   "hitpoints": 7000,
+   "damageUponDeath": 1000
+  },
+  {
+   "level": 2,
+   "dps": 360,
+   "damagePerHit": 648,
+   "hitpoints": 8000,
+   "damageUponDeath": 1000,
+   "cost": 18000000,
+   "buildSeconds": 604800
+  },
+  {
+   "level": 3,
+   "dps": 390,
+   "damagePerHit": 702,
+   "hitpoints": 9000,
+   "damageUponDeath": 1000,
+   "cost": 22000000,
+   "buildSeconds": 777600
+  },
+  {
+   "level": 4,
+   "dps": 420,
+   "damagePerHit": 756,
+   "hitpoints": 10000,
+   "damageUponDeath": 1000,
+   "cost": 26000000,
+   "buildSeconds": 950400
+  },
+  {
+   "level": 5,
+   "dps": 450,
+   "damagePerHit": 810,
+   "hitpoints": 11000,
+   "damageUponDeath": 1000,
+   "cost": 28000000,
+   "buildSeconds": 1123200
+  }
+ ],
+ "constants": {
+  "townHall": 18,
+  "range": 11,
+  "attackSeconds": 1.8,
+  "targets": "ground & air (splash on hit layer only)",
+  "splashTiles": 1.0,
+  "movementSpeed": 12,
+  "patrolRadiusTiles": 17,
+  "triggerRadiusTiles": 19,
+  "deathDamage": 1000,
+  "deathDamageRadiusTiles": 3.5,
+  "poisonEffectPercent": 30,
+  "isHero": false,
+  "housingSpace": null
+ },
+ "mismatches": [
+  {
+   "field": "patrolRadius",
+   "level": "all",
+   "wiki": 17,
+   "client": 16.0,
+   "note": "MaxSearchRadiusForDefender/100"
+  }
+ ]
+}

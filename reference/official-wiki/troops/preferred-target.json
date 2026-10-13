@@ -1,0 +1,419 @@
+{
+ "title": "Preferred (favorite) target rules",
+ "page": "Template:PreferredTarget",
+ "url": "https://clashofclans.fandom.com/wiki/Template:PreferredTarget",
+ "revid": 619579,
+ "retrieved": "2026-09-15",
+ "clientName": "characters.PreferedTargetBuildingClass / PreferedTargetBuilding / PreferHeroes",
+ "clientVersion": "18.400.21",
+ "category": "mechanic",
+ "rules": {
+  "None": {
+   "behaviour": "No preferred target: attacks the nearest building. If it (or a nearby ally) is attacked by defending Clan Castle troops, Heroes or Skeleton Trap skeletons that it is able to hit, it breaks off to fight them, then resumes with the nearest structure.",
+   "clientEncoding": "no PreferedTargetBuildingClass / PreferedTargetBuilding / PreferHeroes"
+  },
+  "Defenses": {
+   "behaviour": "Defense-first: ignores every other building and all defending units (even while being attacked) as long as any defensive building stands. The Clan Castle is never a defense; an activated Town Hall weapon is. Once no defenses remain it behaves like a no-preference troop, but only switches to enemy units after its current target is destroyed.",
+   "clientEncoding": "PreferedTargetBuildingClass=Defense"
+  },
+  "Resources": {
+   "behaviour": "Resource-first: ignores other buildings and defending units while any resource building stands. The Town Hall and Clan Castle always count as resource buildings (with or without loot, weapon active or not) and receive the resource damage bonus. Afterwards it behaves like a no-preference troop.",
+   "clientEncoding": "PreferedTargetBuildingClass=Resource"
+  },
+  "Walls": {
+   "behaviour": "Wall-first: while even one wall segment exists it ignores buildings and enemy units entirely. With no walls left it behaves like a no-preference troop.",
+   "clientEncoding": "PreferedTargetBuildingClass=Wall"
+  },
+  "Specific Defense": {
+   "behaviour": "Air-Defense-first: bypasses all other buildings and units while any Air Defense stands, then targets any remaining defenses, then behaves like a no-preference troop. The Clan Castle is not a defense; an activated Town Hall weapon is.",
+   "clientEncoding": "PreferedTargetBuilding=Air Defense"
+  },
+  "Healing": {
+   "behaviour": "Cannot attack: ignores enemy buildings and troops, even ones attacking it, and idles in place when nothing needs healing.",
+   "clientEncoding": "DPS < 0 (heal), no attack"
+  },
+  "HealTransitionToAttack": {
+   "behaviour": "Cannot attack in its initial form (heals instead, ignores enemies, idles when there is nothing to heal) but later transforms into a unit that fights.",
+   "clientEncoding": "DPS < 0 plus EvolveToCharacter (Bear)"
+  },
+  "Heroes": {
+   "behaviour": "Hero-first: bypasses all buildings and defending troops while any enemy Hero is on the battlefield, even when attacked by Clan Castle troops or Skeleton Trap skeletons. Guardians are not Heroes. Once all Heroes are knocked out it behaves like a no-preference troop.",
+   "clientEncoding": "PreferHeroes=TRUE (+HeroDamageMultiplier)"
+  },
+  "Rubble": {
+   "behaviour": "Rubble-seeker: does nothing until a building is destroyed, then walks to the debris and ignores everything else (see Mechanics).",
+   "clientEncoding": "SummonTroop + ConsumeDebrisOnSummon"
+  },
+  "Stationary": {
+   "behaviour": "Stationary spawner; has no target of its own (its Firemites do the attacking).",
+   "clientEncoding": "Speed=0 + BunkerTroops"
+  }
+ },
+ "troopsByRule": {
+  "None": [
+   {
+    "slug": "barbarian",
+    "clientName": "Barbarian",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "archer",
+    "clientName": "Archer",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "wizard",
+    "clientName": "Wizard",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "dragon",
+    "clientName": "Dragon",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "pekka",
+    "clientName": "PEKKA",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "baby-dragon",
+    "clientName": "Baby Dragon",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "miner",
+    "clientName": "Miner",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "electro-dragon",
+    "clientName": "Electro Dragon",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "yeti",
+    "clientName": "Yeti",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "electro-titan",
+    "clientName": "Electro Titan",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "thrower",
+    "clientName": "Thrower",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "meteor-golem",
+    "clientName": "Meteor Golem",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "minion",
+    "clientName": "Minion",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "valkyrie",
+    "clientName": "Valkyrie",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "witch",
+    "clientName": "Witch",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "bowler",
+    "clientName": "Bowler",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "apprentice-warden",
+    "clientName": "Apprentice Warden",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "meteor-golem-meteormite",
+    "clientName": "Meteormite",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "witch-skeleton",
+    "clientName": "Skeleton",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "lava-hound-lava-pup",
+    "clientName": "Lava Pup",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "furnace-firemite",
+    "clientName": "Firemite Spawn",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "ruin-witch-ruin-knight",
+    "clientName": "Ruin Knight",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   }
+  ],
+  "Defenses": [
+   {
+    "slug": "giant",
+    "clientName": "Giant",
+    "clientColumnValue": "Defense",
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "balloon",
+    "clientName": "Balloon",
+    "clientColumnValue": "Defense",
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "dragon-rider",
+    "clientName": "Dragon Rider",
+    "clientColumnValue": "Defense",
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "root-rider",
+    "clientName": "Root Rider",
+    "clientColumnValue": "Defense",
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "hog-rider",
+    "clientName": "Hog Rider",
+    "clientColumnValue": "Defense",
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "golem",
+    "clientName": "Golem",
+    "clientColumnValue": "Defense",
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "ice-golem",
+    "clientName": "Ice Golem",
+    "clientColumnValue": "Defense",
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "yeti-yetimite",
+    "clientName": "Yetimite",
+    "clientColumnValue": "Defense",
+    "consistent": true,
+    "multiplier": 4
+   },
+   {
+    "slug": "golem-golemite",
+    "clientName": "Golemite",
+    "clientColumnValue": "Defense",
+    "consistent": true,
+    "multiplier": 1
+   },
+   {
+    "slug": "druid-bear",
+    "clientName": "Bear",
+    "clientColumnValue": "Defense",
+    "consistent": true,
+    "multiplier": 1
+   }
+  ],
+  "Resources": [
+   {
+    "slug": "goblin",
+    "clientName": "Goblin",
+    "clientColumnValue": "Resource",
+    "consistent": true,
+    "multiplier": 2
+   }
+  ],
+  "Walls": [
+   {
+    "slug": "wall-breaker",
+    "clientName": "Wall Breaker",
+    "clientColumnValue": "Wall",
+    "consistent": true,
+    "multiplier": 40
+   }
+  ],
+  "Healing": [
+   {
+    "slug": "healer",
+    "clientName": "Healer",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   }
+  ],
+  "Specific Defense": [
+   {
+    "slug": "lava-hound",
+    "clientName": "Lava Hound",
+    "clientColumnValue": "Air Defense",
+    "consistent": true,
+    "multiplier": 1
+   }
+  ],
+  "Heroes": [
+   {
+    "slug": "headhunter",
+    "clientName": "Headhunter",
+    "clientColumnValue": "Heroes",
+    "consistent": true,
+    "multiplier": 4
+   }
+  ],
+  "HealTransitionToAttack": [
+   {
+    "slug": "druid",
+    "clientName": "Druid",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   }
+  ],
+  "Stationary": [
+   {
+    "slug": "furnace",
+    "clientName": "Furnace",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   }
+  ],
+  "Rubble": [
+   {
+    "slug": "ruin-witch",
+    "clientName": "Ruin Witch",
+    "clientColumnValue": null,
+    "consistent": true,
+    "multiplier": 1
+   }
+  ]
+ },
+ "consistency": {
+  "checked": 40,
+  "consistent": 40
+ },
+ "damageMultipliers": [
+  {
+   "slug": "goblin",
+   "versus": "resource buildings incl. Town Hall and Clan Castle",
+   "multiplier": 2,
+   "column": "PreferedTargetDamageMod"
+  },
+  {
+   "slug": "wall-breaker",
+   "versus": "walls",
+   "multiplier": 40,
+   "column": "PreferedTargetDamageMod"
+  },
+  {
+   "slug": "yeti-yetimite",
+   "versus": "defenses (x0.5 vs resource buildings)",
+   "multiplier": 4,
+   "column": "PreferedTargetDamageMod + DamageReductionToStorages"
+  },
+  {
+   "slug": "headhunter",
+   "versus": "Heroes",
+   "multiplier": 4,
+   "column": "HeroDamageMultiplier=400"
+  },
+  {
+   "slug": "meteor-golem",
+   "versus": "walls (no targeting preference)",
+   "multiplier": 5,
+   "column": "DamageMultiplierTarget/DamageMultiplierPercent"
+  },
+  {
+   "slug": "ruin-witch-ruin-knight",
+   "versus": "walls (no targeting preference)",
+   "multiplier": 3,
+   "column": "DamageMultiplierTarget/DamageMultiplierPercent"
+  }
+ ],
+ "mismatches": [
+  {
+   "field": "favoriteTarget text",
+   "level": null,
+   "wiki": "Yeti and Apprentice Warden info boxes say \"Any\"; template says None",
+   "client": "no preference column",
+   "note": "\"Any\" and \"None\" describe the same behaviour"
+  },
+  {
+   "field": "favoriteTarget",
+   "level": null,
+   "wiki": "Firemite template None; Furnace description says Firemites target buildings",
+   "client": "Firemite Spawn has no PreferedTargetBuildingClass",
+   "note": "unresolved"
+  },
+  {
+   "field": "page",
+   "level": null,
+   "wiki": "No \"Favorite Target\"/\"Preferred Target\" article exists; the rules live in this template",
+   "client": null,
+   "note": "search API checked"
+  }
+ ]
+}

@@ -1,0 +1,509 @@
+{
+  "dataset": "official-wiki/spells-siege-super",
+  "source": "https://clashofclans.fandom.com (Clash of Clans Wiki, MediaWiki API action=parse wikitext)",
+  "retrieved": "2026-09-15",
+  "clientVersion": "18.400.21",
+  "entityCount": 50,
+  "entities": [
+    {
+      "slug": "clone-spell",
+      "title": "Clone Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Clone_Spell",
+      "revid": 622840,
+      "clientName": "Clone",
+      "category": "elixir-spell",
+      "summary": "3-housing 3.5-tile zone (18 s) copying entering troops up to 22-48 housing; clones live 30 s; no Heroes/Pets/Siege.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "freeze-spell",
+      "title": "Freeze Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Freeze_Spell",
+      "revid": 622839,
+      "clientName": "Freeze",
+      "category": "elixir-spell",
+      "summary": "1-housing 3.5-tile instant freeze of defenses and defending units for 2.5-6.0 s; only things inside at cast are affected.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "healing-spell",
+      "title": "Healing Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Healing_Spell/Home_Village",
+      "revid": 620308,
+      "clientName": "Healing",
+      "category": "elixir-spell",
+      "summary": "2-housing 5-tile healing ring: 41 pulses every 0.3 s (15-75 HP per pulse), Heroes healed at 55%, Siege Machines unaffected.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "invisibility-spell",
+      "title": "Invisibility Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Invisibility_Spell",
+      "revid": 623168,
+      "clientName": "Invisibility",
+      "category": "elixir-spell",
+      "summary": "1-housing 4-tile field making all units and buildings except Walls/Siege untargetable for 3.5-4.25 s.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "jump-spell",
+      "title": "Jump Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Jump_Spell/Home_Village",
+      "revid": 623002,
+      "clientName": "Jump",
+      "category": "elixir-spell",
+      "summary": "2-housing 3.5-tile zone that lets wall-bound ground units path over Walls for 20-100 s.",
+      "mismatchCount": 1
+    },
+    {
+      "slug": "lightning-spell",
+      "title": "Lightning Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Lightning_Spell/Home_Village",
+      "revid": 620698,
+      "clientName": "Lightning",
+      "category": "elixir-spell",
+      "summary": "1-housing single bolt: 150-720 damage in a 2-tile radius plus a 0.1 s stun; storages, Town Hall and Clan Castle immune.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "rage-spell",
+      "title": "Rage Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Rage_Spell/Home_Village",
+      "revid": 623256,
+      "clientName": "Rage",
+      "category": "elixir-spell",
+      "summary": "2-housing 5-tile ring for 18 s: +20..+32 speed and +130..+190% damage (additive), Heroes get half, no self-stacking.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "recall-spell",
+      "title": "Recall Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Recall_Spell",
+      "revid": 625271,
+      "clientName": "Recall",
+      "category": "elixir-spell",
+      "summary": "2-housing 5-tile spell returning 83-120 housing of troops/Heroes/Pets to the deploy bar (Heroes first).",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "revive-spell",
+      "title": "Revive Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Revive_Spell",
+      "revid": 625258,
+      "clientName": "Revive",
+      "category": "elixir-spell",
+      "summary": "2-housing single-target spell reviving the nearest knocked-out Hero within 8 tiles at 60-80% HP.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "totem-spell",
+      "title": "Totem Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Totem_Spell",
+      "revid": 625235,
+      "clientName": "Totem Spell",
+      "category": "elixir-spell",
+      "summary": "1-housing decoy: stuns a 5-tile area on impact and leaves a 10,000-13,000 HP Totem (ground+air target) decaying 334 HP/s.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "angry-spell",
+      "title": "Angry Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Angry_Spell",
+      "revid": 625021,
+      "clientName": "AngrySpell",
+      "category": "dark-spell",
+      "summary": "1-housing 6-tile field (5 s) that forces non-defense-targeting units to target defenses for 7-12 s (added June 2026).",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "bat-spell",
+      "title": "Bat Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Bat_Spell",
+      "revid": 623006,
+      "clientName": "Bat Spell",
+      "category": "dark-spell",
+      "summary": "1-housing summon of 7-25 defense-targeting Bats over a few seconds; weak vs storages/Town Hall; no traps/CC triggers.",
+      "mismatchCount": 3
+    },
+    {
+      "slug": "earthquake-spell",
+      "title": "Earthquake Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Earthquake_Spell",
+      "revid": 622962,
+      "clientName": "Earthquake",
+      "category": "dark-spell",
+      "summary": "1-housing max-HP-percentage quake (14.5-29% to buildings, extra wall formula, 5-14.5% to ground troops at L6-8) with diminishing repeats.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "haste-spell",
+      "title": "Haste Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Haste_Spell",
+      "revid": 620321,
+      "clientName": "Haste",
+      "category": "dark-spell",
+      "summary": "1-housing speed-only boost (+28..+56) for 10-30 s in a 4-tile (5 at L7) area; Heroes get half; no stacking with Rage speed.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "ice-block-spell",
+      "title": "Ice Block Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Ice_Block_Spell",
+      "revid": 623794,
+      "clientName": "Ice Block",
+      "category": "dark-spell",
+      "summary": "1-housing 5-tile snapshot that encases friendly units for 7 s: immobile and silent but taking 86-96% less damage.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "overgrowth-spell",
+      "title": "Overgrowth Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Overgrowth_Spell",
+      "revid": 623007,
+      "clientName": "Overgrowth",
+      "category": "dark-spell",
+      "summary": "2-housing 6-tile root trap: buildings disabled, untargetable and invulnerable for 22-26 s; Walls, traps, defending units unaffected.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "poison-spell",
+      "title": "Poison Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Poison_Spell",
+      "revid": 624974,
+      "clientName": "Poison",
+      "category": "dark-spell",
+      "summary": "1-housing 4-tile cloud for 16 s: ramping damage to 90-380 DPS, -26..-52% speed and -35..-74% attack rate on defending units.",
+      "mismatchCount": 1
+    },
+    {
+      "slug": "skeleton-spell",
+      "title": "Skeleton Spell",
+      "url": "https://clashofclans.fandom.com/wiki/Skeleton_Spell",
+      "revid": 623005,
+      "clientName": "Skeleton Spell",
+      "category": "dark-spell",
+      "summary": "1-housing summon of 12-19 armored Skeletons over time; they ignore traps/CC and hit resource buildings weakly.",
+      "mismatchCount": 1
+    },
+    {
+      "slug": "battle-blimp",
+      "title": "Battle Blimp",
+      "url": "https://clashofclans.fandom.com/wiki/Battle_Blimp",
+      "revid": 624365,
+      "clientName": "Battle Blimp",
+      "category": "siege-machine",
+      "summary": "Flying siege that flies straight at the Town Hall bombing buildings on the way; explodes for 700-1,200 on death.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "battle-drill",
+      "title": "Battle Drill",
+      "url": "https://clashofclans.fandom.com/wiki/Battle_Drill",
+      "revid": 624361,
+      "clientName": "Battle Drill",
+      "category": "siege-machine",
+      "summary": "Underground siege that tunnels to defenses, stuns nearby defenses and destroys Walls on surfacing, then drills (1.7 s single target).",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "flame-flinger",
+      "title": "Flame Flinger",
+      "url": "https://clashofclans.fandom.com/wiki/Flame_Flinger",
+      "revid": 624810,
+      "clientName": "Flame Flinger",
+      "category": "siege-machine",
+      "summary": "Long-range ground catapult targeting defenses: bursts of 3 Fire Spirits every 5 s leaving ramping burn zones; decays 17 HP/s.",
+      "mismatchCount": 8
+    },
+    {
+      "slug": "log-launcher",
+      "title": "Log Launcher",
+      "url": "https://clashofclans.fandom.com/wiki/Log_Launcher",
+      "revid": 624644,
+      "clientName": "Log Launcher",
+      "category": "siege-machine",
+      "summary": "Slow ground siege rolling piercing logs (20 tiles / 4 buildings, x4 vs Walls) plus a point-blank blast; loses 156 HP/s.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "siege-barracks",
+      "title": "Siege Barracks",
+      "url": "https://clashofclans.fandom.com/wiki/Siege_Barracks",
+      "revid": 624362,
+      "clientName": "Siege Barracks",
+      "category": "siege-machine",
+      "summary": "Stationary 30 s siege that spawns P.E.K.K.As then Wizards (1+6 to 2+12) and releases CC troops when it ends.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "sky-wagon",
+      "title": "Sky Wagon",
+      "url": "https://clashofclans.fandom.com/wiki/Sky_Wagon",
+      "revid": 624686,
+      "clientName": "Air Troop Launcher",
+      "category": "siege-machine",
+      "summary": "Flying barrel-launcher siege (April 2026): 4-5 barrels every 8 s, each releasing Minions, a Balloon, a Baby Dragon and 1 CC troop.",
+      "mismatchCount": 1
+    },
+    {
+      "slug": "stone-slammer",
+      "title": "Stone Slammer",
+      "url": "https://clashofclans.fandom.com/wiki/Stone_Slammer",
+      "revid": 624370,
+      "clientName": "Stone Slammer",
+      "category": "siege-machine",
+      "summary": "Flying defense-targeting siege: 2.5 s boulder drops with a 1-tile heavy hitbox and a 3-tile hitbox (x25 vs Walls), 500 death damage.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "troop-launcher",
+      "title": "Troop Launcher",
+      "url": "https://clashofclans.fandom.com/wiki/Troop_Launcher",
+      "revid": 625335,
+      "clientName": "Troop Launcher",
+      "category": "siege-machine",
+      "summary": "Stationary siege that lobs 5-7 barrels (Giant, Barbarians, Archers, Wall Breakers + 1 CC troop each) at friendly groups; decays 25 HP/s.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "wall-wrecker",
+      "title": "Wall Wrecker",
+      "url": "https://clashofclans.fandom.com/wiki/Wall_Wrecker",
+      "revid": 624364,
+      "clientName": "Wall Wrecker",
+      "category": "siege-machine",
+      "summary": "Ground siege that rams a path to the Town Hall: 1.3 s splash hits (x10 vs Walls), 5,500-10,000 HP.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "ice-hound",
+      "title": "Ice Hound",
+      "url": "https://clashofclans.fandom.com/wiki/Ice_Hound",
+      "revid": 622637,
+      "clientName": "Ice Hound",
+      "category": "super-troop",
+      "summary": "Boosted Lava Hound (40 housing): tank that targets Air Defenses, slows what it hits, freezes the area and drops Ice Pups on death.",
+      "mismatchCount": 2
+    },
+    {
+      "slug": "inferno-dragon",
+      "title": "Inferno Dragon",
+      "url": "https://clashofclans.fandom.com/wiki/Inferno_Dragon/Home_Village",
+      "revid": 624086,
+      "clientName": "Inferno Dragon",
+      "category": "super-troop",
+      "summary": "Boosted Baby Dragon (15 housing): single-target Inferno Beam ramping from base DPS to 2x after 1.7 s and 20x after 3.2 s.",
+      "mismatchCount": 4
+    },
+    {
+      "slug": "rocket-balloon",
+      "title": "Rocket Balloon",
+      "url": "https://clashofclans.fandom.com/wiki/Rocket_Balloon/Home_Village",
+      "revid": 622932,
+      "clientName": "Rocket Balloon",
+      "category": "super-troop",
+      "summary": "Boosted Balloon (8 housing): Boosters give a large speed burst for 4 s after deployment; defense-targeting bomber.",
+      "mismatchCount": 2
+    },
+    {
+      "slug": "sneaky-goblin",
+      "title": "Sneaky Goblin",
+      "url": "https://clashofclans.fandom.com/wiki/Sneaky_Goblin",
+      "revid": 622829,
+      "clientName": "Sneaky Goblin",
+      "category": "super-troop",
+      "summary": "Boosted Goblin (3 housing): resource raider (x2 vs resources) that is invisible for 5 s after deployment.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "super-archer",
+      "title": "Super Archer",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Archer",
+      "revid": 621780,
+      "clientName": "Super Archer",
+      "category": "super-troop",
+      "summary": "Boosted Archer (12 housing): long-range piercing arrows (Sharp Shot) that damage every building in the line.",
+      "mismatchCount": 1
+    },
+    {
+      "slug": "super-barbarian",
+      "title": "Super Barbarian",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Barbarian/Home_Village",
+      "revid": 622930,
+      "clientName": "Super Barbarian",
+      "category": "super-troop",
+      "summary": "Boosted Barbarian (5 housing): melee with Rage for 8 s after deployment (+70% damage, speed boost).",
+      "mismatchCount": 1
+    },
+    {
+      "slug": "super-bowler",
+      "title": "Super Bowler",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Bowler",
+      "revid": 623122,
+      "clientName": "Super Bowler",
+      "category": "super-troop",
+      "summary": "Boosted Bowler (30 housing): Triple Strike boulders bounce three times (3 tiles apart) with 0.6-tile splash at each impact.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "super-dragon",
+      "title": "Super Dragon",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Dragon/Home_Village",
+      "revid": 623387,
+      "clientName": "Super Dragon",
+      "category": "super-troop",
+      "summary": "Boosted Dragon (40 housing): Roast - bursts of 10 splash fire shots 0.192 s apart with 1.8 s between bursts.",
+      "mismatchCount": 12
+    },
+    {
+      "slug": "super-giant",
+      "title": "Super Giant",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Giant/Home_Village",
+      "revid": 622246,
+      "clientName": "Super Giant",
+      "category": "super-troop",
+      "summary": "Boosted Giant (10 housing): very tanky defense-targeter whose Wall Buster ability deals 5x damage to Walls.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "super-hog-rider",
+      "title": "Super Hog Rider",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Hog_Rider",
+      "revid": 621779,
+      "clientName": "Super Hog Rider",
+      "category": "super-troop",
+      "summary": "Boosted Hog Rider (12 housing): wall-jumping defense-targeter that splits into a Super Rider and a Super Hog on death.",
+      "mismatchCount": 8
+    },
+    {
+      "slug": "super-miner",
+      "title": "Super Miner",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Miner/Home_Village",
+      "revid": 622280,
+      "clientName": "Super Miner",
+      "category": "super-troop",
+      "summary": "Boosted Miner (24 housing): tunnels between targets, drill damage ramps over 1.5/3 s, explodes on death (2-tile radius).",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "super-minion",
+      "title": "Super Minion",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Minion",
+      "revid": 620782,
+      "clientName": "Super Minion",
+      "category": "super-troop",
+      "summary": "Boosted Minion (12 housing): Long Shot fires its first 8 shots (3 on defense) from long range; triggers Seeking Air Mines.",
+      "mismatchCount": 2
+    },
+    {
+      "slug": "super-valkyrie",
+      "title": "Super Valkyrie",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Valkyrie",
+      "revid": 622824,
+      "clientName": "Super Valkyrie",
+      "category": "super-troop",
+      "summary": "Boosted Valkyrie (20 housing): splash spinner that drops a Rage Spell-like field (L4 Rage strength, 4-tile radius) on death.",
+      "mismatchCount": 2
+    },
+    {
+      "slug": "super-wall-breaker",
+      "title": "Super Wall Breaker",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Wall_Breaker",
+      "revid": 624690,
+      "clientName": "Super Wall Breaker",
+      "category": "super-troop",
+      "summary": "Boosted Wall Breaker (8 housing): Mega Bomb always explodes (attack + death damage), x40 vs Walls, 1.6-tile splash.",
+      "mismatchCount": 1
+    },
+    {
+      "slug": "super-witch",
+      "title": "Super Witch",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Witch",
+      "revid": 623218,
+      "clientName": "Super Witch",
+      "category": "super-troop",
+      "summary": "Boosted Witch (40 housing): summons one Big Boy (4,100 HP, 350 DPS) at a time instead of Skeleton swarms.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "super-wizard",
+      "title": "Super Wizard",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Wizard/Home_Village",
+      "revid": 624748,
+      "clientName": "Super Wizard",
+      "category": "super-troop",
+      "summary": "Boosted Wizard (10 housing): Chain Magic hits a primary target and chains to up to 9 more within 3 tiles at 40% damage.",
+      "mismatchCount": 1
+    },
+    {
+      "slug": "super-yeti",
+      "title": "Super Yeti",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Yeti",
+      "revid": 623186,
+      "clientName": "Super Yeti",
+      "category": "super-troop",
+      "summary": "Boosted Yeti (35 housing): spawns chain-lightning Electromites as it takes damage (7-14 per life).",
+      "mismatchCount": 1
+    },
+    {
+      "slug": "clan-castle",
+      "title": "Clan Castle",
+      "url": "https://clashofclans.fandom.com/wiki/Clan_Castle",
+      "revid": 623293,
+      "clientName": "Clan Castle",
+      "category": "building",
+      "summary": "Reinforcement building: 10-55 troop, 1-4 spell and 1-2 siege housing by level; Siege Machines carry and release CC troops.",
+      "mismatchCount": 2
+    },
+    {
+      "slug": "dark-spell-factory",
+      "title": "Dark Spell Factory",
+      "url": "https://clashofclans.fandom.com/wiki/Dark_Spell_Factory",
+      "revid": 624552,
+      "clientName": "Dark Spell Factory",
+      "category": "building",
+      "summary": "TH8 army building (8 levels) unlocking the Dark spells; adds a flat +1 spell housing to the shared pool.",
+      "mismatchCount": 1
+    },
+    {
+      "slug": "spell-factory",
+      "title": "Spell Factory",
+      "url": "https://clashofclans.fandom.com/wiki/Spell_Factory",
+      "revid": 624556,
+      "clientName": "Spell Factory",
+      "category": "building",
+      "summary": "TH5 army building (9 levels) that unlocks the 10 Elixir spells and provides 2-10 spell housing (shared with the Dark Spell Factory's +1).",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "workshop",
+      "title": "Workshop",
+      "url": "https://clashofclans.fandom.com/wiki/Workshop",
+      "revid": 624497,
+      "clientName": "Siege Workshop",
+      "category": "building",
+      "summary": "TH12 army building (9 levels) that builds Siege Machines instantly and stores 1-3 of them; one siege per battle.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "siege-machines",
+      "title": "Siege Machines",
+      "url": "https://clashofclans.fandom.com/wiki/Siege_Machines",
+      "revid": 623486,
+      "clientName": null,
+      "category": "mechanic",
+      "summary": "Overview: Workshop-built machines that carry Clan Castle troops, ignore spells, and release troops when destroyed; one per battle.",
+      "mismatchCount": 0
+    },
+    {
+      "slug": "super-troops",
+      "title": "Super Troops",
+      "url": "https://clashofclans.fandom.com/wiki/Super_Troops",
+      "revid": 613574,
+      "clientName": null,
+      "category": "mechanic",
+      "summary": "Boosting rules (Super Sauna): TH11+, base troop at its minimum level, 25,000 DE or a Super Potion, 3 days, max two types, no cooldown; level = base level.",
+      "mismatchCount": 2
+    }
+  ]
+}

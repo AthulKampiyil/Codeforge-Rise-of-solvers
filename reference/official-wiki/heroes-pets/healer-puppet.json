@@ -1,0 +1,280 @@
+{
+ "title": "Healer Puppet",
+ "url": "https://clashofclans.fandom.com/wiki/Healer_Puppet",
+ "revid": 621291,
+ "retrieved": "2026-09-15",
+ "clientName": "Healer Puppet",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Archer Queen",
+ "summary": "Queen Common active item (Blacksmith 5): summons 1 → 3 Healers of fixed level 4 → 8; passive HP and self-healing.",
+ "constants": {
+  "wiki": {
+   "User": "Archer Queen",
+   "Ability Type": "Active",
+   "Rarity": "Common",
+   "Unlock Requirement": "Blacksmith level 5"
+  },
+  "client": {
+   "Rarity": "COMMON",
+   "AllowedCharacters": "Archer Queen;",
+   "MainAbilities": "ArcherQueenSpawnHealers",
+   "ExtraAbilities": "Regeneration",
+   "levelRows": 18,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "summonedHealers": {
+   "wikiHeader": "Ability Attributes / Summoned Healers",
+   "unit": "hitpoints healed"
+  },
+  "healerLevel": {
+   "wikiHeader": "Ability Attributes / Healer Level",
+   "unit": "level"
+  },
+  "selfHealingPerSecond": {
+   "wikiHeader": "Hero Boosts / Self Healing Per Second",
+   "unit": "hitpoints healed"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "summonedHealers": 1,
+   "healerLevel": 4,
+   "selfHealingPerSecond": 6,
+   "hitpointIncrease": 132,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 2,
+   "summonedHealers": 1,
+   "healerLevel": 4,
+   "selfHealingPerSecond": 8,
+   "hitpointIncrease": 154,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 3,
+   "summonedHealers": 1,
+   "healerLevel": 5,
+   "selfHealingPerSecond": 10,
+   "hitpointIncrease": 177,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 4,
+   "summonedHealers": 1,
+   "healerLevel": 5,
+   "selfHealingPerSecond": 12,
+   "hitpointIncrease": 199,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 5,
+   "summonedHealers": 1,
+   "healerLevel": 5,
+   "selfHealingPerSecond": 14,
+   "hitpointIncrease": 221,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 6,
+   "summonedHealers": 2,
+   "healerLevel": 5,
+   "selfHealingPerSecond": 16,
+   "hitpointIncrease": 243,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 7,
+   "summonedHealers": 2,
+   "healerLevel": 5,
+   "selfHealingPerSecond": 18,
+   "hitpointIncrease": 265,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 8,
+   "summonedHealers": 2,
+   "healerLevel": 5,
+   "selfHealingPerSecond": 20,
+   "hitpointIncrease": 287,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 9,
+   "summonedHealers": 2,
+   "healerLevel": 6,
+   "selfHealingPerSecond": 22,
+   "hitpointIncrease": 331,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 10,
+   "summonedHealers": 2,
+   "healerLevel": 6,
+   "selfHealingPerSecond": 24,
+   "hitpointIncrease": 402,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 11,
+   "summonedHealers": 2,
+   "healerLevel": 6,
+   "selfHealingPerSecond": 26,
+   "hitpointIncrease": 473,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 12,
+   "summonedHealers": 2,
+   "healerLevel": 7,
+   "selfHealingPerSecond": 28,
+   "hitpointIncrease": 543,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 13,
+   "summonedHealers": 2,
+   "healerLevel": 7,
+   "selfHealingPerSecond": 30,
+   "hitpointIncrease": 614,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 14,
+   "summonedHealers": 2,
+   "healerLevel": 7,
+   "selfHealingPerSecond": 31,
+   "hitpointIncrease": 685,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 15,
+   "summonedHealers": 3,
+   "healerLevel": 7,
+   "selfHealingPerSecond": 32,
+   "hitpointIncrease": 756,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 16,
+   "summonedHealers": 3,
+   "healerLevel": 7,
+   "selfHealingPerSecond": 33,
+   "hitpointIncrease": 826,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 17,
+   "summonedHealers": 3,
+   "healerLevel": 7,
+   "selfHealingPerSecond": 34,
+   "hitpointIncrease": 897,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 18,
+   "summonedHealers": 3,
+   "healerLevel": 8,
+   "selfHealingPerSecond": 35,
+   "hitpointIncrease": 968,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 7
+  }
+ ],
+ "subpages": [],
+ "mismatches": [],
+ "clientColumns": [
+  "ExtraAbilities:special_abilities[Regeneration].Regeneration",
+  "MainAbilities:special_abilities[ArcherQueenSpawnHealers].TroopCount",
+  "MainAbilities:special_abilities[ArcherQueenSpawnHealers].TroopLevel",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

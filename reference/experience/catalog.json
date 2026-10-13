@@ -1,0 +1,2011 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "logic/experience_levels.csv": "a705a7a77abd23faf3c7397a41ae6b539c04e547f74c290d390d6c22f936c31f"
+  },
+  "scope": "XP needed at each chief level to reach the next; the last level is the cap.",
+  "levels": [
+    {
+      "level": 1,
+      "points": 30
+    },
+    {
+      "level": 2,
+      "points": 50
+    },
+    {
+      "level": 3,
+      "points": 100
+    },
+    {
+      "level": 4,
+      "points": 150
+    },
+    {
+      "level": 5,
+      "points": 200
+    },
+    {
+      "level": 6,
+      "points": 250
+    },
+    {
+      "level": 7,
+      "points": 300
+    },
+    {
+      "level": 8,
+      "points": 350
+    },
+    {
+      "level": 9,
+      "points": 400
+    },
+    {
+      "level": 10,
+      "points": 450
+    },
+    {
+      "level": 11,
+      "points": 500
+    },
+    {
+      "level": 12,
+      "points": 550
+    },
+    {
+      "level": 13,
+      "points": 600
+    },
+    {
+      "level": 14,
+      "points": 650
+    },
+    {
+      "level": 15,
+      "points": 700
+    },
+    {
+      "level": 16,
+      "points": 750
+    },
+    {
+      "level": 17,
+      "points": 800
+    },
+    {
+      "level": 18,
+      "points": 850
+    },
+    {
+      "level": 19,
+      "points": 900
+    },
+    {
+      "level": 20,
+      "points": 950
+    },
+    {
+      "level": 21,
+      "points": 1000
+    },
+    {
+      "level": 22,
+      "points": 1050
+    },
+    {
+      "level": 23,
+      "points": 1100
+    },
+    {
+      "level": 24,
+      "points": 1150
+    },
+    {
+      "level": 25,
+      "points": 1200
+    },
+    {
+      "level": 26,
+      "points": 1250
+    },
+    {
+      "level": 27,
+      "points": 1300
+    },
+    {
+      "level": 28,
+      "points": 1350
+    },
+    {
+      "level": 29,
+      "points": 1400
+    },
+    {
+      "level": 30,
+      "points": 1450
+    },
+    {
+      "level": 31,
+      "points": 1500
+    },
+    {
+      "level": 32,
+      "points": 1550
+    },
+    {
+      "level": 33,
+      "points": 1600
+    },
+    {
+      "level": 34,
+      "points": 1650
+    },
+    {
+      "level": 35,
+      "points": 1700
+    },
+    {
+      "level": 36,
+      "points": 1750
+    },
+    {
+      "level": 37,
+      "points": 1800
+    },
+    {
+      "level": 38,
+      "points": 1850
+    },
+    {
+      "level": 39,
+      "points": 1900
+    },
+    {
+      "level": 40,
+      "points": 1950
+    },
+    {
+      "level": 41,
+      "points": 2000
+    },
+    {
+      "level": 42,
+      "points": 2050
+    },
+    {
+      "level": 43,
+      "points": 2100
+    },
+    {
+      "level": 44,
+      "points": 2150
+    },
+    {
+      "level": 45,
+      "points": 2200
+    },
+    {
+      "level": 46,
+      "points": 2250
+    },
+    {
+      "level": 47,
+      "points": 2300
+    },
+    {
+      "level": 48,
+      "points": 2350
+    },
+    {
+      "level": 49,
+      "points": 2400
+    },
+    {
+      "level": 50,
+      "points": 2450
+    },
+    {
+      "level": 51,
+      "points": 2500
+    },
+    {
+      "level": 52,
+      "points": 2550
+    },
+    {
+      "level": 53,
+      "points": 2600
+    },
+    {
+      "level": 54,
+      "points": 2650
+    },
+    {
+      "level": 55,
+      "points": 2700
+    },
+    {
+      "level": 56,
+      "points": 2750
+    },
+    {
+      "level": 57,
+      "points": 2800
+    },
+    {
+      "level": 58,
+      "points": 2850
+    },
+    {
+      "level": 59,
+      "points": 2900
+    },
+    {
+      "level": 60,
+      "points": 2950
+    },
+    {
+      "level": 61,
+      "points": 3000
+    },
+    {
+      "level": 62,
+      "points": 3050
+    },
+    {
+      "level": 63,
+      "points": 3100
+    },
+    {
+      "level": 64,
+      "points": 3150
+    },
+    {
+      "level": 65,
+      "points": 3200
+    },
+    {
+      "level": 66,
+      "points": 3250
+    },
+    {
+      "level": 67,
+      "points": 3300
+    },
+    {
+      "level": 68,
+      "points": 3350
+    },
+    {
+      "level": 69,
+      "points": 3400
+    },
+    {
+      "level": 70,
+      "points": 3450
+    },
+    {
+      "level": 71,
+      "points": 3500
+    },
+    {
+      "level": 72,
+      "points": 3550
+    },
+    {
+      "level": 73,
+      "points": 3600
+    },
+    {
+      "level": 74,
+      "points": 3650
+    },
+    {
+      "level": 75,
+      "points": 3700
+    },
+    {
+      "level": 76,
+      "points": 3750
+    },
+    {
+      "level": 77,
+      "points": 3800
+    },
+    {
+      "level": 78,
+      "points": 3850
+    },
+    {
+      "level": 79,
+      "points": 3900
+    },
+    {
+      "level": 80,
+      "points": 3950
+    },
+    {
+      "level": 81,
+      "points": 4000
+    },
+    {
+      "level": 82,
+      "points": 4050
+    },
+    {
+      "level": 83,
+      "points": 4100
+    },
+    {
+      "level": 84,
+      "points": 4150
+    },
+    {
+      "level": 85,
+      "points": 4200
+    },
+    {
+      "level": 86,
+      "points": 4250
+    },
+    {
+      "level": 87,
+      "points": 4300
+    },
+    {
+      "level": 88,
+      "points": 4350
+    },
+    {
+      "level": 89,
+      "points": 4400
+    },
+    {
+      "level": 90,
+      "points": 4450
+    },
+    {
+      "level": 91,
+      "points": 4500
+    },
+    {
+      "level": 92,
+      "points": 4550
+    },
+    {
+      "level": 93,
+      "points": 4600
+    },
+    {
+      "level": 94,
+      "points": 4650
+    },
+    {
+      "level": 95,
+      "points": 4700
+    },
+    {
+      "level": 96,
+      "points": 4750
+    },
+    {
+      "level": 97,
+      "points": 4800
+    },
+    {
+      "level": 98,
+      "points": 4850
+    },
+    {
+      "level": 99,
+      "points": 4900
+    },
+    {
+      "level": 100,
+      "points": 4950
+    },
+    {
+      "level": 101,
+      "points": 5000
+    },
+    {
+      "level": 102,
+      "points": 5050
+    },
+    {
+      "level": 103,
+      "points": 5100
+    },
+    {
+      "level": 104,
+      "points": 5150
+    },
+    {
+      "level": 105,
+      "points": 5200
+    },
+    {
+      "level": 106,
+      "points": 5250
+    },
+    {
+      "level": 107,
+      "points": 5300
+    },
+    {
+      "level": 108,
+      "points": 5350
+    },
+    {
+      "level": 109,
+      "points": 5400
+    },
+    {
+      "level": 110,
+      "points": 5450
+    },
+    {
+      "level": 111,
+      "points": 5500
+    },
+    {
+      "level": 112,
+      "points": 5550
+    },
+    {
+      "level": 113,
+      "points": 5600
+    },
+    {
+      "level": 114,
+      "points": 5650
+    },
+    {
+      "level": 115,
+      "points": 5700
+    },
+    {
+      "level": 116,
+      "points": 5750
+    },
+    {
+      "level": 117,
+      "points": 5800
+    },
+    {
+      "level": 118,
+      "points": 5850
+    },
+    {
+      "level": 119,
+      "points": 5900
+    },
+    {
+      "level": 120,
+      "points": 5950
+    },
+    {
+      "level": 121,
+      "points": 6000
+    },
+    {
+      "level": 122,
+      "points": 6050
+    },
+    {
+      "level": 123,
+      "points": 6100
+    },
+    {
+      "level": 124,
+      "points": 6150
+    },
+    {
+      "level": 125,
+      "points": 6200
+    },
+    {
+      "level": 126,
+      "points": 6250
+    },
+    {
+      "level": 127,
+      "points": 6300
+    },
+    {
+      "level": 128,
+      "points": 6350
+    },
+    {
+      "level": 129,
+      "points": 6400
+    },
+    {
+      "level": 130,
+      "points": 6450
+    },
+    {
+      "level": 131,
+      "points": 6500
+    },
+    {
+      "level": 132,
+      "points": 6550
+    },
+    {
+      "level": 133,
+      "points": 6600
+    },
+    {
+      "level": 134,
+      "points": 6650
+    },
+    {
+      "level": 135,
+      "points": 6700
+    },
+    {
+      "level": 136,
+      "points": 6750
+    },
+    {
+      "level": 137,
+      "points": 6800
+    },
+    {
+      "level": 138,
+      "points": 6850
+    },
+    {
+      "level": 139,
+      "points": 6900
+    },
+    {
+      "level": 140,
+      "points": 6950
+    },
+    {
+      "level": 141,
+      "points": 7000
+    },
+    {
+      "level": 142,
+      "points": 7050
+    },
+    {
+      "level": 143,
+      "points": 7100
+    },
+    {
+      "level": 144,
+      "points": 7150
+    },
+    {
+      "level": 145,
+      "points": 7200
+    },
+    {
+      "level": 146,
+      "points": 7250
+    },
+    {
+      "level": 147,
+      "points": 7300
+    },
+    {
+      "level": 148,
+      "points": 7350
+    },
+    {
+      "level": 149,
+      "points": 7400
+    },
+    {
+      "level": 150,
+      "points": 7450
+    },
+    {
+      "level": 151,
+      "points": 7500
+    },
+    {
+      "level": 152,
+      "points": 7550
+    },
+    {
+      "level": 153,
+      "points": 7600
+    },
+    {
+      "level": 154,
+      "points": 7650
+    },
+    {
+      "level": 155,
+      "points": 7700
+    },
+    {
+      "level": 156,
+      "points": 7750
+    },
+    {
+      "level": 157,
+      "points": 7800
+    },
+    {
+      "level": 158,
+      "points": 7850
+    },
+    {
+      "level": 159,
+      "points": 7900
+    },
+    {
+      "level": 160,
+      "points": 7950
+    },
+    {
+      "level": 161,
+      "points": 8000
+    },
+    {
+      "level": 162,
+      "points": 8050
+    },
+    {
+      "level": 163,
+      "points": 8100
+    },
+    {
+      "level": 164,
+      "points": 8150
+    },
+    {
+      "level": 165,
+      "points": 8200
+    },
+    {
+      "level": 166,
+      "points": 8250
+    },
+    {
+      "level": 167,
+      "points": 8300
+    },
+    {
+      "level": 168,
+      "points": 8350
+    },
+    {
+      "level": 169,
+      "points": 8400
+    },
+    {
+      "level": 170,
+      "points": 8450
+    },
+    {
+      "level": 171,
+      "points": 8500
+    },
+    {
+      "level": 172,
+      "points": 8550
+    },
+    {
+      "level": 173,
+      "points": 8600
+    },
+    {
+      "level": 174,
+      "points": 8650
+    },
+    {
+      "level": 175,
+      "points": 8700
+    },
+    {
+      "level": 176,
+      "points": 8750
+    },
+    {
+      "level": 177,
+      "points": 8800
+    },
+    {
+      "level": 178,
+      "points": 8850
+    },
+    {
+      "level": 179,
+      "points": 8900
+    },
+    {
+      "level": 180,
+      "points": 8950
+    },
+    {
+      "level": 181,
+      "points": 9000
+    },
+    {
+      "level": 182,
+      "points": 9050
+    },
+    {
+      "level": 183,
+      "points": 9100
+    },
+    {
+      "level": 184,
+      "points": 9150
+    },
+    {
+      "level": 185,
+      "points": 9200
+    },
+    {
+      "level": 186,
+      "points": 9250
+    },
+    {
+      "level": 187,
+      "points": 9300
+    },
+    {
+      "level": 188,
+      "points": 9350
+    },
+    {
+      "level": 189,
+      "points": 9400
+    },
+    {
+      "level": 190,
+      "points": 9450
+    },
+    {
+      "level": 191,
+      "points": 9500
+    },
+    {
+      "level": 192,
+      "points": 9550
+    },
+    {
+      "level": 193,
+      "points": 9600
+    },
+    {
+      "level": 194,
+      "points": 9650
+    },
+    {
+      "level": 195,
+      "points": 9700
+    },
+    {
+      "level": 196,
+      "points": 9750
+    },
+    {
+      "level": 197,
+      "points": 9800
+    },
+    {
+      "level": 198,
+      "points": 9850
+    },
+    {
+      "level": 199,
+      "points": 9900
+    },
+    {
+      "level": 200,
+      "points": 9950
+    },
+    {
+      "level": 201,
+      "points": 10000
+    },
+    {
+      "level": 202,
+      "points": 10500
+    },
+    {
+      "level": 203,
+      "points": 11000
+    },
+    {
+      "level": 204,
+      "points": 11500
+    },
+    {
+      "level": 205,
+      "points": 12000
+    },
+    {
+      "level": 206,
+      "points": 12500
+    },
+    {
+      "level": 207,
+      "points": 13000
+    },
+    {
+      "level": 208,
+      "points": 13500
+    },
+    {
+      "level": 209,
+      "points": 14000
+    },
+    {
+      "level": 210,
+      "points": 14500
+    },
+    {
+      "level": 211,
+      "points": 15000
+    },
+    {
+      "level": 212,
+      "points": 15500
+    },
+    {
+      "level": 213,
+      "points": 16000
+    },
+    {
+      "level": 214,
+      "points": 16500
+    },
+    {
+      "level": 215,
+      "points": 17000
+    },
+    {
+      "level": 216,
+      "points": 17500
+    },
+    {
+      "level": 217,
+      "points": 18000
+    },
+    {
+      "level": 218,
+      "points": 18500
+    },
+    {
+      "level": 219,
+      "points": 19000
+    },
+    {
+      "level": 220,
+      "points": 19500
+    },
+    {
+      "level": 221,
+      "points": 20000
+    },
+    {
+      "level": 222,
+      "points": 20500
+    },
+    {
+      "level": 223,
+      "points": 21000
+    },
+    {
+      "level": 224,
+      "points": 21500
+    },
+    {
+      "level": 225,
+      "points": 22000
+    },
+    {
+      "level": 226,
+      "points": 22500
+    },
+    {
+      "level": 227,
+      "points": 23000
+    },
+    {
+      "level": 228,
+      "points": 23500
+    },
+    {
+      "level": 229,
+      "points": 24000
+    },
+    {
+      "level": 230,
+      "points": 24500
+    },
+    {
+      "level": 231,
+      "points": 25000
+    },
+    {
+      "level": 232,
+      "points": 25500
+    },
+    {
+      "level": 233,
+      "points": 26000
+    },
+    {
+      "level": 234,
+      "points": 26500
+    },
+    {
+      "level": 235,
+      "points": 27000
+    },
+    {
+      "level": 236,
+      "points": 27500
+    },
+    {
+      "level": 237,
+      "points": 28000
+    },
+    {
+      "level": 238,
+      "points": 28500
+    },
+    {
+      "level": 239,
+      "points": 29000
+    },
+    {
+      "level": 240,
+      "points": 29500
+    },
+    {
+      "level": 241,
+      "points": 30000
+    },
+    {
+      "level": 242,
+      "points": 30500
+    },
+    {
+      "level": 243,
+      "points": 31000
+    },
+    {
+      "level": 244,
+      "points": 31500
+    },
+    {
+      "level": 245,
+      "points": 32000
+    },
+    {
+      "level": 246,
+      "points": 32500
+    },
+    {
+      "level": 247,
+      "points": 33000
+    },
+    {
+      "level": 248,
+      "points": 33500
+    },
+    {
+      "level": 249,
+      "points": 34000
+    },
+    {
+      "level": 250,
+      "points": 34500
+    },
+    {
+      "level": 251,
+      "points": 35000
+    },
+    {
+      "level": 252,
+      "points": 35500
+    },
+    {
+      "level": 253,
+      "points": 36000
+    },
+    {
+      "level": 254,
+      "points": 36500
+    },
+    {
+      "level": 255,
+      "points": 37000
+    },
+    {
+      "level": 256,
+      "points": 37500
+    },
+    {
+      "level": 257,
+      "points": 38000
+    },
+    {
+      "level": 258,
+      "points": 38500
+    },
+    {
+      "level": 259,
+      "points": 39000
+    },
+    {
+      "level": 260,
+      "points": 39500
+    },
+    {
+      "level": 261,
+      "points": 40000
+    },
+    {
+      "level": 262,
+      "points": 40500
+    },
+    {
+      "level": 263,
+      "points": 41000
+    },
+    {
+      "level": 264,
+      "points": 41500
+    },
+    {
+      "level": 265,
+      "points": 42000
+    },
+    {
+      "level": 266,
+      "points": 42500
+    },
+    {
+      "level": 267,
+      "points": 43000
+    },
+    {
+      "level": 268,
+      "points": 43500
+    },
+    {
+      "level": 269,
+      "points": 44000
+    },
+    {
+      "level": 270,
+      "points": 44500
+    },
+    {
+      "level": 271,
+      "points": 45000
+    },
+    {
+      "level": 272,
+      "points": 45500
+    },
+    {
+      "level": 273,
+      "points": 46000
+    },
+    {
+      "level": 274,
+      "points": 46500
+    },
+    {
+      "level": 275,
+      "points": 47000
+    },
+    {
+      "level": 276,
+      "points": 47500
+    },
+    {
+      "level": 277,
+      "points": 48000
+    },
+    {
+      "level": 278,
+      "points": 48500
+    },
+    {
+      "level": 279,
+      "points": 49000
+    },
+    {
+      "level": 280,
+      "points": 49500
+    },
+    {
+      "level": 281,
+      "points": 50000
+    },
+    {
+      "level": 282,
+      "points": 50500
+    },
+    {
+      "level": 283,
+      "points": 51000
+    },
+    {
+      "level": 284,
+      "points": 51500
+    },
+    {
+      "level": 285,
+      "points": 52000
+    },
+    {
+      "level": 286,
+      "points": 52500
+    },
+    {
+      "level": 287,
+      "points": 53000
+    },
+    {
+      "level": 288,
+      "points": 53500
+    },
+    {
+      "level": 289,
+      "points": 54000
+    },
+    {
+      "level": 290,
+      "points": 54500
+    },
+    {
+      "level": 291,
+      "points": 55000
+    },
+    {
+      "level": 292,
+      "points": 55500
+    },
+    {
+      "level": 293,
+      "points": 56000
+    },
+    {
+      "level": 294,
+      "points": 56500
+    },
+    {
+      "level": 295,
+      "points": 57000
+    },
+    {
+      "level": 296,
+      "points": 57500
+    },
+    {
+      "level": 297,
+      "points": 58000
+    },
+    {
+      "level": 298,
+      "points": 58500
+    },
+    {
+      "level": 299,
+      "points": 59000
+    },
+    {
+      "level": 300,
+      "points": 60000
+    },
+    {
+      "level": 301,
+      "points": 61000
+    },
+    {
+      "level": 302,
+      "points": 62000
+    },
+    {
+      "level": 303,
+      "points": 63000
+    },
+    {
+      "level": 304,
+      "points": 64000
+    },
+    {
+      "level": 305,
+      "points": 65000
+    },
+    {
+      "level": 306,
+      "points": 66000
+    },
+    {
+      "level": 307,
+      "points": 67000
+    },
+    {
+      "level": 308,
+      "points": 68000
+    },
+    {
+      "level": 309,
+      "points": 69000
+    },
+    {
+      "level": 310,
+      "points": 70000
+    },
+    {
+      "level": 311,
+      "points": 71000
+    },
+    {
+      "level": 312,
+      "points": 72000
+    },
+    {
+      "level": 313,
+      "points": 73000
+    },
+    {
+      "level": 314,
+      "points": 74000
+    },
+    {
+      "level": 315,
+      "points": 75000
+    },
+    {
+      "level": 316,
+      "points": 76000
+    },
+    {
+      "level": 317,
+      "points": 77000
+    },
+    {
+      "level": 318,
+      "points": 78000
+    },
+    {
+      "level": 319,
+      "points": 79000
+    },
+    {
+      "level": 320,
+      "points": 80000
+    },
+    {
+      "level": 321,
+      "points": 81000
+    },
+    {
+      "level": 322,
+      "points": 82000
+    },
+    {
+      "level": 323,
+      "points": 83000
+    },
+    {
+      "level": 324,
+      "points": 84000
+    },
+    {
+      "level": 325,
+      "points": 85000
+    },
+    {
+      "level": 326,
+      "points": 86000
+    },
+    {
+      "level": 327,
+      "points": 87000
+    },
+    {
+      "level": 328,
+      "points": 88000
+    },
+    {
+      "level": 329,
+      "points": 89000
+    },
+    {
+      "level": 330,
+      "points": 90000
+    },
+    {
+      "level": 331,
+      "points": 91000
+    },
+    {
+      "level": 332,
+      "points": 92000
+    },
+    {
+      "level": 333,
+      "points": 93000
+    },
+    {
+      "level": 334,
+      "points": 94000
+    },
+    {
+      "level": 335,
+      "points": 95000
+    },
+    {
+      "level": 336,
+      "points": 96000
+    },
+    {
+      "level": 337,
+      "points": 97000
+    },
+    {
+      "level": 338,
+      "points": 98000
+    },
+    {
+      "level": 339,
+      "points": 99000
+    },
+    {
+      "level": 340,
+      "points": 100000
+    },
+    {
+      "level": 341,
+      "points": 101000
+    },
+    {
+      "level": 342,
+      "points": 102000
+    },
+    {
+      "level": 343,
+      "points": 103000
+    },
+    {
+      "level": 344,
+      "points": 104000
+    },
+    {
+      "level": 345,
+      "points": 105000
+    },
+    {
+      "level": 346,
+      "points": 106000
+    },
+    {
+      "level": 347,
+      "points": 107000
+    },
+    {
+      "level": 348,
+      "points": 108000
+    },
+    {
+      "level": 349,
+      "points": 109000
+    },
+    {
+      "level": 350,
+      "points": 110000
+    },
+    {
+      "level": 351,
+      "points": 111000
+    },
+    {
+      "level": 352,
+      "points": 112000
+    },
+    {
+      "level": 353,
+      "points": 113000
+    },
+    {
+      "level": 354,
+      "points": 114000
+    },
+    {
+      "level": 355,
+      "points": 115000
+    },
+    {
+      "level": 356,
+      "points": 116000
+    },
+    {
+      "level": 357,
+      "points": 117000
+    },
+    {
+      "level": 358,
+      "points": 118000
+    },
+    {
+      "level": 359,
+      "points": 119000
+    },
+    {
+      "level": 360,
+      "points": 120000
+    },
+    {
+      "level": 361,
+      "points": 121000
+    },
+    {
+      "level": 362,
+      "points": 122000
+    },
+    {
+      "level": 363,
+      "points": 123000
+    },
+    {
+      "level": 364,
+      "points": 124000
+    },
+    {
+      "level": 365,
+      "points": 125000
+    },
+    {
+      "level": 366,
+      "points": 126000
+    },
+    {
+      "level": 367,
+      "points": 127000
+    },
+    {
+      "level": 368,
+      "points": 128000
+    },
+    {
+      "level": 369,
+      "points": 129000
+    },
+    {
+      "level": 370,
+      "points": 130000
+    },
+    {
+      "level": 371,
+      "points": 131000
+    },
+    {
+      "level": 372,
+      "points": 132000
+    },
+    {
+      "level": 373,
+      "points": 133000
+    },
+    {
+      "level": 374,
+      "points": 134000
+    },
+    {
+      "level": 375,
+      "points": 135000
+    },
+    {
+      "level": 376,
+      "points": 136000
+    },
+    {
+      "level": 377,
+      "points": 137000
+    },
+    {
+      "level": 378,
+      "points": 138000
+    },
+    {
+      "level": 379,
+      "points": 139000
+    },
+    {
+      "level": 380,
+      "points": 140000
+    },
+    {
+      "level": 381,
+      "points": 141000
+    },
+    {
+      "level": 382,
+      "points": 142000
+    },
+    {
+      "level": 383,
+      "points": 143000
+    },
+    {
+      "level": 384,
+      "points": 144000
+    },
+    {
+      "level": 385,
+      "points": 145000
+    },
+    {
+      "level": 386,
+      "points": 146000
+    },
+    {
+      "level": 387,
+      "points": 147000
+    },
+    {
+      "level": 388,
+      "points": 148000
+    },
+    {
+      "level": 389,
+      "points": 149000
+    },
+    {
+      "level": 390,
+      "points": 150000
+    },
+    {
+      "level": 391,
+      "points": 151000
+    },
+    {
+      "level": 392,
+      "points": 152000
+    },
+    {
+      "level": 393,
+      "points": 153000
+    },
+    {
+      "level": 394,
+      "points": 154000
+    },
+    {
+      "level": 395,
+      "points": 155000
+    },
+    {
+      "level": 396,
+      "points": 156000
+    },
+    {
+      "level": 397,
+      "points": 157000
+    },
+    {
+      "level": 398,
+      "points": 158000
+    },
+    {
+      "level": 399,
+      "points": 159000
+    },
+    {
+      "level": 400,
+      "points": 160000
+    },
+    {
+      "level": 401,
+      "points": 161000
+    },
+    {
+      "level": 402,
+      "points": 162000
+    },
+    {
+      "level": 403,
+      "points": 163000
+    },
+    {
+      "level": 404,
+      "points": 164000
+    },
+    {
+      "level": 405,
+      "points": 165000
+    },
+    {
+      "level": 406,
+      "points": 166000
+    },
+    {
+      "level": 407,
+      "points": 167000
+    },
+    {
+      "level": 408,
+      "points": 168000
+    },
+    {
+      "level": 409,
+      "points": 169000
+    },
+    {
+      "level": 410,
+      "points": 170000
+    },
+    {
+      "level": 411,
+      "points": 171000
+    },
+    {
+      "level": 412,
+      "points": 172000
+    },
+    {
+      "level": 413,
+      "points": 173000
+    },
+    {
+      "level": 414,
+      "points": 174000
+    },
+    {
+      "level": 415,
+      "points": 175000
+    },
+    {
+      "level": 416,
+      "points": 176000
+    },
+    {
+      "level": 417,
+      "points": 177000
+    },
+    {
+      "level": 418,
+      "points": 178000
+    },
+    {
+      "level": 419,
+      "points": 179000
+    },
+    {
+      "level": 420,
+      "points": 180000
+    },
+    {
+      "level": 421,
+      "points": 181000
+    },
+    {
+      "level": 422,
+      "points": 182000
+    },
+    {
+      "level": 423,
+      "points": 183000
+    },
+    {
+      "level": 424,
+      "points": 184000
+    },
+    {
+      "level": 425,
+      "points": 185000
+    },
+    {
+      "level": 426,
+      "points": 186000
+    },
+    {
+      "level": 427,
+      "points": 187000
+    },
+    {
+      "level": 428,
+      "points": 188000
+    },
+    {
+      "level": 429,
+      "points": 189000
+    },
+    {
+      "level": 430,
+      "points": 190000
+    },
+    {
+      "level": 431,
+      "points": 191000
+    },
+    {
+      "level": 432,
+      "points": 192000
+    },
+    {
+      "level": 433,
+      "points": 193000
+    },
+    {
+      "level": 434,
+      "points": 194000
+    },
+    {
+      "level": 435,
+      "points": 195000
+    },
+    {
+      "level": 436,
+      "points": 196000
+    },
+    {
+      "level": 437,
+      "points": 197000
+    },
+    {
+      "level": 438,
+      "points": 198000
+    },
+    {
+      "level": 439,
+      "points": 199000
+    },
+    {
+      "level": 440,
+      "points": 200000
+    },
+    {
+      "level": 441,
+      "points": 201000
+    },
+    {
+      "level": 442,
+      "points": 202000
+    },
+    {
+      "level": 443,
+      "points": 203000
+    },
+    {
+      "level": 444,
+      "points": 204000
+    },
+    {
+      "level": 445,
+      "points": 205000
+    },
+    {
+      "level": 446,
+      "points": 206000
+    },
+    {
+      "level": 447,
+      "points": 207000
+    },
+    {
+      "level": 448,
+      "points": 208000
+    },
+    {
+      "level": 449,
+      "points": 209000
+    },
+    {
+      "level": 450,
+      "points": 210000
+    },
+    {
+      "level": 451,
+      "points": 211000
+    },
+    {
+      "level": 452,
+      "points": 212000
+    },
+    {
+      "level": 453,
+      "points": 213000
+    },
+    {
+      "level": 454,
+      "points": 214000
+    },
+    {
+      "level": 455,
+      "points": 215000
+    },
+    {
+      "level": 456,
+      "points": 216000
+    },
+    {
+      "level": 457,
+      "points": 217000
+    },
+    {
+      "level": 458,
+      "points": 218000
+    },
+    {
+      "level": 459,
+      "points": 219000
+    },
+    {
+      "level": 460,
+      "points": 220000
+    },
+    {
+      "level": 461,
+      "points": 221000
+    },
+    {
+      "level": 462,
+      "points": 222000
+    },
+    {
+      "level": 463,
+      "points": 223000
+    },
+    {
+      "level": 464,
+      "points": 224000
+    },
+    {
+      "level": 465,
+      "points": 225000
+    },
+    {
+      "level": 466,
+      "points": 226000
+    },
+    {
+      "level": 467,
+      "points": 227000
+    },
+    {
+      "level": 468,
+      "points": 228000
+    },
+    {
+      "level": 469,
+      "points": 229000
+    },
+    {
+      "level": 470,
+      "points": 230000
+    },
+    {
+      "level": 471,
+      "points": 231000
+    },
+    {
+      "level": 472,
+      "points": 232000
+    },
+    {
+      "level": 473,
+      "points": 233000
+    },
+    {
+      "level": 474,
+      "points": 234000
+    },
+    {
+      "level": 475,
+      "points": 235000
+    },
+    {
+      "level": 476,
+      "points": 236000
+    },
+    {
+      "level": 477,
+      "points": 237000
+    },
+    {
+      "level": 478,
+      "points": 238000
+    },
+    {
+      "level": 479,
+      "points": 239000
+    },
+    {
+      "level": 480,
+      "points": 240000
+    },
+    {
+      "level": 481,
+      "points": 241000
+    },
+    {
+      "level": 482,
+      "points": 242000
+    },
+    {
+      "level": 483,
+      "points": 243000
+    },
+    {
+      "level": 484,
+      "points": 244000
+    },
+    {
+      "level": 485,
+      "points": 245000
+    },
+    {
+      "level": 486,
+      "points": 246000
+    },
+    {
+      "level": 487,
+      "points": 247000
+    },
+    {
+      "level": 488,
+      "points": 248000
+    },
+    {
+      "level": 489,
+      "points": 249000
+    },
+    {
+      "level": 490,
+      "points": 250000
+    },
+    {
+      "level": 491,
+      "points": 251000
+    },
+    {
+      "level": 492,
+      "points": 252000
+    },
+    {
+      "level": 493,
+      "points": 253000
+    },
+    {
+      "level": 494,
+      "points": 254000
+    },
+    {
+      "level": 495,
+      "points": 255000
+    },
+    {
+      "level": 496,
+      "points": 256000
+    },
+    {
+      "level": 497,
+      "points": 257000
+    },
+    {
+      "level": 498,
+      "points": 258000
+    },
+    {
+      "level": 499,
+      "points": 259000
+    },
+    {
+      "level": 500,
+      "points": 260000
+    }
+  ]
+}

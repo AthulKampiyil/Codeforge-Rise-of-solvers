@@ -1,0 +1,169 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "logic/effects.csv": "5c6d5b67d6407345123b8d55872ed77ee6697b466d20d1fa21e25a723c511e9f",
+    "sfx/building_construct_07.ogg": "db079f995171649540aa8d51522da8b14520029ca8507cd61b1b0afb880503df",
+    "sfx/building_finished_01.ogg": "13b4b781737d8ef02e04cd8b36d29ba61257a54f648a9e1e00d66e7363429ef7",
+    "sfx/button_click.ogg": "7d8d459d3ec9ae82a111439d2ff86cc47de09d7d0b56a358ce6e59bf6e208e30",
+    "sfx/coins_collect_01.ogg": "f2c75f3bd67919226a698814880f77ee46e8aa20841648e67da96075c96695e7",
+    "sfx/collect_diamonds_01.ogg": "ffb0473711e63425d7607f6699604a9b220fb753611763e4594de2f8dbf57bf4",
+    "sfx/dark_elixir_collect.ogg": "96c60d11133c52886cee72af453dff75b8ab4fa1607fae1811540aeced6f7276",
+    "sfx/elixir_collect_02.ogg": "886ed254ff2ea100a48676f344f8b8d837748ac29387aed333539642267e22a2",
+    "sfx/gem_boost_01.ogg": "40e958790312f9eefbb1efdc214e4d53002663db28700c005bd126d8010bf999",
+    "sfx/hero_upgrade_02.ogg": "ebda88d7a5c19f1f4a90cd9c234da8b52e39d42b680baeda7eb249a72d8e7473",
+    "sfx/start_troop_upgrade_01.ogg": "4b82a2c1e7bd7221f69251aec7db43922d1d0ef1f25dbbbf064bcbaf97baa6ba",
+    "sfx/town_hall_upgrade_jingle_01.ogg": "27231926fbf3db903784898c20832a17944888897c34fa3bb58e803d054cd385",
+    "sfx/troop_upgrade_finished_01.ogg": "818e71c2354dda37d5d9028de37eba0dc105afcd1b2e30ef73fd873ff4acdc29",
+    "sfx/wall_pickup_01.ogg": "de5a84c06e812bf78a05984f84d0eaa85a226854f3473d77458458e6aa8f1fec"
+  },
+  "effects": {
+    "Collect Gold": {
+      "sound": "sfx/coins_collect_01.ogg",
+      "volume": 0.7,
+      "minPitch": 1.0,
+      "maxPitch": 1.0
+    },
+    "Collect Elixir": {
+      "sound": "sfx/elixir_collect_02.ogg",
+      "volume": 0.7,
+      "minPitch": 1.0,
+      "maxPitch": 1.0
+    },
+    "Collect Dark Elixir": {
+      "sound": "sfx/dark_elixir_collect.ogg",
+      "volume": 0.8,
+      "minPitch": 1.0,
+      "maxPitch": 1.0
+    },
+    "Collect Diamonds": {
+      "sound": "sfx/collect_diamonds_01.ogg",
+      "volume": 0.7,
+      "minPitch": 1.0,
+      "maxPitch": 1.0
+    },
+    "Start Building": {
+      "sound": "sfx/building_construct_07.ogg",
+      "volume": 0.8,
+      "minPitch": 0.75,
+      "maxPitch": 0.75
+    },
+    "Building Ready": {
+      "sound": "sfx/building_finished_01.ogg",
+      "volume": 0.8,
+      "minPitch": 1.0,
+      "maxPitch": 1.0
+    },
+    "Start Hero Upgrade": {
+      "sound": "sfx/hero_upgrade_02.ogg",
+      "volume": 0.8,
+      "minPitch": 0.64,
+      "maxPitch": 0.64
+    },
+    "Hero Upgrade Finished": {
+      "sound": "sfx/building_finished_01.ogg",
+      "volume": 0.8,
+      "minPitch": 1.0,
+      "maxPitch": 1.0
+    },
+    "Troop Upgrade Start": {
+      "sound": "sfx/start_troop_upgrade_01.ogg",
+      "volume": 0.7,
+      "minPitch": 1.0,
+      "maxPitch": 1.0
+    },
+    "Troop Upgrade Finished": {
+      "sound": "sfx/troop_upgrade_finished_01.ogg",
+      "volume": 0.7,
+      "minPitch": 1.0,
+      "maxPitch": 1.0
+    },
+    "Generic Pick Up": {
+      "sound": "sfx/wall_pickup_01.ogg",
+      "volume": 0.5,
+      "minPitch": 1.0,
+      "maxPitch": 1.0
+    },
+    "Boost Start": {
+      "sound": "sfx/gem_boost_01.ogg",
+      "volume": 0.8,
+      "minPitch": 1.0,
+      "maxPitch": 1.0
+    },
+    "TH Upgrade Jingle": {
+      "sound": "sfx/town_hall_upgrade_jingle_01.ogg",
+      "volume": 0.7,
+      "minPitch": 1.0,
+      "maxPitch": 1.0
+    }
+  },
+  "click": "sfx/button_click.ogg",
+  "sounds": {
+    "sfx/building_construct_07.ogg": {
+      "path": "assets/audio/village-native/building_construct_07.ogg",
+      "bytes": 22213,
+      "sha256": "db079f995171649540aa8d51522da8b14520029ca8507cd61b1b0afb880503df"
+    },
+    "sfx/building_finished_01.ogg": {
+      "path": "assets/audio/village-native/building_finished_01.ogg",
+      "bytes": 18987,
+      "sha256": "13b4b781737d8ef02e04cd8b36d29ba61257a54f648a9e1e00d66e7363429ef7"
+    },
+    "sfx/button_click.ogg": {
+      "path": "assets/audio/village-native/button_click.ogg",
+      "bytes": 5544,
+      "sha256": "7d8d459d3ec9ae82a111439d2ff86cc47de09d7d0b56a358ce6e59bf6e208e30"
+    },
+    "sfx/coins_collect_01.ogg": {
+      "path": "assets/audio/village-native/coins_collect_01.ogg",
+      "bytes": 17363,
+      "sha256": "f2c75f3bd67919226a698814880f77ee46e8aa20841648e67da96075c96695e7"
+    },
+    "sfx/collect_diamonds_01.ogg": {
+      "path": "assets/audio/village-native/collect_diamonds_01.ogg",
+      "bytes": 12501,
+      "sha256": "ffb0473711e63425d7607f6699604a9b220fb753611763e4594de2f8dbf57bf4"
+    },
+    "sfx/dark_elixir_collect.ogg": {
+      "path": "assets/audio/village-native/dark_elixir_collect.ogg",
+      "bytes": 9947,
+      "sha256": "96c60d11133c52886cee72af453dff75b8ab4fa1607fae1811540aeced6f7276"
+    },
+    "sfx/elixir_collect_02.ogg": {
+      "path": "assets/audio/village-native/elixir_collect_02.ogg",
+      "bytes": 15222,
+      "sha256": "886ed254ff2ea100a48676f344f8b8d837748ac29387aed333539642267e22a2"
+    },
+    "sfx/gem_boost_01.ogg": {
+      "path": "assets/audio/village-native/gem_boost_01.ogg",
+      "bytes": 19962,
+      "sha256": "40e958790312f9eefbb1efdc214e4d53002663db28700c005bd126d8010bf999"
+    },
+    "sfx/hero_upgrade_02.ogg": {
+      "path": "assets/audio/village-native/hero_upgrade_02.ogg",
+      "bytes": 11520,
+      "sha256": "ebda88d7a5c19f1f4a90cd9c234da8b52e39d42b680baeda7eb249a72d8e7473"
+    },
+    "sfx/start_troop_upgrade_01.ogg": {
+      "path": "assets/audio/village-native/start_troop_upgrade_01.ogg",
+      "bytes": 12733,
+      "sha256": "4b82a2c1e7bd7221f69251aec7db43922d1d0ef1f25dbbbf064bcbaf97baa6ba"
+    },
+    "sfx/town_hall_upgrade_jingle_01.ogg": {
+      "path": "assets/audio/village-native/town_hall_upgrade_jingle_01.ogg",
+      "bytes": 31526,
+      "sha256": "27231926fbf3db903784898c20832a17944888897c34fa3bb58e803d054cd385"
+    },
+    "sfx/troop_upgrade_finished_01.ogg": {
+      "path": "assets/audio/village-native/troop_upgrade_finished_01.ogg",
+      "bytes": 19501,
+      "sha256": "818e71c2354dda37d5d9028de37eba0dc105afcd1b2e30ef73fd873ff4acdc29"
+    },
+    "sfx/wall_pickup_01.ogg": {
+      "path": "assets/audio/village-native/wall_pickup_01.ogg",
+      "bytes": 5135,
+      "sha256": "de5a84c06e812bf78a05984f84d0eaa85a226854f3473d77458458e6aa8f1fec"
+    }
+  }
+}

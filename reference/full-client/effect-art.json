@@ -1,0 +1,842 @@
+{
+  "clientVersion": "18.400.21",
+  "generator": "scripts/import-native-effect-art.py",
+  "conventions": {
+    "emission": "ParticleCount particles are born evenly over EmissionTime after EmitterDelayMs; each follows the shared source-particle interpretation in src/game/native-particles.ts (documented local damping and bounce).",
+    "targeted": "Targeted/Beam effect art is stretched along its source x extent between the attacker and the target; the native beam attachment and stretching rules are not in the tables.",
+    "sounds": "Sound columns are retained in the rows; this pipeline does not play them."
+  },
+  "sources": {
+    "csv/animations.csv": "b0be152c98d06ccd0689320acfa19b07e04dd2a07fc6a1253558592f67bf29d8",
+    "csv/particle_emitters.csv": "8d80bbf714386c4f24e6aed8f2eef671a2eac5c3b3ad41e4d275b757ced64cef",
+    "logic/buildings.csv": "9aed5fed876e2914a22fa7fed688a651c691ab06170d60e2bda8dc9262fbccb1",
+    "logic/effects.csv": "5c6d5b67d6407345123b8d55872ed77ee6697b466d20d1fa21e25a723c511e9f",
+    "logic/projectiles.csv": "71cda0e457ad88a6772f6421a22419b24d6bcf78d0ed305f09184404889a72dc",
+    "logic/special_abilities.csv": "c978dd90ff2335e60d988f3476d78bec72672e8c074344d149096e89951181eb",
+    "logic/spells.csv": "385159e00327e6a1567cd91f1585b4ed0717d3f4475f0823398243482598289d",
+    "logic/traps.csv": "757ca07de02b26b2071b52bb3cb495df2f0ae879731a859d3102ca3552dd528c",
+    "logic/weapons.csv": "38f6891fd14c5287ede72f7a2e873e0648231bf63e29463a9b63f1b8142ec540",
+    "sc/buildings.sc": "f73ec949fc070bc03175d6bb3af8b62d8f607094bf2b343c9846a499a35be0ed",
+    "sc/buildings_18.sctx": "bd0c3b2eece3e9c43b2b3d61463e5b12ff4d274ae6adcc0ce33ceed63df58ffa",
+    "sc/buildings_25.sctx": "c290a82b3940513f16b55dba2305e875d923d4120c5997b6b6908c680ec8ca3d",
+    "sc/buildings_30.sctx": "2159db826ffba3ca31bfed16a7d6985991f0745403d36ba7135b3aa17031c4c2",
+    "sc/buildings_36.sctx": "9b0798f9eeb63bc6d5994c8424af84262835f7fc968b0130f5f6d1f01a7d7749",
+    "sc/buildings_39.sctx": "dd27d9612fe135c3be364840eeabe45b53a229b24192246b56a08fa0606fdb16",
+    "sc/buildings_40.sctx": "0e3a207454e5392dd9d73d61c2fb17399f93bd7f9e680c34838fa303207bea7d",
+    "sc/buildings_45.sctx": "ce0425622f22f1dade3fd1614e1c3ce5fabe4e09d9c5f32d014dd1f12cdc9287",
+    "sc/buildings_6.sctx": "68d97a39c2bfbcf94f820f4091c078a9516f41dafe27744e7de26e30864d1ffc",
+    "sc/buildings_65.sctx": "f40df9c9730121c5c444034a661751aba81aa00a7c2bbb3e080e8ffe73c53cac",
+    "sc/buildings_cc.sc": "bcf0c19bfa47359ddee1ca71976459e87c5087d82c7386703119c3f602d33f54",
+    "sc/buildings_cc_7.sctx": "ab8fc8f197ea85e43717baea5f3a7494393d5fb8a5d459ff92fb17ed0f53a658",
+    "sc/characters.sc": "0e23bd3745176fe7db3d61e490d9da07c63a42e95462f514d6eac696314c3798",
+    "sc/characters_5.sctx": "181d13e2dbd4504b3c51fdbfd7a905a29fa1c1604b68727b96b8b6d23ae7d976",
+    "sc/chr_lavaloon.sc": "0e3f3b3b972d59051e14a141d1cb21ee184fc04a074cd5a3f7467681c38eea6b",
+    "sc/chr_lavaloon_0.sctx": "245e3e92833a9d1b63580ba352a497a22a40b5845c9c2bbc6f440cd000277d1e",
+    "sc/chr_super_archer.sc": "182b414983d179bb23e7dce372daded2c413327fcb142d33a897aa184673abe0",
+    "sc/chr_super_archer_0.sctx": "d741c2494029e633d0b651e0a2a1388acd5737eb2b04e3713411e9fe8cada411",
+    "sc/vfx_character.sc": "1fedfef75fd781233c33535b2b0f11a45298ef02f93105d8f3730554c67e74e6",
+    "sc/vfx_character_0.sctx": "48cb7ca2399f4cc03c857727ceb76883c16694e1ec62da0d12878fb5dd3608d6",
+    "sc/vfx_character_1.sctx": "d55ba36a6eb53d15c4d15849cbb50bb9e34ba49cf17992c6b041fb7498d75c96",
+    "sc/vfx_character_3.sctx": "e8ea8adbb777e3c0e11f0695f53956a7a8e3c1e710a045af1af23771dbf3f5a1",
+    "sc/vfx_character_4.sctx": "b114e33741f626bd468310aa1b97b44390cc8099cba1938d3527e155ae4a2a84",
+    "sc/vfx_character_7.sctx": "7d544006c2b4ebe7fb660e8a42ef3ac9565606da2567888aa8505d93ab1db0e1",
+    "sc/vfx_character_8.sctx": "44e0458c6ec9f38e55399975e119e0b7b349fb74c52f503f22c71f056419d45c",
+    "sc/vfx_env.sc": "8a85e7cfb07c5b92f83a4c944b13a18beb65c1b68dc1fd9ea283aebb3073703e",
+    "sc/vfx_env_0.sctx": "79ec17b67253a2fa914ad7db2ea2a66fbfb6015a6c4897cc86ca0753dcea0554",
+    "sc/vfx_env_2.sctx": "36578887a41381699efe7cf4e9f013254a053b02c95dc37db886a2d5415c9995",
+    "sc/vfx_env_3.sctx": "4c914a56083b09df94d6d06881738522f9172e589707e79830834ee1c9573dca"
+  },
+  "totalBytes": 9113461,
+  "effects": {
+    "ThrowerProjectileHit": "throwerprojectilehit",
+    "Meteor_Golem_Projectile_Hit": "meteor-golem-projectile-hit",
+    "trollBoulder_destroyed": "trollboulder-destroyed",
+    "trollBoulder_destroyed_lvl8": "trollboulder-destroyed-lvl8",
+    "druid_bear_healing_projectile_trail": "druid-bear-healing-projectile-trail",
+    "Air Defense Barrel Hit": "air-defense-barrel-hit",
+    "Log Die": "log-die",
+    "ps_chr_guardianRanged_AtkStart": "ps-chr-guardianranged-atkstart",
+    "ps_chr_guardianRanged_Hit": "ps-chr-guardianranged-hit",
+    "Firespirit Jump": "firespirit-jump",
+    "Phoenix_resurrect": "phoenix-resurrect",
+    "Super Hog Rider Land Hit": "super-hog-rider-land-hit",
+    "Gear_RC_Rocket_Spear_hit": "gear-rc-rocket-spear-hit",
+    "ArcherQueenMonolithProjectileTrailMed": "archerqueenmonolithprojectiletrailmed",
+    "ArcherQueenMonolithProjectileTrailMin": "archerqueenmonolithprojectiletrailmin",
+    "ArcherQueenMonolithProjectileTrailMax": "archerqueenmonolithprojectiletrailmax",
+    "Hero_Equip_AQ_Giant_Arrow_Trail": "hero-equip-aq-giant-arrow-trail",
+    "ps_chr_gw_fireball_source": "ps-chr-gw-fireball-source",
+    "ps_chr_gw_fireballl_Impact_lvl1": "ps-chr-gw-fireballl-impact-lvl1",
+    "ps_chr_gw_fireballl_Impact_lvl2": "ps-chr-gw-fireballl-impact-lvl1",
+    "ps_chr_gw_fireball_source_lvl2": "ps-chr-gw-fireball-source-lvl2",
+    "ps_chr_gw_fireballl_Impact_lvl3": "ps-chr-gw-fireballl-impact-lvl3",
+    "ps_chr_DarkOrb_ProjectileSpawn": "ps-chr-darkorb-projectilespawn",
+    "ps_chr_DarkOrb_Impact": "ps-chr-darkorb-impact",
+    "Artillery Hit": "artillery-hit",
+    "ps_chr_mp_PowerPumpHit": "ps-chr-mp-powerpumphit",
+    "dd_reversalcard_trail": "dd-reversalcard-trail",
+    "dd_reversalcard_hit": "dd-reversalcard-hit",
+    "Artillery Trail": "artillery-trail",
+    "MonolithProjectilTrailMinEffect": "monolithprojectiltrailmineffect",
+    "MonolithHitMin": "monolithhitmin",
+    "MonolithProjectilTrailMedEffect": "monolithprojectiltrailmedeffect",
+    "MonolithHitMed": "monolithhitmed",
+    "MonolithProjectilTrailMaxEffect": "monolithprojectiltrailmaxeffect",
+    "MonolithHitMax": "monolithhitmax",
+    "Merged Cannon Projectile Destroyed": "merged-cannon-projectile-destroyed",
+    "Merged_Cannon_Ricochet_Hit": "merged-cannon-ricochet-hit",
+    "Merged_Cannon_Ricochet_Hit lvl4": "merged-cannon-ricochet-hit",
+    "Merged Cannon Projectile Destroyed lvl4": "merged-cannon-projectile-destroyed-lvl4",
+    "merge_cat_cannon_attack": "merge-cat-cannon-attack",
+    "Cannon Attack Larger": "merge-cat-cannon-attack",
+    "ps_revengetower_AtkStart": "ps-revengetower-atkstart",
+    "ps_revengetower_AtkStart_02": "ps-revengetower-atkstart",
+    "ps_revengetower_AtkStart_03": "ps-revengetower-atkstart",
+    "ps_revengetower_Hit": "ps-revengetower-hit",
+    "ps_revengetower_Hit_02": "ps-revengetower-hit",
+    "ps_revengetower_Hit_03": "ps-revengetower-hit",
+    "Elixir Storage Destroyed": "elixir-storage-destroyed",
+    "Frostmite Splat": "frostmite-splat",
+    "Yetimite Die": "yetimite-die",
+    "LavaloonAttackEffect": "lavaloonattackeffect",
+    "Ancient Hit": "ancient-hit",
+    "Artillery Load": "artillery-load",
+    "Artillery No Ammo": "artillery-no-ammo",
+    "Bow Target": "artillery-no-ammo",
+    "Ice Breaker Attack": "ice-breaker-attack",
+    "Ice Breaker Hit lvl1": "ice-breaker-hit-lvl1",
+    "Generic Hit": "generic-hit",
+    "merged_cat_archer_hit": "generic-hit",
+    "Invisibility ST": "invisibility-st",
+    "Toxic deploy ground halloween ST": "toxic-deploy-ground-halloween-st",
+    "Toxic deploy ground TH": "toxic-deploy-ground-halloween-st",
+    "Toxic deploy halloween ST": "toxic-deploy-halloween-st",
+    "Toxic deploy TH": "toxic-deploy-halloween-st",
+    "Rage deploy ST": "rage-deploy-st",
+    "Rage deploy top": "rage-deploy-top",
+    "vfx_spelltower_earthquake_01": "vfx-spelltower-earthquake-01",
+    "vfx_spelltower_earthquake_02": "vfx-spelltower-earthquake-02",
+    "Explosive Arrow": "explosive-arrow",
+    "Rapidfire bow attack": "rapidfire-bow-attack",
+    "Nailgun Attack FX": "rapidfire-bow-attack",
+    "Firespitter Attack": "firespitter-attack",
+    "Firespitter Hit": "firespitter-hit",
+    "ps_chr_SuperWizard_Attack_01": "ps-chr-superwizard-attack-01",
+    "ps_chr_SuperWizard_AtkChain_01": "ps-chr-superwizard-atkchain-01",
+    "th12_teslat5_attack_bolt": "th12-teslat5-attack-bolt",
+    "th12_teslat5_attack": "th12-teslat5-attack",
+    "Tesla Hit": "tesla-hit",
+    "Super_Bomb": "super-bomb",
+    "TH13 Attack 2": "th13-attack-2",
+    "Dark Tower Hit": "dark-tower-hit",
+    "TH14 Attack 1": "th14-attack-1",
+    "TH15 Attack 1": "th15-attack-1",
+    "TH16 Attack 1": "th16-attack-1",
+    "TH16_attack_FX": "th16-attack-fx",
+    "TH16 Hit": "th16-hit",
+    "TH17_attack": "th17-attack",
+    "TH17_GroundHitEffect": "th17-groundhiteffect",
+    "Slowdown deploy lvl1": "slowdown-deploy-lvl1",
+    "Slowdown deploy2 lvl1": "slowdown-deploy2-lvl1",
+    "TH17AreaDmgEffect": "th17areadmgeffect",
+    "Trap broken": "trap-broken",
+    "Giga Bomb broken": "trap-broken",
+    "Shrink Trap Appear": "shrink-trap-appear",
+    "Giga Bomb Appear": "shrink-trap-appear",
+    "ps_trap_tornadoTrap": "ps-trap-tornadotrap",
+    "ps_trap_gigabomb": "ps-trap-gigabomb",
+    "ps_trap_gigabomb_ground": "ps-trap-gigabomb-ground"
+  },
+  "emitters": {
+    "dragon_rider_projectile_fire_trail": "th16-attack-fx",
+    "dragon_rider_projectile_fire_trail_02": "th16-attack-fx",
+    "dragon_rider_projectile_fire_trail_03": "th16-attack-fx",
+    "mortar_trail": "trap-broken",
+    "e_chr_WizardAttack_trail_lvl1": "emitter-e-chr-wizardattack-trail-lvl1",
+    "e_chr_WizardAttack_trail_lvl2": "emitter-e-chr-wizardattack-trail-lvl1",
+    "e_chr_WizardAttack_trail_lvl3": "emitter-e-chr-wizardattack-trail-lvl3",
+    "e_chr_WizardAttack_trail_lvl4": "emitter-e-chr-wizardattack-trail-lvl3",
+    "healer_projectile_trail": "emitter-healer-projectile-trail",
+    "babydragon_smoke_emitter_lvl1": "emitter-babydragon-smoke-emitter-lvl1",
+    "thrower_projectile_trail": "emitter-thrower-projectile-trail",
+    "barrel_trail": "emitter-thrower-projectile-trail",
+    "football_shoot_trail": "emitter-thrower-projectile-trail",
+    "merged_cat_archer_projectile_trail": "emitter-thrower-projectile-trail",
+    "Meteor_Golem_projectile_trail_bluepuff": "emitter-meteor-golem-projectile-trail-bluepuff",
+    "witch_trail_emitter": "emitter-witch-trail-emitter",
+    "trollBoulder_dust_emitter_lvl1": "emitter-trollboulder-dust-emitter-lvl1",
+    "trollBoulder_dust_emitter_lvl2": "emitter-trollboulder-dust-emitter-lvl2",
+    "card_trail_glow1": "emitter-card-trail-glow1",
+    "card_trail_glow2": "emitter-card-trail-glow1",
+    "card_trail_glow3": "emitter-card-trail-glow1",
+    "Apprentice_Warden_projectile1_Trail": "emitter-apprentice-warden-projectile1-trail",
+    "Spark Trail": "emitter-apprentice-warden-projectile1-trail",
+    "Spark Trail B": "emitter-apprentice-warden-projectile1-trail",
+    "Apprentice_Warden_projectile2_Trail": "emitter-apprentice-warden-projectile2-trail",
+    "Spark Trail_Dark": "emitter-apprentice-warden-projectile2-trail",
+    "SuperArcherTowerTrail": "emitter-apprentice-warden-projectile2-trail",
+    "magic_arrow_trail": "emitter-magic-arrow-trail",
+    "Super_dragon_trail": "emitter-super-dragon-trail",
+    "super_minion_missile_traile_emitter": "emitter-super-minion-missile-traile-emitter",
+    "mortar_lvl8_trail_emitter": "emitter-super-minion-missile-traile-emitter",
+    "Ice_Breaker_lvl1_trail_emitter": "emitter-super-minion-missile-traile-emitter",
+    "e_chr_guardianRanged_SmokeTrail": "emitter-e-chr-guardianranged-smoketrail",
+    "e_chr_guardianLogger_LogDustTrail": "emitter-e-chr-guardianlogger-logdusttrail",
+    "javelin_trail_glow": "emitter-javelin-trail-glow",
+    "shield_trail_glow": "emitter-javelin-trail-glow",
+    "minionprince_trail_purple": "emitter-minionprince-trail-purple",
+    "unicorn_projectile_trail": "emitter-unicorn-projectile-trail",
+    "frosty_trail_emitter": "emitter-frosty-trail-emitter",
+    "hero_equip_aq_frost_arrow_trail_emitter": "emitter-frosty-trail-emitter",
+    "fennec_trail_emitter": "emitter-fennec-trail-emitter",
+    "BlastBow_trail_emitter": "emitter-blastbow-trail-emitter",
+    "e_chr_gw_fireball_Smoke": "emitter-e-chr-gw-fireball-smoke",
+    "e_mp_PowerPumpTrail": "emitter-e-mp-powerpumptrail",
+    "rc_gear_frostblast_trail": "emitter-rc-gear-frostblast-trail",
+    "Spark Trail Jungle": "emitter-spark-trail-jungle",
+    "mortar_trail_lvl6": "emitter-mortar-trail-lvl6",
+    "yellow_fireball_trail_emitter": "emitter-yellow-fireball-trail-emitter",
+    "e_scattershot_Trail_Blue": "emitter-e-scattershot-trail-blue",
+    "Spark Trail Yellow": "emitter-spark-trail-yellow",
+    "Spark Trail Blue": "emitter-spark-trail-blue",
+    "e_revengetower_ProjectileTrail": "emitter-e-revengetower-projectiletrail",
+    "large_airTrap_redSmoke": "emitter-large-airtrap-redsmoke",
+    "Toxic_skull": "emitter-toxic-skull",
+    "rage_smokeRing5": "emitter-rage-smokering5",
+    "th17_projectile_trail": "emitter-th17-projectile-trail"
+  },
+  "noArt": [
+    "Artillery Attack",
+    "Artillery PreAttack",
+    "BattleDruidHealSFX",
+    "Defence_RevengeTower_Attack",
+    "Defence_RevengeTower_Transform1",
+    "Defence_RevengeTower_Transform2",
+    "Defence_RevengeTower_Transform3",
+    "MergedArcherTower_attack",
+    "Minion_PowerPump_ProjectileSpawn",
+    "Monolith Attack",
+    "MonolithArrowAtkMax",
+    "MonolithArrowAtkMed",
+    "MonolithArrowAtkMin",
+    "MonolithAtkMax",
+    "MonolithAtkMed",
+    "MonolithAtkMin",
+    "TH13_inferno_activate",
+    "TH17_activate",
+    "Troop_Guardian_Logger_Projectile_SFX",
+    "ability_rc_frostflake_hit_sfx",
+    "merged_cat_archer_fire",
+    "sfx_equ_dd_counter_shoot",
+    "suptrollBoulder_bounce",
+    "th12_teslat5_activate",
+    "trollBoulder_bounce"
+  ],
+  "packs": {
+    "throwerprojectilehit": {
+      "path": "assets/effects-native/throwerprojectilehit/graph.json",
+      "sha256": "e692ae260737f7e73a41b37b5f440195e317f6e80f880ca090f421af523ec198",
+      "bytes": 24119
+    },
+    "meteor-golem-projectile-hit": {
+      "path": "assets/effects-native/meteor-golem-projectile-hit/graph.json",
+      "sha256": "6029638c29edf19a160c7411cafc1f9febd324d52afcff2a61ca7891c3b03080",
+      "bytes": 200223
+    },
+    "trollboulder-destroyed": {
+      "path": "assets/effects-native/trollboulder-destroyed/graph.json",
+      "sha256": "db527816f4243d52ceee2944e5c80239bf57b4e880137f3151568227f4fdae0d",
+      "bytes": 6737
+    },
+    "trollboulder-destroyed-lvl8": {
+      "path": "assets/effects-native/trollboulder-destroyed-lvl8/graph.json",
+      "sha256": "3330871e56d295661e6e9aed9e1d56ac2a35253d39dda765d62eb6bde43f070f",
+      "bytes": 17431
+    },
+    "druid-bear-healing-projectile-trail": {
+      "path": "assets/effects-native/druid-bear-healing-projectile-trail/graph.json",
+      "sha256": "3d40e867c2ea9e4e43b830962d9f34ba523860fb9a41a9c30ec867e726b1ff92",
+      "bytes": 2986
+    },
+    "air-defense-barrel-hit": {
+      "path": "assets/effects-native/air-defense-barrel-hit/graph.json",
+      "sha256": "2cf933e136f6ae56d771c5d556ccb1b4d8b3b92c1cf6ffcbd35eaeb148dffaa3",
+      "bytes": 204728
+    },
+    "log-die": {
+      "path": "assets/effects-native/log-die/graph.json",
+      "sha256": "09e9ef62f8f604b165147957a05892e78d32d45f407819fd310fa90343b70b6b",
+      "bytes": 39814
+    },
+    "ps-chr-guardianranged-atkstart": {
+      "path": "assets/effects-native/ps-chr-guardianranged-atkstart/graph.json",
+      "sha256": "f35823bf2c8f14d86f26fb062d795ecbeb5b52a54658de178afee3389e9e8cba",
+      "bytes": 23707
+    },
+    "ps-chr-guardianranged-hit": {
+      "path": "assets/effects-native/ps-chr-guardianranged-hit/graph.json",
+      "sha256": "d634fc5074fe95be6502116444446cf680a9eba1c91b21894ce7f4cdf844724a",
+      "bytes": 50283
+    },
+    "firespirit-jump": {
+      "path": "assets/effects-native/firespirit-jump/graph.json",
+      "sha256": "b920d266c585f4abbea450ee464115c1680fb49416eb6f906e4f56c2844038f1",
+      "bytes": 6607
+    },
+    "phoenix-resurrect": {
+      "path": "assets/effects-native/phoenix-resurrect/graph.json",
+      "sha256": "ab8ae116b14a96dd1cece4cad439b242b350b4654a87bdf7dfb70a04b1f29694",
+      "bytes": 40710
+    },
+    "super-hog-rider-land-hit": {
+      "path": "assets/effects-native/super-hog-rider-land-hit/graph.json",
+      "sha256": "081f0009a3ceba1368bd19dcb10a68d27d9250655033cc383312cb4919d862ee",
+      "bytes": 14200
+    },
+    "gear-rc-rocket-spear-hit": {
+      "path": "assets/effects-native/gear-rc-rocket-spear-hit/graph.json",
+      "sha256": "5624109e4a7e9a01fa9da0fd0497bea73644590de64f2f6beb60a1b8e677c6b2",
+      "bytes": 138809
+    },
+    "archerqueenmonolithprojectiletrailmed": {
+      "path": "assets/effects-native/archerqueenmonolithprojectiletrailmed/graph.json",
+      "sha256": "bee3965052c661c11eef46720c0318598c5e353420392519dac1ddfb5f9e48ad",
+      "bytes": 9196
+    },
+    "archerqueenmonolithprojectiletrailmin": {
+      "path": "assets/effects-native/archerqueenmonolithprojectiletrailmin/graph.json",
+      "sha256": "de28bb95fe2b13adae6d271e98615ef94cbccf45587d6c742fa6b6a242c4a0c8",
+      "bytes": 9207
+    },
+    "archerqueenmonolithprojectiletrailmax": {
+      "path": "assets/effects-native/archerqueenmonolithprojectiletrailmax/graph.json",
+      "sha256": "a234ff9cfe08d2bf2a74390fdaee26a8148270d5bc1b1085773cd178e06b316b",
+      "bytes": 9174
+    },
+    "hero-equip-aq-giant-arrow-trail": {
+      "path": "assets/effects-native/hero-equip-aq-giant-arrow-trail/graph.json",
+      "sha256": "a128dac9d7c59ad42cf31fd1c5ef01a1a6a2c8255ffc8af8fab83d712a34c3e9",
+      "bytes": 9930
+    },
+    "ps-chr-gw-fireball-source": {
+      "path": "assets/effects-native/ps-chr-gw-fireball-source/graph.json",
+      "sha256": "72a52fd3c9472ff33e9e9cce8abae25bff8b925f9625f072adf25c069ef6746f",
+      "bytes": 37166
+    },
+    "ps-chr-gw-fireballl-impact-lvl1": {
+      "path": "assets/effects-native/ps-chr-gw-fireballl-impact-lvl1/graph.json",
+      "sha256": "812d774eb3cf12cc53c02d0b100b0e7859742ed4238df26c0e1ab73e44d6d8ac",
+      "bytes": 95383
+    },
+    "ps-chr-gw-fireball-source-lvl2": {
+      "path": "assets/effects-native/ps-chr-gw-fireball-source-lvl2/graph.json",
+      "sha256": "60659255cb203556087b43ae70e01c7046943804ef4e00d512627d65b6299046",
+      "bytes": 37497
+    },
+    "ps-chr-gw-fireballl-impact-lvl3": {
+      "path": "assets/effects-native/ps-chr-gw-fireballl-impact-lvl3/graph.json",
+      "sha256": "3270186342ae80d4c38e7ce72d51b271c9e716c36713354625146bb59efed488",
+      "bytes": 17521
+    },
+    "ps-chr-darkorb-projectilespawn": {
+      "path": "assets/effects-native/ps-chr-darkorb-projectilespawn/graph.json",
+      "sha256": "a03c6d34fb15d5a5e94be4d2b87a45a87cc2a44fa6070ba928beb91feecb40ad",
+      "bytes": 29277
+    },
+    "ps-chr-darkorb-impact": {
+      "path": "assets/effects-native/ps-chr-darkorb-impact/graph.json",
+      "sha256": "2b552de7480fcbdd246a5a01dc3a1c17093f7bbb29bab915dfe54aabff22f952",
+      "bytes": 32748
+    },
+    "artillery-hit": {
+      "path": "assets/effects-native/artillery-hit/graph.json",
+      "sha256": "52eb548b3846786e07f18b2685e1623286ef8d2961b9a3e2c5ec818d2f69956b",
+      "bytes": 102806
+    },
+    "ps-chr-mp-powerpumphit": {
+      "path": "assets/effects-native/ps-chr-mp-powerpumphit/graph.json",
+      "sha256": "a56a05bb775cdc7773dbafd0e15b304ad7305b97300a7dfced0798b5a874cc0e",
+      "bytes": 73550
+    },
+    "dd-reversalcard-trail": {
+      "path": "assets/effects-native/dd-reversalcard-trail/graph.json",
+      "sha256": "27084fab58d015cf8a989ad4daa6b65d42a2424955917fe4ccd433ec09d5c568",
+      "bytes": 266286
+    },
+    "dd-reversalcard-hit": {
+      "path": "assets/effects-native/dd-reversalcard-hit/graph.json",
+      "sha256": "dbe1162c14d44a205df5a2a8c496405208d422bc869626b7521e60d5d49397bb",
+      "bytes": 363159
+    },
+    "artillery-trail": {
+      "path": "assets/effects-native/artillery-trail/graph.json",
+      "sha256": "2c58d88143b9ac981dd8c671d29c29f6a3811e428f679be21317341a06ff4531",
+      "bytes": 23287
+    },
+    "monolithprojectiltrailmineffect": {
+      "path": "assets/effects-native/monolithprojectiltrailmineffect/graph.json",
+      "sha256": "ed8ec61efa70dbb4a821d1c831ef6d66b3cd9a3dd0e39660391aa89d2561033e",
+      "bytes": 6375
+    },
+    "monolithhitmin": {
+      "path": "assets/effects-native/monolithhitmin/graph.json",
+      "sha256": "0104f3b4bca3c97a5c4c970a42e61ff3d143b54c3b43ef982504c6b1f34f4208",
+      "bytes": 7994
+    },
+    "monolithprojectiltrailmedeffect": {
+      "path": "assets/effects-native/monolithprojectiltrailmedeffect/graph.json",
+      "sha256": "6ab5034b7075463ce16716c1fd07f819cc27f40ec602e1564f8dd5ac408adeb7",
+      "bytes": 9237
+    },
+    "monolithhitmed": {
+      "path": "assets/effects-native/monolithhitmed/graph.json",
+      "sha256": "1bfd4aeaef86af62c5eaa5e40747d740357ac120672b84a3f33855db7ff4860b",
+      "bytes": 8026
+    },
+    "monolithprojectiltrailmaxeffect": {
+      "path": "assets/effects-native/monolithprojectiltrailmaxeffect/graph.json",
+      "sha256": "55525ad28ce191e8bace617bdcf8619770d7ec731d67f2a0c997314f694cd055",
+      "bytes": 9157
+    },
+    "monolithhitmax": {
+      "path": "assets/effects-native/monolithhitmax/graph.json",
+      "sha256": "c1f1bd812715cb3d5a607fac5251f6673e2f4097c7f1b9117c3cf9075fa9c5e8",
+      "bytes": 7990
+    },
+    "merged-cannon-projectile-destroyed": {
+      "path": "assets/effects-native/merged-cannon-projectile-destroyed/graph.json",
+      "sha256": "49d8dbf69fc507ae194c1ce0e7a7a9c28d9718004e166cd6615fbb9c9a2a332c",
+      "bytes": 15096
+    },
+    "merged-cannon-ricochet-hit": {
+      "path": "assets/effects-native/merged-cannon-ricochet-hit/graph.json",
+      "sha256": "7e6a571fc6e09d1778f5fb7aa0b3051084967252b3f661b792b6c11c59bd8a15",
+      "bytes": 67286
+    },
+    "merged-cannon-projectile-destroyed-lvl4": {
+      "path": "assets/effects-native/merged-cannon-projectile-destroyed-lvl4/graph.json",
+      "sha256": "cf75cecf15e7771f675c51be3fcbaaac83b5b02d33b7bd4b09f7431df049515e",
+      "bytes": 106664
+    },
+    "merge-cat-cannon-attack": {
+      "path": "assets/effects-native/merge-cat-cannon-attack/graph.json",
+      "sha256": "0b101056a2a75e62671d413093ffa41e856a1ff29534acaef78927299363de39",
+      "bytes": 85585
+    },
+    "ps-revengetower-atkstart": {
+      "path": "assets/effects-native/ps-revengetower-atkstart/graph.json",
+      "sha256": "7356f9690b79411bf0595c61b4226c8d74233641fd6c68cdd0d8c922ba70313c",
+      "bytes": 233183
+    },
+    "ps-revengetower-hit": {
+      "path": "assets/effects-native/ps-revengetower-hit/graph.json",
+      "sha256": "7ba89e3286d492ea5c3088baa4fbd78c24c75ae03829760feb67dc9bb82e56af",
+      "bytes": 517814
+    },
+    "elixir-storage-destroyed": {
+      "path": "assets/effects-native/elixir-storage-destroyed/graph.json",
+      "sha256": "642334e337ff77fd9ee3685464cf64e94dd1057e2a0493cff34efc4d7babce94",
+      "bytes": 42926
+    },
+    "frostmite-splat": {
+      "path": "assets/effects-native/frostmite-splat/graph.json",
+      "sha256": "b53b65e88d5a63af7e48c714695c89ac260c9ca053695f86b08b07838c1ed0dd",
+      "bytes": 97613
+    },
+    "yetimite-die": {
+      "path": "assets/effects-native/yetimite-die/graph.json",
+      "sha256": "b22ee471f21c27b5c4236929a29999e4510798831befbfcfd1f67158eeeac2e9",
+      "bytes": 22467
+    },
+    "lavaloonattackeffect": {
+      "path": "assets/effects-native/lavaloonattackeffect/graph.json",
+      "sha256": "86fd20a1f59949d49a5a730c3a2fe530a5f92195ca70047b5732a31008494c0c",
+      "bytes": 29995
+    },
+    "ancient-hit": {
+      "path": "assets/effects-native/ancient-hit/graph.json",
+      "sha256": "9a5974544d53132347fd6871d1c0bcf430e2258ac77ad0bc8cb0d3f879d4c859",
+      "bytes": 143912
+    },
+    "artillery-load": {
+      "path": "assets/effects-native/artillery-load/graph.json",
+      "sha256": "107b119fa096cf1d44bd79263db2cd5351472517fe0605c74f53351594d453ad",
+      "bytes": 29189
+    },
+    "artillery-no-ammo": {
+      "path": "assets/effects-native/artillery-no-ammo/graph.json",
+      "sha256": "6238a41f6ab37b39f43b1abe83e5c966ec45324a70dd826c499774199141c824",
+      "bytes": 11688
+    },
+    "ice-breaker-attack": {
+      "path": "assets/effects-native/ice-breaker-attack/graph.json",
+      "sha256": "fc8f6257d53c69fbec095805852292522e265a77acfda7039daba133cd583721",
+      "bytes": 79025
+    },
+    "ice-breaker-hit-lvl1": {
+      "path": "assets/effects-native/ice-breaker-hit-lvl1/graph.json",
+      "sha256": "3ddd97ce907afae490eff4641056f0302f4dae2d1282196da69703fc28557e84",
+      "bytes": 218258
+    },
+    "generic-hit": {
+      "path": "assets/effects-native/generic-hit/graph.json",
+      "sha256": "7af1b300de7f623b5e600c4042ef86a9d42739e1977522a3dd15ddadd97b501a",
+      "bytes": 14816
+    },
+    "invisibility-st": {
+      "path": "assets/effects-native/invisibility-st/graph.json",
+      "sha256": "08269ac995638c4de683cd72467495dc5a654eecaaba54c711fe1a69574436b0",
+      "bytes": 193739
+    },
+    "toxic-deploy-ground-halloween-st": {
+      "path": "assets/effects-native/toxic-deploy-ground-halloween-st/graph.json",
+      "sha256": "b33ff37cf86f342bfa473fe36c98544e118434213de4d9d7bf01fa9b8326f18a",
+      "bytes": 177340
+    },
+    "toxic-deploy-halloween-st": {
+      "path": "assets/effects-native/toxic-deploy-halloween-st/graph.json",
+      "sha256": "dd2fdf2ca79ba49a0f7932305c3ec03ab9171eb9c4490f010348717319730f97",
+      "bytes": 152981
+    },
+    "rage-deploy-st": {
+      "path": "assets/effects-native/rage-deploy-st/graph.json",
+      "sha256": "c6d89ae7c0b636d91096450954eadec4b45fc4ed75b29dfb62ff4595031c7a18",
+      "bytes": 197903
+    },
+    "rage-deploy-top": {
+      "path": "assets/effects-native/rage-deploy-top/graph.json",
+      "sha256": "89855ac57b50b9c40561c0445e14b0981b41d3e29972bdfc97252d2c0cad64ad",
+      "bytes": 54656
+    },
+    "vfx-spelltower-earthquake-01": {
+      "path": "assets/effects-native/vfx-spelltower-earthquake-01/graph.json",
+      "sha256": "f5b9fefea3854ccfb04d27df51ceac3309602c46cc0184febfe099bd1a33c6e2",
+      "bytes": 212819
+    },
+    "vfx-spelltower-earthquake-02": {
+      "path": "assets/effects-native/vfx-spelltower-earthquake-02/graph.json",
+      "sha256": "aadc3622c04367c6e2f3b916255247b552a46429dac30a9b3dcddd6611caa10c",
+      "bytes": 482348
+    },
+    "explosive-arrow": {
+      "path": "assets/effects-native/explosive-arrow/graph.json",
+      "sha256": "2763000db73da210e2ba634c6db287d83702e38b2d26bd467f8e8a694b24f39b",
+      "bytes": 84249
+    },
+    "rapidfire-bow-attack": {
+      "path": "assets/effects-native/rapidfire-bow-attack/graph.json",
+      "sha256": "7b2d7d002497791a20bb3e0a9beb70f6b988009d949793af408d10fc6b684d7f",
+      "bytes": 20754
+    },
+    "firespitter-attack": {
+      "path": "assets/effects-native/firespitter-attack/graph.json",
+      "sha256": "a642e739c5fed8cb2e739dc370dc81aa51b82e281bef4325f13fcb2ea4265899",
+      "bytes": 39217
+    },
+    "firespitter-hit": {
+      "path": "assets/effects-native/firespitter-hit/graph.json",
+      "sha256": "8a0bfea5684e6d1e202c8ad247a31cf363b64389d57d6e78b7f98288cb7e5e1f",
+      "bytes": 72755
+    },
+    "ps-chr-superwizard-attack-01": {
+      "path": "assets/effects-native/ps-chr-superwizard-attack-01/graph.json",
+      "sha256": "d3a8fedde25dbbae3db92f37ad24ccad759cdbf2472a674f65171406e13b88f1",
+      "bytes": 10810
+    },
+    "ps-chr-superwizard-atkchain-01": {
+      "path": "assets/effects-native/ps-chr-superwizard-atkchain-01/graph.json",
+      "sha256": "65ad1937d0a75f6b49fabbb612e21a66d6b337c66dd74a80d0db53774243da4b",
+      "bytes": 181203
+    },
+    "th12-teslat5-attack-bolt": {
+      "path": "assets/effects-native/th12-teslat5-attack-bolt/graph.json",
+      "sha256": "2328651e9327bc47453a2b0a9f642fffb8aea218a0734e5c204490de9efb88ec",
+      "bytes": 46832
+    },
+    "th12-teslat5-attack": {
+      "path": "assets/effects-native/th12-teslat5-attack/graph.json",
+      "sha256": "5680acee0f2675f80c301382c9bf9b3e427f71bf8b9a9012934fb29a58125a07",
+      "bytes": 19857
+    },
+    "tesla-hit": {
+      "path": "assets/effects-native/tesla-hit/graph.json",
+      "sha256": "0ec48c026a5480dd14f1109a0dfd5ac11c8f23c03c36175a7be6689598f3c317",
+      "bytes": 17602
+    },
+    "super-bomb": {
+      "path": "assets/effects-native/super-bomb/graph.json",
+      "sha256": "6e238dc80c4e08e109cfbd15e3580dabbaaa3300c2e20346671981abd3fd936c",
+      "bytes": 20038
+    },
+    "th13-attack-2": {
+      "path": "assets/effects-native/th13-attack-2/graph.json",
+      "sha256": "aa6854f6136fd8b4b7a6bfb6d2cac372f440401f56ed3138830d1dbd41e3a01c",
+      "bytes": 118618
+    },
+    "dark-tower-hit": {
+      "path": "assets/effects-native/dark-tower-hit/graph.json",
+      "sha256": "ebb9098dd8c34eae1963cf345fb4316330e30ffcaae0f39c20b4170dadf7c9fa",
+      "bytes": 53251
+    },
+    "th14-attack-1": {
+      "path": "assets/effects-native/th14-attack-1/graph.json",
+      "sha256": "8825823cc6a0d2d0954ae5859ac10c2b99523f6a510b3617eff83136a2574d5b",
+      "bytes": 23030
+    },
+    "th15-attack-1": {
+      "path": "assets/effects-native/th15-attack-1/graph.json",
+      "sha256": "a6c2afd0c529882c78ea52a4126fb5087bcd803db3611d22d6ad0321fe945fda",
+      "bytes": 23041
+    },
+    "th16-attack-1": {
+      "path": "assets/effects-native/th16-attack-1/graph.json",
+      "sha256": "cfb6049641159d3861d1ed66484d644295fa1057842c2a33c6893e1a18bebcdc",
+      "bytes": 211707
+    },
+    "th16-attack-fx": {
+      "path": "assets/effects-native/th16-attack-fx/graph.json",
+      "sha256": "d01ff0d1849a58c6093558bdfafb9d389046eab2163c5363bb0bf15a580be80d",
+      "bytes": 24016
+    },
+    "th16-hit": {
+      "path": "assets/effects-native/th16-hit/graph.json",
+      "sha256": "2f13d6e346e6a76bdef529378c5faf9baecfa92b9766e345aef75ae4668068dc",
+      "bytes": 143852
+    },
+    "th17-attack": {
+      "path": "assets/effects-native/th17-attack/graph.json",
+      "sha256": "d545ab092faf7578826be90897e72fb17e49455d00e16a4a3288c33a64818799",
+      "bytes": 26890
+    },
+    "th17-groundhiteffect": {
+      "path": "assets/effects-native/th17-groundhiteffect/graph.json",
+      "sha256": "96902a194816cdd144f8f3f1abf4ebaf4adc70f93c6eaff77797a7488cb5dd87",
+      "bytes": 94439
+    },
+    "slowdown-deploy-lvl1": {
+      "path": "assets/effects-native/slowdown-deploy-lvl1/graph.json",
+      "sha256": "13d080b68f8c04a57564af27faeabab81777ed9f33b61ff4b0e19066fef53ea5",
+      "bytes": 74148
+    },
+    "slowdown-deploy2-lvl1": {
+      "path": "assets/effects-native/slowdown-deploy2-lvl1/graph.json",
+      "sha256": "c8cdaf2a040cb3561d91f260b5e3b037695c3b27619668fba56e13872c5679eb",
+      "bytes": 9034
+    },
+    "th17areadmgeffect": {
+      "path": "assets/effects-native/th17areadmgeffect/graph.json",
+      "sha256": "6b4a65678117f0b0f3f2fa91eea4e004636dbc296c1a1efb70aedafac1c80afe",
+      "bytes": 470894
+    },
+    "trap-broken": {
+      "path": "assets/effects-native/trap-broken/graph.json",
+      "sha256": "fb811c91f3c761d97da6701d37da8c5d012ab3b7d7bab3b5afef73e6e04557c4",
+      "bytes": 6796
+    },
+    "shrink-trap-appear": {
+      "path": "assets/effects-native/shrink-trap-appear/graph.json",
+      "sha256": "e47f3fd1a902a9cbe91e0d710e86ea49dfb267e75723a0944d57f0eb15e825f8",
+      "bytes": 7205
+    },
+    "ps-trap-tornadotrap": {
+      "path": "assets/effects-native/ps-trap-tornadotrap/graph.json",
+      "sha256": "9b0e401b1b1f59ce0570c19d75e11c37b9b50b83e0099c0cddba83532a0650aa",
+      "bytes": 33525
+    },
+    "ps-trap-gigabomb": {
+      "path": "assets/effects-native/ps-trap-gigabomb/graph.json",
+      "sha256": "d3dc56a49c38df12d866783ce6588666bd832aaaee7eef7ce464d06f11202cf4",
+      "bytes": 146450
+    },
+    "ps-trap-gigabomb-ground": {
+      "path": "assets/effects-native/ps-trap-gigabomb-ground/graph.json",
+      "sha256": "003dd428cf936ce31254ebf2873b2495649845d30cc1466c138706f63bc4afaf",
+      "bytes": 8527
+    },
+    "emitter-e-chr-wizardattack-trail-lvl1": {
+      "path": "assets/effects-native/emitter-e-chr-wizardattack-trail-lvl1/graph.json",
+      "sha256": "bb330a51a0e837e845123600cc014e0089f1b8850adc1f44de808dbfff48bdc9",
+      "bytes": 3749
+    },
+    "emitter-e-chr-wizardattack-trail-lvl3": {
+      "path": "assets/effects-native/emitter-e-chr-wizardattack-trail-lvl3/graph.json",
+      "sha256": "268ff10d130bb553a524372db65a231560fc81889cd2ad7cc84de0d70e4105ea",
+      "bytes": 3835
+    },
+    "emitter-healer-projectile-trail": {
+      "path": "assets/effects-native/emitter-healer-projectile-trail/graph.json",
+      "sha256": "7a76653593bade00a08d72a43b3343cf9260bf3247ee22a227948128042147ed",
+      "bytes": 2388
+    },
+    "emitter-babydragon-smoke-emitter-lvl1": {
+      "path": "assets/effects-native/emitter-babydragon-smoke-emitter-lvl1/graph.json",
+      "sha256": "654c83cd1b4e0cbcc60dbbb51f3f9bafcfb5169eef1577571622fb55398bc70d",
+      "bytes": 3140
+    },
+    "emitter-thrower-projectile-trail": {
+      "path": "assets/effects-native/emitter-thrower-projectile-trail/graph.json",
+      "sha256": "d066063c6ad880adbf89bd8daf08b4e044d28828798dfb327696ff67986ed636",
+      "bytes": 6303
+    },
+    "emitter-meteor-golem-projectile-trail-bluepuff": {
+      "path": "assets/effects-native/emitter-meteor-golem-projectile-trail-bluepuff/graph.json",
+      "sha256": "81b62858e3054f0acd98378f1a5e631fea8c87be195d645b1c747790692b3bf7",
+      "bytes": 49337
+    },
+    "emitter-witch-trail-emitter": {
+      "path": "assets/effects-native/emitter-witch-trail-emitter/graph.json",
+      "sha256": "417bf0ff2a4227d1be58966619a8eeb41b97b68f627583cbb59e62da4265f646",
+      "bytes": 38419
+    },
+    "emitter-trollboulder-dust-emitter-lvl1": {
+      "path": "assets/effects-native/emitter-trollboulder-dust-emitter-lvl1/graph.json",
+      "sha256": "d736f4c504fc3555ad29310260099cdc0cae40d4228a5227780ec50754c48764",
+      "bytes": 9845
+    },
+    "emitter-trollboulder-dust-emitter-lvl2": {
+      "path": "assets/effects-native/emitter-trollboulder-dust-emitter-lvl2/graph.json",
+      "sha256": "ba7b00c30c64f975865155b94aa66181000254c8e7fe900e55f406c28d87dd2f",
+      "bytes": 8094
+    },
+    "emitter-card-trail-glow1": {
+      "path": "assets/effects-native/emitter-card-trail-glow1/graph.json",
+      "sha256": "41643aabdcc087e120454d3a87c8bf403a88ff96c118ed071991e791d9158b5c",
+      "bytes": 11471
+    },
+    "emitter-apprentice-warden-projectile1-trail": {
+      "path": "assets/effects-native/emitter-apprentice-warden-projectile1-trail/graph.json",
+      "sha256": "fd09ac776e994b0d4a79716ff033d2fd0177230791df54bcd4d398815ea81b10",
+      "bytes": 12017
+    },
+    "emitter-apprentice-warden-projectile2-trail": {
+      "path": "assets/effects-native/emitter-apprentice-warden-projectile2-trail/graph.json",
+      "sha256": "f1313a5af674fb08a9318e40f2f190889e424a46774ed618730f104802b221cb",
+      "bytes": 3351
+    },
+    "emitter-magic-arrow-trail": {
+      "path": "assets/effects-native/emitter-magic-arrow-trail/graph.json",
+      "sha256": "9420b76fd5c0ea1c7b6244e679a97f783fd6cb5be3dadf688f5f576138c292cf",
+      "bytes": 70908
+    },
+    "emitter-super-dragon-trail": {
+      "path": "assets/effects-native/emitter-super-dragon-trail/graph.json",
+      "sha256": "b05c58751fb550fe8a1cfb5b605b23869a62e81479ad333e28d26dc824d6a87f",
+      "bytes": 56766
+    },
+    "emitter-super-minion-missile-traile-emitter": {
+      "path": "assets/effects-native/emitter-super-minion-missile-traile-emitter/graph.json",
+      "sha256": "acb73460bd33f53fe9b4cd8def4fab3931b45a09d0162663bde976239f1262db",
+      "bytes": 11195
+    },
+    "emitter-e-chr-guardianranged-smoketrail": {
+      "path": "assets/effects-native/emitter-e-chr-guardianranged-smoketrail/graph.json",
+      "sha256": "34c02fe6957df26879753f2f9c27da55739d40d52b2829929fdd78d45a998614",
+      "bytes": 10506
+    },
+    "emitter-e-chr-guardianlogger-logdusttrail": {
+      "path": "assets/effects-native/emitter-e-chr-guardianlogger-logdusttrail/graph.json",
+      "sha256": "eb25a804dcb1b5b618900060d964ec12e02da147af4ed3c7401df1d1aaaa4ef8",
+      "bytes": 14203
+    },
+    "emitter-javelin-trail-glow": {
+      "path": "assets/effects-native/emitter-javelin-trail-glow/graph.json",
+      "sha256": "a97e976727624b7e15288474fd13234463c7e0447608a53552da4e3e2a68fde6",
+      "bytes": 7002
+    },
+    "emitter-minionprince-trail-purple": {
+      "path": "assets/effects-native/emitter-minionprince-trail-purple/graph.json",
+      "sha256": "ece12d131e4ec169b2af538ea6165583cf5c45ec16062094c60a7309ac6aae21",
+      "bytes": 2651
+    },
+    "emitter-unicorn-projectile-trail": {
+      "path": "assets/effects-native/emitter-unicorn-projectile-trail/graph.json",
+      "sha256": "99bb8fc5c33eea229f49e77934d91f002343a162ee5f777cf01602d324c5c824",
+      "bytes": 3631
+    },
+    "emitter-frosty-trail-emitter": {
+      "path": "assets/effects-native/emitter-frosty-trail-emitter/graph.json",
+      "sha256": "41437319ae46c1cb5c03dfec2779884fdb3eee826f2902f9251f2099908eeeac",
+      "bytes": 5632
+    },
+    "emitter-fennec-trail-emitter": {
+      "path": "assets/effects-native/emitter-fennec-trail-emitter/graph.json",
+      "sha256": "f30e0d9f45241b7325b95eb9d9c67019353e217233dbf9394f771175e9b7f39d",
+      "bytes": 12271
+    },
+    "emitter-blastbow-trail-emitter": {
+      "path": "assets/effects-native/emitter-blastbow-trail-emitter/graph.json",
+      "sha256": "3ba447abfdc4f02b9a7c6679f975d55cfd6de588ddf0d89f16e4817ff97713ff",
+      "bytes": 4339
+    },
+    "emitter-e-chr-gw-fireball-smoke": {
+      "path": "assets/effects-native/emitter-e-chr-gw-fireball-smoke/graph.json",
+      "sha256": "9fd92dfe57efafa8fdbbde3b373868c47b8623907a3de91a5542c5d0c46c4d1e",
+      "bytes": 9826
+    },
+    "emitter-e-mp-powerpumptrail": {
+      "path": "assets/effects-native/emitter-e-mp-powerpumptrail/graph.json",
+      "sha256": "f5f96d7aabc5e0de6728b65ca59fab2102389dfaf77a314460b14f9f071dea32",
+      "bytes": 2133
+    },
+    "emitter-rc-gear-frostblast-trail": {
+      "path": "assets/effects-native/emitter-rc-gear-frostblast-trail/graph.json",
+      "sha256": "664e8a1a561d9b8925e7709f74f30e0508b0314312cb1b601a47361555e033c2",
+      "bytes": 5569
+    },
+    "emitter-spark-trail-jungle": {
+      "path": "assets/effects-native/emitter-spark-trail-jungle/graph.json",
+      "sha256": "563d4c43ae594bb01ee5ed2b959f0f5d4ec41b2f0f1d961c5db95735e9e976ba",
+      "bytes": 9468
+    },
+    "emitter-mortar-trail-lvl6": {
+      "path": "assets/effects-native/emitter-mortar-trail-lvl6/graph.json",
+      "sha256": "02230c9fa0f31c3b012c13f296d19ae2e33b67ac24d174b404bb96927676dfc2",
+      "bytes": 60567
+    },
+    "emitter-yellow-fireball-trail-emitter": {
+      "path": "assets/effects-native/emitter-yellow-fireball-trail-emitter/graph.json",
+      "sha256": "0a12030eb114d092dd66e950e23a4686034a860506c7309737da2c565498c7fa",
+      "bytes": 33185
+    },
+    "emitter-e-scattershot-trail-blue": {
+      "path": "assets/effects-native/emitter-e-scattershot-trail-blue/graph.json",
+      "sha256": "1986fc2f5db5b258ffce6370049558e1b78343fc440c33ad2808475506f82f82",
+      "bytes": 36888
+    },
+    "emitter-spark-trail-yellow": {
+      "path": "assets/effects-native/emitter-spark-trail-yellow/graph.json",
+      "sha256": "36ea0a6813de314d4c7282e4a9ba2e990217eb1bb7f4e65c6faee5efd007321e",
+      "bytes": 9469
+    },
+    "emitter-spark-trail-blue": {
+      "path": "assets/effects-native/emitter-spark-trail-blue/graph.json",
+      "sha256": "5822af03339edc8de5c2eb740180c77f9808bb8e75a940f7f318910dfe5780cd",
+      "bytes": 9462
+    },
+    "emitter-e-revengetower-projectiletrail": {
+      "path": "assets/effects-native/emitter-e-revengetower-projectiletrail/graph.json",
+      "sha256": "11572352309dc165a2df403443b7a143135b47b6dd3184d0c118a483d4ea98f5",
+      "bytes": 36274
+    },
+    "emitter-large-airtrap-redsmoke": {
+      "path": "assets/effects-native/emitter-large-airtrap-redsmoke/graph.json",
+      "sha256": "21a2c7f9f2a059e6dd9c4d461e8fb60a0adfdcf63f3c1e55aaf5a80d4a7ca67d",
+      "bytes": 4003
+    },
+    "emitter-toxic-skull": {
+      "path": "assets/effects-native/emitter-toxic-skull/graph.json",
+      "sha256": "a40559d280b3783dfb8daea0d905efdf8d1ab910cc800b80a8c9e881ee42e026",
+      "bytes": 24566
+    },
+    "emitter-rage-smokering5": {
+      "path": "assets/effects-native/emitter-rage-smokering5/graph.json",
+      "sha256": "1f846164ba511ef3deafbf24fafae4893a28d575c39c0fb7a30a0e41e8da4975",
+      "bytes": 14158
+    },
+    "emitter-th17-projectile-trail": {
+      "path": "assets/effects-native/emitter-th17-projectile-trail/graph.json",
+      "sha256": "774da6f5c8dd0e4c27ef1d4946cba2b320ac3c37cffa6800432ac216b29db35f",
+      "bytes": 8527
+    }
+  }
+}

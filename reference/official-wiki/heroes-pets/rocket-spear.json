@@ -1,0 +1,423 @@
+{
+ "title": "Rocket Spear",
+ "url": "https://clashofclans.fandom.com/wiki/Rocket_Spear",
+ "revid": 621041,
+ "retrieved": "2026-09-15",
+ "clientName": "Rocket Spear",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Royal Champion",
+ "summary": "Champion Epic active item: her next 7 → 10 throws become 10-tile rocket spears at the closest defense with +350 → +980 damage and small splash; passive DPS and HP.",
+ "constants": {
+  "wiki": {
+   "User": "Royal Champion",
+   "Ability Type": "Active",
+   "Rarity": "Epic",
+   "Unlock Requirement": "Buy in Super Wall Breaker Spotlight event for 3,100 Super Medal; Buy in Snake Festival event for 3,100 Snake Medal; Buy in Equipment Blast event for 3,100 Relic Medal; Buy in Wise Warriors event for 3,100 Grumpy Medal; or purchasable from the Trader for 1,500 Gem",
+   "Attack Range": "10 tiles",
+   "Area Damage Radius": "0.8 tiles"
+  },
+  "client": {
+   "Rarity": "EPIC",
+   "AllowedCharacters": "Royal Champion;",
+   "MainAbilities": "RocketSpears",
+   "Claimable": "TRUE",
+   "levelRows": 27,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    10
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "damagePerShotIncrease": {
+   "wikiHeader": "Ability Attributes / Damage per Shot Increase",
+   "unit": "damage points"
+  },
+  "numberOfAttacks": {
+   "wikiHeader": "Ability Attributes / Number of Attacks",
+   "unit": "count/points"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boosts / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostStarryOre": {
+   "wikiHeader": "Upgrade Cost / Starry Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damagePerShotIncrease": 350,
+   "numberOfAttacks": 7,
+   "damagePerSecondIncrease": 35,
+   "hitpointIncrease": 50,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "damagePerShotIncrease": 350,
+   "numberOfAttacks": 7,
+   "damagePerSecondIncrease": 40,
+   "hitpointIncrease": 75,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "damagePerShotIncrease": 420,
+   "numberOfAttacks": 7,
+   "damagePerSecondIncrease": 45,
+   "hitpointIncrease": 100,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "damagePerShotIncrease": 420,
+   "numberOfAttacks": 7,
+   "damagePerSecondIncrease": 50,
+   "hitpointIncrease": 125,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "damagePerShotIncrease": 420,
+   "numberOfAttacks": 7,
+   "damagePerSecondIncrease": 55,
+   "hitpointIncrease": 150,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "damagePerShotIncrease": 490,
+   "numberOfAttacks": 7,
+   "damagePerSecondIncrease": 60,
+   "hitpointIncrease": 175,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "damagePerShotIncrease": 490,
+   "numberOfAttacks": 7,
+   "damagePerSecondIncrease": 66,
+   "hitpointIncrease": 200,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "damagePerShotIncrease": 490,
+   "numberOfAttacks": 7,
+   "damagePerSecondIncrease": 72,
+   "hitpointIncrease": 225,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "damagePerShotIncrease": 560,
+   "numberOfAttacks": 8,
+   "damagePerSecondIncrease": 78,
+   "hitpointIncrease": 250,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "upgradeCostStarryOre": 10,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "damagePerShotIncrease": 560,
+   "numberOfAttacks": 8,
+   "damagePerSecondIncrease": 85,
+   "hitpointIncrease": 275,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 11,
+   "damagePerShotIncrease": 560,
+   "numberOfAttacks": 8,
+   "damagePerSecondIncrease": 92,
+   "hitpointIncrease": 300,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 12,
+   "damagePerShotIncrease": 630,
+   "numberOfAttacks": 8,
+   "damagePerSecondIncrease": 99,
+   "hitpointIncrease": 325,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "upgradeCostStarryOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 13,
+   "damagePerShotIncrease": 630,
+   "numberOfAttacks": 8,
+   "damagePerSecondIncrease": 105,
+   "hitpointIncrease": 350,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 14,
+   "damagePerShotIncrease": 630,
+   "numberOfAttacks": 8,
+   "damagePerSecondIncrease": 111,
+   "hitpointIncrease": 375,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 15,
+   "damagePerShotIncrease": 700,
+   "numberOfAttacks": 8,
+   "damagePerSecondIncrease": 117,
+   "hitpointIncrease": 400,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 30,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 16,
+   "damagePerShotIncrease": 700,
+   "numberOfAttacks": 8,
+   "damagePerSecondIncrease": 122,
+   "hitpointIncrease": 425,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 17,
+   "damagePerShotIncrease": 700,
+   "numberOfAttacks": 8,
+   "damagePerSecondIncrease": 127,
+   "hitpointIncrease": 450,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 18,
+   "damagePerShotIncrease": 770,
+   "numberOfAttacks": 9,
+   "damagePerSecondIncrease": 132,
+   "hitpointIncrease": 475,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 50,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 19,
+   "damagePerShotIncrease": 770,
+   "numberOfAttacks": 9,
+   "damagePerSecondIncrease": 136,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 2800,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 20,
+   "damagePerShotIncrease": 770,
+   "numberOfAttacks": 9,
+   "damagePerSecondIncrease": 140,
+   "hitpointIncrease": 525,
+   "upgradeCostShinyOre": 2900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 21,
+   "damagePerShotIncrease": 840,
+   "numberOfAttacks": 9,
+   "damagePerSecondIncrease": 144,
+   "hitpointIncrease": 550,
+   "upgradeCostShinyOre": 3000,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 100,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 22,
+   "damagePerShotIncrease": 840,
+   "numberOfAttacks": 9,
+   "damagePerSecondIncrease": 148,
+   "hitpointIncrease": 575,
+   "upgradeCostShinyOre": 3100,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 23,
+   "damagePerShotIncrease": 840,
+   "numberOfAttacks": 9,
+   "damagePerSecondIncrease": 152,
+   "hitpointIncrease": 600,
+   "upgradeCostShinyOre": 3200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 24,
+   "damagePerShotIncrease": 910,
+   "numberOfAttacks": 9,
+   "damagePerSecondIncrease": 156,
+   "hitpointIncrease": 625,
+   "upgradeCostShinyOre": 3300,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 120,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 25,
+   "damagePerShotIncrease": 910,
+   "numberOfAttacks": 9,
+   "damagePerSecondIncrease": 160,
+   "hitpointIncrease": 650,
+   "upgradeCostShinyOre": 3400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 26,
+   "damagePerShotIncrease": 910,
+   "numberOfAttacks": 9,
+   "damagePerSecondIncrease": 164,
+   "hitpointIncrease": 675,
+   "upgradeCostShinyOre": 3500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 27,
+   "damagePerShotIncrease": 980,
+   "numberOfAttacks": 10,
+   "damagePerSecondIncrease": 168,
+   "hitpointIncrease": 700,
+   "upgradeCostShinyOre": 3600,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 150,
+   "blacksmithLevelRequired": 9
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "Area Damage Radius",
+   "level": null,
+   "wiki": "0.8 tiles",
+   "client": "DamageRadius 90 (0.9 tiles)",
+   "note": ""
+  }
+ ],
+ "clientColumns": [
+  "MainAbilities:special_abilities[RocketSpears].DeactivateAfterNumberOfHits",
+  "MainAbilities:special_abilities[RocketSpears].ExtraDamageFlat",
+  "character_items.DPS",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

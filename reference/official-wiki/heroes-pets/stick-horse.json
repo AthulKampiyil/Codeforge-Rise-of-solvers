@@ -1,0 +1,460 @@
+{
+ "title": "Stick Horse",
+ "url": "https://clashofclans.fandom.com/wiki/Stick_Horse",
+ "revid": 622735,
+ "retrieved": "2026-09-15",
+ "clientName": "Stick Horse",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Barbarian King",
+ "summary": "King Epic passive item: on deployment grants 12 → 30 s of wall jumping with faster movement and attacks; passive DPS and HP.",
+ "constants": {
+  "wiki": {
+   "User": "Barbarian King",
+   "Ability Type": "Passive",
+   "Rarity": "Epic",
+   "Unlock Requirement": "Buy in Wise Warriors event for 3,100 Grumpy Medal"
+  },
+  "client": {
+   "Rarity": "EPIC",
+   "AllowedCharacters": "Barbarian King;",
+   "MainAbilities": "StickHorseBoost",
+   "Claimable": "TRUE",
+   "levelRows": 27,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    10
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "abilityDurationSeconds": {
+   "wikiHeader": "Ability Attributes / Ability Duration",
+   "unit": "seconds"
+  },
+  "movementSpeedIncrease": {
+   "wikiHeader": "Ability Attributes / Movement Speed Increase",
+   "unit": "wiki movement-speed units (client Speed / 12.5; displayed value truncated)"
+  },
+  "attackSpeedIncreasePercent": {
+   "wikiHeader": "Ability Attributes / Attack Speed Increase",
+   "unit": "percent"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boost / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boost / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostStarryOre": {
+   "wikiHeader": "Upgrade Cost / Starry Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "abilityDurationSeconds": 12,
+   "movementSpeedIncrease": 9.5,
+   "attackSpeedIncreasePercent": 2,
+   "damagePerSecondIncrease": 35,
+   "hitpointIncrease": 311,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "abilityDurationSeconds": 12,
+   "movementSpeedIncrease": 9.5,
+   "attackSpeedIncreasePercent": 2,
+   "damagePerSecondIncrease": 38,
+   "hitpointIncrease": 482,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "abilityDurationSeconds": 14,
+   "movementSpeedIncrease": 11.1,
+   "attackSpeedIncreasePercent": 5,
+   "damagePerSecondIncrease": 42,
+   "hitpointIncrease": 653,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "abilityDurationSeconds": 14,
+   "movementSpeedIncrease": 11.1,
+   "attackSpeedIncreasePercent": 5,
+   "damagePerSecondIncrease": 45,
+   "hitpointIncrease": 824,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "abilityDurationSeconds": 14,
+   "movementSpeedIncrease": 11.1,
+   "attackSpeedIncreasePercent": 5,
+   "damagePerSecondIncrease": 49,
+   "hitpointIncrease": 994,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "abilityDurationSeconds": 16,
+   "movementSpeedIncrease": 12.7,
+   "attackSpeedIncreasePercent": 8,
+   "damagePerSecondIncrease": 52,
+   "hitpointIncrease": 1165,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "abilityDurationSeconds": 16,
+   "movementSpeedIncrease": 12.7,
+   "attackSpeedIncreasePercent": 8,
+   "damagePerSecondIncrease": 55,
+   "hitpointIncrease": 1336,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "abilityDurationSeconds": 16,
+   "movementSpeedIncrease": 12.7,
+   "attackSpeedIncreasePercent": 8,
+   "damagePerSecondIncrease": 58,
+   "hitpointIncrease": 1507,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "abilityDurationSeconds": 18,
+   "movementSpeedIncrease": 14.3,
+   "attackSpeedIncreasePercent": 11,
+   "damagePerSecondIncrease": 65,
+   "hitpointIncrease": 1678,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "upgradeCostStarryOre": 10,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "abilityDurationSeconds": 18,
+   "movementSpeedIncrease": 14.3,
+   "attackSpeedIncreasePercent": 11,
+   "damagePerSecondIncrease": 76,
+   "hitpointIncrease": 1849,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 11,
+   "abilityDurationSeconds": 18,
+   "movementSpeedIncrease": 14.3,
+   "attackSpeedIncreasePercent": 11,
+   "damagePerSecondIncrease": 88,
+   "hitpointIncrease": 2020,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 12,
+   "abilityDurationSeconds": 20,
+   "movementSpeedIncrease": 16,
+   "attackSpeedIncreasePercent": 14,
+   "damagePerSecondIncrease": 101,
+   "hitpointIncrease": 2191,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "upgradeCostStarryOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 13,
+   "abilityDurationSeconds": 20,
+   "movementSpeedIncrease": 16,
+   "attackSpeedIncreasePercent": 14,
+   "damagePerSecondIncrease": 112,
+   "hitpointIncrease": 2361,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 14,
+   "abilityDurationSeconds": 20,
+   "movementSpeedIncrease": 16,
+   "attackSpeedIncreasePercent": 14,
+   "damagePerSecondIncrease": 124,
+   "hitpointIncrease": 2532,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 15,
+   "abilityDurationSeconds": 22,
+   "movementSpeedIncrease": 17.5,
+   "attackSpeedIncreasePercent": 17,
+   "damagePerSecondIncrease": 135,
+   "hitpointIncrease": 2703,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 30,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 16,
+   "abilityDurationSeconds": 22,
+   "movementSpeedIncrease": 17.5,
+   "attackSpeedIncreasePercent": 17,
+   "damagePerSecondIncrease": 148,
+   "hitpointIncrease": 2874,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 17,
+   "abilityDurationSeconds": 22,
+   "movementSpeedIncrease": 17.5,
+   "attackSpeedIncreasePercent": 17,
+   "damagePerSecondIncrease": 159,
+   "hitpointIncrease": 3031,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 18,
+   "abilityDurationSeconds": 24,
+   "movementSpeedIncrease": 19.1,
+   "attackSpeedIncreasePercent": 21,
+   "damagePerSecondIncrease": 171,
+   "hitpointIncrease": 3189,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 50,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 19,
+   "abilityDurationSeconds": 24,
+   "movementSpeedIncrease": 19.1,
+   "attackSpeedIncreasePercent": 21,
+   "damagePerSecondIncrease": 176,
+   "hitpointIncrease": 3346,
+   "upgradeCostShinyOre": 2800,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 20,
+   "abilityDurationSeconds": 24,
+   "movementSpeedIncrease": 19.1,
+   "attackSpeedIncreasePercent": 21,
+   "damagePerSecondIncrease": 182,
+   "hitpointIncrease": 3504,
+   "upgradeCostShinyOre": 2900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 21,
+   "abilityDurationSeconds": 26,
+   "movementSpeedIncrease": 20.7,
+   "attackSpeedIncreasePercent": 25,
+   "damagePerSecondIncrease": 188,
+   "hitpointIncrease": 3661,
+   "upgradeCostShinyOre": 3000,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 100,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 22,
+   "abilityDurationSeconds": 26,
+   "movementSpeedIncrease": 20.7,
+   "attackSpeedIncreasePercent": 25,
+   "damagePerSecondIncrease": 194,
+   "hitpointIncrease": 3819,
+   "upgradeCostShinyOre": 3100,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 23,
+   "abilityDurationSeconds": 26,
+   "movementSpeedIncrease": 20.7,
+   "attackSpeedIncreasePercent": 25,
+   "damagePerSecondIncrease": 199,
+   "hitpointIncrease": 3976,
+   "upgradeCostShinyOre": 3200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 24,
+   "abilityDurationSeconds": 28,
+   "movementSpeedIncrease": 22.3,
+   "attackSpeedIncreasePercent": 29,
+   "damagePerSecondIncrease": 205,
+   "hitpointIncrease": 4134,
+   "upgradeCostShinyOre": 3300,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 120,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 25,
+   "abilityDurationSeconds": 28,
+   "movementSpeedIncrease": 22.3,
+   "attackSpeedIncreasePercent": 29,
+   "damagePerSecondIncrease": 211,
+   "hitpointIncrease": 4291,
+   "upgradeCostShinyOre": 3400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 26,
+   "abilityDurationSeconds": 28,
+   "movementSpeedIncrease": 22.3,
+   "attackSpeedIncreasePercent": 29,
+   "damagePerSecondIncrease": 217,
+   "hitpointIncrease": 4449,
+   "upgradeCostShinyOre": 3500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 27,
+   "abilityDurationSeconds": 30,
+   "movementSpeedIncrease": 24,
+   "attackSpeedIncreasePercent": 33,
+   "damagePerSecondIncrease": 222,
+   "hitpointIncrease": 4606,
+   "upgradeCostShinyOre": 3600,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 150,
+   "blacksmithLevelRequired": 9
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "boostedAttackInterval",
+   "level": 1,
+   "wiki": "1.176 s (1.2 ÷ 1.02)",
+   "client": "1.170 s (AttackSpeed 1170)",
+   "note": "wiki derives the interval from the rounded percentage"
+  },
+  {
+   "field": "attackSpeedStacking",
+   "level": 27,
+   "wiki": "0.774 s with max Vampstache (1.2 ÷ 1.55)",
+   "client": "AttackSpeed 900 plus AttackSpeedPercentage 22 → 0.738 s if the percentage applies to the override",
+   "note": "Haste Vial's wiki intervals (600 ms ÷ 1.16 = 0.517 s) support the override ÷ (1 + passive %) model, which would make this 0.738 s; the wiki trivia adds the percentages instead"
+  }
+ ],
+ "clientColumns": [
+  "MainAbilities:special_abilities[StickHorseBoost].DeactivateAfterTime",
+  "MainAbilities:special_abilities[StickHorseBoost].SpeedBoost",
+  "character_items.AttackSpeedPercentage",
+  "character_items.DPS",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

@@ -1,0 +1,287 @@
+{
+ "title": "Life Gem",
+ "url": "https://clashofclans.fandom.com/wiki/Life_Gem",
+ "revid": 623272,
+ "retrieved": "2026-09-15",
+ "clientName": "Life Gem",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Grand Warden",
+ "summary": "Warden's starting passive item: aura giving nearby allies +50% → +120% extra HP up to a 640 → 1,200 cap; passive DPS and HP.",
+ "constants": {
+  "wiki": {
+   "User": "Grand Warden",
+   "Ability Type": "Passive",
+   "Rarity": "Common",
+   "Unlock Requirement": "Available by default"
+  },
+  "client": {
+   "Rarity": "COMMON",
+   "AllowedCharacters": "Grand Warden;",
+   "MainAbilities": "GrandWardenLifeAura",
+   "levelRows": 18,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "percentHPIncrease": {
+   "wikiHeader": "Ability Attributes / % HP Increase",
+   "unit": "count/points"
+  },
+  "maxHPIncrease": {
+   "wikiHeader": "Ability Attributes / Max HP Increase",
+   "unit": "count/points"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boosts / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "percentHPIncrease": 50,
+   "maxHPIncrease": 640,
+   "damagePerSecondIncrease": 11,
+   "hitpointIncrease": 170,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": null
+  },
+  {
+   "level": 2,
+   "percentHPIncrease": 50,
+   "maxHPIncrease": 640,
+   "damagePerSecondIncrease": 13,
+   "hitpointIncrease": 184,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "percentHPIncrease": 60,
+   "maxHPIncrease": 750,
+   "damagePerSecondIncrease": 16,
+   "hitpointIncrease": 195,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "percentHPIncrease": 60,
+   "maxHPIncrease": 750,
+   "damagePerSecondIncrease": 19,
+   "hitpointIncrease": 205,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "percentHPIncrease": 60,
+   "maxHPIncrease": 750,
+   "damagePerSecondIncrease": 21,
+   "hitpointIncrease": 217,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "percentHPIncrease": 75,
+   "maxHPIncrease": 830,
+   "damagePerSecondIncrease": 23,
+   "hitpointIncrease": 230,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "percentHPIncrease": 75,
+   "maxHPIncrease": 830,
+   "damagePerSecondIncrease": 25,
+   "hitpointIncrease": 255,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "percentHPIncrease": 75,
+   "maxHPIncrease": 830,
+   "damagePerSecondIncrease": 27,
+   "hitpointIncrease": 282,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "percentHPIncrease": 90,
+   "maxHPIncrease": 930,
+   "damagePerSecondIncrease": 32,
+   "hitpointIncrease": 311,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "percentHPIncrease": 90,
+   "maxHPIncrease": 930,
+   "damagePerSecondIncrease": 36,
+   "hitpointIncrease": 344,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 11,
+   "percentHPIncrease": 90,
+   "maxHPIncrease": 930,
+   "damagePerSecondIncrease": 43,
+   "hitpointIncrease": 381,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 12,
+   "percentHPIncrease": 100,
+   "maxHPIncrease": 1010,
+   "damagePerSecondIncrease": 47,
+   "hitpointIncrease": 398,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 13,
+   "percentHPIncrease": 100,
+   "maxHPIncrease": 1010,
+   "damagePerSecondIncrease": 53,
+   "hitpointIncrease": 415,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 14,
+   "percentHPIncrease": 100,
+   "maxHPIncrease": 1010,
+   "damagePerSecondIncrease": 57,
+   "hitpointIncrease": 432,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 15,
+   "percentHPIncrease": 110,
+   "maxHPIncrease": 1120,
+   "damagePerSecondIncrease": 61,
+   "hitpointIncrease": 449,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 16,
+   "percentHPIncrease": 110,
+   "maxHPIncrease": 1120,
+   "damagePerSecondIncrease": 66,
+   "hitpointIncrease": 466,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 17,
+   "percentHPIncrease": 110,
+   "maxHPIncrease": 1120,
+   "damagePerSecondIncrease": 70,
+   "hitpointIncrease": 483,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 18,
+   "percentHPIncrease": 120,
+   "maxHPIncrease": 1200,
+   "damagePerSecondIncrease": 75,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 7
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "hitpointIncrease",
+   "level": 9,
+   "wiki": 311,
+   "client": 312.0,
+   "note": "character_items.HitPoints"
+  }
+ ],
+ "clientColumns": [
+  "MainAbilities:special_abilities[GrandWardenLifeAura] → AuraSpell:spells[Life Gem Aura].ExtraHealthMax",
+  "MainAbilities:special_abilities[GrandWardenLifeAura] → AuraSpell:spells[Life Gem Aura].ExtraHealthPermil",
+  "character_items.DPS",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

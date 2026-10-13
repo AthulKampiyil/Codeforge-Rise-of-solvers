@@ -1,0 +1,68 @@
+{
+ "title": "Smasher",
+ "url": "https://clashofclans.fandom.com/wiki/Smasher",
+ "revid": 625037,
+ "retrieved": "2026-09-15",
+ "category": "townhall-weapon",
+ "clientName": "Smasher (guardians.csv MeleeAreaaaa)",
+ "clientTable": "characters.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 500,
+   "damagePerHit": 900,
+   "hitpoints": 12000
+  },
+  {
+   "level": 2,
+   "dps": 550,
+   "damagePerHit": 990,
+   "hitpoints": 13000,
+   "cost": 18000000,
+   "buildSeconds": 604800
+  },
+  {
+   "level": 3,
+   "dps": 600,
+   "damagePerHit": 1080,
+   "hitpoints": 14000,
+   "cost": 22000000,
+   "buildSeconds": 777600
+  },
+  {
+   "level": 4,
+   "dps": 650,
+   "damagePerHit": 1170,
+   "hitpoints": 15000,
+   "cost": 26000000,
+   "buildSeconds": 950400
+  },
+  {
+   "level": 5,
+   "dps": 700,
+   "damagePerHit": 1260,
+   "hitpoints": 16000,
+   "cost": 28000000,
+   "buildSeconds": 1123200
+  }
+ ],
+ "constants": {
+  "townHall": 18,
+  "range": 1.25,
+  "attackSeconds": 1.8,
+  "targets": "ground & air",
+  "splashTiles": 2.5,
+  "movementSpeed": 20,
+  "searchRadiusTiles": 12,
+  "triggerRadiusTiles": 14,
+  "enrage": {
+   "trigger": "Town Hall destroyed",
+   "damagePercent": 60,
+   "speedIncrease": 12
+  },
+  "deathSpell": "Rage (Spell Tower strength)",
+  "poisonEffectPercent": 30,
+  "isHero": false
+ },
+ "mismatches": []
+}

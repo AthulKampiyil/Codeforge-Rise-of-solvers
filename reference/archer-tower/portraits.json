@@ -1,0 +1,536 @@
+{
+  "sourceSha256": {
+    "native.json": "646950cc4fb4210740371a663d17ed70edee3cac8aad67354c27c720fb659073",
+    "buildings-source.json": "608a3cd96fd8ebc4959a6a5cc8cef20806cc7c380013054bccf98659d00933ca",
+    "defenders-source.json": "6f3f7682e318fd84a90eb83bc7adf04001123bd85b905142460963bcaa16e305"
+  },
+  "nativePlaybackVerified": false,
+  "projection": "Local village convention: y=60-DefenderZ*0.5; idle direction 3, frame zero.",
+  "portraits": [
+    {
+      "level": 1,
+      "path": "assets/archer-tower-native/portrait/1.png",
+      "width": 236,
+      "height": 276,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -41,
+        51,
+        97
+      ],
+      "bodyExport": "tower_turret_lvl1",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer1_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -10.0
+      ],
+      "rgbaSha256": "b62c346f379f79e7fef64bbf3c9d839fc3a4f0f4d7b7cbb3c7aeffb7df985f7e"
+    },
+    {
+      "level": 2,
+      "path": "assets/archer-tower-native/portrait/2.png",
+      "width": 244,
+      "height": 274,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -41,
+        55,
+        96
+      ],
+      "bodyExport": "tower_turret_lvl2",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer1_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -10.0
+      ],
+      "rgbaSha256": "95e66c3d3ae877fdc493e9299c15a5255d11c34c89c5d992c6d2f6e436dc9b20"
+    },
+    {
+      "level": 3,
+      "path": "assets/archer-tower-native/portrait/3.png",
+      "width": 240,
+      "height": 276,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -41,
+        53,
+        97
+      ],
+      "bodyExport": "tower_turret_lvl3",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer1_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -10.0
+      ],
+      "rgbaSha256": "8e5a05db0e3dbb08471b839fc752c036ffec50137a791291336104126788a313"
+    },
+    {
+      "level": 4,
+      "path": "assets/archer-tower-native/portrait/4.png",
+      "width": 248,
+      "height": 286,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -44,
+        57,
+        99
+      ],
+      "bodyExport": "tower_turret_lvl4",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer1_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -12.5
+      ],
+      "rgbaSha256": "a2de04c0f0496e850cd8d752adb604179ceb82ecb56604de0542f5279231c61e"
+    },
+    {
+      "level": 5,
+      "path": "assets/archer-tower-native/portrait/5.png",
+      "width": 248,
+      "height": 282,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -44,
+        57,
+        97
+      ],
+      "bodyExport": "tower_turret_lvl5",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer2_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -12.5
+      ],
+      "rgbaSha256": "117149bd05a7f1b46c2746a510b435e49ea17700c049d6778a7c7e4d0cc788dd"
+    },
+    {
+      "level": 6,
+      "path": "assets/archer-tower-native/portrait/6.png",
+      "width": 248,
+      "height": 294,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -46,
+        57,
+        101
+      ],
+      "bodyExport": "tower_turret_lvl6",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer2_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -15.0
+      ],
+      "rgbaSha256": "b1c90628b239170a6b0e0f5be65256e7537fd060cf84a8ba352e9fdf833dc08a"
+    },
+    {
+      "level": 7,
+      "path": "assets/archer-tower-native/portrait/7.png",
+      "width": 250,
+      "height": 292,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -46,
+        58,
+        100
+      ],
+      "bodyExport": "tower_turret_lvl7",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer2_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -15.0
+      ],
+      "rgbaSha256": "9fc2d8c5d49b93f402f0aee21577babd1de910202e6f46c950a4e1be0327c05c"
+    },
+    {
+      "level": 8,
+      "path": "assets/archer-tower-native/portrait/8.png",
+      "width": 252,
+      "height": 304,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -50,
+        59,
+        102
+      ],
+      "bodyExport": "tower_turret_lvl8",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer3_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -15.0
+      ],
+      "rgbaSha256": "ee631651d7bb9b6c38b34d78f7ab9a66bd061d0c788a4bdee6cb79995ca20b7a"
+    },
+    {
+      "level": 9,
+      "path": "assets/archer-tower-native/portrait/9.png",
+      "width": 270,
+      "height": 316,
+      "scale": 2,
+      "bounds": [
+        -68,
+        -50,
+        67,
+        108
+      ],
+      "bodyExport": "tower_turret_lvl9",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer3_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -15.0
+      ],
+      "rgbaSha256": "54ee4fa6d79d39937ea6b2c9984c51bbd4b6f33650b2f4d2cad6befe2fa83f1f"
+    },
+    {
+      "level": 10,
+      "path": "assets/archer-tower-native/portrait/10.png",
+      "width": 268,
+      "height": 312,
+      "scale": 2,
+      "bounds": [
+        -69,
+        -50,
+        65,
+        106
+      ],
+      "bodyExport": "tower_turret_lvl10",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer3_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -15.0
+      ],
+      "rgbaSha256": "71bb4d7620fbea1535b5e076be3133fc8a628c99267e456892e59e85c9174e9c"
+    },
+    {
+      "level": 11,
+      "path": "assets/archer-tower-native/portrait/11.png",
+      "width": 254,
+      "height": 308,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -52,
+        60,
+        102
+      ],
+      "bodyExport": "tower_turret_lvl11",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer6_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -15.0
+      ],
+      "rgbaSha256": "744023021d5682d859a1521d1b21fd207463a7214da0298e5afd09465cbfe440"
+    },
+    {
+      "level": 12,
+      "path": "assets/archer-tower-native/portrait/12.png",
+      "width": 250,
+      "height": 310,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -54,
+        58,
+        101
+      ],
+      "bodyExport": "tower_turret_lvl12",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer6_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -15.0
+      ],
+      "rgbaSha256": "9d7398871ec19d20b982198ae543bc95f223fbac128f468f65d971ac8f6b2ba9"
+    },
+    {
+      "level": 13,
+      "path": "assets/archer-tower-native/portrait/13.png",
+      "width": 248,
+      "height": 306,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -53,
+        57,
+        100
+      ],
+      "bodyExport": "tower_turret_lvl13",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer7_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -17.5
+      ],
+      "rgbaSha256": "cb5e65b14a6a92e2a43d2dabe9adf073f52be679fd906d7afe803bd643f8e210"
+    },
+    {
+      "level": 14,
+      "path": "assets/archer-tower-native/portrait/14.png",
+      "width": 254,
+      "height": 314,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -57,
+        60,
+        100
+      ],
+      "bodyExport": "tower_turret_lvl14",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer7_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -17.5
+      ],
+      "rgbaSha256": "7bda1dfff0db5e8949cdbf3051c07c09e8422b0dcb304413dad01e14f7e27aeb"
+    },
+    {
+      "level": 15,
+      "path": "assets/archer-tower-native/portrait/15.png",
+      "width": 260,
+      "height": 320,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -57,
+        63,
+        103
+      ],
+      "bodyExport": "tower_turret_lvl15",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer7_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -17.5
+      ],
+      "rgbaSha256": "4919fd3a4e520f32998536933a921bb78b548ed0c0fafa40f7f10c64bf53f2b6"
+    },
+    {
+      "level": 16,
+      "path": "assets/archer-tower-native/portrait/16.png",
+      "width": 260,
+      "height": 304,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -51,
+        63,
+        101
+      ],
+      "bodyExport": "tower_turret_lvl16",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer8_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -20.0
+      ],
+      "rgbaSha256": "677bd92f387c4cd0170d3b4eb6d7fd88c117a18d41b1757f81383b1306efb326"
+    },
+    {
+      "level": 17,
+      "path": "assets/archer-tower-native/portrait/17.png",
+      "width": 260,
+      "height": 306,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -52,
+        63,
+        101
+      ],
+      "bodyExport": "tower_turret_lvl17",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer8_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -20.0
+      ],
+      "rgbaSha256": "a7a3f9bf15b8d64ec6230b73214851a53cba0972b16963f7028c760682b553fa"
+    },
+    {
+      "level": 18,
+      "path": "assets/archer-tower-native/portrait/18.png",
+      "width": 264,
+      "height": 308,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -53,
+        65,
+        101
+      ],
+      "bodyExport": "tower_turret_lvl18",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer8_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -20.0
+      ],
+      "rgbaSha256": "bf64a53e3e6c8283a9714bfd7156d6cc5296e5c6fc9632529aab3db6649534d6"
+    },
+    {
+      "level": 19,
+      "path": "assets/archer-tower-native/portrait/19.png",
+      "width": 276,
+      "height": 312,
+      "scale": 2,
+      "bounds": [
+        -69,
+        -52,
+        69,
+        104
+      ],
+      "bodyExport": "tower_turret_lvl19",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer9_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -20.0
+      ],
+      "rgbaSha256": "ce528cc009cf61471d4a39b94128455a48e5e6113899bd4d40b8b5e4ae0342e2"
+    },
+    {
+      "level": 20,
+      "path": "assets/archer-tower-native/portrait/20.png",
+      "width": 298,
+      "height": 326,
+      "scale": 2,
+      "bounds": [
+        -74,
+        -55,
+        75,
+        108
+      ],
+      "bodyExport": "tower_turret_lvl20",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer10_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -20.0
+      ],
+      "rgbaSha256": "a5c66a2ba115cd1790041b82cae64e43d244116bdbcc16bee378753a84c48bba"
+    },
+    {
+      "level": 21,
+      "path": "assets/archer-tower-native/portrait/21.png",
+      "width": 248,
+      "height": 310,
+      "scale": 2,
+      "bounds": [
+        -67,
+        -59,
+        57,
+        96
+      ],
+      "bodyExport": "tower_turret_lvl21",
+      "baseExport": "defense_tower_turret_base",
+      "residentExport": "archer11_idle1_3",
+      "residentRoot": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -20.0
+      ],
+      "rgbaSha256": "3760e86debb9b5927870df484976048f756a119d1ef9019f6538f046973ff261"
+    }
+  ]
+}

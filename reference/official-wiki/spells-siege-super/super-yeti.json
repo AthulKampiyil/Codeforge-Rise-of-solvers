@@ -1,0 +1,182 @@
+{
+  "title": "Super Yeti",
+  "url": "https://clashofclans.fandom.com/wiki/Super_Yeti",
+  "revid": 623186,
+  "clientName": "Super Yeti",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Super Yeti",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "Any",
+    "attackType": "Melee (Ground Only)",
+    "housingSpace": 35,
+    "movementSpeed": 12,
+    "attackSpeedSeconds": 1,
+    "barracksLevel": 14,
+    "rangeTiles": 0.8,
+    "specialAbility": "Shock and Awe"
+  },
+  "levels": [
+    {
+      "level": 1,
+      "eventOnly": true,
+      "dps": 360,
+      "damagePerAttack": 360,
+      "hitpoints": 4600,
+      "electromites": 7
+    },
+    {
+      "level": 2,
+      "eventOnly": true,
+      "dps": 390,
+      "damagePerAttack": 390,
+      "hitpoints": 5000,
+      "electromites": 8
+    },
+    {
+      "level": 3,
+      "dps": 415,
+      "damagePerAttack": 415,
+      "hitpoints": 5400,
+      "electromites": 9
+    },
+    {
+      "level": 4,
+      "dps": 440,
+      "damagePerAttack": 440,
+      "hitpoints": 5800,
+      "electromites": 10
+    },
+    {
+      "level": 5,
+      "dps": 465,
+      "damagePerAttack": 465,
+      "hitpoints": 6200,
+      "electromites": 11
+    },
+    {
+      "level": 6,
+      "dps": 495,
+      "damagePerAttack": 495,
+      "hitpoints": 6600,
+      "electromites": 12
+    },
+    {
+      "level": 7,
+      "dps": 525,
+      "damagePerAttack": 525,
+      "hitpoints": 7000,
+      "electromites": 13
+    },
+    {
+      "level": 8,
+      "dps": 550,
+      "damagePerAttack": 550,
+      "hitpoints": 7400,
+      "electromites": 14
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "electromiteSpawnDamageInterval",
+      "level": null,
+      "wiki": "first at 400 then every 800 (Super Yeti page); every 400 (Electromite page)",
+      "client": 400,
+      "note": "SuperYetiSpawnYetiMites.SpawnnedTroopsPerDamage"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "electromites",
+      "client": "`SpecialAbilities` SuperYetiSpawnYetiMites (level = `SpecialAbilitiesLevel`): `TroopCount` 7..14, `SpawnnedTroopsPerDamage` 400, `SpawnRemainingTroopsOnDeath` TRUE, `TroopLevel` 1..8"
+    },
+    {
+      "mechanic": "Electromite",
+      "client": "characters `Electromite`: `Hitpoints` 300..590, `DPS` 56..92, `AttackRange` 200, `Speed` 300, `IsJumper` TRUE, ability ElectromiteStunAbility (`ExtraDamagePercentageAgainstTarget` 400, `ChainAttackDepth` 3, `ChainAttackDistance` 300, `ChainAttackDamageReductionPercent` 20, 0.1 s stun)"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`DPS`, `Hitpoints`, `Speed` 150, `AttackRange` 80, `BarrackLevel` 14"
+    }
+  ],
+  "extraTables": {
+    "electromite": [
+      {
+        "level": 1,
+        "damage": 56,
+        "damageVsBuildings": 224,
+        "hitpoints": 300
+      },
+      {
+        "level": 2,
+        "damage": 64,
+        "damageVsBuildings": 256,
+        "hitpoints": 350
+      },
+      {
+        "level": 3,
+        "damage": 72,
+        "damageVsBuildings": 288,
+        "hitpoints": 400
+      },
+      {
+        "level": 4,
+        "damage": 78,
+        "damageVsBuildings": 312,
+        "hitpoints": 450
+      },
+      {
+        "level": 5,
+        "damage": 84,
+        "damageVsBuildings": 336,
+        "hitpoints": 500
+      },
+      {
+        "level": 6,
+        "damage": 88,
+        "damageVsBuildings": 352,
+        "hitpoints": 550
+      },
+      {
+        "level": 7,
+        "damage": 90,
+        "damageVsBuildings": 360,
+        "hitpoints": 575
+      },
+      {
+        "level": 8,
+        "damage": 92,
+        "damageVsBuildings": 368,
+        "hitpoints": 590
+      }
+    ]
+  },
+  "boost": {
+    "wiki": {
+      "baseTroop": "Yeti",
+      "minBaseLevel": 3,
+      "townHallRequired": null,
+      "clanCastleLevelToReceive": null,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "Super Yeti",
+      "Original": "Yeti",
+      "MinOriginalLevel_raw": 2,
+      "minBaseLevel": 3,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_YETI_INTRO",
+      "townHallDerived": 13
+    }
+  }
+}

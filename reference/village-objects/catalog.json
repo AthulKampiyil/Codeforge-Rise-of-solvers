@@ -1,0 +1,151 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "localization/texts.csv": "affdf43926df044cb3c09d833b07365aa01ea99985771afa5fa0dd926f36c569",
+    "logic/globals.csv": "16210fc28bfb86d00ea04d581a99fe98e128172017b2d4f637b8848c0cf20087",
+    "logic/village_objects.csv": "89ed460ec368b2473053b1236f8a4cda61135132fb8dd2bc2335d580754746ff",
+    "sc/buildings.sc": "f73ec949fc070bc03175d6bb3af8b62d8f607094bf2b343c9846a499a35be0ed",
+    "sc/buildings_25.sctx": "c290a82b3940513f16b55dba2305e875d923d4120c5997b6b6908c680ec8ca3d",
+    "sc/characters.sc": "0e23bd3745176fe7db3d61e490d9da07c63a42e95462f514d6eac696314c3798",
+    "sc/characters_10.sctx": "65f705e1af55c24bcf72fecf0222d04d3f70093a722844b5f6aae701066988ae"
+  },
+  "features": {
+    "trader": {
+      "name": "Trader Shop",
+      "info": "Check out what magical goods Trader has in store each week!",
+      "townhall": 6
+    },
+    "super": {
+      "name": "Super Troops",
+      "info": "Boost Troops into Super Troops to make them the village wrecking machines they've always wanted to be!",
+      "townhall": 11
+    }
+  },
+  "objects": [
+    {
+      "id": "trader-tent",
+      "row": "TraderBuilding",
+      "feature": "trader",
+      "opens": "trader",
+      "tileX": -4.5,
+      "tileY": 28.5,
+      "art": {
+        "idle": {
+          "path": "assets/village-objects-native/trader-tent.png",
+          "export": "trader_tent_01",
+          "width": 133,
+          "height": 121,
+          "originX": 0.5639097744360902,
+          "originY": 0.48760330578512395,
+          "rgbaSha256": "9f3421a7c10a53a8b11c73de6fd3201148a79cf1a2d6d1b61cfcf57e7a59ac00"
+        }
+      }
+    },
+    {
+      "id": "trader-pots",
+      "row": "TraderDeco1",
+      "feature": "trader",
+      "opens": "trader",
+      "tileX": -2.0,
+      "tileY": 27.0,
+      "art": {
+        "idle": {
+          "path": "assets/village-objects-native/trader-pots.png",
+          "export": "trader_pot_01",
+          "width": 46,
+          "height": 54,
+          "originX": 0.5,
+          "originY": 0.5,
+          "rgbaSha256": "0179820d6e652054c996843c86f49f560b2c3991824f9eeefa0897800069b08a"
+        }
+      }
+    },
+    {
+      "id": "trader-rug",
+      "row": "TraderDeco2",
+      "feature": "trader",
+      "opens": "trader",
+      "tileX": -2.5,
+      "tileY": 29.0,
+      "art": {
+        "idle": {
+          "path": "assets/village-objects-native/trader-rug.png",
+          "export": "trader_rug_01",
+          "width": 74,
+          "height": 54,
+          "originX": 0.5,
+          "originY": 0.5,
+          "rgbaSha256": "3ac825c31958a8663ce1c0a003f29e5240bbde0b08d26100f7f7f767d14397a3"
+        }
+      }
+    },
+    {
+      "id": "trader-sign",
+      "row": "TraderHiddenDeco",
+      "feature": "trader",
+      "opens": "trader",
+      "tileX": -4.0,
+      "tileY": 27.75,
+      "art": {
+        "idle": {
+          "path": "assets/village-objects-native/trader-sign.png",
+          "export": "trader_sign_01",
+          "width": 48,
+          "height": 60,
+          "originX": 0.5,
+          "originY": 0.48333333333333334,
+          "rgbaSha256": "9661b5cc78d579f51e0ec19aa1479d39564071731cacd5d2474fa33e093153a0"
+        }
+      }
+    },
+    {
+      "id": "trader",
+      "row": "TraderCharacter",
+      "feature": "trader",
+      "opens": "trader",
+      "tileX": -1.6,
+      "tileY": 30.0,
+      "art": {
+        "idle": {
+          "path": "assets/village-objects-native/trader.png",
+          "export": "trader_idle1_2",
+          "width": 39,
+          "height": 52,
+          "originX": 0.5128205128205128,
+          "originY": 0.6730769230769231,
+          "rgbaSha256": "2c2e4d587f85cd44071ce266945fdffe5577ae447df582bf8c1fec4d6acc9c42"
+        }
+      }
+    },
+    {
+      "id": "super-troops",
+      "row": "SuperTroopsBuilding",
+      "feature": "super",
+      "opens": "super-troops",
+      "tileX": -4.0,
+      "tileY": 33.0,
+      "art": {
+        "idle": {
+          "path": "assets/village-objects-native/super-troops.png",
+          "export": "trader_sauna_inactive",
+          "width": 202,
+          "height": 165,
+          "originX": 0.5495049504950495,
+          "originY": 0.5575757575757576,
+          "rgbaSha256": "05096128470732b16d821f482d423870cef2db3eec578df636853a2274b9ec39"
+        },
+        "active": {
+          "path": "assets/village-objects-native/super-troops-active.png",
+          "export": "trader_sauna_active",
+          "width": 202,
+          "height": 165,
+          "originX": 0.5495049504950495,
+          "originY": 0.5575757575757576,
+          "rgbaSha256": "300a0171c1e2a33874fcabaa919a917c632f8df4230128153df8e658f6d2bacd"
+        }
+      }
+    }
+  ]
+}

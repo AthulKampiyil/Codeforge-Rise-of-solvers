@@ -1,0 +1,602 @@
+{
+  "garrisons": [
+    {
+      "stage": 57,
+      "stageIndex": 56,
+      "npc": "NPC57",
+      "source": "level/npc55.json",
+      "roster": [
+        {
+          "character": "Dragon",
+          "sourceLevel": 7,
+          "count": 1
+        },
+        {
+          "character": "Balloon",
+          "sourceLevel": 8,
+          "count": 3
+        }
+      ],
+      "castles": [
+        {
+          "sourceId": 500000102,
+          "globalId": 1000014,
+          "level": 5,
+          "x": 11,
+          "y": 18
+        }
+      ]
+    },
+    {
+      "stage": 68,
+      "stageIndex": 67,
+      "npc": "NPC68",
+      "source": "level/npc66.json",
+      "roster": [
+        {
+          "character": "Goblin",
+          "sourceLevel": 7,
+          "count": 40
+        }
+      ],
+      "castles": [
+        {
+          "sourceId": 500000264,
+          "globalId": 1000061,
+          "level": 1,
+          "x": 17,
+          "y": 21
+        }
+      ]
+    },
+    {
+      "stage": 70,
+      "stageIndex": 69,
+      "npc": "NPC70",
+      "source": "level/npc68.json",
+      "roster": [
+        {
+          "character": "Electro Dragon",
+          "sourceLevel": 3,
+          "count": 1
+        },
+        {
+          "character": "Golem",
+          "sourceLevel": 8,
+          "count": 1
+        },
+        {
+          "character": "Dragon",
+          "sourceLevel": 7,
+          "count": 1
+        },
+        {
+          "character": "PEKKA",
+          "sourceLevel": 8,
+          "count": 1
+        },
+        {
+          "character": "Valkyrie",
+          "sourceLevel": 7,
+          "count": 1
+        },
+        {
+          "character": "Witch",
+          "sourceLevel": 4,
+          "count": 1
+        },
+        {
+          "character": "Bowler",
+          "sourceLevel": 4,
+          "count": 1
+        },
+        {
+          "character": "Baby Dragon",
+          "sourceLevel": 6,
+          "count": 1
+        }
+      ],
+      "castles": [
+        {
+          "sourceId": 500000327,
+          "globalId": 1000061,
+          "level": 1,
+          "x": 21,
+          "y": 21
+        }
+      ]
+    },
+    {
+      "stage": 73,
+      "stageIndex": 72,
+      "npc": "NPC73",
+      "source": "level/npc71.json",
+      "roster": [
+        {
+          "character": "Dragon",
+          "sourceLevel": 5,
+          "count": 3
+        }
+      ],
+      "castles": [
+        {
+          "sourceId": 500000263,
+          "globalId": 1000061,
+          "level": 1,
+          "x": 25,
+          "y": 18
+        }
+      ]
+    },
+    {
+      "stage": 74,
+      "stageIndex": 73,
+      "npc": "NPC74",
+      "source": "level/npc72.json",
+      "roster": [
+        {
+          "character": "Electro Dragon",
+          "sourceLevel": 3,
+          "count": 3
+        }
+      ],
+      "castles": []
+    },
+    {
+      "stage": 75,
+      "stageIndex": 74,
+      "npc": "NPC75",
+      "source": "level/npc73.json",
+      "roster": [
+        {
+          "character": "Golden Dragon",
+          "sourceLevel": 1,
+          "count": 1
+        }
+      ],
+      "castles": []
+    },
+    {
+      "stage": 77,
+      "stageIndex": 76,
+      "npc": "NPC77",
+      "source": "level/npc75.json",
+      "roster": [
+        {
+          "character": "Lava Hound",
+          "sourceLevel": 6,
+          "count": 1
+        },
+        {
+          "character": "Headhunter",
+          "sourceLevel": 3,
+          "count": 2
+        },
+        {
+          "character": "Archer",
+          "sourceLevel": 9,
+          "count": 3
+        }
+      ],
+      "castles": [
+        {
+          "sourceId": 500000975,
+          "globalId": 1000061,
+          "level": 1,
+          "x": 24,
+          "y": 24
+        }
+      ]
+    },
+    {
+      "stage": 78,
+      "stageIndex": 77,
+      "npc": "NPC78",
+      "source": "level/npc76.json",
+      "roster": [
+        {
+          "character": "Super Minion",
+          "sourceLevel": 9,
+          "count": 4
+        },
+        {
+          "character": "Archer",
+          "sourceLevel": 9,
+          "count": 2
+        }
+      ],
+      "castles": [
+        {
+          "sourceId": 500010209,
+          "globalId": 1000061,
+          "level": 1,
+          "x": 20,
+          "y": 20
+        }
+      ]
+    },
+    {
+      "stage": 84,
+      "stageIndex": 83,
+      "npc": "NPC84",
+      "source": "level/npc82.json",
+      "roster": [
+        {
+          "character": "Electro Titan",
+          "sourceLevel": 2,
+          "count": 5
+        }
+      ],
+      "castles": [
+        {
+          "sourceId": 500000932,
+          "globalId": 1000061,
+          "level": 1,
+          "x": 21,
+          "y": 21
+        }
+      ]
+    },
+    {
+      "stage": 90,
+      "stageIndex": 89,
+      "npc": "NPC90",
+      "source": "level/npc88.json",
+      "roster": [
+        {
+          "character": "MOMMA",
+          "sourceLevel": 1,
+          "count": 1
+        }
+      ],
+      "castles": [
+        {
+          "sourceId": 500001610,
+          "globalId": 1000061,
+          "level": 1,
+          "x": 21,
+          "y": 21
+        }
+      ]
+    }
+  ],
+  "castles": {
+    "Clan Castle": [
+      {
+        "level": 1,
+        "globalId": 1000014,
+        "hp": 600,
+        "size": 3,
+        "townhall": 3,
+        "housing": 10,
+        "spellHousing": 0,
+        "siegeHousing": 0,
+        "cost": 10000,
+        "resource": "Elixir",
+        "seconds": 0,
+        "body": "alliance_castle_lvl1",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      },
+      {
+        "level": 2,
+        "globalId": 1000014,
+        "hp": 1200,
+        "size": 3,
+        "townhall": 4,
+        "housing": 15,
+        "spellHousing": 0,
+        "siegeHousing": 0,
+        "cost": 50000,
+        "resource": "Elixir",
+        "seconds": 7200,
+        "body": "alliance_castle_lvl2",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      },
+      {
+        "level": 3,
+        "globalId": 1000014,
+        "hp": 1800,
+        "size": 3,
+        "townhall": 6,
+        "housing": 20,
+        "spellHousing": 0,
+        "siegeHousing": 0,
+        "cost": 600000,
+        "resource": "Elixir",
+        "seconds": 43200,
+        "body": "alliance_castle_lvl3",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      },
+      {
+        "level": 4,
+        "globalId": 1000014,
+        "hp": 2600,
+        "size": 3,
+        "townhall": 8,
+        "housing": 25,
+        "spellHousing": 1,
+        "siegeHousing": 0,
+        "cost": 1200000,
+        "resource": "Elixir",
+        "seconds": 86400,
+        "body": "alliance_castle_lvl4",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      },
+      {
+        "level": 5,
+        "globalId": 1000014,
+        "hp": 3000,
+        "size": 3,
+        "townhall": 9,
+        "housing": 30,
+        "spellHousing": 1,
+        "siegeHousing": 0,
+        "cost": 2000000,
+        "resource": "Elixir",
+        "seconds": 129600,
+        "body": "alliance_castle_lvl5",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      },
+      {
+        "level": 6,
+        "globalId": 1000014,
+        "hp": 3400,
+        "size": 3,
+        "townhall": 10,
+        "housing": 35,
+        "spellHousing": 1,
+        "siegeHousing": 1,
+        "cost": 3000000,
+        "resource": "Elixir",
+        "seconds": 172800,
+        "body": "alliance_castle_lvl6",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      },
+      {
+        "level": 7,
+        "globalId": 1000014,
+        "hp": 4000,
+        "size": 3,
+        "townhall": 11,
+        "housing": 35,
+        "spellHousing": 2,
+        "siegeHousing": 1,
+        "cost": 5000000,
+        "resource": "Elixir",
+        "seconds": 259200,
+        "body": "alliance_castle_lvl7",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      },
+      {
+        "level": 8,
+        "globalId": 1000014,
+        "hp": 4400,
+        "size": 3,
+        "townhall": 12,
+        "housing": 40,
+        "spellHousing": 2,
+        "siegeHousing": 1,
+        "cost": 5000000,
+        "resource": "Elixir",
+        "seconds": 345600,
+        "body": "alliance_castle_lvl8",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      },
+      {
+        "level": 9,
+        "globalId": 1000014,
+        "hp": 4800,
+        "size": 3,
+        "townhall": 13,
+        "housing": 45,
+        "spellHousing": 2,
+        "siegeHousing": 1,
+        "cost": 8000000,
+        "resource": "Elixir",
+        "seconds": 518400,
+        "body": "alliance_castle_lvl9",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      },
+      {
+        "level": 10,
+        "globalId": 1000014,
+        "hp": 5200,
+        "size": 3,
+        "townhall": 14,
+        "housing": 45,
+        "spellHousing": 3,
+        "siegeHousing": 1,
+        "cost": 10000000,
+        "resource": "Elixir",
+        "seconds": 604800,
+        "body": "alliance_castle_lvl10",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      },
+      {
+        "level": 11,
+        "globalId": 1000014,
+        "hp": 5400,
+        "size": 3,
+        "townhall": 15,
+        "housing": 50,
+        "spellHousing": 3,
+        "siegeHousing": 1,
+        "cost": 12000000,
+        "resource": "Elixir",
+        "seconds": 691200,
+        "body": "alliance_castle_lvl11",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      },
+      {
+        "level": 12,
+        "globalId": 1000014,
+        "hp": 5600,
+        "size": 3,
+        "townhall": 16,
+        "housing": 50,
+        "spellHousing": 3,
+        "siegeHousing": 2,
+        "cost": 14500000,
+        "resource": "Elixir",
+        "seconds": 777600,
+        "body": "alliance_castle_lvl12",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      },
+      {
+        "level": 13,
+        "globalId": 1000014,
+        "hp": 5800,
+        "size": 3,
+        "townhall": 17,
+        "housing": 55,
+        "spellHousing": 3,
+        "siegeHousing": 2,
+        "cost": 19000000,
+        "resource": "Elixir",
+        "seconds": 864000,
+        "body": "alliance_castle_lvl13",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      },
+      {
+        "level": 14,
+        "globalId": 1000014,
+        "hp": 6000,
+        "size": 3,
+        "townhall": 18,
+        "housing": 55,
+        "spellHousing": 4,
+        "siegeHousing": 2,
+        "cost": 28000000,
+        "resource": "Elixir",
+        "seconds": 1209600,
+        "body": "alliance_castle_lvl14",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      }
+    ],
+    "Goblin Castle": [
+      {
+        "level": 1,
+        "globalId": 1000061,
+        "hp": 4000,
+        "size": 3,
+        "townhall": 1,
+        "housing": 50,
+        "spellHousing": 0,
+        "siegeHousing": 0,
+        "cost": 10000,
+        "resource": "Gold",
+        "seconds": 0,
+        "body": "goblin_clancastle_01",
+        "base": "alliance_castle_base",
+        "construction": "generic_construction_state3",
+        "scaffold": "alliance_castle_upg",
+        "rubble": "alliance_castle_lvl1_broken",
+        "locked": "alliance_castle_lvl1_broken"
+      }
+    ]
+  },
+  "noFlightZone": [
+    {
+      "character": "Dragon",
+      "sourceLevel": 7,
+      "visualLevel": 7,
+      "globalId": 4000008,
+      "housing": 20,
+      "hp": 3900,
+      "dps": 310,
+      "sourceSpeed": 200,
+      "attackRange": 250,
+      "intervalMs": 1250,
+      "damageRadius": 30,
+      "selfAsAoeCenter": false,
+      "flying": true,
+      "airTargets": true,
+      "groundTargets": true,
+      "newTargetAttackDelayMs": 0,
+      "deathDamage": 0,
+      "deathRadius": 0,
+      "deathDelayMs": 0,
+      "deathEffect": null,
+      "animation": "Dragon7"
+    },
+    {
+      "character": "Balloon",
+      "sourceLevel": 8,
+      "visualLevel": 8,
+      "globalId": 4000005,
+      "housing": 5,
+      "hp": 840,
+      "dps": 236,
+      "sourceSpeed": 130,
+      "attackRange": 0,
+      "intervalMs": 3000,
+      "damageRadius": 120,
+      "selfAsAoeCenter": true,
+      "flying": true,
+      "airTargets": false,
+      "groundTargets": true,
+      "newTargetAttackDelayMs": 2250,
+      "deathDamage": 268,
+      "deathRadius": 120,
+      "deathDelayMs": 416,
+      "deathEffect": "Dark Balloon Exposion",
+      "animation": "Balloon Goblin8"
+    }
+  ]
+}

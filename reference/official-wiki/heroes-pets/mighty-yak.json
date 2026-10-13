@@ -1,0 +1,257 @@
+{
+ "title": "Mighty Yak",
+ "url": "https://clashofclans.fandom.com/wiki/Mighty_Yak",
+ "revid": 620660,
+ "retrieved": "2026-09-15",
+ "clientName": "Mighty Yak",
+ "clientTable": "pets",
+ "category": "pet",
+ "summary": "Pet House 3 high-HP ground pet dealing 20× damage to Walls; rages for 8 s when its hero is knocked out.",
+ "constants": {
+  "wiki": {
+   "Preferred Target": "Within 7 tiles of Hero",
+   "Targets": "Ground",
+   "Attack Type": "Single Target",
+   "Attack Range": "1.2 tiles",
+   "Movement Speed": "20",
+   "Attack Speed": "Varies*",
+   "Special Ability": "Wall Buster",
+   "Rage Duration": "8s",
+   "Rage Speed Increase": "16",
+   "Rage Damage Increase": "70%",
+   "Pet House Level Required": "3"
+  },
+  "client": {
+   "HousingSpace": "20",
+   "Speed": "300",
+   "AttackRange": "120",
+   "AttackSpeed": "2100",
+   "IsFlying": "FALSE",
+   "AirTargets": "FALSE",
+   "GroundTargets": "TRUE",
+   "IsJumper": "FALSE",
+   "LeashLength": "581",
+   "DamageMultiplierTarget": "Wall",
+   "DamageMultiplierPercent": "2000",
+   "SpecialAbilities": "BulldozerPlaceholderAbility",
+   "HeroDeathAbilityType": "BoostSelf",
+   "HeroDeathAbilitySpell": "TroopRage",
+   "HeroDeathAbilityLevel": "2",
+   "TriggersTraps": "TRUE",
+   "FriendlyGroupWeight": "300",
+   "WallMovementCost": "64",
+   "NewTargetAttackDelay": "100",
+   "SpawnDelay": "100",
+   "UpgradeResource": "DarkElixir",
+   "MovementOffsetSpeed": "0",
+   "levelRows": 15,
+   "levelsByPetHouse": {
+    "Pet House 3": "10",
+    "Pet House 7": "15"
+   }
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "damagePerSecond": {
+   "wikiHeader": "Damage per Second",
+   "unit": "damage per second"
+  },
+  "damagePerHit": {
+   "wikiHeader": "Damage per Hit",
+   "unit": "damage points"
+  },
+  "damageVsWalls": {
+   "wikiHeader": "Damage vs. Walls",
+   "unit": "damage points"
+  },
+  "hitpoints": {
+   "wikiHeader": "Hitpoints",
+   "unit": "hitpoints"
+  },
+  "upgradeCost": {
+   "wikiHeader": "Upgrade Cost",
+   "unit": "resource amount"
+  },
+  "upgradeTimeSeconds": {
+   "wikiHeader": "Upgrade Time",
+   "unit": "seconds"
+  },
+  "petHouseLevelRequired": {
+   "wikiHeader": "Pet House Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damagePerSecond": 60,
+   "damagePerHit": 126,
+   "damageVsWalls": 2520,
+   "hitpoints": 3750,
+   "upgradeCost": null,
+   "upgradeTimeSeconds": null,
+   "petHouseLevelRequired": 3
+  },
+  {
+   "level": 2,
+   "damagePerSecond": 64,
+   "damagePerHit": 134.4,
+   "damageVsWalls": 2688,
+   "hitpoints": 4000,
+   "upgradeCost": 40000,
+   "upgradeTimeSeconds": 86400,
+   "petHouseLevelRequired": 3
+  },
+  {
+   "level": 3,
+   "damagePerSecond": 68,
+   "damagePerHit": 142.8,
+   "damageVsWalls": 2856,
+   "hitpoints": 4250,
+   "upgradeCost": 50000,
+   "upgradeTimeSeconds": 129600,
+   "petHouseLevelRequired": 3
+  },
+  {
+   "level": 4,
+   "damagePerSecond": 72,
+   "damagePerHit": 151.2,
+   "damageVsWalls": 3024,
+   "hitpoints": 4500,
+   "upgradeCost": 60000,
+   "upgradeTimeSeconds": 172800,
+   "petHouseLevelRequired": 3
+  },
+  {
+   "level": 5,
+   "damagePerSecond": 76,
+   "damagePerHit": 159.6,
+   "damageVsWalls": 3192,
+   "hitpoints": 4750,
+   "upgradeCost": 70000,
+   "upgradeTimeSeconds": 216000,
+   "petHouseLevelRequired": 3
+  },
+  {
+   "level": 6,
+   "damagePerSecond": 80,
+   "damagePerHit": 168,
+   "damageVsWalls": 3360,
+   "hitpoints": 4950,
+   "upgradeCost": 80000,
+   "upgradeTimeSeconds": 259200,
+   "petHouseLevelRequired": 3
+  },
+  {
+   "level": 7,
+   "damagePerSecond": 84,
+   "damagePerHit": 176.4,
+   "damageVsWalls": 3528,
+   "hitpoints": 5100,
+   "upgradeCost": 90000,
+   "upgradeTimeSeconds": 302400,
+   "petHouseLevelRequired": 3
+  },
+  {
+   "level": 8,
+   "damagePerSecond": 88,
+   "damagePerHit": 184.8,
+   "damageVsWalls": 3696,
+   "hitpoints": 5250,
+   "upgradeCost": 100000,
+   "upgradeTimeSeconds": 345600,
+   "petHouseLevelRequired": 3
+  },
+  {
+   "level": 9,
+   "damagePerSecond": 92,
+   "damagePerHit": 193.2,
+   "damageVsWalls": 3864,
+   "hitpoints": 5400,
+   "upgradeCost": 110000,
+   "upgradeTimeSeconds": 388800,
+   "petHouseLevelRequired": 3
+  },
+  {
+   "level": 10,
+   "damagePerSecond": 96,
+   "damagePerHit": 201.6,
+   "damageVsWalls": 4032,
+   "hitpoints": 5550,
+   "upgradeCost": 120000,
+   "upgradeTimeSeconds": 432000,
+   "petHouseLevelRequired": 3
+  },
+  {
+   "level": 11,
+   "damagePerSecond": 100,
+   "damagePerHit": 210,
+   "damageVsWalls": 4200,
+   "hitpoints": 5700,
+   "upgradeCost": 130000,
+   "upgradeTimeSeconds": 475200,
+   "petHouseLevelRequired": 7
+  },
+  {
+   "level": 12,
+   "damagePerSecond": 104,
+   "damagePerHit": 218.4,
+   "damageVsWalls": 4368,
+   "hitpoints": 5850,
+   "upgradeCost": 140000,
+   "upgradeTimeSeconds": 518400,
+   "petHouseLevelRequired": 7
+  },
+  {
+   "level": 13,
+   "damagePerSecond": 108,
+   "damagePerHit": 226.8,
+   "damageVsWalls": 4536,
+   "hitpoints": 6000,
+   "upgradeCost": 150000,
+   "upgradeTimeSeconds": 561600,
+   "petHouseLevelRequired": 7
+  },
+  {
+   "level": 14,
+   "damagePerSecond": 112,
+   "damagePerHit": 235.2,
+   "damageVsWalls": 4704,
+   "hitpoints": 6150,
+   "upgradeCost": 160000,
+   "upgradeTimeSeconds": 604800,
+   "petHouseLevelRequired": 7
+  },
+  {
+   "level": 15,
+   "damagePerSecond": 116,
+   "damagePerHit": 243.6,
+   "damageVsWalls": 4872,
+   "hitpoints": 6300,
+   "upgradeCost": 170000,
+   "upgradeTimeSeconds": 648000,
+   "petHouseLevelRequired": 7
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "Movement Speed",
+   "level": null,
+   "wiki": "20",
+   "client": "Speed 300 (÷12.5 = 24)",
+   "note": "constant from the wiki's first statistics table"
+  },
+  {
+   "field": "attackTiming",
+   "level": null,
+   "wiki": "first ram on stop, second after 1.6 s, then every 2.1 s",
+   "client": "AttackSpeed 2100, NewTargetAttackDelay 100",
+   "note": "the 1.6 s second hit is not directly encoded"
+  }
+ ]
+}

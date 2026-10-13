@@ -1,79 +1,46 @@
-# CodeForge: Rise of Solvers
+# CodeForge village (local integration branch)
 
-Monorepo for the CodeForge project (Group 7, IIIT Kottayam). This repo's
-layout is derived directly from the approved **SRS v1.0** and **SADD v1.1** —
-see `docs/`. If a change to this structure would contradict either
-document, update the document first, then the repo.
+This focused `web-coc` branch connects a Phaser village client to the CodeForge competitive-programming backend. CodeForge accounts link a verified Codeforces handle; accepted solves progress topic buildings and earn cosmetic-only coins and gems. Attacks use Codeforces problem solving rather than the original local raid simulation. It includes curated CodeForge static assets; bulk upstream game art and unrelated visual-test fixtures are omitted. See [local setup](docs/CODEFORGE-LOCAL.md).
 
-## Layout
+The CodeForge entry point is `src/cp/main.ts`; its backend is in `backend/`. The underlying village source remains, but full upstream art assets are not part of this focused branch. The original project's reuse and asset-rights notice remains below and applies to any retained code and artwork.
 
-```
-backend/
-  app/
-    modules/          # M1–M9, one folder per SADD module (see table below)
-    core/              # config, security, shared dependencies
-    db/                # SQLAlchemy base + session
-    main.py            # FastAPI app — mounts each module's router
-  worker/              # Background Worker process (SADD §11.2)
-  alembic/             # DB migrations (single shared history)
-  Dockerfile           # API image
-  Dockerfile.worker     # Worker image
+## Original Crown & Clan project
 
-frontend/
-  src/
-    features/          # mirrors backend modules 1:1 (see table below)
-    game/               # Phaser scenes — Village + War Map (shared across M3/M5)
-    shared/             # api client, websocket client, shared UI
+A browser village-building and strategy game built with TypeScript, Phaser and Vite.
+Build a village, train an army, raid campaign maps and replay battles. Saves stay in
+your browser; there is no backend or account system.
 
-infra/                 # reverse proxy / deployment configs (staging, prod)
-docs/                   # SRS.pdf, SADD.docx — source of truth
-.github/workflows/      # CI: lint/test backend + build frontend on every PR
-docker-compose.yml       # local dev stack (mirrors SADD §11.1)
+**[Play the game](https://coc.teozeng.dev)**
+
+## Run CodeForge locally
+
+Use Node.js 24 (`nvm use` if you have nvm) and Docker Compose. From this repository root:
+
+```sh
+docker compose -p webcoc-codeforge -f docker-compose.codeforge.yml up --build -d
+npm ci
+npm run dev
 ```
 
-## Module ↔ owner map
+Open <http://localhost:5174>. API runs at <http://localhost:8001>; the frontend proxies `/api` and `/ws/events` to it. See [local setup](docs/CODEFORGE-LOCAL.md) for migrations, port overrides, and shutdown. Do not use these development credentials for deployment.
 
-Assign one module per contributor (or pair) so backend/frontend work for
-the same feature stays in one lane and PRs don't collide:
+## Check and build
 
-| ID | Module | Backend path | Frontend path |
-|---|---|---|---|
-| M1 | Authentication & Account Linking | `backend/app/modules/m1_auth` | `frontend/src/features/auth` |
-| M2 | Coding Platform Sync | `backend/app/modules/m2_platform_sync` | `frontend/src/features/sync-status` |
-| M3 | Personal Code Village | `backend/app/modules/m3_village` | `frontend/src/features/village` + `game/scenes/VillageScene.js` |
-| M4 | Async Village Attacks | `backend/app/modules/m4_attacks` | `frontend/src/features/attacks` |
-| M5 | Guild & Territory Control | `backend/app/modules/m5_guild_territory` | `frontend/src/features/guild-territory` + `game/scenes/WarMapScene.js` |
-| M6 | Guild War Room | `backend/app/modules/m6_war_room` | `frontend/src/features/war-room` |
-| M7 | League & Trophy Progression | `backend/app/modules/m7_league_trophy` | `frontend/src/features/league` |
-| M8 | Notification & Realtime Gateway | `backend/app/modules/m8_notifications` | `frontend/src/shared/websocket` |
-| M9 | Admin & Game-Balance Config | `backend/app/modules/m9_admin_config` | `frontend/src/features/admin` |
-
-## Rules (from SADD §4.1)
-
-1. **A module only imports another module's `service.py`** — never another
-   module's `repository.py` or `models.py` directly. This is what keeps
-   modules loosely coupled inside the monolith.
-2. Judge-specific logic stays inside `m2_platform_sync/judge_adapters/`.
-   Nothing outside that folder should know whether a solve came from
-   Codeforces, LeetCode, or CodeChef.
-3. Any new DB table goes through `alembic revision --autogenerate` —
-   one shared migration history, not per-module.
-4. Config comes from `.env` (see `.env.example`), never hard-coded.
-
-## Getting started
-
-```bash
-cp .env.example .env
-docker compose up --build
+```sh
+npm run typecheck       # CodeForge frontend types
+npm test -- tests/cp-client.test.ts tests/cp-village-boot.test.ts tests/cp-village-presentation.test.ts tests/cp-admin.test.ts
+npm run build           # CodeForge production frontend bundle
+npm run preview         # Serve dist/ locally
 ```
 
-- API: http://localhost:8000
-- Frontend: http://localhost:5173
-- Postgres: localhost:5432 / Redis: localhost:6379
+The upstream-wide `npm run check` and [original QA guide](docs/QA.md) also cover the retained Crown & Clan source, not just this CodeForge integration.
 
-## Why this structure (validate against the docs)
+## Contribute
 
-See the design-rationale table in the project chat / PR description that
-introduced this scaffold — every folder choice cites a specific SRS
-requirement ID or SADD section so the team can check it against the
-approved documents rather than take it on faith.
+Start with [CONTRIBUTING.md](CONTRIBUTING.md), the [architecture guide](docs/ARCHITECTURE.md)
+and the [documentation index](docs/README.md). [Release instructions](docs/RELEASE-VERIFICATION.md)
+cover hosting, verification and rollback.
+
+This is an independent educational fan project. Clash of Clans assets and trademarks
+belong to Supercell. No project-wide open-source license has been granted; do not assume
+code or bundled artwork is licensed for redistribution.

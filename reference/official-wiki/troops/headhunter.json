@@ -1,0 +1,191 @@
+{
+ "title": "Headhunter",
+ "page": "Headhunter",
+ "url": "https://clashofclans.fandom.com/wiki/Headhunter",
+ "revid": 625334,
+ "retrieved": "2026-09-15",
+ "clientName": "Headhunter",
+ "clientVersion": "18.400.21",
+ "category": "dark-troop",
+ "constants": {
+  "housingSpace": 6,
+  "movementSpeedWiki": 32,
+  "internalSpeed": 300,
+  "tilesPerSecond": 3,
+  "attackRangeTiles": 3,
+  "attackRangeTilesClient": 3,
+  "attackSeconds": 0.6,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Single Target",
+  "targets": "ground+air",
+  "favoriteTarget": "Heroes (x4 Damage)",
+  "favoriteTargetTemplate": "Heroes",
+  "favoriteTargetClient": "Heroes",
+  "favoriteMultiplier": 4,
+  "flying": false,
+  "jumpsWalls": true,
+  "underground": false,
+  "unlock": {
+   "building": "Dark Barracks",
+   "level": 9,
+   "townHall": 12
+  },
+  "poisonSecondsClient": 3,
+  "triggersTraps": true,
+  "healerWeight": 2
+ },
+ "client": {
+  "clientName": "Headhunter",
+  "housingSpace": 6,
+  "internalSpeed": 300,
+  "movementSpeedInGameExact": 24,
+  "movementSpeedInGameRounded": 24,
+  "tilesPerSecond": 3,
+  "attackRangeTiles": 3,
+  "attackSeconds": 0.6,
+  "targets": "ground+air",
+  "flying": false,
+  "jumpsWalls": true,
+  "favoriteTarget": "Heroes",
+  "favoriteMultiplier": 4,
+  "productionBuilding": "Dark Barracks",
+  "barracksLevel": 9,
+  "unlockTownHall": 12,
+  "triggersTraps": true,
+  "healerWeight": 2,
+  "movementOffsetSpeed": 0,
+  "poisonSeconds": 3
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 105,
+   "damagePerHit": 63,
+   "dpsVsFavorite": 420,
+   "poisonMaxDps": 220,
+   "poisonSpeedDecreasePercent": 40,
+   "poisonAttackRateDecreasePercent": 55,
+   "hitpoints": 360,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 115,
+   "damagePerHit": 69,
+   "dpsVsFavorite": 460,
+   "poisonMaxDps": 260,
+   "poisonSpeedDecreasePercent": 42,
+   "poisonAttackRateDecreasePercent": 60,
+   "hitpoints": 400,
+   "researchCost": 57500,
+   "researchSeconds": 432000,
+   "researchTimeText": "5d",
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 3,
+   "dps": 125,
+   "damagePerHit": 75,
+   "dpsVsFavorite": 500,
+   "poisonMaxDps": 280,
+   "poisonSpeedDecreasePercent": 44,
+   "poisonAttackRateDecreasePercent": 65,
+   "hitpoints": 440,
+   "researchCost": 90000,
+   "researchSeconds": 604800,
+   "researchTimeText": "7d",
+   "laboratoryLevel": 11
+  },
+  {
+   "level": 4,
+   "dps": 135,
+   "damagePerHit": 81,
+   "dpsVsFavorite": 540,
+   "poisonMaxDps": 300,
+   "poisonSpeedDecreasePercent": 46,
+   "poisonAttackRateDecreasePercent": 68,
+   "hitpoints": 500,
+   "researchCost": 370000,
+   "researchSeconds": 1339200,
+   "researchTimeText": "15d 12h",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 360,
+   "dps": 105,
+   "damagePerHit": 63,
+   "dpsVsFavorite": 420,
+   "poisonSpellLevel": 5,
+   "poisonMaxDps": 220,
+   "poisonSpeedDecreasePercent": 40,
+   "poisonAttackRateDecreasePercent": 55
+  },
+  {
+   "level": 2,
+   "hitpoints": 400,
+   "dps": 115,
+   "damagePerHit": 69,
+   "researchCost": 57500,
+   "researchSeconds": 432000,
+   "laboratoryLevel": 10,
+   "dpsVsFavorite": 460,
+   "poisonSpellLevel": 6,
+   "poisonMaxDps": 260,
+   "poisonSpeedDecreasePercent": 42,
+   "poisonAttackRateDecreasePercent": 60
+  },
+  {
+   "level": 3,
+   "hitpoints": 440,
+   "dps": 125,
+   "damagePerHit": 75,
+   "researchCost": 90000,
+   "researchSeconds": 604800,
+   "laboratoryLevel": 11,
+   "dpsVsFavorite": 500,
+   "poisonSpellLevel": 7,
+   "poisonMaxDps": 280,
+   "poisonSpeedDecreasePercent": 44,
+   "poisonAttackRateDecreasePercent": 65
+  },
+  {
+   "level": 4,
+   "hitpoints": 500,
+   "dps": 135,
+   "damagePerHit": 81,
+   "researchCost": 370000,
+   "researchSeconds": 1339200,
+   "laboratoryLevel": 16,
+   "dpsVsFavorite": 540,
+   "poisonSpellLevel": 8,
+   "poisonMaxDps": 300,
+   "poisonSpeedDecreasePercent": 46,
+   "poisonAttackRateDecreasePercent": 68
+  }
+ ],
+ "comparison": {
+  "checked": 45,
+  "matched": 44
+ },
+ "mismatches": [
+  {
+   "field": "movementSpeedWiki",
+   "level": null,
+   "wiki": 32,
+   "client": 24,
+   "clientColumn": "characters.Speed=300 -> /12.5 = 24",
+   "note": "Troop Movement Speed page lists 24 / internal 300, matching the client"
+  }
+ ],
+ "ambiguities": [
+  "Movement speed: troop page says 32 (\"same as Goblins/Minions/Miners\"); client Speed=300 (24) and the Troop Movement Speed page (24 / 300) disagree with the troop page.",
+  "Her poison reuses the Poison spell rows (levels 5-8), which also carry HeroDamageMultiplier=5 and GuardianDamageMultiplier=30; the wiki does not say whether those scale her poison damage."
+ ]
+}

@@ -1,0 +1,605 @@
+{
+ "retrieved": "2026-09-15",
+ "wiki": "https://clashofclans.fandom.com",
+ "clientVersion": "18.400.21",
+ "entities": [
+  {
+   "slug": "barbarian",
+   "title": "Barbarian",
+   "url": "https://clashofclans.fandom.com/wiki/Barbarian/Home_Village",
+   "revid": 624623,
+   "clientName": "Barbarian",
+   "category": "elixir-troop",
+   "summary": "Cheap single-target melee ground troop; no ability.",
+   "files": [
+    "barbarian.md",
+    "barbarian.json"
+   ]
+  },
+  {
+   "slug": "archer",
+   "title": "Archer",
+   "url": "https://clashofclans.fandom.com/wiki/Archer",
+   "revid": 624208,
+   "clientName": "Archer",
+   "category": "elixir-troop",
+   "summary": "Single-target ranged (3.5 tiles) ground troop that hits ground and air.",
+   "files": [
+    "archer.md",
+    "archer.json"
+   ]
+  },
+  {
+   "slug": "giant",
+   "title": "Giant",
+   "url": "https://clashofclans.fandom.com/wiki/Giant",
+   "revid": 625274,
+   "clientName": "Giant",
+   "category": "elixir-troop",
+   "summary": "Slow defense-targeting melee tank.",
+   "files": [
+    "giant.md",
+    "giant.json"
+   ]
+  },
+  {
+   "slug": "goblin",
+   "title": "Goblin",
+   "url": "https://clashofclans.fandom.com/wiki/Goblin",
+   "revid": 625104,
+   "clientName": "Goblin",
+   "category": "elixir-troop",
+   "summary": "Fast resource-targeting melee troop; x2 damage to resource buildings incl. Town Hall and Clan Castle.",
+   "files": [
+    "goblin.md",
+    "goblin.json"
+   ]
+  },
+  {
+   "slug": "wall-breaker",
+   "title": "Wall Breaker",
+   "url": "https://clashofclans.fandom.com/wiki/Wall_Breaker",
+   "revid": 624864,
+   "clientName": "Wall Breaker",
+   "category": "elixir-troop",
+   "summary": "Suicide bomber that targets walls; x40 wall damage on attack and on death.",
+   "files": [
+    "wall-breaker.md",
+    "wall-breaker.json"
+   ]
+  },
+  {
+   "slug": "balloon",
+   "title": "Balloon",
+   "url": "https://clashofclans.fandom.com/wiki/Balloon",
+   "revid": 624220,
+   "clientName": "Balloon",
+   "category": "elixir-troop",
+   "summary": "Flying defense-targeting bomber; 1.2-tile ground splash, death blast after 416 ms.",
+   "files": [
+    "balloon.md",
+    "balloon.json"
+   ]
+  },
+  {
+   "slug": "wizard",
+   "title": "Wizard",
+   "url": "https://clashofclans.fandom.com/wiki/Wizard",
+   "revid": 625289,
+   "clientName": "Wizard",
+   "category": "elixir-troop",
+   "summary": "Ranged 0.3-tile splash troop hitting ground and air.",
+   "files": [
+    "wizard.md",
+    "wizard.json"
+   ]
+  },
+  {
+   "slug": "healer",
+   "title": "Healer",
+   "url": "https://clashofclans.fandom.com/wiki/Healer",
+   "revid": 624772,
+   "clientName": "Healer",
+   "category": "elixir-troop",
+   "summary": "Flying healer of ground units (1.5-tile splash heal); reduced Hero healing; 7-healer stacking cap.",
+   "files": [
+    "healer.md",
+    "healer.json"
+   ]
+  },
+  {
+   "slug": "dragon",
+   "title": "Dragon",
+   "url": "https://clashofclans.fandom.com/wiki/Dragon",
+   "revid": 624759,
+   "clientName": "Dragon",
+   "category": "elixir-troop",
+   "summary": "Flying ranged splash attacker hitting ground and air.",
+   "files": [
+    "dragon.md",
+    "dragon.json"
+   ]
+  },
+  {
+   "slug": "pekka",
+   "title": "P.E.K.K.A",
+   "url": "https://clashofclans.fandom.com/wiki/P.E.K.K.A",
+   "revid": 625276,
+   "clientName": "PEKKA",
+   "category": "elixir-troop",
+   "summary": "Slow, heavy single-target melee troop too heavy to be sprung outright.",
+   "files": [
+    "pekka.md",
+    "pekka.json"
+   ]
+  },
+  {
+   "slug": "baby-dragon",
+   "title": "Baby Dragon",
+   "url": "https://clashofclans.fandom.com/wiki/Baby_Dragon/Home_Village",
+   "revid": 624765,
+   "clientName": "Baby Dragon",
+   "category": "elixir-troop",
+   "summary": "Flying splash troop that enrages (+100% damage, +50% attack rate) with no allied flyer within 4.5 tiles.",
+   "files": [
+    "baby-dragon.md",
+    "baby-dragon.json"
+   ]
+  },
+  {
+   "slug": "miner",
+   "title": "Miner",
+   "url": "https://clashofclans.fandom.com/wiki/Miner",
+   "revid": 624732,
+   "clientName": "Miner",
+   "category": "elixir-troop",
+   "summary": "Burrows underground between targets (untargetable, ignores walls and traps).",
+   "files": [
+    "miner.md",
+    "miner.json"
+   ]
+  },
+  {
+   "slug": "electro-dragon",
+   "title": "Electro Dragon",
+   "url": "https://clashofclans.fandom.com/wiki/Electro_Dragon",
+   "revid": 625283,
+   "clientName": "Electro Dragon",
+   "category": "elixir-troop",
+   "summary": "Flying chain-lightning attacker (5 targets, -20% per jump); 6 lightning strikes on death.",
+   "files": [
+    "electro-dragon.md",
+    "electro-dragon.json"
+   ]
+  },
+  {
+   "slug": "yeti",
+   "title": "Yeti",
+   "url": "https://clashofclans.fandom.com/wiki/Yeti",
+   "revid": 624065,
+   "clientName": "Yeti",
+   "category": "elixir-troop",
+   "summary": "Melee bruiser that releases 1 Yetimite per 600 damage taken and the rest on death.",
+   "files": [
+    "yeti.md",
+    "yeti.json"
+   ]
+  },
+  {
+   "slug": "dragon-rider",
+   "title": "Dragon Rider",
+   "url": "https://clashofclans.fandom.com/wiki/Dragon_Rider",
+   "revid": 625318,
+   "clientName": "Dragon Rider",
+   "category": "elixir-troop",
+   "summary": "Flying defense-targeting ranged unit with a 2-tile death explosion.",
+   "files": [
+    "dragon-rider.md",
+    "dragon-rider.json"
+   ]
+  },
+  {
+   "slug": "electro-titan",
+   "title": "Electro Titan",
+   "url": "https://clashofclans.fandom.com/wiki/Electro_Titan",
+   "revid": 624602,
+   "clientName": "Electro Titan",
+   "category": "elixir-troop",
+   "summary": "Tank with a 1.25-tile whip and a permanent 3.5-tile damage aura (buildings and troops, not walls).",
+   "files": [
+    "electro-titan.md",
+    "electro-titan.json"
+   ]
+  },
+  {
+   "slug": "root-rider",
+   "title": "Root Rider",
+   "url": "https://clashofclans.fandom.com/wiki/Root_Rider",
+   "revid": 625331,
+   "clientName": "Root Rider",
+   "category": "elixir-troop",
+   "summary": "Defense-targeting tank that rides over walls while a wall-only aura destroys them; cannot be sprung.",
+   "files": [
+    "root-rider.md",
+    "root-rider.json"
+   ]
+  },
+  {
+   "slug": "thrower",
+   "title": "Thrower",
+   "url": "https://clashofclans.fandom.com/wiki/Thrower",
+   "revid": 625288,
+   "clientName": "Thrower",
+   "category": "elixir-troop",
+   "summary": "Long-range (6 tiles) single-target ground troop hitting ground and air.",
+   "files": [
+    "thrower.md",
+    "thrower.json"
+   ]
+  },
+  {
+   "slug": "meteor-golem",
+   "title": "Meteor Golem",
+   "url": "https://clashofclans.fandom.com/wiki/Meteor_Golem",
+   "revid": 624499,
+   "clientName": "Meteor Golem",
+   "category": "elixir-troop",
+   "summary": "Throws one of its two Meteormites (5x vs walls), splitting and later re-merging.",
+   "files": [
+    "meteor-golem.md",
+    "meteor-golem.json"
+   ]
+  },
+  {
+   "slug": "minion",
+   "title": "Minion",
+   "url": "https://clashofclans.fandom.com/wiki/Minion",
+   "revid": 625278,
+   "clientName": "Minion",
+   "category": "dark-troop",
+   "summary": "Fast flying ranged troop immune to Seeking Air Mines.",
+   "files": [
+    "minion.md",
+    "minion.json"
+   ]
+  },
+  {
+   "slug": "hog-rider",
+   "title": "Hog Rider",
+   "url": "https://clashofclans.fandom.com/wiki/Hog_Rider",
+   "revid": 624385,
+   "clientName": "Hog Rider",
+   "category": "dark-troop",
+   "summary": "Fast defense-targeting melee troop that jumps walls.",
+   "files": [
+    "hog-rider.md",
+    "hog-rider.json"
+   ]
+  },
+  {
+   "slug": "valkyrie",
+   "title": "Valkyrie",
+   "url": "https://clashofclans.fandom.com/wiki/Valkyrie",
+   "revid": 624089,
+   "clientName": "Valkyrie",
+   "category": "dark-troop",
+   "summary": "Spinning 1-tile self-centred splash melee troop.",
+   "files": [
+    "valkyrie.md",
+    "valkyrie.json"
+   ]
+  },
+  {
+   "slug": "golem",
+   "title": "Golem",
+   "url": "https://clashofclans.fandom.com/wiki/Golem",
+   "revid": 625101,
+   "clientName": "Golem",
+   "category": "dark-troop",
+   "summary": "Defense-targeting tank; death blast and 2-4 Golemites on death.",
+   "files": [
+    "golem.md",
+    "golem.json"
+   ]
+  },
+  {
+   "slug": "witch",
+   "title": "Witch",
+   "url": "https://clashofclans.fandom.com/wiki/Witch",
+   "revid": 624601,
+   "clientName": "Witch",
+   "category": "dark-troop",
+   "summary": "Ranged splash troop summoning Skeletons every 7 s up to a live cap.",
+   "files": [
+    "witch.md",
+    "witch.json"
+   ]
+  },
+  {
+   "slug": "lava-hound",
+   "title": "Lava Hound",
+   "url": "https://clashofclans.fandom.com/wiki/Lava_Hound",
+   "revid": 624357,
+   "clientName": "Lava Hound",
+   "category": "dark-troop",
+   "summary": "Flying Air-Defense-targeting tank; death blast and 8-22 Lava Pups.",
+   "files": [
+    "lava-hound.md",
+    "lava-hound.json"
+   ]
+  },
+  {
+   "slug": "bowler",
+   "title": "Bowler",
+   "url": "https://clashofclans.fandom.com/wiki/Bowler",
+   "revid": 625333,
+   "clientName": "Bowler",
+   "category": "dark-troop",
+   "summary": "Throws a bouncing boulder that splashes twice in a line.",
+   "files": [
+    "bowler.md",
+    "bowler.json"
+   ]
+  },
+  {
+   "slug": "ice-golem",
+   "title": "Ice Golem",
+   "url": "https://clashofclans.fandom.com/wiki/Ice_Golem",
+   "revid": 624194,
+   "clientName": "Ice Golem",
+   "category": "dark-troop",
+   "summary": "Defense-targeting tank that slows what it hits and freezes a 7.5-tile area on death.",
+   "files": [
+    "ice-golem.md",
+    "ice-golem.json"
+   ]
+  },
+  {
+   "slug": "headhunter",
+   "title": "Headhunter",
+   "url": "https://clashofclans.fandom.com/wiki/Headhunter",
+   "revid": 625334,
+   "clientName": "Headhunter",
+   "category": "dark-troop",
+   "summary": "Hero-hunting wall-jumper with x4 Hero damage and slowing poison.",
+   "files": [
+    "headhunter.md",
+    "headhunter.json"
+   ]
+  },
+  {
+   "slug": "apprentice-warden",
+   "title": "Apprentice Warden",
+   "url": "https://clashofclans.fandom.com/wiki/Apprentice_Warden",
+   "revid": 624360,
+   "clientName": "Apprentice Warden",
+   "category": "dark-troop",
+   "summary": "Wall-hopping ranged support granting +20-26% max HP in 7 tiles; follows groups.",
+   "files": [
+    "apprentice-warden.md",
+    "apprentice-warden.json"
+   ]
+  },
+  {
+   "slug": "druid",
+   "title": "Druid",
+   "url": "https://clashofclans.fandom.com/wiki/Druid",
+   "revid": 624267,
+   "clientName": "Druid",
+   "category": "dark-troop",
+   "summary": "Chain healer (4 targets, ground and air) that becomes a Bear after 30 s or on death.",
+   "files": [
+    "druid.md",
+    "druid.json"
+   ]
+  },
+  {
+   "slug": "furnace",
+   "title": "Furnace",
+   "url": "https://clashofclans.fandom.com/wiki/Furnace",
+   "revid": 625281,
+   "clientName": "Furnace",
+   "category": "dark-troop",
+   "summary": "Stationary 60-second spawner releasing 19-22 Firemites on a timer.",
+   "files": [
+    "furnace.md",
+    "furnace.json"
+   ]
+  },
+  {
+   "slug": "ruin-witch",
+   "title": "Ruin Witch",
+   "url": "https://clashofclans.fandom.com/wiki/Ruin_Witch",
+   "revid": 625328,
+   "clientName": "Ruin Witch",
+   "category": "dark-troop",
+   "summary": "Non-attacking summoner that vacuums rubble to create Ruin Knights (wiki 10 max, client 8).",
+   "files": [
+    "ruin-witch.md",
+    "ruin-witch.json"
+   ]
+  },
+  {
+   "slug": "yeti-yetimite",
+   "title": "Yetimite",
+   "url": "https://clashofclans.fandom.com/wiki/Yeti/Yetimite",
+   "revid": 623075,
+   "clientName": "Yetimite",
+   "category": "secondary-unit",
+   "summary": "Wall-jumping kamikaze leaper: x4 vs defenses, x0.5 vs resources; ignores traps.",
+   "files": [
+    "yeti-yetimite.md",
+    "yeti-yetimite.json"
+   ]
+  },
+  {
+   "slug": "meteor-golem-meteormite",
+   "title": "Meteormite",
+   "url": "https://clashofclans.fandom.com/wiki/Meteor_Golem/Meteormite",
+   "revid": 625266,
+   "clientName": "Meteormite",
+   "category": "secondary-unit",
+   "summary": "Half of a Meteor Golem; melee, wall-jumping, merges back into a golem.",
+   "files": [
+    "meteor-golem-meteormite.md",
+    "meteor-golem-meteormite.json"
+   ]
+  },
+  {
+   "slug": "golem-golemite",
+   "title": "Golemite",
+   "url": "https://clashofclans.fandom.com/wiki/Golem/Golemite",
+   "revid": 623847,
+   "clientName": "Golemite",
+   "category": "secondary-unit",
+   "summary": "Small defense-targeting Golem with its own death blast.",
+   "files": [
+    "golem-golemite.md",
+    "golem-golemite.json"
+   ]
+  },
+  {
+   "slug": "witch-skeleton",
+   "title": "Skeleton (Witch)",
+   "url": "https://clashofclans.fandom.com/wiki/Witch/Skeleton",
+   "revid": 624632,
+   "clientName": "Skeleton",
+   "category": "secondary-unit",
+   "summary": "Weak melee summon that neither triggers traps nor opens the Clan Castle.",
+   "files": [
+    "witch-skeleton.md",
+    "witch-skeleton.json"
+   ]
+  },
+  {
+   "slug": "lava-hound-lava-pup",
+   "title": "Lava Pup",
+   "url": "https://clashofclans.fandom.com/wiki/Lava_Hound/Lava_Pup",
+   "revid": 620375,
+   "clientName": "Lava Pup",
+   "category": "secondary-unit",
+   "summary": "Weak flying ranged pup released by a Lava Hound; fixed stats.",
+   "files": [
+    "lava-hound-lava-pup.md",
+    "lava-hound-lava-pup.json"
+   ]
+  },
+  {
+   "slug": "druid-bear",
+   "title": "Bear (Druid form)",
+   "url": "https://clashofclans.fandom.com/wiki/Druid/Bear",
+   "revid": 623243,
+   "clientName": "Bear",
+   "category": "secondary-unit",
+   "summary": "Druid's defense-targeting melee form; cannot jump walls.",
+   "files": [
+    "druid-bear.md",
+    "druid-bear.json"
+   ]
+  },
+  {
+   "slug": "furnace-firemite",
+   "title": "Firemite",
+   "url": "https://clashofclans.fandom.com/wiki/Furnace/Firemite",
+   "revid": 625356,
+   "clientName": "Firemite Spawn",
+   "category": "secondary-unit",
+   "summary": "Wall-jumping leaper that leaves a 10-second burning pool; ignores traps.",
+   "files": [
+    "furnace-firemite.md",
+    "furnace-firemite.json"
+   ]
+  },
+  {
+   "slug": "ruin-witch-ruin-knight",
+   "title": "Ruin Knight",
+   "url": "https://clashofclans.fandom.com/wiki/Ruin_Witch/Ruin_Knight",
+   "revid": 625189,
+   "clientName": "Ruin Knight",
+   "category": "secondary-unit",
+   "summary": "Melee knight from rubble with x3 wall damage; client still has 80 HP/s decay.",
+   "files": [
+    "ruin-witch-ruin-knight.md",
+    "ruin-witch-ruin-knight.json"
+   ]
+  },
+  {
+   "slug": "troop-movement-speed",
+   "title": "Troop Movement Speed",
+   "url": "https://clashofclans.fandom.com/wiki/Troop_Movement_Speed",
+   "revid": 624844,
+   "clientName": "characters.Speed",
+   "category": "mechanic",
+   "summary": "In-game speed = round(internal/12.5); tiles per second = internal/100 (8 in-game points per tile/s).",
+   "files": [
+    "troop-movement-speed.md",
+    "troop-movement-speed.json"
+   ]
+  },
+  {
+   "slug": "preferred-target",
+   "title": "Template:PreferredTarget",
+   "url": "https://clashofclans.fandom.com/wiki/Template:PreferredTarget",
+   "revid": 619579,
+   "clientName": "characters.PreferedTargetBuildingClass",
+   "category": "mechanic",
+   "summary": "Favorite-target behaviours (None, Defenses, Resources, Walls, Air Defense, Heroes, Healing, transform) and their client columns.",
+   "files": [
+    "preferred-target.md",
+    "preferred-target.json"
+   ]
+  },
+  {
+   "slug": "troops",
+   "title": "Troops (Army)",
+   "url": "https://clashofclans.fandom.com/wiki/Army",
+   "revid": 623017,
+   "clientName": "characters (ProductionBuilding)",
+   "category": "mechanic",
+   "summary": "Home Village roster: 19 Elixir + 13 Dark Elixir troops; lists match the client.",
+   "files": [
+    "troops.md",
+    "troops.json"
+   ]
+  },
+  {
+   "slug": "army-camp",
+   "title": "Army Camp/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Army_Camp/Home_Village",
+   "revid": 624555,
+   "clientName": "buildings.Army Camp",
+   "category": "mechanic",
+   "summary": "Army capacity per Army Camp level (20 to 88) and how housing space is counted.",
+   "files": [
+    "army-camp.md",
+    "army-camp.json"
+   ]
+  },
+  {
+   "slug": "laboratory-upgrade-chart",
+   "title": "Laboratory/Upgrade Chart",
+   "url": "https://clashofclans.fandom.com/wiki/Laboratory/Upgrade_Chart",
+   "revid": 623672,
+   "clientName": "characters research columns",
+   "category": "mechanic",
+   "summary": "Research cost/time/lab level per troop level; 818 of 819 chart values equal the client.",
+   "files": [
+    "laboratory-upgrade-chart.md",
+    "laboratory-upgrade-chart.json"
+   ]
+  },
+  {
+   "slug": "barracks",
+   "title": "Barracks / Dark Barracks",
+   "url": "https://clashofclans.fandom.com/wiki/Barracks",
+   "revid": 625112,
+   "clientName": "buildings.Barracks, buildings.Dark Barracks",
+   "category": "mechanic",
+   "summary": "Barracks level -> unlocked troop -> Town Hall requirement for all 32 troops.",
+   "files": [
+    "barracks.md",
+    "barracks.json"
+   ]
+  }
+ ]
+}

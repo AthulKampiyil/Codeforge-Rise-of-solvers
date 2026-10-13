@@ -1,0 +1,107 @@
+{
+  "title": "Troop Launcher",
+  "url": "https://clashofclans.fandom.com/wiki/Troop_Launcher",
+  "revid": 625335,
+  "clientName": "Troop Launcher",
+  "category": "siege-machine",
+  "retrieved": "2026-09-15",
+  "contentPage": "Troop Launcher",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "housingSpace": 1,
+    "attackType": "Heal Splash; 1 Tiles (Ground Only)",
+    "movementSpeed": 0,
+    "healingPerSecond": 1,
+    "healingPerHit": 6,
+    "attackSpeedSeconds": 6,
+    "workshopLevel": 8
+  },
+  "levels": [
+    {
+      "level": 1,
+      "hitpoints": 2000,
+      "lifetimeSeconds": 80,
+      "barrelCount": 5,
+      "barbarians": 2,
+      "archers": 3,
+      "giants": 1,
+      "wallBreakers": 1,
+      "troopLevel": 9,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "hitpoints": 2200,
+      "lifetimeSeconds": 88,
+      "barrelCount": 5,
+      "barbarians": 2,
+      "archers": 3,
+      "giants": 1,
+      "wallBreakers": 2,
+      "troopLevel": 10,
+      "researchCost": 8500000,
+      "researchTimeHours": 144,
+      "laboratoryLevel": 14
+    },
+    {
+      "level": 3,
+      "hitpoints": 2400,
+      "lifetimeSeconds": 96,
+      "barrelCount": 6,
+      "barbarians": 2,
+      "archers": 4,
+      "giants": 1,
+      "wallBreakers": 2,
+      "troopLevel": 11,
+      "researchCost": 10000000,
+      "researchTimeHours": 192,
+      "laboratoryLevel": 14
+    },
+    {
+      "level": 4,
+      "hitpoints": 2600,
+      "lifetimeSeconds": 104,
+      "barrelCount": 7,
+      "barbarians": 2,
+      "archers": 4,
+      "giants": 1,
+      "wallBreakers": 2,
+      "troopLevel": 12,
+      "researchCost": 17000000,
+      "researchTimeHours": 216,
+      "laboratoryLevel": 15
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "barrels",
+      "client": "`AttackCount` 5,5,6,7; `AttackSpeed` 6000; `AttackRange` 8000"
+    },
+    {
+      "mechanic": "barrel content",
+      "client": "`Projectile` CommandTower Barrel1..4 -> `HitSpell` TroopCatapultSummonTroopNew level 1..4 (`HasBunkerTroops` TRUE = one CC troop, `FixedTravelTime` 2200)"
+    },
+    {
+      "mechanic": "troops",
+      "client": "TroopCatapultSummonTroopNew `SummonTroop` Giant;Barbarian;Archer;Wall Breaker with `UnitsToSpawn` and `SpawnUpgradeLevel` 9..12, `SpawnDuration` 200;1000;500(750);1200"
+    },
+    {
+      "mechanic": "decay",
+      "client": "`LoseHpPerTick` 25 / `LoseHpInterval` 1000"
+    },
+    {
+      "mechanic": "heal",
+      "client": "`DPS` -1 (x6 s = 6 per shot), `DamageRadius` 1"
+    },
+    {
+      "mechanic": "abilities",
+      "client": "`SpecialAbilities` SiegeMachineCommandTowerSelfDestruct + 'Command Tower Mortar Mode N' (`ActiveAfterTime` 800, `InfoScreenAttribute1` 150)"
+    }
+  ]
+}

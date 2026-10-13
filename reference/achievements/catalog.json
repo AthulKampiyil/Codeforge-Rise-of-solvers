@@ -1,0 +1,1447 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "logic/achievements.csv": "491aba6ac0995d8c42ff826feff9a56df648a4b6cf28e24526e0e48140bef240",
+    "localization/texts.csv": "affdf43926df044cb3c09d833b07365aa01ea99985771afa5fa0dd926f36c569",
+    "localization/texts_patch.csv": "41630dc201c25e41048e8f7a2ca2051d9724186d6e0882f61cfbd8aa3960622e"
+  },
+  "scope": "Current Home Village achievements (UIGroup 0, not deprecated), tiers in order.",
+  "achievements": [
+    {
+      "id": "account_bound_account_bound",
+      "title": "Keep Your Account Safe!",
+      "action": "account_bound",
+      "data": null,
+      "dataLevel": null,
+      "priority": 100,
+      "completed": "Completed!",
+      "tiers": [
+        {
+          "count": 1,
+          "xp": 100,
+          "gems": 50,
+          "info": "Protect your Village by connecting to a social network"
+        }
+      ]
+    },
+    {
+      "id": "account_bound_scid_bound",
+      "title": "Keep Your Account Safe!",
+      "action": "scid_bound",
+      "data": null,
+      "dataLevel": null,
+      "priority": 100,
+      "completed": "Completed!",
+      "tiers": [
+        {
+          "count": 1,
+          "xp": 100,
+          "gems": 50,
+          "info": "Connect your account to Supercell ID for safe keeping."
+        }
+      ]
+    },
+    {
+      "id": "town_hall",
+      "title": "Bigger & Better",
+      "action": "upgrade",
+      "data": "Town Hall",
+      "dataLevel": null,
+      "priority": 99,
+      "completed": "Current Town Hall level: <value>",
+      "tiers": [
+        {
+          "count": 3,
+          "xp": 10,
+          "gems": 5,
+          "info": "Upgrade Town Hall to level 3"
+        },
+        {
+          "count": 5,
+          "xp": 100,
+          "gems": 10,
+          "info": "Upgrade Town Hall to level 5"
+        },
+        {
+          "count": 8,
+          "xp": 1000,
+          "gems": 20,
+          "info": "Upgrade Town Hall to level 8"
+        }
+      ]
+    },
+    {
+      "id": "unit_unlock",
+      "title": "Discover New Troops",
+      "action": "unit_unlock",
+      "data": null,
+      "dataLevel": null,
+      "priority": 98,
+      "completed": null,
+      "tiers": [
+        {
+          "count": 1,
+          "unit": "Archer",
+          "xp": 10,
+          "gems": 5,
+          "info": "Unlock Archer in the Barracks"
+        },
+        {
+          "count": 1,
+          "unit": "Wall Breaker",
+          "xp": 100,
+          "gems": 10,
+          "info": "Unlock Wall Breaker in the Barracks"
+        },
+        {
+          "count": 1,
+          "unit": "Dragon",
+          "xp": 1000,
+          "gems": 20,
+          "info": "Unlock Dragon in the Barracks"
+        }
+      ]
+    },
+    {
+      "id": "goldstorage",
+      "title": "Bigger Coffers",
+      "action": "upgrade",
+      "data": "Gold Storage",
+      "dataLevel": null,
+      "priority": 96,
+      "completed": "Highest Gold Storage level: <value>",
+      "tiers": [
+        {
+          "count": 2,
+          "xp": 10,
+          "gems": 2,
+          "info": "Upgrade a Gold Storage to level 2"
+        },
+        {
+          "count": 5,
+          "xp": 100,
+          "gems": 5,
+          "info": "Upgrade a Gold Storage to level 5"
+        },
+        {
+          "count": 10,
+          "xp": 1000,
+          "gems": 10,
+          "info": "Upgrade a Gold Storage to level 10"
+        }
+      ]
+    },
+    {
+      "id": "loot_gold",
+      "title": "Gold Grab",
+      "action": "loot",
+      "data": "Gold",
+      "dataLevel": null,
+      "priority": 95,
+      "completed": "Total Gold looted: <value>",
+      "tiers": [
+        {
+          "count": 20000,
+          "xp": 10,
+          "gems": 5,
+          "info": "Steal 20,000 Gold"
+        },
+        {
+          "count": 1000000,
+          "xp": 100,
+          "gems": 10,
+          "info": "Steal 1,000,000 Gold"
+        },
+        {
+          "count": 100000000,
+          "xp": 1000,
+          "gems": 20,
+          "info": "Steal 100,000,000 Gold"
+        }
+      ]
+    },
+    {
+      "id": "loot_elixir",
+      "title": "Elixir Escapade",
+      "action": "loot",
+      "data": "Elixir",
+      "dataLevel": null,
+      "priority": 94,
+      "completed": "Total Elixir looted: <value>",
+      "tiers": [
+        {
+          "count": 20000,
+          "xp": 10,
+          "gems": 5,
+          "info": "Steal 20,000 elixir"
+        },
+        {
+          "count": 1000000,
+          "xp": 100,
+          "gems": 10,
+          "info": "Steal 1,000,000 elixir"
+        },
+        {
+          "count": 100000000,
+          "xp": 1000,
+          "gems": 20,
+          "info": "Steal 100,000,000 elixir"
+        }
+      ]
+    },
+    {
+      "id": "loot_dark_elixir",
+      "title": "Heroic Heist",
+      "action": "loot",
+      "data": "DarkElixir",
+      "dataLevel": null,
+      "priority": 93,
+      "completed": "Total Dark Elixir looted: <value>",
+      "tiers": [
+        {
+          "count": 20000,
+          "xp": 10,
+          "gems": 5,
+          "info": "Steal 20,000 Dark Elixir"
+        },
+        {
+          "count": 250000,
+          "xp": 100,
+          "gems": 10,
+          "info": "Steal 250,000 Dark Elixir"
+        },
+        {
+          "count": 1000000,
+          "xp": 1000,
+          "gems": 20,
+          "info": "Steal 1,000,000 Dark Elixir"
+        }
+      ]
+    },
+    {
+      "id": "season_challenge_points",
+      "title": "Well Seasoned",
+      "action": "season_challenge_points",
+      "data": null,
+      "dataLevel": null,
+      "priority": 91,
+      "completed": "Total Season Challenges points: <value>",
+      "tiers": [
+        {
+          "count": 5000,
+          "xp": 20,
+          "gems": 50,
+          "info": "Earn 5,000 points in Season Challenges"
+        },
+        {
+          "count": 15000,
+          "xp": 200,
+          "gems": 100,
+          "info": "Earn 15,000 points in Season Challenges"
+        },
+        {
+          "count": 50000,
+          "xp": 2000,
+          "gems": 250,
+          "info": "Earn 50,000 points in Season Challenges"
+        }
+      ]
+    },
+    {
+      "id": "clear_obstacles",
+      "title": "Nice and Tidy",
+      "action": "clear_obstacles",
+      "data": null,
+      "dataLevel": null,
+      "priority": 90,
+      "completed": "Total obstacles removed: <value>",
+      "tiers": [
+        {
+          "count": 5,
+          "xp": 10,
+          "gems": 5,
+          "info": "Remove 5 obstacles (trees, rocks, bushes)"
+        },
+        {
+          "count": 50,
+          "xp": 100,
+          "gems": 10,
+          "info": "Remove 50 obstacles (trees, rocks, bushes)"
+        },
+        {
+          "count": 500,
+          "xp": 1000,
+          "gems": 20,
+          "info": "Remove 500 obstacles (trees, rocks, bushes)"
+        }
+      ]
+    },
+    {
+      "id": "castle",
+      "title": "Empire Builder",
+      "action": "upgrade",
+      "data": "Clan Castle",
+      "dataLevel": null,
+      "priority": 89,
+      "completed": "Current Clan Castle level: <value>",
+      "tiers": [
+        {
+          "count": 1,
+          "xp": 10,
+          "gems": 5,
+          "info": "Rebuild the Clan Castle"
+        },
+        {
+          "count": 2,
+          "xp": 100,
+          "gems": 10,
+          "info": "Upgrade Clan Castle to level 2"
+        },
+        {
+          "count": 4,
+          "xp": 1000,
+          "gems": 20,
+          "info": "Upgrade Clan Castle to level 4"
+        }
+      ]
+    },
+    {
+      "id": "war_loot",
+      "title": "Clan War Wealth",
+      "action": "war_loot",
+      "data": null,
+      "dataLevel": null,
+      "priority": 89,
+      "completed": "Total Gold collected in Clan War bonuses: <value>",
+      "tiers": [
+        {
+          "count": 800000,
+          "xp": 100,
+          "gems": 25,
+          "info": "Collect 800,000 Gold from the Clan Castle"
+        },
+        {
+          "count": 15000000,
+          "xp": 500,
+          "gems": 100,
+          "info": "Collect 15,000,000 Gold from the Clan Castle"
+        },
+        {
+          "count": 100000000,
+          "xp": 5000,
+          "gems": 500,
+          "info": "Collect 100,000,000 Gold from the Clan Castle"
+        }
+      ]
+    },
+    {
+      "id": "donate_units",
+      "title": "Friend in Need",
+      "action": "donate_units",
+      "data": null,
+      "dataLevel": null,
+      "priority": 88,
+      "completed": "Total capacity donated: <value>",
+      "tiers": [
+        {
+          "count": 100,
+          "xp": 10,
+          "gems": 5,
+          "info": "Donate 100 capacity worth of reinforcements to Clanmates"
+        },
+        {
+          "count": 5000,
+          "xp": 100,
+          "gems": 25,
+          "info": "Donate 5,000 capacity worth of reinforcements to Clanmates"
+        },
+        {
+          "count": 25000,
+          "xp": 1000,
+          "gems": 250,
+          "info": "Donate 25,000 capacity worth of reinforcements to Clanmates"
+        }
+      ]
+    },
+    {
+      "id": "donate_sieges",
+      "title": "Siege Sharer",
+      "action": "donate_sieges",
+      "data": null,
+      "dataLevel": null,
+      "priority": 87,
+      "completed": "Total Siege Machines donated: <value>",
+      "tiers": [
+        {
+          "count": 50,
+          "xp": 20,
+          "gems": 20,
+          "info": "Donate 50 Siege Machines"
+        },
+        {
+          "count": 1000,
+          "xp": 200,
+          "gems": 100,
+          "info": "Donate 1,000 Siege Machines"
+        },
+        {
+          "count": 5000,
+          "xp": 2000,
+          "gems": 500,
+          "info": "Donate 5,000 Siege Machines"
+        }
+      ]
+    },
+    {
+      "id": "spell_donation",
+      "title": "Sharing is caring",
+      "action": "donate_spells",
+      "data": null,
+      "dataLevel": null,
+      "priority": 87,
+      "completed": "Total Spell capacity donated: <value>",
+      "tiers": [
+        {
+          "count": 100,
+          "xp": 20,
+          "gems": 20,
+          "info": "Donate 100 Spell storage capacity worth of Spells"
+        },
+        {
+          "count": 2000,
+          "xp": 200,
+          "gems": 100,
+          "info": "Donate 2,000 Spell storage capacity worth of Spells"
+        },
+        {
+          "count": 10000,
+          "xp": 2000,
+          "gems": 500,
+          "info": "Donate 10,000 Spell storage capacity worth of Spells"
+        }
+      ]
+    },
+    {
+      "id": "war_stars",
+      "title": "War Hero",
+      "action": "war_stars",
+      "data": null,
+      "dataLevel": null,
+      "priority": 85,
+      "completed": "Total Stars scored for clan in Clan War battles: <value>",
+      "tiers": [
+        {
+          "count": 10,
+          "xp": 50,
+          "gems": 50,
+          "info": "Score 10 Stars for your clan in Clan War battles"
+        },
+        {
+          "count": 150,
+          "xp": 500,
+          "gems": 200,
+          "info": "Score 150 Stars for your clan in Clan War battles"
+        },
+        {
+          "count": 1000,
+          "xp": 5000,
+          "gems": 1000,
+          "info": "Score 1,000 Stars for your clan in Clan War battles"
+        }
+      ]
+    },
+    {
+      "id": "wl_stars",
+      "title": "War League Legend",
+      "action": "league_war_stars",
+      "data": null,
+      "dataLevel": null,
+      "priority": 84,
+      "completed": "Total Stars scored for clan in War League battles: <value>",
+      "tiers": [
+        {
+          "count": 20,
+          "xp": 200,
+          "gems": 20,
+          "info": "Score 20 Stars for your clan in War League battles"
+        },
+        {
+          "count": 100,
+          "xp": 1000,
+          "gems": 100,
+          "info": "Score 100 Stars for your clan in War League battles"
+        },
+        {
+          "count": 250,
+          "xp": 2500,
+          "gems": 250,
+          "info": "Score 250 Stars for your clan in War League battles"
+        }
+      ]
+    },
+    {
+      "id": "clan_games_points",
+      "title": "Games Champion",
+      "action": "clan_games_points",
+      "data": null,
+      "dataLevel": null,
+      "priority": 81,
+      "completed": "Total Clan Games points: <value>",
+      "tiers": [
+        {
+          "count": 10000,
+          "xp": 20,
+          "gems": 50,
+          "info": "Earn 10,000 points in Clan Games"
+        },
+        {
+          "count": 50000,
+          "xp": 200,
+          "gems": 100,
+          "info": "Earn 50,000 points in Clan Games"
+        },
+        {
+          "count": 100000,
+          "xp": 2000,
+          "gems": 250,
+          "info": "Earn 100,000 points in Clan Games"
+        }
+      ]
+    },
+    {
+      "id": "pvp_defenses",
+      "title": "Unbreakable",
+      "action": "win_pvp_defense",
+      "data": null,
+      "dataLevel": null,
+      "priority": 77,
+      "completed": "Total defenses won: <value>",
+      "tiers": [
+        {
+          "count": 10,
+          "xp": 10,
+          "gems": 5,
+          "info": "Successfully defend against 10 attacks"
+        },
+        {
+          "count": 250,
+          "xp": 100,
+          "gems": 50,
+          "info": "Successfully defend against 250 attacks"
+        },
+        {
+          "count": 500,
+          "xp": 1000,
+          "gems": 100,
+          "info": "Successfully defend against 500 attacks"
+        }
+      ]
+    },
+    {
+      "id": "victory_points",
+      "title": "Sweet Victory!",
+      "action": "victory_points",
+      "data": null,
+      "dataLevel": null,
+      "priority": 76,
+      "completed": "Trophy record: <value>",
+      "tiers": [
+        {
+          "count": 75,
+          "xp": 10,
+          "gems": 5,
+          "info": "Achieve a total of 75 trophies in Multiplayer battles"
+        },
+        {
+          "count": 750,
+          "xp": 100,
+          "gems": 10,
+          "info": "Achieve a total of 750 trophies in Multiplayer battles"
+        },
+        {
+          "count": 1250,
+          "xp": 1000,
+          "gems": 450,
+          "info": "Achieve a total of 1,250 trophies in Multiplayer battles"
+        }
+      ]
+    },
+    {
+      "id": "pvp_attacks",
+      "title": "Conqueror",
+      "action": "win_pvp_attack",
+      "data": null,
+      "dataLevel": null,
+      "priority": 75,
+      "completed": "Total multiplayer battles won: <value>",
+      "tiers": [
+        {
+          "count": 25,
+          "xp": 10,
+          "gems": 5,
+          "info": "Win 25 Multiplayer battles"
+        },
+        {
+          "count": 250,
+          "xp": 100,
+          "gems": 10,
+          "info": "Win 250 Multiplayer battles"
+        },
+        {
+          "count": 5000,
+          "xp": 1000,
+          "gems": 20,
+          "info": "Win 5,000 Multiplayer battles"
+        }
+      ]
+    },
+    {
+      "id": "ranked_1",
+      "title": "League Follower",
+      "action": "ranked",
+      "data": null,
+      "dataLevel": null,
+      "priority": 72,
+      "completed": null,
+      "tiers": [
+        {
+          "count": 6,
+          "xp": 50,
+          "gems": 50,
+          "info": "Reach League Barbarian 6"
+        },
+        {
+          "count": 9,
+          "xp": 100,
+          "gems": 100,
+          "info": "Reach League Archer 9"
+        },
+        {
+          "count": 12,
+          "xp": 250,
+          "gems": 250,
+          "info": "Reach League Wizard 12"
+        }
+      ]
+    },
+    {
+      "id": "ranked_2",
+      "title": "League Enthusiast",
+      "action": "ranked",
+      "data": null,
+      "dataLevel": null,
+      "priority": 72,
+      "completed": null,
+      "tiers": [
+        {
+          "count": 15,
+          "xp": 50,
+          "gems": 50,
+          "info": "Reach League Valkyrie 15"
+        },
+        {
+          "count": 18,
+          "xp": 100,
+          "gems": 100,
+          "info": "Reach League Witch 18"
+        },
+        {
+          "count": 21,
+          "xp": 250,
+          "gems": 250,
+          "info": "Reach League Golem 21"
+        }
+      ]
+    },
+    {
+      "id": "ranked_3",
+      "title": "League Superfan",
+      "action": "ranked",
+      "data": null,
+      "dataLevel": null,
+      "priority": 72,
+      "completed": null,
+      "tiers": [
+        {
+          "count": 24,
+          "xp": 100,
+          "gems": 100,
+          "info": "Reach League P.E.K.K.A 24"
+        },
+        {
+          "count": 27,
+          "xp": 250,
+          "gems": 250,
+          "info": "Reach League Titan 27"
+        },
+        {
+          "count": 28,
+          "xp": 500,
+          "gems": 500,
+          "info": "Reach League Dragon 28"
+        }
+      ]
+    },
+    {
+      "id": "ranked_4",
+      "title": "League Fanatic",
+      "action": "ranked",
+      "data": null,
+      "dataLevel": null,
+      "priority": 72,
+      "completed": null,
+      "tiers": [
+        {
+          "count": 29,
+          "xp": 100,
+          "gems": 100,
+          "info": "Reach League Dragon 29"
+        },
+        {
+          "count": 30,
+          "xp": 250,
+          "gems": 250,
+          "info": "Reach League Dragon 30"
+        },
+        {
+          "count": 31,
+          "xp": 500,
+          "gems": 500,
+          "info": "Reach League Electro 31"
+        }
+      ]
+    },
+    {
+      "id": "ranked_5",
+      "title": "League Master",
+      "action": "ranked",
+      "data": null,
+      "dataLevel": null,
+      "priority": 72,
+      "completed": null,
+      "tiers": [
+        {
+          "count": 32,
+          "xp": 250,
+          "gems": 250,
+          "info": "Reach League Electro 32"
+        },
+        {
+          "count": 33,
+          "xp": 350,
+          "gems": 350,
+          "info": "Reach League Electro 33"
+        },
+        {
+          "count": 34,
+          "xp": 500,
+          "gems": 500,
+          "info": "Reach Legend League"
+        }
+      ]
+    },
+    {
+      "id": "destroy_townhall",
+      "title": "Humiliator",
+      "action": "destroy",
+      "data": "Town Hall",
+      "dataLevel": null,
+      "priority": 67,
+      "completed": "Total Town Halls destroyed: <value>",
+      "tiers": [
+        {
+          "count": 10,
+          "xp": 10,
+          "gems": 5,
+          "info": "Destroy 10 Town Halls in Multiplayer battles"
+        },
+        {
+          "count": 100,
+          "xp": 100,
+          "gems": 10,
+          "info": "Destroy 100 Town Halls in Multiplayer battles"
+        },
+        {
+          "count": 2000,
+          "xp": 1000,
+          "gems": 50,
+          "info": "Destroy 2,000 Town Halls in Multiplayer battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_weaponised_th",
+      "title": "Not So Easy This Time",
+      "action": "destroy",
+      "data": "Town Hall",
+      "dataLevel": 12,
+      "priority": 67,
+      "completed": "Weaponized Town Halls destroyed: <value>",
+      "tiers": [
+        {
+          "count": 10,
+          "xp": 100,
+          "gems": 20,
+          "info": "Destroy 10 weaponized Town Halls in Multiplayer battles"
+        },
+        {
+          "count": 100,
+          "xp": 800,
+          "gems": 100,
+          "info": "Destroy 100 weaponized Town Halls in Multiplayer battles"
+        },
+        {
+          "count": 2000,
+          "xp": 5000,
+          "gems": 250,
+          "info": "Destroy 2,000 weaponized Town Halls in Multiplayer battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_builder",
+      "title": "Union Buster",
+      "action": "destroy",
+      "data": "Builders Hut",
+      "dataLevel": null,
+      "priority": 66,
+      "completed": "Total Builder's Huts destroyed: <value>",
+      "tiers": [
+        {
+          "count": 25,
+          "xp": 10,
+          "gems": 5,
+          "info": "Destroy 25 Builder's Huts in Multiplayer battles"
+        },
+        {
+          "count": 250,
+          "xp": 100,
+          "gems": 10,
+          "info": "Destroy 250 Builder's Huts in Multiplayer battles"
+        },
+        {
+          "count": 2500,
+          "xp": 1000,
+          "gems": 30,
+          "info": "Destroy 2,500 Builder's Huts in Multiplayer battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_weaponised_builders",
+      "title": "Bust This!",
+      "action": "destroy",
+      "data": "Builders Hut",
+      "dataLevel": 2,
+      "priority": 66,
+      "completed": "Total weaponized Builder's Huts destroyed: <value>",
+      "tiers": [
+        {
+          "count": 25,
+          "xp": 10,
+          "gems": 10,
+          "info": "Destroy 25 weaponized Builder's Huts in Multiplayer battles"
+        },
+        {
+          "count": 250,
+          "xp": 100,
+          "gems": 30,
+          "info": "Destroy 250 weaponized Builder's Huts in Multiplayer battles"
+        },
+        {
+          "count": 2500,
+          "xp": 1000,
+          "gems": 100,
+          "info": "Destroy 2,500 weaponized Builder's Huts in Multiplayer battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_walls",
+      "title": "Wall Buster",
+      "action": "destroy",
+      "data": "Wall",
+      "dataLevel": null,
+      "priority": 65,
+      "completed": "Total Walls destroyed: <value>",
+      "tiers": [
+        {
+          "count": 10,
+          "xp": 10,
+          "gems": 5,
+          "info": "Destroy 10 Walls in Multiplayer battles"
+        },
+        {
+          "count": 100,
+          "xp": 100,
+          "gems": 10,
+          "info": "Destroy 100 Walls in Multiplayer battles"
+        },
+        {
+          "count": 2000,
+          "xp": 1000,
+          "gems": 20,
+          "info": "Destroy 2,000 Walls in Multiplayer battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_mortars",
+      "title": "Mortar Mauler",
+      "action": "destroy",
+      "data": "Mortar",
+      "dataLevel": null,
+      "priority": 64,
+      "completed": "Total Mortars destroyed: <value>",
+      "tiers": [
+        {
+          "count": 25,
+          "xp": 10,
+          "gems": 5,
+          "info": "Destroy 25 Mortars in Multiplayer battles"
+        },
+        {
+          "count": 500,
+          "xp": 100,
+          "gems": 10,
+          "info": "Destroy 500 Mortars in Multiplayer battles"
+        },
+        {
+          "count": 5000,
+          "xp": 1000,
+          "gems": 20,
+          "info": "Destroy 5,000 Mortars in Multiplayer battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_xbow",
+      "title": "X-Bow Exterminator",
+      "action": "destroy",
+      "data": "X-Bow",
+      "dataLevel": null,
+      "priority": 63,
+      "completed": "Total X-Bows destroyed: <value>",
+      "tiers": [
+        {
+          "count": 1,
+          "xp": 50,
+          "gems": 50,
+          "info": "Destroy one X-Bow in a Multiplayer battle"
+        },
+        {
+          "count": 250,
+          "xp": 100,
+          "gems": 100,
+          "info": "Destroy 250 X-Bows in Multiplayer battles"
+        },
+        {
+          "count": 2500,
+          "xp": 1000,
+          "gems": 200,
+          "info": "Destroy 2,500 X-Bows in Multiplayer battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_inferno",
+      "title": "Firefighter",
+      "action": "destroy",
+      "data": "Inferno Tower",
+      "dataLevel": null,
+      "priority": 62,
+      "completed": "Total Inferno Towers destroyed: <value>",
+      "tiers": [
+        {
+          "count": 10,
+          "xp": 50,
+          "gems": 100,
+          "info": "Destroy 10 Inferno Towers in Multiplayer battles"
+        },
+        {
+          "count": 250,
+          "xp": 500,
+          "gems": 200,
+          "info": "Destroy 250 Inferno Towers in Multiplayer battles"
+        },
+        {
+          "count": 5000,
+          "xp": 5000,
+          "gems": 1000,
+          "info": "Destroy 5,000 Inferno Towers in Multiplayer battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_artillery",
+      "title": "Anti-Artillery",
+      "action": "destroy",
+      "data": "Eagle Artillery",
+      "dataLevel": null,
+      "priority": 61,
+      "completed": "Total Eagle or Inferno Artilleries destroyed: <value>",
+      "tiers": [
+        {
+          "count": 20,
+          "xp": 100,
+          "gems": 150,
+          "info": "Destroy 20 Eagle or Inferno Artilleries in Multiplayer battles"
+        },
+        {
+          "count": 200,
+          "xp": 800,
+          "gems": 300,
+          "info": "Destroy 200 Eagle or Inferno Artilleries in Multiplayer battles"
+        },
+        {
+          "count": 2000,
+          "xp": 5000,
+          "gems": 1000,
+          "info": "Destroy 2,000 Eagle or Inferno Artilleries in Multiplayer battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_firespitter",
+      "title": "Firespitter Finisher",
+      "action": "destroy",
+      "data": "Firespitter",
+      "dataLevel": null,
+      "priority": 60,
+      "completed": "Total Firespitters Destroyed: <value>",
+      "tiers": [
+        {
+          "count": 40,
+          "xp": 100,
+          "gems": 25,
+          "info": "Destroy 40 Firespitters in Multiplayer Battles"
+        },
+        {
+          "count": 400,
+          "xp": 800,
+          "gems": 75,
+          "info": "Destroy 400 Firespitters in Multiplayer Battles"
+        },
+        {
+          "count": 4000,
+          "xp": 5000,
+          "gems": 200,
+          "info": "Destroy 4,000 Firespitters in Multiplayer Battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_monolith",
+      "title": "Monolith Masher",
+      "action": "destroy",
+      "data": "Monolith",
+      "dataLevel": null,
+      "priority": 60,
+      "completed": "Total Monoliths Destroyed: <value>",
+      "tiers": [
+        {
+          "count": 20,
+          "xp": 100,
+          "gems": 100,
+          "info": "Destroy 20 Monoliths in Multiplayer Battles"
+        },
+        {
+          "count": 200,
+          "xp": 800,
+          "gems": 250,
+          "info": "Destroy 200 Monoliths in Multiplayer Battles"
+        },
+        {
+          "count": 2000,
+          "xp": 5000,
+          "gems": 500,
+          "info": "Destroy 2,000 Monoliths in Multiplayer Battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_multi_archer",
+      "title": "Multi-Archer Tower Terminator",
+      "action": "destroy",
+      "data": "Multi Archer Tower",
+      "dataLevel": null,
+      "priority": 60,
+      "completed": "Total Multi-Archer Towers Destroyed: <value>",
+      "tiers": [
+        {
+          "count": 50,
+          "xp": 100,
+          "gems": 25,
+          "info": "Destroy 50 Multi-Archer Towers in Multiplayer Battles"
+        },
+        {
+          "count": 500,
+          "xp": 800,
+          "gems": 75,
+          "info": "Destroy 500 Multi-Archer Towers in Multiplayer Battles"
+        },
+        {
+          "count": 5000,
+          "xp": 5000,
+          "gems": 200,
+          "info": "Destroy 5,000 Multi-Archer Towers in Multiplayer Battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_multi_gear_tower",
+      "title": "Multi-Gear Tower Trampler",
+      "action": "destroy",
+      "data": "Multi Gear Tower",
+      "dataLevel": null,
+      "priority": 60,
+      "completed": "Total Multi-Gear Towers Destroyed: <value>",
+      "tiers": [
+        {
+          "count": 20,
+          "xp": 100,
+          "gems": 25,
+          "info": "Destroy 20 Multi-Gear Towers in Multiplayer Battles"
+        },
+        {
+          "count": 200,
+          "xp": 800,
+          "gems": 100,
+          "info": "Destroy 200 Multi-Gear Towers in Multiplayer Battles"
+        },
+        {
+          "count": 2000,
+          "xp": 5000,
+          "gems": 200,
+          "info": "Destroy 2,000 Multi-Gear Towers in Multiplayer Battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_ricochet_cannon",
+      "title": "Ricochet Cannon Crusher",
+      "action": "destroy",
+      "data": "Ricochet Cannon",
+      "dataLevel": null,
+      "priority": 60,
+      "completed": "Total Ricochet Cannons Destroyed: <value>",
+      "tiers": [
+        {
+          "count": 50,
+          "xp": 100,
+          "gems": 25,
+          "info": "Destroy 50 Ricochet Cannons in Multiplayer Battles"
+        },
+        {
+          "count": 500,
+          "xp": 800,
+          "gems": 75,
+          "info": "Destroy 500 Ricochet Cannons in Multiplayer Battles"
+        },
+        {
+          "count": 5000,
+          "xp": 5000,
+          "gems": 200,
+          "info": "Destroy 5,000 Ricochet Cannons in Multiplayer Battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_scattershot",
+      "title": "Shattered and Scattered",
+      "action": "destroy",
+      "data": "Scattershot",
+      "dataLevel": null,
+      "priority": 60,
+      "completed": "Total Scattershots destroyed: <value>",
+      "tiers": [
+        {
+          "count": 40,
+          "xp": 100,
+          "gems": 150,
+          "info": "Destroy 40 Scattershots in Multiplayer battles"
+        },
+        {
+          "count": 400,
+          "xp": 800,
+          "gems": 300,
+          "info": "Destroy 400 Scattershots in Multiplayer battles"
+        },
+        {
+          "count": 4000,
+          "xp": 5000,
+          "gems": 1000,
+          "info": "Destroy 4,000 Scattershots in Multiplayer battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_seasonal_defense",
+      "title": "Crafter’s Nightmare",
+      "action": "destroy",
+      "data": "Crafting Station",
+      "dataLevel": null,
+      "priority": 60,
+      "completed": "Total Crafted Defenses Destroyed: <value>",
+      "tiers": [
+        {
+          "count": 20,
+          "xp": 100,
+          "gems": 25,
+          "info": "Destroy 20 Crafted Defenses in Multiplayer Battles"
+        },
+        {
+          "count": 200,
+          "xp": 800,
+          "gems": 100,
+          "info": "Destroy 200 Crafted Defenses in Multiplayer Battles"
+        },
+        {
+          "count": 2000,
+          "xp": 5000,
+          "gems": 200,
+          "info": "Destroy 2,000 Crafted Defenses in Multiplayer Battles"
+        }
+      ]
+    },
+    {
+      "id": "destroy_spell_tower",
+      "title": "Counterspell",
+      "action": "destroy",
+      "data": "Spell Tower",
+      "dataLevel": null,
+      "priority": 60,
+      "completed": "Total Spell Towers Destroyed: <value>",
+      "tiers": [
+        {
+          "count": 40,
+          "xp": 100,
+          "gems": 100,
+          "info": "Destroy 40 Spell Towers in Multiplayer Battles"
+        },
+        {
+          "count": 400,
+          "xp": 800,
+          "gems": 250,
+          "info": "Destroy 400 Spell Towers in Multiplayer Battles"
+        },
+        {
+          "count": 4000,
+          "xp": 5000,
+          "gems": 500,
+          "info": "Destroy 4,000 Spell Towers in Multiplayer Battles"
+        }
+      ]
+    },
+    {
+      "id": "mini_level",
+      "title": "Supercharger",
+      "action": "supercharge",
+      "data": null,
+      "dataLevel": null,
+      "priority": 3,
+      "completed": "Total Supercharges: <value>",
+      "tiers": [
+        {
+          "count": 5,
+          "xp": 10,
+          "gems": 10,
+          "info": "Supercharge buildings 5 times"
+        },
+        {
+          "count": 25,
+          "xp": 100,
+          "gems": 30,
+          "info": "Supercharge buildings 25 times"
+        },
+        {
+          "count": 75,
+          "xp": 1000,
+          "gems": 50,
+          "info": "Supercharge buildings 75 times"
+        }
+      ]
+    },
+    {
+      "id": "npc_stars",
+      "title": "Get those Goblins!",
+      "action": "npc_stars",
+      "data": null,
+      "dataLevel": null,
+      "priority": 3,
+      "completed": "Stars in Campaign Map: <value>",
+      "tiers": [
+        {
+          "count": 10,
+          "xp": 10,
+          "gems": 5,
+          "info": "Win 10 Stars on the Campaign Map"
+        },
+        {
+          "count": 50,
+          "xp": 100,
+          "gems": 10,
+          "info": "Win 50 Stars on the Campaign Map"
+        },
+        {
+          "count": 150,
+          "xp": 1000,
+          "gems": 20,
+          "info": "Win 150 Stars on the Campaign Map"
+        }
+      ]
+    },
+    {
+      "id": "seasonal_defense",
+      "title": "Crafting Connoisseur",
+      "action": "seasonal_defense",
+      "data": null,
+      "dataLevel": null,
+      "priority": 3,
+      "completed": "Total Crafted Defense upgrades: <value>",
+      "tiers": [
+        {
+          "count": 5,
+          "xp": 10,
+          "gems": 10,
+          "info": "Upgrade Crafted Defenses 5 times"
+        },
+        {
+          "count": 25,
+          "xp": 100,
+          "gems": 30,
+          "info": "Upgrade Crafted Defenses 25 times"
+        },
+        {
+          "count": 75,
+          "xp": 1000,
+          "gems": 50,
+          "info": "Upgrade Crafted Defenses 75 times"
+        }
+      ]
+    },
+    {
+      "id": "npc_stars3",
+      "title": "Get even more Goblins!",
+      "action": "npc_stars",
+      "data": null,
+      "dataLevel": null,
+      "priority": 2,
+      "completed": "Stars in Campaign Map: <value>",
+      "tiers": [
+        {
+          "count": 240,
+          "xp": 500,
+          "gems": 50,
+          "info": "Win 240 Stars on the Campaign Map"
+        },
+        {
+          "count": 255,
+          "xp": 1000,
+          "gems": 100,
+          "info": "Win 255 Stars on the Campaign Map"
+        },
+        {
+          "count": 270,
+          "xp": 2000,
+          "gems": 150,
+          "info": "Win 270 Stars on the Campaign Map"
+        }
+      ]
+    },
+    {
+      "id": "npc_stars_more",
+      "title": "Get those other Goblins!",
+      "action": "npc_stars",
+      "data": null,
+      "dataLevel": null,
+      "priority": 2,
+      "completed": "Stars in Campaign Map: <value>",
+      "tiers": [
+        {
+          "count": 175,
+          "xp": 200,
+          "gems": 20,
+          "info": "Win 175 Stars on the Campaign Map"
+        },
+        {
+          "count": 200,
+          "xp": 500,
+          "gems": 50,
+          "info": "Win 200 Stars on the Campaign Map"
+        },
+        {
+          "count": 225,
+          "xp": 1000,
+          "gems": 100,
+          "info": "Win 225 Stars on the Campaign Map"
+        }
+      ]
+    },
+    {
+      "id": "dragon_slayer",
+      "title": "Dragon Slayer",
+      "action": "slay",
+      "data": "Golden Dragon",
+      "dataLevel": null,
+      "priority": 1,
+      "completed": null,
+      "tiers": [
+        {
+          "count": 1,
+          "xp": 200,
+          "gems": 20,
+          "info": "Slay the Giant Dragon on the Campaign Map"
+        }
+      ]
+    },
+    {
+      "id": "pekka_slayer",
+      "title": "Ungrateful Child",
+      "action": "slay",
+      "data": "MOMMA",
+      "dataLevel": null,
+      "priority": 1,
+      "completed": null,
+      "tiers": [
+        {
+          "count": 1,
+          "xp": 200,
+          "gems": 20,
+          "info": "Defeat M.O.M.M.A on the Campaign Map"
+        }
+      ]
+    },
+    {
+      "id": "activate_super_troop",
+      "title": "Superb Work",
+      "action": "activate_super_licence",
+      "data": null,
+      "dataLevel": null,
+      "priority": 0,
+      "completed": "Total times Super Troops boosted: <value>",
+      "tiers": [
+        {
+          "count": 20,
+          "xp": 10,
+          "gems": 10,
+          "info": "Boost a Super Troop 20 times"
+        },
+        {
+          "count": 100,
+          "xp": 100,
+          "gems": 30,
+          "info": "Boost a Super Troop 100 times"
+        },
+        {
+          "count": 250,
+          "xp": 1000,
+          "gems": 100,
+          "info": "Boost a Super Troop 250 times"
+        }
+      ]
+    }
+  ]
+}

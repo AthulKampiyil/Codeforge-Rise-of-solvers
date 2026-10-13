@@ -1,0 +1,178 @@
+{
+ "title": "Meteormite",
+ "page": "Meteor Golem/Meteormite",
+ "url": "https://clashofclans.fandom.com/wiki/Meteor_Golem/Meteormite",
+ "revid": 625266,
+ "retrieved": "2026-09-15",
+ "clientName": "Meteormite",
+ "clientVersion": "18.400.21",
+ "category": "secondary-unit",
+ "parent": "meteor-golem",
+ "constants": {
+  "housingSpace": 20,
+  "movementSpeedWiki": 16,
+  "internalSpeed": 200,
+  "tilesPerSecond": 2,
+  "attackRangeTiles": 0.8,
+  "attackRangeTilesClient": 0.8,
+  "attackSeconds": 1.5,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Single Target (Ground only)",
+  "targets": "ground",
+  "favoriteTarget": "None",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": true,
+  "underground": false,
+  "mergeSearchRadiusTilesClient": 5,
+  "triggersTraps": true
+ },
+ "client": {
+  "clientName": "Meteormite",
+  "housingSpace": 20,
+  "internalSpeed": 200,
+  "movementSpeedInGameExact": 16,
+  "movementSpeedInGameRounded": 16,
+  "tilesPerSecond": 2,
+  "attackRangeTiles": 0.8,
+  "attackSeconds": 1.5,
+  "targets": "ground",
+  "flying": false,
+  "jumpsWalls": true,
+  "favoriteTarget": "None",
+  "triggersTraps": true,
+  "movementOffsetSpeed": 0,
+  "isSecondaryTroop": true,
+  "inheritHealthPercentage": true,
+  "mergeSearchRadiusTiles": 5
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 190,
+   "damagePerHit": 285,
+   "hitpoints": 7250
+  },
+  {
+   "level": 2,
+   "dps": 210,
+   "damagePerHit": 315,
+   "hitpoints": 8000
+  },
+  {
+   "level": 3,
+   "dps": 230,
+   "damagePerHit": 345,
+   "hitpoints": 8750
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 7250,
+   "dps": 190,
+   "damagePerHit": 285
+  },
+  {
+   "level": 2,
+   "hitpoints": 8000,
+   "dps": 210,
+   "damagePerHit": 315
+  },
+  {
+   "level": 3,
+   "hitpoints": 8750,
+   "dps": 230,
+   "damagePerHit": 345
+  }
+ ],
+ "temporaryTroopLevels": [
+  {
+   "level": 1,
+   "dps": 68,
+   "damagePerHit": 102,
+   "hitpoints": 2000
+  },
+  {
+   "level": 2,
+   "dps": 79,
+   "damagePerHit": 118.5,
+   "hitpoints": 2500
+  },
+  {
+   "level": 3,
+   "dps": 90,
+   "damagePerHit": 135,
+   "hitpoints": 3000
+  },
+  {
+   "level": 4,
+   "dps": 101,
+   "damagePerHit": 151.5,
+   "hitpoints": 3500
+  },
+  {
+   "level": 5,
+   "dps": 112,
+   "damagePerHit": 168,
+   "hitpoints": 4000
+  },
+  {
+   "level": 6,
+   "dps": 123,
+   "damagePerHit": 184.5,
+   "hitpoints": 4250
+  },
+  {
+   "level": 7,
+   "dps": 134,
+   "damagePerHit": 201,
+   "hitpoints": 4500
+  },
+  {
+   "level": 8,
+   "dps": 145,
+   "damagePerHit": 217.5,
+   "hitpoints": 5000
+  },
+  {
+   "level": 9,
+   "dps": 156,
+   "damagePerHit": 234,
+   "hitpoints": 5500
+  },
+  {
+   "level": 10,
+   "dps": 172,
+   "damagePerHit": 258,
+   "hitpoints": 6000
+  },
+  {
+   "level": 11,
+   "dps": 180,
+   "damagePerHit": 270,
+   "hitpoints": 6500
+  },
+  {
+   "level": 12,
+   "dps": 200,
+   "damagePerHit": 300,
+   "hitpoints": 7250
+  },
+  {
+   "level": 13,
+   "dps": 220,
+   "damagePerHit": 330,
+   "hitpoints": 8000
+  }
+ ],
+ "comparison": {
+  "checked": 16,
+  "matched": 16
+ },
+ "mismatches": [],
+ "ambiguities": []
+}

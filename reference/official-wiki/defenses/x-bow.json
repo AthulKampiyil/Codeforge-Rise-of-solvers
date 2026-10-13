@@ -1,0 +1,202 @@
+{
+ "title": "X-Bow/Home Village",
+ "url": "https://clashofclans.fandom.com/wiki/X-Bow/Home_Village",
+ "revid": 624469,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "X-Bow",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 60,
+   "damagePerHit": 7.68,
+   "hitpoints": 1500,
+   "cost": 1000000,
+   "buildSeconds": 43200,
+   "xp": 207,
+   "townHall": 9
+  },
+  {
+   "level": 2,
+   "dps": 70,
+   "damagePerHit": 8.96,
+   "hitpoints": 1900,
+   "cost": 1200000,
+   "buildSeconds": 86400,
+   "xp": 293,
+   "townHall": 9
+  },
+  {
+   "level": 3,
+   "dps": 80,
+   "damagePerHit": 10.24,
+   "hitpoints": 2300,
+   "cost": 2400000,
+   "buildSeconds": 172800,
+   "xp": 415,
+   "townHall": 9
+  },
+  {
+   "level": 4,
+   "dps": 85,
+   "damagePerHit": 10.88,
+   "hitpoints": 2700,
+   "cost": 2500000,
+   "buildSeconds": 216000,
+   "xp": 464,
+   "townHall": 10
+  },
+  {
+   "level": 5,
+   "dps": 95,
+   "damagePerHit": 12.16,
+   "hitpoints": 3100,
+   "cost": 3900000,
+   "buildSeconds": 259200,
+   "xp": 509,
+   "townHall": 11
+  },
+  {
+   "level": 6,
+   "dps": 110,
+   "damagePerHit": 14.08,
+   "hitpoints": 3400,
+   "cost": 5000000,
+   "buildSeconds": 302400,
+   "xp": 549,
+   "townHall": 12
+  },
+  {
+   "level": 7,
+   "dps": 130,
+   "damagePerHit": 16.64,
+   "hitpoints": 3700,
+   "cost": 6000000,
+   "buildSeconds": 345600,
+   "xp": 587,
+   "townHall": 13
+  },
+  {
+   "level": 8,
+   "dps": 155,
+   "damagePerHit": 19.84,
+   "hitpoints": 4000,
+   "cost": 7000000,
+   "buildSeconds": 388800,
+   "xp": 623,
+   "townHall": 13
+  },
+  {
+   "level": 9,
+   "dps": 185,
+   "damagePerHit": 23.68,
+   "hitpoints": 4200,
+   "cost": 9000000,
+   "buildSeconds": 432000,
+   "xp": 657,
+   "townHall": 14
+  },
+  {
+   "level": 10,
+   "dps": 205,
+   "damagePerHit": 26.24,
+   "hitpoints": 4400,
+   "cost": 9500000,
+   "buildSeconds": 475200,
+   "xp": 689,
+   "townHall": 15
+  },
+  {
+   "level": 11,
+   "dps": 225,
+   "damagePerHit": 28.8,
+   "hitpoints": 4600,
+   "cost": 10000000,
+   "buildSeconds": 518400,
+   "xp": 720,
+   "townHall": 16
+  },
+  {
+   "level": 12,
+   "dps": 235,
+   "damagePerHit": 30.08,
+   "hitpoints": 4800,
+   "cost": 16000000,
+   "buildSeconds": 691200,
+   "xp": 831,
+   "townHall": 17
+  },
+  {
+   "level": 13,
+   "dps": 245,
+   "damagePerHit": 31.36,
+   "hitpoints": 5000,
+   "cost": 26000000,
+   "buildSeconds": 1166400,
+   "xp": 1080,
+   "townHall": 18
+  }
+ ],
+ "supercharges": [
+  {
+   "charge": 1,
+   "dps": 255,
+   "damagePerHit": 32.64,
+   "hitpoints": 5000,
+   "cost": 9000000,
+   "buildSeconds": 475200,
+   "xp": 689,
+   "townHall": 18
+  },
+  {
+   "charge": 2,
+   "dps": 255,
+   "damagePerHit": 32.64,
+   "hitpoints": 5100,
+   "cost": 7000000,
+   "buildSeconds": 648000,
+   "xp": 804,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 9,
+  "size": "3x3",
+  "attackSeconds": 0.128,
+  "damageType": "single target",
+  "ammo": 1500,
+  "ammoDurationSeconds": 192,
+  "modes": {
+   "ground": {
+    "range": 14,
+    "targets": "ground"
+   },
+   "airAndGround": {
+    "range": 11.5,
+    "targets": "ground & air"
+   }
+  },
+  "range": 14,
+  "targets": "ground (default) / ground & air"
+ },
+ "mismatches": [
+  {
+   "field": "cost",
+   "level": "C1",
+   "wiki": 9000000,
+   "client": 14000000,
+   "note": "supercharge cost differs: wiki 9M / 7M vs client X-Bow Mini Levels 14M / 9M (times, HP and DPS match). The wiki figures are identical to the Mortar's charge prices, so a copy error on the wiki is likely",
+   "table": "Supercharges"
+  },
+  {
+   "field": "cost",
+   "level": "C2",
+   "wiki": 7000000,
+   "client": 9000000,
+   "note": "supercharge cost differs: wiki 9M / 7M vs client X-Bow Mini Levels 14M / 9M (times, HP and DPS match). The wiki figures are identical to the Mortar's charge prices, so a copy error on the wiki is likely",
+   "table": "Supercharges"
+  }
+ ],
+ "progressionMismatches": []
+}

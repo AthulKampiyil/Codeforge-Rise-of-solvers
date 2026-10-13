@@ -1,0 +1,142 @@
+{
+  "title": "Siege Machines",
+  "url": "https://clashofclans.fandom.com/wiki/Siege_Machines",
+  "revid": 623486,
+  "clientName": null,
+  "category": "mechanic",
+  "retrieved": "2026-09-15",
+  "contentPage": "Siege Machines",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "machinesPerBattle": 1,
+    "workshopUnlockTownHall": 12,
+    "clanCastleLevelForFirstSiege": 6
+  },
+  "levels": [
+    {
+      "level": 1,
+      "siegeMachine": "Wall Wrecker",
+      "clientName": "Wall Wrecker",
+      "townHallLevel": 12,
+      "minClanCastleLevel": 6,
+      "maxLevel": 6,
+      "movement": "ground",
+      "target": "Town Hall (rams through)",
+      "clientWorkshopLevel": 1
+    },
+    {
+      "level": 2,
+      "siegeMachine": "Battle Blimp",
+      "clientName": "Battle Blimp",
+      "townHallLevel": 12,
+      "minClanCastleLevel": 6,
+      "maxLevel": 6,
+      "movement": "air",
+      "target": "Town Hall (flies over)",
+      "clientWorkshopLevel": 2
+    },
+    {
+      "level": 3,
+      "siegeMachine": "Stone Slammer",
+      "clientName": "Stone Slammer",
+      "townHallLevel": 12,
+      "minClanCastleLevel": 6,
+      "maxLevel": 6,
+      "movement": "air",
+      "target": "Defenses",
+      "clientWorkshopLevel": 3
+    },
+    {
+      "level": 4,
+      "siegeMachine": "Siege Barracks",
+      "clientName": "Siege Barracks",
+      "townHallLevel": 13,
+      "minClanCastleLevel": 7,
+      "maxLevel": 6,
+      "movement": "stationary",
+      "target": "none (stationary spawner)",
+      "clientWorkshopLevel": 4
+    },
+    {
+      "level": 5,
+      "siegeMachine": "Log Launcher",
+      "clientName": "Log Launcher",
+      "townHallLevel": 13,
+      "minClanCastleLevel": 7,
+      "maxLevel": 6,
+      "movement": "ground",
+      "target": "Town Hall (logs)",
+      "clientWorkshopLevel": 5
+    },
+    {
+      "level": 6,
+      "siegeMachine": "Flame Flinger",
+      "clientName": "Flame Flinger",
+      "townHallLevel": 14,
+      "minClanCastleLevel": 8,
+      "maxLevel": 5,
+      "movement": "ground",
+      "target": "Defenses (long range)",
+      "clientWorkshopLevel": 6
+    },
+    {
+      "level": 7,
+      "siegeMachine": "Battle Drill",
+      "clientName": "Battle Drill",
+      "townHallLevel": 15,
+      "minClanCastleLevel": 9,
+      "maxLevel": 6,
+      "movement": "underground",
+      "target": "Defenses (underground)",
+      "clientWorkshopLevel": 7
+    },
+    {
+      "level": 8,
+      "siegeMachine": "Troop Launcher",
+      "clientName": "Troop Launcher",
+      "townHallLevel": 16,
+      "minClanCastleLevel": 10,
+      "maxLevel": 4,
+      "movement": "stationary",
+      "target": "friendly groups (barrels)",
+      "clientWorkshopLevel": 8
+    },
+    {
+      "level": 9,
+      "siegeMachine": "Sky Wagon",
+      "clientName": "Air Troop Launcher",
+      "townHallLevel": 17,
+      "minClanCastleLevel": 11,
+      "maxLevel": 4,
+      "movement": "air",
+      "target": "buildings (barrels)",
+      "clientWorkshopLevel": 9
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "machine class",
+      "client": "characters rows with `ProductionBuilding` 'Siege Workshop' and `BarrackLevel` = Workshop level"
+    },
+    {
+      "mechanic": "spell immunity",
+      "client": "`ImmunitySiegeMachines` = TRUE on spell rows (Healing, Rage, Jump, Clone, Invisibility, Recall, Revive, Totem, Poison, Haste, Overgrowth, Ice Block, Angry)"
+    },
+    {
+      "mechanic": "healing immunity",
+      "client": "`ImmuneToHealing` = TRUE on siege rows"
+    },
+    {
+      "mechanic": "release",
+      "client": "each siege has a *SelfDestruct special ability (`SelfDestruct`, `ActiveAfterPlayerInput`); globals `SIEGE_MACHINE_SELF_DESTRUCT_ON_REACHING_TARGET` TRUE"
+    },
+    {
+      "mechanic": "tornado",
+      "client": "globals `TORNADO_SIEGE_FORCE_TIER` = 1"
+    }
+  ]
+}

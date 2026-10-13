@@ -1,0 +1,468 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "logic/globals.csv": "16210fc28bfb86d00ea04d581a99fe98e128172017b2d4f637b8848c0cf20087",
+    "logic/leagues.csv": "a057b99d04e1c0c8c7989dfc1f8cd4031b0c9569acea7848153ea876233211af",
+    "logic/townhall_levels.csv": "2d596bcd08433924c3e566f79f380eb2260076f87c5b5dd30c9ab6f2c3f41472"
+  },
+  "scope": "Trophy bands and the daily Star Bonus each league pays, ore included, the Treasury it is banked in and the boost a Town Hall upgrade grants.",
+  "starBonus": {
+    "stars": 5,
+    "cooldownMinutes": 1440
+  },
+  "leagues": [
+    {
+      "name": "Unranked",
+      "trophies": 0,
+      "until": 399,
+      "starBonus": true,
+      "reward": {
+        "gold": 50000,
+        "elixir": 50000,
+        "dark": 0,
+        "shiny": 0,
+        "glowy": 0,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Bronze3",
+      "trophies": 400,
+      "until": 499,
+      "starBonus": true,
+      "reward": {
+        "gold": 100000,
+        "elixir": 100000,
+        "dark": 250,
+        "shiny": 125,
+        "glowy": 6,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Bronze2",
+      "trophies": 500,
+      "until": 599,
+      "starBonus": true,
+      "reward": {
+        "gold": 150000,
+        "elixir": 150000,
+        "dark": 500,
+        "shiny": 175,
+        "glowy": 7,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Bronze1",
+      "trophies": 600,
+      "until": 799,
+      "starBonus": true,
+      "reward": {
+        "gold": 200000,
+        "elixir": 200000,
+        "dark": 750,
+        "shiny": 175,
+        "glowy": 8,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Silver3",
+      "trophies": 800,
+      "until": 999,
+      "starBonus": true,
+      "reward": {
+        "gold": 250000,
+        "elixir": 250000,
+        "dark": 1000,
+        "shiny": 200,
+        "glowy": 9,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Silver2",
+      "trophies": 1000,
+      "until": 1199,
+      "starBonus": true,
+      "reward": {
+        "gold": 300000,
+        "elixir": 300000,
+        "dark": 1250,
+        "shiny": 250,
+        "glowy": 10,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Silver1",
+      "trophies": 1200,
+      "until": 1399,
+      "starBonus": true,
+      "reward": {
+        "gold": 350000,
+        "elixir": 350000,
+        "dark": 1500,
+        "shiny": 275,
+        "glowy": 11,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Gold3",
+      "trophies": 1400,
+      "until": 1599,
+      "starBonus": true,
+      "reward": {
+        "gold": 400000,
+        "elixir": 400000,
+        "dark": 1750,
+        "shiny": 300,
+        "glowy": 12,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Gold2",
+      "trophies": 1600,
+      "until": 1799,
+      "starBonus": true,
+      "reward": {
+        "gold": 450000,
+        "elixir": 450000,
+        "dark": 2000,
+        "shiny": 325,
+        "glowy": 14,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Gold1",
+      "trophies": 1800,
+      "until": 1999,
+      "starBonus": true,
+      "reward": {
+        "gold": 500000,
+        "elixir": 500000,
+        "dark": 2250,
+        "shiny": 350,
+        "glowy": 16,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Diamond3",
+      "trophies": 2000,
+      "until": 2199,
+      "starBonus": true,
+      "reward": {
+        "gold": 550000,
+        "elixir": 550000,
+        "dark": 2500,
+        "shiny": 375,
+        "glowy": 18,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Diamond2",
+      "trophies": 2200,
+      "until": 2399,
+      "starBonus": true,
+      "reward": {
+        "gold": 600000,
+        "elixir": 600000,
+        "dark": 2750,
+        "shiny": 400,
+        "glowy": 20,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Diamond1",
+      "trophies": 2400,
+      "until": 2599,
+      "starBonus": true,
+      "reward": {
+        "gold": 650000,
+        "elixir": 650000,
+        "dark": 3000,
+        "shiny": 425,
+        "glowy": 22,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Masters3",
+      "trophies": 2600,
+      "until": 2799,
+      "starBonus": true,
+      "reward": {
+        "gold": 700000,
+        "elixir": 700000,
+        "dark": 3250,
+        "shiny": 450,
+        "glowy": 24,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Masters2",
+      "trophies": 2800,
+      "until": 2999,
+      "starBonus": true,
+      "reward": {
+        "gold": 750000,
+        "elixir": 750000,
+        "dark": 3500,
+        "shiny": 500,
+        "glowy": 26,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Masters1",
+      "trophies": 3000,
+      "until": 3199,
+      "starBonus": true,
+      "reward": {
+        "gold": 800000,
+        "elixir": 800000,
+        "dark": 3750,
+        "shiny": 525,
+        "glowy": 28,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Champion3",
+      "trophies": 3200,
+      "until": 3499,
+      "starBonus": true,
+      "reward": {
+        "gold": 850000,
+        "elixir": 850000,
+        "dark": 4000,
+        "shiny": 550,
+        "glowy": 30,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Champion2",
+      "trophies": 3500,
+      "until": 3799,
+      "starBonus": true,
+      "reward": {
+        "gold": 900000,
+        "elixir": 900000,
+        "dark": 4250,
+        "shiny": 625,
+        "glowy": 34,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Champion1",
+      "trophies": 3800,
+      "until": 4099,
+      "starBonus": true,
+      "reward": {
+        "gold": 940000,
+        "elixir": 940000,
+        "dark": 4500,
+        "shiny": 700,
+        "glowy": 38,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Hero3",
+      "trophies": 4100,
+      "until": 4399,
+      "starBonus": true,
+      "reward": {
+        "gold": 980000,
+        "elixir": 980000,
+        "dark": 4750,
+        "shiny": 775,
+        "glowy": 42,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Hero2",
+      "trophies": 4400,
+      "until": 4699,
+      "starBonus": true,
+      "reward": {
+        "gold": 1020000,
+        "elixir": 1020000,
+        "dark": 5000,
+        "shiny": 850,
+        "glowy": 46,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Hero1",
+      "trophies": 4700,
+      "until": 4999,
+      "starBonus": true,
+      "reward": {
+        "gold": 1060000,
+        "elixir": 1060000,
+        "dark": 5250,
+        "shiny": 925,
+        "glowy": 50,
+        "starry": 0
+      }
+    },
+    {
+      "name": "Legendary",
+      "trophies": 5000,
+      "until": 10000000,
+      "starBonus": true,
+      "reward": {
+        "gold": 1100000,
+        "elixir": 1100000,
+        "dark": 5500,
+        "shiny": 1000,
+        "glowy": 54,
+        "starry": 0
+      }
+    }
+  ],
+  "treasury": [
+    {
+      "townhall": 1,
+      "gold": 50000,
+      "elixir": 50000,
+      "dark": 0,
+      "boostHours": 0
+    },
+    {
+      "townhall": 2,
+      "gold": 200000,
+      "elixir": 200000,
+      "dark": 0,
+      "boostHours": 0
+    },
+    {
+      "townhall": 3,
+      "gold": 400000,
+      "elixir": 400000,
+      "dark": 0,
+      "boostHours": 0
+    },
+    {
+      "townhall": 4,
+      "gold": 600000,
+      "elixir": 600000,
+      "dark": 0,
+      "boostHours": 72
+    },
+    {
+      "townhall": 5,
+      "gold": 800000,
+      "elixir": 800000,
+      "dark": 0,
+      "boostHours": 72
+    },
+    {
+      "townhall": 6,
+      "gold": 1200000,
+      "elixir": 1200000,
+      "dark": 0,
+      "boostHours": 72
+    },
+    {
+      "townhall": 7,
+      "gold": 1600000,
+      "elixir": 1600000,
+      "dark": 8000,
+      "boostHours": 96
+    },
+    {
+      "townhall": 8,
+      "gold": 2000000,
+      "elixir": 2000000,
+      "dark": 10000,
+      "boostHours": 96
+    },
+    {
+      "townhall": 9,
+      "gold": 2400000,
+      "elixir": 2400000,
+      "dark": 12000,
+      "boostHours": 96
+    },
+    {
+      "townhall": 10,
+      "gold": 2800000,
+      "elixir": 2800000,
+      "dark": 14000,
+      "boostHours": 120
+    },
+    {
+      "townhall": 11,
+      "gold": 3200000,
+      "elixir": 3200000,
+      "dark": 16000,
+      "boostHours": 120
+    },
+    {
+      "townhall": 12,
+      "gold": 3600000,
+      "elixir": 3600000,
+      "dark": 18000,
+      "boostHours": 120
+    },
+    {
+      "townhall": 13,
+      "gold": 4000000,
+      "elixir": 4000000,
+      "dark": 20000,
+      "boostHours": 120
+    },
+    {
+      "townhall": 14,
+      "gold": 4400000,
+      "elixir": 4400000,
+      "dark": 22000,
+      "boostHours": 120
+    },
+    {
+      "townhall": 15,
+      "gold": 4800000,
+      "elixir": 4800000,
+      "dark": 24000,
+      "boostHours": 120
+    },
+    {
+      "townhall": 16,
+      "gold": 5200000,
+      "elixir": 5200000,
+      "dark": 26000,
+      "boostHours": 120
+    },
+    {
+      "townhall": 17,
+      "gold": 5600000,
+      "elixir": 5600000,
+      "dark": 30000,
+      "boostHours": 120
+    },
+    {
+      "townhall": 18,
+      "gold": 6000000,
+      "elixir": 6000000,
+      "dark": 32000,
+      "boostHours": 120
+    }
+  ],
+  "townHallBoostMultiplier": 4
+}

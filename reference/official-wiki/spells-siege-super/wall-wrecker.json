@@ -1,0 +1,118 @@
+{
+  "title": "Wall Wrecker",
+  "url": "https://clashofclans.fandom.com/wiki/Wall_Wrecker",
+  "revid": 624364,
+  "clientName": "Wall Wrecker",
+  "category": "siege-machine",
+  "retrieved": "2026-09-15",
+  "contentPage": "Wall Wrecker",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "Walls (Damage x10)",
+    "attackType": "Area Splash",
+    "housingSpace": 1,
+    "movementSpeed": 12,
+    "attackSpeedSeconds": 1.3,
+    "workshopLevel": 1
+  },
+  "levels": [
+    {
+      "level": 1,
+      "dps": 250,
+      "damagePerHit": 325,
+      "damageVsWalls": 3250,
+      "hitpoints": 5500,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "dps": 300,
+      "damagePerHit": 390,
+      "damageVsWalls": 3900,
+      "hitpoints": 6000,
+      "researchCost": 2500000,
+      "researchTimeHours": 48,
+      "laboratoryLevel": 10
+    },
+    {
+      "level": 3,
+      "dps": 350,
+      "damagePerHit": 455,
+      "damageVsWalls": 4550,
+      "hitpoints": 6500,
+      "researchCost": 3500000,
+      "researchTimeHours": 72,
+      "laboratoryLevel": 10
+    },
+    {
+      "level": 4,
+      "dps": 400,
+      "damagePerHit": 520,
+      "damageVsWalls": 5200,
+      "hitpoints": 7000,
+      "researchCost": 6500000,
+      "researchTimeHours": 168,
+      "laboratoryLevel": 11
+    },
+    {
+      "level": 5,
+      "dps": 580,
+      "damagePerHit": 754,
+      "damageVsWalls": 7540,
+      "hitpoints": 8500,
+      "researchCost": 10000000,
+      "researchTimeHours": 216,
+      "laboratoryLevel": 13
+    },
+    {
+      "level": 6,
+      "dps": 670,
+      "damagePerHit": 871,
+      "damageVsWalls": 8710,
+      "hitpoints": 10000,
+      "researchCost": 26000000,
+      "researchTimeHours": 324,
+      "laboratoryLevel": 16
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "DPS / damage per hit",
+      "client": "`DPS` x `AttackSpeed` 1300 ms"
+    },
+    {
+      "mechanic": "wall bonus",
+      "client": "`PreferedTargetBuildingClass` Wall + `PreferedTargetDamageMod` 10 + `PreferredTargetNoTargeting` TRUE"
+    },
+    {
+      "mechanic": "destination",
+      "client": "`PreferredMovementTarget` Town Hall; globals `SIEGE_MACHINE_SELF_DESTRUCT_ON_REACHING_TARGET` TRUE"
+    },
+    {
+      "mechanic": "splash / reach",
+      "client": "`DamageRadius` 150, `AttackRange` 150 (1.5 tiles), `CoolDownOverride` 550"
+    },
+    {
+      "mechanic": "speed",
+      "client": "`Speed` 150 internal = 12 in-game (internal / 12.5)"
+    },
+    {
+      "mechanic": "manual release",
+      "client": "`SpecialAbilities` SiegeMachineRamSelfDestruct (`SelfDestruct`, `ActiveAfterPlayerInput`)"
+    },
+    {
+      "mechanic": "healing immunity",
+      "client": "`ImmuneToHealing` TRUE"
+    },
+    {
+      "mechanic": "pathing",
+      "client": "`WallMovementCost` 16"
+    }
+  ]
+}

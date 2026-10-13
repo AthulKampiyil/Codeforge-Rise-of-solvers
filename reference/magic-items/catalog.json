@@ -1,0 +1,403 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "localization/texts.csv": "affdf43926df044cb3c09d833b07365aa01ea99985771afa5fa0dd926f36c569",
+    "logic/boosters.csv": "afa50681f165f5b9f652ba2fdfd9bbc990726eea23e4c7909e9f244cc4ccd947",
+    "logic/buildings.csv": "9aed5fed876e2914a22fa7fed688a651c691ab06170d60e2bda8dc9262fbccb1",
+    "logic/globals.csv": "16210fc28bfb86d00ea04d581a99fe98e128172017b2d4f637b8848c0cf20087",
+    "sc/ui.sc": "200abb4f7e79b0cc78b829e891b644d21653168ec4892dc864cb6d81c30109b0"
+  },
+  "items": [
+    {
+      "id": "book-of-fighting",
+      "name": "Book of Fighting",
+      "description": "Instantly finish any troop upgrade. Works in both villages!",
+      "max": 1,
+      "gemValue": 50,
+      "order": 2,
+      "effect": {
+        "finish": [
+          "troop"
+        ]
+      },
+      "icon": {
+        "path": "assets/magic-items-native/book-of-fighting.png",
+        "width": 120,
+        "height": 133,
+        "rgbaSha256": "6fb8466f55cf22ca7ce50bd0112327af9726fae0edca17a11a6a88a6ae3bbdc7"
+      }
+    },
+    {
+      "id": "book-of-building",
+      "name": "Book of Building",
+      "description": "Instantly finish any building upgrade. Works in both villages!",
+      "max": 1,
+      "gemValue": 50,
+      "order": 2,
+      "effect": {
+        "finish": [
+          "building"
+        ]
+      },
+      "icon": {
+        "path": "assets/magic-items-native/book-of-building.png",
+        "width": 120,
+        "height": 133,
+        "rgbaSha256": "c1bfa8e1f71eefa33bcfe2b3c3d7126e19915ef5cf501bfb27066b08e8bcacc3"
+      }
+    },
+    {
+      "id": "book-of-spells",
+      "name": "Book of Spells",
+      "description": "Instantly finish any spell upgrade in Home Village.",
+      "max": 1,
+      "gemValue": 50,
+      "order": 2,
+      "effect": {
+        "finish": [
+          "spell"
+        ]
+      },
+      "icon": {
+        "path": "assets/magic-items-native/book-of-spells.png",
+        "width": 120,
+        "height": 133,
+        "rgbaSha256": "f070c0a467afc002804115f8ce401761f3200b09a84874e91aca9846ab9e8057"
+      }
+    },
+    {
+      "id": "book-of-heroes",
+      "name": "Book of Heroes",
+      "description": "Instantly finish a Hero or Pet upgrade. Works in both villages!",
+      "max": 1,
+      "gemValue": 50,
+      "order": 2,
+      "effect": {
+        "finish": [
+          "hero"
+        ]
+      },
+      "icon": {
+        "path": "assets/magic-items-native/book-of-heroes.png",
+        "width": 120,
+        "height": 133,
+        "rgbaSha256": "a0c0a86f0be225765643685988a64559a9d22fb0c5598fa1ff55affdfc86cf54"
+      }
+    },
+    {
+      "id": "book-of-everything",
+      "name": "Book of Everything",
+      "description": "Instantly finish any upgrade. Works in both villages!",
+      "max": 1,
+      "gemValue": 50,
+      "order": 2,
+      "effect": {
+        "finish": [
+          "troop",
+          "building",
+          "spell",
+          "hero"
+        ]
+      },
+      "icon": {
+        "path": "assets/magic-items-native/book-of-everything.png",
+        "width": 120,
+        "height": 133,
+        "rgbaSha256": "ed132db034ce8eaad0a85174782095f7c4ef73e3d70038a42bab1edf564572e5"
+      }
+    },
+    {
+      "id": "power-potion",
+      "name": "Power Potion",
+      "description": "Boost Troops, Spells, and Siege Machines to their maximum level allowed by your Town Hall for 1h. Works in both Villages!",
+      "max": 5,
+      "gemValue": 10,
+      "order": 0,
+      "effect": {
+        "boost": "army",
+        "seconds": 3600
+      },
+      "icon": {
+        "path": "assets/magic-items-native/power-potion.png",
+        "width": 120,
+        "height": 140,
+        "rgbaSha256": "2eea0bf89bf6d7999c0639b88358641e8f639720a1658df3104d59ffae988ae6"
+      }
+    },
+    {
+      "id": "resource-potion",
+      "name": "Resource Potion",
+      "description": "Boost resource collector efficiency for 1d in Home Village.",
+      "max": 5,
+      "gemValue": 10,
+      "order": 0,
+      "effect": {
+        "boost": "resources",
+        "multiplier": 2,
+        "seconds": 86400
+      },
+      "icon": {
+        "path": "assets/magic-items-native/resource-potion.png",
+        "width": 120,
+        "height": 140,
+        "rgbaSha256": "c0ea8b3590cf71571f2e6c4f277f70062510597e90638bfdddd8f88d39e559e4"
+      }
+    },
+    {
+      "id": "rune-of-gold",
+      "name": "Rune of Gold",
+      "description": "Completely fill your Gold Storages in Home Village.",
+      "max": 1,
+      "gemValue": 50,
+      "order": 3,
+      "effect": {
+        "fill": "gold"
+      },
+      "icon": {
+        "path": "assets/magic-items-native/rune-of-gold.png",
+        "width": 120,
+        "height": 126,
+        "rgbaSha256": "a2b334eef5be4a0706f2362450ab1be11093e9c3f2cfe478799757a851c040b6"
+      }
+    },
+    {
+      "id": "rune-of-elixir",
+      "name": "Rune of Elixir",
+      "description": "Completely fill your Elixir Storages in Home Village.",
+      "max": 1,
+      "gemValue": 50,
+      "order": 3,
+      "effect": {
+        "fill": "elixir"
+      },
+      "icon": {
+        "path": "assets/magic-items-native/rune-of-elixir.png",
+        "width": 120,
+        "height": 126,
+        "rgbaSha256": "139259e25357c0996000ac41551ea52c9d7bf3f8dccbc587779c70259d7dcae3"
+      }
+    },
+    {
+      "id": "rune-of-dark-elixir",
+      "name": "Rune of Dark Elixir",
+      "description": "Completely fill your Dark Elixir storages in Home Village.",
+      "max": 1,
+      "gemValue": 50,
+      "order": 3,
+      "effect": {
+        "fill": "dark"
+      },
+      "icon": {
+        "path": "assets/magic-items-native/rune-of-dark-elixir.png",
+        "width": 120,
+        "height": 126,
+        "rgbaSha256": "8e16bcef53814c1d489ae1b42bb63b7491909e54bee7621c661270547bb16c4c"
+      }
+    },
+    {
+      "id": "wall-ring",
+      "name": "Wall Ring",
+      "description": "Instantly upgrade a wall piece. Some higher level walls may require multiple rings to upgrade. Requires a free Builder. Works in both villages!",
+      "max": 25,
+      "gemValue": 5,
+      "order": 5,
+      "effect": {
+        "ring": "wall",
+        "divisor": 1000000
+      },
+      "icon": {
+        "path": "assets/magic-items-native/wall-ring.png",
+        "width": 121,
+        "height": 120,
+        "rgbaSha256": "0866d55cebdf77064c447effe50fddcc4cb8139f50ed19a37f8bdce67e3047d9"
+      }
+    },
+    {
+      "id": "builder-potion",
+      "name": "Builder Potion",
+      "description": "Boost Builder work to 10x its regular speed for 1h in Home Village. The Builder's Apprentice will not be affected.",
+      "max": 5,
+      "gemValue": 10,
+      "order": 0,
+      "effect": {
+        "boost": "builders",
+        "multiplier": 10,
+        "seconds": 3600
+      },
+      "icon": {
+        "path": "assets/magic-items-native/builder-potion.png",
+        "width": 120,
+        "height": 140,
+        "rgbaSha256": "d68413622eaf75dc8caab1cb177d199c20f072bc105c24fddf14ce4f92932e0b"
+      }
+    },
+    {
+      "id": "hammer-of-fighting",
+      "name": "Hammer of Fighting",
+      "description": "Instantly upgrade any Troop to the next level. Works in both Villages!",
+      "max": 1,
+      "gemValue": 100,
+      "order": 5,
+      "effect": {
+        "upgrade": [
+          "troop"
+        ]
+      },
+      "icon": {
+        "path": "assets/magic-items-native/hammer-of-fighting.png",
+        "width": 120,
+        "height": 136,
+        "rgbaSha256": "a13448f92dbb416f21f1928971b9fdd1e94cb7e80b5e31a94e09336f88e23294"
+      }
+    },
+    {
+      "id": "hammer-of-building",
+      "name": "Hammer of Building",
+      "description": "Instantly upgrade any Building to the next level. Requires a free Builder. Works in both Villages!",
+      "max": 1,
+      "gemValue": 100,
+      "order": 5,
+      "effect": {
+        "upgrade": [
+          "building"
+        ]
+      },
+      "icon": {
+        "path": "assets/magic-items-native/hammer-of-building.png",
+        "width": 120,
+        "height": 136,
+        "rgbaSha256": "f3704be8a03cd29c260cedaf69ee0bdb8f2c8723eadf7595b0c5e46b9fc6b228"
+      }
+    },
+    {
+      "id": "hammer-of-spells",
+      "name": "Hammer of Spells",
+      "description": "Instantly upgrade any Spell to the next level in Home Village.",
+      "max": 1,
+      "gemValue": 100,
+      "order": 5,
+      "effect": {
+        "upgrade": [
+          "spell"
+        ]
+      },
+      "icon": {
+        "path": "assets/magic-items-native/hammer-of-spells.png",
+        "width": 120,
+        "height": 136,
+        "rgbaSha256": "8ecc8c373e0a68bc2aaf5392bb5537560c9eb038688b2f7f18fe3e42202a4cc3"
+      }
+    },
+    {
+      "id": "hammer-of-heroes",
+      "name": "Hammer of Heroes",
+      "description": "Instantly upgrade any Hero or Pet to the next level. Works in both Villages!",
+      "max": 1,
+      "gemValue": 100,
+      "order": 5,
+      "effect": {
+        "upgrade": [
+          "hero"
+        ]
+      },
+      "icon": {
+        "path": "assets/magic-items-native/hammer-of-heroes.png",
+        "width": 120,
+        "height": 136,
+        "rgbaSha256": "498d4b6e18fbe9a879dfeb21a46c6dcf2c50e256abe4e998b6eae1138d3ea7ff"
+      }
+    },
+    {
+      "id": "shovel-of-obstacles",
+      "name": "Shovel of Obstacles",
+      "description": "Strong but fragile, this magical shovel can be used to make a single obstacle permanently movable. Works in both villages!",
+      "max": 5,
+      "gemValue": 50,
+      "order": 1,
+      "effect": {
+        "shovel": true
+      },
+      "icon": {
+        "path": "assets/magic-items-native/shovel-of-obstacles.png",
+        "width": 120,
+        "height": 131,
+        "rgbaSha256": "0249ba2ef9850a3b652d53614079e3106cbbf9b64ec74d4e436f9a57818da298"
+      }
+    },
+    {
+      "id": "hero-potion",
+      "name": "Hero Potion",
+      "description": "Boost all Heroes and Pets to their maximum level allowed by your Town Hall for 1h. Works in both Villages!",
+      "max": 5,
+      "gemValue": 10,
+      "order": 0,
+      "effect": {
+        "boost": "heroes",
+        "seconds": 3600
+      },
+      "icon": {
+        "path": "assets/magic-items-native/hero-potion.png",
+        "width": 120,
+        "height": 140,
+        "rgbaSha256": "426c8f18cd88b4011fb81eb2f2b4fc8884d0f06a1514a516098e4724d12b7e36"
+      }
+    },
+    {
+      "id": "research-potion",
+      "name": "Research Potion",
+      "description": "Boost Laboratory research to 24x its regular speed in Home Village for 1h. The Lab Assistant will not be affected.",
+      "max": 5,
+      "gemValue": 10,
+      "order": 0,
+      "effect": {
+        "boost": "laboratory",
+        "multiplier": 24,
+        "seconds": 3600
+      },
+      "icon": {
+        "path": "assets/magic-items-native/research-potion.png",
+        "width": 120,
+        "height": 140,
+        "rgbaSha256": "47068bee2eaab3a312eabb018e83743675b9e3663fe0c9613d7fa331901dc6fd"
+      }
+    },
+    {
+      "id": "super-potion",
+      "name": "Super Potion",
+      "description": "Can Boost a Troop into its Super Troop form for 3 days!",
+      "max": 5,
+      "gemValue": 10,
+      "order": 0,
+      "effect": {
+        "super": true
+      },
+      "icon": {
+        "path": "assets/magic-items-native/super-potion.png",
+        "width": 120,
+        "height": 140,
+        "rgbaSha256": "f20e72844f20917602d65cd9c262a068951474f26e5ad919a0903e18c4d263d2"
+      }
+    },
+    {
+      "id": "pet-potion",
+      "name": "Pet Potion",
+      "description": "Boost Pet upgrades to 24x their regular speed for 1h.",
+      "max": 5,
+      "gemValue": 10,
+      "order": 0,
+      "effect": {
+        "boost": "pets",
+        "multiplier": 24,
+        "seconds": 3600
+      },
+      "icon": {
+        "path": "assets/magic-items-native/pet-potion.png",
+        "width": 120,
+        "height": 140,
+        "rgbaSha256": "870970f6d7a8debe7ba84a7d50f1178f7d7641b5a19b4b2e474bb117b602a2d0"
+      }
+    }
+  ]
+}

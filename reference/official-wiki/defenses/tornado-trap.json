@@ -1,0 +1,69 @@
+{
+ "title": "Tornado Trap",
+ "url": "https://clashofclans.fandom.com/wiki/Tornado_Trap",
+ "revid": 619079,
+ "retrieved": "2026-09-15",
+ "category": "trap",
+ "clientName": "Tornado Trap",
+ "clientTable": "traps.csv",
+ "levels": [
+  {
+   "level": 1,
+   "duration": 5,
+   "totalDamage": 39,
+   "cost": 1800000,
+   "townHall": 11
+  },
+  {
+   "level": 2,
+   "duration": 6,
+   "totalDamage": 47,
+   "cost": 2000000,
+   "buildSeconds": 86400,
+   "xp": 293,
+   "townHall": 11
+  },
+  {
+   "level": 3,
+   "duration": 7,
+   "totalDamage": 55,
+   "cost": 2500000,
+   "buildSeconds": 172800,
+   "xp": 415,
+   "townHall": 12
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 11,
+  "size": "1x1",
+  "triggerRadius": 3,
+  "damageRadius": 3,
+  "dps": 8,
+  "targets": "ground & air",
+  "favoriteTarget": "none",
+  "weightClass": "ceil(housing/3), max 5; heroes/pets 5; siege 1",
+  "notDisplaced": [
+   "Miner",
+   "Super Miner",
+   "Diggy",
+   "Battle Drill"
+  ]
+ },
+ "mismatches": [
+  {
+   "field": "cost",
+   "level": 1,
+   "wiki": 1800000,
+   "client": 1000000,
+   "note": "level 1 build cost: wiki 1,800,000 vs client 1,000,000",
+   "table": "Statistics"
+  },
+  {
+   "field": "effect radius",
+   "level": "all",
+   "wiki": 3,
+   "client": "spell Radius 400 (4 tiles); trap DamageRadius 300",
+   "note": "the pull/damage spell covers 4 tiles in the client vs 3 on the wiki"
+  }
+ ]
+}

@@ -1,138 +1,182 @@
-"""Guild & Territory Repository (REQ-5.x)
+"""Guild & Territory Repository (REQ-5.x) — data access layer.
 
-Data access layer for guilds and membership.
-Owns: Database queries. Delegates business logic to service.py.
+NOTE: Zone-score aggregation and ownership-resolution queries (SADD
+6.5.1, 7.3.1.2) land in plan.md Phase 8. This module currently exposes
+straightforward CRUD matching the Phase 1 schema.
 """
+from datetime import datetime
+from typing import List, Optional
 from uuid import UUID
+
+from sqlalchemy import text
 from sqlalchemy.orm import Session
-from sqlalchemy import and_
-from app.modules.m5_guild_territory.models import Guild, GuildMembership, TerritoryZone
+
+from app.modules.m5_guild_territory.models import (
+    Guild,
+    GuildJoinRequest,
+    GuildMembership,
+    JoinRequestStatus,
+    TerritoryZone,
+)
+from app.modules.m1_auth.models import User
 
 
 class GuildRepository:
-    """Guild data access."""
-
     def __init__(self, db: Session):
         self.db = db
 
-    def create_guild(self, guild_id: UUID, name: str, owner_id: UUID, description: str = None) -> Guild:
-        """Create a new guild."""
-        guild = Guild(
-            id=guild_id,
-            name=name,
-            owner_id=owner_id,
-            description=description
-        )
+    def create_guild(self, guild_id: UUID, name: str, description: Optional[str] = None) -> Guild:
+        guild = Guild(id=guild_id, name=name, description=description)
         self.db.add(guild)
-        self.db.commit()
-        self.db.refresh(guild)
+        self.db.flush()
         return guild
 
-    def get_guild_by_id(self, guild_id: UUID) -> Guild:
-        """Get guild by ID."""
+    def get_guild_by_id(self, guild_id) -> Optional[Guild]:
         return self.db.query(Guild).filter(Guild.id == guild_id).first()
 
-    def get_guild_by_name(self, name: str) -> Guild:
-        """Get guild by name (unique)."""
+    def lock_guild_by_id(self, guild_id) -> Optional[Guild]:
+        """Stable serialization point for role and membership mutations."""
+        return self.db.query(Guild).filter(Guild.id == guild_id).with_for_update().populate_existing().first()
+
+    def get_guild_by_name(self, name: str) -> Optional[Guild]:
         return self.db.query(Guild).filter(Guild.name == name).first()
 
-    def get_guilds_by_owner(self, owner_id: UUID) -> list:
-        """Get all guilds owned by user."""
-        return self.db.query(Guild).filter(Guild.owner_id == owner_id).all()
-
-    def get_all_guilds(self) -> list:
-        """Get all guilds."""
+    def get_all_guilds(self) -> List[Guild]:
         return self.db.query(Guild).all()
 
 
 class GuildMembershipRepository:
-    """Guild membership data access."""
-
     def __init__(self, db: Session):
         self.db = db
 
-    def create_membership(self, membership_id: UUID, guild_id: UUID, user_id: UUID, role: str = "member") -> GuildMembership:
-        """Create a guild membership."""
-        membership = GuildMembership(
-            id=membership_id,
-            guild_id=guild_id,
-            user_id=user_id,
-            role=role
-        )
+    def create_membership(self, guild_id, user_id, role: str = "member") -> GuildMembership:
+        membership = GuildMembership(guild_id=guild_id, user_id=user_id, role=role)
         self.db.add(membership)
-        self.db.commit()
-        self.db.refresh(membership)
+        self.db.flush()
         return membership
 
-    def get_membership(self, guild_id: UUID, user_id: UUID) -> GuildMembership:
-        """Get membership for user in guild."""
+    def lock_user(self, user_id):
+        """Serialize guild mutations for a user across guilds and join requests."""
+        return self.db.query(User).filter(User.id == user_id).with_for_update().first()
+
+    def lock_users(self, *user_ids):
+        """Lock user rows in a global deterministic order for guild changes."""
+        locked = {}
+        for user_id in sorted(set(user_ids), key=str):
+            locked[user_id] = self.lock_user(user_id)
+        return locked
+
+    def get_membership(self, guild_id, user_id) -> Optional[GuildMembership]:
         return self.db.query(GuildMembership).filter(
-            and_(
-                GuildMembership.guild_id == guild_id,
-                GuildMembership.user_id == user_id
-            )
+            GuildMembership.guild_id == guild_id,
+            GuildMembership.user_id == user_id,
         ).first()
 
-    def get_memberships_by_guild(self, guild_id: UUID) -> list:
-        """Get all members of a guild."""
+    def get_memberships_by_guild(self, guild_id) -> List[GuildMembership]:
         return self.db.query(GuildMembership).filter(GuildMembership.guild_id == guild_id).all()
 
-    def get_memberships_by_user(self, user_id: UUID) -> list:
-        """Get all guilds user is member of."""
-        return self.db.query(GuildMembership).filter(GuildMembership.user_id == user_id).all()
+    def get_active_membership(self, user_id) -> Optional[GuildMembership]:
+        """A solver belongs to at most one guild at a time (SADD 6.5.3)."""
+        return self.db.query(GuildMembership).filter(GuildMembership.user_id == user_id).first()
 
-    def get_user_guild(self, user_id: UUID) -> Guild:
-        """Get the single guild a user owns (if any)."""
-        return self.db.query(Guild).filter(Guild.owner_id == user_id).first()
+    def update_role(self, guild_id, user_id, role: str) -> Optional[GuildMembership]:
+        membership = self.get_membership(guild_id, user_id)
+        if membership:
+            membership.role = role
+            self.db.flush()
+        return membership
 
-    def delete_membership(self, guild_id: UUID, user_id: UUID) -> bool:
-        """Remove user from guild."""
-        result = self.db.query(GuildMembership).filter(
-            and_(
-                GuildMembership.guild_id == guild_id,
-                GuildMembership.user_id == user_id
-            )
-        ).delete()
-        self.db.commit()
-        return result > 0
+    def delete_membership(self, guild_id, user_id) -> bool:
+        membership = self.get_membership(guild_id, user_id)
+        if membership:
+            self.db.delete(membership)
+            self.db.flush()
+            return True
+        return False
+
+
+class GuildJoinRequestRepository:
+    def __init__(self, db: Session):
+        self.db = db
+
+    def create(self, guild_id, user_id) -> GuildJoinRequest:
+        request = GuildJoinRequest(guild_id=guild_id, user_id=user_id)
+        self.db.add(request)
+        self.db.flush()
+        return request
+
+    def get_by_id(self, request_id) -> Optional[GuildJoinRequest]:
+        return self.db.query(GuildJoinRequest).filter(GuildJoinRequest.id == request_id).first()
+
+    def lock_by_id(self, request_id) -> Optional[GuildJoinRequest]:
+        return self.db.query(GuildJoinRequest).filter(
+            GuildJoinRequest.id == request_id
+        ).with_for_update().populate_existing().first()
+
+    def get_pending_by_guild(self, guild_id) -> List[GuildJoinRequest]:
+        return self.db.query(GuildJoinRequest).filter(
+            GuildJoinRequest.guild_id == guild_id,
+            GuildJoinRequest.status == JoinRequestStatus.pending,
+        ).all()
+
+    def get_pending_by_guild_and_user(self, guild_id, user_id) -> Optional[GuildJoinRequest]:
+        return self.db.query(GuildJoinRequest).filter(
+            GuildJoinRequest.guild_id == guild_id,
+            GuildJoinRequest.user_id == user_id,
+            GuildJoinRequest.status == JoinRequestStatus.pending,
+        ).first()
+
+    def decide(self, request_id, status: JoinRequestStatus, decided_by) -> Optional[GuildJoinRequest]:
+        from datetime import datetime, timezone
+
+        request = self.lock_by_id(request_id)
+        if request and request.status == JoinRequestStatus.pending:
+            request.status = status
+            request.decided_by = decided_by
+            request.decided_at = datetime.now(timezone.utc)
+            self.db.flush()
+        return request
 
 
 class TerritoryRepository:
-    """Territory zone data access."""
-
     def __init__(self, db: Session):
         self.db = db
 
-    def get_all_zones(self) -> list:
-        """Get all territory zones."""
+    def get_all_zones(self) -> List[TerritoryZone]:
         return self.db.query(TerritoryZone).all()
 
-    def get_zone_by_name(self, zone_name: str) -> TerritoryZone:
-        """Get zone by name."""
-        return self.db.query(TerritoryZone).filter(TerritoryZone.zone_name == zone_name).first()
-
-    def get_zones_by_guild(self, guild_id: UUID) -> list:
-        """Get all zones owned by guild."""
-        return self.db.query(TerritoryZone).filter(TerritoryZone.owning_guild_id == guild_id).all()
-
-    def get_zone_by_id(self, zone_id: UUID) -> TerritoryZone:
-        """Get zone by ID."""
+    def get_zone_by_id(self, zone_id) -> Optional[TerritoryZone]:
         return self.db.query(TerritoryZone).filter(TerritoryZone.id == zone_id).first()
 
-    def claim_zone(self, zone_id: UUID, guild_id: UUID) -> TerritoryZone:
-        """Claim a zone for a guild (set owning_guild_id)."""
-        zone = self.get_zone_by_id(zone_id)
-        if zone:
-            zone.owning_guild_id = guild_id
-            self.db.commit()
-            self.db.refresh(zone)
-        return zone
+    def lock_zone_by_id(self, zone_id) -> Optional[TerritoryZone]:
+        return self.db.query(TerritoryZone).filter(
+            TerritoryZone.id == zone_id
+        ).with_for_update().populate_existing().first()
 
-    def release_zone(self, zone_id: UUID) -> TerritoryZone:
-        """Release a zone (set owning_guild_id to null)."""
-        zone = self.get_zone_by_id(zone_id)
-        if zone:
-            zone.owning_guild_id = None
-            self.db.commit()
-            self.db.refresh(zone)
-        return zone
+    def get_zones_by_guild(self, guild_id) -> List[TerritoryZone]:
+        return self.db.query(TerritoryZone).filter(TerritoryZone.owning_guild_id == guild_id).all()
+
+    def get_guild_ids_due_for_rescore(self, older_than: datetime, limit: int = 25) -> List[UUID]:
+        """
+        Worker "what's due" query: guilds whose zone contributions are
+        stale (or entirely missing) and therefore need a rescore.
+
+        Territory score decays daily (SADD §7.3.1.2), so a guild is due
+        once its last contribution write is older than the reconciliation
+        interval. A guild with no contribution rows at all is always due.
+        """
+        rows = self.db.execute(
+            text(
+                """
+                SELECT g.id
+                FROM guilds g
+                LEFT JOIN zone_contributions c ON c.guild_id = g.id
+                GROUP BY g.id
+                HAVING MIN(c.updated_at) IS NULL OR MIN(c.updated_at) <= :cutoff
+                ORDER BY MIN(c.updated_at) ASC NULLS FIRST
+                LIMIT :limit
+                """
+            ),
+            {"cutoff": older_than, "limit": limit},
+        ).fetchall()
+        return [row[0] for row in rows]

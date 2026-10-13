@@ -1,0 +1,68 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "scope": "Default Home scenery music and Home Village battle music, unaltered.",
+  "tracks": {
+    "home": [
+      {
+        "source": "music/home_music_part_1.ogg",
+        "path": "assets/audio/music/home_music_part_1.ogg",
+        "bytes": 638747,
+        "sha256": "1274800f79ed8aceaa5fc1512ac57c6bcc76373079e38ce03c180b35209ce469"
+      },
+      {
+        "source": "music/home_music_part_2.ogg",
+        "path": "assets/audio/music/home_music_part_2.ogg",
+        "bytes": 469663,
+        "sha256": "fdb312114d76da283d125e6fabc7b45f2341d55ee95ac5373c47aeb1f8d50ece"
+      },
+      {
+        "source": "music/home_music_part_3.ogg",
+        "path": "assets/audio/music/home_music_part_3.ogg",
+        "bytes": 459087,
+        "sha256": "32294e30f7b6c61405a8f5cc322f6f4d420b56acdfb5add8b41bb18f9d3f38bf"
+      }
+    ],
+    "planning": [
+      {
+        "source": "music/combat_planning_music.mp3",
+        "path": "assets/audio/music/combat_planning_music.mp3",
+        "bytes": 240744,
+        "sha256": "7ba09a4486db216da4b3a0651306b5990a30dffc61916c2df03fc1183f4727f9"
+      }
+    ],
+    "combat": [
+      {
+        "source": "music/combat_music.ogg",
+        "path": "assets/audio/music/combat_music.ogg",
+        "bytes": 1014175,
+        "sha256": "60a7392a1774e5d6510c96786cc5000f61621566f68ca6080e08f42023d850d8"
+      }
+    ],
+    "intro": [
+      {
+        "source": "music/new_battle_intro_01.mp3",
+        "path": "assets/audio/music/new_battle_intro_01.mp3",
+        "bytes": 21005,
+        "sha256": "ad7929d9d7da407fbabfdec540fefb9c64493af48668b0cf1130cc85b8b4bdcc"
+      }
+    ],
+    "victory": [
+      {
+        "source": "music/winwinwin.mp3",
+        "path": "assets/audio/music/winwinwin.mp3",
+        "bytes": 33437,
+        "sha256": "ee06fffcca379a973877b8703bb179ea958c67b5092b1bc6bf5c2246bcd2d126"
+      }
+    ],
+    "defeat": [
+      {
+        "source": "music/battle_lost_02.mp3",
+        "path": "assets/audio/music/battle_lost_02.mp3",
+        "bytes": 27794,
+        "sha256": "4d12162e486f7d03da9ebf6290d82e7db03e0cf4fe2d94193af325f549f5390f"
+      }
+    ]
+  }
+}

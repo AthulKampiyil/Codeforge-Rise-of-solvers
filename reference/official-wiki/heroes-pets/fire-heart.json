@@ -1,0 +1,281 @@
+{
+ "title": "Fire Heart",
+ "url": "https://clashofclans.fandom.com/wiki/Fire_Heart",
+ "revid": 624518,
+ "retrieved": "2026-09-15",
+ "clientName": "Fire Heart",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Dragon Duke",
+ "summary": "Duke's starting passive item: a one-time 4-tile death explosion (1,000 → 3,000) and strong self-regeneration; passive DPS and HP.",
+ "constants": {
+  "wiki": {
+   "User": "Dragon Duke",
+   "Ability Type": "Passive",
+   "Rarity": "Common",
+   "Unlock Requirement": "Available by default",
+   "Damage Radius": "4 tiles"
+  },
+  "client": {
+   "Rarity": "COMMON",
+   "AllowedCharacters": "Dragon Duke;",
+   "MainAbilities": "DragonCrownExplodeOnDeath",
+   "ExtraAbilities": "DragonCrownRegeneration",
+   "levelRows": 18,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "damageOnDefeat": {
+   "wikiHeader": "Damage on Defeat",
+   "unit": "damage points"
+  },
+  "selfHealingPerSecond": {
+   "wikiHeader": "Hero Boosts / Self Healing Per Second",
+   "unit": "hitpoints healed"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boosts / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damageOnDefeat": 1000,
+   "selfHealingPerSecond": 50,
+   "damagePerSecondIncrease": 10,
+   "hitpointIncrease": 900,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": null
+  },
+  {
+   "level": 2,
+   "damageOnDefeat": 1000,
+   "selfHealingPerSecond": 50,
+   "damagePerSecondIncrease": 10,
+   "hitpointIncrease": 1200,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "damageOnDefeat": 1350,
+   "selfHealingPerSecond": 70,
+   "damagePerSecondIncrease": 12,
+   "hitpointIncrease": 1450,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "damageOnDefeat": 1350,
+   "selfHealingPerSecond": 70,
+   "damagePerSecondIncrease": 12,
+   "hitpointIncrease": 1750,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "damageOnDefeat": 1350,
+   "selfHealingPerSecond": 70,
+   "damagePerSecondIncrease": 12,
+   "hitpointIncrease": 2000,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "damageOnDefeat": 1700,
+   "selfHealingPerSecond": 90,
+   "damagePerSecondIncrease": 14,
+   "hitpointIncrease": 2300,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "damageOnDefeat": 1700,
+   "selfHealingPerSecond": 90,
+   "damagePerSecondIncrease": 14,
+   "hitpointIncrease": 2600,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "damageOnDefeat": 1700,
+   "selfHealingPerSecond": 90,
+   "damagePerSecondIncrease": 14,
+   "hitpointIncrease": 2850,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "damageOnDefeat": 2000,
+   "selfHealingPerSecond": 110,
+   "damagePerSecondIncrease": 16,
+   "hitpointIncrease": 3150,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "damageOnDefeat": 2000,
+   "selfHealingPerSecond": 110,
+   "damagePerSecondIncrease": 16,
+   "hitpointIncrease": 3400,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 11,
+   "damageOnDefeat": 2000,
+   "selfHealingPerSecond": 110,
+   "damagePerSecondIncrease": 16,
+   "hitpointIncrease": 3700,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 12,
+   "damageOnDefeat": 2350,
+   "selfHealingPerSecond": 130,
+   "damagePerSecondIncrease": 18,
+   "hitpointIncrease": 4000,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 13,
+   "damageOnDefeat": 2350,
+   "selfHealingPerSecond": 130,
+   "damagePerSecondIncrease": 18,
+   "hitpointIncrease": 4250,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 14,
+   "damageOnDefeat": 2350,
+   "selfHealingPerSecond": 130,
+   "damagePerSecondIncrease": 18,
+   "hitpointIncrease": 4550,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 15,
+   "damageOnDefeat": 2700,
+   "selfHealingPerSecond": 140,
+   "damagePerSecondIncrease": 20,
+   "hitpointIncrease": 4800,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 16,
+   "damageOnDefeat": 2700,
+   "selfHealingPerSecond": 140,
+   "damagePerSecondIncrease": 20,
+   "hitpointIncrease": 5100,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 17,
+   "damageOnDefeat": 2700,
+   "selfHealingPerSecond": 140,
+   "damagePerSecondIncrease": 20,
+   "hitpointIncrease": 5450,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 18,
+   "damageOnDefeat": 3000,
+   "selfHealingPerSecond": 150,
+   "damagePerSecondIncrease": 23,
+   "hitpointIncrease": 5600,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 7
+  }
+ ],
+ "subpages": [],
+ "mismatches": [],
+ "clientColumns": [
+  "ExtraAbilities:special_abilities[DragonCrownRegeneration].Regeneration",
+  "MainAbilities:special_abilities[DragonCrownExplodeOnDeath] → SelfSpell:spells[DragonCrownExplosion].Damage",
+  "character_items.DPS",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

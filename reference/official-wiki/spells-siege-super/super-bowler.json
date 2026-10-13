@@ -1,0 +1,108 @@
+{
+  "title": "Super Bowler",
+  "url": "https://clashofclans.fandom.com/wiki/Super_Bowler",
+  "revid": 623122,
+  "clientName": "Super Bowler",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Super Bowler",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "None",
+    "attackType": "Area Splash 0.6 Tile Radius (Ground Only)",
+    "housingSpace": 30,
+    "movementSpeed": 14,
+    "attackSpeedSeconds": 2.2,
+    "range": "3 tiles from first target",
+    "specialAbility": "Triple Strike",
+    "rangeTiles": 3,
+    "bounceDistanceTiles": 3,
+    "splashRadiusTiles": 0.6
+  },
+  "levels": [
+    {
+      "level": 4,
+      "dps": 170,
+      "damagePerAttack": 374,
+      "hitpoints": 1600
+    },
+    {
+      "level": 5,
+      "dps": 185,
+      "damagePerAttack": 407,
+      "hitpoints": 1800
+    },
+    {
+      "level": 6,
+      "dps": 200,
+      "damagePerAttack": 440,
+      "hitpoints": 2000
+    },
+    {
+      "level": 7,
+      "dps": 220,
+      "damagePerAttack": 484,
+      "hitpoints": 2300
+    },
+    {
+      "level": 8,
+      "dps": 240,
+      "damagePerAttack": 528,
+      "hitpoints": 2600
+    },
+    {
+      "level": 9,
+      "dps": 270,
+      "damagePerAttack": 594,
+      "hitpoints": 3000
+    },
+    {
+      "level": 10,
+      "dps": 310,
+      "damagePerAttack": 682,
+      "hitpoints": 3700
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "bounces",
+      "client": "`ProjectileBounces` 3, `ChainShootingDistance` 300, `Projectile` SuperBowlerProjectile"
+    },
+    {
+      "mechanic": "splash",
+      "client": "`DamageRadius` 60"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`DPS` x 2.2 s, `Hitpoints`, `Speed` 175, `AttackRange` 300, `NewTargetAttackDelay` 1100"
+    }
+  ],
+  "boost": {
+    "wiki": {
+      "baseTroop": "Bowler",
+      "minBaseLevel": 4,
+      "townHallRequired": 12,
+      "clanCastleLevelToReceive": 6,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperBowler",
+      "Original": "Bowler",
+      "MinOriginalLevel_raw": 3,
+      "minBaseLevel": 4,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_BOWLER_INTRO_TH13",
+      "townHallDerived": 12
+    }
+  }
+}

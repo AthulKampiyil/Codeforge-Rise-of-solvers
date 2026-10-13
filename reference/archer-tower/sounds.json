@@ -1,0 +1,372 @@
+{
+  "sources": {
+    "fingerprint.json": "ecb5b05d632831cd706e4e993158b63635445257ad254bec97c371b078e3044b",
+    "sfx/archer_tower_pick_01.ogg": "64c823500a439327f30eed056b712257347d7b368a8e7bc42d6ae24df3ec7d71",
+    "sfx/archer_tower_place_02.ogg": "3aa9d058c7208c2ac7f284831de5fb583816d6e7a0ef1a9b137a7ce2d2996dd7",
+    "sfx/arrow_hit_07.ogg": "f331fbb1d307973e4adfc2b673fd167f636e2babb887a90c1c0d3c1481581db3",
+    "sfx/arrow_hit_07v2.ogg": "24012a7b5afc5834cba6cfaa4873dc9a7fd1d65f3fa293b7bcd2a67b439a3b56",
+    "sfx/arrow_hit_07v3.ogg": "05790e6c00742cfab1ab746a8bce34a4d74cb1c86ec6c34fd13b5e1fdfb144b9",
+    "sfx/bow_target.ogg": "6ce1662bd07978da29bdd4d2dd89cd242164b3808d1dcc9ed8911065c2b6aa2b",
+    "sfx/building_destroyed_01.ogg": "fd8295765aa86ff5c7c6be1159cd8fc97aed3c858c29fbdb1af5e3d5c5ce7f04",
+    "sfx/explosive_arrow_01v2.ogg": "2743212b46001112a8dedbc1aee1c944389d21f3f1144ba9e1c5edf3a9b79e4e",
+    "sfx/generic_hit_01.ogg": "5fca48e71d21be79eb6d40a1ca1ad3a002e3d69ba72388b2eb6a4d2ec10e5934"
+  },
+  "definitionSha256": "646950cc4fb4210740371a663d17ed70edee3cac8aad67354c27c720fb659073",
+  "effects": {
+    "Archer Attack": [
+      {
+        "Name": "Archer Attack",
+        "IsoLayer": "None",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/arrow_hit_07.ogg",
+        "Volume": "50",
+        "MinPitch": "90",
+        "MaxPitch": "110",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "Sound": "sfx/arrow_hit_07v2.ogg",
+        "Volume": "50",
+        "MinPitch": "90",
+        "MaxPitch": "110"
+      },
+      {
+        "Sound": "sfx/arrow_hit_07v3.ogg",
+        "Volume": "50",
+        "MinPitch": "90",
+        "MaxPitch": "110"
+      }
+    ],
+    "Bow Target": [
+      {
+        "Name": "Bow Target",
+        "ParticleEmitter": "Place",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/bow_target.ogg",
+        "Volume": "70",
+        "MinPitch": "110",
+        "MaxPitch": "120",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Building Destroyed": [
+      {
+        "Name": "Building Destroyed",
+        "ParticleEmitter": "Building Destroyed",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/building_destroyed_01.ogg",
+        "Volume": "80",
+        "MinPitch": "85",
+        "MaxPitch": "95",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Smoke",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Explosive Arrow": [
+      {
+        "Name": "Explosive Arrow",
+        "ParticleEmitter": "Explosive_arrow2",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/explosive_arrow_01v2.ogg",
+        "Volume": "65",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Arrow_Tower_lightFlash",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Hit",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "DefenceHit",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Explosive_arrow",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Arrow_Tower_lightFlash",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Generic Hit": [
+      {
+        "Name": "Generic Hit",
+        "ParticleEmitter": "DefenceHit",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/generic_hit_01.ogg",
+        "Volume": "30",
+        "MinPitch": "95",
+        "MaxPitch": "105",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Tower Turret Pickup": [
+      {
+        "Name": "Tower Turret Pickup",
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/archer_tower_pick_01.ogg",
+        "Volume": "80",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Tower Turret Placing": [
+      {
+        "Name": "Tower Turret Placing",
+        "ParticleEmitter": "Place",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "TRUE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/archer_tower_place_02.ogg",
+        "Volume": "80",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0"
+      }
+    ]
+  },
+  "sounds": {
+    "sfx/archer_tower_pick_01.ogg": {
+      "path": "assets/audio/archer-tower-native/archer_tower_pick_01.ogg",
+      "bytes": 6628,
+      "sha256": "64c823500a439327f30eed056b712257347d7b368a8e7bc42d6ae24df3ec7d71"
+    },
+    "sfx/archer_tower_place_02.ogg": {
+      "path": "assets/audio/archer-tower-native/archer_tower_place_02.ogg",
+      "bytes": 6729,
+      "sha256": "3aa9d058c7208c2ac7f284831de5fb583816d6e7a0ef1a9b137a7ce2d2996dd7"
+    },
+    "sfx/arrow_hit_07.ogg": {
+      "path": "assets/audio/archer-tower-native/arrow_hit_07.ogg",
+      "bytes": 8206,
+      "sha256": "f331fbb1d307973e4adfc2b673fd167f636e2babb887a90c1c0d3c1481581db3"
+    },
+    "sfx/arrow_hit_07v2.ogg": {
+      "path": "assets/audio/archer-tower-native/arrow_hit_07v2.ogg",
+      "bytes": 8905,
+      "sha256": "24012a7b5afc5834cba6cfaa4873dc9a7fd1d65f3fa293b7bcd2a67b439a3b56"
+    },
+    "sfx/arrow_hit_07v3.ogg": {
+      "path": "assets/audio/archer-tower-native/arrow_hit_07v3.ogg",
+      "bytes": 8482,
+      "sha256": "05790e6c00742cfab1ab746a8bce34a4d74cb1c86ec6c34fd13b5e1fdfb144b9"
+    },
+    "sfx/bow_target.ogg": {
+      "path": "assets/audio/archer-tower-native/bow_target.ogg",
+      "bytes": 7483,
+      "sha256": "6ce1662bd07978da29bdd4d2dd89cd242164b3808d1dcc9ed8911065c2b6aa2b"
+    },
+    "sfx/building_destroyed_01.ogg": {
+      "path": "assets/audio/archer-tower-native/building_destroyed_01.ogg",
+      "bytes": 11925,
+      "sha256": "fd8295765aa86ff5c7c6be1159cd8fc97aed3c858c29fbdb1af5e3d5c5ce7f04"
+    },
+    "sfx/explosive_arrow_01v2.ogg": {
+      "path": "assets/audio/archer-tower-native/explosive_arrow_01v2.ogg",
+      "bytes": 7562,
+      "sha256": "2743212b46001112a8dedbc1aee1c944389d21f3f1144ba9e1c5edf3a9b79e4e"
+    },
+    "sfx/generic_hit_01.ogg": {
+      "path": "assets/audio/archer-tower-native/generic_hit_01.ogg",
+      "bytes": 5282,
+      "sha256": "5fca48e71d21be79eb6d40a1ca1ad3a002e3d69ba72388b2eb6a4d2ec10e5934"
+    }
+  }
+}

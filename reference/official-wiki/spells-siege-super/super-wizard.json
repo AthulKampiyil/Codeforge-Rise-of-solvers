@@ -1,0 +1,111 @@
+{
+  "title": "Super Wizard",
+  "url": "https://clashofclans.fandom.com/wiki/Super_Wizard/Home_Village",
+  "revid": 624748,
+  "clientName": "Super Wizard",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Super Wizard/Home Village",
+  "parentPage": "Super Wizard",
+  "parentRevid": 618174,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "None",
+    "attackType": "Single Target",
+    "chainDamageDecayPercent": 60,
+    "chainDistanceTiles": 3,
+    "housingSpace": 10,
+    "movementSpeed": 20,
+    "attackSpeedSeconds": 2,
+    "rangeTiles": 3,
+    "specialAbility": "Chain Magic"
+  },
+  "levels": [
+    {
+      "level": 9,
+      "dps": 220,
+      "damagePerHitPrimary": 440,
+      "damagePerHitSecondary": 176,
+      "hitpoints": 545
+    },
+    {
+      "level": 10,
+      "dps": 240,
+      "damagePerHitPrimary": 480,
+      "damagePerHitSecondary": 192,
+      "hitpoints": 705
+    },
+    {
+      "level": 11,
+      "dps": 265,
+      "damagePerHitPrimary": 530,
+      "damagePerHitSecondary": 212,
+      "hitpoints": 760
+    },
+    {
+      "level": 12,
+      "dps": 285,
+      "damagePerHitPrimary": 570,
+      "damagePerHitSecondary": 228,
+      "hitpoints": 815
+    },
+    {
+      "level": 13,
+      "dps": 305,
+      "damagePerHitPrimary": 610,
+      "damagePerHitSecondary": 244,
+      "hitpoints": 870
+    },
+    {
+      "level": 14,
+      "dps": 335,
+      "damagePerHitPrimary": 670,
+      "damagePerHitSecondary": 268,
+      "hitpoints": 925
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "rangeTiles",
+      "level": null,
+      "wiki": 3,
+      "client": 3.5,
+      "note": "client AttackRange/100"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "chain",
+      "client": "`ChainAttackDistance` 300, `ChainAttackFactor` 10 (targets incl. primary), `ChainAttackDepth` 1 (branches from primary), `ChainAttackDamageReductionPercent` 60, `ChainAttackDelay` 128"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`DPS` x 2 s, `Hitpoints`, `Speed` 250, `AttackRange` 350"
+    }
+  ],
+  "boost": {
+    "wiki": {
+      "baseTroop": "Wizard",
+      "minBaseLevel": 9,
+      "townHallRequired": 12,
+      "clanCastleLevelToReceive": 6,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperWizard",
+      "Original": "Wizard",
+      "MinOriginalLevel_raw": 8,
+      "minBaseLevel": 9,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_WIZARD_INTRO_TH13",
+      "townHallDerived": 12
+    }
+  }
+}

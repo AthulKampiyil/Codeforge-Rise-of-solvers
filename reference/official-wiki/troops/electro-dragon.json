@@ -1,0 +1,319 @@
+{
+ "title": "Electro Dragon",
+ "page": "Electro Dragon",
+ "url": "https://clashofclans.fandom.com/wiki/Electro_Dragon",
+ "revid": 625283,
+ "retrieved": "2026-09-15",
+ "clientName": "Electro Dragon",
+ "clientVersion": "18.400.21",
+ "category": "elixir-troop",
+ "constants": {
+  "housingSpace": 30,
+  "movementSpeedWiki": 13,
+  "internalSpeed": 160,
+  "tilesPerSecond": 1.6,
+  "attackRangeTiles": 3,
+  "attackRangeTilesClient": 2.5,
+  "attackSeconds": 3.5,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Ranged (Ground and Air) / Chain Lightning",
+  "targets": "ground+air",
+  "favoriteTarget": "None",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": true,
+  "jumpsWalls": false,
+  "underground": false,
+  "unlock": {
+   "building": "Barracks",
+   "level": 13,
+   "townHall": 11
+  },
+  "chainTargets": 5,
+  "chainDecayPercent": -20,
+  "chainDistanceTiles": 3,
+  "chainDelayMsClient": 128,
+  "triggersTraps": true
+ },
+ "client": {
+  "clientName": "Electro Dragon",
+  "housingSpace": 30,
+  "internalSpeed": 160,
+  "movementSpeedInGameExact": 12.8,
+  "movementSpeedInGameRounded": 13,
+  "tilesPerSecond": 1.6,
+  "attackRangeTiles": 2.5,
+  "attackSeconds": 3.5,
+  "targets": "ground+air",
+  "flying": true,
+  "jumpsWalls": false,
+  "favoriteTarget": "None",
+  "productionBuilding": "Barracks",
+  "barracksLevel": 13,
+  "unlockTownHall": 11,
+  "triggersTraps": true,
+  "coolDownOverride": 625,
+  "movementOffsetSpeed": 15,
+  "chainTargets": 5,
+  "chainDecayPercent": -20,
+  "chainDistanceTiles": 3,
+  "chainDelayMs": 128
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 260,
+   "damagePerHit": 910,
+   "deathDamage": 65,
+   "deathDamageHits": 6,
+   "hitpoints": 3400,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 290,
+   "damagePerHit": 1015,
+   "deathDamage": 75,
+   "deathDamageHits": 6,
+   "hitpoints": 3900,
+   "researchCost": 6000000,
+   "researchSeconds": 345600,
+   "researchTimeText": "4d",
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 3,
+   "dps": 320,
+   "damagePerHit": 1120,
+   "deathDamage": 85,
+   "deathDamageHits": 6,
+   "hitpoints": 4400,
+   "researchCost": 7000000,
+   "researchSeconds": 388800,
+   "researchTimeText": "4d 12h",
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 4,
+   "dps": 350,
+   "damagePerHit": 1225,
+   "deathDamage": 95,
+   "deathDamageHits": 6,
+   "hitpoints": 4700,
+   "researchCost": 9000000,
+   "researchSeconds": 604800,
+   "researchTimeText": "7d",
+   "laboratoryLevel": 11
+  },
+  {
+   "level": 5,
+   "dps": 380,
+   "damagePerHit": 1330,
+   "deathDamage": 105,
+   "deathDamageHits": 6,
+   "hitpoints": 5000,
+   "researchCost": 11000000,
+   "researchSeconds": 691200,
+   "researchTimeText": "8d",
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 6,
+   "dps": 410,
+   "damagePerHit": 1435,
+   "deathDamage": 115,
+   "deathDamageHits": 6,
+   "hitpoints": 5400,
+   "researchCost": 14000000,
+   "researchSeconds": 734400,
+   "researchTimeText": "8d 12h",
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 7,
+   "dps": 440,
+   "damagePerHit": 1540,
+   "deathDamage": 125,
+   "deathDamageHits": 6,
+   "hitpoints": 5700,
+   "researchCost": 16000000,
+   "researchSeconds": 777600,
+   "researchTimeText": "9d",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 8,
+   "dps": 475,
+   "damagePerHit": 1662.5,
+   "deathDamage": 135,
+   "deathDamageHits": 6,
+   "hitpoints": 6400,
+   "researchCost": 20000000,
+   "researchSeconds": 864000,
+   "researchTimeText": "10d",
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 9,
+   "dps": 510,
+   "damagePerHit": 1785,
+   "deathDamage": 145,
+   "deathDamageHits": 6,
+   "hitpoints": 6900,
+   "researchCost": 30000000,
+   "researchSeconds": 1382400,
+   "researchTimeText": "16d",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 3400,
+   "dps": 260,
+   "damagePerHit": 910,
+   "deathDamage": 65,
+   "deathDamageHits": 6,
+   "deathSpellLevel": 4
+  },
+  {
+   "level": 2,
+   "hitpoints": 3900,
+   "dps": 290,
+   "damagePerHit": 1015,
+   "researchCost": 6000000,
+   "researchSeconds": 345600,
+   "laboratoryLevel": 9,
+   "deathDamage": 75,
+   "deathDamageHits": 6,
+   "deathSpellLevel": 5
+  },
+  {
+   "level": 3,
+   "hitpoints": 4400,
+   "dps": 320,
+   "damagePerHit": 1120,
+   "researchCost": 7000000,
+   "researchSeconds": 388800,
+   "laboratoryLevel": 10,
+   "deathDamage": 85,
+   "deathDamageHits": 6,
+   "deathSpellLevel": 6
+  },
+  {
+   "level": 4,
+   "hitpoints": 4700,
+   "dps": 350,
+   "damagePerHit": 1225,
+   "researchCost": 9000000,
+   "researchSeconds": 604800,
+   "laboratoryLevel": 11,
+   "deathDamage": 95,
+   "deathDamageHits": 6,
+   "deathSpellLevel": 7
+  },
+  {
+   "level": 5,
+   "hitpoints": 5000,
+   "dps": 380,
+   "damagePerHit": 1330,
+   "researchCost": 11000000,
+   "researchSeconds": 691200,
+   "laboratoryLevel": 12,
+   "deathDamage": 105,
+   "deathDamageHits": 6,
+   "deathSpellLevel": 8
+  },
+  {
+   "level": 6,
+   "hitpoints": 5400,
+   "dps": 410,
+   "damagePerHit": 1435,
+   "researchCost": 14000000,
+   "researchSeconds": 734400,
+   "laboratoryLevel": 13,
+   "deathDamage": 115,
+   "deathDamageHits": 6,
+   "deathSpellLevel": 9
+  },
+  {
+   "level": 7,
+   "hitpoints": 5700,
+   "dps": 440,
+   "damagePerHit": 1540,
+   "researchCost": 16000000,
+   "researchSeconds": 777600,
+   "laboratoryLevel": 14,
+   "deathDamage": 125,
+   "deathDamageHits": 6,
+   "deathSpellLevel": 10
+  },
+  {
+   "level": 8,
+   "hitpoints": 6400,
+   "dps": 475,
+   "damagePerHit": 1662.5,
+   "researchCost": 20000000,
+   "researchSeconds": 864000,
+   "laboratoryLevel": 15,
+   "deathDamage": 135,
+   "deathDamageHits": 6,
+   "deathSpellLevel": 11
+  },
+  {
+   "level": 9,
+   "hitpoints": 6900,
+   "dps": 510,
+   "damagePerHit": 1785,
+   "researchCost": 30000000,
+   "researchSeconds": 1382400,
+   "laboratoryLevel": 16,
+   "deathDamage": 145,
+   "deathDamageHits": 6,
+   "deathSpellLevel": 12
+  }
+ ],
+ "clientExtra": {
+  "deathSpell": {
+   "name": "ElectroDragonDie",
+   "radiusTiles": 2,
+   "randomRadiusTiles": 2.5,
+   "hits": 6,
+   "msBetweenHits": 400,
+   "deployMs": 800,
+   "chargingMs": 1000,
+   "hitTimeMs": 1100
+  }
+ },
+ "comparison": {
+  "checked": 81,
+  "matched": 79
+ },
+ "mismatches": [
+  {
+   "field": "attackRangeTiles",
+   "level": null,
+   "wiki": 3,
+   "client": 2.5,
+   "clientColumn": "characters.AttackRange/100",
+   "note": "wiki - client = +0.5 tiles; flying unit (most wiki flyer ranges are client range + 0.5 tiles)"
+  },
+  {
+   "field": "movementSpeed (Troop Movement Speed page)",
+   "level": null,
+   "wiki": "12 / internal 150",
+   "client": "Speed=160 (12.8)",
+   "clientColumn": "characters.Speed",
+   "note": "troop page (13) matches client; TMS page stale"
+  }
+ ],
+ "ambiguities": [
+  "Range: wiki 3 tiles vs client AttackRange=250 (2.5 tiles).",
+  "Troop Movement Speed page lists 12 / internal 150; the troop page (13) matches client Speed=160 (12.8)."
+ ]
+}

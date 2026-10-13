@@ -1,0 +1,121 @@
+{
+  "title": "Earthquake Spell",
+  "url": "https://clashofclans.fandom.com/wiki/Earthquake_Spell",
+  "revid": 622962,
+  "clientName": "Earthquake",
+  "category": "dark-spell",
+  "retrieved": "2026-09-15",
+  "contentPage": "Earthquake Spell",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "spells",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "damageType": "Area Splash",
+    "housingSpace": 1,
+    "targets": "Buildings & Walls",
+    "favoriteTarget": "Walls",
+    "darkSpellFactoryLevel": 2
+  },
+  "levels": [
+    {
+      "level": 1,
+      "buildingDamagePercent": 14.5,
+      "troopDamagePercent": null,
+      "radiusTiles": 3.5,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "buildingDamagePercent": 17,
+      "troopDamagePercent": null,
+      "radiusTiles": 3.8,
+      "researchCost": 6000,
+      "researchTimeHours": 12,
+      "laboratoryLevel": 6
+    },
+    {
+      "level": 3,
+      "buildingDamagePercent": 21,
+      "troopDamagePercent": null,
+      "radiusTiles": 4.1,
+      "researchCost": 12000,
+      "researchTimeHours": 24,
+      "laboratoryLevel": 7
+    },
+    {
+      "level": 4,
+      "buildingDamagePercent": 25,
+      "troopDamagePercent": null,
+      "radiusTiles": 4.4,
+      "researchCost": 25500,
+      "researchTimeHours": 72,
+      "laboratoryLevel": 8
+    },
+    {
+      "level": 5,
+      "buildingDamagePercent": 29,
+      "troopDamagePercent": null,
+      "radiusTiles": 4.7,
+      "researchCost": 42000,
+      "researchTimeHours": 84,
+      "laboratoryLevel": 9
+    },
+    {
+      "level": 6,
+      "buildingDamagePercent": 29,
+      "troopDamagePercent": 5,
+      "radiusTiles": 4.7,
+      "researchCost": 120000,
+      "researchTimeHours": 192,
+      "laboratoryLevel": 12
+    },
+    {
+      "level": 7,
+      "buildingDamagePercent": 29,
+      "troopDamagePercent": 10,
+      "radiusTiles": 4.7,
+      "researchCost": 200000,
+      "researchTimeHours": 216,
+      "laboratoryLevel": 14
+    },
+    {
+      "level": 8,
+      "buildingDamagePercent": 29,
+      "troopDamagePercent": 14.5,
+      "radiusTiles": 4.7,
+      "researchCost": 330000,
+      "researchTimeHours": 324,
+      "laboratoryLevel": 16
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "building damage",
+      "client": "`BuildingDamagePermil` per hit x `NumberOfHits` 5 (29,34,42,50,58 permil -> 14.5..29%)"
+    },
+    {
+      "mechanic": "troop damage",
+      "client": "`TroopDamagePermil` x 5 (0,0,0,0,0,10,20,29 -> 5/10/14.5%)"
+    },
+    {
+      "mechanic": "radius",
+      "client": "`Radius` 350..470"
+    },
+    {
+      "mechanic": "wall rule",
+      "client": "`PreferredTarget` 'Wall', `PreferredTargetDamageMod` = 5 (matches the 5x(n-1)^2 % wall term)"
+    },
+    {
+      "mechanic": "storage immunity",
+      "client": "`ImmunityStorages` = TRUE (no TH/CC immunity flag)"
+    },
+    {
+      "mechanic": "timing",
+      "client": "5 hits x `TimeBetweenHitsMS` 400"
+    }
+  ]
+}

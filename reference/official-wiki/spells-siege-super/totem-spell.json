@@ -1,0 +1,85 @@
+{
+  "title": "Totem Spell",
+  "url": "https://clashofclans.fandom.com/wiki/Totem_Spell",
+  "revid": 625235,
+  "clientName": "Totem Spell",
+  "category": "elixir-spell",
+  "retrieved": "2026-09-15",
+  "contentPage": "Totem Spell",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "spells",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "radiusTiles": 5,
+    "hitpointDecayPerSecond": 334,
+    "housingSpace": 1,
+    "targets": "Ground & Air",
+    "spellFactoryLevel": 9
+  },
+  "levels": [
+    {
+      "level": 1,
+      "totemHitpoints": 10000,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "totemHitpoints": 11000,
+      "researchCost": 21000000,
+      "researchTimeHours": 288,
+      "laboratoryLevel": 14
+    },
+    {
+      "level": 3,
+      "totemHitpoints": 12000,
+      "researchCost": 22000000,
+      "researchTimeHours": 336,
+      "laboratoryLevel": 15
+    },
+    {
+      "level": 4,
+      "totemHitpoints": 13000,
+      "researchCost": 23000000,
+      "researchTimeHours": 384,
+      "laboratoryLevel": 16
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "impact",
+      "client": "`Radius` 500, `StunTimeMS` = `FreezeTimeMS` = 200"
+    },
+    {
+      "mechanic": "totem summon",
+      "client": "`ChainSpell` 'TotemSummon' at `ChainSpellLevel` 1..4 -> spell `TotemSummon`.`SummonTroop` 'Totem', `SpawnUpgradeLevel` 1..4"
+    },
+    {
+      "mechanic": "Totem HP",
+      "client": "characters `Totem`.`Hitpoints` (10000..13000)"
+    },
+    {
+      "mechanic": "decay",
+      "client": "`Totem`.`LoseHpPerTick` 167 every `LoseHpInterval` 500 ms = 334 HP/s"
+    },
+    {
+      "mechanic": "targetability",
+      "client": "`Totem`.`TargetableByGroundAndAir` TRUE, `IsTotem` TRUE, `HousingSpace` 20"
+    },
+    {
+      "mechanic": "no damage",
+      "client": "`Totem`.`SpecialAbilities` 'DisableAttacking' (DPS column 1..4 is inert)"
+    },
+    {
+      "mechanic": "aggro",
+      "client": "globals `TOTEM_ALWAYS_PREFERRED_TARGET` = FALSE"
+    },
+    {
+      "mechanic": "immunity on other spells",
+      "client": "`ImmunityTotems` = TRUE on Rage, Jump, Clone, Recall, Revive, Haste, Overgrowth, Ice Block rows"
+    }
+  ]
+}

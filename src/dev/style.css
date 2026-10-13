@@ -1,0 +1,217 @@
+.developer-launch {
+  position: fixed;
+  bottom: 6px;
+  right: 6px;
+  z-index: 50;
+  padding: 5px 9px;
+  border: 1px solid #a9bff0;
+  border-radius: 5px;
+  background: #17243c;
+  color: #e2ebff;
+  font: 700 11px monospace;
+  cursor: pointer;
+}
+.developer-panel {
+  box-sizing: border-box;
+  width: 760px;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: 22px;
+  overflow: auto;
+  border: 1px solid #6f88ac;
+  border-radius: 12px;
+  background: #142034;
+  color: #e8effb;
+  font:
+    14px/1.5 system-ui,
+    sans-serif;
+}
+.developer-panel::backdrop {
+  background: #07101cb3;
+}
+.developer-panel header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.developer-panel h1 {
+  margin: 0;
+  font:
+    700 25px system-ui,
+    sans-serif;
+}
+.developer-panel h2 {
+  font:
+    700 17px system-ui,
+    sans-serif;
+  margin: 22px 0 10px;
+}
+.developer-panel small {
+  color: #93b7f3;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.developer-note {
+  color: #afc0d9;
+}
+.developer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.developer-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+  font-size: 12px;
+}
+.developer-panel input {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 160px;
+  background: #0c1525;
+  color: #fff;
+  border: 1px solid #62779b;
+  border-radius: 5px;
+  padding: 9px;
+  font:
+    16px system-ui,
+    sans-serif;
+}
+.developer-panel button {
+  background: #2d466f;
+  color: #fff;
+  border: 1px solid #7e9eca;
+  border-radius: 6px;
+  padding: 9px 12px;
+  font:
+    600 12px system-ui,
+    sans-serif;
+  cursor: pointer;
+  min-height: 38px;
+}
+.developer-panel button:hover {
+  background: #3e5d90;
+}
+.developer-panel :focus-visible {
+  outline: 3px solid #f8cc6b;
+  outline-offset: 2px;
+}
+.developer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: end;
+  margin: 12px 0;
+}
+.developer-status {
+  background: #203652;
+  padding: 9px 12px;
+  border-left: 3px solid #88baff;
+}
+@media (max-width: 550px) {
+  .developer-panel {
+    padding: 15px;
+  }
+  .developer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.developer-panel h3 {
+  margin: 16px 0 8px;
+  color: #9fbdf0;
+  font:
+    700 13px system-ui,
+    sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.developer-panel select,
+.developer-panel textarea {
+  box-sizing: border-box;
+  width: 100%;
+  background: #0c1525;
+  color: #fff;
+  border: 1px solid #62779b;
+  border-radius: 5px;
+  padding: 9px;
+  font:
+    14px system-ui,
+    sans-serif;
+}
+.developer-panel select {
+  max-width: 260px;
+}
+.developer-panel textarea {
+  font-family: ui-monospace, monospace;
+  resize: vertical;
+}
+.developer-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 14px 0 0;
+  border-bottom: 1px solid #33496d;
+  padding-bottom: 6px;
+}
+.developer-tabs button[aria-selected='true'] {
+  background: #f8cc6b;
+  border-color: #f8cc6b;
+  color: #142034;
+}
+.developer-tiers {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 6px;
+  margin: 12px 0;
+}
+.developer-tiers button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 7px 4px;
+  min-height: 0;
+}
+.developer-tiers button small {
+  color: #9fb6dd;
+  font-size: 9px;
+  letter-spacing: 0;
+}
+.developer-tiers button.current {
+  border-color: #f8cc6b;
+  box-shadow: inset 0 0 0 1px #f8cc6b;
+}
+.developer-check {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 6px !important;
+  min-height: 38px;
+}
+.developer-check input {
+  width: auto;
+  min-height: 0;
+  padding: 0;
+}
+.developer-config {
+  display: inline-flex;
+  gap: 0;
+}
+.developer-config button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.developer-config button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+  padding: 9px 10px;
+}
+@media (max-width: 550px) {
+  .developer-tiers {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}

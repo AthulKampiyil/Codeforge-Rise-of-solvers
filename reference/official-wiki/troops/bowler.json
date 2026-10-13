@@ -1,0 +1,261 @@
+{
+ "title": "Bowler",
+ "page": "Bowler",
+ "url": "https://clashofclans.fandom.com/wiki/Bowler",
+ "revid": 625333,
+ "retrieved": "2026-09-15",
+ "clientName": "Bowler",
+ "clientVersion": "18.400.21",
+ "category": "dark-troop",
+ "constants": {
+  "housingSpace": 6,
+  "movementSpeedWiki": 14,
+  "internalSpeed": 175,
+  "tilesPerSecond": 1.75,
+  "attackRangeTiles": 3,
+  "attackRangeTilesClient": 3,
+  "attackSeconds": 2.2,
+  "splashTiles": null,
+  "splashTilesClient": 0.3,
+  "attackTypeWiki": "Area Splash",
+  "targets": "ground",
+  "favoriteTarget": "None",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": false,
+  "unlock": {
+   "building": "Dark Barracks",
+   "level": 7,
+   "townHall": 10
+  },
+  "triggersTraps": true
+ },
+ "client": {
+  "clientName": "Bowler",
+  "housingSpace": 6,
+  "internalSpeed": 175,
+  "movementSpeedInGameExact": 14,
+  "movementSpeedInGameRounded": 14,
+  "tilesPerSecond": 1.75,
+  "attackRangeTiles": 3,
+  "attackSeconds": 2.2,
+  "splashTiles": 0.3,
+  "targets": "ground",
+  "flying": false,
+  "jumpsWalls": false,
+  "favoriteTarget": "None",
+  "productionBuilding": "Dark Barracks",
+  "barracksLevel": 7,
+  "unlockTownHall": 10,
+  "triggersTraps": true,
+  "newTargetAttackDelay": 1100,
+  "movementOffsetSpeed": 0
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 60,
+   "damagePerHit": 132,
+   "hitpoints": 325,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 72,
+   "damagePerHit": 158.4,
+   "hitpoints": 375,
+   "researchCost": 32500,
+   "researchSeconds": 172800,
+   "researchTimeText": "2d",
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 3,
+   "dps": 84,
+   "damagePerHit": 184.8,
+   "hitpoints": 420,
+   "researchCost": 44000,
+   "researchSeconds": 216000,
+   "researchTimeText": "2d 12h",
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 4,
+   "dps": 96,
+   "damagePerHit": 211.2,
+   "hitpoints": 470,
+   "researchCost": 62500,
+   "researchSeconds": 259200,
+   "researchTimeText": "3d",
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 5,
+   "dps": 102,
+   "damagePerHit": 224.4,
+   "hitpoints": 505,
+   "researchCost": 85000,
+   "researchSeconds": 345600,
+   "researchTimeText": "4d",
+   "laboratoryLevel": 11
+  },
+  {
+   "level": 6,
+   "dps": 108,
+   "damagePerHit": 237.6,
+   "hitpoints": 530,
+   "researchCost": 110000,
+   "researchSeconds": 518400,
+   "researchTimeText": "6d",
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 7,
+   "dps": 114,
+   "damagePerHit": 250.8,
+   "hitpoints": 565,
+   "researchCost": 145000,
+   "researchSeconds": 604800,
+   "researchTimeText": "7d",
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 8,
+   "dps": 126,
+   "damagePerHit": 277.2,
+   "hitpoints": 600,
+   "researchCost": 175000,
+   "researchSeconds": 648000,
+   "researchTimeText": "7d 12h",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 9,
+   "dps": 140,
+   "damagePerHit": 308,
+   "hitpoints": 700,
+   "researchCost": 260000,
+   "researchSeconds": 864000,
+   "researchTimeText": "10d",
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 10,
+   "dps": 160,
+   "damagePerHit": 352,
+   "hitpoints": 860,
+   "researchCost": 360000,
+   "researchSeconds": 1296000,
+   "researchTimeText": "15d",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 325,
+   "dps": 60,
+   "damagePerHit": 132
+  },
+  {
+   "level": 2,
+   "hitpoints": 375,
+   "dps": 72,
+   "damagePerHit": 158.4,
+   "researchCost": 32500,
+   "researchSeconds": 172800,
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 3,
+   "hitpoints": 420,
+   "dps": 84,
+   "damagePerHit": 184.8,
+   "researchCost": 44000,
+   "researchSeconds": 216000,
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 4,
+   "hitpoints": 470,
+   "dps": 96,
+   "damagePerHit": 211.2,
+   "researchCost": 62500,
+   "researchSeconds": 259200,
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 5,
+   "hitpoints": 505,
+   "dps": 102,
+   "damagePerHit": 224.4,
+   "researchCost": 85000,
+   "researchSeconds": 345600,
+   "laboratoryLevel": 11
+  },
+  {
+   "level": 6,
+   "hitpoints": 530,
+   "dps": 108,
+   "damagePerHit": 237.6,
+   "researchCost": 110000,
+   "researchSeconds": 518400,
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 7,
+   "hitpoints": 565,
+   "dps": 114,
+   "damagePerHit": 250.8,
+   "researchCost": 145000,
+   "researchSeconds": 604800,
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 8,
+   "hitpoints": 600,
+   "dps": 126,
+   "damagePerHit": 277.2,
+   "researchCost": 175000,
+   "researchSeconds": 648000,
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 9,
+   "hitpoints": 700,
+   "dps": 140,
+   "damagePerHit": 308,
+   "researchCost": 260000,
+   "researchSeconds": 864000,
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 10,
+   "hitpoints": 860,
+   "dps": 160,
+   "damagePerHit": 352,
+   "researchCost": 360000,
+   "researchSeconds": 1296000,
+   "laboratoryLevel": 16
+  }
+ ],
+ "superTroopBoost": {
+  "super troop": "Super Bowler",
+  "boost cost": "25,000",
+  "bowler level required": "4"
+ },
+ "comparison": {
+  "checked": 64,
+  "matched": 64
+ },
+ "mismatches": [],
+ "ambiguities": [
+  "Bounce travel distance is not on the wiki (\"3 tiles from first target - can hit more\"); client ChainShootingDistance=400 (4 tiles) and ProjectileBounces=2."
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "title": "Giga Bomb",
+ "url": "https://clashofclans.fandom.com/wiki/Giga_Bomb",
+ "revid": 622995,
+ "retrieved": "2026-09-15",
+ "category": "trap",
+ "clientName": "Giga Bomb",
+ "clientTable": "traps.csv",
+ "levels": [
+  {
+   "level": 1,
+   "damage": 1100,
+   "cost": 4500000,
+   "townHall": 17
+  },
+  {
+   "level": 2,
+   "damage": 1200,
+   "cost": 8500000,
+   "buildSeconds": 345600,
+   "xp": 587,
+   "townHall": 17
+  },
+  {
+   "level": 3,
+   "damage": 1300,
+   "cost": 12500000,
+   "buildSeconds": 432000,
+   "xp": 657,
+   "townHall": 17
+  },
+  {
+   "level": 4,
+   "damage": 1400,
+   "cost": 20000000,
+   "buildSeconds": 1123200,
+   "xp": 1059,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 17,
+  "size": "2x2",
+  "visible": true,
+  "triggerHousingSpace": 18,
+  "triggerRadius": 3.5,
+  "damageRadius": 4.5,
+  "splashTiles": 4.5,
+  "targets": "ground & air",
+  "knockback": true,
+  "favoriteTarget": "none"
+ },
+ "mismatches": []
+}

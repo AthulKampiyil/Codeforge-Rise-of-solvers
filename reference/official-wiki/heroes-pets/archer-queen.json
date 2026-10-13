@@ -1,0 +1,1217 @@
+{
+ "title": "Archer Queen",
+ "url": "https://clashofclans.fandom.com/wiki/Archer_Queen",
+ "revid": 625026,
+ "retrieved": "2026-09-15",
+ "clientName": "Archer Queen",
+ "clientTable": "heroes",
+ "category": "hero",
+ "summary": "Ranged ground-and-air hero unlocked at Hero Hall 2 (TH8); 5-tile single-target attacks, Dark Elixir upgrades to level 110.",
+ "constants": {
+  "wiki": {
+   "Preferred Target": "None",
+   "Attack Type": "Ranged (Ground & Air)",
+   "Movement Speed": "24",
+   "Attack Speed": "0.75s",
+   "Range": "5 tiles",
+   "Search Radius": "10 tiles"
+  },
+  "client": {
+   "Speed": "300",
+   "AttackRange": "500",
+   "AttackSpeed": "750",
+   "AirTargets": "TRUE",
+   "GroundTargets": "TRUE",
+   "IsFlying": "FALSE",
+   "IsJumper": "FALSE",
+   "HousingSpace": "25",
+   "PatrolRadius": "300",
+   "AlertRadius": "1300",
+   "MaxSearchRadiusForDefender": "1000",
+   "ItemSlotCount": "2",
+   "DefaultItems": "Archer Puppet; Invisibility Vial;",
+   "SpecialAbilities": "ArcherQueenAbilityHeal",
+   "PreferedTargetDamageMod": "1",
+   "FriendlyGroupWeight": "2100",
+   "EnemyGroupWeight": "500",
+   "HealerWeight": "25",
+   "UpgradeResource": "DarkElixir",
+   "Projectile": "ArcherQueen arrow lvl1",
+   "TriggersTraps": "TRUE",
+   "ForceRetaliation": "TRUE",
+   "levelRows": 110,
+   "levelsByHeroHall": {
+    "Hero Hall 2": "10",
+    "Hero Hall 3": "30",
+    "Hero Hall 4": "40",
+    "Hero Hall 5": "50",
+    "Hero Hall 6": "65",
+    "Hero Hall 7": "75",
+    "Hero Hall 8": "85",
+    "Hero Hall 9": "90",
+    "Hero Hall 10": "95",
+    "Hero Hall 11": "100",
+    "Hero Hall 12": "110"
+   },
+   "levelsByTownHall": {
+    "Town Hall 8": "10",
+    "Town Hall 9": "30",
+    "Town Hall 10": "40",
+    "Town Hall 11": "50",
+    "Town Hall 12": "65",
+    "Town Hall 13": "75",
+    "Town Hall 14": "85",
+    "Town Hall 15": "90",
+    "Town Hall 16": "95",
+    "Town Hall 17": "100",
+    "Town Hall 18": "110"
+   }
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "damagePerSecond": {
+   "wikiHeader": "Damage per Second",
+   "unit": "damage per second"
+  },
+  "damagePerHit": {
+   "wikiHeader": "Damage per Hit",
+   "unit": "damage points"
+  },
+  "hitpoints": {
+   "wikiHeader": "Hitpoints",
+   "unit": "hitpoints"
+  },
+  "healthRecovery": {
+   "wikiHeader": "Health Recovery",
+   "unit": "hitpoints"
+  },
+  "upgradeCost": {
+   "wikiHeader": "Upgrade Cost",
+   "unit": "resource amount"
+  },
+  "upgradeTimeSeconds": {
+   "wikiHeader": "Upgrade Time",
+   "unit": "seconds"
+  },
+  "heroHallLevelRequired": {
+   "wikiHeader": "Hero Hall Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damagePerSecond": 136,
+   "damagePerHit": 102,
+   "hitpoints": 580,
+   "healthRecovery": 115,
+   "upgradeCost": null,
+   "upgradeTimeSeconds": null,
+   "heroHallLevelRequired": 2
+  },
+  {
+   "level": 2,
+   "damagePerSecond": 139,
+   "damagePerHit": 104.25,
+   "hitpoints": 592,
+   "healthRecovery": 115,
+   "upgradeCost": 5000,
+   "upgradeTimeSeconds": 7200,
+   "heroHallLevelRequired": 2
+  },
+  {
+   "level": 3,
+   "damagePerSecond": 143,
+   "damagePerHit": 107.25,
+   "hitpoints": 604,
+   "healthRecovery": 115,
+   "upgradeCost": 5500,
+   "upgradeTimeSeconds": 14400,
+   "heroHallLevelRequired": 2
+  },
+  {
+   "level": 4,
+   "damagePerSecond": 146,
+   "damagePerHit": 109.5,
+   "hitpoints": 617,
+   "healthRecovery": 115,
+   "upgradeCost": 6000,
+   "upgradeTimeSeconds": 28800,
+   "heroHallLevelRequired": 2
+  },
+  {
+   "level": 5,
+   "damagePerSecond": 150,
+   "damagePerHit": 112.5,
+   "hitpoints": 630,
+   "healthRecovery": 130,
+   "upgradeCost": 6500,
+   "upgradeTimeSeconds": 36000,
+   "heroHallLevelRequired": 2
+  },
+  {
+   "level": 6,
+   "damagePerSecond": 154,
+   "damagePerHit": 115.5,
+   "hitpoints": 643,
+   "healthRecovery": 130,
+   "upgradeCost": 7000,
+   "upgradeTimeSeconds": 43200,
+   "heroHallLevelRequired": 2
+  },
+  {
+   "level": 7,
+   "damagePerSecond": 157,
+   "damagePerHit": 117.75,
+   "hitpoints": 657,
+   "healthRecovery": 130,
+   "upgradeCost": 7500,
+   "upgradeTimeSeconds": 50400,
+   "heroHallLevelRequired": 2
+  },
+  {
+   "level": 8,
+   "damagePerSecond": 162,
+   "damagePerHit": 121.5,
+   "hitpoints": 670,
+   "healthRecovery": 130,
+   "upgradeCost": 8000,
+   "upgradeTimeSeconds": 57600,
+   "heroHallLevelRequired": 2
+  },
+  {
+   "level": 9,
+   "damagePerSecond": 165,
+   "damagePerHit": 123.75,
+   "hitpoints": 685,
+   "healthRecovery": 130,
+   "upgradeCost": 8500,
+   "upgradeTimeSeconds": 64800,
+   "heroHallLevelRequired": 2
+  },
+  {
+   "level": 10,
+   "damagePerSecond": 169,
+   "damagePerHit": 126.75,
+   "hitpoints": 699,
+   "healthRecovery": 145,
+   "upgradeCost": 10000,
+   "upgradeTimeSeconds": 72000,
+   "heroHallLevelRequired": 2
+  },
+  {
+   "level": 11,
+   "damagePerSecond": 173,
+   "damagePerHit": 129.75,
+   "hitpoints": 714,
+   "healthRecovery": 145,
+   "upgradeCost": 10500,
+   "upgradeTimeSeconds": 79200,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 12,
+   "damagePerSecond": 178,
+   "damagePerHit": 133.5,
+   "hitpoints": 729,
+   "healthRecovery": 145,
+   "upgradeCost": 11000,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 13,
+   "damagePerSecond": 183,
+   "damagePerHit": 137.25,
+   "hitpoints": 744,
+   "healthRecovery": 145,
+   "upgradeCost": 11500,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 14,
+   "damagePerSecond": 187,
+   "damagePerHit": 140.25,
+   "hitpoints": 759,
+   "healthRecovery": 145,
+   "upgradeCost": 12000,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 15,
+   "damagePerSecond": 192,
+   "damagePerHit": 144,
+   "hitpoints": 775,
+   "healthRecovery": 160,
+   "upgradeCost": 12500,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 16,
+   "damagePerSecond": 196,
+   "damagePerHit": 147,
+   "hitpoints": 792,
+   "healthRecovery": 160,
+   "upgradeCost": 13000,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 17,
+   "damagePerSecond": 201,
+   "damagePerHit": 150.75,
+   "hitpoints": 808,
+   "healthRecovery": 160,
+   "upgradeCost": 13500,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 18,
+   "damagePerSecond": 207,
+   "damagePerHit": 155.25,
+   "hitpoints": 826,
+   "healthRecovery": 160,
+   "upgradeCost": 14000,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 19,
+   "damagePerSecond": 212,
+   "damagePerHit": 159,
+   "hitpoints": 842,
+   "healthRecovery": 160,
+   "upgradeCost": 14500,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 20,
+   "damagePerSecond": 217,
+   "damagePerHit": 162.75,
+   "hitpoints": 861,
+   "healthRecovery": 175,
+   "upgradeCost": 15000,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 21,
+   "damagePerSecond": 223,
+   "damagePerHit": 167.25,
+   "hitpoints": 878,
+   "healthRecovery": 175,
+   "upgradeCost": 17000,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 22,
+   "damagePerSecond": 228,
+   "damagePerHit": 171,
+   "hitpoints": 897,
+   "healthRecovery": 175,
+   "upgradeCost": 19000,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 23,
+   "damagePerSecond": 234,
+   "damagePerHit": 175.5,
+   "hitpoints": 916,
+   "healthRecovery": 175,
+   "upgradeCost": 21000,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 24,
+   "damagePerSecond": 240,
+   "damagePerHit": 180,
+   "hitpoints": 935,
+   "healthRecovery": 175,
+   "upgradeCost": 23000,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 25,
+   "damagePerSecond": 246,
+   "damagePerHit": 184.5,
+   "hitpoints": 954,
+   "healthRecovery": 190,
+   "upgradeCost": 25000,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 26,
+   "damagePerSecond": 252,
+   "damagePerHit": 189,
+   "hitpoints": 974,
+   "healthRecovery": 190,
+   "upgradeCost": 27000,
+   "upgradeTimeSeconds": 172800,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 27,
+   "damagePerSecond": 258,
+   "damagePerHit": 193.5,
+   "hitpoints": 995,
+   "healthRecovery": 190,
+   "upgradeCost": 29000,
+   "upgradeTimeSeconds": 172800,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 28,
+   "damagePerSecond": 264,
+   "damagePerHit": 198,
+   "hitpoints": 1016,
+   "healthRecovery": 190,
+   "upgradeCost": 31000,
+   "upgradeTimeSeconds": 172800,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 29,
+   "damagePerSecond": 271,
+   "damagePerHit": 203.25,
+   "hitpoints": 1038,
+   "healthRecovery": 190,
+   "upgradeCost": 33000,
+   "upgradeTimeSeconds": 172800,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 30,
+   "damagePerSecond": 278,
+   "damagePerHit": 208.5,
+   "hitpoints": 1059,
+   "healthRecovery": 205,
+   "upgradeCost": 35000,
+   "upgradeTimeSeconds": 172800,
+   "heroHallLevelRequired": 3
+  },
+  {
+   "level": 31,
+   "damagePerSecond": 285,
+   "damagePerHit": 213.75,
+   "hitpoints": 1082,
+   "healthRecovery": 205,
+   "upgradeCost": 37000,
+   "upgradeTimeSeconds": 194400,
+   "heroHallLevelRequired": 4
+  },
+  {
+   "level": 32,
+   "damagePerSecond": 292,
+   "damagePerHit": 219,
+   "hitpoints": 1104,
+   "healthRecovery": 205,
+   "upgradeCost": 39000,
+   "upgradeTimeSeconds": 194400,
+   "heroHallLevelRequired": 4
+  },
+  {
+   "level": 33,
+   "damagePerSecond": 299,
+   "damagePerHit": 224.25,
+   "hitpoints": 1127,
+   "healthRecovery": 205,
+   "upgradeCost": 41000,
+   "upgradeTimeSeconds": 194400,
+   "heroHallLevelRequired": 4
+  },
+  {
+   "level": 34,
+   "damagePerSecond": 307,
+   "damagePerHit": 230.25,
+   "hitpoints": 1151,
+   "healthRecovery": 205,
+   "upgradeCost": 43000,
+   "upgradeTimeSeconds": 194400,
+   "heroHallLevelRequired": 4
+  },
+  {
+   "level": 35,
+   "damagePerSecond": 315,
+   "damagePerHit": 236.25,
+   "hitpoints": 1175,
+   "healthRecovery": 220,
+   "upgradeCost": 45000,
+   "upgradeTimeSeconds": 194400,
+   "heroHallLevelRequired": 4
+  },
+  {
+   "level": 36,
+   "damagePerSecond": 322,
+   "damagePerHit": 241.5,
+   "hitpoints": 1200,
+   "healthRecovery": 220,
+   "upgradeCost": 47000,
+   "upgradeTimeSeconds": 216000,
+   "heroHallLevelRequired": 4
+  },
+  {
+   "level": 37,
+   "damagePerSecond": 331,
+   "damagePerHit": 248.25,
+   "hitpoints": 1226,
+   "healthRecovery": 220,
+   "upgradeCost": 49000,
+   "upgradeTimeSeconds": 216000,
+   "heroHallLevelRequired": 4
+  },
+  {
+   "level": 38,
+   "damagePerSecond": 338,
+   "damagePerHit": 253.5,
+   "hitpoints": 1251,
+   "healthRecovery": 220,
+   "upgradeCost": 51000,
+   "upgradeTimeSeconds": 216000,
+   "heroHallLevelRequired": 4
+  },
+  {
+   "level": 39,
+   "damagePerSecond": 347,
+   "damagePerHit": 260.25,
+   "hitpoints": 1278,
+   "healthRecovery": 220,
+   "upgradeCost": 53000,
+   "upgradeTimeSeconds": 216000,
+   "heroHallLevelRequired": 4
+  },
+  {
+   "level": 40,
+   "damagePerSecond": 356,
+   "damagePerHit": 267,
+   "hitpoints": 1304,
+   "healthRecovery": 235,
+   "upgradeCost": 55000,
+   "upgradeTimeSeconds": 216000,
+   "heroHallLevelRequired": 4
+  },
+  {
+   "level": 41,
+   "damagePerSecond": 365,
+   "damagePerHit": 273.75,
+   "hitpoints": 1331,
+   "healthRecovery": 235,
+   "upgradeCost": 58000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 5
+  },
+  {
+   "level": 42,
+   "damagePerSecond": 374,
+   "damagePerHit": 280.5,
+   "hitpoints": 1359,
+   "healthRecovery": 235,
+   "upgradeCost": 61000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 5
+  },
+  {
+   "level": 43,
+   "damagePerSecond": 383,
+   "damagePerHit": 287.25,
+   "hitpoints": 1388,
+   "healthRecovery": 235,
+   "upgradeCost": 64000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 5
+  },
+  {
+   "level": 44,
+   "damagePerSecond": 393,
+   "damagePerHit": 294.75,
+   "hitpoints": 1417,
+   "healthRecovery": 235,
+   "upgradeCost": 67000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 5
+  },
+  {
+   "level": 45,
+   "damagePerSecond": 403,
+   "damagePerHit": 302.25,
+   "hitpoints": 1447,
+   "healthRecovery": 250,
+   "upgradeCost": 70000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 5
+  },
+  {
+   "level": 46,
+   "damagePerSecond": 413,
+   "damagePerHit": 309.75,
+   "hitpoints": 1478,
+   "healthRecovery": 250,
+   "upgradeCost": 73000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 5
+  },
+  {
+   "level": 47,
+   "damagePerSecond": 423,
+   "damagePerHit": 317.25,
+   "hitpoints": 1508,
+   "healthRecovery": 250,
+   "upgradeCost": 76000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 5
+  },
+  {
+   "level": 48,
+   "damagePerSecond": 434,
+   "damagePerHit": 325.5,
+   "hitpoints": 1540,
+   "healthRecovery": 250,
+   "upgradeCost": 79000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 5
+  },
+  {
+   "level": 49,
+   "damagePerSecond": 445,
+   "damagePerHit": 333.75,
+   "hitpoints": 1572,
+   "healthRecovery": 250,
+   "upgradeCost": 82000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 5
+  },
+  {
+   "level": 50,
+   "damagePerSecond": 456,
+   "damagePerHit": 342,
+   "hitpoints": 1606,
+   "healthRecovery": 265,
+   "upgradeCost": 85000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 5
+  },
+  {
+   "level": 51,
+   "damagePerSecond": 465,
+   "damagePerHit": 348.75,
+   "hitpoints": 1646,
+   "healthRecovery": 265,
+   "upgradeCost": 86000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 52,
+   "damagePerSecond": 474,
+   "damagePerHit": 355.5,
+   "hitpoints": 1688,
+   "healthRecovery": 265,
+   "upgradeCost": 87000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 53,
+   "damagePerSecond": 485,
+   "damagePerHit": 363.75,
+   "hitpoints": 1730,
+   "healthRecovery": 265,
+   "upgradeCost": 88000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 54,
+   "damagePerSecond": 495,
+   "damagePerHit": 371.25,
+   "hitpoints": 1774,
+   "healthRecovery": 265,
+   "upgradeCost": 89000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 55,
+   "damagePerSecond": 505,
+   "damagePerHit": 378.75,
+   "hitpoints": 1819,
+   "healthRecovery": 280,
+   "upgradeCost": 90000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 56,
+   "damagePerSecond": 515,
+   "damagePerHit": 386.25,
+   "hitpoints": 1865,
+   "healthRecovery": 280,
+   "upgradeCost": 93000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 57,
+   "damagePerSecond": 526,
+   "damagePerHit": 394.5,
+   "hitpoints": 1912,
+   "healthRecovery": 280,
+   "upgradeCost": 96000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 58,
+   "damagePerSecond": 537,
+   "damagePerHit": 402.75,
+   "hitpoints": 1960,
+   "healthRecovery": 280,
+   "upgradeCost": 99000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 59,
+   "damagePerSecond": 548,
+   "damagePerHit": 411,
+   "hitpoints": 2010,
+   "healthRecovery": 280,
+   "upgradeCost": 102000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 60,
+   "damagePerSecond": 559,
+   "damagePerHit": 419.25,
+   "hitpoints": 2060,
+   "healthRecovery": 295,
+   "upgradeCost": 105000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 61,
+   "damagePerSecond": 570,
+   "damagePerHit": 427.5,
+   "hitpoints": 2111,
+   "healthRecovery": 295,
+   "upgradeCost": 107000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 62,
+   "damagePerSecond": 581,
+   "damagePerHit": 435.75,
+   "hitpoints": 2164,
+   "healthRecovery": 295,
+   "upgradeCost": 109000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 63,
+   "damagePerSecond": 593,
+   "damagePerHit": 444.75,
+   "hitpoints": 2218,
+   "healthRecovery": 295,
+   "upgradeCost": 111000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 64,
+   "damagePerSecond": 605,
+   "damagePerHit": 453.75,
+   "hitpoints": 2274,
+   "healthRecovery": 295,
+   "upgradeCost": 113000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 65,
+   "damagePerSecond": 617,
+   "damagePerHit": 462.75,
+   "hitpoints": 2330,
+   "healthRecovery": 310,
+   "upgradeCost": 115000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 6
+  },
+  {
+   "level": 66,
+   "damagePerSecond": 628,
+   "damagePerHit": 471,
+   "hitpoints": 2384,
+   "healthRecovery": 310,
+   "upgradeCost": 117000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 7
+  },
+  {
+   "level": 67,
+   "damagePerSecond": 638,
+   "damagePerHit": 478.5,
+   "hitpoints": 2432,
+   "healthRecovery": 310,
+   "upgradeCost": 119000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 7
+  },
+  {
+   "level": 68,
+   "damagePerSecond": 648,
+   "damagePerHit": 486,
+   "hitpoints": 2476,
+   "healthRecovery": 310,
+   "upgradeCost": 121000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 7
+  },
+  {
+   "level": 69,
+   "damagePerSecond": 656,
+   "damagePerHit": 492,
+   "hitpoints": 2516,
+   "healthRecovery": 310,
+   "upgradeCost": 123000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 7
+  },
+  {
+   "level": 70,
+   "damagePerSecond": 664,
+   "damagePerHit": 498,
+   "hitpoints": 2552,
+   "healthRecovery": 325,
+   "upgradeCost": 125000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 7
+  },
+  {
+   "level": 71,
+   "damagePerSecond": 671,
+   "damagePerHit": 503.25,
+   "hitpoints": 2584,
+   "healthRecovery": 325,
+   "upgradeCost": 130000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 7
+  },
+  {
+   "level": 72,
+   "damagePerSecond": 677,
+   "damagePerHit": 507.75,
+   "hitpoints": 2616,
+   "healthRecovery": 325,
+   "upgradeCost": 135000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 7
+  },
+  {
+   "level": 73,
+   "damagePerSecond": 682,
+   "damagePerHit": 511.5,
+   "hitpoints": 2648,
+   "healthRecovery": 325,
+   "upgradeCost": 140000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 7
+  },
+  {
+   "level": 74,
+   "damagePerSecond": 687,
+   "damagePerHit": 515.25,
+   "hitpoints": 2680,
+   "healthRecovery": 325,
+   "upgradeCost": 145000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 7
+  },
+  {
+   "level": 75,
+   "damagePerSecond": 692,
+   "damagePerHit": 519,
+   "hitpoints": 2712,
+   "healthRecovery": 340,
+   "upgradeCost": 150000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 7
+  },
+  {
+   "level": 76,
+   "damagePerSecond": 697,
+   "damagePerHit": 522.75,
+   "hitpoints": 2740,
+   "healthRecovery": 340,
+   "upgradeCost": 155000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 8
+  },
+  {
+   "level": 77,
+   "damagePerSecond": 701,
+   "damagePerHit": 525.75,
+   "hitpoints": 2768,
+   "healthRecovery": 340,
+   "upgradeCost": 160000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 8
+  },
+  {
+   "level": 78,
+   "damagePerSecond": 706,
+   "damagePerHit": 529.5,
+   "hitpoints": 2796,
+   "healthRecovery": 340,
+   "upgradeCost": 165000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 8
+  },
+  {
+   "level": 79,
+   "damagePerSecond": 710,
+   "damagePerHit": 532.5,
+   "hitpoints": 2824,
+   "healthRecovery": 340,
+   "upgradeCost": 170000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 8
+  },
+  {
+   "level": 80,
+   "damagePerSecond": 714,
+   "damagePerHit": 535.5,
+   "hitpoints": 2852,
+   "healthRecovery": 355,
+   "upgradeCost": 175000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 8
+  },
+  {
+   "level": 81,
+   "damagePerSecond": 717,
+   "damagePerHit": 537.75,
+   "hitpoints": 2880,
+   "healthRecovery": 355,
+   "upgradeCost": 180000,
+   "upgradeTimeSeconds": 432000,
+   "heroHallLevelRequired": 8
+  },
+  {
+   "level": 82,
+   "damagePerSecond": 721,
+   "damagePerHit": 540.75,
+   "hitpoints": 2904,
+   "healthRecovery": 355,
+   "upgradeCost": 185000,
+   "upgradeTimeSeconds": 432000,
+   "heroHallLevelRequired": 8
+  },
+  {
+   "level": 83,
+   "damagePerSecond": 724,
+   "damagePerHit": 543,
+   "hitpoints": 2928,
+   "healthRecovery": 355,
+   "upgradeCost": 190000,
+   "upgradeTimeSeconds": 432000,
+   "heroHallLevelRequired": 8
+  },
+  {
+   "level": 84,
+   "damagePerSecond": 728,
+   "damagePerHit": 546,
+   "hitpoints": 2952,
+   "healthRecovery": 355,
+   "upgradeCost": 195000,
+   "upgradeTimeSeconds": 432000,
+   "heroHallLevelRequired": 8
+  },
+  {
+   "level": 85,
+   "damagePerSecond": 731,
+   "damagePerHit": 548.25,
+   "hitpoints": 2976,
+   "healthRecovery": 370,
+   "upgradeCost": 200000,
+   "upgradeTimeSeconds": 432000,
+   "heroHallLevelRequired": 8
+  },
+  {
+   "level": 86,
+   "damagePerSecond": 734,
+   "damagePerHit": 550.5,
+   "hitpoints": 3000,
+   "healthRecovery": 370,
+   "upgradeCost": 215000,
+   "upgradeTimeSeconds": 518400,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 87,
+   "damagePerSecond": 738,
+   "damagePerHit": 553.5,
+   "hitpoints": 3024,
+   "healthRecovery": 370,
+   "upgradeCost": 225000,
+   "upgradeTimeSeconds": 518400,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 88,
+   "damagePerSecond": 741,
+   "damagePerHit": 555.75,
+   "hitpoints": 3048,
+   "healthRecovery": 370,
+   "upgradeCost": 235000,
+   "upgradeTimeSeconds": 518400,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 89,
+   "damagePerSecond": 745,
+   "damagePerHit": 558.75,
+   "hitpoints": 3072,
+   "healthRecovery": 370,
+   "upgradeCost": 245000,
+   "upgradeTimeSeconds": 518400,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 90,
+   "damagePerSecond": 748,
+   "damagePerHit": 561,
+   "hitpoints": 3096,
+   "healthRecovery": 385,
+   "upgradeCost": 255000,
+   "upgradeTimeSeconds": 518400,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 91,
+   "damagePerSecond": 751,
+   "damagePerHit": 563.25,
+   "hitpoints": 3120,
+   "healthRecovery": 385,
+   "upgradeCost": 280000,
+   "upgradeTimeSeconds": 604800,
+   "heroHallLevelRequired": 10
+  },
+  {
+   "level": 92,
+   "damagePerSecond": 755,
+   "damagePerHit": 566.25,
+   "hitpoints": 3144,
+   "healthRecovery": 385,
+   "upgradeCost": 290000,
+   "upgradeTimeSeconds": 604800,
+   "heroHallLevelRequired": 10
+  },
+  {
+   "level": 93,
+   "damagePerSecond": 758,
+   "damagePerHit": 568.5,
+   "hitpoints": 3168,
+   "healthRecovery": 385,
+   "upgradeCost": 300000,
+   "upgradeTimeSeconds": 604800,
+   "heroHallLevelRequired": 10
+  },
+  {
+   "level": 94,
+   "damagePerSecond": 762,
+   "damagePerHit": 571.5,
+   "hitpoints": 3192,
+   "healthRecovery": 385,
+   "upgradeCost": 310000,
+   "upgradeTimeSeconds": 604800,
+   "heroHallLevelRequired": 10
+  },
+  {
+   "level": 95,
+   "damagePerSecond": 765,
+   "damagePerHit": 573.75,
+   "hitpoints": 3216,
+   "healthRecovery": 400,
+   "upgradeCost": 320000,
+   "upgradeTimeSeconds": 604800,
+   "heroHallLevelRequired": 10
+  },
+  {
+   "level": 96,
+   "damagePerSecond": 768,
+   "damagePerHit": 576,
+   "hitpoints": 3240,
+   "healthRecovery": 400,
+   "upgradeCost": 340000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 11
+  },
+  {
+   "level": 97,
+   "damagePerSecond": 771,
+   "damagePerHit": 578.25,
+   "hitpoints": 3264,
+   "healthRecovery": 400,
+   "upgradeCost": 350000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 11
+  },
+  {
+   "level": 98,
+   "damagePerSecond": 774,
+   "damagePerHit": 580.5,
+   "hitpoints": 3288,
+   "healthRecovery": 400,
+   "upgradeCost": 360000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 11
+  },
+  {
+   "level": 99,
+   "damagePerSecond": 777,
+   "damagePerHit": 582.75,
+   "hitpoints": 3312,
+   "healthRecovery": 400,
+   "upgradeCost": 370000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 11
+  },
+  {
+   "level": 100,
+   "damagePerSecond": 780,
+   "damagePerHit": 585,
+   "hitpoints": 3336,
+   "healthRecovery": 415,
+   "upgradeCost": 380000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 11
+  },
+  {
+   "level": 101,
+   "damagePerSecond": 783,
+   "damagePerHit": 587.25,
+   "hitpoints": 3360,
+   "healthRecovery": 415,
+   "upgradeCost": 400000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  },
+  {
+   "level": 102,
+   "damagePerSecond": 786,
+   "damagePerHit": 589.5,
+   "hitpoints": 3384,
+   "healthRecovery": 415,
+   "upgradeCost": 410000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  },
+  {
+   "level": 103,
+   "damagePerSecond": 789,
+   "damagePerHit": 591.75,
+   "hitpoints": 3408,
+   "healthRecovery": 415,
+   "upgradeCost": 420000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  },
+  {
+   "level": 104,
+   "damagePerSecond": 792,
+   "damagePerHit": 594,
+   "hitpoints": 3432,
+   "healthRecovery": 415,
+   "upgradeCost": 430000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  },
+  {
+   "level": 105,
+   "damagePerSecond": 795,
+   "damagePerHit": 596.25,
+   "hitpoints": 3456,
+   "healthRecovery": 430,
+   "upgradeCost": 450000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  },
+  {
+   "level": 106,
+   "damagePerSecond": 798,
+   "damagePerHit": 598.5,
+   "hitpoints": 3480,
+   "healthRecovery": 430,
+   "upgradeCost": 460000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  },
+  {
+   "level": 107,
+   "damagePerSecond": 801,
+   "damagePerHit": 600.75,
+   "hitpoints": 3504,
+   "healthRecovery": 430,
+   "upgradeCost": 470000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  },
+  {
+   "level": 108,
+   "damagePerSecond": 804,
+   "damagePerHit": 603,
+   "hitpoints": 3528,
+   "healthRecovery": 430,
+   "upgradeCost": 475000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  },
+  {
+   "level": 109,
+   "damagePerSecond": 807,
+   "damagePerHit": 605.25,
+   "hitpoints": 3552,
+   "healthRecovery": 430,
+   "upgradeCost": 485000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  },
+  {
+   "level": 110,
+   "damagePerSecond": 810,
+   "damagePerHit": 607.5,
+   "hitpoints": 3576,
+   "healthRecovery": 445,
+   "upgradeCost": 490000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "Search Radius",
+   "level": null,
+   "wiki": "10 tiles",
+   "client": "AlertRadius 1300 / MaxSearchRadiusForDefender 1000 / PatrolRadius 300",
+   "note": "no direct client equivalent"
+  }
+ ]
+}

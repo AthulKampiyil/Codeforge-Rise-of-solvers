@@ -1,0 +1,282 @@
+{
+ "title": "Frosty",
+ "url": "https://clashofclans.fandom.com/wiki/Frosty",
+ "revid": 625102,
+ "retrieved": "2026-09-15",
+ "clientName": "Frosty",
+ "clientTable": "pets",
+ "category": "pet",
+ "summary": "Pet House 5 ranged pet whose hits chill targets and who spawns wall-jumping, defense-hunting Frostmites every 8 s.",
+ "constants": {
+  "wiki": {
+   "Preferred Target": "Within 4.5 tiles of Hero",
+   "Targets": "Ground & Air",
+   "Attack Type": "Single Target",
+   "Movement Speed": "24",
+   "Attack Speed": "1.2s",
+   "Summon Cooldown": "8s",
+   "Pet House Level Required": "5",
+   "Range": "3.5 tiles",
+   "Special Ability": "Freezy Friends"
+  },
+  "client": {
+   "HousingSpace": "20",
+   "Speed": "300",
+   "AttackRange": "350",
+   "AttackSpeed": "1200",
+   "IsFlying": "FALSE",
+   "AirTargets": "TRUE",
+   "GroundTargets": "TRUE",
+   "IsJumper": "TRUE",
+   "LeashLength": "100",
+   "FrostOnHitTime": "4000",
+   "FrostOnHitPercent": "50",
+   "SummonTroop": "Icemite",
+   "SummonCooldown": "8000",
+   "SummonLevel": "1",
+   "SpecialAbilities": "FrostyPlaceholderAbility",
+   "TriggersTraps": "TRUE",
+   "FriendlyGroupWeight": "300",
+   "SpawnDelay": "100",
+   "UpgradeResource": "DarkElixir",
+   "Projectile": "Frosty_projectile",
+   "MovementOffsetSpeed": "0",
+   "levelRows": 15,
+   "levelsByPetHouse": {
+    "Pet House 5": "10",
+    "Pet House 11": "15"
+   }
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "damagePerSecond": {
+   "wikiHeader": "Damage per Second",
+   "unit": "damage per second"
+  },
+  "damagePerHit": {
+   "wikiHeader": "Damage per Hit",
+   "unit": "damage points"
+  },
+  "frostmitesPerSummon": {
+   "wikiHeader": "Frostmites per Summon",
+   "unit": "count/points"
+  },
+  "maximumFrostmitesSummoned": {
+   "wikiHeader": "Maximum Frostmites Summoned",
+   "unit": "count/points"
+  },
+  "hitpoints": {
+   "wikiHeader": "Hitpoints",
+   "unit": "hitpoints"
+  },
+  "upgradeCost": {
+   "wikiHeader": "Upgrade Cost",
+   "unit": "resource amount"
+  },
+  "upgradeTimeSeconds": {
+   "wikiHeader": "Upgrade Time",
+   "unit": "seconds"
+  },
+  "petHouseLevelRequired": {
+   "wikiHeader": "Pet House Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damagePerSecond": 94,
+   "damagePerHit": 112.8,
+   "frostmitesPerSummon": 1,
+   "maximumFrostmitesSummoned": 4,
+   "hitpoints": 2350,
+   "upgradeCost": null,
+   "upgradeTimeSeconds": null,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 2,
+   "damagePerSecond": 98,
+   "damagePerHit": 117.6,
+   "frostmitesPerSummon": 1,
+   "maximumFrostmitesSummoned": 4,
+   "hitpoints": 2450,
+   "upgradeCost": 70000,
+   "upgradeTimeSeconds": 129600,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 3,
+   "damagePerSecond": 102,
+   "damagePerHit": 122.4,
+   "frostmitesPerSummon": 1,
+   "maximumFrostmitesSummoned": 4,
+   "hitpoints": 2550,
+   "upgradeCost": 85000,
+   "upgradeTimeSeconds": 172800,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 4,
+   "damagePerSecond": 106,
+   "damagePerHit": 127.2,
+   "frostmitesPerSummon": 1,
+   "maximumFrostmitesSummoned": 4,
+   "hitpoints": 2650,
+   "upgradeCost": 100000,
+   "upgradeTimeSeconds": 259200,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 5,
+   "damagePerSecond": 110,
+   "damagePerHit": 132,
+   "frostmitesPerSummon": 2,
+   "maximumFrostmitesSummoned": 8,
+   "hitpoints": 2800,
+   "upgradeCost": 115000,
+   "upgradeTimeSeconds": 345600,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 6,
+   "damagePerSecond": 114,
+   "damagePerHit": 136.8,
+   "frostmitesPerSummon": 2,
+   "maximumFrostmitesSummoned": 8,
+   "hitpoints": 2900,
+   "upgradeCost": 130000,
+   "upgradeTimeSeconds": 388800,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 7,
+   "damagePerSecond": 118,
+   "damagePerHit": 141.6,
+   "frostmitesPerSummon": 2,
+   "maximumFrostmitesSummoned": 8,
+   "hitpoints": 3000,
+   "upgradeCost": 145000,
+   "upgradeTimeSeconds": 432000,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 8,
+   "damagePerSecond": 122,
+   "damagePerHit": 146.4,
+   "frostmitesPerSummon": 2,
+   "maximumFrostmitesSummoned": 8,
+   "hitpoints": 3100,
+   "upgradeCost": 160000,
+   "upgradeTimeSeconds": 475200,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 9,
+   "damagePerSecond": 126,
+   "damagePerHit": 151.2,
+   "frostmitesPerSummon": 2,
+   "maximumFrostmitesSummoned": 8,
+   "hitpoints": 3200,
+   "upgradeCost": 170000,
+   "upgradeTimeSeconds": 518400,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 10,
+   "damagePerSecond": 130,
+   "damagePerHit": 156,
+   "frostmitesPerSummon": 2,
+   "maximumFrostmitesSummoned": 10,
+   "hitpoints": 3300,
+   "upgradeCost": 180000,
+   "upgradeTimeSeconds": 561600,
+   "petHouseLevelRequired": 5
+  },
+  {
+   "level": 11,
+   "damagePerSecond": 134,
+   "damagePerHit": 160.8,
+   "frostmitesPerSummon": 2,
+   "maximumFrostmitesSummoned": 10,
+   "hitpoints": 3400,
+   "upgradeCost": 200000,
+   "upgradeTimeSeconds": 604800,
+   "petHouseLevelRequired": 11
+  },
+  {
+   "level": 12,
+   "damagePerSecond": 138,
+   "damagePerHit": 165.6,
+   "frostmitesPerSummon": 2,
+   "maximumFrostmitesSummoned": 10,
+   "hitpoints": 3500,
+   "upgradeCost": 230000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 11
+  },
+  {
+   "level": 13,
+   "damagePerSecond": 142,
+   "damagePerHit": 170.4,
+   "frostmitesPerSummon": 2,
+   "maximumFrostmitesSummoned": 10,
+   "hitpoints": 3600,
+   "upgradeCost": 260000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 11
+  },
+  {
+   "level": 14,
+   "damagePerSecond": 146,
+   "damagePerHit": 175.2,
+   "frostmitesPerSummon": 2,
+   "maximumFrostmitesSummoned": 10,
+   "hitpoints": 3700,
+   "upgradeCost": 290000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 11
+  },
+  {
+   "level": 15,
+   "damagePerSecond": 150,
+   "damagePerHit": 180,
+   "frostmitesPerSummon": 3,
+   "maximumFrostmitesSummoned": 12,
+   "hitpoints": 3800,
+   "upgradeCost": 320000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 11
+  }
+ ],
+ "subpages": [
+  {
+   "title": "Frosty/Frostmite",
+   "url": "https://clashofclans.fandom.com/wiki/Frosty/Frostmite",
+   "revid": 616110,
+   "clientName": "Icemite",
+   "levels": [],
+   "constants": {
+    "Preferred Target": "Defenses",
+    "Attack Type": "Area Splash (Ground & Air)",
+    "Movement Speed": "24",
+    "Range": "2 tiles",
+    "Damage": "15",
+    "Hitpoints": "450"
+   }
+  }
+ ],
+ "mismatches": [
+  {
+   "field": "frostValues",
+   "level": null,
+   "wiki": "slow amount/duration not listed",
+   "client": "FrostOnHitPercent 50 for FrostOnHitTime 4000 ms (Frosty and Frostmites)",
+   "note": "wiki omits"
+  }
+ ]
+}

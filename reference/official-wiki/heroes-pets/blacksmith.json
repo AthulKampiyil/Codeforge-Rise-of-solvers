@@ -1,0 +1,216 @@
+{
+ "title": "Blacksmith",
+ "url": "https://clashofclans.fandom.com/wiki/Blacksmith",
+ "revid": 624544,
+ "retrieved": "2026-09-15",
+ "clientName": "Blacksmith",
+ "clientTable": "buildings",
+ "category": "building",
+ "summary": "3x3 building (TH8+) that stores ore and instantly upgrades hero equipment; its level caps equipment levels (Common 9→18, Epic 12→27) and unlocks Common equipment.",
+ "constants": {
+  "wiki": {},
+  "client": {
+   "buildingSize": "3x3",
+   "COMMON_ORE_DIAMOND_COST_1/10/100": "1/10/100",
+   "RARE_ORE_DIAMOND_COST": 5,
+   "EPIC_ORE_DIAMOND_COST": 35
+  },
+  "notes": {
+   "numberAvailable": "1 from TH8",
+   "size": "3x3"
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "equipmentUnlocked": {
+   "wikiHeader": "Equipment Unlocked",
+   "unit": "count/points"
+  },
+  "hitpoints": {
+   "wikiHeader": "Hitpoints",
+   "unit": "hitpoints"
+  },
+  "oreCapacityShinyOre": {
+   "wikiHeader": "Ore Capacity / Shiny Ore",
+   "unit": "count/points"
+  },
+  "oreCapacityGlowyOre": {
+   "wikiHeader": "Ore Capacity / Glowy Ore",
+   "unit": "count/points"
+  },
+  "oreCapacityStarryOre": {
+   "wikiHeader": "Ore Capacity / Starry Ore",
+   "unit": "count/points"
+  },
+  "maximumEquipmentLevelCommon": {
+   "wikiHeader": "Maximum Equipment Level / Common",
+   "unit": "count/points"
+  },
+  "maximumEquipmentLevelEpic": {
+   "wikiHeader": "Maximum Equipment Level / Epic",
+   "unit": "count/points"
+  },
+  "buildCost": {
+   "wikiHeader": "Build Cost",
+   "unit": "resource amount"
+  },
+  "buildTimeSeconds": {
+   "wikiHeader": "Build Time",
+   "unit": "seconds"
+  },
+  "experienceGained": {
+   "wikiHeader": "Experience Gained",
+   "unit": "count/points"
+  },
+  "townHallLevelRequired": {
+   "wikiHeader": "Town Hall Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "equipmentUnlocked": "Earthquake Boots",
+   "hitpoints": 700,
+   "oreCapacityShinyOre": 10000,
+   "oreCapacityGlowyOre": 1000,
+   "oreCapacityStarryOre": 200,
+   "maximumEquipmentLevelCommon": 9,
+   "maximumEquipmentLevelEpic": 12,
+   "buildCost": 600000,
+   "buildTimeSeconds": 43200,
+   "experienceGained": 207,
+   "townHallLevelRequired": 8
+  },
+  {
+   "level": 2,
+   "equipmentUnlocked": "Giant Arrow",
+   "hitpoints": 800,
+   "oreCapacityShinyOre": 15000,
+   "oreCapacityGlowyOre": 1500,
+   "oreCapacityStarryOre": 300,
+   "maximumEquipmentLevelCommon": 9,
+   "maximumEquipmentLevelEpic": 12,
+   "buildCost": 1200000,
+   "buildTimeSeconds": 86400,
+   "experienceGained": 293,
+   "townHallLevelRequired": 9
+  },
+  {
+   "level": 3,
+   "equipmentUnlocked": "Vampstache; Metal Pants",
+   "hitpoints": 900,
+   "oreCapacityShinyOre": 20000,
+   "oreCapacityGlowyOre": 2000,
+   "oreCapacityStarryOre": 400,
+   "maximumEquipmentLevelCommon": 12,
+   "maximumEquipmentLevelEpic": 15,
+   "buildCost": 2300000,
+   "buildTimeSeconds": 172800,
+   "experienceGained": 415,
+   "townHallLevelRequired": 10
+  },
+  {
+   "level": 4,
+   "equipmentUnlocked": "Rage Gem",
+   "hitpoints": 1000,
+   "oreCapacityShinyOre": 25000,
+   "oreCapacityGlowyOre": 2500,
+   "oreCapacityStarryOre": 500,
+   "maximumEquipmentLevelCommon": 12,
+   "maximumEquipmentLevelEpic": 15,
+   "buildCost": 3000000,
+   "buildTimeSeconds": 259200,
+   "experienceGained": 509,
+   "townHallLevelRequired": 11
+  },
+  {
+   "level": 5,
+   "equipmentUnlocked": "Healer Puppet; Noble Iron",
+   "hitpoints": 1100,
+   "oreCapacityShinyOre": 30000,
+   "oreCapacityGlowyOre": 3000,
+   "oreCapacityStarryOre": 600,
+   "maximumEquipmentLevelCommon": 15,
+   "maximumEquipmentLevelEpic": 18,
+   "buildCost": 5000000,
+   "buildTimeSeconds": 345600,
+   "experienceGained": 587,
+   "townHallLevelRequired": 12
+  },
+  {
+   "level": 6,
+   "equipmentUnlocked": "Healing Tome",
+   "hitpoints": 1200,
+   "oreCapacityShinyOre": 35000,
+   "oreCapacityGlowyOre": 3500,
+   "oreCapacityStarryOre": 700,
+   "maximumEquipmentLevelCommon": 15,
+   "maximumEquipmentLevelEpic": 18,
+   "buildCost": 6200000,
+   "buildTimeSeconds": 388800,
+   "experienceGained": 623,
+   "townHallLevelRequired": 13
+  },
+  {
+   "level": 7,
+   "equipmentUnlocked": "Hog Rider Puppet",
+   "hitpoints": 1300,
+   "oreCapacityShinyOre": 40000,
+   "oreCapacityGlowyOre": 4000,
+   "oreCapacityStarryOre": 800,
+   "maximumEquipmentLevelCommon": 18,
+   "maximumEquipmentLevelEpic": 21,
+   "buildCost": 9200000,
+   "buildTimeSeconds": 432000,
+   "experienceGained": 657,
+   "townHallLevelRequired": 14
+  },
+  {
+   "level": 8,
+   "equipmentUnlocked": "Haste Vial",
+   "hitpoints": 1400,
+   "oreCapacityShinyOre": 45000,
+   "oreCapacityGlowyOre": 4500,
+   "oreCapacityStarryOre": 900,
+   "maximumEquipmentLevelCommon": 18,
+   "maximumEquipmentLevelEpic": 24,
+   "buildCost": 10000000,
+   "buildTimeSeconds": 518400,
+   "experienceGained": 720,
+   "townHallLevelRequired": 15
+  },
+  {
+   "level": 9,
+   "equipmentUnlocked": "Stun Blaster",
+   "hitpoints": 1500,
+   "oreCapacityShinyOre": 50000,
+   "oreCapacityGlowyOre": 5000,
+   "oreCapacityStarryOre": 1000,
+   "maximumEquipmentLevelCommon": 18,
+   "maximumEquipmentLevelEpic": 27,
+   "buildCost": 11000000,
+   "buildTimeSeconds": 604800,
+   "experienceGained": 777,
+   "townHallLevelRequired": 16
+  },
+  {
+   "level": 10,
+   "equipmentUnlocked": "Electro Fangs",
+   "hitpoints": 1600,
+   "oreCapacityShinyOre": 50000,
+   "oreCapacityGlowyOre": 5000,
+   "oreCapacityStarryOre": 1000,
+   "maximumEquipmentLevelCommon": 18,
+   "maximumEquipmentLevelEpic": 27,
+   "buildCost": 18000000,
+   "buildTimeSeconds": 864000,
+   "experienceGained": 929,
+   "townHallLevelRequired": 17
+  }
+ ],
+ "mismatches": []
+}

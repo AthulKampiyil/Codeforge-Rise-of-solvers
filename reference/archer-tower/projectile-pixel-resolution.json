@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "cause": "Legacy CPU quad coverage included edges in local vertex coordinates; flipped quad 352 included right screen edge x=167.5 instead of left x=132.5.",
+  "sourceQuad": [
+    [
+      167.5,
+      214
+    ],
+    [
+      167.5,
+      86
+    ],
+    [
+      132.5,
+      214
+    ],
+    [
+      132.5,
+      86
+    ]
+  ],
+  "thresholds": {
+    "meanError": 1,
+    "largeFraction": 0.003
+  },
+  "reports": {
+    "chromium": {
+      "cases": 19,
+      "maximumMeanError": 0.43340857787810383,
+      "maximumChannelError": 2,
+      "maximumLargeFraction": 0,
+      "singleTextureChanges": 0,
+      "contextChanges": 0,
+      "glErrors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "webkit": {
+      "cases": 19,
+      "maximumMeanError": 0.625,
+      "maximumChannelError": 2,
+      "maximumLargeFraction": 0,
+      "singleTextureChanges": 0,
+      "contextChanges": 0,
+      "glErrors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}

@@ -1,0 +1,299 @@
+{
+ "title": "Valkyrie",
+ "page": "Valkyrie",
+ "url": "https://clashofclans.fandom.com/wiki/Valkyrie",
+ "revid": 624089,
+ "retrieved": "2026-09-15",
+ "clientName": "Valkyrie",
+ "clientVersion": "18.400.21",
+ "category": "dark-troop",
+ "constants": {
+  "housingSpace": 8,
+  "movementSpeedWiki": 24,
+  "internalSpeed": 300,
+  "tilesPerSecond": 3,
+  "attackRangeTiles": 0.5,
+  "attackRangeTilesClient": 0.5,
+  "attackSeconds": 1.8,
+  "splashTiles": 1.0,
+  "splashTilesClient": 1,
+  "attackTypeWiki": "Area Splash 1 Tile Radius (Ground Only)",
+  "targets": "ground",
+  "favoriteTarget": "None",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": false,
+  "unlock": {
+   "building": "Dark Barracks",
+   "level": 3,
+   "townHall": 8
+  },
+  "triggersTraps": true
+ },
+ "client": {
+  "clientName": "Valkyrie",
+  "housingSpace": 8,
+  "internalSpeed": 300,
+  "movementSpeedInGameExact": 24,
+  "movementSpeedInGameRounded": 24,
+  "tilesPerSecond": 3,
+  "attackRangeTiles": 0.5,
+  "attackSeconds": 1.8,
+  "splashTiles": 1,
+  "targets": "ground",
+  "flying": false,
+  "jumpsWalls": false,
+  "favoriteTarget": "None",
+  "productionBuilding": "Dark Barracks",
+  "barracksLevel": 3,
+  "unlockTownHall": 8,
+  "triggersTraps": true,
+  "newTargetAttackDelay": 600,
+  "movementOffsetSpeed": 0,
+  "selfAsAoeCenter": true,
+  "attackMultipleBuildings": true
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 94,
+   "damagePerHit": 169.2,
+   "hitpoints": 750,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 106,
+   "damagePerHit": 190.8,
+   "hitpoints": 850,
+   "researchCost": 3000,
+   "researchSeconds": 28800,
+   "researchTimeText": "8h",
+   "laboratoryLevel": 6
+  },
+  {
+   "level": 3,
+   "dps": 119,
+   "damagePerHit": 214.2,
+   "hitpoints": 950,
+   "researchCost": 5000,
+   "researchSeconds": 86400,
+   "researchTimeText": "1d",
+   "laboratoryLevel": 7
+  },
+  {
+   "level": 4,
+   "dps": 133,
+   "damagePerHit": 239.4,
+   "hitpoints": 1050,
+   "researchCost": 10000,
+   "researchSeconds": 129600,
+   "researchTimeText": "1d 12h",
+   "laboratoryLevel": 7
+  },
+  {
+   "level": 5,
+   "dps": 148,
+   "damagePerHit": 266.4,
+   "hitpoints": 1300,
+   "researchCost": 16000,
+   "researchSeconds": 151200,
+   "researchTimeText": "1d 18h",
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 6,
+   "dps": 167,
+   "damagePerHit": 300.6,
+   "hitpoints": 1500,
+   "researchCost": 31500,
+   "researchSeconds": 172800,
+   "researchTimeText": "2d",
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 7,
+   "dps": 185,
+   "damagePerHit": 333,
+   "hitpoints": 1650,
+   "researchCost": 55000,
+   "researchSeconds": 194400,
+   "researchTimeText": "2d 6h",
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 8,
+   "dps": 196,
+   "damagePerHit": 352.8,
+   "hitpoints": 1800,
+   "researchCost": 77500,
+   "researchSeconds": 259200,
+   "researchTimeText": "3d",
+   "laboratoryLevel": 11
+  },
+  {
+   "level": 9,
+   "dps": 208,
+   "damagePerHit": 374.4,
+   "hitpoints": 2000,
+   "researchCost": 105000,
+   "researchSeconds": 388800,
+   "researchTimeText": "4d 12h",
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 10,
+   "dps": 223,
+   "damagePerHit": 401.4,
+   "hitpoints": 2400,
+   "researchCost": 120000,
+   "researchSeconds": 432000,
+   "researchTimeText": "5d",
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 11,
+   "dps": 238,
+   "damagePerHit": 428.4,
+   "hitpoints": 2600,
+   "researchCost": 170000,
+   "researchSeconds": 518400,
+   "researchTimeText": "6d",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 12,
+   "dps": 255,
+   "damagePerHit": 459,
+   "hitpoints": 2900,
+   "researchCost": 340000,
+   "researchSeconds": 1209600,
+   "researchTimeText": "14d",
+   "laboratoryLevel": 15
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 750,
+   "dps": 94,
+   "damagePerHit": 169.2
+  },
+  {
+   "level": 2,
+   "hitpoints": 850,
+   "dps": 106,
+   "damagePerHit": 190.8,
+   "researchCost": 3000,
+   "researchSeconds": 28800,
+   "laboratoryLevel": 6
+  },
+  {
+   "level": 3,
+   "hitpoints": 950,
+   "dps": 119,
+   "damagePerHit": 214.2,
+   "researchCost": 5000,
+   "researchSeconds": 86400,
+   "laboratoryLevel": 7
+  },
+  {
+   "level": 4,
+   "hitpoints": 1050,
+   "dps": 133,
+   "damagePerHit": 239.4,
+   "researchCost": 10000,
+   "researchSeconds": 129600,
+   "laboratoryLevel": 7
+  },
+  {
+   "level": 5,
+   "hitpoints": 1300,
+   "dps": 148,
+   "damagePerHit": 266.4,
+   "researchCost": 16000,
+   "researchSeconds": 151200,
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 6,
+   "hitpoints": 1500,
+   "dps": 167,
+   "damagePerHit": 300.6,
+   "researchCost": 31500,
+   "researchSeconds": 172800,
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 7,
+   "hitpoints": 1650,
+   "dps": 185,
+   "damagePerHit": 333,
+   "researchCost": 55000,
+   "researchSeconds": 194400,
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 8,
+   "hitpoints": 1800,
+   "dps": 196,
+   "damagePerHit": 352.8,
+   "researchCost": 77500,
+   "researchSeconds": 259200,
+   "laboratoryLevel": 11
+  },
+  {
+   "level": 9,
+   "hitpoints": 2000,
+   "dps": 208,
+   "damagePerHit": 374.4,
+   "researchCost": 105000,
+   "researchSeconds": 388800,
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 10,
+   "hitpoints": 2400,
+   "dps": 223,
+   "damagePerHit": 401.4,
+   "researchCost": 120000,
+   "researchSeconds": 432000,
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 11,
+   "hitpoints": 2600,
+   "dps": 238,
+   "damagePerHit": 428.4,
+   "researchCost": 170000,
+   "researchSeconds": 518400,
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 12,
+   "hitpoints": 2900,
+   "dps": 255,
+   "damagePerHit": 459,
+   "researchCost": 340000,
+   "researchSeconds": 1209600,
+   "laboratoryLevel": 15
+  }
+ ],
+ "superTroopBoost": {
+  "super troop": "Super Valkyrie",
+  "boost cost": "25,000",
+  "valkyrie level required": "7"
+ },
+ "comparison": {
+  "checked": 78,
+  "matched": 78
+ },
+ "mismatches": [],
+ "ambiguities": []
+}

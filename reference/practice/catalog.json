@@ -1,0 +1,3718 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "csv/deploy_steps.csv": "44b3e684b62a8cd33b9de3b13d245446d02069a3485263448d52dd7c612d8774",
+    "level/challenge_th10_bobat.json": "5b7299cdb8ea754ab8a2b71f4465399ea53ce51dbaadf037f6d7f0a4bb8e14e8",
+    "level/challenge_th11_edrag.json": "61211573fc5a6a7e886365aee7cdf086920f4086cb0dcd854de25827a880fcad",
+    "level/challenge_th11_lavaloon.json": "dab1d5da5fe30fdd0ca33a4d3c49f118a50f2d07569591b51d5a2a1b633d3aaf",
+    "level/challenge_th12_bowigi.json": "82999c8f11303688405afe92464e59901119b0df89d05b0dcf2913b589917ec5",
+    "level/challenge_th4_giant.json": "a9fe72489b190d8a619bcb96edb5280a7e7279891a09dc2d7fb7af3f6b3233a3",
+    "level/challenge_th5_loon.json": "71f1edb8065d043dd9c2d343891fb7bac5c1e3b9f8da67440d0fe9fc635b4805",
+    "level/challenge_th6_giwiwa.json": "fafbc0d4f9944a15be65282dc045fb37b78fd002819eaf9da5a507e778e570ab",
+    "level/challenge_th7_dragon.json": "1cd05abadf7cbde036a5f0bb5163715b38a3e630c06a0f5fe0f58972920589a4",
+    "level/challenge_th7_hog.json": "5157101770b43b78ec736e3ba94231a56240a2ea92cac3e100ef94d080f93986",
+    "level/challenge_th7_minion.json": "4f6dea4a68666f54dddcd030feffa3631783d76a565c4d700775092207a32649",
+    "level/challenge_th8_gowipe.json": "fb8748b50764f942485e84766d700fa70b54d5b8376fc52019f3778c32480200",
+    "level/challenge_th9_lavaloon.json": "a42a19c8848a80106e84917bd0ee25d46849ea41d776d51edd68213d04dc5f63",
+    "level/challenge_th9_witch.json": "607bf53b2bfe4c59a45938bdc40e542982df5444eebac0d96f9da08fd1d1c4b7",
+    "localization/texts.csv": "affdf43926df044cb3c09d833b07365aa01ea99985771afa5fa0dd926f36c569",
+    "logic/characters.csv": "5c3acc5b46ff9e7978f406b540264e65c93a846b69d03cd43326a9853703cb89",
+    "logic/heroes.csv": "658c9721fb0fd5488b69ca3555ef5597d521f28dde95af051a2a98ccbdd65197",
+    "logic/npcs.csv": "99dfcaeb4a622f76d4ed29ce444eedef88e92b49b8e0c574b34eea74e1278d6a",
+    "logic/spells.csv": "385159e00327e6a1567cd91f1585b4ed0717d3f4475f0823398243482598289d"
+  },
+  "texts": {
+    "title": "Practice",
+    "info": "Hone your skills with different attack strategies! Practice levels unlock as you upgrade your Town Hall.",
+    "unlocks": "Practice mode unlocks at Town Hall 4"
+  },
+  "levels": [
+    {
+      "id": "CHALLENGE_TH4_GIANT",
+      "name": "Giant Smash",
+      "townHall": 4,
+      "stage": 91,
+      "gold": 100000,
+      "elixir": 100000,
+      "dark": 0,
+      "army": [
+        {
+          "unit": "Giant",
+          "kind": "troop",
+          "level": 2,
+          "count": 13
+        },
+        {
+          "unit": "Wall Breaker",
+          "kind": "troop",
+          "level": 2,
+          "count": 2
+        },
+        {
+          "unit": "Goblin",
+          "kind": "troop",
+          "level": 2,
+          "count": 11
+        }
+      ],
+      "steps": [
+        {
+          "name": "TH4_Giant_Giants1",
+          "text": "Deploy a <c54a0fe>Giant</c> to shield the <c54a0fe>Wall Breakers</c>.",
+          "unit": "Giant",
+          "count": 1,
+          "at": [
+            23,
+            35
+          ],
+          "radius": 1.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_500ms",
+          "forceType": true,
+          "duration": 500
+        },
+        {
+          "name": "TH4_Giant_WallBreakers",
+          "text": "Quickly destroy Walls before the <c54a0fe>Giant</c> dies.",
+          "unit": "Wall Breaker",
+          "count": 2,
+          "at": [
+            25,
+            37
+          ],
+          "radius": 1.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true,
+          "slowdown": 10
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH4_Giant_Giants2",
+          "text": "Now deploy <c54a0fe>Giants</c> to destroy all defenses.",
+          "unit": "Giant",
+          "count": 12,
+          "at": [
+            25,
+            36
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH4_Giant_Goblins",
+          "text": "After <cf70d16>Mortar</c> is destroyed, deploy <c54a0fe>Goblins</c> to help clean up.",
+          "duration": 25000
+        }
+      ],
+      "heroFlags": []
+    },
+    {
+      "id": "CHALLENGE_TH5_LOON",
+      "name": "Balloon Parade",
+      "townHall": 5,
+      "stage": 92,
+      "gold": 125000,
+      "elixir": 125000,
+      "dark": 0,
+      "army": [
+        {
+          "unit": "Balloon",
+          "kind": "troop",
+          "level": 2,
+          "count": 27
+        }
+      ],
+      "steps": [
+        {
+          "name": "TH5_Loon_Loons1",
+          "text": "Deploy several <c54a0fe>Balloons</c> to overwhelm defenses. Your first priority is the <cf70d16>Air Defense</c>.",
+          "unit": "Balloon",
+          "count": 12,
+          "at": [
+            0,
+            10
+          ],
+          "radius": 1.5,
+          "pause": true
+        },
+        {
+          "name": "Wait_500ms",
+          "forceType": true,
+          "duration": 500
+        },
+        {
+          "name": "TH5_Loon_Loons2",
+          "text": "Deploy multiple groups to minimize splash damage from traps and <cf70d16>Wizard Towers</c>.",
+          "unit": "Balloon",
+          "count": 5,
+          "at": [
+            17,
+            0
+          ],
+          "radius": 1.5,
+          "pause": true
+        },
+        {
+          "name": "Wait_500ms",
+          "forceType": true,
+          "duration": 500
+        },
+        {
+          "name": "TH5_Loon_Loons3",
+          "text": "Focus on destroying defenses that attack air units first!",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "Wait_500ms",
+          "forceType": true,
+          "duration": 500
+        },
+        {
+          "name": "TH5_Loon_Loons4",
+          "text": "Destroy the last <cf70d16>Archer Tower</c> with your remaining <c54a0fe>Balloons</c>.",
+          "unit": "Balloon",
+          "count": 5,
+          "at": [
+            14,
+            23
+          ],
+          "radius": 1.5,
+          "pause": true
+        }
+      ],
+      "heroFlags": []
+    },
+    {
+      "id": "CHALLENGE_TH6_GIWIWA",
+      "name": "Meat Shield",
+      "townHall": 6,
+      "stage": 93,
+      "gold": 150000,
+      "elixir": 150000,
+      "dark": 0,
+      "army": [
+        {
+          "unit": "Giant",
+          "kind": "troop",
+          "level": 3,
+          "count": 14
+        },
+        {
+          "unit": "Wizard",
+          "kind": "troop",
+          "level": 3,
+          "count": 16
+        },
+        {
+          "unit": "Wall Breaker",
+          "kind": "troop",
+          "level": 3,
+          "count": 8
+        },
+        {
+          "unit": "Healing",
+          "kind": "spell",
+          "level": 3,
+          "count": 2
+        }
+      ],
+      "steps": [
+        {
+          "name": "TH6_Giwiwa_Giant1",
+          "text": "Deploy a <c54a0fe>Giant</c> to shield the <c54a0fe>Wall Breakers</c>.",
+          "unit": "Giant",
+          "count": 1,
+          "at": [
+            17,
+            36
+          ],
+          "radius": 1.5,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH6_Giwiwa_WallBreakers1",
+          "text": "Destroy the first layer of Walls before the <c54a0fe>Giant</c> dies.",
+          "unit": "Wall Breaker",
+          "count": 3,
+          "at": [
+            17,
+            36
+          ],
+          "radius": 1.5,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true,
+          "slowdown": 10
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH6_Giwiwa_Giant2",
+          "text": "Begin the main attack by deploying your <c54a0fe>Giants</c> first so that they protect your <c54a0fe>Wizards</c>!",
+          "unit": "Giant",
+          "count": 13,
+          "at": [
+            19,
+            36
+          ],
+          "radius": 1.5,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH6_Giwiwa_Heal1",
+          "text": "Use a <cffe346>Heal Spell</c> to protect <c54a0fe>Giants</c> from the <cf70d16>Wizard Tower</c>!",
+          "unit": "Healing",
+          "count": 1,
+          "at": [
+            18,
+            28
+          ],
+          "radius": 1.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH6_Giwiwa_Wizards1",
+          "text": "Deploy <c54a0fe>Wizards</c> while the defenses are distracted!",
+          "unit": "Wizard",
+          "count": 5,
+          "at": [
+            29,
+            31
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "slowdown": 25
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH6_Giwiwa_WallBreakers2",
+          "text": "After <cf70d16>Mortar</c> shots have landed, open up the second layer of Walls so your army can get to the <cf70d16>Town Hall</c>!",
+          "unit": "Wall Breaker",
+          "count": 5,
+          "at": [
+            19,
+            36
+          ],
+          "radius": 1.5,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true,
+          "slowdown": 25
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH6_Giwiwa_Wizards2",
+          "text": "The coast is clear! Deploy More <c54a0fe>Wizards</c>!",
+          "unit": "Wizard",
+          "count": 6,
+          "at": [
+            18,
+            36
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "TH6_Giwiwa_Wait_For_Heal",
+          "waitFor": {
+            "data": 1000011,
+            "x": 18,
+            "y": 23
+          }
+        },
+        {
+          "name": "TH6_Giwiwa_Heal2",
+          "text": "Use another <cffe346>Heal Spell</c> on your <c54a0fe>Giants</c> to get them back to health!",
+          "unit": "Healing",
+          "count": 1,
+          "at": [
+            20,
+            21
+          ],
+          "radius": 1.0,
+          "forceType": true
+        }
+      ],
+      "heroFlags": []
+    },
+    {
+      "id": "CHALLENGE_TH7_DRAGON",
+      "name": "Hot Stuff",
+      "townHall": 7,
+      "stage": 94,
+      "gold": 200000,
+      "elixir": 200000,
+      "dark": 0,
+      "army": [
+        {
+          "unit": "Dragon",
+          "kind": "troop",
+          "level": 2,
+          "count": 10
+        },
+        {
+          "unit": "Lightning",
+          "kind": "spell",
+          "level": 4,
+          "count": 6
+        },
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 5,
+          "count": 1
+        }
+      ],
+      "steps": [
+        {
+          "name": "TH7_Dragon_Info_AirSweeper",
+          "text": "Approach the base from behind the <cf70d16>Air Sweeper</c>.",
+          "forceType": true,
+          "duration": 5000,
+          "show": {
+            "data": 1000028,
+            "x": 17,
+            "y": 13
+          }
+        },
+        {
+          "name": "TH7_Dragon_Lightning",
+          "text": "Destroy one of the <cf70d16>Air Defenses</c> with <c38eaff>Lightning Spells</c>.",
+          "unit": "Lightning",
+          "count": 5,
+          "at": [
+            23,
+            13
+          ],
+          "radius": 1.0,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH7_Dragon_BarbarianKing",
+          "text": "Deploy <c9916c8>Barbarian King</c> to shield the <c54a0fe>Dragons</c> from <cf70d16>Archer Towers</c>.",
+          "unit": "Barbarian King",
+          "count": 1,
+          "at": [
+            35,
+            3
+          ],
+          "radius": 1.5,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH7_Dragon_Dragons1",
+          "text": "Deploy a <c54a0fe>Dragon</c> to clear each side of the base.",
+          "unit": "Dragon",
+          "count": 1,
+          "at": [
+            35,
+            3
+          ],
+          "radius": 1.5,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "TH7_Dragon_Dragons2",
+          "text": "Deploy one more <c54a0fe>Dragon</c> to clear the corner of the base. This will help direct the rest of your army towards the middle.",
+          "unit": "Dragon",
+          "count": 1,
+          "at": [
+            5,
+            32
+          ],
+          "radius": 1.5,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH7_Dragon_Dragons3",
+          "text": "Deploy the remaining <c54a0fe>Dragons</c>.",
+          "unit": "Dragon",
+          "count": 7,
+          "at": [
+            35,
+            18
+          ],
+          "radius": 2.0,
+          "forceType": true
+        }
+      ],
+      "heroFlags": [
+        {
+          "hero": "Barbarian King",
+          "x": 27,
+          "y": 5
+        }
+      ]
+    },
+    {
+      "id": "CHALLENGE_TH7_HOG",
+      "name": "Hog Rush",
+      "townHall": 7,
+      "stage": 95,
+      "gold": 200000,
+      "elixir": 200000,
+      "dark": 0,
+      "army": [
+        {
+          "unit": "Hog Rider",
+          "kind": "troop",
+          "level": 2,
+          "count": 36
+        },
+        {
+          "unit": "Wizard",
+          "kind": "troop",
+          "level": 4,
+          "count": 5
+        },
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 5,
+          "count": 1
+        },
+        {
+          "unit": "Healing",
+          "kind": "spell",
+          "level": 4,
+          "count": 3
+        }
+      ],
+      "steps": [
+        {
+          "name": "TH7_Hog_BarbarianKing",
+          "text": "Deploy <c9916c8>Barbarian King</c> to deal with the enemy king or he will wreck your <c54a0fe>Hog Riders</c>.",
+          "unit": "Barbarian King",
+          "count": 1,
+          "at": [
+            10,
+            25
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH7_Hog_Wizards",
+          "text": "Deploy <c54a0fe>Wizards</c> to help your King!",
+          "unit": "Wizard",
+          "count": 5,
+          "at": [
+            10,
+            25
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH7_Hog_Hogs",
+          "text": "Deploy all <c54a0fe>Hog Riders</c> to start their attack.",
+          "unit": "Hog Rider",
+          "count": 36,
+          "at": [
+            45,
+            27
+          ],
+          "radius": 3.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "KingHealthLow",
+          "text": "<c9916c8>Barbarian King's</c> hitpoints are dropping. Activate his ability!",
+          "unit": "Barbarian King",
+          "pause": true,
+          "forceType": true,
+          "ability": true
+        },
+        {
+          "name": "TH7_Hog_Wait_For_Heal",
+          "waitFor": {
+            "data": 1000008,
+            "x": 35,
+            "y": 20
+          }
+        },
+        {
+          "name": "TH7_Hog_Heal1",
+          "text": "<c54a0fe>Hog Riders</c> have lost a lot of hit points. Use a <cffe346>Heal Spell</c> now!",
+          "unit": "Healing",
+          "count": 1,
+          "at": [
+            30,
+            25
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "duration": 10000
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH7_Hog_Heal2",
+          "text": "Use the remaining <cffe346>Heal Spells</c> to keep <c54a0fe>Hog Riders</c> alive while they clean up the base.",
+          "duration": 10000
+        }
+      ],
+      "heroFlags": [
+        {
+          "hero": "Barbarian King",
+          "x": 17,
+          "y": 24
+        }
+      ]
+    },
+    {
+      "id": "CHALLENGE_TH7_MINION",
+      "name": "Air Raid",
+      "townHall": 7,
+      "stage": 96,
+      "gold": 200000,
+      "elixir": 200000,
+      "dark": 0,
+      "army": [
+        {
+          "unit": "Balloon",
+          "kind": "troop",
+          "level": 4,
+          "count": 30
+        },
+        {
+          "unit": "Minion",
+          "kind": "troop",
+          "level": 2,
+          "count": 25
+        },
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 5,
+          "count": 1
+        },
+        {
+          "unit": "Rage",
+          "kind": "spell",
+          "level": 4,
+          "count": 3
+        }
+      ],
+      "steps": [
+        {
+          "name": "TH7_Minion_Info_AirSweeper",
+          "text": "Approach the base from behind the <cf70d16>Air Sweeper</c>.",
+          "forceType": true,
+          "duration": 5000,
+          "show": {
+            "data": 1000028,
+            "x": 23,
+            "y": 25
+          }
+        },
+        {
+          "name": "TH7_Minion_Balloons",
+          "text": "Deploy <c54a0fe>Balloons</c> to destroy all <cf70d16>Air Defenses</c>.",
+          "unit": "Balloon",
+          "count": 15,
+          "at": [
+            45,
+            27
+          ],
+          "radius": 3.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH7_Minion_Rage1",
+          "text": "Use a <cf07bf8>Rage Spell</c> to make <c54a0fe>Balloons</c> faster and deadlier!",
+          "unit": "Rage",
+          "count": 1,
+          "at": [
+            33,
+            25
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH7_Minion_BarbarianKing",
+          "text": "Deploy <c9916c8>Barbarian King</c> to distract the <cf70d16>Wizard Tower</c>.",
+          "unit": "Barbarian King",
+          "count": 1,
+          "at": [
+            33,
+            8
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH7_Minion_Minions",
+          "text": "Deploy <c54a0fe>Minions</c> to take out the <cf70d16>Wizard Tower</c> and help with clean up.",
+          "unit": "Minion",
+          "count": 25,
+          "at": [
+            35,
+            6
+          ],
+          "radius": 3.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH7_Minion_Rage2",
+          "text": "<c54a0fe>Minions</c> will make short work of their targets with the help of a <cf07bf8>Rage Spell</c>.",
+          "unit": "Rage",
+          "count": 1,
+          "at": [
+            31,
+            14
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        }
+      ],
+      "heroFlags": [
+        {
+          "hero": "Barbarian King",
+          "x": 17,
+          "y": 24
+        }
+      ]
+    },
+    {
+      "id": "CHALLENGE_TH8_GOWIPE",
+      "name": "Heavy Hitters",
+      "townHall": 8,
+      "stage": 97,
+      "gold": 250000,
+      "elixir": 250000,
+      "dark": 1500,
+      "army": [
+        {
+          "unit": "Golem",
+          "kind": "troop",
+          "level": 2,
+          "count": 1
+        },
+        {
+          "unit": "PEKKA",
+          "kind": "troop",
+          "level": 3,
+          "count": 4
+        },
+        {
+          "unit": "Wizard",
+          "kind": "troop",
+          "level": 5,
+          "count": 16
+        },
+        {
+          "unit": "Wall Breaker",
+          "kind": "troop",
+          "level": 5,
+          "count": 2
+        },
+        {
+          "unit": "Archer",
+          "kind": "troop",
+          "level": 5,
+          "count": 2
+        },
+        {
+          "unit": "Healing",
+          "kind": "spell",
+          "level": 5,
+          "count": 2
+        },
+        {
+          "unit": "Rage",
+          "kind": "spell",
+          "level": 5,
+          "count": 1
+        },
+        {
+          "unit": "Earthquake",
+          "kind": "spell",
+          "level": 2,
+          "count": 1
+        },
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 10,
+          "count": 1
+        }
+      ],
+      "steps": [
+        {
+          "name": "TH8_Gowipe_Earthquake",
+          "text": "Use an <ca9561f>Earthquake Spell</c> to weaken clustered defensive buildings and Walls.",
+          "unit": "Earthquake",
+          "count": 1,
+          "at": [
+            28,
+            20
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_500ms",
+          "forceType": true,
+          "duration": 500
+        },
+        {
+          "name": "TH8_Gowipe_Funnel_Pekkas",
+          "text": "Deploy <c54a0fe>2 P.E.K.K.As</c> to clear the sides of the village.",
+          "unit": "PEKKA",
+          "count": 1,
+          "at": [
+            11,
+            14
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "slowdown": 25
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH8_Gowipe_Wizards1",
+          "text": "Deploy <c54a0fe>Wizards</c> for support.",
+          "unit": "Wizard",
+          "count": 2,
+          "at": [
+            37,
+            6
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "slowdown": 25
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH8_Gowipe_Golem",
+          "text": "Your <c54a0fe>Golem</c> has a lot of hitpoints. Deploy it ahead the other troops to shield them.",
+          "unit": "Golem",
+          "count": 1,
+          "at": [
+            28,
+            13
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH8_Gowipe_WallBreakers",
+          "text": "Use <c54a0fe>Wall Breakers</c> to destroy the Wall while defenses are targeting your other troops.",
+          "unit": "Wall Breaker",
+          "count": 2,
+          "at": [
+            25,
+            12
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH8_Gowipe_BarbarianKing",
+          "text": "Deploy <c9916c8>Barbarian King</c>. Since the sides have been cleared, he will head to the middle.",
+          "unit": "Barbarian King",
+          "count": 1,
+          "at": [
+            25,
+            13
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH8_Gowipe_Support_Pekkas",
+          "text": "Deploy <c54a0fe>P.E.K.K.As</c>. They will now also head for the middle.",
+          "unit": "PEKKA",
+          "count": 2,
+          "at": [
+            27,
+            13
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH8_Gowipe_Wizards2",
+          "text": "Deploy more support <c54a0fe>Wizards</c> to help your <c9916c8>Barbarian King</c> and <c54a0fe>P.E.K.K.As</c>.",
+          "unit": "Wizard",
+          "count": 9,
+          "at": [
+            26,
+            6
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH8_Gowipe_Heal1",
+          "text": "Use <cffe346>Heal Spell</c> on the entrance as all your troops walk through it.",
+          "unit": "Healing",
+          "count": 1,
+          "at": [
+            25,
+            17
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH8_Gowipe_Rage",
+          "text": "Use <cf07bf8>Rage Spell</c> on the entrance so that most troops will benefit from it.",
+          "unit": "Rage",
+          "count": 1,
+          "at": [
+            25,
+            17
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH8_Gowipe_Heal2",
+          "text": "Keep your <c54a0fe>Wizards</c> alive by using a <cffe346>Heal Spell</c> on them!",
+          "duration": 10000
+        },
+        {
+          "name": "TH8_Gowipe_Clean_Up",
+          "text": "Deploy remaining troops to help with clean up.",
+          "duration": 10000
+        }
+      ],
+      "heroFlags": [
+        {
+          "hero": "Barbarian King",
+          "x": 16,
+          "y": 19
+        }
+      ]
+    },
+    {
+      "id": "CHALLENGE_TH8_GOWIVA",
+      "name": "Whirl Power",
+      "townHall": 8,
+      "stage": null,
+      "gold": 250000,
+      "elixir": 250000,
+      "dark": 1500,
+      "army": [
+        {
+          "unit": "Golem",
+          "kind": "troop",
+          "level": 2,
+          "count": 1
+        },
+        {
+          "unit": "Valkyrie",
+          "kind": "troop",
+          "level": 2,
+          "count": 15
+        },
+        {
+          "unit": "Wizard",
+          "kind": "troop",
+          "level": 5,
+          "count": 11
+        },
+        {
+          "unit": "Hog Rider",
+          "kind": "troop",
+          "level": 2,
+          "count": 1
+        },
+        {
+          "unit": "Archer",
+          "kind": "troop",
+          "level": 5,
+          "count": 1
+        },
+        {
+          "unit": "Healing",
+          "kind": "spell",
+          "level": 5,
+          "count": 1
+        },
+        {
+          "unit": "Poison",
+          "kind": "spell",
+          "level": 2,
+          "count": 1
+        },
+        {
+          "unit": "Earthquake",
+          "kind": "spell",
+          "level": 2,
+          "count": 4
+        },
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 10,
+          "count": 1
+        }
+      ],
+      "steps": [],
+      "heroFlags": []
+    },
+    {
+      "id": "CHALLENGE_TH9_LAVALOON",
+      "name": "Lava & Loons",
+      "townHall": 9,
+      "stage": 98,
+      "gold": 300000,
+      "elixir": 300000,
+      "dark": 3000,
+      "army": [
+        {
+          "unit": "Lava Hound",
+          "kind": "troop",
+          "level": 2,
+          "count": 2
+        },
+        {
+          "unit": "Balloon",
+          "kind": "troop",
+          "level": 6,
+          "count": 26
+        },
+        {
+          "unit": "Baby Dragon",
+          "kind": "troop",
+          "level": 2,
+          "count": 2
+        },
+        {
+          "unit": "Minion",
+          "kind": "troop",
+          "level": 5,
+          "count": 5
+        },
+        {
+          "unit": "Rage",
+          "kind": "spell",
+          "level": 5,
+          "count": 2
+        },
+        {
+          "unit": "Haste",
+          "kind": "spell",
+          "level": 2,
+          "count": 4
+        },
+        {
+          "unit": "Freeze",
+          "kind": "spell",
+          "level": 1,
+          "count": 1
+        },
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 30,
+          "count": 1
+        },
+        {
+          "unit": "Archer Queen",
+          "kind": "hero",
+          "level": 30,
+          "count": 1
+        }
+      ],
+      "steps": [
+        {
+          "name": "TH9_Lavaloon_BarbarianKing_1",
+          "text": "The <cf70d16>Enemy Queen</c> is a deadly opponent for your <c54a0fe>Balloons</c>. Deal with her first.",
+          "forceType": true,
+          "duration": 10000
+        },
+        {
+          "name": "TH9_Lavaloon_BarbarianKing_2",
+          "text": "Deploy your <c9916c8>Barbarian King</c> to tackle her once she jumps outside the Walls.",
+          "forceType": true,
+          "duration": 10000
+        },
+        {
+          "name": "TH9_Lavaloon_BarbarianKing_3",
+          "text": "Deploy your <c9916c8>Barbarian King</c> to tackle her once she jumps outside the Walls.",
+          "unit": "Barbarian King",
+          "count": 1,
+          "at": [
+            46,
+            24
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH9_Lavaloon_KingAbility",
+          "text": "Use <c9916c8>Barbarian King</c> ability right away to quickly knock out the enemy <cf70d16>Queen</c>.",
+          "unit": "Barbarian King",
+          "pause": true,
+          "forceType": true,
+          "ability": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH9_Lavaloon_ArcherQueen",
+          "text": "Deploy your <c9916c8>Archer Queen</c> to get rid of <cf70d16>Wizard Tower</c>, <cf70d16>Air Defense</c> and <cf70d16>Archer Tower</c>.",
+          "unit": "Archer Queen",
+          "count": 1,
+          "at": [
+            49,
+            27
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "TH9_Lavaloon_Wait_For_Hounds",
+          "forceType": true,
+          "waitFor": {
+            "data": 1000009,
+            "x": 35,
+            "y": 30
+          }
+        },
+        {
+          "name": "TH9_Lavaloon_Haste1",
+          "text": "Use <cf07bf8>Haste Spells</c> to speed up slow air units and reach the <cf70d16>Air Sweeper</c> quickly.",
+          "unit": "Haste",
+          "count": 1,
+          "at": [
+            25,
+            42
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "slowdown": 25
+        },
+        {
+          "name": "Wait_500ms",
+          "forceType": true,
+          "duration": 500
+        },
+        {
+          "name": "TH9_Lavaloon_Hounds",
+          "text": "Deploy <c54a0fe>Lava Hounds</c> to shield your <c3e8cb8>Balloons</c> and to trigger traps within the base.",
+          "unit": "Lava Hound",
+          "count": 1,
+          "at": [
+            25,
+            46
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "slowdown": 25
+        },
+        {
+          "name": "Wait_500ms",
+          "forceType": true,
+          "duration": 500
+        },
+        {
+          "name": "TH9_Lavaloon_Balloons",
+          "text": "Deploy <c54a0fe>Balloons</c> behind the <c54a0fe>Lava Hounds</c>.",
+          "unit": "Balloon",
+          "count": 13,
+          "at": [
+            15,
+            47
+          ],
+          "radius": 3.0,
+          "pause": true,
+          "forceType": true,
+          "slowdown": 25
+        },
+        {
+          "name": "Wait_500ms",
+          "forceType": true,
+          "duration": 500
+        },
+        {
+          "name": "TH9_Lavaloon_Freeze",
+          "text": "Use <c38eaff>Freeze Spell</c> to disable the <cf70d16>Air Sweeper</c> while your troops approach.",
+          "unit": "Freeze",
+          "count": 1,
+          "at": [
+            26,
+            31
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_500ms",
+          "forceType": true,
+          "duration": 500
+        },
+        {
+          "name": "TH9_Lavaloon_Rage1",
+          "text": "Use <cf07bf8>Rage Spell</c> in position which benefits most of the troops.",
+          "unit": "Rage",
+          "count": 1,
+          "at": [
+            23,
+            36
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH9_Lavaloon_Rage2",
+          "text": "Use another <cf07bf8>Rage Spell</c> to clear the remaining <cf70d16>Air Defenses and Air Sweeper</c>.",
+          "unit": "Rage",
+          "count": 1,
+          "at": [
+            23,
+            28
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_500ms",
+          "forceType": true,
+          "duration": 500
+        },
+        {
+          "name": "TH9_Lavaloon_Haste2",
+          "text": "Use another <cf07bf8>Haste Spell</c> to speed up your <c54a0fe>Balloons</c>.",
+          "unit": "Haste",
+          "count": 1,
+          "at": [
+            29,
+            28
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH9_Lavaloon_CleanUp",
+          "text": "Deploy remaining troops and spells to clean up the base.",
+          "duration": 10000
+        }
+      ],
+      "heroFlags": [
+        {
+          "hero": "Barbarian King",
+          "x": 20,
+          "y": 29
+        },
+        {
+          "hero": "Archer Queen",
+          "x": 39,
+          "y": 22
+        }
+      ]
+    },
+    {
+      "id": "CHALLENGE_TH9_WITCH",
+      "name": "Witch Slap",
+      "townHall": 9,
+      "stage": 99,
+      "gold": 300000,
+      "elixir": 300000,
+      "dark": 3000,
+      "army": [
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 30,
+          "count": 1
+        },
+        {
+          "unit": "Archer Queen",
+          "kind": "hero",
+          "level": 30,
+          "count": 1
+        },
+        {
+          "unit": "Witch",
+          "kind": "troop",
+          "level": 2,
+          "count": 8
+        },
+        {
+          "unit": "Golem",
+          "kind": "troop",
+          "level": 4,
+          "count": 2
+        },
+        {
+          "unit": "Wizard",
+          "kind": "troop",
+          "level": 6,
+          "count": 2
+        },
+        {
+          "unit": "Healer",
+          "kind": "troop",
+          "level": 4,
+          "count": 4
+        },
+        {
+          "unit": "Earthquake",
+          "kind": "spell",
+          "level": 3,
+          "count": 4
+        },
+        {
+          "unit": "Rage",
+          "kind": "spell",
+          "level": 5,
+          "count": 1
+        },
+        {
+          "unit": "Poison",
+          "kind": "spell",
+          "level": 3,
+          "count": 1
+        },
+        {
+          "unit": "Jump",
+          "kind": "spell",
+          "level": 2,
+          "count": 1
+        }
+      ],
+      "steps": [
+        {
+          "name": "TH9_Witch_FunnelWizard",
+          "text": "Deploy a <c54a0fe>Wizard</c> to clear the Army Camp.",
+          "unit": "Wizard",
+          "count": 1,
+          "at": [
+            28,
+            6
+          ],
+          "radius": 1.5,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH9_Witch_ArcherQueen",
+          "text": "Now deploy the <c9916c8>Archer Queen</c>. With the Army Camp gone, she will walk clockwise around the base.",
+          "unit": "Archer Queen",
+          "count": 1,
+          "at": [
+            36,
+            5
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH9_Witch_Healers",
+          "text": "Deploy <c54a0fe>Healers</c> to support the <c9916c8>Archer Queen</c>.",
+          "unit": "Healer",
+          "count": 4,
+          "at": [
+            38,
+            4
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "TH9_Witch_Wait_For_Earthquake",
+          "forceType": true,
+          "waitFor": {
+            "data": 1000004,
+            "x": 41,
+            "y": 28
+          }
+        },
+        {
+          "name": "TH9_Witch_Earthquake",
+          "text": "Four <ca9561f>Earthquake Spells</c> always destroy Walls. Use them to open up the base!",
+          "unit": "Earthquake",
+          "count": 4,
+          "at": [
+            27,
+            34
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "TH9_Witch_Wait_For_Deploy",
+          "forceType": true,
+          "waitFor": {
+            "data": 1000003,
+            "x": 31,
+            "y": 32
+          }
+        },
+        {
+          "name": "TH9_Witch_Golems",
+          "text": "Deploy <c54a0fe>Golems</c> to charge into the base. They will soak most of the incoming damage.",
+          "unit": "Golem",
+          "count": 1,
+          "at": [
+            24,
+            43
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH9_Witch_Witches1",
+          "text": "Deploy <c54a0fe>Witches</c> to clear buildings from the corner.",
+          "unit": "Witch",
+          "count": 2,
+          "at": [
+            10,
+            46
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH9_Witch_Witches2",
+          "text": "Deploy most of the <c54a0fe>Witches</c> to support <c54a0fe>Golems</c>.",
+          "unit": "Witch",
+          "count": 3,
+          "at": [
+            22,
+            43
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH9_Witch_BarbarianKing",
+          "text": "Deploy the <c9916c8>Barbarian King</c>.",
+          "unit": "Barbarian King",
+          "count": 1,
+          "at": [
+            30,
+            43
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH9_Witch_Rage",
+          "text": "Use <cf07bf8>Rage Spell</c> on the entrance so that most troops will benefit from it.",
+          "unit": "Rage",
+          "count": 1,
+          "at": [
+            26,
+            34
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH9_Witch_Poison",
+          "text": "Use <ce98714>Poison Spell</c> to slow down <cf70d16>Enemy Queen</c>.",
+          "unit": "Poison",
+          "count": 1,
+          "at": [
+            28,
+            26
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true
+        },
+        {
+          "name": "TH9_Witch_Wait_For_Jump",
+          "forceType": true,
+          "waitFor": {
+            "data": 1000021,
+            "x": 24,
+            "y": 20
+          }
+        },
+        {
+          "name": "TH9_Witch_Jump",
+          "text": "Use <c85ff3b>Jump Spell</c> to reach closed compartments!",
+          "unit": "Jump",
+          "count": 1,
+          "at": [
+            22,
+            20
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH9_Witch_Wizard",
+          "text": "Deploy remaining <c54a0fe>Wizard</c> to help clean up remaining buildings.",
+          "duration": 15000
+        }
+      ],
+      "heroFlags": [
+        {
+          "hero": "Barbarian King",
+          "x": 24,
+          "y": 27
+        },
+        {
+          "hero": "Archer Queen",
+          "x": 27,
+          "y": 20
+        }
+      ]
+    },
+    {
+      "id": "CHALLENGE_TH9_BABYDQW",
+      "name": "Angry Babies",
+      "townHall": 9,
+      "stage": null,
+      "gold": 300000,
+      "elixir": 300000,
+      "dark": 3000,
+      "army": [
+        {
+          "unit": "Healer",
+          "kind": "troop",
+          "level": 4,
+          "count": 5
+        },
+        {
+          "unit": "Baby Dragon",
+          "kind": "troop",
+          "level": 2,
+          "count": 14
+        },
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 30,
+          "count": 1
+        },
+        {
+          "unit": "Archer Queen",
+          "kind": "hero",
+          "level": 30,
+          "count": 1
+        },
+        {
+          "unit": "Jump",
+          "kind": "spell",
+          "level": 2,
+          "count": 1
+        },
+        {
+          "unit": "Rage",
+          "kind": "spell",
+          "level": 5,
+          "count": 2
+        },
+        {
+          "unit": "Healing",
+          "kind": "spell",
+          "level": 6,
+          "count": 1
+        },
+        {
+          "unit": "Poison",
+          "kind": "spell",
+          "level": 3,
+          "count": 1
+        },
+        {
+          "unit": "Wall Breaker",
+          "kind": "troop",
+          "level": 5,
+          "count": 5
+        }
+      ],
+      "steps": [],
+      "heroFlags": []
+    },
+    {
+      "id": "CHALLENGE_TH10_BOBAT",
+      "name": "Bowling with Bats",
+      "townHall": 10,
+      "stage": 100,
+      "gold": 400000,
+      "elixir": 400000,
+      "dark": 4000,
+      "army": [
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 40,
+          "count": 1
+        },
+        {
+          "unit": "Archer Queen",
+          "kind": "hero",
+          "level": 40,
+          "count": 1
+        },
+        {
+          "unit": "PEKKA",
+          "kind": "troop",
+          "level": 6,
+          "count": 4
+        },
+        {
+          "unit": "Bowler",
+          "kind": "troop",
+          "level": 2,
+          "count": 11
+        },
+        {
+          "unit": "Healer",
+          "kind": "troop",
+          "level": 4,
+          "count": 5
+        },
+        {
+          "unit": "Wall Breaker",
+          "kind": "troop",
+          "level": 6,
+          "count": 2
+        },
+        {
+          "unit": "Wall Wrecker",
+          "kind": "troop",
+          "level": 3,
+          "count": 1
+        },
+        {
+          "unit": "Giant",
+          "kind": "troop",
+          "level": 9,
+          "count": 2,
+          "castle": true
+        },
+        {
+          "unit": "PEKKA",
+          "kind": "troop",
+          "level": 8,
+          "count": 1,
+          "castle": true
+        },
+        {
+          "unit": "Rage",
+          "kind": "spell",
+          "level": 5,
+          "count": 2
+        },
+        {
+          "unit": "Freeze",
+          "kind": "spell",
+          "level": 5,
+          "count": 3
+        },
+        {
+          "unit": "Bat Spell",
+          "kind": "spell",
+          "level": 3,
+          "count": 5
+        }
+      ],
+      "steps": [
+        {
+          "name": "TH10_Bobat_ArcherQueen",
+          "text": "Deploy <c9916c8>Archer Queen</c> to destroy two <cf70d16>Wizard Towers</c> to help protect your <c54a0fe>Bats</c> later on.",
+          "unit": "Archer Queen",
+          "count": 1,
+          "at": [
+            20,
+            47
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH10_Bobat_Healers",
+          "text": "Deploy <c54a0fe>Healers</c> to support the <c9916c8>Archer Queen</c>.",
+          "unit": "Healer",
+          "count": 5,
+          "at": [
+            20,
+            49
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "TH10_Bobat_Wait_For_Rage",
+          "forceType": true,
+          "waitFor": {
+            "data": 1000002,
+            "x": 35,
+            "y": 34
+          }
+        },
+        {
+          "name": "TH10_Bobat_Rage1",
+          "text": "Use <cf07bf8>Rage Spell</c> to boost your <c9916c8>Archer Queen</c> and <c54a0fe>Wall Breakers</c>.",
+          "unit": "Rage",
+          "count": 1,
+          "at": [
+            39,
+            35
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH10_Bobat_WallBreakers",
+          "text": "Break the Wall to reach <cf70d16>Wizard Tower</c>. <c54a0fe>Wall Breakers</c> deal more damage to Walls if they are under <cf07bf8>Rage Spell</c>!",
+          "unit": "Wall Breaker",
+          "count": 2,
+          "at": [
+            42,
+            36
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH10_Bobat_WallWrecker",
+          "text": "Use remaining Troops to clear remaining <cf70d16>Wizard Towers</c> and <cf70d16>Multi Inferno Tower</c>. Start with <c54a0fe>Wall Wrecker</c>.",
+          "unit": "Wall Wrecker",
+          "count": 1,
+          "at": [
+            7,
+            7
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "TH10_Bobat_BarbarianKing",
+          "text": "Deploy the <c9916c8>Barbarian King</c>.",
+          "unit": "Barbarian King",
+          "count": 1,
+          "at": [
+            7,
+            7
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH10_Bobat_PEKKAs",
+          "text": "Deploy <c54a0fe>P.E.K.K.As</c> to clear the way.",
+          "unit": "PEKKA",
+          "count": 2,
+          "at": [
+            11,
+            5
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH10_Bobat_Bowlers",
+          "text": "Deploy <c54a0fe>Bowlers</c> to support the attack.",
+          "unit": "Bowler",
+          "count": 5,
+          "at": [
+            6,
+            8
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH10_Bobat_Rage2",
+          "text": "Use <cf07bf8>Rage Spell</c> on the entrance so that most troops will benefit from it.",
+          "unit": "Rage",
+          "count": 1,
+          "at": [
+            16,
+            16
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH10_Bobat_Batwave",
+          "text": "Use <c9916c8>Bat Spells</c> to create a huge swarm of <c54a0fe>Bats</c> which quickly clears remaining defenses.",
+          "unit": "Bat Spell",
+          "count": 5,
+          "at": [
+            10,
+            49
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH10_Bobat_Freezes",
+          "text": "Use <c38eaff>Freeze Spell</c> on any air-targeting defenses to help the <c54a0fe>Bats</c>.",
+          "duration": 15000
+        }
+      ],
+      "heroFlags": [
+        {
+          "hero": "Barbarian King",
+          "x": 30,
+          "y": 21
+        },
+        {
+          "hero": "Archer Queen",
+          "x": 17,
+          "y": 24
+        }
+      ]
+    },
+    {
+      "id": "CHALLENGE_TH10_MINER",
+      "name": "Miner Mania",
+      "townHall": 10,
+      "stage": null,
+      "gold": 400000,
+      "elixir": 400000,
+      "dark": 4000,
+      "army": [
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 40,
+          "count": 1
+        },
+        {
+          "unit": "Archer Queen",
+          "kind": "hero",
+          "level": 40,
+          "count": 1
+        },
+        {
+          "unit": "Miner",
+          "kind": "troop",
+          "level": 3,
+          "count": 23
+        },
+        {
+          "unit": "Healer",
+          "kind": "troop",
+          "level": 4,
+          "count": 5
+        },
+        {
+          "unit": "Wall Breaker",
+          "kind": "troop",
+          "level": 6,
+          "count": 4
+        },
+        {
+          "unit": "Wizard",
+          "kind": "troop",
+          "level": 7,
+          "count": 6
+        },
+        {
+          "unit": "Healing",
+          "kind": "spell",
+          "level": 7,
+          "count": 4
+        },
+        {
+          "unit": "Rage",
+          "kind": "spell",
+          "level": 5,
+          "count": 1
+        },
+        {
+          "unit": "Poison",
+          "kind": "spell",
+          "level": 4,
+          "count": 1
+        }
+      ],
+      "steps": [],
+      "heroFlags": []
+    },
+    {
+      "id": "CHALLENGE_TH11_EDRAG",
+      "name": "Electro Surgery",
+      "townHall": 11,
+      "stage": 101,
+      "gold": 500000,
+      "elixir": 500000,
+      "dark": 5000,
+      "army": [
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 50,
+          "count": 1
+        },
+        {
+          "unit": "Archer Queen",
+          "kind": "hero",
+          "level": 50,
+          "count": 1
+        },
+        {
+          "unit": "Grand Warden",
+          "kind": "hero",
+          "level": 20,
+          "count": 1
+        },
+        {
+          "unit": "Battle Blimp",
+          "kind": "troop",
+          "level": 3,
+          "count": 1
+        },
+        {
+          "unit": "Electro Dragon",
+          "kind": "troop",
+          "level": 3,
+          "count": 1,
+          "castle": true
+        },
+        {
+          "unit": "Balloon",
+          "kind": "troop",
+          "level": 8,
+          "count": 1,
+          "castle": true
+        },
+        {
+          "unit": "Electro Dragon",
+          "kind": "troop",
+          "level": 2,
+          "count": 8
+        },
+        {
+          "unit": "Balloon",
+          "kind": "troop",
+          "level": 7,
+          "count": 4
+        },
+        {
+          "unit": "Rage",
+          "kind": "spell",
+          "level": 5,
+          "count": 3
+        },
+        {
+          "unit": "Haste",
+          "kind": "spell",
+          "level": 5,
+          "count": 1
+        },
+        {
+          "unit": "Clone",
+          "kind": "spell",
+          "level": 5,
+          "count": 2
+        }
+      ],
+      "steps": [
+        {
+          "name": "TH11_Edrag_FunnelEdrag1",
+          "text": "This base has severe weakness against <c54a0fe>Electro Dragons</c>. Deploy one to destroy <cf70d16>Air Defense</c> with chain lightning.",
+          "unit": "Electro Dragon",
+          "count": 1,
+          "at": [
+            37,
+            47
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "TH11_Edrag_Wait_For_Queen",
+          "forceType": true,
+          "waitFor": {
+            "data": 1000012,
+            "x": 34,
+            "y": 33
+          }
+        },
+        {
+          "name": "TH11_Edrag_ArcherQueen",
+          "text": "Deploy <c9916c8>Archer Queen</c> to complete the funnel.",
+          "unit": "Archer Queen",
+          "count": 1,
+          "at": [
+            28,
+            47
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "TH11_Edrag_Wait_For_Blimp",
+          "forceType": true,
+          "waitFor": {
+            "data": 1000011,
+            "x": 27,
+            "y": 35
+          }
+        },
+        {
+          "name": "TH11_Edrag_BattleBlimp",
+          "text": "Use <c54a0fe>Battle Blimp</c> to send <c54a0fe>Electro Dragon</c> to the core to destroy <cf70d16>Eagle Artillery</c>.",
+          "unit": "Battle Blimp",
+          "count": 1,
+          "at": [
+            19,
+            48
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH11_Edrag_Rage1",
+          "text": "Use <cf07bf8>Rage Spell</c> to increase power of the attack.",
+          "unit": "Rage",
+          "count": 1,
+          "at": [
+            25,
+            30
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Edrag_Clones",
+          "text": "Use <ca0c0fe>Clone Spells</c> to create more <c54a0fe>Balloons</c> in the core.",
+          "unit": "Clone",
+          "count": 2,
+          "at": [
+            25,
+            30
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Edrag_Deploy_Blimp",
+          "text": "Activate <c54a0fe>Battle Blimp</c> to deploy the Clan Castle troops which are inside.",
+          "unit": "Battle Blimp",
+          "pause": true,
+          "forceType": true,
+          "ability": true
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "TH11_Edrag_FunnelEdrag2",
+          "text": "Deploy one <c54a0fe>Electro Dragon</c> to clear the corner.",
+          "unit": "Electro Dragon",
+          "count": 1,
+          "at": [
+            8,
+            45
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_5000ms",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH11_Edrag_Edrags",
+          "text": "Deploy remaining <c54a0fe>Electro Dragons</c> in a line.",
+          "unit": "Electro Dragon",
+          "count": 1,
+          "at": [
+            5,
+            14
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH11_Edrag_GrandWarden",
+          "text": "Deploy <c9916c8>Grand Warden</c> to support <c54a0fe>Electro Dragons</c>. Remember to use air mode to avoid any ground traps!",
+          "unit": "Grand Warden",
+          "count": 1,
+          "at": [
+            3,
+            19
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH11_Edrag_Balloons",
+          "text": "Finally, deploy the <c54a0fe>Balloons</c>.",
+          "unit": "Balloon",
+          "count": 4,
+          "at": [
+            5,
+            19
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH11_Edrag_BarbarianKing",
+          "text": "Deploy the <c9916c8>Barbarian King</c>.",
+          "unit": "Barbarian King",
+          "count": 1,
+          "at": [
+            20,
+            5
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "TH11_Edrag_Rage2",
+          "text": "Using <cf07bf8>Rage Spells</c> will help you take down tough targets.",
+          "unit": "Rage",
+          "count": 1,
+          "at": [
+            17,
+            22
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "WardenAbility",
+          "text": "Activate your <c9916c8>Grand Warden Ability</c> to protect your troops when they need it!",
+          "unit": "Grand Warden",
+          "pause": true,
+          "ability": true
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "TH11_Edrag_Clean_Up",
+          "text": "Use remaining spells to help with the clean up.",
+          "duration": 15000
+        }
+      ],
+      "heroFlags": [
+        {
+          "hero": "Barbarian King",
+          "x": 32,
+          "y": 25
+        },
+        {
+          "hero": "Archer Queen",
+          "x": 25,
+          "y": 26
+        },
+        {
+          "hero": "Grand Warden",
+          "x": 28,
+          "y": 18
+        }
+      ]
+    },
+    {
+      "id": "CHALLENGE_TH11_LAVALOON",
+      "name": "Lava & More Loons",
+      "townHall": 11,
+      "stage": 102,
+      "gold": 500000,
+      "elixir": 500000,
+      "dark": 5000,
+      "army": [
+        {
+          "unit": "Balloon",
+          "kind": "troop",
+          "level": 7,
+          "count": 29
+        },
+        {
+          "unit": "Minion",
+          "kind": "troop",
+          "level": 7,
+          "count": 5
+        },
+        {
+          "unit": "Lava Hound",
+          "kind": "troop",
+          "level": 4,
+          "count": 3
+        },
+        {
+          "unit": "Rage",
+          "kind": "spell",
+          "level": 5,
+          "count": 2
+        },
+        {
+          "unit": "Haste",
+          "kind": "spell",
+          "level": 4,
+          "count": 4
+        },
+        {
+          "unit": "Poison",
+          "kind": "spell",
+          "level": 5,
+          "count": 1
+        },
+        {
+          "unit": "Archer Queen",
+          "kind": "hero",
+          "level": 50,
+          "count": 1
+        },
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 50,
+          "count": 1
+        },
+        {
+          "unit": "Grand Warden",
+          "kind": "hero",
+          "level": 20,
+          "count": 1
+        },
+        {
+          "unit": "Jump",
+          "kind": "spell",
+          "level": 3,
+          "count": 1
+        },
+        {
+          "unit": "Ice Golem",
+          "kind": "troop",
+          "level": 3,
+          "count": 1
+        },
+        {
+          "unit": "Stone Slammer",
+          "kind": "troop",
+          "level": 2,
+          "count": 1
+        },
+        {
+          "unit": "Balloon",
+          "kind": "troop",
+          "level": 7,
+          "count": 7,
+          "castle": true
+        }
+      ],
+      "steps": [
+        {
+          "name": "TH11_Lavaloon_Info_Eagle",
+          "text": "Start the attack by destroying <cf70d16>Eagle Artillery</c> before it starts shooting.",
+          "forceType": true,
+          "duration": 5000,
+          "show": {
+            "data": 1000031,
+            "x": 15,
+            "y": 15
+          }
+        },
+        {
+          "name": "TH11_Lavaloon_Info_Queen",
+          "text": "You also need a plan to deal with <cf70d16>Enemy Queen</c>.",
+          "forceType": true,
+          "duration": 5000
+        },
+        {
+          "name": "TH11_Lavaloon_Jump",
+          "text": "Use <c85ff3b>Jump Spell</c> so your <c9916c8>Archer Queen</c> can reach the targets!",
+          "unit": "Jump",
+          "count": 1,
+          "at": [
+            8,
+            12
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Lavaloon_IceGolem",
+          "text": "Deploy <c54a0fe>Ice Golem</c> to freeze most defensive buildings when it dies.",
+          "unit": "Ice Golem",
+          "count": 1,
+          "at": [
+            5,
+            7
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Lavaloon_BarbarianKing",
+          "text": "Deploy <c9916c8>Barbarian King</c>.",
+          "unit": "Barbarian King",
+          "count": 1,
+          "at": [
+            3,
+            9
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Lavaloon_ArcherQueen",
+          "text": "Deploy <c9916c8>Archer Queen</c>.",
+          "unit": "Archer Queen",
+          "count": 1,
+          "at": [
+            3,
+            11
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "TH11_Lavaloon_Wait_For_KingAbility",
+          "forceType": true,
+          "waitFor": {
+            "data": 1000011,
+            "x": 11,
+            "y": 11
+          }
+        },
+        {
+          "name": "TH11_Lavaloon_KingAbility",
+          "text": "Activate <c9916c8>Barbarian King Ability</c> before he dies.",
+          "unit": "Barbarian King",
+          "pause": true,
+          "forceType": true,
+          "ability": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Lavaloon_Poison",
+          "text": "Use <ce98714>Poison Spell</c> to slow down <cf70d16>Enemy Queen</c>.",
+          "unit": "Poison",
+          "count": 1,
+          "at": [
+            18,
+            13
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH11_Lavaloon_Haste1",
+          "text": "Balloons are slow. Use <cf07bf8>Haste Spells</c> to make them fast! Try to use multiple fingers.",
+          "unit": "Haste",
+          "count": 1,
+          "at": [
+            24,
+            8
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "slowdown": 25
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Lavaloon_Hounds1",
+          "text": "Start with <c54a0fe>Lava Hounds</c> to shield your <c54a0fe>Balloons</c>!",
+          "unit": "Lava Hound",
+          "count": 1,
+          "at": [
+            26,
+            4
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "slowdown": 50
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Lavaloon_Balloons1",
+          "text": "Deploy most of the <c54a0fe>Balloons</c>.",
+          "unit": "Balloon",
+          "count": 8,
+          "at": [
+            26,
+            4
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "slowdown": 50
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Lavaloon_GrandWarden",
+          "text": "Now deploy your <c9916c8>Grand Warden</c>. Use flight mode!",
+          "unit": "Grand Warden",
+          "count": 1,
+          "at": [
+            26,
+            4
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Lavaloon_StoneSlammer",
+          "text": "Deploy the <c54a0fe>Stone Slammer</c>. It protects your <c54a0fe>Balloons</c> and destroys defenses!",
+          "unit": "Stone Slammer",
+          "count": 1,
+          "at": [
+            40,
+            19
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Lavaloon_Balloons2",
+          "text": "Deploy some <c54a0fe>Balloons</c> to clear the area quickly.",
+          "unit": "Balloon",
+          "count": 5,
+          "at": [
+            40,
+            25
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Lavaloon_Hounds2",
+          "text": "Deploy one more <c54a0fe>Lava Hound</c>.",
+          "unit": "Lava Hound",
+          "count": 1,
+          "at": [
+            28,
+            40
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Lavaloon_Balloons3",
+          "text": "Deploy the remaining <c54a0fe>Balloons</c>.",
+          "unit": "Balloon",
+          "count": 4,
+          "at": [
+            23,
+            40
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "slowdown": 50
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Lavaloon_Rage",
+          "text": "Using <cf07bf8>Rage Spells</c> will help you take down tough targets.",
+          "unit": "Rage",
+          "count": 1,
+          "at": [
+            21,
+            18
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "slowdown": 25
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH11_Lavaloon_WardenAbility",
+          "text": "Use your <c9916c8>Grand Warden's</c> ability to make your <c54a0fe>Balloons</c> invulnerable!",
+          "unit": "Grand Warden",
+          "pause": true,
+          "ability": true
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "TH11_Lavaloon_Haste2",
+          "text": "Use your remaining <cf07bf8>Haste Spell</c> to help your <c54a0fe>Balloons</c> clean up!",
+          "unit": "Haste",
+          "forceType": true,
+          "duration": 10000
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH11_Lavaloon_Minions",
+          "text": "Use your <c54a0fe>Minions</c> to clean up what's left!",
+          "unit": "Minion",
+          "duration": 10000
+        }
+      ],
+      "heroFlags": [
+        {
+          "hero": "Barbarian King",
+          "x": 25,
+          "y": 28
+        },
+        {
+          "hero": "Archer Queen",
+          "x": 19,
+          "y": 15
+        },
+        {
+          "hero": "Grand Warden",
+          "x": 15,
+          "y": 19
+        }
+      ]
+    },
+    {
+      "id": "CHALLENGE_TH12_BOWIGI",
+      "name": "Bowling with Witches",
+      "townHall": 12,
+      "stage": 103,
+      "gold": 600000,
+      "elixir": 600000,
+      "dark": 6000,
+      "army": [
+        {
+          "unit": "Giant",
+          "kind": "troop",
+          "level": 9,
+          "count": 5
+        },
+        {
+          "unit": "Wall Breaker",
+          "kind": "troop",
+          "level": 8,
+          "count": 7
+        },
+        {
+          "unit": "Balloon",
+          "kind": "troop",
+          "level": 8,
+          "count": 3
+        },
+        {
+          "unit": "Wizard",
+          "kind": "troop",
+          "level": 9,
+          "count": 5
+        },
+        {
+          "unit": "Healer",
+          "kind": "troop",
+          "level": 5,
+          "count": 5
+        },
+        {
+          "unit": "Baby Dragon",
+          "kind": "troop",
+          "level": 6,
+          "count": 1
+        },
+        {
+          "unit": "Witch",
+          "kind": "troop",
+          "level": 4,
+          "count": 3
+        },
+        {
+          "unit": "Bowler",
+          "kind": "troop",
+          "level": 4,
+          "count": 15
+        },
+        {
+          "unit": "Wall Wrecker",
+          "kind": "troop",
+          "level": 3,
+          "count": 1
+        },
+        {
+          "unit": "Giant",
+          "kind": "troop",
+          "level": 9,
+          "count": 8,
+          "castle": true
+        },
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 60,
+          "count": 1
+        },
+        {
+          "unit": "Archer Queen",
+          "kind": "hero",
+          "level": 60,
+          "count": 1
+        },
+        {
+          "unit": "Grand Warden",
+          "kind": "hero",
+          "level": 30,
+          "count": 1
+        },
+        {
+          "unit": "Rage",
+          "kind": "spell",
+          "level": 5,
+          "count": 3
+        },
+        {
+          "unit": "Jump",
+          "kind": "spell",
+          "level": 3,
+          "count": 1
+        },
+        {
+          "unit": "Freeze",
+          "kind": "spell",
+          "level": 7,
+          "count": 2
+        },
+        {
+          "unit": "Poison",
+          "kind": "spell",
+          "level": 5,
+          "count": 1
+        }
+      ],
+      "steps": [
+        {
+          "name": "TH12_Bowigi_Balloon1",
+          "text": "<c54a0fe>Balloons</c> are great for clearing out traps that could hurt your <c54a0fe>Healers</c>. Deploy one now!",
+          "unit": "Balloon",
+          "count": 1,
+          "at": [
+            5,
+            33
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH12_Bowigi_Healers",
+          "text": "To start a Queen Walk, deploy your <c54a0fe>Healers</c> in the corner.",
+          "unit": "Healer",
+          "count": 5,
+          "at": [
+            0,
+            40
+          ],
+          "radius": 1.5,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH12_Bowigi_ArcherQueen",
+          "text": "Deploy your <c9916c8>Archer Queen</c> in front of your <c54a0fe>Healers</c>.",
+          "unit": "Archer Queen",
+          "count": 1,
+          "at": [
+            5,
+            35
+          ],
+          "radius": 1.5,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH12_Bowigi_Rage1",
+          "text": "Use a <cf07bf8>Rage Spell</c> to put your <c54a0fe>Healers</c> into overdrive.",
+          "unit": "Rage",
+          "count": 1,
+          "at": [
+            8,
+            35
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "forceLocation": true,
+          "exact": true
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH12_Bowigi_Giants",
+          "text": "Deploy <c54a0fe>Giants</c> in the middle and bottom.",
+          "unit": "Giant",
+          "count": 3,
+          "at": [
+            23,
+            39
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "slowdown": 25
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH12_Bowigi_WallWrecker",
+          "text": "Follow up with <c54a0fe>Wall Wrecker</c>, <c9916c8>Barbarian King</c> and <c9916c8>Grand Warden</c>.",
+          "unit": "Wall Wrecker",
+          "count": 1,
+          "at": [
+            23,
+            39
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "TH12_Bowigi_GrandWarden",
+          "text": "Follow up with <c54a0fe>Wall Wrecker</c>, <c9916c8>Barbarian King</c> and <c9916c8>Grand Warden</c>.",
+          "unit": "Grand Warden",
+          "count": 1,
+          "at": [
+            23,
+            39
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "TH12_Bowigi_BarbarianKing",
+          "text": "Follow up with <c54a0fe>Wall Wrecker</c>, <c9916c8>Barbarian King</c> and <c9916c8>Grand Warden</c>.",
+          "unit": "Barbarian King",
+          "count": 1,
+          "at": [
+            36,
+            36
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH12_Bowigi_Witches",
+          "text": "<c54a0fe>Witches</c> provide cover for your other troops. Deploy them with your main group.",
+          "unit": "Witch",
+          "count": 3,
+          "at": [
+            23,
+            40
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH12_Bowigi_Bowlers",
+          "text": "<c54a0fe>Bowlers</c> are your main damage dealers. Deploy them middle and bottom!",
+          "unit": "Bowler",
+          "count": 10,
+          "at": [
+            23,
+            39
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true,
+          "slowdown": 25
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH12_Bowigi_WallBreakers",
+          "text": "Use <c54a0fe>Wall Breakers</c> at the bottom to open up an avenue for your <c54a0fe>Bowlers</c>!",
+          "unit": "Wall Breaker",
+          "count": 3,
+          "at": [
+            40,
+            36
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH12_Bowigi_Freeze1",
+          "text": "Use <c38eaff>Freeze Spell</c> on the <cf70d16>Inferno Tower</c> before it takes out your <c54a0fe>Wall Wrecker</c>!",
+          "unit": "Freeze",
+          "count": 1,
+          "at": [
+            23,
+            29
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH12_Bowigi_Freeze2",
+          "text": "Now use <c38eaff>Freeze Spell</c> on the second <cf70d16>Inferno Tower</c>!",
+          "unit": "Freeze",
+          "count": 1,
+          "at": [
+            22,
+            23
+          ],
+          "radius": 2.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_1000ms",
+          "forceType": true,
+          "duration": 1000
+        },
+        {
+          "name": "TH12_Bowigi_Rage2",
+          "text": "Use <cf07bf8>Rage Spell</c> to help your army to push through the middle and bottom!",
+          "unit": "Rage",
+          "count": 1,
+          "at": [
+            23,
+            27
+          ],
+          "radius": 5.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH12_Bowigi_Jump",
+          "text": "Use <c85ff3b>Jump Spell</c> to reach closed compartments!",
+          "unit": "Jump",
+          "count": 1,
+          "at": [
+            26,
+            16
+          ],
+          "radius": 4.0,
+          "pause": true,
+          "forceType": true
+        },
+        {
+          "name": "Wait_2500ms",
+          "forceType": true,
+          "duration": 2500
+        },
+        {
+          "name": "TH12_Bowigi_KingAbility",
+          "text": "<c9916c8>Barbarian King's</c> hitpoints are dropping. Activate his <c9916c8>Ability</c>!",
+          "unit": "Barbarian King",
+          "pause": true,
+          "ability": true
+        },
+        {
+          "name": "TH12_Bowigi_WaitForWarden",
+          "waitFor": {
+            "data": 1000001,
+            "x": 22,
+            "y": 19
+          }
+        },
+        {
+          "name": "WardenAbility",
+          "text": "Activate your <c9916c8>Grand Warden Ability</c> to protect your troops when they need it!",
+          "unit": "Grand Warden",
+          "pause": true,
+          "ability": true
+        },
+        {
+          "name": "Wait_7500ms",
+          "forceType": true,
+          "duration": 7500
+        },
+        {
+          "name": "TH12_Bowigi_CleanUp",
+          "text": "Deploy the remaining troops to help with the clean up.",
+          "duration": 10000
+        }
+      ],
+      "heroFlags": [
+        {
+          "hero": "Barbarian King",
+          "x": 11,
+          "y": 19
+        },
+        {
+          "hero": "Archer Queen",
+          "x": 18,
+          "y": 17
+        },
+        {
+          "hero": "Grand Warden",
+          "x": 29,
+          "y": 18
+        }
+      ]
+    },
+    {
+      "id": "CHALLENGE_TH12_DRAGBAT",
+      "name": "Flying Circus",
+      "townHall": 12,
+      "stage": null,
+      "gold": 600000,
+      "elixir": 600000,
+      "dark": 6000,
+      "army": [
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 65,
+          "count": 1
+        },
+        {
+          "unit": "Archer Queen",
+          "kind": "hero",
+          "level": 65,
+          "count": 1
+        },
+        {
+          "unit": "Grand Warden",
+          "kind": "hero",
+          "level": 40,
+          "count": 1
+        },
+        {
+          "unit": "Dragon",
+          "kind": "troop",
+          "level": 7,
+          "count": 10
+        },
+        {
+          "unit": "Balloon",
+          "kind": "troop",
+          "level": 8,
+          "count": 10
+        },
+        {
+          "unit": "Ice Golem",
+          "kind": "troop",
+          "level": 5,
+          "count": 2
+        },
+        {
+          "unit": "Bat Spell",
+          "kind": "spell",
+          "level": 5,
+          "count": 9
+        },
+        {
+          "unit": "Freeze",
+          "kind": "spell",
+          "level": 7,
+          "count": 2
+        },
+        {
+          "unit": "Rage",
+          "kind": "spell",
+          "level": 6,
+          "count": 1
+        },
+        {
+          "unit": "Stone Slammer",
+          "kind": "troop",
+          "level": 3,
+          "count": 1
+        },
+        {
+          "unit": "Balloon",
+          "kind": "troop",
+          "level": 8,
+          "count": 8,
+          "castle": true
+        }
+      ],
+      "steps": [],
+      "heroFlags": []
+    },
+    {
+      "id": "CHALLENGE_TH12_YETI",
+      "name": "Yeti Smash",
+      "townHall": 12,
+      "stage": null,
+      "gold": 600000,
+      "elixir": 600000,
+      "dark": 6000,
+      "army": [
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 65,
+          "count": 1
+        },
+        {
+          "unit": "Archer Queen",
+          "kind": "hero",
+          "level": 65,
+          "count": 1
+        },
+        {
+          "unit": "Grand Warden",
+          "kind": "hero",
+          "level": 40,
+          "count": 1
+        },
+        {
+          "unit": "Healer",
+          "kind": "troop",
+          "level": 5,
+          "count": 5
+        },
+        {
+          "unit": "PEKKA",
+          "kind": "troop",
+          "level": 8,
+          "count": 4
+        },
+        {
+          "unit": "Yeti",
+          "kind": "troop",
+          "level": 2,
+          "count": 5
+        },
+        {
+          "unit": "Wizard",
+          "kind": "troop",
+          "level": 9,
+          "count": 5
+        },
+        {
+          "unit": "Stone Slammer",
+          "kind": "troop",
+          "level": 3,
+          "count": 1
+        },
+        {
+          "unit": "Balloon",
+          "kind": "troop",
+          "level": 8,
+          "count": 8,
+          "castle": true
+        },
+        {
+          "unit": "Earthquake",
+          "kind": "spell",
+          "level": 5,
+          "count": 4
+        },
+        {
+          "unit": "Jump",
+          "kind": "spell",
+          "level": 3,
+          "count": 1
+        },
+        {
+          "unit": "Poison",
+          "kind": "spell",
+          "level": 6,
+          "count": 1
+        },
+        {
+          "unit": "Rage",
+          "kind": "spell",
+          "level": 6,
+          "count": 2
+        },
+        {
+          "unit": "Haste",
+          "kind": "spell",
+          "level": 5,
+          "count": 1
+        },
+        {
+          "unit": "Freeze",
+          "kind": "spell",
+          "level": 7,
+          "count": 1
+        }
+      ],
+      "steps": [],
+      "heroFlags": []
+    },
+    {
+      "id": "CHALLENGE_TH13_HYBRID",
+      "name": "Bane of the Ring",
+      "townHall": 13,
+      "stage": null,
+      "gold": 700000,
+      "elixir": 700000,
+      "dark": 7000,
+      "army": [
+        {
+          "unit": "Barbarian King",
+          "kind": "hero",
+          "level": 70,
+          "count": 1
+        },
+        {
+          "unit": "Archer Queen",
+          "kind": "hero",
+          "level": 70,
+          "count": 1
+        },
+        {
+          "unit": "Grand Warden",
+          "kind": "hero",
+          "level": 50,
+          "count": 1
+        },
+        {
+          "unit": "Royal Champion",
+          "kind": "hero",
+          "level": 20,
+          "count": 1
+        },
+        {
+          "unit": "Wall Breaker",
+          "kind": "troop",
+          "level": 9,
+          "count": 4
+        },
+        {
+          "unit": "Healer",
+          "kind": "troop",
+          "level": 6,
+          "count": 5
+        },
+        {
+          "unit": "Electro Dragon",
+          "kind": "troop",
+          "level": 4,
+          "count": 1
+        },
+        {
+          "unit": "Hog Rider",
+          "kind": "troop",
+          "level": 10,
+          "count": 10
+        },
+        {
+          "unit": "Miner",
+          "kind": "troop",
+          "level": 7,
+          "count": 11
+        },
+        {
+          "unit": "Valkyrie",
+          "kind": "troop",
+          "level": 8,
+          "count": 2
+        },
+        {
+          "unit": "Baby Dragon",
+          "kind": "troop",
+          "level": 6,
+          "count": 1
+        },
+        {
+          "unit": "Golem",
+          "kind": "troop",
+          "level": 9,
+          "count": 1
+        },
+        {
+          "unit": "Siege Barracks",
+          "kind": "troop",
+          "level": 4,
+          "count": 1
+        },
+        {
+          "unit": "Hog Rider",
+          "kind": "troop",
+          "level": 10,
+          "count": 9,
+          "castle": true
+        },
+        {
+          "unit": "Poison",
+          "kind": "spell",
+          "level": 7,
+          "count": 1
+        },
+        {
+          "unit": "Freeze",
+          "kind": "spell",
+          "level": 7,
+          "count": 2
+        },
+        {
+          "unit": "Rage",
+          "kind": "spell",
+          "level": 6,
+          "count": 3
+        },
+        {
+          "unit": "Healing",
+          "kind": "spell",
+          "level": 8,
+          "count": 2
+        }
+      ],
+      "steps": [],
+      "heroFlags": []
+    }
+  ]
+}

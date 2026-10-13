@@ -1,0 +1,243 @@
+{
+ "title": "Barracks and Dark Barracks unlocks",
+ "page": "Barracks; Dark Barracks",
+ "url": "https://clashofclans.fandom.com/wiki/Barracks",
+ "revid": 625112,
+ "retrieved": "2026-09-15",
+ "clientName": "buildings.Barracks / Dark Barracks",
+ "clientVersion": "18.400.21",
+ "category": "mechanic",
+ "darkBarracksUrl": "https://clashofclans.fandom.com/wiki/Dark_Barracks",
+ "darkBarracksRevid": 623607,
+ "tables": {
+  "Barracks": {
+   "revid": 625112,
+   "rows": [
+    {
+     "level": 1,
+     "unit": "Barbarian",
+     "townHallText": "1",
+     "clientTownHall": 1
+    },
+    {
+     "level": 2,
+     "unit": "Archer",
+     "townHallText": "1*",
+     "clientTownHall": 2
+    },
+    {
+     "level": 3,
+     "unit": "Giant",
+     "townHallText": "1*",
+     "clientTownHall": 2
+    },
+    {
+     "level": 4,
+     "unit": "Goblin",
+     "townHallText": "2",
+     "clientTownHall": 2
+    },
+    {
+     "level": 5,
+     "unit": "Wall Breaker",
+     "townHallText": "3",
+     "clientTownHall": 3
+    },
+    {
+     "level": 6,
+     "unit": "Balloon",
+     "townHallText": "4",
+     "clientTownHall": 4
+    },
+    {
+     "level": 7,
+     "unit": "Wizard",
+     "townHallText": "5",
+     "clientTownHall": 5
+    },
+    {
+     "level": 8,
+     "unit": "Healer",
+     "townHallText": "6",
+     "clientTownHall": 6
+    },
+    {
+     "level": 9,
+     "unit": "Dragon",
+     "townHallText": "7",
+     "clientTownHall": 7
+    },
+    {
+     "level": 10,
+     "unit": "P.E.K.K.A",
+     "townHallText": "8",
+     "clientTownHall": 8
+    },
+    {
+     "level": 11,
+     "unit": "Baby Dragon",
+     "townHallText": "9",
+     "clientTownHall": 9
+    },
+    {
+     "level": 12,
+     "unit": "Miner",
+     "townHallText": "10",
+     "clientTownHall": 10
+    },
+    {
+     "level": 13,
+     "unit": "Electro Dragon",
+     "townHallText": "11",
+     "clientTownHall": 11
+    },
+    {
+     "level": 14,
+     "unit": "Yeti",
+     "townHallText": "12",
+     "clientTownHall": 12
+    },
+    {
+     "level": 15,
+     "unit": "Dragon Rider",
+     "townHallText": "13",
+     "clientTownHall": 13
+    },
+    {
+     "level": 16,
+     "unit": "Electro Titan",
+     "townHallText": "14",
+     "clientTownHall": 14
+    },
+    {
+     "level": 17,
+     "unit": "Root Rider",
+     "townHallText": "15",
+     "clientTownHall": 15
+    },
+    {
+     "level": 18,
+     "unit": "Thrower",
+     "townHallText": "16",
+     "clientTownHall": 16
+    },
+    {
+     "level": 19,
+     "unit": "Meteor Golem",
+     "townHallText": "17",
+     "clientTownHall": 17
+    }
+   ]
+  },
+  "Dark Barracks": {
+   "revid": 623607,
+   "rows": [
+    {
+     "level": 1,
+     "unit": "Minion",
+     "townHallText": "7",
+     "clientTownHall": 7
+    },
+    {
+     "level": 2,
+     "unit": "Hog Rider",
+     "townHallText": "7",
+     "clientTownHall": 7
+    },
+    {
+     "level": 3,
+     "unit": "Valkyrie",
+     "townHallText": "8",
+     "clientTownHall": 8
+    },
+    {
+     "level": 4,
+     "unit": "Golem",
+     "townHallText": "8",
+     "clientTownHall": 8
+    },
+    {
+     "level": 5,
+     "unit": "Witch",
+     "townHallText": "9",
+     "clientTownHall": 9
+    },
+    {
+     "level": 6,
+     "unit": "Lava Hound",
+     "townHallText": "9",
+     "clientTownHall": 9
+    },
+    {
+     "level": 7,
+     "unit": "Bowler",
+     "townHallText": "10",
+     "clientTownHall": 10
+    },
+    {
+     "level": 8,
+     "unit": "Ice Golem",
+     "townHallText": "11",
+     "clientTownHall": 11
+    },
+    {
+     "level": 9,
+     "unit": "Headhunter",
+     "townHallText": "12",
+     "clientTownHall": 12
+    },
+    {
+     "level": 10,
+     "unit": "Apprentice Warden",
+     "townHallText": "13",
+     "clientTownHall": 13
+    },
+    {
+     "level": 11,
+     "unit": "Druid",
+     "townHallText": "14",
+     "clientTownHall": 14
+    },
+    {
+     "level": 12,
+     "unit": "Furnace",
+     "townHallText": "15",
+     "clientTownHall": 15
+    },
+    {
+     "level": 13,
+     "unit": "Ruin Witch",
+     "townHallText": "16",
+     "clientTownHall": 16
+    }
+   ]
+  }
+ },
+ "comparison": {
+  "checked": 64,
+  "matched": 62
+ },
+ "mismatches": [
+  {
+   "field": "Barracks townHall",
+   "level": 2,
+   "wiki": "1*",
+   "client": 2,
+   "note": "wiki footnote: files allow it at TH1 but not possible before TH2"
+  },
+  {
+   "field": "Barracks townHall",
+   "level": 3,
+   "wiki": "1*",
+   "client": 2,
+   "note": "wiki footnote: files allow it at TH1 but not possible before TH2"
+  },
+  {
+   "field": "troop page text",
+   "level": 7,
+   "wiki": "Wizard page: Barracks 7 requires Town Hall 6",
+   "client": 5,
+   "note": "Barracks page agrees with the client (5)"
+  }
+ ]
+}

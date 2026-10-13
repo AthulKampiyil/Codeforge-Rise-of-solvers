@@ -1,0 +1,754 @@
+{
+  "clientVersion": "18.400.21",
+  "sources": {
+    "csv/animations.csv": "b0be152c98d06ccd0689320acfa19b07e04dd2a07fc6a1253558592f67bf29d8",
+    "logic/characters.csv": "5c3acc5b46ff9e7978f406b540264e65c93a846b69d03cd43326a9853703cb89",
+    "sc/characters.sc": "0e23bd3745176fe7db3d61e490d9da07c63a42e95462f514d6eac696314c3798",
+    "sc/characters_2.sctx": "8b26f89c67ad4e0d7234caf65253962b92e6a7d8b90389eff7278bd66515bdad",
+    "sc/characters_8.sctx": "867a17465a3786f648fd35b5d3d4aca3ad18bbd1bf55fb828ad75dfe07d512f3",
+    "sc/chr_air_skeleton.sc": "1a134e5c34cadb741dc1c66cc3566fd19ce0c5e7fc670915e016af6e62c34763",
+    "sc/chr_air_skeleton_0.sctx": "66d96704f339b69f53107fa4377c745b2967226da58281f141b506582f7693b7",
+    "sc/chr_bat.sc": "c80a14ba67ac6c7b8c25966b0e229efc07903da980713d9eab16e744761d3990",
+    "sc/chr_bat_0.sctx": "8f9b81972a2a5eb8c90c91cea9973f9e8ab73994cdec0544a4bac39e81ab2676",
+    "sc/chr_battle_blimp.sc": "62f18a70d56c1256637d00fb485bac95922ec1666bc0a50d3e8ad2bc647cc508",
+    "sc/chr_battle_blimp_0.sctx": "04ed6dfb7558d1860f13f60801f5d1004b13a4bc116e87a5787b2d5239c71c38",
+    "sc/chr_druid_bear.sc": "6884a8dbabcbb744bb45e23168af7a3c342a306ce553448671e6b35ea081f49d",
+    "sc/chr_druid_bear_0.sctx": "3bb2cc6c714ca2ccd6a8615d4991d418cf1cfe06716baa7dd48818e78c482876",
+    "sc/chr_elite_barbarian.sc": "4985f5d2ef9b51f6826a5557fd838b549f2d5d40f3ac5932e933dc7b5e5c9c49",
+    "sc/chr_elite_barbarian_0.sctx": "eafa2366edc1f0f648917ae6b6d9273eac62599352c64c575cec7e2d324e0b39",
+    "sc/chr_elite_giant.sc": "2ee24a3433b1a144ef1b03e2130b27f49eb4118e2e44d3b9c34ac470bce0ddde",
+    "sc/chr_elite_giant_0.sctx": "d11c7b555069aebacec269c42c211b98508fa45fd78b170e4b99054d1a6edfa3",
+    "sc/chr_furnace.sc": "85d6cb909e0ce8abc7eb7d7e984497778078a975c49d639ec0c49402c767a6e9",
+    "sc/chr_furnace_0.sctx": "7db3fc8e8a56daa224d8692c24112388df3e3bb95edbd2bfca3da893a2d54ebc",
+    "sc/chr_golem.sc": "0e2fb6935e7cee3a2dcd36ccd0d3a5e74ee618978fef71e94d732815f4819abc",
+    "sc/chr_golem_0.sctx": "e9ea7073b3a88336d6ca0f719d06be487e372e55115fe256d622f0e595703c40",
+    "sc/chr_hasty_balloon.sc": "d533f0cd6ed49245b69d828232f818a69dde5293351c0f0179cd4fcdc07896e7",
+    "sc/chr_hasty_balloon_0.sctx": "719678b503327a297e43137168d12e879653c1f6f9f4eae8cbc46aa5c28f98cc",
+    "sc/chr_ice_hound.sc": "f200ba56281cc90184cbb6b0924a7cbdc8b892669ad9761e57dd24103e72342f",
+    "sc/chr_ice_hound_0.sctx": "0f700bcbc74f7d52b0af5aac262ae19faa126e3a108378a50f45143150e6ad27",
+    "sc/chr_ice_hound_1.sctx": "ac01518415c053d9d7993558214595db213c40ab2bbd6b420eca140bab86488c",
+    "sc/chr_lava_hound.sc": "ddc9037df98e63dfa6b2743bd3a4349b027aec50f8ac69408e6b16c3f6d3d9d4",
+    "sc/chr_lava_hound_1.sctx": "a401a14aa108dd0274961d70ae8f542e64b3090f74d1600165095891eae83652",
+    "sc/chr_lavaloon.sc": "0e3f3b3b972d59051e14a141d1cb21ee184fc04a074cd5a3f7467681c38eea6b",
+    "sc/chr_lavaloon_0.sctx": "245e3e92833a9d1b63580ba352a497a22a40b5845c9c2bbc6f440cd000277d1e",
+    "sc/chr_minion_bouncers.sc": "44f3b7a394c592943a868cad13f572b0579aa0fefaa010c33f23ba3684648ccd",
+    "sc/chr_minion_bouncers_0.sctx": "7303ad9c1c108c701709183413ac583327f18813cd5f88576f5400b78e4967a4",
+    "sc/chr_rubble_knight.sc": "d198f0dfc0b3298031fe4eafd6fe7423a41cfe934018e39a4631f59197ddb837",
+    "sc/chr_siege_machine_catapult.sc": "bb75ca42f0674f7b898d1e60c0fe26ee69b35d845c1cf741b3b6f742474d4cd7",
+    "sc/chr_siege_machine_catapult_0.sctx": "fea0e2272061222359d0411875084dbd97f332988e30bb145f95a1c9887b0abc",
+    "sc/chr_siege_machine_clan_carrier.sc": "8e9406a4fb6a2786fd2dfca45a994c5c953c0ad03e3a5b433a2a1b389e667c95",
+    "sc/chr_siege_machine_clan_carrier_0.sctx": "8c9f3d61e04d6fa7a7644c7c602a838cdf12d7cfcac173bcaae8c57dab663b84",
+    "sc/chr_siege_machine_command_tower.sc": "166504ed194a67ee0eabe4f1d8a92805038cedae9575b9c48e11c83a31ef8e93",
+    "sc/chr_siege_machine_command_tower_0.sctx": "85b25348d5c3afde03d1bc3b04ab2391bb225e31e904d59b38bd7127e0d332d5",
+    "sc/chr_siege_machine_drill.sc": "06c133373fdb34ea2f2f2da2cb900c3e90769b75de26183dc3384b0901d8596f",
+    "sc/chr_siege_machine_drill_0.sctx": "6f5166d7b5aec226b4a89fc7b92e1b5278e27ca538f00fb6c437fea348f9d2c1",
+    "sc/chr_siege_machine_log_launcher.sc": "f2d397f1d6c19d4235aff59dd3fe7551eb495895b18fe9f9b913682a5a99a8a8",
+    "sc/chr_siege_machine_log_launcher_0.sctx": "8b59e0c46e9a25d7d59ba04e713ed9c836eb9ca0d7d7576aac8730275161b2a6",
+    "sc/chr_siege_machine_ram.sc": "54164de8e38a81cf495bc3600e6c1e456f4e7b1f0422fea3de1a866ee9866a2a",
+    "sc/chr_siege_machine_ram_0.sctx": "c843562f8004b2abd2e587374d3a92a5a936c7ad095f3232b0f6d46cfec734fe",
+    "sc/chr_skeleton.sc": "08ad67f9ba5d5d89f97883e05e1c0b423d8cbcb6e7f8031a0a3e7b70a0bae268",
+    "sc/chr_skeleton_0.sctx": "96ee254c9d9f6735c29b90ddb403d015999dcc36f063b66fdd3001a7a37d21c5",
+    "sc/chr_skeleton_1.sctx": "be8c000338c47c9ffd224b35f379c9c80f97eaf87268fac06f050d9db6d0eb24",
+    "sc/chr_snake_barrel.sc": "7faf0f803da7ca2f0da8eae55ab85b7fe88ee4e1e51372ed4ce2bc68718dc8b1",
+    "sc/chr_snake_barrel_0.sctx": "fc4867ae5c3b96a54dd324944d28046f21db6b268d2fcccadd0d8ad39e4ab70d",
+    "sc/chr_sneaky_goblin.sc": "2e92dfbad314cda725e81f1ddc223ca45f7399d8542e0d3021f5408358396102",
+    "sc/chr_sneaky_goblin_0.sctx": "63a0c1129e3ede45c083f0c27605549960a7ec008de551eaa3e28ec661923b72",
+    "sc/chr_split_golem.sc": "51f3a030648f1377570079cb45aac31f9f92d64087152c2ca7869c57079c7270",
+    "sc/chr_split_golem_0.sctx": "faa7790c4c9d8aee154962dd0d262977122b75c2437f3bc1531bab5d9482a045",
+    "sc/chr_stone_slammer.sc": "a4592d5b3e9a968b1218864581a5059d4e317550f68bb6eafa67329181472e1c",
+    "sc/chr_stone_slammer_0.sctx": "a76580bb6c6af445fe56dfbc719e7e9dd271931b397514137b2ef28325415fd1",
+    "sc/chr_super_archer.sc": "182b414983d179bb23e7dce372daded2c413327fcb142d33a897aa184673abe0",
+    "sc/chr_super_archer_0.sctx": "d741c2494029e633d0b651e0a2a1388acd5737eb2b04e3713411e9fe8cada411",
+    "sc/chr_super_baby_dragon.sc": "36a2357e634a8a42b3eb883067d3d70d09528bb17efc502b747c3a5757f5bd6e",
+    "sc/chr_super_baby_dragon_0.sctx": "6361ab9add5a97122f4b70b2a9fc37b1a93d5c52299f12e203eef610a8bc439f",
+    "sc/chr_super_bowler.sc": "64afac0a6c0e970dd94df18c068115f02a2c0a31614119d2fd7d10341f8049e7",
+    "sc/chr_super_bowler_0.sctx": "c9659306b7d7bd61ea1c06143a83f95dc8a22a66daf0470c30c23dbbfdd2a0b2",
+    "sc/chr_super_dragon.sc": "f4eea4166f08f139c816ce6c790ab3d224490267efc6cbd3ce0854cd73410757",
+    "sc/chr_super_dragon_0.sctx": "f1749baa12b1cbcc143d348fb2f5546b13ce6d20c750e3cc40eec7df999aa686",
+    "sc/chr_super_hog_rider.sc": "b90e9be571722c4ae74c4ddb5b65d5dd3e799b643f2faed19d29fb68eed8d0d3",
+    "sc/chr_super_hog_rider_0.sctx": "d2de674b492917252c0f6b7426bce53610f826d89a0e37d87bb327154cd7caa5",
+    "sc/chr_super_miner.sc": "db86c021d1d29e9921ce6303bb98232ce49468b8715aff0831abde19eb4fa38f",
+    "sc/chr_super_miner_0.sctx": "4ff67be1878e44a13cc3f2b91da67c8da59d00fc6859ec2f542b4487adca77ae",
+    "sc/chr_super_minion.sc": "b8874ddd6fb3228bad6cd8a3e5eb28fcbabc00b6a1916b899b59f6b7adf97e13",
+    "sc/chr_super_minion_0.sctx": "35dbcd6ea7a48eeba8a97c3c7b01a9d5f15775a3b0639a53eb0af155ee410148",
+    "sc/chr_super_valkyrie.sc": "2f8846ea3dab8e4f41467eb4c4e5904cc7ca1c76a089cd1774be5a6313a6ef47",
+    "sc/chr_super_valkyrie_0.sctx": "ec3d614bc88de44b5df3fd48ed098be54f0fb898b6c6b317798646d644728696",
+    "sc/chr_super_wallbreaker.sc": "58325ab56154b895e0b4026f840137567389609c4d73b161e5851dd7709805f3",
+    "sc/chr_super_wallbreaker_0.sctx": "7ca735dd2b871d0fab498fd9f6b119fe7585cecb8c59008055c06cb0b41b0830",
+    "sc/chr_super_witch.sc": "523f7864a1c0d076a1d6bd304a745be0efc8daa9b9878ae7f2d491d6c217e596",
+    "sc/chr_super_witch_0.sctx": "d67c2245a020c3c8edcaeb3e0121227ee331a1f9b0d0a760678ae9b226df531c",
+    "sc/chr_super_witch_1.sctx": "63dec33584f60fdffacb071bdcdd78e89682c21ca41fcf36dcf2e315dd4fdb44",
+    "sc/chr_super_wizard.sc": "e6ace174c08c1b8c135f3eb22eeb542b12754a6c7bf64ec0e16c0e33cc9a1e95",
+    "sc/chr_super_wizard_0.sctx": "8f528c348ace019d82f77c3ba92327286b74909b0968702eac0568b9a9c26c0a",
+    "sc/chr_super_yeti.sc": "d40aca5b21254ece54a44708dca3da4faf0207068a1f854b50c46cb8e8030203",
+    "sc/chr_super_yeti_0.sctx": "e7c1abf8e0832fff701899ce5b060333e3ec0df6df086722949364cb7e784746",
+    "sc/chr_worker.sc": "b2e3e50390a1994fa6dec0a490392591e584aec81b49d3a1006b41e184a34cab",
+    "sc/chr_worker_0.sctx": "6f01598f31076c26bdee9554497b45d97f5620e44d51bb3eb5d10e3b4756e0d7",
+    "sc/chr_yeti.sc": "601a12b66bc8d66102e57f4f0d027f131a751a996efca3ce611e5a0efd51637f",
+    "sc/chr_yeti_0.sctx": "337a4897ff7e1a6f8ac59fab730db2e32aca2a459f8864e857bfc6b62bc10ff2",
+    "sc/chr_yeti_1.sctx": "82718ffbb0b50130bf28c9eee7057102e20ee0b8e9cf17b3dbca4078b11a6194",
+    "sc/vfx_spells.sc": "01e6556059ed1a80dda2df6366ad7dcf6305bf7c7ebccaa2128843e534c100e7",
+    "sc/vfx_spells_3.sctx": "6379872091cf1d7d61425c79514de9234dbe059386c5033af5bda5b2fbf77e19"
+  },
+  "units": {
+    "golemite": {
+      "path": "assets/troops-native/golemite/graph.json",
+      "sha256": "3ee100ad0ec92c140dedc64667a2abe1846039e97d4a62dae89d606c20c78dd6",
+      "levels": 15,
+      "clientName": "Golemite",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "lavapup": {
+      "path": "assets/troops-native/lavapup/graph.json",
+      "sha256": "b6914273adf466d2a76da714e37942fee89d01fb9235b6854482c8b65e57b939",
+      "levels": 1,
+      "clientName": "Lava Pup",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "skeleton": {
+      "path": "assets/troops-native/skeleton/graph.json",
+      "sha256": "294a9e9fd3982ba735685f503a4c86bf70f68a2d1e9a08ae362d3b8b61180b76",
+      "levels": 2,
+      "clientName": "Skeleton",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "die",
+        "spawn"
+      ]
+    },
+    "bear": {
+      "path": "assets/troops-native/bear/graph.json",
+      "sha256": "6f25baf1f97bea8740a9ff284c3d589f9163b19ae1b8898f95477057fb2eeb85",
+      "levels": 6,
+      "clientName": "Bear",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "yetimite": {
+      "path": "assets/troops-native/yetimite/graph.json",
+      "sha256": "30450280677db2e670c59a9bdf1e58d688cab412d1941271d92c804f1baba1f9",
+      "levels": 8,
+      "clientName": "Yetimite",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "meteormite": {
+      "path": "assets/troops-native/meteormite/graph.json",
+      "sha256": "dbe60394bd8e1494c1bf2d7083cf603ba6c7403fb4203f7bbf9c6d59612c9fc0",
+      "levels": 3,
+      "clientName": "Meteormite",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "ruinknight": {
+      "path": "assets/troops-native/ruinknight/graph.json",
+      "sha256": "5a9aa423a9ffcdc6ce83940b02ebe925c4eca4431a9e876029ef1cb0ebe3e538",
+      "levels": 4,
+      "clientName": "Ruin Knight",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "die",
+        "spawn"
+      ]
+    },
+    "firemite": {
+      "path": "assets/troops-native/firemite/graph.json",
+      "sha256": "aa76943f4d579d8c650b38411ae264a86a15ebbf55a715c122662ea2cc23299b",
+      "levels": 5,
+      "clientName": "Firemite Spawn",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "electromite": {
+      "path": "assets/troops-native/electromite/graph.json",
+      "sha256": "4d773d1d45f828afe7196e341b5b44cafaad9d76943c5abf15e09c714aa81ffd",
+      "levels": 8,
+      "clientName": "Electromite",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "icehoundpup": {
+      "path": "assets/troops-native/icehoundpup/graph.json",
+      "sha256": "af05d4911343e963edbdecebbb39938de65fbae2ff262424d2c81f44f7ed5936",
+      "levels": 1,
+      "clientName": "Ice Hound Pup",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "superhog": {
+      "path": "assets/troops-native/superhog/graph.json",
+      "sha256": "26c5d1c1cb46d79199dcb40e857c91903c37cf7ce50aa8a6f9a3e44b6314c92a",
+      "levels": 12,
+      "clientName": "Super Hog",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "superrider": {
+      "path": "assets/troops-native/superrider/graph.json",
+      "sha256": "0551041f523b5d0a8830ab8ecb2eb0342d5e075592e8ed0c5dcac2166f49c1fc",
+      "levels": 12,
+      "clientName": "Super Rider",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die",
+        "spawn"
+      ]
+    },
+    "bigboy": {
+      "path": "assets/troops-native/bigboy/graph.json",
+      "sha256": "98ba986958d33be2596a579944c6cc37e173e17154b1a88f72f1225e28c97050",
+      "levels": 1,
+      "clientName": "Big Boy",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "die",
+        "spawn"
+      ]
+    },
+    "spellbat": {
+      "path": "assets/troops-native/spellbat/graph.json",
+      "sha256": "0b944375cb7b2a6f2eb4e1dd3e6bfffab6a65f7a039f5427da93ffebc34a6bf4",
+      "levels": 1,
+      "clientName": "Spell Bat",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die",
+        "spawn"
+      ]
+    },
+    "spellskeletonshielded": {
+      "path": "assets/troops-native/spellskeletonshielded/graph.json",
+      "sha256": "79aef6e62cffae5501a7229d72213649a1663edd9657da54cedccd9f85ff8fa4",
+      "levels": 1,
+      "clientName": "Spell Shielded Skeleton",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "die",
+        "spawn"
+      ]
+    },
+    "spellskeleton": {
+      "path": "assets/troops-native/spellskeleton/graph.json",
+      "sha256": "8dafae408bd1f5edff0ec6f18d15accaf2f50dc411fcb5430c2c91c3cf84a53b",
+      "levels": 1,
+      "clientName": "Spell Unshielded Skeleton",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "die",
+        "spawn"
+      ]
+    },
+    "totem": {
+      "path": "assets/troops-native/totem/graph.json",
+      "sha256": "158c4aefab9958e456680de7a9f5fe6e2344ba3bbbcfef92abfd11544ee9815f",
+      "levels": 4,
+      "clientName": "Totem",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die",
+        "spawn"
+      ]
+    },
+    "snake": {
+      "path": "assets/troops-native/snake/graph.json",
+      "sha256": "e93870f5f3398f1aca51dc8e141e13c0ba4dd9bcab7779f4829999ab96f1a22c",
+      "levels": 10,
+      "clientName": "BK Equipment Snake",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die",
+        "spawn"
+      ]
+    },
+    "henchman": {
+      "path": "assets/troops-native/henchman/graph.json",
+      "sha256": "b3aea0d6d1f0e67b46463a643a59b58afdfd55e4926f310aa1da1a6a97c9804f",
+      "levels": 7,
+      "clientName": "MP Equipment Henchman",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "gwlavaloon": {
+      "path": "assets/troops-native/gwlavaloon/graph.json",
+      "sha256": "95b6d8134c4f7ac700ba614e417193e5ebed98c03f16cd4b31b525eb1b30a9b9",
+      "levels": 11,
+      "clientName": "GW Equipment Lavaloon",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "gwlavaloonpup": {
+      "path": "assets/troops-native/gwlavaloonpup/graph.json",
+      "sha256": "23ee2092e83f2a3cede18ab745e757d69a5182f4a413a7a560727cce0d114948",
+      "levels": 11,
+      "clientName": "GW Equipment Lavaloon Pup",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "defendingbuilder": {
+      "path": "assets/troops-native/defendingbuilder/graph.json",
+      "sha256": "d98e5c1caed2b5f0fa4b777a5e9df4949c95deef6ad046e135bd2b43d5e19b4b",
+      "levels": 7,
+      "clientName": "Defending Builder",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "trapskeleton": {
+      "path": "assets/troops-native/trapskeleton/graph.json",
+      "sha256": "97b620a32eac4a7b720ed3f71b95762abee48dba6154855844552f81c2aca740",
+      "levels": 2,
+      "clientName": "Trap Skeleton",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "die",
+        "spawn"
+      ]
+    },
+    "trapairskeleton": {
+      "path": "assets/troops-native/trapairskeleton/graph.json",
+      "sha256": "65b81e1f065859e878335b3037368cd29b8a50d5b23daa5310d9deccc68faaf9",
+      "levels": 2,
+      "clientName": "Trap Air Skeleton",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die",
+        "spawn"
+      ]
+    },
+    "wallwrecker": {
+      "path": "assets/troops-native/wallwrecker/graph.json",
+      "sha256": "19e080b8696e3e1a711ae3dda32fd69b33bf3c63acaa520d5bdc02bdeafa1239",
+      "levels": 6,
+      "clientName": "Wall Wrecker",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "die",
+        "celebrate",
+        "parked"
+      ]
+    },
+    "battleblimp": {
+      "path": "assets/troops-native/battleblimp/graph.json",
+      "sha256": "56a1b959c2ceff16c4fdd4921413ca820f727b64218b3141e32bdd01038dcd99",
+      "levels": 6,
+      "clientName": "Battle Blimp",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "die",
+        "celebrate",
+        "parked"
+      ]
+    },
+    "stoneslammer": {
+      "path": "assets/troops-native/stoneslammer/graph.json",
+      "sha256": "6423c2dde5acd688f3ba96bb4e2ac60298299dd123d15f1c80e2ff127bbb539e",
+      "levels": 6,
+      "clientName": "Stone Slammer",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die",
+        "parked"
+      ]
+    },
+    "siegebarracks": {
+      "path": "assets/troops-native/siegebarracks/graph.json",
+      "sha256": "baaf26a73fb9ac5f629d67bc412e5f9b4f2319397d7fca5b730a6935ae00ee55",
+      "levels": 6,
+      "clientName": "Siege Barracks",
+      "states": [
+        "walk",
+        "spawn",
+        "idle",
+        "attack",
+        "die",
+        "celebrate",
+        "parked"
+      ]
+    },
+    "loglauncher": {
+      "path": "assets/troops-native/loglauncher/graph.json",
+      "sha256": "c245beae0aeacf8536b898518bfa2d0c6244faabc5ae560d629f779620877eed",
+      "levels": 6,
+      "clientName": "Log Launcher",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "die",
+        "celebrate",
+        "parked"
+      ]
+    },
+    "flameflinger": {
+      "path": "assets/troops-native/flameflinger/graph.json",
+      "sha256": "61124714429f258cf028182c8f95c69c38596bb7709cf9b7e333f773a425f2f5",
+      "levels": 5,
+      "clientName": "Flame Flinger",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "die",
+        "celebrate",
+        "parked"
+      ]
+    },
+    "battledrill": {
+      "path": "assets/troops-native/battledrill/graph.json",
+      "sha256": "a135c8ba7dad17edaf0af284d80a25b9d2ed6d8337b99809487e2594ad664c6e",
+      "levels": 6,
+      "clientName": "Battle Drill",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "die",
+        "celebrate",
+        "appear",
+        "hide",
+        "parked",
+        "spawn"
+      ]
+    },
+    "trooplauncher": {
+      "path": "assets/troops-native/trooplauncher/graph.json",
+      "sha256": "abe268411396228e81908db0f501d38a81364adc2c1498a4aab1834955ccd265",
+      "levels": 4,
+      "clientName": "Troop Launcher",
+      "states": [
+        "idle",
+        "attack",
+        "walk",
+        "activate",
+        "die",
+        "parked"
+      ]
+    },
+    "superbarbarian": {
+      "path": "assets/troops-native/superbarbarian/graph.json",
+      "sha256": "0cc01b04e0a2ac547e3baccd0be7d048836c1d688e3497970a0ddad912432bfa",
+      "levels": 9,
+      "clientName": "Super Barbarian",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die",
+        "spawn"
+      ]
+    },
+    "superarcher": {
+      "path": "assets/troops-native/superarcher/graph.json",
+      "sha256": "174e40aded2923323e9ded917d5841e54b80af4f90b1111152590996cd307596",
+      "levels": 10,
+      "clientName": "Super Archer",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die",
+        "spawn"
+      ]
+    },
+    "supergiant": {
+      "path": "assets/troops-native/supergiant/graph.json",
+      "sha256": "ab78f602e3fb48c49107842fce734565e0d1e56281dca6e7c9420808ede07b15",
+      "levels": 10,
+      "clientName": "Super Giant",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "sneakygoblin": {
+      "path": "assets/troops-native/sneakygoblin/graph.json",
+      "sha256": "6724f769104e607e1964dd08bd93000e6f287b924c4c798086ec307cb33bb05f",
+      "levels": 6,
+      "clientName": "Sneaky Goblin",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "superwallbreaker": {
+      "path": "assets/troops-native/superwallbreaker/graph.json",
+      "sha256": "3c46933ab834d86f382fa2353a1b6efb66543fd8c53f0a88469a377bb1c599c7",
+      "levels": 10,
+      "clientName": "Super Wall Breaker",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "rocketballoon": {
+      "path": "assets/troops-native/rocketballoon/graph.json",
+      "sha256": "5453d08e885b2a49be1b71269239199a68e37c4efe7a00774a802ed77fd757a3",
+      "levels": 9,
+      "clientName": "Rocket Balloon",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "superwizard": {
+      "path": "assets/troops-native/superwizard/graph.json",
+      "sha256": "18efdca823368387007df113fe74289960c2d8e134b8ecfa0fc8845ecac79490",
+      "levels": 10,
+      "clientName": "Super Wizard",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "superdragon": {
+      "path": "assets/troops-native/superdragon/graph.json",
+      "sha256": "e0ae44d079136a3c1c39fcca3eed80781f8d0b75cbbfdf1030bcf222dee979d2",
+      "levels": 11,
+      "clientName": "Super Dragon",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "infernodragon": {
+      "path": "assets/troops-native/infernodragon/graph.json",
+      "sha256": "6e693109f29313bdc65b760c5d4baf132edd525e045cefc64497c0ec7d447ab4",
+      "levels": 12,
+      "clientName": "Inferno Dragon",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "superminer": {
+      "path": "assets/troops-native/superminer/graph.json",
+      "sha256": "fc5eb6a93d354e682333b572ab2975f755a51d30ba0c222092c5e36cb8fe3686",
+      "levels": 12,
+      "clientName": "Super Miner",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die",
+        "hide"
+      ]
+    },
+    "superyeti": {
+      "path": "assets/troops-native/superyeti/graph.json",
+      "sha256": "cefcae45d27455197e6796030a5b52ae41293384d699d24731dd2fc305b677b8",
+      "levels": 8,
+      "clientName": "Super Yeti",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "superminion": {
+      "path": "assets/troops-native/superminion/graph.json",
+      "sha256": "069bd7c83ac42812a95fa19323a71a74da97161ec57779ea6b3257b0be53f795",
+      "levels": 11,
+      "clientName": "Super Minion",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "superhogrider": {
+      "path": "assets/troops-native/superhogrider/graph.json",
+      "sha256": "8d0e66977e7e1783ad905e632d3a1451d6199479afc8e9787fd7ef2478b34314",
+      "levels": 12,
+      "clientName": "Super Hog Rider",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "supervalkyrie": {
+      "path": "assets/troops-native/supervalkyrie/graph.json",
+      "sha256": "4ae9f042514799c4a0261371b986b349781ba7cf1317f9eef413c8f664962790",
+      "levels": 12,
+      "clientName": "Super Valkyrie",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "superwitch": {
+      "path": "assets/troops-native/superwitch/graph.json",
+      "sha256": "8dc54984d688a6df609e6455f6530b084f7d1d5c4485618a7b27197f6f05ee62",
+      "levels": 8,
+      "clientName": "Super Witch",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die",
+        "attack2"
+      ]
+    },
+    "icehound": {
+      "path": "assets/troops-native/icehound/graph.json",
+      "sha256": "9f6db0234f9fd9c5a3aefc406a1b4fdb32d4a660300d940d7e32c8fe07933814",
+      "levels": 8,
+      "clientName": "Ice Hound",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    },
+    "superbowler": {
+      "path": "assets/troops-native/superbowler/graph.json",
+      "sha256": "4ba09bf3109c1ab1ae06307925da5833cc95fb11a3bd8a330fe139a96cdfc5c1",
+      "levels": 10,
+      "clientName": "Super Bowler",
+      "states": [
+        "walk",
+        "idle",
+        "attack",
+        "celebrate",
+        "die"
+      ]
+    }
+  },
+  "skipped": {}
+}

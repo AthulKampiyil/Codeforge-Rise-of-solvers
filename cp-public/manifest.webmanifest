@@ -1,0 +1,22 @@
+{
+  "id": "/",
+  "name": "CodeForge",
+  "short_name": "CodeForge",
+  "description": "Grow your Codeforces skills, strengthen your village, and challenge the CodeForge frontier.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "background_color": "#173829",
+  "theme_color": "#142b1e",
+  "icons": [
+    { "src": "/app-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    {
+      "src": "/app-icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

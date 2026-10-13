@@ -1,0 +1,114 @@
+{
+  "title": "Super Valkyrie",
+  "url": "https://clashofclans.fandom.com/wiki/Super_Valkyrie",
+  "revid": 622824,
+  "clientName": "Super Valkyrie",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Super Valkyrie",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "None",
+    "attackType": "Area Splash (Ground Only)",
+    "housingSpace": 20,
+    "movementSpeed": 24,
+    "attackSpeedSeconds": 1.1,
+    "rangeTiles": 0.6,
+    "specialAbility": "Farewell Gift"
+  },
+  "levels": [
+    {
+      "level": 7,
+      "dps": 250,
+      "damagePerHit": 275,
+      "hitpoints": 2400
+    },
+    {
+      "level": 8,
+      "dps": 300,
+      "damagePerHit": 330,
+      "hitpoints": 2700
+    },
+    {
+      "level": 9,
+      "dps": 325,
+      "damagePerHit": 357.5,
+      "hitpoints": 2900
+    },
+    {
+      "level": 10,
+      "dps": 350,
+      "damagePerHit": 385,
+      "hitpoints": 3400
+    },
+    {
+      "level": 11,
+      "dps": 375,
+      "damagePerHit": 412.5,
+      "hitpoints": 3900
+    },
+    {
+      "level": 12,
+      "dps": 405,
+      "damagePerHit": 445.5,
+      "hitpoints": 4500
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "rangeTiles",
+      "level": null,
+      "wiki": 0.6,
+      "client": 0.5,
+      "note": "client AttackRange/100"
+    },
+    {
+      "field": "deathRageDurationSeconds",
+      "level": null,
+      "wiki": "shorter than Rage Spell (18 s)",
+      "client": 18,
+      "note": "EliteValkyrieRage NumberOfHits 60 x 300 ms"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "death rage",
+      "client": "`SpecialAbilities` EliteValkyrieOnDeath -> `SelfSpell` EliteValkyrieRage: `DamageBoostPercent` 160, `SpeedBoost` 26/`SpeedBoost2` 13, `BuildingDamageBoostPercent` 60, `Radius` 400, `NumberOfHits` 60 x `TimeBetweenHitsMS` 300"
+    },
+    {
+      "mechanic": "splash",
+      "client": "`DamageRadius` 100, `SelfAsAoeCenter` TRUE, `AttackMultipleBuildings` TRUE"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`DPS` x 1.1 s, `Hitpoints`, `Speed` 300, `AttackRange` 50, `NewTargetAttackDelay` 600"
+    }
+  ],
+  "boost": {
+    "wiki": {
+      "baseTroop": "Valkyrie",
+      "minBaseLevel": 7,
+      "townHallRequired": 12,
+      "clanCastleLevelToReceive": 6,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperValkyrie",
+      "Original": "Valkyrie",
+      "MinOriginalLevel_raw": 6,
+      "minBaseLevel": 7,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_VALKYRIE_INTRO_TH13",
+      "townHallDerived": 12
+    }
+  }
+}

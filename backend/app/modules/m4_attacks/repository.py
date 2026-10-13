@@ -1,79 +1,282 @@
 """Async Village Attacks (REQ-4.x) — data access layer.
 
-Owns: all direct DB queries for this module's tables.
+Implements matchmaking queries (SADD §7.3.1.1), attack lifecycle persistence,
+problem set management, and atomic cooldown updates (SADD §7.2.1).
 """
-from typing import List, Optional
-from datetime import datetime
-from sqlalchemy.orm import Session
-from app.modules.m4_attacks.models import Attack, AttackStatus, AttackCooldown
+from datetime import datetime, timedelta, timezone
+from typing import Any, Dict, List, Optional, Set
+from uuid import UUID
 
+import sqlalchemy as sa
+from sqlalchemy import func
+from sqlalchemy.orm import Session
+
+from app.modules.m1_auth.models import User
+from app.modules.m3_village.models import VillageProfile
+from app.modules.m4_attacks.models import Attack, AttackProblemSet, AttackStatus
 
 class AttackRepository:
-    """Data access layer for attack records."""
-
     def __init__(self, db: Session):
         self.db = db
 
+    def get_by_id(self, attack_id: str, for_update: bool = False) -> Optional[Attack]:
+        query = self.db.query(Attack).filter(Attack.id == attack_id).populate_existing()
+        if for_update:
+            query = query.with_for_update()
+        return query.first()
+
+    def lock_attack_participants(self, attacker_user_id: str, target_user_id: str) -> Dict[str, User]:
+        """Lock and refresh both participant rows in stable primary-key order."""
+        ids = sorted({str(attacker_user_id), str(target_user_id)})
+        users = (
+            self.db.query(User)
+            .filter(User.id.in_(ids))
+            .order_by(User.id.asc())
+            .with_for_update()
+            .populate_existing()
+            .all()
+        )
+        return {str(user.id): user for user in users}
+
+    def get_active_attack_for_user(self, user_id: str) -> Optional[Attack]:
+        """Check if user currently has an in-flight attack."""
+        return (
+            self.db.query(Attack)
+            .filter(
+                Attack.attacker_user_id == user_id,
+                Attack.status.in_([AttackStatus.created, AttackStatus.in_progress]),
+            )
+            .order_by(Attack.started_at.desc())
+            .first()
+        )
+
     def get_attacks_by_attacker(self, user_id: str, limit: int = 20) -> List[Attack]:
-        """Fetch recent attacks by a user."""
-        return self.db.query(Attack).filter(
-            Attack.attacker_user_id == user_id
-        ).order_by(Attack.created_at.desc()).limit(limit).all()
+        return (
+            self.db.query(Attack)
+            .filter(Attack.attacker_user_id == user_id)
+            .order_by(Attack.started_at.desc())
+            .limit(limit)
+            .all()
+        )
 
-    def get_attacks_by_defender(self, user_id: str, limit: int = 20) -> List[Attack]:
-        """Fetch recent attacks against a user."""
-        return self.db.query(Attack).filter(
-            Attack.defender_user_id == user_id
-        ).order_by(Attack.created_at.desc()).limit(limit).all()
+    def get_attacks_by_target(self, user_id: str, limit: int = 20) -> List[Attack]:
+        return (
+            self.db.query(Attack)
+            .filter(Attack.target_user_id == user_id)
+            .order_by(Attack.started_at.desc())
+            .limit(limit)
+            .all()
+        )
 
-    def create_attack(self, attacker_user_id: str, defender_user_id: str, challenge_topic: Optional[str] = None) -> Attack:
-        """Create a new attack record."""
+    def get_attack_count(self, user_id: str) -> int:
+        return (
+            self.db.query(func.count(Attack.id))
+            .filter(Attack.attacker_user_id == user_id)
+            .scalar()
+            or 0
+        )
+
+    def get_due_attacks(self, before: Optional[datetime] = None) -> List[Attack]:
+        """
+        Query attacks in created or in_progress status whose window has expired.
+        Worker uses this query to resolve due attacks.
+        """
+        if before is None:
+            before = datetime.now(timezone.utc)
+        return (
+            self.db.query(Attack)
+            .filter(
+                Attack.status.in_([AttackStatus.created, AttackStatus.in_progress]),
+                Attack.window_expires_at.isnot(None),
+                sa.or_(
+                    Attack.window_expires_at <= before,
+                    sa.and_(
+                        Attack.resolution_requested_at.isnot(None),
+                        sa.or_(Attack.resolution_not_before.is_(None), Attack.resolution_not_before <= before),
+                    ),
+                ),
+            )
+            .all()
+        )
+
+    def create_attack(
+        self,
+        attacker_user_id: str,
+        target_user_id: str,
+        window_hours: int = 24,
+    ) -> Attack:
+        now = datetime.now(timezone.utc)
+        expires_at = now + timedelta(hours=window_hours)
         attack = Attack(
             attacker_user_id=attacker_user_id,
-            defender_user_id=defender_user_id,
-            challenge_topic=challenge_topic
+            target_user_id=target_user_id,
+            status=AttackStatus.in_progress,
+            started_at=now,
+            window_expires_at=expires_at,
         )
         self.db.add(attack)
-        self.db.commit()
+        self.db.flush()
         return attack
 
-    def update_attack_status(self, attack_id: str, status: AttackStatus, score: int = 0):
-        """Update attack status and score."""
-        attack = self.db.query(Attack).filter(Attack.id == attack_id).first()
+    def update_status(
+        self,
+        attack_id: str,
+        status: AttackStatus,
+        score: int = 0,
+        solved_fraction: Optional[float] = None,
+    ) -> Optional[Attack]:
+        attack = self.get_by_id(attack_id)
         if attack:
             attack.status = status
             attack.score = score
-            if status in [AttackStatus.success, AttackStatus.failed]:
-                attack.resolved_at = datetime.utcnow()
-            self.db.commit()
+            if solved_fraction is not None:
+                attack.solved_fraction = solved_fraction
+            if status in (AttackStatus.resolved, AttackStatus.completed, AttackStatus.abandoned):
+                attack.resolved_at = datetime.now(timezone.utc)
+            self.db.flush()
         return attack
 
+    def get_recent_attack_targets(
+        self, attacker_user_id: str, window_hours: int = 24
+    ) -> Set[str]:
+        """
+        SADD §7.3.1.1: Exclude targets attacked by this attacker in last recent_attack_window_h.
+        """
+        cutoff = datetime.now(timezone.utc) - timedelta(hours=window_hours)
+        rows = (
+            self.db.query(Attack.target_user_id)
+            .filter(
+                Attack.attacker_user_id == attacker_user_id,
+                Attack.started_at >= cutoff,
+            )
+            .all()
+        )
+        return {str(r[0]) for r in rows}
 
-class AttackCooldownRepository:
-    """Data access layer for attack cooldowns."""
+    def get_targets_in_defense_grace(self, grace_minutes: int = 15) -> Set[str]:
+        """
+        SADD §7.3.1.1: Exclude targets attacked by anyone in last defense_grace_minutes.
+        """
+        cutoff = datetime.now(timezone.utc) - timedelta(minutes=grace_minutes)
+        rows = (
+            self.db.query(Attack.target_user_id)
+            .filter(Attack.started_at >= cutoff)
+            .all()
+        )
+        return {str(r[0]) for r in rows}
+
+    def find_matchmaking_candidates(
+        self,
+        attacker_user_id: str,
+        min_rating: float,
+        max_rating: float,
+        excluded_user_ids: Set[str],
+        attacker_rating: float = 0.0,
+        limit: int = 10,
+    ) -> List[Dict[str, Any]]:
+        """
+        SADD §7.3.1.1 indexed range scan over VillageProfile.defense_rating.
+        Falls back smoothly to users table with 0.0 defense rating when village_profiles is empty.
+        """
+        excluded = set(excluded_user_ids)
+        excluded.add(str(attacker_user_id))
+
+        # Query users joined with village_profiles
+        defense_col = func.coalesce(VillageProfile.defense_rating, 0.0)
+        query = (
+            self.db.query(
+                User.id.label("user_id"),
+                User.username.label("username"),
+                defense_col.label("defense_rating"),
+                func.coalesce(VillageProfile.average_level, 0.0).label("average_level"),
+            )
+            .outerjoin(VillageProfile, User.id == VillageProfile.user_id)
+            .filter(
+                User.is_active == True,  # noqa: E712
+                User.is_suspended == False,  # noqa: E712
+                User.id.notin_(list(excluded)) if excluded else True,
+                defense_col >= min_rating,
+                defense_col <= max_rating,
+            )
+            .order_by(
+                func.abs(defense_col - attacker_rating).asc(),
+                User.username.asc(),
+            )
+            .limit(limit)
+        )
+
+        results = []
+        for r in query.all():
+            results.append(
+                {
+                    "id": str(r.user_id),
+                    "username": r.username,
+                    "defense_rating": float(r.defense_rating),
+                    "level": int(r.average_level),
+                }
+            )
+        return results
+
+class AttackProblemSetRepository:
+    def __init__(self, db: Session):
+        self.db = db
+
+    def get_by_attack(self, attack_id: str) -> List[AttackProblemSet]:
+        return (
+            self.db.query(AttackProblemSet)
+            .filter(AttackProblemSet.attack_id == attack_id)
+            .order_by(AttackProblemSet.rating.asc())
+            .all()
+        )
+
+    def create(
+        self,
+        attack_id: str,
+        problem_ext_id: str,
+        problem_name: Optional[str] = None,
+        problem_url: Optional[str] = None,
+        topic_id: Optional[Any] = None,
+        rating: Optional[int] = None,
+        solved_flag: bool = False,
+        solved_at: Optional[datetime] = None,
+    ) -> AttackProblemSet:
+        problem = AttackProblemSet(
+            attack_id=attack_id,
+            problem_ext_id=problem_ext_id,
+            problem_name=problem_name,
+            problem_url=problem_url,
+            topic_id=topic_id,
+            rating=rating,
+            solved_flag=solved_flag,
+            solved_at=solved_at,
+        )
+        self.db.add(problem)
+        self.db.flush()
+        return problem
+
+    def mark_solved(self, problem_id: str) -> Optional[AttackProblemSet]:
+        problem = self.db.query(AttackProblemSet).filter(AttackProblemSet.id == problem_id).first()
+        if problem and not problem.solved_flag:
+            problem.solved_flag = True
+            problem.solved_at = datetime.now(timezone.utc)
+            self.db.flush()
+        return problem
+
+class CooldownRepository:
+    """Thin repository over users.attack_cooldown_expires_at (SADD §7.2.1)."""
 
     def __init__(self, db: Session):
         self.db = db
 
-    def get_cooldown(self, user_id: str) -> Optional[AttackCooldown]:
-        """Fetch cooldown record for a user."""
-        return self.db.query(AttackCooldown).filter(
-            AttackCooldown.user_id == user_id
-        ).first()
+    def get_cooldown_expiry(self, user_id: str) -> Optional[datetime]:
+        user = self.db.query(User).filter(User.id == user_id).first()
+        return user.attack_cooldown_expires_at if user else None
 
-    def create_cooldown(self, user_id: str, cooldown_minutes: int = 30) -> AttackCooldown:
-        """Create a new cooldown record."""
-        cooldown = AttackCooldown(user_id=user_id, cooldown_minutes=cooldown_minutes)
-        self.db.add(cooldown)
-        self.db.commit()
-        return cooldown
-
-    def update_last_attack(self, user_id: str):
-        """Update last attack timestamp."""
-        cooldown = self.get_cooldown(user_id)
-        if cooldown:
-            cooldown.last_attack_at = datetime.utcnow()
-            self.db.commit()
-        else:
-            self.create_cooldown(user_id)
-
+    def set_cooldown_expiry(self, user_id: str, expires_at: datetime, commit: bool = True) -> None:
+        user = self.db.query(User).filter(User.id == user_id).with_for_update().populate_existing().first()
+        if user:
+            user.attack_cooldown_expires_at = expires_at
+            if commit:
+                self.db.commit()
+            else:
+                self.db.flush()

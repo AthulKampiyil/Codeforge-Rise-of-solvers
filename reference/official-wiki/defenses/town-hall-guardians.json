@@ -1,0 +1,39 @@
+{
+ "title": "Town Hall/Guardians",
+ "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Guardians",
+ "revid": 623106,
+ "retrieved": "2026-09-15",
+ "category": "townhall-weapon",
+ "clientName": "InfernoArtillery (Longshot), MeleeAreaaaa (Smasher), Logger",
+ "clientTable": "guardians.csv",
+ "levels": [],
+ "constants": {
+  "townHall": 18,
+  "activeGuardians": 1,
+  "maxLevel": 5,
+  "poisonEffectPercent": 30,
+  "isHero": false,
+  "housingSpace": 0,
+  "guardians": [
+   "Longshot",
+   "Smasher",
+   "Logger"
+  ]
+ },
+ "mismatches": [
+  {
+   "field": "housingSpace",
+   "level": "all",
+   "wiki": "none",
+   "client": "characters.csv HousingSpace 25 for all three",
+   "note": "client carries a housing value; the wiki says Guardians give no Dark Crown value - treat HousingSpace as non-scoring"
+  },
+  {
+   "field": "TH18 heal weapon",
+   "level": 18,
+   "wiki": "not mentioned",
+   "client": "weapons.csv Townhall18: TH18Heal, DPS -600, AttackRange 2000, OnlyHealDamagedTargets, UseHealthToHeal (50%)",
+   "note": "not referenced by the Town Hall 18 row; possibly unused/experimental - do not implement without evidence"
+  }
+ ]
+}

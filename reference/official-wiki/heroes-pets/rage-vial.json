@@ -1,0 +1,280 @@
+{
+ "title": "Rage Vial",
+ "url": "https://clashofclans.fandom.com/wiki/Rage_Vial",
+ "revid": 623370,
+ "retrieved": "2026-09-15",
+ "clientName": "Rage Vial",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Barbarian King",
+ "summary": "King's starting active item: 10-second self-rage (+120% → +155% damage, large move-speed boost) with big recovery; passive DPS.",
+ "constants": {
+  "wiki": {
+   "User": "Barbarian King",
+   "Ability Type": "Active",
+   "Rarity": "Common",
+   "Unlock Requirement": "Available by default",
+   "Ability Duration": "10 seconds"
+  },
+  "client": {
+   "Rarity": "COMMON",
+   "AllowedCharacters": "Barbarian King;",
+   "MainAbilities": "BarbarianKingRage",
+   "levelRows": 18,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "damageIncreasePercent": {
+   "wikiHeader": "Ability Attributes / Damage Increase",
+   "unit": "percent"
+  },
+  "movementSpeedIncrease": {
+   "wikiHeader": "Ability Attributes / Movement Speed Increase",
+   "unit": "wiki movement-speed units (client Speed / 12.5; displayed value truncated)"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boosts / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "hpRecoveryIncrease": {
+   "wikiHeader": "Hero Boosts / HP Recovery Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damageIncreasePercent": 120,
+   "movementSpeedIncrease": 18,
+   "damagePerSecondIncrease": 17,
+   "hpRecoveryIncrease": 150,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": null
+  },
+  {
+   "level": 2,
+   "damageIncreasePercent": 120,
+   "movementSpeedIncrease": 18,
+   "damagePerSecondIncrease": 22,
+   "hpRecoveryIncrease": 225,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "damageIncreasePercent": 130,
+   "movementSpeedIncrease": 22.3,
+   "damagePerSecondIncrease": 27,
+   "hpRecoveryIncrease": 300,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "damageIncreasePercent": 130,
+   "movementSpeedIncrease": 22.3,
+   "damagePerSecondIncrease": 32,
+   "hpRecoveryIncrease": 375,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "damageIncreasePercent": 130,
+   "movementSpeedIncrease": 22.3,
+   "damagePerSecondIncrease": 37,
+   "hpRecoveryIncrease": 450,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "damageIncreasePercent": 135,
+   "movementSpeedIncrease": 25.5,
+   "damagePerSecondIncrease": 42,
+   "hpRecoveryIncrease": 525,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "damageIncreasePercent": 135,
+   "movementSpeedIncrease": 25.5,
+   "damagePerSecondIncrease": 48,
+   "hpRecoveryIncrease": 600,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "damageIncreasePercent": 135,
+   "movementSpeedIncrease": 25.5,
+   "damagePerSecondIncrease": 54,
+   "hpRecoveryIncrease": 675,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "damageIncreasePercent": 140,
+   "movementSpeedIncrease": 28.7,
+   "damagePerSecondIncrease": 60,
+   "hpRecoveryIncrease": 780,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "damageIncreasePercent": 140,
+   "movementSpeedIncrease": 28.7,
+   "damagePerSecondIncrease": 66,
+   "hpRecoveryIncrease": 900,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 11,
+   "damageIncreasePercent": 140,
+   "movementSpeedIncrease": 28.7,
+   "damagePerSecondIncrease": 72,
+   "hpRecoveryIncrease": 1020,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 12,
+   "damageIncreasePercent": 145,
+   "movementSpeedIncrease": 32,
+   "damagePerSecondIncrease": 79,
+   "hpRecoveryIncrease": 1155,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 13,
+   "damageIncreasePercent": 145,
+   "movementSpeedIncrease": 32,
+   "damagePerSecondIncrease": 86,
+   "hpRecoveryIncrease": 1290,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 14,
+   "damageIncreasePercent": 145,
+   "movementSpeedIncrease": 32,
+   "damagePerSecondIncrease": 94,
+   "hpRecoveryIncrease": 1410,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 15,
+   "damageIncreasePercent": 150,
+   "movementSpeedIncrease": 35.1,
+   "damagePerSecondIncrease": 104,
+   "hpRecoveryIncrease": 1590,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 16,
+   "damageIncreasePercent": 150,
+   "movementSpeedIncrease": 35.1,
+   "damagePerSecondIncrease": 112,
+   "hpRecoveryIncrease": 1695,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 17,
+   "damageIncreasePercent": 150,
+   "movementSpeedIncrease": 35.1,
+   "damagePerSecondIncrease": 120,
+   "hpRecoveryIncrease": 1800,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 18,
+   "damageIncreasePercent": 155,
+   "movementSpeedIncrease": 38.3,
+   "damagePerSecondIncrease": 128,
+   "hpRecoveryIncrease": 1890,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 7
+  }
+ ],
+ "subpages": [],
+ "mismatches": [],
+ "clientColumns": [
+  "MainAbilities:special_abilities[BarbarianKingRage].BoostDamagePercentage",
+  "MainAbilities:special_abilities[BarbarianKingRage].SpeedBoost",
+  "character_items.DPS",
+  "character_items.HealOnActivation",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

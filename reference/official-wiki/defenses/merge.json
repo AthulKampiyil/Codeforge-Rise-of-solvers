@@ -1,0 +1,117 @@
+{
+ "title": "Merged defenses (synthesized)",
+ "url": null,
+ "revid": null,
+ "retrieved": "2026-09-15",
+ "category": "mechanic",
+ "sources": [
+  {
+   "title": "Ricochet Cannon",
+   "url": "https://clashofclans.fandom.com/wiki/Ricochet_Cannon",
+   "revid": 624465
+  },
+  {
+   "title": "Multi-Archer Tower",
+   "url": "https://clashofclans.fandom.com/wiki/Multi-Archer_Tower",
+   "revid": 624863
+  },
+  {
+   "title": "Multi-Gear Tower",
+   "url": "https://clashofclans.fandom.com/wiki/Multi-Gear_Tower",
+   "revid": 624494
+  },
+  {
+   "title": "Super Wizard Tower/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Super_Wizard_Tower/Home_Village",
+   "revid": 624749
+  },
+  {
+   "title": "Town Hall/Inferno Artillery",
+   "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Inferno_Artillery",
+   "revid": 622642
+  },
+  {
+   "title": "Town Hall",
+   "url": "https://clashofclans.fandom.com/wiki/Town_Hall",
+   "revid": 624170
+  },
+  {
+   "title": "Cannon/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Cannon/Home_Village",
+   "revid": 624457
+  },
+  {
+   "title": "Archer Tower/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Archer_Tower/Home_Village",
+   "revid": 624456
+  },
+  {
+   "title": "Wizard Tower",
+   "url": "https://clashofclans.fandom.com/wiki/Wizard_Tower",
+   "revid": 625327
+  },
+  {
+   "title": "Eagle Artillery",
+   "url": "https://clashofclans.fandom.com/wiki/Eagle_Artillery",
+   "revid": 625122
+  }
+ ],
+ "levels": [],
+ "constants": {
+  "merges": [
+   {
+    "result": "Ricochet Cannon",
+    "townHall": 16,
+    "inputs": "2x Cannon level 21 (not geared up)",
+    "clientMergeRequirement": "Cannon:21:0;Cannon:21:0",
+    "countPerTownHall": {
+     "16": 2,
+     "17": 3
+    }
+   },
+   {
+    "result": "Multi-Archer Tower",
+    "townHall": 16,
+    "inputs": "2x Archer Tower level 21 (not geared up)",
+    "clientMergeRequirement": "Archer Tower:21:0;Archer Tower:21:0",
+    "countPerTownHall": {
+     "16": 2,
+     "17": 3
+    }
+   },
+   {
+    "result": "Multi-Gear Tower",
+    "townHall": 17,
+    "inputs": "geared-up Cannon level 21 + geared-up Archer Tower level 21",
+    "clientMergeRequirement": "Archer Tower:21:1;Cannon:21:1",
+    "countPerTownHall": {
+     "17": 1
+    }
+   },
+   {
+    "result": "Inferno Artillery (Town Hall 17 weapon)",
+    "townHall": 17,
+    "inputs": "Town Hall 16 (Giga Inferno) + Eagle Artillery level 7",
+    "clientMergeRequirement": "Eagle Artillery:7:0",
+    "countPerTownHall": {
+     "17": 1
+    }
+   },
+   {
+    "result": "Super Wizard Tower",
+    "townHall": 18,
+    "inputs": "2x Wizard Tower level 17",
+    "clientMergeRequirement": "Wizard Tower:17:0;Wizard Tower:17:0",
+    "countPerTownHall": {
+     "18": 2
+    }
+   }
+  ],
+  "reversible": false,
+  "gearedUpInputsAllowed": "only for the Multi-Gear Tower (required)",
+  "requiredForNextTownHall": true
+ },
+ "clientName": "MergeRequirement column (buildings.csv)",
+ "clientTable": "buildings.csv",
+ "mismatches": []
+}

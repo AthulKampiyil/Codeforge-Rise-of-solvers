@@ -1,0 +1,226 @@
+{
+ "title": "Electro Owl",
+ "url": "https://clashofclans.fandom.com/wiki/Electro_Owl",
+ "revid": 620659,
+ "retrieved": "2026-09-15",
+ "clientName": "Electro Owl",
+ "clientTable": "pets",
+ "category": "pet",
+ "summary": "Pet House 2 flying pet that shoots chain lightning (two targets, −20% on the second) at its hero's target.",
+ "constants": {
+  "wiki": {
+   "Preferred Target": "Hero's Target",
+   "Attack Type": "Ranged (Ground and Air); Chain Lightning",
+   "Number of Targets": "2",
+   "Chain Damage Decay": "-20%",
+   "Movement Speed": "20",
+   "Attack Speed": "1.4s",
+   "Pet House Level Required": "2",
+   "Range": "6 tiles",
+   "Special Ability": "High Voltage"
+  },
+  "client": {
+   "HousingSpace": "20",
+   "Speed": "250",
+   "AttackRange": "550",
+   "AttackSpeed": "1400",
+   "IsFlying": "TRUE",
+   "AirTargets": "TRUE",
+   "GroundTargets": "TRUE",
+   "IsJumper": "FALSE",
+   "LeashLength": "0",
+   "ChainAttackDistance": "300",
+   "ChainAttackDepth": "2",
+   "ChainAttackDamageReductionPercent": "20",
+   "ChainAttackDelay": "128",
+   "SpecialAbilities": "ElectrowlPlaceholderAbility",
+   "TriggersTraps": "FALSE",
+   "FriendlyGroupWeight": "300",
+   "SpawnDelay": "100",
+   "UpgradeResource": "DarkElixir",
+   "MovementOffsetSpeed": "30",
+   "levelRows": 15,
+   "levelsByPetHouse": {
+    "Pet House 2": "10",
+    "Pet House 9": "15"
+   }
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "damagePerSecondPrimaryTarget": {
+   "wikiHeader": "Damage per Second (Primary Target)",
+   "unit": "damage per second"
+  },
+  "damagePerHitPrimaryTarget": {
+   "wikiHeader": "Damage per Hit (Primary Target)",
+   "unit": "damage points"
+  },
+  "hitpoints": {
+   "wikiHeader": "Hitpoints",
+   "unit": "hitpoints"
+  },
+  "upgradeCost": {
+   "wikiHeader": "Upgrade Cost",
+   "unit": "resource amount"
+  },
+  "upgradeTimeSeconds": {
+   "wikiHeader": "Upgrade Time",
+   "unit": "seconds"
+  },
+  "petHouseLevelRequired": {
+   "wikiHeader": "Pet House Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damagePerSecondPrimaryTarget": 100,
+   "damagePerHitPrimaryTarget": 140,
+   "hitpoints": 1600,
+   "upgradeCost": null,
+   "upgradeTimeSeconds": null,
+   "petHouseLevelRequired": 2
+  },
+  {
+   "level": 2,
+   "damagePerSecondPrimaryTarget": 105,
+   "damagePerHitPrimaryTarget": 147,
+   "hitpoints": 1700,
+   "upgradeCost": 30000,
+   "upgradeTimeSeconds": 129600,
+   "petHouseLevelRequired": 2
+  },
+  {
+   "level": 3,
+   "damagePerSecondPrimaryTarget": 110,
+   "damagePerHitPrimaryTarget": 154,
+   "hitpoints": 1800,
+   "upgradeCost": 45000,
+   "upgradeTimeSeconds": 172800,
+   "petHouseLevelRequired": 2
+  },
+  {
+   "level": 4,
+   "damagePerSecondPrimaryTarget": 115,
+   "damagePerHitPrimaryTarget": 161,
+   "hitpoints": 1900,
+   "upgradeCost": 60000,
+   "upgradeTimeSeconds": 259200,
+   "petHouseLevelRequired": 2
+  },
+  {
+   "level": 5,
+   "damagePerSecondPrimaryTarget": 120,
+   "damagePerHitPrimaryTarget": 168,
+   "hitpoints": 2000,
+   "upgradeCost": 75000,
+   "upgradeTimeSeconds": 345600,
+   "petHouseLevelRequired": 2
+  },
+  {
+   "level": 6,
+   "damagePerSecondPrimaryTarget": 125,
+   "damagePerHitPrimaryTarget": 175,
+   "hitpoints": 2100,
+   "upgradeCost": 90000,
+   "upgradeTimeSeconds": 388800,
+   "petHouseLevelRequired": 2
+  },
+  {
+   "level": 7,
+   "damagePerSecondPrimaryTarget": 130,
+   "damagePerHitPrimaryTarget": 182,
+   "hitpoints": 2200,
+   "upgradeCost": 105000,
+   "upgradeTimeSeconds": 432000,
+   "petHouseLevelRequired": 2
+  },
+  {
+   "level": 8,
+   "damagePerSecondPrimaryTarget": 135,
+   "damagePerHitPrimaryTarget": 189,
+   "hitpoints": 2300,
+   "upgradeCost": 120000,
+   "upgradeTimeSeconds": 475200,
+   "petHouseLevelRequired": 2
+  },
+  {
+   "level": 9,
+   "damagePerSecondPrimaryTarget": 140,
+   "damagePerHitPrimaryTarget": 196,
+   "hitpoints": 2400,
+   "upgradeCost": 135000,
+   "upgradeTimeSeconds": 518400,
+   "petHouseLevelRequired": 2
+  },
+  {
+   "level": 10,
+   "damagePerSecondPrimaryTarget": 145,
+   "damagePerHitPrimaryTarget": 203,
+   "hitpoints": 2500,
+   "upgradeCost": 150000,
+   "upgradeTimeSeconds": 561600,
+   "petHouseLevelRequired": 2
+  },
+  {
+   "level": 11,
+   "damagePerSecondPrimaryTarget": 150,
+   "damagePerHitPrimaryTarget": 210,
+   "hitpoints": 2600,
+   "upgradeCost": 165000,
+   "upgradeTimeSeconds": 604800,
+   "petHouseLevelRequired": 9
+  },
+  {
+   "level": 12,
+   "damagePerSecondPrimaryTarget": 155,
+   "damagePerHitPrimaryTarget": 217,
+   "hitpoints": 2700,
+   "upgradeCost": 180000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 9
+  },
+  {
+   "level": 13,
+   "damagePerSecondPrimaryTarget": 160,
+   "damagePerHitPrimaryTarget": 224,
+   "hitpoints": 2800,
+   "upgradeCost": 195000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 9
+  },
+  {
+   "level": 14,
+   "damagePerSecondPrimaryTarget": 165,
+   "damagePerHitPrimaryTarget": 231,
+   "hitpoints": 2900,
+   "upgradeCost": 210000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 9
+  },
+  {
+   "level": 15,
+   "damagePerSecondPrimaryTarget": 170,
+   "damagePerHitPrimaryTarget": 238,
+   "hitpoints": 3000,
+   "upgradeCost": 225000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 9
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "Range",
+   "level": null,
+   "wiki": "6 tiles",
+   "client": "AttackRange 550 (= 5.5 tiles)",
+   "note": "constant from the wiki's first statistics table"
+  }
+ ]
+}

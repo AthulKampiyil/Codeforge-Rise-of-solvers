@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#3d542d" />
+    <meta
+      name="description"
+      content="Solve Codeforces problems and grow your CodeForge village."
+    />
+    <title>CodeForge — Your village awaits</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Home-screen install: full screen on Android, without Safari's bars on iOS. -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="CodeForge" />
+  </head>
+  <body>
+    <div id="game" aria-label="Interactive isometric village"></div>
+    <div id="ui"></div>
+    <div id="loading">
+      <div class="loading-emblem">♜</div>
+      <h1>CODEFORGE</h1>
+      <p>A little village. A great adventure.</p>
+      <div class="load-track"><div id="load-progress"></div></div>
+      <small id="load-label">Preparing your village…</small>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

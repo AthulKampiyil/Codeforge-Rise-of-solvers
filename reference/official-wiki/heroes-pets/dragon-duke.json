@@ -1,0 +1,364 @@
+{
+ "title": "Dragon Duke",
+ "url": "https://clashofclans.fandom.com/wiki/Dragon_Duke",
+ "revid": 625035,
+ "retrieved": "2026-09-15",
+ "clientName": "Dragon Duke",
+ "clientTable": "heroes",
+ "category": "hero",
+ "summary": "Flying melee hero unlocked at Hero Hall 9 (TH15) with the Royal Rampage passive (double damage, +50% attack speed when no other air units are within 6 tiles); upgrades to level 25.",
+ "constants": {
+  "wiki": {
+   "Preferred Target": "None",
+   "Attack Type": "Single Target",
+   "Movement Speed": "20",
+   "Attack Speed": "1.2s",
+   "Range": "0.3 tiles",
+   "Search Radius": "10 tiles",
+   "Passive Ability": "Royal Rampage",
+   "Ability Damage Increase": "100%",
+   "Ability Attack Speed Increase": "50%"
+  },
+  "client": {
+   "Speed": "250",
+   "AttackRange": "125",
+   "AttackSpeed": "1200",
+   "CoolDownOverride": "700",
+   "AirTargets": "TRUE",
+   "GroundTargets": "TRUE",
+   "IsFlying": "TRUE",
+   "IsJumper": "FALSE",
+   "HousingSpace": "25",
+   "PatrolRadius": "300",
+   "AlertRadius": "1200",
+   "MaxSearchRadiusForDefender": "1000",
+   "ItemSlotCount": "2",
+   "DefaultItems": "Fire Heart; Flame Blower;",
+   "SpecialAbilities": "DragonDukeRageWhenAlone;DragonDukeAbilityHeal",
+   "PreferedTargetDamageMod": "1",
+   "FriendlyGroupWeight": "2100",
+   "EnemyGroupWeight": "2500",
+   "HealerWeight": "21",
+   "UpgradeResource": "DarkElixir",
+   "TriggersTraps": "TRUE",
+   "ForceRetaliation": "TRUE",
+   "OnlyShowRageBoost": "TRUE",
+   "levelRows": 25,
+   "levelsByHeroHall": {
+    "Hero Hall 9": "10",
+    "Hero Hall 10": "15",
+    "Hero Hall 11": "20",
+    "Hero Hall 12": "25"
+   },
+   "levelsByTownHall": {
+    "Town Hall 15": "10",
+    "Town Hall 16": "15",
+    "Town Hall 17": "20",
+    "Town Hall 18": "25"
+   }
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "damagePerSecond": {
+   "wikiHeader": "Damage per Second",
+   "unit": "damage per second"
+  },
+  "damagePerHit": {
+   "wikiHeader": "Damage per Hit",
+   "unit": "damage points"
+  },
+  "hitpoints": {
+   "wikiHeader": "Hitpoints",
+   "unit": "hitpoints"
+  },
+  "healthRecovery": {
+   "wikiHeader": "Health Recovery",
+   "unit": "hitpoints"
+  },
+  "upgradeCost": {
+   "wikiHeader": "Upgrade Cost",
+   "unit": "resource amount"
+  },
+  "upgradeTimeSeconds": {
+   "wikiHeader": "Upgrade Time",
+   "unit": "seconds"
+  },
+  "heroHallLevelRequired": {
+   "wikiHeader": "Hero Hall Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damagePerSecond": 304,
+   "damagePerHit": 364.8,
+   "hitpoints": 9100,
+   "healthRecovery": 3500,
+   "upgradeCost": null,
+   "upgradeTimeSeconds": null,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 2,
+   "damagePerSecond": 308,
+   "damagePerHit": 369.6,
+   "hitpoints": 9175,
+   "healthRecovery": 3500,
+   "upgradeCost": 50000,
+   "upgradeTimeSeconds": 21600,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 3,
+   "damagePerSecond": 312,
+   "damagePerHit": 374.4,
+   "hitpoints": 9250,
+   "healthRecovery": 3500,
+   "upgradeCost": 60000,
+   "upgradeTimeSeconds": 43200,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 4,
+   "damagePerSecond": 316,
+   "damagePerHit": 379.2,
+   "hitpoints": 9325,
+   "healthRecovery": 3500,
+   "upgradeCost": 70000,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 5,
+   "damagePerSecond": 320,
+   "damagePerHit": 384,
+   "hitpoints": 9400,
+   "healthRecovery": 3750,
+   "upgradeCost": 80000,
+   "upgradeTimeSeconds": 86400,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 6,
+   "damagePerSecond": 324,
+   "damagePerHit": 388.8,
+   "hitpoints": 9475,
+   "healthRecovery": 3750,
+   "upgradeCost": 90000,
+   "upgradeTimeSeconds": 172800,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 7,
+   "damagePerSecond": 328,
+   "damagePerHit": 393.6,
+   "hitpoints": 9550,
+   "healthRecovery": 3750,
+   "upgradeCost": 100000,
+   "upgradeTimeSeconds": 172800,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 8,
+   "damagePerSecond": 332,
+   "damagePerHit": 398.4,
+   "hitpoints": 9625,
+   "healthRecovery": 3750,
+   "upgradeCost": 110000,
+   "upgradeTimeSeconds": 172800,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 9,
+   "damagePerSecond": 336,
+   "damagePerHit": 403.2,
+   "hitpoints": 9700,
+   "healthRecovery": 3750,
+   "upgradeCost": 120000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 10,
+   "damagePerSecond": 340,
+   "damagePerHit": 408,
+   "hitpoints": 9775,
+   "healthRecovery": 4000,
+   "upgradeCost": 130000,
+   "upgradeTimeSeconds": 259200,
+   "heroHallLevelRequired": 9
+  },
+  {
+   "level": 11,
+   "damagePerSecond": 344,
+   "damagePerHit": 412.8,
+   "hitpoints": 9850,
+   "healthRecovery": 4000,
+   "upgradeCost": 150000,
+   "upgradeTimeSeconds": 345600,
+   "heroHallLevelRequired": 10
+  },
+  {
+   "level": 12,
+   "damagePerSecond": 348,
+   "damagePerHit": 417.6,
+   "hitpoints": 9925,
+   "healthRecovery": 4000,
+   "upgradeCost": 175000,
+   "upgradeTimeSeconds": 432000,
+   "heroHallLevelRequired": 10
+  },
+  {
+   "level": 13,
+   "damagePerSecond": 352,
+   "damagePerHit": 422.4,
+   "hitpoints": 10000,
+   "healthRecovery": 4000,
+   "upgradeCost": 200000,
+   "upgradeTimeSeconds": 432000,
+   "heroHallLevelRequired": 10
+  },
+  {
+   "level": 14,
+   "damagePerSecond": 356,
+   "damagePerHit": 427.2,
+   "hitpoints": 10075,
+   "healthRecovery": 4000,
+   "upgradeCost": 225000,
+   "upgradeTimeSeconds": 518400,
+   "heroHallLevelRequired": 10
+  },
+  {
+   "level": 15,
+   "damagePerSecond": 360,
+   "damagePerHit": 432,
+   "hitpoints": 10150,
+   "healthRecovery": 4250,
+   "upgradeCost": 250000,
+   "upgradeTimeSeconds": 518400,
+   "heroHallLevelRequired": 10
+  },
+  {
+   "level": 16,
+   "damagePerSecond": 364,
+   "damagePerHit": 436.8,
+   "hitpoints": 10225,
+   "healthRecovery": 4250,
+   "upgradeCost": 275000,
+   "upgradeTimeSeconds": 604800,
+   "heroHallLevelRequired": 11
+  },
+  {
+   "level": 17,
+   "damagePerSecond": 368,
+   "damagePerHit": 441.6,
+   "hitpoints": 10300,
+   "healthRecovery": 4250,
+   "upgradeCost": 300000,
+   "upgradeTimeSeconds": 604800,
+   "heroHallLevelRequired": 11
+  },
+  {
+   "level": 18,
+   "damagePerSecond": 372,
+   "damagePerHit": 446.4,
+   "hitpoints": 10375,
+   "healthRecovery": 4250,
+   "upgradeCost": 325000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 11
+  },
+  {
+   "level": 19,
+   "damagePerSecond": 376,
+   "damagePerHit": 451.2,
+   "hitpoints": 10450,
+   "healthRecovery": 4250,
+   "upgradeCost": 350000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 11
+  },
+  {
+   "level": 20,
+   "damagePerSecond": 380,
+   "damagePerHit": 456,
+   "hitpoints": 10525,
+   "healthRecovery": 4500,
+   "upgradeCost": 375000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 11
+  },
+  {
+   "level": 21,
+   "damagePerSecond": 384,
+   "damagePerHit": 460.8,
+   "hitpoints": 10600,
+   "healthRecovery": 4500,
+   "upgradeCost": 400000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  },
+  {
+   "level": 22,
+   "damagePerSecond": 388,
+   "damagePerHit": 465.6,
+   "hitpoints": 10675,
+   "healthRecovery": 4500,
+   "upgradeCost": 420000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  },
+  {
+   "level": 23,
+   "damagePerSecond": 392,
+   "damagePerHit": 470.4,
+   "hitpoints": 10750,
+   "healthRecovery": 4500,
+   "upgradeCost": 440000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  },
+  {
+   "level": 24,
+   "damagePerSecond": 396,
+   "damagePerHit": 475.2,
+   "hitpoints": 10825,
+   "healthRecovery": 4500,
+   "upgradeCost": 460000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  },
+  {
+   "level": 25,
+   "damagePerSecond": 400,
+   "damagePerHit": 480,
+   "hitpoints": 10900,
+   "healthRecovery": 4750,
+   "upgradeCost": 480000,
+   "upgradeTimeSeconds": 691200,
+   "heroHallLevelRequired": 12
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "Range",
+   "level": null,
+   "wiki": "0.3 tiles",
+   "client": "AttackRange 125 (= 1.25 tiles)",
+   "note": "constant from the wiki's first statistics table"
+  },
+  {
+   "field": "Search Radius",
+   "level": null,
+   "wiki": "10 tiles",
+   "client": "AlertRadius 1200 / MaxSearchRadiusForDefender 1000 / PatrolRadius 300",
+   "note": "no direct client equivalent"
+  }
+ ]
+}

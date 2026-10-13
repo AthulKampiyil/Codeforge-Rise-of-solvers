@@ -1,0 +1,126 @@
+{
+  "title": "Dark Spell Factory",
+  "url": "https://clashofclans.fandom.com/wiki/Dark_Spell_Factory",
+  "revid": 624552,
+  "clientName": "Dark Spell Factory",
+  "category": "building",
+  "retrieved": "2026-09-15",
+  "contentPage": "Dark Spell Factory",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "buildings",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "footprint": "3x3",
+    "unlockTownHall": 8
+  },
+  "levels": [
+    {
+      "level": 1,
+      "hitpoints": 600,
+      "spellsUnlocked": "Poison Spell",
+      "spellCapacity": 1,
+      "buildCost": 130000,
+      "buildTimeHours": 6,
+      "experience": 146,
+      "townHallLevel": 8
+    },
+    {
+      "level": 2,
+      "hitpoints": 660,
+      "spellsUnlocked": "Earthquake Spell",
+      "spellCapacity": 1,
+      "buildCost": 260000,
+      "buildTimeHours": 12,
+      "experience": 207,
+      "townHallLevel": 8
+    },
+    {
+      "level": 3,
+      "hitpoints": 720,
+      "spellsUnlocked": "Haste Spell",
+      "spellCapacity": 1,
+      "buildCost": 600000,
+      "buildTimeHours": 48,
+      "experience": 415,
+      "townHallLevel": 9
+    },
+    {
+      "level": 4,
+      "hitpoints": 780,
+      "spellsUnlocked": "Skeleton Spell",
+      "spellCapacity": 1,
+      "buildCost": 1200000,
+      "buildTimeHours": 72,
+      "experience": 587,
+      "townHallLevel": 9
+    },
+    {
+      "level": 5,
+      "hitpoints": 840,
+      "spellsUnlocked": "Bat Spell",
+      "spellCapacity": 1,
+      "buildCost": 2500000,
+      "buildTimeHours": 120,
+      "experience": 657,
+      "townHallLevel": 10
+    },
+    {
+      "level": 6,
+      "hitpoints": 950,
+      "spellsUnlocked": "Overgrowth Spell",
+      "spellCapacity": 1,
+      "buildCost": 4000000,
+      "buildTimeHours": 144,
+      "experience": 720,
+      "townHallLevel": 12
+    },
+    {
+      "level": 7,
+      "hitpoints": 1010,
+      "spellsUnlocked": "Ice Block Spell",
+      "spellCapacity": 1,
+      "buildCost": 11000000,
+      "buildTimeHours": 168,
+      "experience": 777,
+      "townHallLevel": 14
+    },
+    {
+      "level": 8,
+      "hitpoints": 1070,
+      "spellsUnlocked": "Angry Spell",
+      "spellCapacity": 1,
+      "buildCost": 18000000,
+      "buildTimeHours": 240,
+      "experience": 929,
+      "townHallLevel": 15
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "experience",
+      "level": 4,
+      "wiki": 587,
+      "client": 509,
+      "note": "client floor(sqrt(build seconds))"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "spell capacity",
+      "client": "`HousingSpaceAlt` = 1 at every level"
+    },
+    {
+      "mechanic": "unlocks",
+      "client": "spells.json `SpellForgeLevel` with `ProductionBuilding` = 'Dark Spell Factory'"
+    },
+    {
+      "mechanic": "HP / cost / time / TH",
+      "client": "`Hitpoints`, `BuildCost` (Elixir), `BuildTimeD/H/M/S`, `TownHallLevel`"
+    },
+    {
+      "mechanic": "other",
+      "client": "`UnitProduction` 2,4,6,8,10,12,12,14 (legacy queue size, not the housing cap), `ProducesUnitsOfType` = 2, `ForgesMiniSpells` = TRUE"
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "clientVersion": "18.400.21",
+  "sources": {
+    "csv/animations.csv": "b0be152c98d06ccd0689320acfa19b07e04dd2a07fc6a1253558592f67bf29d8",
+    "logic/buildings.csv": "9aed5fed876e2914a22fa7fed688a651c691ab06170d60e2bda8dc9262fbccb1",
+    "logic/special_abilities.csv": "c978dd90ff2335e60d988f3476d78bec72672e8c074344d149096e89951181eb",
+    "logic/traps.csv": "757ca07de02b26b2071b52bb3cb495df2f0ae879731a859d3102ca3552dd528c",
+    "logic/weapons.csv": "38f6891fd14c5287ede72f7a2e873e0648231bf63e29463a9b63f1b8142ec540",
+    "sc/building_bases.sc": "964584a104a31088dfa6bef53f6c2df7bc9e59e0b05d4354bbe8ac4431c49d9f",
+    "sc/building_bases_0.sctx": "6bc35b86398b457643446ed8d86e24a1fe68d1daadf9155cfe94e13c4840d9fd",
+    "sc/buildings.sc": "f73ec949fc070bc03175d6bb3af8b62d8f607094bf2b343c9846a499a35be0ed",
+    "sc/buildings_0.sctx": "de9908c494173b6baf33061fc8a09f5d13837d281a3cb96be294a9912b4c541c",
+    "sc/buildings_1.sctx": "e931b617d748a541da10cfe7126b8b3fb77d13486ae0d97beb4abde2ef828f4a",
+    "sc/buildings_12.sctx": "fe512f85db38c2df7ed40f057113bca3f94a5c82dc2cecc71bbf158a0dee13c8",
+    "sc/buildings_17.sctx": "bce86a6857d43a6705833a6cb0a5ec269d8ff9990e8e15c5b9011422d59ab201",
+    "sc/buildings_18.sctx": "bd0c3b2eece3e9c43b2b3d61463e5b12ff4d274ae6adcc0ce33ceed63df58ffa",
+    "sc/buildings_19.sctx": "26df2233dcb1d4470f9bf3f110dfd1d354361850181fb7b3c69d866aea9b7b7c",
+    "sc/buildings_2.sctx": "ff0f766b8d361eeb942384600ace1082a11c7c7404bed41d976fbafbdd2dc622",
+    "sc/buildings_24.sctx": "165b1819f6969397bf0661fdf357ab3f339b3d3b8356f323bcc3687501bf2b14",
+    "sc/buildings_25.sctx": "c290a82b3940513f16b55dba2305e875d923d4120c5997b6b6908c680ec8ca3d",
+    "sc/buildings_26.sctx": "25fd6fd272f319b978f172bf57401f635289ca860a3bda563e024e98595a54d5",
+    "sc/buildings_29.sctx": "517566b90d4b0fb0781a7cc63482313526865b000fa7cf087ebab68250afc2e1",
+    "sc/buildings_3.sctx": "8abff3051ae6c14a2ba8599153ea910661986e84a14b54dd5ab10085bead5090",
+    "sc/buildings_31.sctx": "d997423592ed693067e4760cf58ab8202b440cc7ebd6703282e3e0f8c1000bbd",
+    "sc/buildings_32.sctx": "3d7d12b4648d36de316ada1b621c9ed655775d1cf366b465b711331581695098",
+    "sc/buildings_33.sctx": "9ae5ed0d8f74ab23260a5af3f784a4645fb00bcd47de4abc9abd20aea1749666",
+    "sc/buildings_34.sctx": "91c37bca2540eba7a080d510d4acd97334797d95499620dc79f071df7acaf5d8",
+    "sc/buildings_35.sctx": "35e6392104e55ed6e6b2635da517d0a5df28c947b2a2e34fb39d1550faf88a97",
+    "sc/buildings_4.sctx": "f17a2a2e1d1506eabff68ccc0b6bc1f36b59677597112fd5e012c3495be80d66",
+    "sc/buildings_41.sctx": "b3382bdda1665f62f476dca4afc8896cd1251d53f2c0b533f2fa2c09dfa94260",
+    "sc/buildings_42.sctx": "b08ef6869de242d7e284cc89db27c6f0633346e59d122af7c12a4e5d1e49983d",
+    "sc/buildings_43.sctx": "0a8b8d0c297dcb4a941c3340f2a981c7bb55603a535d7d5d5cec46b9743bda68",
+    "sc/buildings_44.sctx": "369c50aa440ec029e306782fa2cdc132af5579c0c7e98cbdfdc6d3d996d546f8",
+    "sc/buildings_45.sctx": "ce0425622f22f1dade3fd1614e1c3ce5fabe4e09d9c5f32d014dd1f12cdc9287",
+    "sc/buildings_59.sctx": "8d5b75f662c9c0b2c542dc879a8e49cc7aa86ba237a243e5e4196a4c313da794",
+    "sc/buildings_66.sctx": "c65a2f6e362edfd51d5fc634d5a6c30ec353bd936fa06fa8775b856aeb7baff0",
+    "sc/buildings_68.sctx": "ba24538bee15ab16a4908bce2186ce16c8489834592856a21dfe4d0e353366f5",
+    "sc/buildings_7.sctx": "f5f6ace9e3740b73a326c34c15a107e0543fdca8afbaa02f5d530c459276a3a4",
+    "sc/buildings_8.sctx": "588eba7d5739a5d9b53d3e14f2ab83bd170cad735363a81dd37bea7bcc0bb3bd"
+  },
+  "buildings": {
+    "townhall": {
+      "path": "assets/village-native/townhall/graph.json",
+      "sha256": "2a20a05c55fb9eed19025b9f1e0346af9d803a55cf0cc3e803e076df66dbc9ca",
+      "levels": 18
+    },
+    "goldmine": {
+      "path": "assets/village-native/goldmine/graph.json",
+      "sha256": "8aad62d59ff5c96487d875680dfd70d15cfb8587ea40f0f876197468dfb6e955",
+      "levels": 17
+    },
+    "collector": {
+      "path": "assets/village-native/collector/graph.json",
+      "sha256": "398cc074b1abd392bd57110ffda92bb257fea6d2a8aa07bd76b274940c79bd8f",
+      "levels": 17
+    },
+    "goldstorage": {
+      "path": "assets/village-native/goldstorage/graph.json",
+      "sha256": "ce2262820148e2ac9d4a046be8ba1d4aad977680b818de19e5bdbece09a7ea52",
+      "levels": 19
+    },
+    "elixirstorage": {
+      "path": "assets/village-native/elixirstorage/graph.json",
+      "sha256": "74d36ad41d9390cf897422fbc23d35c54ab81dbc40a189f9563826d618be670d",
+      "levels": 19
+    },
+    "barracks": {
+      "path": "assets/village-native/barracks/graph.json",
+      "sha256": "75fc8ed1e51bd26fcf6b7aed4c66531eafd4d6e4335eb70d169860fe53019867",
+      "levels": 19
+    },
+    "laboratory": {
+      "path": "assets/village-native/laboratory/graph.json",
+      "sha256": "f5efcf3d210d86e4bb1d80ef6959cc733dbcc749df345950b3652c263007f4d9",
+      "levels": 16
+    },
+    "spellfactory": {
+      "path": "assets/village-native/spellfactory/graph.json",
+      "sha256": "ac2fcd9719b4baba41938316527f92ec39d8eb9b2c6f1d191d60eddc5c7a3c09",
+      "levels": 9
+    },
+    "herohall": {
+      "path": "assets/village-native/herohall/graph.json",
+      "sha256": "b96078821bac943046add20474dcf5d4fd494e2f12964a394acf2e499332dfc1",
+      "levels": 12
+    },
+    "blacksmith": {
+      "path": "assets/village-native/blacksmith/graph.json",
+      "sha256": "84ff057abc5ea2a9bf7ac77d82a72741c877fa941e41d0bf281f78dc4d39af76",
+      "levels": 10
+    },
+    "builder": {
+      "path": "assets/village-native/builder/graph.json",
+      "sha256": "615d7c75c33cd218aa97a2bd13f4bed51d732d1695d8591feb479966c3355927",
+      "levels": 8
+    },
+    "camp": {
+      "path": "assets/village-native/camp/graph.json",
+      "sha256": "60230b5ee2734fc7afef825d8a909ba3ef27cb3e05ad84adb4fd5f6767fc6cd1",
+      "levels": 14
+    },
+    "airdefense": {
+      "path": "assets/village-native/airdefense/graph.json",
+      "sha256": "e825f7d5cee3b00628e92ed4a0408a56d175d09dc16c58dae57364ba989ce77c",
+      "levels": 16
+    },
+    "bomb": {
+      "path": "assets/village-native/bomb/graph.json",
+      "sha256": "306879a0622c61e19ee7b69791550756b648f09627533c18e2328540d24f7d6e",
+      "levels": 14
+    },
+    "giantbomb": {
+      "path": "assets/village-native/giantbomb/graph.json",
+      "sha256": "e96b23c3269bca1538b7979d4732502900dc334e0b4b36338f3d61e7264af58f",
+      "levels": 12
+    },
+    "airbomb": {
+      "path": "assets/village-native/airbomb/graph.json",
+      "sha256": "81c1a07b109246afb75eaf827d5d06013e467628750b5de6b32f052501d07dda",
+      "levels": 13
+    },
+    "springtrap": {
+      "path": "assets/village-native/springtrap/graph.json",
+      "sha256": "aaa84f468bb84dfbdca8313802f64af2185a5fe74f77c7f15d0e2e8379e2fd43",
+      "levels": 13
+    },
+    "wall": {
+      "path": "assets/village-native/wall/graph.json",
+      "sha256": "0f5e45829db15939c98637b223b4d7722712781f6799387568d896fb4447464d",
+      "levels": 19
+    },
+    "darkbarracks": {
+      "path": "assets/village-native/darkbarracks/graph.json",
+      "sha256": "d9e385ec6f35e73cbee6d88b76bbf09fd6084a3182985461a5eee04be7799215",
+      "levels": 13
+    },
+    "darkspellfactory": {
+      "path": "assets/village-native/darkspellfactory/graph.json",
+      "sha256": "24450ef49746be84c1e0a6c92a478e798c7fee1532888dc07992be5eff9d7343",
+      "levels": 8
+    },
+    "workshop": {
+      "path": "assets/village-native/workshop/graph.json",
+      "sha256": "2125004835377c93ac8b32eef8fd99b2a4f8777a6871e5b7eb02222ca69635fd",
+      "levels": 9
+    },
+    "pethouse": {
+      "path": "assets/village-native/pethouse/graph.json",
+      "sha256": "d6ae6e71c9e490c57ea310d5d41465a3851080f85acc469a925005bba33973db",
+      "levels": 12
+    },
+    "eagle": {
+      "path": "assets/village-native/eagle/graph.json",
+      "sha256": "9e01c0f8b845f84ba0a80c5b3c97da79f2643339255705bf830f50ad475e125f",
+      "levels": 7
+    },
+    "scattershot": {
+      "path": "assets/village-native/scattershot/graph.json",
+      "sha256": "3827dab91ef4958c0441f99993990319542003cde0bf5d765f0acb5eef7166b9",
+      "levels": 7
+    },
+    "spelltower": {
+      "path": "assets/village-native/spelltower/graph.json",
+      "sha256": "b41c47a801ff30e4ddacd197711b3b43be8730609cc49858db3ff70fbce7fd82",
+      "levels": 4
+    },
+    "monolith": {
+      "path": "assets/village-native/monolith/graph.json",
+      "sha256": "d9efba925a7457800284817aa26925fdcb7af8c60b5a0f7758689922b05312d0",
+      "levels": 5
+    },
+    "multiarchertower": {
+      "path": "assets/village-native/multiarchertower/graph.json",
+      "sha256": "2f4c23e7d49325b4848648530a63e4cded126558ac569f7df7e8d7865e84d8ea",
+      "levels": 4
+    },
+    "ricochetcannon": {
+      "path": "assets/village-native/ricochetcannon/graph.json",
+      "sha256": "4c6835148016a688706095c9852b1cb2891d9ff9c8caea13d55e64bdd3f7eca1",
+      "levels": 4
+    },
+    "multigeartower": {
+      "path": "assets/village-native/multigeartower/graph.json",
+      "sha256": "d8e06123d5adda71e1993cd15a54cd33e604fd55a99de613b3fb8cd76133526f",
+      "levels": 3,
+      "variants": {
+        "alternate-1": {
+          "path": "assets/village-native/multigeartower/alternate-1/graph.json",
+          "sha256": "778191178103b54756573415a6959c0653059ae848427494c5929b0f91ff5c72"
+        },
+        "alternate-2": {
+          "path": "assets/village-native/multigeartower/alternate-2/graph.json",
+          "sha256": "5bf6959e80e7c67000c65544208cdb250d71add3907c697e00492606e69bc13d"
+        },
+        "alternate-3": {
+          "path": "assets/village-native/multigeartower/alternate-3/graph.json",
+          "sha256": "8c875eceabc5e11989d9d55562af924ad6b867fd032327a2060dac8c264893cf"
+        }
+      }
+    },
+    "firespitter": {
+      "path": "assets/village-native/firespitter/graph.json",
+      "sha256": "41a03e9cc3268d3301a56848a5361115e47a957081793219fd9ec91b617d14b4",
+      "levels": 3
+    },
+    "revengetower": {
+      "path": "assets/village-native/revengetower/graph.json",
+      "sha256": "29b1cf2751ee302d728f83f0c28ea0258260a8d72f52bf6469bef2e5088fc6f7",
+      "levels": 2,
+      "variants": {
+        "tiers-1": {
+          "path": "assets/village-native/revengetower/tiers-1/graph.json",
+          "sha256": "0c9612360d598982fc661f67536546b1af7a2f286844a1fa16b5ed036005ec92"
+        },
+        "tiers-2": {
+          "path": "assets/village-native/revengetower/tiers-2/graph.json",
+          "sha256": "a3d156bdbe4b9b95268f5ac097cd057411fb9e719d93561b86fdeee438383892"
+        }
+      }
+    },
+    "superwizardtower": {
+      "path": "assets/village-native/superwizardtower/graph.json",
+      "sha256": "b3fb3006c5eced163f9da4d0ba8f9657125945575e8e9a2f6db1fea068b59f3f",
+      "levels": 2
+    },
+    "tornadotrap": {
+      "path": "assets/village-native/tornadotrap/graph.json",
+      "sha256": "ed9b4eef9d4690f17fbe4e2dca10fc51821adabe8f033192436ff024b2169f49",
+      "levels": 3
+    },
+    "gigabomb": {
+      "path": "assets/village-native/gigabomb/graph.json",
+      "sha256": "5b97b2310b6c336a686c41a57dbec13a4e2743e330420dee32ffa560ba7592d0",
+      "levels": 4
+    }
+  }
+}

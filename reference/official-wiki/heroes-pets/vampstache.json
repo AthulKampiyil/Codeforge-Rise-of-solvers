@@ -1,0 +1,264 @@
+{
+ "title": "Vampstache",
+ "url": "https://clashofclans.fandom.com/wiki/Vampstache",
+ "revid": 621314,
+ "retrieved": "2026-09-15",
+ "clientName": "Vampstache",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Barbarian King",
+ "summary": "King Common passive item (Blacksmith 3): heals a flat amount on every hit (60 → 300); passive DPS and attack speed.",
+ "constants": {
+  "wiki": {
+   "User": "Barbarian King",
+   "Ability Type": "Passive",
+   "Rarity": "Common",
+   "Unlock Requirement": "Blacksmith level 3"
+  },
+  "client": {
+   "Rarity": "COMMON",
+   "AllowedCharacters": "Barbarian King;",
+   "MainAbilities": "BarbarianKingVampstache",
+   "levelRows": 18,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "healPerHit": {
+   "wikiHeader": "Heal per Hit",
+   "unit": "hitpoints healed"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boosts / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "attackSpeedIncreasePercent": {
+   "wikiHeader": "Hero Boosts / Attack Speed Increase",
+   "unit": "percent"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "healPerHit": 60,
+   "damagePerSecondIncrease": 10,
+   "attackSpeedIncreasePercent": 5,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 2,
+   "healPerHit": 60,
+   "damagePerSecondIncrease": 15,
+   "attackSpeedIncreasePercent": 6,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 3,
+   "healPerHit": 90,
+   "damagePerSecondIncrease": 20,
+   "attackSpeedIncreasePercent": 7,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 4,
+   "healPerHit": 90,
+   "damagePerSecondIncrease": 25,
+   "attackSpeedIncreasePercent": 8,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 5,
+   "healPerHit": 90,
+   "damagePerSecondIncrease": 30,
+   "attackSpeedIncreasePercent": 9,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 6,
+   "healPerHit": 120,
+   "damagePerSecondIncrease": 40,
+   "attackSpeedIncreasePercent": 10,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 7,
+   "healPerHit": 120,
+   "damagePerSecondIncrease": 45,
+   "attackSpeedIncreasePercent": 11,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 8,
+   "healPerHit": 120,
+   "damagePerSecondIncrease": 50,
+   "attackSpeedIncreasePercent": 12,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 9,
+   "healPerHit": 160,
+   "damagePerSecondIncrease": 60,
+   "attackSpeedIncreasePercent": 13,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 10,
+   "healPerHit": 160,
+   "damagePerSecondIncrease": 65,
+   "attackSpeedIncreasePercent": 14,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 11,
+   "healPerHit": 160,
+   "damagePerSecondIncrease": 70,
+   "attackSpeedIncreasePercent": 15,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 12,
+   "healPerHit": 200,
+   "damagePerSecondIncrease": 80,
+   "attackSpeedIncreasePercent": 16,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 13,
+   "healPerHit": 200,
+   "damagePerSecondIncrease": 85,
+   "attackSpeedIncreasePercent": 17,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 14,
+   "healPerHit": 200,
+   "damagePerSecondIncrease": 90,
+   "attackSpeedIncreasePercent": 18,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 15,
+   "healPerHit": 250,
+   "damagePerSecondIncrease": 100,
+   "attackSpeedIncreasePercent": 19,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 16,
+   "healPerHit": 250,
+   "damagePerSecondIncrease": 105,
+   "attackSpeedIncreasePercent": 20,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 17,
+   "healPerHit": 250,
+   "damagePerSecondIncrease": 110,
+   "attackSpeedIncreasePercent": 21,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 18,
+   "healPerHit": 300,
+   "damagePerSecondIncrease": 120,
+   "attackSpeedIncreasePercent": 22,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 7
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "attackSpeedStacking",
+   "level": null,
+   "wiki": "percentages add: interval = 1.2 / (1 + Σ%)",
+   "client": "AttackSpeedPercentage per item; combination rule not encoded",
+   "note": "engine rule; also compare Haste Vial (multiplicative) and Stick Horse (AttackSpeed override)"
+  }
+ ],
+ "clientColumns": [
+  "MainAbilities:special_abilities[BarbarianKingVampstache].SelfDamagePerHit",
+  "character_items.AttackSpeedPercentage",
+  "character_items.DPS",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

@@ -1,0 +1,180 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "townhall": 7,
+      "hp": 600,
+      "dps": 34,
+      "cost": 250000,
+      "seconds": 7200,
+      "attackEffect": "Tesla Attack_1",
+      "secondaryEffect": null
+    },
+    {
+      "level": 2,
+      "townhall": 7,
+      "hp": 630,
+      "dps": 40,
+      "cost": 350000,
+      "seconds": 10800,
+      "attackEffect": "Tesla Attack_1",
+      "secondaryEffect": null
+    },
+    {
+      "level": 3,
+      "townhall": 7,
+      "hp": 660,
+      "dps": 48,
+      "cost": 500000,
+      "seconds": 14400,
+      "attackEffect": "Tesla Attack_1",
+      "secondaryEffect": null
+    },
+    {
+      "level": 4,
+      "townhall": 8,
+      "hp": 690,
+      "dps": 55,
+      "cost": 600000,
+      "seconds": 21600,
+      "attackEffect": "Tesla Attack_2",
+      "secondaryEffect": null
+    },
+    {
+      "level": 5,
+      "townhall": 8,
+      "hp": 730,
+      "dps": 64,
+      "cost": 800000,
+      "seconds": 43200,
+      "attackEffect": "Tesla Attack_2",
+      "secondaryEffect": null
+    },
+    {
+      "level": 6,
+      "townhall": 8,
+      "hp": 770,
+      "dps": 75,
+      "cost": 1200000,
+      "seconds": 86400,
+      "attackEffect": "Tesla Attack_3",
+      "secondaryEffect": null
+    },
+    {
+      "level": 7,
+      "townhall": 9,
+      "hp": 810,
+      "dps": 87,
+      "cost": 1400000,
+      "seconds": 108000,
+      "attackEffect": "Tesla Attack_4",
+      "secondaryEffect": "Tesla Attack_4_Secondary"
+    },
+    {
+      "level": 8,
+      "townhall": 10,
+      "hp": 850,
+      "dps": 99,
+      "cost": 1600000,
+      "seconds": 129600,
+      "attackEffect": "Tesla Attack_4",
+      "secondaryEffect": "Tesla Attack_8_Secondary"
+    },
+    {
+      "level": 9,
+      "townhall": 11,
+      "hp": 900,
+      "dps": 110,
+      "cost": 2100000,
+      "seconds": 151200,
+      "attackEffect": "Tesla Attack_4",
+      "secondaryEffect": "Tesla Attack_9_Secondary"
+    },
+    {
+      "level": 10,
+      "townhall": 12,
+      "hp": 980,
+      "dps": 120,
+      "cost": 3000000,
+      "seconds": 172800,
+      "attackEffect": "Tesla Attack_4",
+      "secondaryEffect": "Tesla Attack_10_Secondary"
+    },
+    {
+      "level": 11,
+      "townhall": 13,
+      "hp": 1100,
+      "dps": 130,
+      "cost": 3100000,
+      "seconds": 216000,
+      "attackEffect": "Tesla Attack_4",
+      "secondaryEffect": "Tesla Attack_10_Secondary"
+    },
+    {
+      "level": 12,
+      "townhall": 13,
+      "hp": 1200,
+      "dps": 140,
+      "cost": 3700000,
+      "seconds": 259200,
+      "attackEffect": "Tesla Attack_4",
+      "secondaryEffect": "Tesla Attack_10_Secondary"
+    },
+    {
+      "level": 13,
+      "townhall": 14,
+      "hp": 1350,
+      "dps": 150,
+      "cost": 5100000,
+      "seconds": 302400,
+      "attackEffect": "Tesla Attack_4",
+      "secondaryEffect": "Tesla Attack_10_Secondary"
+    },
+    {
+      "level": 14,
+      "townhall": 15,
+      "hp": 1450,
+      "dps": 160,
+      "cost": 6500000,
+      "seconds": 345600,
+      "attackEffect": "Tesla Attack_4",
+      "secondaryEffect": "Tesla Attack_10_Secondary"
+    },
+    {
+      "level": 15,
+      "townhall": 16,
+      "hp": 1550,
+      "dps": 170,
+      "cost": 8200000,
+      "seconds": 432000,
+      "attackEffect": "Tesla Attack_4",
+      "secondaryEffect": "Tesla Attack_10_Secondary"
+    },
+    {
+      "level": 16,
+      "townhall": 17,
+      "hp": 1650,
+      "dps": 180,
+      "cost": 15000000,
+      "seconds": 604800,
+      "attackEffect": "Tesla Attack_4",
+      "secondaryEffect": "Tesla Attack_10_Secondary"
+    },
+    {
+      "level": 17,
+      "townhall": 18,
+      "hp": 1750,
+      "dps": 190,
+      "cost": 25000000,
+      "seconds": 1123200,
+      "attackEffect": "Tesla Attack_4",
+      "secondaryEffect": "Tesla Attack_10_Secondary"
+    }
+  ],
+  "intervalMs": 600,
+  "triggerRange": 600,
+  "attackRange": 700,
+  "airTargets": true,
+  "groundTargets": true,
+  "size": 2
+}

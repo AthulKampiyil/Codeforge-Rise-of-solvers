@@ -1,0 +1,202 @@
+{
+ "title": "Yetimite",
+ "page": "Yeti/Yetimite",
+ "url": "https://clashofclans.fandom.com/wiki/Yeti/Yetimite",
+ "revid": 623075,
+ "retrieved": "2026-09-15",
+ "clientName": "Yetimite",
+ "clientVersion": "18.400.21",
+ "category": "secondary-unit",
+ "parent": "yeti",
+ "constants": {
+  "housingSpace": 2,
+  "movementSpeedWiki": 24,
+  "internalSpeed": 300,
+  "tilesPerSecond": 3,
+  "attackRangeTiles": 2,
+  "attackRangeTilesClient": 2,
+  "attackSeconds": 1,
+  "splashTiles": 0.8,
+  "splashTilesClient": 0.8,
+  "attackTypeWiki": "Area Splash (0.8 Tile Radius; Air & Ground)",
+  "targets": "ground+air",
+  "favoriteTarget": "Defenses (Damage x4)",
+  "favoriteTargetTemplate": "Defenses",
+  "favoriteTargetClient": "Defense",
+  "favoriteMultiplier": 4,
+  "flying": false,
+  "jumpsWalls": true,
+  "underground": false,
+  "triggersTraps": false,
+  "doesNotOpenCC": true,
+  "healerWeight": 0
+ },
+ "client": {
+  "clientName": "Yetimite",
+  "housingSpace": 2,
+  "internalSpeed": 300,
+  "movementSpeedInGameExact": 24,
+  "movementSpeedInGameRounded": 24,
+  "tilesPerSecond": 3,
+  "attackRangeTiles": 2,
+  "attackSeconds": 1,
+  "splashTiles": 0.8,
+  "targets": "ground+air",
+  "flying": false,
+  "jumpsWalls": true,
+  "favoriteTarget": "Defense",
+  "favoriteMultiplier": 4,
+  "triggersTraps": false,
+  "healerWeight": 0,
+  "newTargetAttackDelay": 500,
+  "movementOffsetSpeed": 0,
+  "doesNotOpenCC": true,
+  "isSecondaryTroop": true
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damagePerHit": 56,
+   "damageVsFavorite": 224,
+   "damageVsResources": 28,
+   "damageVsTownHall": 112,
+   "hitpoints": 300
+  },
+  {
+   "level": 2,
+   "damagePerHit": 64,
+   "damageVsFavorite": 256,
+   "damageVsResources": 32,
+   "damageVsTownHall": 128,
+   "hitpoints": 350
+  },
+  {
+   "level": 3,
+   "damagePerHit": 72,
+   "damageVsFavorite": 288,
+   "damageVsResources": 36,
+   "damageVsTownHall": 144,
+   "hitpoints": 400
+  },
+  {
+   "level": 4,
+   "damagePerHit": 78,
+   "damageVsFavorite": 312,
+   "damageVsResources": 39,
+   "damageVsTownHall": 156,
+   "hitpoints": 450
+  },
+  {
+   "level": 5,
+   "damagePerHit": 84,
+   "damageVsFavorite": 336,
+   "damageVsResources": 42,
+   "damageVsTownHall": 168,
+   "hitpoints": 500
+  },
+  {
+   "level": 6,
+   "damagePerHit": 88,
+   "damageVsFavorite": 352,
+   "damageVsResources": 44,
+   "damageVsTownHall": 176,
+   "hitpoints": 550
+  },
+  {
+   "level": 7,
+   "damagePerHit": 90,
+   "damageVsFavorite": 360,
+   "damageVsResources": 45,
+   "damageVsTownHall": 180,
+   "hitpoints": 575
+  },
+  {
+   "level": 8,
+   "damagePerHit": 92,
+   "damageVsFavorite": 368,
+   "damageVsResources": 46,
+   "damageVsTownHall": 184,
+   "hitpoints": 590
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 300,
+   "dps": 56,
+   "damagePerHit": 56,
+   "damageVsFavorite": 224,
+   "damageVsResources": 28,
+   "damageVsTownHall": 112
+  },
+  {
+   "level": 2,
+   "hitpoints": 350,
+   "dps": 64,
+   "damagePerHit": 64,
+   "damageVsFavorite": 256,
+   "damageVsResources": 32,
+   "damageVsTownHall": 128
+  },
+  {
+   "level": 3,
+   "hitpoints": 400,
+   "dps": 72,
+   "damagePerHit": 72,
+   "damageVsFavorite": 288,
+   "damageVsResources": 36,
+   "damageVsTownHall": 144
+  },
+  {
+   "level": 4,
+   "hitpoints": 450,
+   "dps": 78,
+   "damagePerHit": 78,
+   "damageVsFavorite": 312,
+   "damageVsResources": 39,
+   "damageVsTownHall": 156
+  },
+  {
+   "level": 5,
+   "hitpoints": 500,
+   "dps": 84,
+   "damagePerHit": 84,
+   "damageVsFavorite": 336,
+   "damageVsResources": 42,
+   "damageVsTownHall": 168
+  },
+  {
+   "level": 6,
+   "hitpoints": 550,
+   "dps": 88,
+   "damagePerHit": 88,
+   "damageVsFavorite": 352,
+   "damageVsResources": 44,
+   "damageVsTownHall": 176
+  },
+  {
+   "level": 7,
+   "hitpoints": 575,
+   "dps": 90,
+   "damagePerHit": 90,
+   "damageVsFavorite": 360,
+   "damageVsResources": 45,
+   "damageVsTownHall": 180
+  },
+  {
+   "level": 8,
+   "hitpoints": 590,
+   "dps": 92,
+   "damagePerHit": 92,
+   "damageVsFavorite": 368,
+   "damageVsResources": 46,
+   "damageVsTownHall": 184
+  }
+ ],
+ "comparison": {
+  "checked": 48,
+  "matched": 48
+ },
+ "mismatches": [],
+ "ambiguities": []
+}

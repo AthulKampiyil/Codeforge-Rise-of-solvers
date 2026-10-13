@@ -1,0 +1,1321 @@
+{
+  "sources": {
+    "fingerprint.json": "ecb5b05d632831cd706e4e993158b63635445257ad254bec97c371b078e3044b",
+    "sc/buildings.sc": "f73ec949fc070bc03175d6bb3af8b62d8f607094bf2b343c9846a499a35be0ed",
+    "sc/characters.sc": "0e23bd3745176fe7db3d61e490d9da07c63a42e95462f514d6eac696314c3798"
+  },
+  "definitionSha256": "646950cc4fb4210740371a663d17ed70edee3cac8aad67354c27c720fb659073",
+  "scenes": {
+    "sc/buildings.sc": {
+      "exports": {
+        "Hit": 17835,
+        "d1": 18119,
+        "d2": 18118,
+        "d3": 18116,
+        "d4": 18112,
+        "d5": 18109,
+        "debris1": 18183,
+        "debris10": 18193,
+        "debris11": 18192,
+        "debris12": 18191,
+        "debris13": 18190,
+        "debris14": 18189,
+        "debris15": 18188,
+        "debris16": 18187,
+        "debris17": 18186,
+        "debris18": 18185,
+        "debris19": 18184,
+        "debris2": 18200,
+        "debris3": 18199,
+        "debris4": 18198,
+        "debris5": 18204,
+        "debris6": 18197,
+        "debris7": 18196,
+        "debris8": 18195,
+        "debris9": 18194,
+        "defense_tower_turret_base": 2726,
+        "destroyedBuilding_3m_base_rockwood": 12277,
+        "destroyedBuilding_3m_grass_rockwood": 12273,
+        "destroyedBuilding_3m_grass_wood": 12272,
+        "g1": 17941,
+        "g2": 17108,
+        "g3": 17106,
+        "g4": 17938,
+        "s1": 17534,
+        "s2": 17531,
+        "s3": 17527,
+        "s4": 17524,
+        "smoke01": 17520,
+        "spark_dark": 18001,
+        "spark_flame": 18000,
+        "spell_range_marker_3": 17098,
+        "tower_turret_const": 9778,
+        "tower_turret_lvl1": 9968,
+        "tower_turret_lvl10": 9953,
+        "tower_turret_lvl10_down": 9952,
+        "tower_turret_lvl11": 9950,
+        "tower_turret_lvl11_down": 9949,
+        "tower_turret_lvl12": 9947,
+        "tower_turret_lvl12_down": 9946,
+        "tower_turret_lvl13": 9944,
+        "tower_turret_lvl13_down": 9943,
+        "tower_turret_lvl14": 9941,
+        "tower_turret_lvl14_down": 9940,
+        "tower_turret_lvl15": 9938,
+        "tower_turret_lvl15_down": 9937,
+        "tower_turret_lvl16": 9935,
+        "tower_turret_lvl16_down": 9934,
+        "tower_turret_lvl17": 9932,
+        "tower_turret_lvl17_down": 9931,
+        "tower_turret_lvl18": 9929,
+        "tower_turret_lvl18_down": 9928,
+        "tower_turret_lvl19": 9926,
+        "tower_turret_lvl19_down": 9925,
+        "tower_turret_lvl2": 9967,
+        "tower_turret_lvl20": 9923,
+        "tower_turret_lvl20_down": 9922,
+        "tower_turret_lvl21": 9920,
+        "tower_turret_lvl21_down": 9919,
+        "tower_turret_lvl3": 9966,
+        "tower_turret_lvl4": 9965,
+        "tower_turret_lvl5": 9964,
+        "tower_turret_lvl6": 9963,
+        "tower_turret_lvl7": 9962,
+        "tower_turret_lvl7_down": 9961,
+        "tower_turret_lvl8": 9959,
+        "tower_turret_lvl8_down": 9958,
+        "tower_turret_lvl9": 9956,
+        "tower_turret_lvl9_down": 9955,
+        "tower_turret_upg": 9767,
+        "wizard_tower_explosion": 17077
+      },
+      "shapes": [
+        2464,
+        8453,
+        8457,
+        8477,
+        8514,
+        9715,
+        9716,
+        9718,
+        9719,
+        9721,
+        9722,
+        9724,
+        9725,
+        9727,
+        9728,
+        9730,
+        9731,
+        9733,
+        9734,
+        9736,
+        9737,
+        9739,
+        9740,
+        9742,
+        9743,
+        9745,
+        9746,
+        9748,
+        9749,
+        9751,
+        9752,
+        9754,
+        9755,
+        9757,
+        9758,
+        9759,
+        9760,
+        9761,
+        9762,
+        9763,
+        9764,
+        11498,
+        11500,
+        11501,
+        11502,
+        11503,
+        11504,
+        11509,
+        11518,
+        16114,
+        16152,
+        16153,
+        16154,
+        16155,
+        16156,
+        16157,
+        16158,
+        16159,
+        16160,
+        16177,
+        16180,
+        16181,
+        16391,
+        16392,
+        16416,
+        16417,
+        16418,
+        16419,
+        16420,
+        16421,
+        16422,
+        16423,
+        16424,
+        16425,
+        16426,
+        16428,
+        16429,
+        16512,
+        16526,
+        16774,
+        16775,
+        16866,
+        16867,
+        16894,
+        16895,
+        16896,
+        16897,
+        16898,
+        16899,
+        16900,
+        16901,
+        16902,
+        16903,
+        16904,
+        16905,
+        16906,
+        16907,
+        16908,
+        16909,
+        16910,
+        16911,
+        16915
+      ],
+      "clips": {
+        "1319": {
+          "fps": 24,
+          "frames": 1,
+          "names": [],
+          "blends": [],
+          "labels": []
+        },
+        "2480": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "2726": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            "base",
+            "shadow"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9767": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9778": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9802": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9805": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9919": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9920": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9922": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9923": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9925": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9926": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9928": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9929": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9931": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9932": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9934": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9935": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9937": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9938": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9940": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9941": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9943": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9944": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9946": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9947": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9949": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9950": {
+          "fps": 30,
+          "frames": 1,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9952": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9953": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9955": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9956": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9958": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9959": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9961": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9962": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            "",
+            "gearup"
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9963": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9964": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9965": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9966": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9967": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "9968": {
+          "fps": 30,
+          "frames": 360,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "12272": {
+          "fps": 30,
+          "frames": 6,
+          "names": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "12273": {
+          "fps": 30,
+          "frames": 6,
+          "names": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "12277": {
+          "fps": 30,
+          "frames": 6,
+          "names": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "17077": {
+          "fps": 24,
+          "frames": 20,
+          "names": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "17098": {
+          "fps": 24,
+          "frames": 25,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "17106": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "17108": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "17520": {
+          "fps": 24,
+          "frames": 11,
+          "names": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "17524": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "17527": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "17531": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "17534": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "17835": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "17938": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "17941": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18000": {
+          "fps": 24,
+          "frames": 80,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18001": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18109": {
+          "fps": 24,
+          "frames": 104,
+          "names": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18112": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18116": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18118": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18119": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18183": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18184": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18185": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18186": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18187": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18188": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18189": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18190": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18191": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18192": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18193": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18194": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18195": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18196": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18197": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18198": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18199": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18200": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "18204": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        }
+      },
+      "modifiers": [],
+      "textfields": [],
+      "textures": [
+        {
+          "index": 8,
+          "file": "sc/buildings_8.sctx",
+          "width": 444,
+          "height": 448
+        },
+        {
+          "index": 18,
+          "file": "sc/buildings_18.sctx",
+          "width": 2552,
+          "height": 4056
+        },
+        {
+          "index": 25,
+          "file": "sc/buildings_25.sctx",
+          "width": 3002,
+          "height": 3066
+        },
+        {
+          "index": 39,
+          "file": "sc/buildings_39.sctx",
+          "width": 1516,
+          "height": 2034
+        }
+      ]
+    },
+    "sc/characters.sc": {
+      "exports": {
+        "arrow_ammo_small": 387,
+        "arrow_ammo_small_darkElixirFire": 383,
+        "arrow_ammo_small_elixirFire": 384,
+        "arrow_ammo_small_fire": 385
+      },
+      "shapes": [
+        304,
+        305,
+        306,
+        307,
+        308,
+        340,
+        341,
+        342
+      ],
+      "clips": {
+        "352": {
+          "fps": 24,
+          "frames": 10,
+          "names": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "383": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            "",
+            ""
+          ],
+          "blends": [
+            0,
+            8
+          ],
+          "labels": []
+        },
+        "384": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            "",
+            ""
+          ],
+          "blends": [
+            0,
+            8
+          ],
+          "labels": []
+        },
+        "385": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            "",
+            ""
+          ],
+          "blends": [
+            0,
+            8
+          ],
+          "labels": []
+        },
+        "386": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        },
+        "387": {
+          "fps": 24,
+          "frames": 1,
+          "names": [
+            "trail",
+            ""
+          ],
+          "blends": [
+            0
+          ],
+          "labels": []
+        }
+      },
+      "modifiers": [],
+      "textfields": [],
+      "textures": [
+        {
+          "index": 7,
+          "file": "sc/characters_7.sctx",
+          "width": 446,
+          "height": 470
+        }
+      ]
+    }
+  }
+}

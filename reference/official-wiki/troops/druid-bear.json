@@ -1,0 +1,164 @@
+{
+ "title": "Bear (Druid form)",
+ "page": "Druid/Bear",
+ "url": "https://clashofclans.fandom.com/wiki/Druid/Bear",
+ "revid": 623243,
+ "retrieved": "2026-09-15",
+ "clientName": "Bear",
+ "clientVersion": "18.400.21",
+ "category": "secondary-unit",
+ "parent": "druid",
+ "constants": {
+  "housingSpace": 10,
+  "movementSpeedWiki": 20,
+  "internalSpeed": 250,
+  "tilesPerSecond": 2.5,
+  "attackRangeTiles": 0.2,
+  "attackRangeTilesClient": 0.6,
+  "attackSeconds": 1,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Melee (Ground Only)",
+  "targets": "ground",
+  "favoriteTarget": "Defenses",
+  "favoriteTargetTemplate": "Defenses",
+  "favoriteTargetClient": "Defense",
+  "favoriteMultiplier": 1,
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": false,
+  "triggersTraps": true,
+  "healerWeight": 5
+ },
+ "client": {
+  "clientName": "Bear",
+  "housingSpace": 16,
+  "internalSpeed": 250,
+  "movementSpeedInGameExact": 20,
+  "movementSpeedInGameRounded": 20,
+  "tilesPerSecond": 2.5,
+  "attackRangeTiles": 0.6,
+  "attackSeconds": 1,
+  "targets": "ground",
+  "flying": false,
+  "jumpsWalls": false,
+  "favoriteTarget": "Defense",
+  "favoriteMultiplier": 1,
+  "triggersTraps": true,
+  "healerWeight": 5,
+  "movementOffsetSpeed": 0,
+  "isSecondaryTroop": true,
+  "disableDonate": true
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 150,
+   "damagePerHit": 150,
+   "hitpoints": 1900
+  },
+  {
+   "level": 2,
+   "dps": 160,
+   "damagePerHit": 160,
+   "hitpoints": 2000
+  },
+  {
+   "level": 3,
+   "dps": 170,
+   "damagePerHit": 170,
+   "hitpoints": 2100
+  },
+  {
+   "level": 4,
+   "dps": 185,
+   "damagePerHit": 185,
+   "hitpoints": 2300
+  },
+  {
+   "level": 5,
+   "dps": 205,
+   "damagePerHit": 205,
+   "hitpoints": 2500
+  },
+  {
+   "level": 6,
+   "dps": 225,
+   "damagePerHit": 225,
+   "hitpoints": 2750
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 1900,
+   "dps": 150,
+   "damagePerHit": 150
+  },
+  {
+   "level": 2,
+   "hitpoints": 2000,
+   "dps": 160,
+   "damagePerHit": 160
+  },
+  {
+   "level": 3,
+   "hitpoints": 2100,
+   "dps": 170,
+   "damagePerHit": 170
+  },
+  {
+   "level": 4,
+   "hitpoints": 2300,
+   "dps": 185,
+   "damagePerHit": 185
+  },
+  {
+   "level": 5,
+   "hitpoints": 2500,
+   "dps": 205,
+   "damagePerHit": 205
+  },
+  {
+   "level": 6,
+   "hitpoints": 2750,
+   "dps": 225,
+   "damagePerHit": 225
+  }
+ ],
+ "comparison": {
+  "checked": 26,
+  "matched": 23
+ },
+ "mismatches": [
+  {
+   "field": "housingSpace",
+   "level": null,
+   "wiki": 10,
+   "client": 16,
+   "clientColumn": "characters.HousingSpace",
+   "note": "wiki history: 16 -> 10 on 2025-03-24; client Bear row still 16"
+  },
+  {
+   "field": "attackRangeTiles",
+   "level": null,
+   "wiki": 0.2,
+   "client": 0.6,
+   "clientColumn": "characters.AttackRange/100",
+   "note": "wiki - client = -0.4 tiles; no history entry explains the difference"
+  },
+  {
+   "field": "evolveSeconds (Bear page summary)",
+   "level": null,
+   "wiki": 25,
+   "client": 30,
+   "clientColumn": "characters.Druid.EvolveTime=30000",
+   "note": "Druid page says 30 s"
+  }
+ ],
+ "ambiguities": [
+  "Housing (Spring/Tornado/Clone/Recall weight): wiki 10 (history says reduced from 16 to 10 on 2025-03-24), client Bear HousingSpace=16; the commented-out Healer weight table in the Healer page source also lists 16.",
+  "Transformation time: Bear page says 25 s; the Druid page (30 s, restored 2026-01-12) and client EvolveTime=30000 agree on 30 s.",
+  "Range: wiki 0.2 tile vs client AttackRange=60 (0.6 tile)."
+ ]
+}

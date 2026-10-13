@@ -1,0 +1,86 @@
+{
+ "title": "Multi-Archer Tower",
+ "url": "https://clashofclans.fandom.com/wiki/Multi-Archer_Tower",
+ "revid": 624863,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Multi Archer Tower",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dpsPerArcher": 100,
+   "damagePerHit": 60,
+   "hitpoints": 5000,
+   "cost": 12000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 16
+  },
+  {
+   "level": 2,
+   "dpsPerArcher": 108,
+   "damagePerHit": 65,
+   "hitpoints": 5200,
+   "cost": 13000000,
+   "buildSeconds": 691200,
+   "xp": 831,
+   "townHall": 16
+  },
+  {
+   "level": 3,
+   "dpsPerArcher": 116,
+   "damagePerHit": 70,
+   "hitpoints": 5400,
+   "cost": 17500000,
+   "buildSeconds": 777600,
+   "xp": 881,
+   "townHall": 17
+  },
+  {
+   "level": 4,
+   "dpsPerArcher": 121,
+   "damagePerHit": 73,
+   "hitpoints": 5500,
+   "cost": 27000000,
+   "buildSeconds": 1209600,
+   "xp": 1099,
+   "townHall": 18
+  }
+ ],
+ "supercharges": [
+  {
+   "charge": 1,
+   "dpsPerArcher": 126,
+   "damagePerHit": 76,
+   "hitpoints": 5500,
+   "cost": 12000000,
+   "buildSeconds": 518400,
+   "xp": 720,
+   "townHall": 18
+  },
+  {
+   "charge": 2,
+   "dpsPerArcher": 126,
+   "damagePerHit": 76,
+   "hitpoints": 5600,
+   "cost": 10000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 16,
+  "size": "3x3",
+  "range": 10,
+  "attackSeconds": 0.6,
+  "targets": "ground & air",
+  "damageType": "multiple targets",
+  "numberOfTargets": 3,
+  "mergeFrom": "2x Archer Tower level 21 (not geared up)",
+  "targetDistribution": "3+ units: 1 archer each; 2 units: 2 on the closer; 1 unit: all 3"
+ },
+ "mismatches": [],
+ "progressionMismatches": []
+}

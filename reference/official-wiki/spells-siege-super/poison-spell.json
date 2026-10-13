@@ -1,0 +1,182 @@
+{
+  "title": "Poison Spell",
+  "url": "https://clashofclans.fandom.com/wiki/Poison_Spell",
+  "revid": 624974,
+  "clientName": "Poison",
+  "category": "dark-spell",
+  "retrieved": "2026-09-15",
+  "contentPage": "Poison Spell",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "spells",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "radiusTiles": 4,
+    "durationSeconds": 16,
+    "damageType": "Area Splash",
+    "housingSpace": 1,
+    "targets": "Ground & Air",
+    "darkSpellFactoryLevel": 1
+  },
+  "levels": [
+    {
+      "level": 1,
+      "maxDps": 90,
+      "speedDecreasePercent": 26,
+      "attackRateDecreasePercent": 35,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "maxDps": 115,
+      "speedDecreasePercent": 30,
+      "attackRateDecreasePercent": 40,
+      "researchCost": 5000,
+      "researchTimeHours": 6,
+      "laboratoryLevel": 6
+    },
+    {
+      "level": 3,
+      "maxDps": 145,
+      "speedDecreasePercent": 34,
+      "attackRateDecreasePercent": 45,
+      "researchCost": 10000,
+      "researchTimeHours": 18,
+      "laboratoryLevel": 7
+    },
+    {
+      "level": 4,
+      "maxDps": 180,
+      "speedDecreasePercent": 38,
+      "attackRateDecreasePercent": 50,
+      "researchCost": 21500,
+      "researchTimeHours": 48,
+      "laboratoryLevel": 8
+    },
+    {
+      "level": 5,
+      "maxDps": 220,
+      "speedDecreasePercent": 40,
+      "attackRateDecreasePercent": 55,
+      "researchCost": 35000,
+      "researchTimeHours": 72,
+      "laboratoryLevel": 9
+    },
+    {
+      "level": 6,
+      "maxDps": 260,
+      "speedDecreasePercent": 42,
+      "attackRateDecreasePercent": 60,
+      "researchCost": 55000,
+      "researchTimeHours": 96,
+      "laboratoryLevel": 10
+    },
+    {
+      "level": 7,
+      "maxDps": 280,
+      "speedDecreasePercent": 44,
+      "attackRateDecreasePercent": 65,
+      "researchCost": 77500,
+      "researchTimeHours": 120,
+      "laboratoryLevel": 11
+    },
+    {
+      "level": 8,
+      "maxDps": 300,
+      "speedDecreasePercent": 46,
+      "attackRateDecreasePercent": 68,
+      "researchCost": 100000,
+      "researchTimeHours": 156,
+      "laboratoryLevel": 12
+    },
+    {
+      "level": 9,
+      "maxDps": 320,
+      "speedDecreasePercent": 48,
+      "attackRateDecreasePercent": 70,
+      "researchCost": 135000,
+      "researchTimeHours": 168,
+      "laboratoryLevel": 13
+    },
+    {
+      "level": 10,
+      "maxDps": 340,
+      "speedDecreasePercent": 50,
+      "attackRateDecreasePercent": 72,
+      "researchCost": 175000,
+      "researchTimeHours": 192,
+      "laboratoryLevel": 14
+    },
+    {
+      "level": 11,
+      "maxDps": 360,
+      "speedDecreasePercent": 51,
+      "attackRateDecreasePercent": 73,
+      "researchCost": 230000,
+      "researchTimeHours": 232,
+      "laboratoryLevel": 15
+    },
+    {
+      "level": 12,
+      "maxDps": 380,
+      "speedDecreasePercent": 52,
+      "attackRateDecreasePercent": 74,
+      "researchCost": 350000,
+      "researchTimeHours": 348,
+      "laboratoryLevel": 16
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "lingerAfterLeavingSeconds",
+      "level": null,
+      "wiki": 6,
+      "client": 0.5,
+      "note": "only BoostTimeMS 500 on the row; the 6 s may be emergent (ramp decay) - verify"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "max DPS",
+      "client": "`PoisonDPS` (90..380), ramp flag `PoisonIncreaseSlowly` = TRUE"
+    },
+    {
+      "mechanic": "speed slow",
+      "client": "`SpeedBoost` / `SpeedBoost2` (-26..-52, used as percent with `BoostLinkedToPoison` = TRUE)"
+    },
+    {
+      "mechanic": "attack-rate slow",
+      "client": "`AttackSpeedBoost` (-35..-74)"
+    },
+    {
+      "mechanic": "duration",
+      "client": "`NumberOfHits` 40 x `TimeBetweenHitsMS` 400 = 16 s"
+    },
+    {
+      "mechanic": "radius",
+      "client": "`Radius` 400"
+    },
+    {
+      "mechanic": "linger",
+      "client": "`BoostTimeMS` = 500"
+    },
+    {
+      "mechanic": "Heroes",
+      "client": "`HeroDamageMultiplier` = 5"
+    },
+    {
+      "mechanic": "Guardians",
+      "client": "`GuardianDamageMultiplier` = 30; globals `GUARDIAN_POISON_SPEED_MULTIPLIER` = 30, `GUARDIAN_POISON_ATTACK_SPEED_MULTIPLIER` = 30"
+    },
+    {
+      "mechanic": "targets",
+      "client": "`BoostDefenders` TRUE, `PoisonAffectAir` TRUE, immunities TH/CC, storages, walls, other buildings, siege"
+    },
+    {
+      "mechanic": "AI",
+      "client": "globals `USE_POISON_AVOIDANCE` = TRUE"
+    }
+  ]
+}

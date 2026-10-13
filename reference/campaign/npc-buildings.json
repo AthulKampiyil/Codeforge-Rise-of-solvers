@@ -1,0 +1,95 @@
+{
+  "Town Hall": [
+    {
+      "Name": "Town Hall",
+      "GlobalID": "1000001",
+      "BuildingClass": "Town Hall",
+      "SecondaryTargetingClass": "Resource",
+      "Width": "4",
+      "Height": "4",
+      "BuildingLevel": "1",
+      "Hitpoints": "400",
+      "ExportName": "town_hall_lvl1",
+      "ExportNameNpc": "goblin_townhall_lvl1"
+    },
+    {
+      "BuildingLevel": "2",
+      "Hitpoints": "800",
+      "ExportName": "town_hall_lvl2"
+    },
+    {
+      "BuildingLevel": "3",
+      "Hitpoints": "1600",
+      "ExportName": "town_hall_lvl3"
+    },
+    {
+      "BuildingLevel": "4",
+      "Hitpoints": "2000",
+      "ExportName": "town_hall_lvl4"
+    },
+    {
+      "BuildingLevel": "5",
+      "Hitpoints": "2400",
+      "ExportName": "town_hall_lvl5"
+    },
+    {
+      "BuildingLevel": "6",
+      "Hitpoints": "2800",
+      "ExportName": "town_hall_lvl6"
+    },
+    {
+      "BuildingLevel": "7",
+      "Hitpoints": "3300",
+      "ExportName": "town_hall_lvl7"
+    },
+    {
+      "BuildingLevel": "8",
+      "Hitpoints": "3900",
+      "ExportName": "town_hall_lvl8"
+    },
+    {
+      "BuildingLevel": "9",
+      "Hitpoints": "4600",
+      "ExportName": "town_hall_lvl9"
+    },
+    {
+      "BuildingLevel": "10",
+      "Hitpoints": "5500",
+      "ExportName": "town_hall_lvl10"
+    },
+    {
+      "BuildingLevel": "11",
+      "Hitpoints": "6800",
+      "ExportName": "town_hall_lvl11"
+    }
+  ],
+  "Goblin Hut": [
+    {
+      "Name": "Goblin Hut",
+      "GlobalID": "1000018",
+      "BuildingClass": "Npc",
+      "Width": "2",
+      "Height": "2",
+      "BuildingLevel": "1",
+      "Hitpoints": "250",
+      "ExportName": "goblin_hut_lvl1"
+    }
+  ],
+  "Tutorial Cannon": [
+    {
+      "Name": "Tutorial Cannon",
+      "GlobalID": "1000060",
+      "BuildingClass": "Npc",
+      "Width": "3",
+      "Height": "3",
+      "BuildingLevel": "1",
+      "Hitpoints": "250",
+      "DPS": "2",
+      "AttackSpeed": "800",
+      "AttackRange": "900",
+      "AirTargets": "FALSE",
+      "GroundTargets": "TRUE",
+      "ExportName": "basic_turret_lvl1"
+    }
+  ]
+}

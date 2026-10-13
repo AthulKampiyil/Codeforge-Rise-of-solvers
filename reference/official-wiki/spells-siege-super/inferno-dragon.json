@@ -1,0 +1,148 @@
+{
+  "title": "Inferno Dragon",
+  "url": "https://clashofclans.fandom.com/wiki/Inferno_Dragon/Home_Village",
+  "revid": 624086,
+  "clientName": "Inferno Dragon",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Inferno Dragon/Home Village",
+  "parentPage": "Inferno Dragon",
+  "parentRevid": 594174,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "None",
+    "attackType": "Single Target",
+    "housingSpace": 15,
+    "movementSpeed": 18,
+    "attackSpeedSeconds": 0.128,
+    "rangeTiles": 4,
+    "specialAbility": "Inferno Beam",
+    "stage2AfterSeconds": 1.7,
+    "stage3AfterSeconds": 3.2
+  },
+  "levels": [
+    {
+      "level": 6,
+      "dpsInitial": 75,
+      "dpsStage2": 150,
+      "dpsStage3": 1500,
+      "hitpoints": 1900
+    },
+    {
+      "level": 7,
+      "dpsInitial": 79,
+      "dpsStage2": 158,
+      "dpsStage3": 1580,
+      "hitpoints": 2050
+    },
+    {
+      "level": 8,
+      "dpsInitial": 83,
+      "dpsStage2": 166,
+      "dpsStage3": 1660,
+      "hitpoints": 2200
+    },
+    {
+      "level": 9,
+      "dpsInitial": 85,
+      "dpsStage2": 170,
+      "dpsStage3": 1700,
+      "hitpoints": 2300
+    },
+    {
+      "level": 10,
+      "dpsInitial": 86,
+      "dpsStage2": 174,
+      "dpsStage3": 1740,
+      "hitpoints": 2400
+    },
+    {
+      "level": 11,
+      "dpsInitial": 88,
+      "dpsStage2": 178,
+      "dpsStage3": 1780,
+      "hitpoints": 2500
+    },
+    {
+      "level": 12,
+      "dpsInitial": 90,
+      "dpsStage2": 182,
+      "dpsStage3": 1820,
+      "hitpoints": 2700,
+      "wikiLabel": "11"
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "rangeTiles",
+      "level": null,
+      "wiki": 4,
+      "client": 3.5,
+      "note": "client AttackRange/100"
+    },
+    {
+      "field": "dpsInitial",
+      "level": 10,
+      "wiki": 86,
+      "client": 87,
+      "note": "client DPS"
+    },
+    {
+      "field": "dpsInitial",
+      "level": 11,
+      "wiki": 88,
+      "client": 89,
+      "note": "client DPS"
+    },
+    {
+      "field": "dpsInitial",
+      "level": 12,
+      "wiki": 90,
+      "client": 91,
+      "note": "client DPS"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "ramp",
+      "client": "`IncreasingDamage` TRUE, `DPS` / `DPSLv2` / `DPSLv3`, `Lv2SwitchTime` 1700, `Lv3SwitchTime` 3200"
+    },
+    {
+      "mechanic": "tick",
+      "client": "`AttackSpeed` 128"
+    },
+    {
+      "mechanic": "retarget cooldown",
+      "client": "`TargetKilledCooldownTimer` 600"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`Hitpoints`, `Speed` 225, `AttackRange` 350"
+    }
+  ],
+  "boost": {
+    "wiki": {
+      "baseTroop": "Baby Dragon",
+      "minBaseLevel": 6,
+      "townHallRequired": 12,
+      "clanCastleLevelToReceive": 6,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "Inferno Dragon",
+      "Original": "Baby Dragon",
+      "MinOriginalLevel_raw": 5,
+      "minBaseLevel": 6,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "INFERNO_DRAGON_INTRO_TH13",
+      "townHallDerived": 12
+    }
+  }
+}

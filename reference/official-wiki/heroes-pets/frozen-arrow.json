@@ -1,0 +1,406 @@
+{
+ "title": "Frozen Arrow",
+ "url": "https://clashofclans.fandom.com/wiki/Frozen_Arrow",
+ "revid": 621294,
+ "retrieved": "2026-09-15",
+ "clientName": "Frozen Arrow",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Archer Queen",
+ "summary": "Queen Epic passive item: every hit slows the target 25% → 65% for 0.75 → 3 s; passive DPS.",
+ "constants": {
+  "wiki": {
+   "User": "Archer Queen",
+   "Ability Type": "Passive",
+   "Rarity": "Epic",
+   "Unlock Requirement": "Buy in Dragon Festival event for 3,100 Dragon Medal; Buy in Toyshop Throwdown event for 3,100 Toy Medal; Buy in Cosmic Rock event for 3,100 Rock Medal; But in Equipment Blast event for 3,100 Relic Medal; Purchasable from the Trader for 1,500 Gem; or purchasable from the League Shop for 750 Medal"
+  },
+  "client": {
+   "Rarity": "EPIC",
+   "AllowedCharacters": "Archer Queen;",
+   "MainAbilities": "ArcherQueenAttackFreeze",
+   "Claimable": "TRUE",
+   "levelRows": 27,
+   "abilityTierStartLevels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "slowDownPercent": {
+   "wikiHeader": "Ability Attributes / Slow Down",
+   "unit": "percent"
+  },
+  "slowDownDurationSeconds": {
+   "wikiHeader": "Ability Attributes / Slow Down Duration",
+   "unit": "seconds"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boosts / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostStarryOre": {
+   "wikiHeader": "Upgrade Cost / Starry Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "slowDownPercent": 25,
+   "slowDownDurationSeconds": 0.75,
+   "damagePerSecondIncrease": 35,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "slowDownPercent": 25,
+   "slowDownDurationSeconds": 1,
+   "damagePerSecondIncrease": 40,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "slowDownPercent": 30,
+   "slowDownDurationSeconds": 1,
+   "damagePerSecondIncrease": 45,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "slowDownPercent": 30,
+   "slowDownDurationSeconds": 1,
+   "damagePerSecondIncrease": 50,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "slowDownPercent": 30,
+   "slowDownDurationSeconds": 1.25,
+   "damagePerSecondIncrease": 55,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "slowDownPercent": 35,
+   "slowDownDurationSeconds": 1.25,
+   "damagePerSecondIncrease": 60,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "slowDownPercent": 35,
+   "slowDownDurationSeconds": 1.25,
+   "damagePerSecondIncrease": 66,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "slowDownPercent": 35,
+   "slowDownDurationSeconds": 1.5,
+   "damagePerSecondIncrease": 72,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "slowDownPercent": 37,
+   "slowDownDurationSeconds": 1.5,
+   "damagePerSecondIncrease": 78,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "upgradeCostStarryOre": 10,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "slowDownPercent": 37,
+   "slowDownDurationSeconds": 1.5,
+   "damagePerSecondIncrease": 85,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 11,
+   "slowDownPercent": 37,
+   "slowDownDurationSeconds": 1.75,
+   "damagePerSecondIncrease": 92,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 12,
+   "slowDownPercent": 40,
+   "slowDownDurationSeconds": 1.75,
+   "damagePerSecondIncrease": 99,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "upgradeCostStarryOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 13,
+   "slowDownPercent": 40,
+   "slowDownDurationSeconds": 1.75,
+   "damagePerSecondIncrease": 105,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 14,
+   "slowDownPercent": 40,
+   "slowDownDurationSeconds": 2,
+   "damagePerSecondIncrease": 111,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 15,
+   "slowDownPercent": 45,
+   "slowDownDurationSeconds": 2,
+   "damagePerSecondIncrease": 117,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 30,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 16,
+   "slowDownPercent": 45,
+   "slowDownDurationSeconds": 2,
+   "damagePerSecondIncrease": 122,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 17,
+   "slowDownPercent": 45,
+   "slowDownDurationSeconds": 2.25,
+   "damagePerSecondIncrease": 127,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 18,
+   "slowDownPercent": 50,
+   "slowDownDurationSeconds": 2.25,
+   "damagePerSecondIncrease": 132,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 50,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 19,
+   "slowDownPercent": 50,
+   "slowDownDurationSeconds": 2.25,
+   "damagePerSecondIncrease": 136,
+   "upgradeCostShinyOre": 2800,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 20,
+   "slowDownPercent": 50,
+   "slowDownDurationSeconds": 2.5,
+   "damagePerSecondIncrease": 140,
+   "upgradeCostShinyOre": 2900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 21,
+   "slowDownPercent": 55,
+   "slowDownDurationSeconds": 2.5,
+   "damagePerSecondIncrease": 144,
+   "upgradeCostShinyOre": 3000,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 100,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 22,
+   "slowDownPercent": 55,
+   "slowDownDurationSeconds": 2.5,
+   "damagePerSecondIncrease": 148,
+   "upgradeCostShinyOre": 3100,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 23,
+   "slowDownPercent": 55,
+   "slowDownDurationSeconds": 2.75,
+   "damagePerSecondIncrease": 152,
+   "upgradeCostShinyOre": 3200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 24,
+   "slowDownPercent": 60,
+   "slowDownDurationSeconds": 2.75,
+   "damagePerSecondIncrease": 156,
+   "upgradeCostShinyOre": 3300,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 120,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 25,
+   "slowDownPercent": 60,
+   "slowDownDurationSeconds": 2.75,
+   "damagePerSecondIncrease": 160,
+   "upgradeCostShinyOre": 3400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 26,
+   "slowDownPercent": 60,
+   "slowDownDurationSeconds": 3,
+   "damagePerSecondIncrease": 164,
+   "upgradeCostShinyOre": 3500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 27,
+   "slowDownPercent": 65,
+   "slowDownDurationSeconds": 3,
+   "damagePerSecondIncrease": 168,
+   "upgradeCostShinyOre": 3600,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 150,
+   "blacksmithLevelRequired": 9
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "slowScope",
+   "level": null,
+   "wiki": "'slow down' targets",
+   "client": "FrostOnHitPercent/FrostOnHitTime (frost effect)",
+   "note": "whether defenses' attack rate is reduced too must be verified"
+  }
+ ],
+ "clientColumns": [
+  "MainAbilities:special_abilities[ArcherQueenAttackFreeze].FrostOnHitPercent",
+  "MainAbilities:special_abilities[ArcherQueenAttackFreeze].FrostOnHitTime",
+  "character_items.DPS",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

@@ -1,0 +1,150 @@
+{
+ "title": "Thrower",
+ "page": "Thrower",
+ "url": "https://clashofclans.fandom.com/wiki/Thrower",
+ "revid": 625288,
+ "retrieved": "2026-09-15",
+ "clientName": "Thrower",
+ "clientVersion": "18.400.21",
+ "category": "elixir-troop",
+ "constants": {
+  "housingSpace": 16,
+  "movementSpeedWiki": 18,
+  "internalSpeed": 220,
+  "tilesPerSecond": 2.2,
+  "attackRangeTiles": 6,
+  "attackRangeTilesClient": 6,
+  "attackSeconds": 2.5,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Single Target (Ground & Air)",
+  "targets": "ground+air",
+  "favoriteTarget": "None",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": false,
+  "unlock": {
+   "building": "Barracks",
+   "level": 18,
+   "townHall": 16
+  },
+  "triggersTraps": true
+ },
+ "client": {
+  "clientName": "Thrower",
+  "housingSpace": 16,
+  "internalSpeed": 220,
+  "movementSpeedInGameExact": 17.6,
+  "movementSpeedInGameRounded": 18,
+  "tilesPerSecond": 2.2,
+  "attackRangeTiles": 6,
+  "attackSeconds": 2.5,
+  "targets": "ground+air",
+  "flying": false,
+  "jumpsWalls": false,
+  "favoriteTarget": "None",
+  "productionBuilding": "Barracks",
+  "barracksLevel": 18,
+  "unlockTownHall": 16,
+  "triggersTraps": true,
+  "coolDownOverride": 1250,
+  "movementOffsetSpeed": 0
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 190,
+   "damagePerHit": 475,
+   "hitpoints": 2200,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 210,
+   "damagePerHit": 525,
+   "hitpoints": 2350,
+   "researchCost": 16000000,
+   "researchSeconds": 820800,
+   "researchTimeText": "9d 12h",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 3,
+   "dps": 230,
+   "damagePerHit": 575,
+   "hitpoints": 2600,
+   "researchCost": 18000000,
+   "researchSeconds": 907200,
+   "researchTimeText": "10d 12h",
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 4,
+   "dps": 240,
+   "damagePerHit": 600,
+   "hitpoints": 2800,
+   "researchCost": 27000000,
+   "researchSeconds": 1296000,
+   "researchTimeText": "15d",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 2200,
+   "dps": 190,
+   "damagePerHit": 475
+  },
+  {
+   "level": 2,
+   "hitpoints": 2350,
+   "dps": 210,
+   "damagePerHit": 525,
+   "researchCost": 16000000,
+   "researchSeconds": 820800,
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 3,
+   "hitpoints": 2600,
+   "dps": 230,
+   "damagePerHit": 575,
+   "researchCost": 18000000,
+   "researchSeconds": 907200,
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 4,
+   "hitpoints": 2800,
+   "dps": 240,
+   "damagePerHit": 600,
+   "researchCost": 27000000,
+   "researchSeconds": 1296000,
+   "laboratoryLevel": 16
+  }
+ ],
+ "comparison": {
+  "checked": 30,
+  "matched": 29
+ },
+ "mismatches": [
+  {
+   "field": "internalSpeed (Troop Movement Speed page)",
+   "level": null,
+   "wiki": 225,
+   "client": 220,
+   "clientColumn": "characters.Speed",
+   "note": "both display 18"
+  }
+ ],
+ "ambiguities": [
+  "Troop Movement Speed page lists internal 225; client Speed=220 (both display 18)."
+ ]
+}

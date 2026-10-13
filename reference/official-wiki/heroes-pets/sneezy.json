@@ -1,0 +1,272 @@
+{
+ "title": "Sneezy",
+ "url": "https://clashofclans.fandom.com/wiki/Sneezy",
+ "revid": 622902,
+ "retrieved": "2026-09-15",
+ "clientName": "Sneezy",
+ "clientTable": "pets",
+ "category": "pet",
+ "summary": "Pet House 11 flying pet that keeps its distance and sneezes out Boogers (max 2), turning into an enraged short-range defense attacker when its hero falls.",
+ "constants": {
+  "wiki": {
+   "Preferred Target": "Defenses",
+   "Targets": "Ground & Air",
+   "Attack Type": "Single Target",
+   "Movement Speed": "24",
+   "Attack Speed": "0.8s",
+   "Maximum Boogers Summoned": "2",
+   "Rage Duration": "30s",
+   "Rage Damage Increase": "1%",
+   "Pet House Level Required": "11",
+   "Range": "5.5 or 1.5 tiles",
+   "Special Ability": "ACHOO!"
+  },
+  "client": {
+   "HousingSpace": "20",
+   "Speed": "300",
+   "AttackRange": "250",
+   "AttackSpeed": "800",
+   "IsFlying": "TRUE",
+   "AirTargets": "TRUE",
+   "GroundTargets": "TRUE",
+   "IsJumper": "FALSE",
+   "LeashLength": "0",
+   "PreferedTargetBuildingClass": "Defense",
+   "SummonTroop": "Booger",
+   "SummonCooldown": "10000",
+   "SummonTime": "1500",
+   "SummonDelay": "1000",
+   "SummonLevel": "1",
+   "SpecialAbilities": "FlyingSpawnerTransformAbility",
+   "HeroDeathAbilityType": "BoostSelf",
+   "HeroDeathAbilitySpell": "VisualRage",
+   "HeroDeathAbilityLevel": "1",
+   "RecallWithMaster": "TRUE",
+   "TriggersTraps": "TRUE",
+   "FriendlyGroupWeight": "300",
+   "SpawnDelay": "100",
+   "UpgradeResource": "DarkElixir",
+   "Projectile": "pet_sneezy_projectile_ShockWave",
+   "MovementOffsetSpeed": "30",
+   "levelRows": 10,
+   "levelsByPetHouse": {
+    "Pet House 11": "10"
+   }
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "damagePerSecond": {
+   "wikiHeader": "Damage per Second",
+   "unit": "damage per second"
+  },
+  "damagePerHit": {
+   "wikiHeader": "Damage per Hit",
+   "unit": "damage points"
+  },
+  "hitpoints": {
+   "wikiHeader": "Hitpoints",
+   "unit": "hitpoints"
+  },
+  "upgradeCost": {
+   "wikiHeader": "Upgrade Cost",
+   "unit": "resource amount"
+  },
+  "upgradeTimeSeconds": {
+   "wikiHeader": "Upgrade Time",
+   "unit": "seconds"
+  },
+  "petHouseLevelRequired": {
+   "wikiHeader": "Pet House Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damagePerSecond": 270,
+   "damagePerHit": 216,
+   "hitpoints": 3300,
+   "upgradeCost": null,
+   "upgradeTimeSeconds": null,
+   "petHouseLevelRequired": 11
+  },
+  {
+   "level": 2,
+   "damagePerSecond": 290,
+   "damagePerHit": 232,
+   "hitpoints": 3450,
+   "upgradeCost": 200000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 11
+  },
+  {
+   "level": 3,
+   "damagePerSecond": 310,
+   "damagePerHit": 248,
+   "hitpoints": 3600,
+   "upgradeCost": 220000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 11
+  },
+  {
+   "level": 4,
+   "damagePerSecond": 330,
+   "damagePerHit": 264,
+   "hitpoints": 3750,
+   "upgradeCost": 240000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 11
+  },
+  {
+   "level": 5,
+   "damagePerSecond": 350,
+   "damagePerHit": 280,
+   "hitpoints": 3900,
+   "upgradeCost": 260000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 11
+  },
+  {
+   "level": 6,
+   "damagePerSecond": 370,
+   "damagePerHit": 296,
+   "hitpoints": 4050,
+   "upgradeCost": 280000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 11
+  },
+  {
+   "level": 7,
+   "damagePerSecond": 390,
+   "damagePerHit": 312,
+   "hitpoints": 4200,
+   "upgradeCost": 300000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 11
+  },
+  {
+   "level": 8,
+   "damagePerSecond": 410,
+   "damagePerHit": 328,
+   "hitpoints": 4350,
+   "upgradeCost": 320000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 11
+  },
+  {
+   "level": 9,
+   "damagePerSecond": 430,
+   "damagePerHit": 344,
+   "hitpoints": 4500,
+   "upgradeCost": 340000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 11
+  },
+  {
+   "level": 10,
+   "damagePerSecond": 450,
+   "damagePerHit": 360,
+   "hitpoints": 4650,
+   "upgradeCost": 360000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 11
+  }
+ ],
+ "subpages": [
+  {
+   "title": "Sneezy/Booger",
+   "url": "https://clashofclans.fandom.com/wiki/Sneezy/Booger",
+   "revid": 621747,
+   "clientName": "Booger",
+   "levels": [
+    {
+     "level": 1,
+     "damagePerSecond": 105,
+     "damagePerHit": 105,
+     "hitpoints": 1100
+    },
+    {
+     "level": 2,
+     "damagePerSecond": 110,
+     "damagePerHit": 110,
+     "hitpoints": 1200
+    },
+    {
+     "level": 3,
+     "damagePerSecond": 115,
+     "damagePerHit": 115,
+     "hitpoints": 1300
+    },
+    {
+     "level": 4,
+     "damagePerSecond": 120,
+     "damagePerHit": 120,
+     "hitpoints": 1400
+    },
+    {
+     "level": 5,
+     "damagePerSecond": 125,
+     "damagePerHit": 125,
+     "hitpoints": 1500
+    },
+    {
+     "level": 6,
+     "damagePerSecond": 130,
+     "damagePerHit": 130,
+     "hitpoints": 1600
+    },
+    {
+     "level": 7,
+     "damagePerSecond": 135,
+     "damagePerHit": 135,
+     "hitpoints": 1700
+    },
+    {
+     "level": 8,
+     "damagePerSecond": 140,
+     "damagePerHit": 140,
+     "hitpoints": 1800
+    },
+    {
+     "level": 9,
+     "damagePerSecond": 145,
+     "damagePerHit": 145,
+     "hitpoints": 1900
+    },
+    {
+     "level": 10,
+     "damagePerSecond": 150,
+     "damagePerHit": 150,
+     "hitpoints": 2000
+    }
+   ],
+   "constants": {
+    "Preferred Target": "Any",
+    "Targets": "Ground & Air",
+    "Attack Type": "Single Target",
+    "Movement Speed": "16",
+    "Attack Speed": "1s"
+   }
+  }
+ ],
+ "mismatches": [
+  {
+   "field": "Range",
+   "level": null,
+   "wiki": "5.5 or 1.5 tiles",
+   "client": "FlyingSpawnerTransformAbility AttackRange 500 (5 tiles) / base AttackRange 250 (2.5 tiles)",
+   "note": ""
+  },
+  {
+   "field": "Rage Duration",
+   "level": null,
+   "wiki": "30s",
+   "client": "VisualRage BoostTimeMS 300000 (300 s)",
+   "note": "factor-of-ten difference"
+  }
+ ]
+}

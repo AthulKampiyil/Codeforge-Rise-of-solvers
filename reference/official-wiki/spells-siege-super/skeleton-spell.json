@@ -1,0 +1,126 @@
+{
+  "title": "Skeleton Spell",
+  "url": "https://clashofclans.fandom.com/wiki/Skeleton_Spell",
+  "revid": 623005,
+  "clientName": "Skeleton Spell",
+  "category": "dark-spell",
+  "retrieved": "2026-09-15",
+  "contentPage": "Skeleton Spell",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "spells",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "radiusTiles": 3.5,
+    "housingSpace": 1,
+    "targets": "Ground",
+    "darkSpellFactoryLevel": 4
+  },
+  "levels": [
+    {
+      "level": 1,
+      "skeletonsGenerated": 12,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "skeletonsGenerated": 13,
+      "researchCost": 11000,
+      "researchTimeHours": 12,
+      "laboratoryLevel": 8
+    },
+    {
+      "level": 3,
+      "skeletonsGenerated": 14,
+      "researchCost": 17000,
+      "researchTimeHours": 24,
+      "laboratoryLevel": 8
+    },
+    {
+      "level": 4,
+      "skeletonsGenerated": 15,
+      "researchCost": 25000,
+      "researchTimeHours": 48,
+      "laboratoryLevel": 9
+    },
+    {
+      "level": 5,
+      "skeletonsGenerated": 16,
+      "researchCost": 40000,
+      "researchTimeHours": 60,
+      "laboratoryLevel": 10
+    },
+    {
+      "level": 6,
+      "skeletonsGenerated": 17,
+      "researchCost": 50000,
+      "researchTimeHours": 72,
+      "laboratoryLevel": 10
+    },
+    {
+      "level": 7,
+      "skeletonsGenerated": 18,
+      "researchCost": 75000,
+      "researchTimeHours": 96,
+      "laboratoryLevel": 11
+    },
+    {
+      "level": 8,
+      "skeletonsGenerated": 19,
+      "researchCost": 135000,
+      "researchTimeHours": 144,
+      "laboratoryLevel": 13
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "radiusTiles",
+      "level": null,
+      "wiki": 3.5,
+      "client": 2.25,
+      "note": "client Radius 225 (RandomRadius 200)"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "count",
+      "client": "`UnitsToSpawn` (12..19)"
+    },
+    {
+      "mechanic": "spawn schedule",
+      "client": "`SpawnFirstGroupSize` = 4 immediately, remaining over `SpawnDuration` (8000..15000 ms)"
+    },
+    {
+      "mechanic": "unit",
+      "client": "`SummonTroop` 'Spell Shielded Skeleton' (armor layer) -> `SecondaryTroop` 'Spell Unshielded Skeleton'"
+    },
+    {
+      "mechanic": "resource damage",
+      "client": "`DamageReductionToStorages` = 85 on both skeleton rows (15% damage)"
+    },
+    {
+      "mechanic": "CC trigger",
+      "client": "`DoesNotOpenCC` TRUE; globals `SKELETON_OPEN_CC` = FALSE"
+    },
+    {
+      "mechanic": "area",
+      "client": "`Radius` = 225, `RandomRadius` = 200"
+    }
+  ],
+  "extraTables": {
+    "skeleton": [
+      {
+        "preferredTarget": "None",
+        "attackType": "Melee (Ground Only)",
+        "movementSpeed": 24,
+        "attackSpeedSeconds": 1,
+        "rangeTiles": 0.4,
+        "dps": 25,
+        "hitpoints": 30,
+        "armorHitpoints": 30
+      }
+    ]
+  }
+}

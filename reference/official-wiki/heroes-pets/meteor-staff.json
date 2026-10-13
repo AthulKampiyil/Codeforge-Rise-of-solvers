@@ -1,0 +1,414 @@
+{
+ "title": "Meteor Staff",
+ "url": "https://clashofclans.fandom.com/wiki/Meteor_Staff",
+ "revid": 624746,
+ "retrieved": "2026-09-15",
+ "clientName": "Meteor Staff",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Minion Prince",
+ "summary": "Prince Epic passive item: every 10 → 5 s a meteor hits the nearest defense at any distance for 250 → 850 area damage; passive DPS and HP.",
+ "constants": {
+  "wiki": {
+   "User": "Minion Prince",
+   "Ability Type": "Passive",
+   "Rarity": "Epic",
+   "Unlock Requirement": "Buy in Cosmic Rock event for 3,100 Rock Medal; Buy in Wise Warriors event for 3,100 Grumpy Medal; or purchasable from the Trader for 1,500 Gem",
+   "Damage Radius": "2 tiles"
+  },
+  "client": {
+   "Rarity": "EPIC",
+   "AllowedCharacters": "Minion Prince;",
+   "MainAbilities": "MPMeteorStaff",
+   "Claimable": "TRUE",
+   "levelRows": 27,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    10
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "cooldownTimeSeconds": {
+   "wikiHeader": "Ability Attributes / Cooldown Time",
+   "unit": "seconds"
+  },
+  "damagePerHit": {
+   "wikiHeader": "Ability Attributes / Damage per Hit",
+   "unit": "damage points"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boost / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boost / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostStarryOre": {
+   "wikiHeader": "Upgrade Cost / Starry Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "cooldownTimeSeconds": 10,
+   "damagePerHit": 250,
+   "damagePerSecondIncrease": 13,
+   "hitpointIncrease": 558,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "cooldownTimeSeconds": 10,
+   "damagePerHit": 250,
+   "damagePerSecondIncrease": 17,
+   "hitpointIncrease": 587,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "cooldownTimeSeconds": 9.5,
+   "damagePerHit": 300,
+   "damagePerSecondIncrease": 21,
+   "hitpointIncrease": 615,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "cooldownTimeSeconds": 9.5,
+   "damagePerHit": 300,
+   "damagePerSecondIncrease": 25,
+   "hitpointIncrease": 644,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "cooldownTimeSeconds": 9.5,
+   "damagePerHit": 300,
+   "damagePerSecondIncrease": 29,
+   "hitpointIncrease": 673,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "cooldownTimeSeconds": 9,
+   "damagePerHit": 350,
+   "damagePerSecondIncrease": 33,
+   "hitpointIncrease": 702,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "cooldownTimeSeconds": 9,
+   "damagePerHit": 350,
+   "damagePerSecondIncrease": 37,
+   "hitpointIncrease": 730,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "cooldownTimeSeconds": 9,
+   "damagePerHit": 350,
+   "damagePerSecondIncrease": 41,
+   "hitpointIncrease": 759,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "cooldownTimeSeconds": 8.5,
+   "damagePerHit": 400,
+   "damagePerSecondIncrease": 45,
+   "hitpointIncrease": 788,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "upgradeCostStarryOre": 10,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "cooldownTimeSeconds": 8.5,
+   "damagePerHit": 400,
+   "damagePerSecondIncrease": 49,
+   "hitpointIncrease": 817,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 11,
+   "cooldownTimeSeconds": 8.5,
+   "damagePerHit": 400,
+   "damagePerSecondIncrease": 53,
+   "hitpointIncrease": 845,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 12,
+   "cooldownTimeSeconds": 8,
+   "damagePerHit": 450,
+   "damagePerSecondIncrease": 57,
+   "hitpointIncrease": 874,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "upgradeCostStarryOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 13,
+   "cooldownTimeSeconds": 8,
+   "damagePerHit": 450,
+   "damagePerSecondIncrease": 61,
+   "hitpointIncrease": 903,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 14,
+   "cooldownTimeSeconds": 8,
+   "damagePerHit": 450,
+   "damagePerSecondIncrease": 65,
+   "hitpointIncrease": 932,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 15,
+   "cooldownTimeSeconds": 7.5,
+   "damagePerHit": 500,
+   "damagePerSecondIncrease": 69,
+   "hitpointIncrease": 960,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 30,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 16,
+   "cooldownTimeSeconds": 7.5,
+   "damagePerHit": 500,
+   "damagePerSecondIncrease": 73,
+   "hitpointIncrease": 989,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 17,
+   "cooldownTimeSeconds": 7.5,
+   "damagePerHit": 500,
+   "damagePerSecondIncrease": 77,
+   "hitpointIncrease": 1018,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 18,
+   "cooldownTimeSeconds": 7,
+   "damagePerHit": 575,
+   "damagePerSecondIncrease": 81,
+   "hitpointIncrease": 1047,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 50,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 19,
+   "cooldownTimeSeconds": 7,
+   "damagePerHit": 575,
+   "damagePerSecondIncrease": 85,
+   "hitpointIncrease": 1107,
+   "upgradeCostShinyOre": 2800,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 20,
+   "cooldownTimeSeconds": 7,
+   "damagePerHit": 575,
+   "damagePerSecondIncrease": 90,
+   "hitpointIncrease": 1139,
+   "upgradeCostShinyOre": 2900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 21,
+   "cooldownTimeSeconds": 6.5,
+   "damagePerHit": 650,
+   "damagePerSecondIncrease": 95,
+   "hitpointIncrease": 1171,
+   "upgradeCostShinyOre": 3000,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 100,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 22,
+   "cooldownTimeSeconds": 6.5,
+   "damagePerHit": 650,
+   "damagePerSecondIncrease": 100,
+   "hitpointIncrease": 1205,
+   "upgradeCostShinyOre": 3100,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 23,
+   "cooldownTimeSeconds": 6.5,
+   "damagePerHit": 650,
+   "damagePerSecondIncrease": 105,
+   "hitpointIncrease": 1239,
+   "upgradeCostShinyOre": 3200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 24,
+   "cooldownTimeSeconds": 6,
+   "damagePerHit": 750,
+   "damagePerSecondIncrease": 110,
+   "hitpointIncrease": 1273,
+   "upgradeCostShinyOre": 3300,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 120,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 25,
+   "cooldownTimeSeconds": 6,
+   "damagePerHit": 750,
+   "damagePerSecondIncrease": 115,
+   "hitpointIncrease": 1309,
+   "upgradeCostShinyOre": 3400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 26,
+   "cooldownTimeSeconds": 6,
+   "damagePerHit": 750,
+   "damagePerSecondIncrease": 120,
+   "hitpointIncrease": 1345,
+   "upgradeCostShinyOre": 3500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 27,
+   "cooldownTimeSeconds": 5,
+   "damagePerHit": 850,
+   "damagePerSecondIncrease": 125,
+   "hitpointIncrease": 1381,
+   "upgradeCostShinyOre": 3600,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 150,
+   "blacksmithLevelRequired": 9
+  }
+ ],
+ "subpages": [],
+ "mismatches": [],
+ "clientColumns": [
+  "MainAbilities:special_abilities[MPMeteorStaff] → CastSpell:spells[MPMeteorStaffSpell].Damage",
+  "MainAbilities:special_abilities[MPMeteorStaff].ActivationCooldown",
+  "character_items.DPS",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

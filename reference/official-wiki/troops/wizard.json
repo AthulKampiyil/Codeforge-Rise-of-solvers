@@ -1,0 +1,354 @@
+{
+ "title": "Wizard",
+ "page": "Wizard",
+ "url": "https://clashofclans.fandom.com/wiki/Wizard",
+ "revid": 625289,
+ "retrieved": "2026-09-15",
+ "clientName": "Wizard",
+ "clientVersion": "18.400.21",
+ "category": "elixir-troop",
+ "constants": {
+  "housingSpace": 4,
+  "movementSpeedWiki": 16,
+  "internalSpeed": 200,
+  "tilesPerSecond": 2,
+  "attackRangeTiles": 3,
+  "attackRangeTilesClient": 3,
+  "attackSeconds": 1.5,
+  "splashTiles": 0.3,
+  "splashTilesClient": 0.3,
+  "attackTypeWiki": "Area Splash 0.3 Tile Radius (Ground & Air)",
+  "targets": "ground+air",
+  "favoriteTarget": "None",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": false,
+  "unlock": {
+   "building": "Barracks",
+   "level": 7,
+   "townHall": 5
+  },
+  "triggersTraps": true
+ },
+ "client": {
+  "clientName": "Wizard",
+  "housingSpace": 4,
+  "internalSpeed": 200,
+  "movementSpeedInGameExact": 16,
+  "movementSpeedInGameRounded": 16,
+  "tilesPerSecond": 2,
+  "attackRangeTiles": 3,
+  "attackSeconds": 1.5,
+  "splashTiles": 0.3,
+  "targets": "ground+air",
+  "flying": false,
+  "jumpsWalls": false,
+  "favoriteTarget": "None",
+  "productionBuilding": "Barracks",
+  "barracksLevel": 7,
+  "unlockTownHall": 5,
+  "triggersTraps": true,
+  "movementOffsetSpeed": 0
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 50,
+   "damagePerHit": 75,
+   "hitpoints": 75,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 70,
+   "damagePerHit": 105,
+   "hitpoints": 90,
+   "researchCost": 120000,
+   "researchSeconds": 14400,
+   "researchTimeText": "4h",
+   "laboratoryLevel": 3
+  },
+  {
+   "level": 3,
+   "dps": 90,
+   "damagePerHit": 135,
+   "hitpoints": 108,
+   "researchCost": 300000,
+   "researchSeconds": 18000,
+   "researchTimeText": "5h",
+   "laboratoryLevel": 4
+  },
+  {
+   "level": 4,
+   "dps": 125,
+   "damagePerHit": 187.5,
+   "hitpoints": 135,
+   "researchCost": 600000,
+   "researchSeconds": 43200,
+   "researchTimeText": "12h",
+   "laboratoryLevel": 5
+  },
+  {
+   "level": 5,
+   "dps": 170,
+   "damagePerHit": 255,
+   "hitpoints": 165,
+   "researchCost": 1200000,
+   "researchSeconds": 64800,
+   "researchTimeText": "18h",
+   "laboratoryLevel": 6
+  },
+  {
+   "level": 6,
+   "dps": 185,
+   "damagePerHit": 277.5,
+   "hitpoints": 180,
+   "researchCost": 2000000,
+   "researchSeconds": 129600,
+   "researchTimeText": "1d 12h",
+   "laboratoryLevel": 7
+  },
+  {
+   "level": 7,
+   "dps": 200,
+   "damagePerHit": 300,
+   "hitpoints": 195,
+   "researchCost": 2500000,
+   "researchSeconds": 172800,
+   "researchTimeText": "2d",
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 8,
+   "dps": 215,
+   "damagePerHit": 322.5,
+   "hitpoints": 210,
+   "researchCost": 3100000,
+   "researchSeconds": 194400,
+   "researchTimeText": "2d 6h",
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 9,
+   "dps": 230,
+   "damagePerHit": 345,
+   "hitpoints": 230,
+   "researchCost": 4000000,
+   "researchSeconds": 216000,
+   "researchTimeText": "2d 12h",
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 10,
+   "dps": 245,
+   "damagePerHit": 367.5,
+   "hitpoints": 250,
+   "researchCost": 5500000,
+   "researchSeconds": 302400,
+   "researchTimeText": "3d 12h",
+   "laboratoryLevel": 11
+  },
+  {
+   "level": 11,
+   "dps": 260,
+   "damagePerHit": 390,
+   "hitpoints": 270,
+   "researchCost": 10000000,
+   "researchSeconds": 475200,
+   "researchTimeText": "5d 12h",
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 12,
+   "dps": 275,
+   "damagePerHit": 412.5,
+   "hitpoints": 290,
+   "researchCost": 11500000,
+   "researchSeconds": 604800,
+   "researchTimeText": "7d",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 13,
+   "dps": 290,
+   "damagePerHit": 435,
+   "hitpoints": 310,
+   "researchCost": 16000000,
+   "researchSeconds": 907200,
+   "researchTimeText": "10d 12h",
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 14,
+   "dps": 310,
+   "damagePerHit": 465,
+   "hitpoints": 330,
+   "researchCost": 27000000,
+   "researchSeconds": 1209600,
+   "researchTimeText": "14d",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 75,
+   "dps": 50,
+   "damagePerHit": 75
+  },
+  {
+   "level": 2,
+   "hitpoints": 90,
+   "dps": 70,
+   "damagePerHit": 105,
+   "researchCost": 120000,
+   "researchSeconds": 14400,
+   "laboratoryLevel": 3
+  },
+  {
+   "level": 3,
+   "hitpoints": 108,
+   "dps": 90,
+   "damagePerHit": 135,
+   "researchCost": 300000,
+   "researchSeconds": 18000,
+   "laboratoryLevel": 4
+  },
+  {
+   "level": 4,
+   "hitpoints": 135,
+   "dps": 125,
+   "damagePerHit": 187.5,
+   "researchCost": 600000,
+   "researchSeconds": 43200,
+   "laboratoryLevel": 5
+  },
+  {
+   "level": 5,
+   "hitpoints": 165,
+   "dps": 170,
+   "damagePerHit": 255,
+   "researchCost": 1200000,
+   "researchSeconds": 64800,
+   "laboratoryLevel": 6
+  },
+  {
+   "level": 6,
+   "hitpoints": 180,
+   "dps": 185,
+   "damagePerHit": 277.5,
+   "researchCost": 2000000,
+   "researchSeconds": 129600,
+   "laboratoryLevel": 7
+  },
+  {
+   "level": 7,
+   "hitpoints": 195,
+   "dps": 200,
+   "damagePerHit": 300,
+   "researchCost": 2500000,
+   "researchSeconds": 172800,
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 8,
+   "hitpoints": 210,
+   "dps": 215,
+   "damagePerHit": 322.5,
+   "researchCost": 3100000,
+   "researchSeconds": 194400,
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 9,
+   "hitpoints": 230,
+   "dps": 230,
+   "damagePerHit": 345,
+   "researchCost": 4000000,
+   "researchSeconds": 216000,
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 10,
+   "hitpoints": 250,
+   "dps": 245,
+   "damagePerHit": 367.5,
+   "researchCost": 5500000,
+   "researchSeconds": 302400,
+   "laboratoryLevel": 11
+  },
+  {
+   "level": 11,
+   "hitpoints": 270,
+   "dps": 260,
+   "damagePerHit": 390,
+   "researchCost": 10000000,
+   "researchSeconds": 475200,
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 12,
+   "hitpoints": 290,
+   "dps": 275,
+   "damagePerHit": 412.5,
+   "researchCost": 11500000,
+   "researchSeconds": 604800,
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 13,
+   "hitpoints": 310,
+   "dps": 290,
+   "damagePerHit": 435,
+   "researchCost": 16000000,
+   "researchSeconds": 907200,
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 14,
+   "hitpoints": 330,
+   "dps": 310,
+   "damagePerHit": 465,
+   "researchCost": 27000000,
+   "researchSeconds": 1209600,
+   "laboratoryLevel": 16
+  }
+ ],
+ "superTroopBoost": {
+  "super troop": "Super Wizard",
+  "boost cost": "25,000",
+  "wizard level required": "9"
+ },
+ "comparison": {
+  "checked": 92,
+  "matched": 90
+ },
+ "mismatches": [
+  {
+   "field": "unlockTownHall (summary text)",
+   "level": null,
+   "wiki": 6,
+   "client": 5,
+   "clientColumn": "buildings.Barracks row 7 TownHallLevel",
+   "note": "wiki Barracks page also says 5"
+  },
+  {
+   "field": "researchSeconds (Laboratory/Upgrade Chart)",
+   "level": 13,
+   "wiki": 1080000,
+   "client": 907200,
+   "clientColumn": "characters.UpgradeTimeH row 12 = 252",
+   "note": "Wizard page itself says 10d 12h = client"
+  }
+ ],
+ "ambiguities": [
+  "Summary says Barracks 7 \"requires Town Hall level 6\"; the wiki Barracks page and client Barracks row 7 (TownHallLevel=5) say Town Hall 5.",
+  "Laboratory/Upgrade Chart lists level 13 as 12d 12h, but the Wizard page and client (row 12 UpgradeTimeH=252 = 10d 12h) agree on 10d 12h."
+ ]
+}

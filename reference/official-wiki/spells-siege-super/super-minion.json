@@ -1,0 +1,163 @@
+{
+  "title": "Super Minion",
+  "url": "https://clashofclans.fandom.com/wiki/Super_Minion",
+  "revid": 620782,
+  "clientName": "Super Minion",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Super Minion",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "None",
+    "attackType": "Single Target",
+    "housingSpace": 12,
+    "movementSpeed": 16,
+    "attackSpeedSeconds": 1,
+    "range": "4 tiles (Normal) 10.25 tiles (Long Shot)",
+    "specialAbility": "Long Shot",
+    "rangeTiles": 4,
+    "longShotRangeTiles": 10.25,
+    "longShotsOffense": 8,
+    "longShotsDefense": 3
+  },
+  "levels": [
+    {
+      "level": 4,
+      "eventOnly": true,
+      "dps": 200,
+      "damagePerShot": 200,
+      "hitpoints": 1100,
+      "townHallLevel": 7
+    },
+    {
+      "level": 5,
+      "eventOnly": true,
+      "dps": 225,
+      "damagePerShot": 225,
+      "hitpoints": 1200,
+      "townHallLevel": 9
+    },
+    {
+      "level": 6,
+      "eventOnly": true,
+      "dps": 250,
+      "damagePerShot": 250,
+      "hitpoints": 1300,
+      "townHallLevel": 10
+    },
+    {
+      "level": 7,
+      "eventOnly": true,
+      "dps": 275,
+      "damagePerShot": 275,
+      "hitpoints": 1400,
+      "townHallLevel": 11
+    },
+    {
+      "level": 8,
+      "dps": 300,
+      "damagePerShot": 300,
+      "hitpoints": 1500,
+      "townHallLevel": 12
+    },
+    {
+      "level": 9,
+      "dps": 325,
+      "damagePerShot": 325,
+      "hitpoints": 1600,
+      "townHallLevel": 13
+    },
+    {
+      "level": 10,
+      "dps": 350,
+      "damagePerShot": 350,
+      "hitpoints": 1700,
+      "townHallLevel": 14
+    },
+    {
+      "level": 11,
+      "dps": 360,
+      "damagePerShot": 360,
+      "hitpoints": 1800,
+      "townHallLevel": 15
+    },
+    {
+      "level": 12,
+      "dps": 370,
+      "damagePerShot": 370,
+      "hitpoints": 1900,
+      "townHallLevel": 16
+    },
+    {
+      "level": 13,
+      "dps": 385,
+      "damagePerShot": 385,
+      "hitpoints": 2100,
+      "townHallLevel": 17
+    },
+    {
+      "level": 14,
+      "dps": 400,
+      "damagePerShot": 400,
+      "hitpoints": 2300,
+      "townHallLevel": 18
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "rangeTiles",
+      "level": null,
+      "wiki": 4,
+      "client": 3.5,
+      "note": "client AttackRange/100"
+    },
+    {
+      "field": "longShotRangeTiles",
+      "level": null,
+      "wiki": 10.25,
+      "client": 9.75,
+      "note": "SuperMinionSpecialProjectiles.AttackRange 975"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "long shot",
+      "client": "`SpecialAbilities` SuperMinionSpecialProjectiles: `AttackRange` 975, `DeactivateAfterNumberOfHits` 8, `Projectile` super_gargoyle_projectile_big; defensive row _DEF: 3 shots"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`DPS`, `Hitpoints`, `Speed` 200, `AttackRange` 350, `ProductionBuilding` Dark Barracks, `DefensiveTroop` 'Defensive Super Minion'"
+    },
+    {
+      "mechanic": "TH per level",
+      "client": "derived: Laboratory TH needed for the Minion level"
+    }
+  ],
+  "boost": {
+    "wiki": {
+      "baseTroop": "Minion",
+      "minBaseLevel": 8,
+      "townHallRequired": 12,
+      "clanCastleLevelToReceive": 6,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperMinion",
+      "Original": "Minion",
+      "MinOriginalLevel_raw": 7,
+      "minBaseLevel": 8,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_MINION_INTRO_TH13",
+      "townHallDerived": 12
+    }
+  }
+}

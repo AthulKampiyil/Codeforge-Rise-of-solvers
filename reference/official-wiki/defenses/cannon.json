@@ -1,0 +1,400 @@
+{
+ "title": "Cannon/Home Village",
+ "url": "https://clashofclans.fandom.com/wiki/Cannon/Home_Village",
+ "revid": 624457,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Cannon",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 7,
+   "damagePerHit": 5.6,
+   "hitpoints": 300,
+   "cost": 250,
+   "buildSeconds": 5,
+   "xp": 2,
+   "townHall": 1,
+   "burstHitpoints": 420
+  },
+  {
+   "level": 2,
+   "dps": 10,
+   "damagePerHit": 8,
+   "hitpoints": 360,
+   "cost": 1000,
+   "buildSeconds": 30,
+   "xp": 5,
+   "townHall": 1,
+   "burstHitpoints": 470
+  },
+  {
+   "level": 3,
+   "dps": 13,
+   "damagePerHit": 10.4,
+   "hitpoints": 420,
+   "cost": 4000,
+   "buildSeconds": 120,
+   "xp": 10,
+   "townHall": 2,
+   "burstHitpoints": 520
+  },
+  {
+   "level": 4,
+   "dps": 17,
+   "damagePerHit": 13.6,
+   "hitpoints": 500,
+   "cost": 16000,
+   "buildSeconds": 1200,
+   "xp": 34,
+   "townHall": 3,
+   "burstHitpoints": 570
+  },
+  {
+   "level": 5,
+   "dps": 23,
+   "damagePerHit": 18.4,
+   "hitpoints": 600,
+   "cost": 50000,
+   "buildSeconds": 1800,
+   "xp": 42,
+   "townHall": 4,
+   "burstHitpoints": 620
+  },
+  {
+   "level": 6,
+   "dps": 30,
+   "damagePerHit": 24,
+   "hitpoints": 660,
+   "cost": 60000,
+   "buildSeconds": 3600,
+   "xp": 60,
+   "townHall": 5,
+   "burstHitpoints": 670,
+   "burstCost": 100000
+  },
+  {
+   "level": 7,
+   "dps": 40,
+   "damagePerHit": 32,
+   "hitpoints": 730,
+   "cost": 100000,
+   "buildSeconds": 7200,
+   "xp": 84,
+   "townHall": 6,
+   "burstDps": 80,
+   "burstDamagePerHit": 43.52
+  },
+  {
+   "level": 8,
+   "dps": 48,
+   "damagePerHit": 38.4,
+   "hitpoints": 800,
+   "cost": 160000,
+   "buildSeconds": 10800,
+   "xp": 103,
+   "townHall": 7,
+   "burstDps": 95,
+   "burstDamagePerHit": 52.22
+  },
+  {
+   "level": 9,
+   "dps": 56,
+   "damagePerHit": 44.8,
+   "hitpoints": 880,
+   "cost": 250000,
+   "buildSeconds": 12600,
+   "xp": 112,
+   "townHall": 8,
+   "burstDps": 111,
+   "burstDamagePerHit": 60.92
+  },
+  {
+   "level": 10,
+   "dps": 64,
+   "damagePerHit": 51.2,
+   "hitpoints": 960,
+   "cost": 330000,
+   "buildSeconds": 14400,
+   "xp": 120,
+   "townHall": 8,
+   "burstDps": 127,
+   "burstDamagePerHit": 69.63
+  },
+  {
+   "level": 11,
+   "dps": 74,
+   "damagePerHit": 59.2,
+   "hitpoints": 1060,
+   "cost": 500000,
+   "buildSeconds": 16200,
+   "xp": 127,
+   "townHall": 9,
+   "burstDps": 147,
+   "burstDamagePerHit": 80.51
+  },
+  {
+   "level": 12,
+   "dps": 85,
+   "damagePerHit": 68,
+   "hitpoints": 1160,
+   "cost": 600000,
+   "buildSeconds": 18000,
+   "xp": 134,
+   "townHall": 10,
+   "burstDps": 170,
+   "burstDamagePerHit": 92.48
+  },
+  {
+   "level": 13,
+   "dps": 95,
+   "damagePerHit": 76,
+   "hitpoints": 1260,
+   "cost": 660000,
+   "buildSeconds": 21600,
+   "xp": 146,
+   "townHall": 10,
+   "burstDps": 190,
+   "burstDamagePerHit": 103.36
+  },
+  {
+   "level": 14,
+   "dps": 100,
+   "damagePerHit": 80,
+   "hitpoints": 1380,
+   "cost": 1000000,
+   "buildSeconds": 28800,
+   "xp": 169,
+   "townHall": 11,
+   "burstDps": 200,
+   "burstDamagePerHit": 108.8
+  },
+  {
+   "level": 15,
+   "dps": 105,
+   "damagePerHit": 84,
+   "hitpoints": 1500,
+   "cost": 1200000,
+   "buildSeconds": 36000,
+   "xp": 189,
+   "townHall": 11,
+   "burstDps": 210,
+   "burstDamagePerHit": 114.24
+  },
+  {
+   "level": 16,
+   "dps": 110,
+   "damagePerHit": 88,
+   "hitpoints": 1620,
+   "cost": 1300000,
+   "buildSeconds": 39600,
+   "xp": 198,
+   "townHall": 12,
+   "burstDps": 220,
+   "burstDamagePerHit": 119.68
+  },
+  {
+   "level": 17,
+   "dps": 115,
+   "damagePerHit": 92,
+   "hitpoints": 1740,
+   "cost": 1500000,
+   "buildSeconds": 43200,
+   "xp": 207,
+   "townHall": 12,
+   "burstDps": 230,
+   "burstDamagePerHit": 125.12
+  },
+  {
+   "level": 18,
+   "dps": 125,
+   "damagePerHit": 100,
+   "hitpoints": 1870,
+   "cost": 1800000,
+   "buildSeconds": 57600,
+   "xp": 240,
+   "townHall": 13,
+   "burstDps": 250,
+   "burstDamagePerHit": 136
+  },
+  {
+   "level": 19,
+   "dps": 135,
+   "damagePerHit": 108,
+   "hitpoints": 2000,
+   "cost": 2000000,
+   "buildSeconds": 72000,
+   "xp": 268,
+   "townHall": 13,
+   "burstDps": 270,
+   "burstDamagePerHit": 146.88
+  },
+  {
+   "level": 20,
+   "dps": 150,
+   "damagePerHit": 120,
+   "hitpoints": 2150,
+   "cost": 2600000,
+   "buildSeconds": 86400,
+   "xp": 293,
+   "townHall": 14,
+   "burstDps": 300,
+   "burstDamagePerHit": 163.2
+  },
+  {
+   "level": 21,
+   "dps": 160,
+   "damagePerHit": 128,
+   "hitpoints": 2250,
+   "cost": 3000000,
+   "buildSeconds": 129600,
+   "xp": 360,
+   "townHall": 15,
+   "burstDps": 320,
+   "burstDamagePerHit": 174.08
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 1,
+  "size": "3x3",
+  "range": 9,
+  "minRange": 0,
+  "attackSeconds": 0.8,
+  "targets": "ground",
+  "damageType": "single target",
+  "splashTiles": 0,
+  "burst": {
+   "range": 7,
+   "shotsPerBurst": 4,
+   "shotIntervalSeconds": 0.192,
+   "burstIntervalSeconds": 1.6,
+   "damagePerHitMultiplierVsNormal": 1.36,
+   "dpsMultiplierVsNormal": 2.0,
+   "unlockLevel": 7,
+   "gearUpCost": 1000000,
+   "gearUpResource": "gold",
+   "gearUpSeconds": 172800,
+   "requires": "Double Cannon level 4"
+  },
+  "mergesInto": [
+   "Ricochet Cannon (2x level 21, TH16)",
+   "Multi-Gear Tower (geared-up level 21 Cannon + geared-up level 21 Archer Tower, TH17)"
+  ]
+ },
+ "mismatches": [
+  {
+   "field": "townHall",
+   "level": 2,
+   "wiki": 1,
+   "client": 2,
+   "note": "wiki: level 2 is available at TH1; client row requires TH2",
+   "table": "Normal Mode"
+  },
+  {
+   "field": "hitpoints",
+   "level": 1,
+   "wiki": 420,
+   "client": 300,
+   "note": "wiki burst table lists stale hitpoints for levels 1-6, where burst mode cannot exist (normal table and client agree)",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "hitpoints",
+   "level": 2,
+   "wiki": 470,
+   "client": 360,
+   "note": "wiki burst table lists stale hitpoints for levels 1-6, where burst mode cannot exist (normal table and client agree)",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "hitpoints",
+   "level": 3,
+   "wiki": 520,
+   "client": 420,
+   "note": "wiki burst table lists stale hitpoints for levels 1-6, where burst mode cannot exist (normal table and client agree)",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "hitpoints",
+   "level": 4,
+   "wiki": 570,
+   "client": 500,
+   "note": "wiki burst table lists stale hitpoints for levels 1-6, where burst mode cannot exist (normal table and client agree)",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "hitpoints",
+   "level": 5,
+   "wiki": 620,
+   "client": 600,
+   "note": "wiki burst table lists stale hitpoints for levels 1-6, where burst mode cannot exist (normal table and client agree)",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "hitpoints",
+   "level": 6,
+   "wiki": 670,
+   "client": 660,
+   "note": "wiki burst table lists stale hitpoints for levels 1-6, where burst mode cannot exist (normal table and client agree)",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "cost",
+   "level": 6,
+   "wiki": 100000,
+   "client": 60000,
+   "note": "wiki burst table artefact (normal table says 60,000 like the client)",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 8,
+   "wiki": 95,
+   "client": 96,
+   "note": "wiki shows the in-game display value (1 lower); client AltDPS is exactly 2x DPS",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 9,
+   "wiki": 111,
+   "client": 112,
+   "note": "wiki shows the in-game display value (1 lower); client AltDPS is exactly 2x DPS",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 10,
+   "wiki": 127,
+   "client": 128,
+   "note": "wiki shows the in-game display value (1 lower); client AltDPS is exactly 2x DPS",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 11,
+   "wiki": 147,
+   "client": 148,
+   "note": "wiki shows the in-game display value (1 lower); client AltDPS is exactly 2x DPS",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "countPerTownHall",
+   "level": "TH1",
+   "wiki": "2",
+   "client": 1,
+   "note": "Cannon page says TH1 = 2 Cannons; the Town Hall page's unlock matrix says TH1 = 1 Cannon (max level '2*'), which agrees with client townhall_levels (TH1 1, TH2 2) - a wiki-internal inconsistency",
+   "table": "NumberAvailable"
+  }
+ ],
+ "progressionMismatches": [
+  {
+   "field": "townhall",
+   "level": 2,
+   "wiki": 1,
+   "progression": 2,
+   "note": ""
+  }
+ ]
+}

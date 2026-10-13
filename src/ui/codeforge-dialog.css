@@ -1,0 +1,202 @@
+.modal.codeforge-modal {
+  width: 780px;
+  max-height: min(820px, 100%);
+}
+.modal-backdrop:has(.codeforge-modal) {
+  --backdrop-pad: 18px;
+}
+.codeforge-modal .modal-body {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: #9a875f #e9dec0;
+}
+.codeforge-modal .settings-body {
+  padding: 10px 28px 26px;
+}
+.codeforge-modal .setting-row > div {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+.codeforge-modal .setting-row {
+  padding: 16px 0;
+}
+.codeforge-modal .setting-row button {
+  min-height: 42px;
+  flex-shrink: 0;
+}
+.codeforge-modal .settings-body > h3 {
+  margin: 20px 0 4px;
+  font-size: 19px;
+  line-height: 1.25;
+}
+.codeforge-modal .setting-row h3 {
+  line-height: 1.2;
+  margin: 0;
+}
+.codeforge-modal .setting-row p,
+.codeforge-modal .setting-row small {
+  display: block;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.codeforge-modal .setting-row small + small {
+  margin-top: 5px;
+}
+.codeforge-modal .cf-link-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(170px, 250px) auto;
+  align-items: center;
+  gap: 14px;
+}
+.codeforge-modal .cf-link-form input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  padding: 8px 11px;
+  border: 2px solid #b7a985;
+  border-radius: 8px;
+  background: #fffdf3;
+  color: #493c2b;
+  font: inherit;
+}
+.codeforge-modal .cf-proof-block {
+  padding: 12px 0 15px;
+  border-bottom: 1px solid #dbd0b1;
+}
+.codeforge-modal .cf-proof-block > p {
+  margin: 4px 0 10px;
+  line-height: 1.55;
+}
+.codeforge-modal .cf-proof-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+.codeforge-modal .cf-proof-copy input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 2px solid #b7a985;
+  border-radius: 8px;
+  background: #fffdf3;
+  color: #493c2b;
+  font: 600 13px ui-monospace, monospace;
+  user-select: all;
+}
+.codeforge-modal .cf-proof-copy button {
+  white-space: nowrap;
+}
+.codeforge-modal .cf-sync-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 12px;
+}
+.codeforge-modal .cf-outpost-detail {
+  align-items: flex-start;
+}
+.codeforge-modal .cf-outpost-detail > div {
+  display: grid;
+  gap: 7px;
+}
+.codeforge-modal .cf-outpost-detail button {
+  flex: 0 0 auto;
+  align-self: center;
+}
+.codeforge-modal .cf-attack-panel,
+.codeforge-modal .cf-outpost-panel {
+  padding: 20px 0 10px;
+  border-top: 2px solid #d6c9a7;
+  scroll-margin-top: 12px;
+}
+.codeforge-modal .cf-attack-panel > h3,
+.codeforge-modal .cf-outpost-panel > h3 {
+  margin: 4px 0 8px;
+  font-size: 21px;
+}
+.codeforge-modal .cf-attack-panel > p,
+.codeforge-modal .cf-outpost-panel > p {
+  margin: 5px 0 12px;
+  line-height: 1.5;
+}
+.codeforge-modal .cf-attack-panel .setting-row,
+.codeforge-modal .cf-outpost-panel .setting-row {
+  gap: 16px;
+}
+.codeforge-modal .cf-outpost-panel .journey-bar {
+  margin-top: 9px;
+}
+.codeforge-modal .cf-outpost-panel .game-btn,
+.codeforge-modal .cf-attack-panel .game-btn {
+  white-space: nowrap;
+}
+@media (max-width: 620px) {
+  .modal-backdrop:has(.codeforge-modal) {
+    --backdrop-pad: 8px;
+  }
+  .modal.codeforge-modal {
+    max-height: 100%;
+  }
+  .codeforge-modal .modal-header {
+    padding: 18px 18px 15px;
+  }
+  .codeforge-modal .settings-body {
+    padding: 8px 16px 20px;
+  }
+  .codeforge-modal .cf-link-form {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+  .codeforge-modal .cf-link-form > div {
+    grid-column: 1 / -1;
+  }
+  .codeforge-modal .cf-link-form input {
+    grid-column: 1;
+  }
+  .codeforge-modal .cf-sync-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .codeforge-modal .cf-sync-row > div {
+    grid-column: 1 / -1;
+  }
+  .codeforge-modal .cf-proof-copy {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .codeforge-modal .setting-row {
+    gap: 12px;
+  }
+  .codeforge-modal .cf-outpost-detail {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .codeforge-modal .cf-outpost-detail button {
+    align-self: flex-start;
+  }
+}
+@media (max-width: 380px) {
+  .codeforge-modal .cf-link-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .codeforge-modal .cf-link-form > div,
+  .codeforge-modal .cf-link-form input {
+    grid-column: 1;
+  }
+  .codeforge-modal .cf-link-form button {
+    justify-self: start;
+  }
+  .codeforge-modal .cf-sync-row {
+    grid-template-columns: 1fr;
+  }
+  .codeforge-modal .cf-sync-row > div {
+    grid-column: 1;
+  }
+  .codeforge-modal .cf-proof-copy {
+    grid-template-columns: 1fr;
+  }
+  .codeforge-modal .cf-proof-copy button {
+    justify-self: start;
+  }
+}

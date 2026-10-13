@@ -1,0 +1,87 @@
+{
+  "title": "Jump Spell",
+  "url": "https://clashofclans.fandom.com/wiki/Jump_Spell/Home_Village",
+  "revid": 623002,
+  "clientName": "Jump",
+  "category": "elixir-spell",
+  "retrieved": "2026-09-15",
+  "contentPage": "Jump Spell/Home Village",
+  "parentPage": "Jump Spell",
+  "parentRevid": 588156,
+  "clientTable": "spells",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "radiusTiles": 3.5,
+    "boostTimeSeconds": 1,
+    "housingSpace": 2,
+    "spellFactoryLevel": 4
+  },
+  "levels": [
+    {
+      "level": 1,
+      "durationSeconds": 20,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "durationSeconds": 40,
+      "researchCost": 1000000,
+      "researchTimeHours": 24,
+      "laboratoryLevel": 5
+    },
+    {
+      "level": 3,
+      "durationSeconds": 60,
+      "researchCost": 2000000,
+      "researchTimeHours": 48,
+      "laboratoryLevel": 8
+    },
+    {
+      "level": 4,
+      "durationSeconds": 80,
+      "researchCost": 5000000,
+      "researchTimeHours": 96,
+      "laboratoryLevel": 11
+    },
+    {
+      "level": 5,
+      "durationSeconds": 100,
+      "researchCost": 8000000,
+      "researchTimeHours": 120,
+      "laboratoryLevel": 13
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "boostTimeSeconds",
+      "level": null,
+      "wiki": 1,
+      "client": 0.4,
+      "note": "wiki 'Boost Time 1s' vs client JumpBoostMS 400"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "duration",
+      "client": "`NumberOfHits` x `TimeBetweenHitsMS` (81..401 x 250 ms = 20.25..100.25 s)"
+    },
+    {
+      "mechanic": "per-pulse grant",
+      "client": "`JumpBoostMS` = 400"
+    },
+    {
+      "mechanic": "radius",
+      "client": "`Radius` 350"
+    },
+    {
+      "mechanic": "globals",
+      "client": "`USE_WALL_WEIGHTS_FOR_JUMP_SPELL` = TRUE, `RETARGET_WHEN_EXITING_JUMP_SPELL` = FALSE"
+    },
+    {
+      "mechanic": "immunities",
+      "client": "`ImmunitySiegeMachines`, `ImmunityTotems`"
+    }
+  ]
+}

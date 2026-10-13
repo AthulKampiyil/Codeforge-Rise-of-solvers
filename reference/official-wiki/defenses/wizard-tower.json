@@ -1,0 +1,194 @@
+{
+ "title": "Wizard Tower",
+ "url": "https://clashofclans.fandom.com/wiki/Wizard_Tower",
+ "revid": 625327,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Wizard Tower",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 11,
+   "damagePerHit": 14.3,
+   "hitpoints": 620,
+   "cost": 100000,
+   "buildSeconds": 3600,
+   "xp": 60,
+   "townHall": 5
+  },
+  {
+   "level": 2,
+   "dps": 13,
+   "damagePerHit": 16.9,
+   "hitpoints": 650,
+   "cost": 150000,
+   "buildSeconds": 5400,
+   "xp": 73,
+   "townHall": 5
+  },
+  {
+   "level": 3,
+   "dps": 16,
+   "damagePerHit": 20.8,
+   "hitpoints": 680,
+   "cost": 250000,
+   "buildSeconds": 14400,
+   "xp": 120,
+   "townHall": 6
+  },
+  {
+   "level": 4,
+   "dps": 20,
+   "damagePerHit": 26,
+   "hitpoints": 730,
+   "cost": 400000,
+   "buildSeconds": 28800,
+   "xp": 169,
+   "townHall": 7
+  },
+  {
+   "level": 5,
+   "dps": 24,
+   "damagePerHit": 31.2,
+   "hitpoints": 840,
+   "cost": 550000,
+   "buildSeconds": 36000,
+   "xp": 189,
+   "townHall": 8
+  },
+  {
+   "level": 6,
+   "dps": 32,
+   "damagePerHit": 41.6,
+   "hitpoints": 960,
+   "cost": 660000,
+   "buildSeconds": 43200,
+   "xp": 207,
+   "townHall": 8
+  },
+  {
+   "level": 7,
+   "dps": 40,
+   "damagePerHit": 52,
+   "hitpoints": 1200,
+   "cost": 1000000,
+   "buildSeconds": 64800,
+   "xp": 254,
+   "townHall": 9
+  },
+  {
+   "level": 8,
+   "dps": 45,
+   "damagePerHit": 58.5,
+   "hitpoints": 1440,
+   "cost": 1100000,
+   "buildSeconds": 72000,
+   "xp": 268,
+   "townHall": 10
+  },
+  {
+   "level": 9,
+   "dps": 50,
+   "damagePerHit": 65,
+   "hitpoints": 1600,
+   "cost": 1300000,
+   "buildSeconds": 86400,
+   "xp": 293,
+   "townHall": 10
+  },
+  {
+   "level": 10,
+   "dps": 62,
+   "damagePerHit": 80.6,
+   "hitpoints": 1900,
+   "cost": 2000000,
+   "buildSeconds": 108000,
+   "xp": 328,
+   "townHall": 11
+  },
+  {
+   "level": 11,
+   "dps": 70,
+   "damagePerHit": 91,
+   "hitpoints": 2120,
+   "cost": 2500000,
+   "buildSeconds": 129600,
+   "xp": 360,
+   "townHall": 12
+  },
+  {
+   "level": 12,
+   "dps": 78,
+   "damagePerHit": 101.4,
+   "hitpoints": 2240,
+   "cost": 2600000,
+   "buildSeconds": 151200,
+   "xp": 388,
+   "townHall": 13
+  },
+  {
+   "level": 13,
+   "dps": 84,
+   "damagePerHit": 109.2,
+   "hitpoints": 2500,
+   "cost": 3000000,
+   "buildSeconds": 172800,
+   "xp": 415,
+   "townHall": 13
+  },
+  {
+   "level": 14,
+   "dps": 90,
+   "damagePerHit": 117,
+   "hitpoints": 2800,
+   "cost": 4500000,
+   "buildSeconds": 259200,
+   "xp": 509,
+   "townHall": 14
+  },
+  {
+   "level": 15,
+   "dps": 95,
+   "damagePerHit": 123.5,
+   "hitpoints": 3000,
+   "cost": 5500000,
+   "buildSeconds": 345600,
+   "xp": 587,
+   "townHall": 15
+  },
+  {
+   "level": 16,
+   "dps": 102,
+   "damagePerHit": 132.6,
+   "hitpoints": 3150,
+   "cost": 8000000,
+   "buildSeconds": 388800,
+   "xp": 623,
+   "townHall": 16
+  },
+  {
+   "level": 17,
+   "dps": 110,
+   "damagePerHit": 143,
+   "hitpoints": 3300,
+   "cost": 14000000,
+   "buildSeconds": 475200,
+   "xp": 689,
+   "townHall": 17
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 5,
+  "size": "3x3",
+  "range": 7,
+  "minRange": 0,
+  "attackSeconds": 1.3,
+  "targets": "ground & air (one layer per blast)",
+  "damageType": "splash",
+  "splashTiles": 1.0,
+  "mergesInto": "Super Wizard Tower (2x level 17, TH18)"
+ },
+ "mismatches": [],
+ "progressionMismatches": []
+}

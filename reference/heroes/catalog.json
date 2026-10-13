@@ -1,0 +1,6435 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "logic/character_items.csv": "66e644c62331a026aec3795980d9a37af95e2120d67dfbad380c729f3645ebad",
+    "logic/heroes.csv": "658c9721fb0fd5488b69ca3555ef5597d521f28dde95af051a2a98ccbdd65197",
+    "logic/special_abilities.csv": "c978dd90ff2335e60d988f3476d78bec72672e8c074344d149096e89951181eb"
+  },
+  "scope": "Every original level of the six home-village heroes, with the ability tiers each one activates and the equipment the source allows it.",
+  "heroes": {
+    "barbarianKing": {
+      "name": "Barbarian King",
+      "skin": "BarbarianKingDefault",
+      "housing": 25,
+      "speed": 200,
+      "range": 100,
+      "attackSpeed": 1200,
+      "flying": false,
+      "airTargets": false,
+      "groundTargets": true,
+      "resource": "dark",
+      "slots": 2,
+      "defaultItems": [
+        "Barbarian Puppet",
+        "Rage Vial"
+      ],
+      "ability": {
+        "name": "BarbarianKingAbilityHeal",
+        "tiers": [
+          {
+            "tier": 1,
+            "heal": 200,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 2,
+            "heal": 250,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 3,
+            "heal": 310,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 4,
+            "heal": 375,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 5,
+            "heal": 450,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 6,
+            "heal": 525,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 7,
+            "heal": 625,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 8,
+            "heal": 725,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 9,
+            "heal": 850,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 10,
+            "heal": 980,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 11,
+            "heal": 1125,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 12,
+            "heal": 1300,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 13,
+            "heal": 1490,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 14,
+            "heal": 1700,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 15,
+            "heal": 1925,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 16,
+            "heal": 2150,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 17,
+            "heal": 2350,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 18,
+            "heal": 2500,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 19,
+            "heal": 2650,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 20,
+            "heal": 2800,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 21,
+            "heal": 2950,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 22,
+            "heal": 3100,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 23,
+            "heal": 3250,
+            "seconds": 10.0,
+            "activations": 1
+          }
+        ]
+      },
+      "passives": [],
+      "equipment": [
+        {
+          "name": "Barbarian Puppet",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Rage Vial",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Earthquake Boots",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Giant Gauntlet",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        },
+        {
+          "name": "Vampstache",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Spiky Ball",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        },
+        {
+          "name": "Snake Bracelet",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        },
+        {
+          "name": "UNUSED15",
+          "rarity": "COMMON",
+          "levels": 1,
+          "unused": true
+        },
+        {
+          "name": "UNUSED16",
+          "rarity": "COMMON",
+          "levels": 1,
+          "unused": true
+        },
+        {
+          "name": "Stick Horse",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "hp": 1445,
+          "dps": 102,
+          "recovery": 200,
+          "tier": 1,
+          "cost": 0,
+          "seconds": 0,
+          "townhall": 4,
+          "hall": 1
+        },
+        {
+          "level": 2,
+          "hp": 1481,
+          "dps": 104,
+          "recovery": 200,
+          "tier": 1,
+          "cost": 5000,
+          "seconds": 7200,
+          "townhall": 7,
+          "hall": 1
+        },
+        {
+          "level": 3,
+          "hp": 1518,
+          "dps": 105,
+          "recovery": 200,
+          "tier": 1,
+          "cost": 5500,
+          "seconds": 14400,
+          "townhall": 7,
+          "hall": 1
+        },
+        {
+          "level": 4,
+          "hp": 1556,
+          "dps": 108,
+          "recovery": 200,
+          "tier": 1,
+          "cost": 6000,
+          "seconds": 28800,
+          "townhall": 7,
+          "hall": 1
+        },
+        {
+          "level": 5,
+          "hp": 1595,
+          "dps": 110,
+          "recovery": 250,
+          "tier": 2,
+          "cost": 6500,
+          "seconds": 36000,
+          "townhall": 7,
+          "hall": 1
+        },
+        {
+          "level": 6,
+          "hp": 1635,
+          "dps": 112,
+          "recovery": 250,
+          "tier": 2,
+          "cost": 7000,
+          "seconds": 43200,
+          "townhall": 7,
+          "hall": 1
+        },
+        {
+          "level": 7,
+          "hp": 1675,
+          "dps": 115,
+          "recovery": 250,
+          "tier": 2,
+          "cost": 7500,
+          "seconds": 50400,
+          "townhall": 7,
+          "hall": 1
+        },
+        {
+          "level": 8,
+          "hp": 1717,
+          "dps": 116,
+          "recovery": 250,
+          "tier": 2,
+          "cost": 8000,
+          "seconds": 57600,
+          "townhall": 7,
+          "hall": 1
+        },
+        {
+          "level": 9,
+          "hp": 1760,
+          "dps": 119,
+          "recovery": 250,
+          "tier": 2,
+          "cost": 8500,
+          "seconds": 64800,
+          "townhall": 7,
+          "hall": 1
+        },
+        {
+          "level": 10,
+          "hp": 1805,
+          "dps": 122,
+          "recovery": 310,
+          "tier": 3,
+          "cost": 10000,
+          "seconds": 72000,
+          "townhall": 7,
+          "hall": 1
+        },
+        {
+          "level": 11,
+          "hp": 1850,
+          "dps": 124,
+          "recovery": 310,
+          "tier": 3,
+          "cost": 10500,
+          "seconds": 79200,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 12,
+          "hp": 1896,
+          "dps": 127,
+          "recovery": 310,
+          "tier": 3,
+          "cost": 11000,
+          "seconds": 86400,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 13,
+          "hp": 1943,
+          "dps": 129,
+          "recovery": 310,
+          "tier": 3,
+          "cost": 11500,
+          "seconds": 86400,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 14,
+          "hp": 1992,
+          "dps": 132,
+          "recovery": 310,
+          "tier": 3,
+          "cost": 12000,
+          "seconds": 86400,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 15,
+          "hp": 2042,
+          "dps": 134,
+          "recovery": 375,
+          "tier": 4,
+          "cost": 12500,
+          "seconds": 86400,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 16,
+          "hp": 2093,
+          "dps": 137,
+          "recovery": 375,
+          "tier": 4,
+          "cost": 13000,
+          "seconds": 86400,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 17,
+          "hp": 2145,
+          "dps": 139,
+          "recovery": 375,
+          "tier": 4,
+          "cost": 13500,
+          "seconds": 86400,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 18,
+          "hp": 2198,
+          "dps": 143,
+          "recovery": 375,
+          "tier": 4,
+          "cost": 14000,
+          "seconds": 86400,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 19,
+          "hp": 2253,
+          "dps": 145,
+          "recovery": 375,
+          "tier": 4,
+          "cost": 14500,
+          "seconds": 86400,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 20,
+          "hp": 2309,
+          "dps": 148,
+          "recovery": 450,
+          "tier": 5,
+          "cost": 15000,
+          "seconds": 86400,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 21,
+          "hp": 2367,
+          "dps": 151,
+          "recovery": 450,
+          "tier": 5,
+          "cost": 17000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 22,
+          "hp": 2427,
+          "dps": 154,
+          "recovery": 450,
+          "tier": 5,
+          "cost": 19000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 23,
+          "hp": 2487,
+          "dps": 157,
+          "recovery": 450,
+          "tier": 5,
+          "cost": 21000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 24,
+          "hp": 2549,
+          "dps": 161,
+          "recovery": 450,
+          "tier": 5,
+          "cost": 23000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 25,
+          "hp": 2613,
+          "dps": 164,
+          "recovery": 525,
+          "tier": 6,
+          "cost": 25000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 26,
+          "hp": 2678,
+          "dps": 167,
+          "recovery": 525,
+          "tier": 6,
+          "cost": 27000,
+          "seconds": 172800,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 27,
+          "hp": 2746,
+          "dps": 170,
+          "recovery": 525,
+          "tier": 6,
+          "cost": 29000,
+          "seconds": 172800,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 28,
+          "hp": 2814,
+          "dps": 173,
+          "recovery": 525,
+          "tier": 6,
+          "cost": 31000,
+          "seconds": 172800,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 29,
+          "hp": 2885,
+          "dps": 177,
+          "recovery": 525,
+          "tier": 6,
+          "cost": 33000,
+          "seconds": 172800,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 30,
+          "hp": 2956,
+          "dps": 181,
+          "recovery": 625,
+          "tier": 7,
+          "cost": 35000,
+          "seconds": 172800,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 31,
+          "hp": 3030,
+          "dps": 184,
+          "recovery": 625,
+          "tier": 7,
+          "cost": 37000,
+          "seconds": 194400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 32,
+          "hp": 3107,
+          "dps": 188,
+          "recovery": 625,
+          "tier": 7,
+          "cost": 39000,
+          "seconds": 194400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 33,
+          "hp": 3184,
+          "dps": 192,
+          "recovery": 625,
+          "tier": 7,
+          "cost": 41000,
+          "seconds": 194400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 34,
+          "hp": 3264,
+          "dps": 196,
+          "recovery": 625,
+          "tier": 7,
+          "cost": 43000,
+          "seconds": 194400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 35,
+          "hp": 3346,
+          "dps": 200,
+          "recovery": 725,
+          "tier": 8,
+          "cost": 45000,
+          "seconds": 194400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 36,
+          "hp": 3429,
+          "dps": 203,
+          "recovery": 725,
+          "tier": 8,
+          "cost": 47000,
+          "seconds": 216000,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 37,
+          "hp": 3515,
+          "dps": 207,
+          "recovery": 725,
+          "tier": 8,
+          "cost": 49000,
+          "seconds": 216000,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 38,
+          "hp": 3602,
+          "dps": 212,
+          "recovery": 725,
+          "tier": 8,
+          "cost": 51000,
+          "seconds": 216000,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 39,
+          "hp": 3692,
+          "dps": 216,
+          "recovery": 725,
+          "tier": 8,
+          "cost": 53000,
+          "seconds": 216000,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 40,
+          "hp": 3785,
+          "dps": 220,
+          "recovery": 850,
+          "tier": 9,
+          "cost": 55000,
+          "seconds": 216000,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 41,
+          "hp": 3879,
+          "dps": 234,
+          "recovery": 850,
+          "tier": 9,
+          "cost": 58000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 42,
+          "hp": 3976,
+          "dps": 239,
+          "recovery": 850,
+          "tier": 9,
+          "cost": 61000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 43,
+          "hp": 4076,
+          "dps": 244,
+          "recovery": 850,
+          "tier": 9,
+          "cost": 64000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 44,
+          "hp": 4178,
+          "dps": 249,
+          "recovery": 850,
+          "tier": 9,
+          "cost": 67000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 45,
+          "hp": 4282,
+          "dps": 254,
+          "recovery": 980,
+          "tier": 10,
+          "cost": 70000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 46,
+          "hp": 4389,
+          "dps": 259,
+          "recovery": 980,
+          "tier": 10,
+          "cost": 73000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 47,
+          "hp": 4499,
+          "dps": 265,
+          "recovery": 980,
+          "tier": 10,
+          "cost": 76000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 48,
+          "hp": 4611,
+          "dps": 270,
+          "recovery": 980,
+          "tier": 10,
+          "cost": 79000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 49,
+          "hp": 4727,
+          "dps": 276,
+          "recovery": 980,
+          "tier": 10,
+          "cost": 82000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 50,
+          "hp": 4845,
+          "dps": 282,
+          "recovery": 1125,
+          "tier": 11,
+          "cost": 85000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 51,
+          "hp": 4967,
+          "dps": 288,
+          "recovery": 1125,
+          "tier": 11,
+          "cost": 86000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 52,
+          "hp": 5092,
+          "dps": 294,
+          "recovery": 1125,
+          "tier": 11,
+          "cost": 87000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 53,
+          "hp": 5219,
+          "dps": 300,
+          "recovery": 1125,
+          "tier": 11,
+          "cost": 88000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 54,
+          "hp": 5350,
+          "dps": 307,
+          "recovery": 1125,
+          "tier": 11,
+          "cost": 89000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 55,
+          "hp": 5484,
+          "dps": 314,
+          "recovery": 1300,
+          "tier": 12,
+          "cost": 90000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 56,
+          "hp": 5622,
+          "dps": 320,
+          "recovery": 1300,
+          "tier": 12,
+          "cost": 93000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 57,
+          "hp": 5763,
+          "dps": 327,
+          "recovery": 1300,
+          "tier": 12,
+          "cost": 96000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 58,
+          "hp": 5908,
+          "dps": 334,
+          "recovery": 1300,
+          "tier": 12,
+          "cost": 99000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 59,
+          "hp": 6055,
+          "dps": 341,
+          "recovery": 1300,
+          "tier": 12,
+          "cost": 102000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 60,
+          "hp": 6208,
+          "dps": 349,
+          "recovery": 1490,
+          "tier": 13,
+          "cost": 105000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 61,
+          "hp": 6363,
+          "dps": 355,
+          "recovery": 1490,
+          "tier": 13,
+          "cost": 107000,
+          "seconds": 345600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 62,
+          "hp": 6522,
+          "dps": 362,
+          "recovery": 1490,
+          "tier": 13,
+          "cost": 109000,
+          "seconds": 345600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 63,
+          "hp": 6685,
+          "dps": 370,
+          "recovery": 1490,
+          "tier": 13,
+          "cost": 111000,
+          "seconds": 345600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 64,
+          "hp": 6853,
+          "dps": 377,
+          "recovery": 1490,
+          "tier": 13,
+          "cost": 113000,
+          "seconds": 345600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 65,
+          "hp": 7024,
+          "dps": 385,
+          "recovery": 1700,
+          "tier": 14,
+          "cost": 115000,
+          "seconds": 345600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 66,
+          "hp": 7200,
+          "dps": 393,
+          "recovery": 1700,
+          "tier": 14,
+          "cost": 117000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 67,
+          "hp": 7378,
+          "dps": 400,
+          "recovery": 1700,
+          "tier": 14,
+          "cost": 119000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 68,
+          "hp": 7557,
+          "dps": 408,
+          "recovery": 1700,
+          "tier": 14,
+          "cost": 121000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 69,
+          "hp": 7735,
+          "dps": 417,
+          "recovery": 1700,
+          "tier": 14,
+          "cost": 123000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 70,
+          "hp": 7905,
+          "dps": 425,
+          "recovery": 1925,
+          "tier": 15,
+          "cost": 125000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 71,
+          "hp": 8075,
+          "dps": 434,
+          "recovery": 1925,
+          "tier": 15,
+          "cost": 130000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 72,
+          "hp": 8245,
+          "dps": 442,
+          "recovery": 1925,
+          "tier": 15,
+          "cost": 135000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 73,
+          "hp": 8415,
+          "dps": 451,
+          "recovery": 1925,
+          "tier": 15,
+          "cost": 140000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 74,
+          "hp": 8585,
+          "dps": 459,
+          "recovery": 1925,
+          "tier": 15,
+          "cost": 145000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 75,
+          "hp": 8755,
+          "dps": 468,
+          "recovery": 2150,
+          "tier": 16,
+          "cost": 150000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 76,
+          "hp": 8917,
+          "dps": 475,
+          "recovery": 2150,
+          "tier": 16,
+          "cost": 155000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 77,
+          "hp": 9078,
+          "dps": 483,
+          "recovery": 2150,
+          "tier": 16,
+          "cost": 160000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 78,
+          "hp": 9240,
+          "dps": 490,
+          "recovery": 2150,
+          "tier": 16,
+          "cost": 165000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 79,
+          "hp": 9401,
+          "dps": 498,
+          "recovery": 2150,
+          "tier": 16,
+          "cost": 170000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 80,
+          "hp": 9563,
+          "dps": 506,
+          "recovery": 2350,
+          "tier": 17,
+          "cost": 175000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 81,
+          "hp": 9690,
+          "dps": 513,
+          "recovery": 2350,
+          "tier": 17,
+          "cost": 180000,
+          "seconds": 432000,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 82,
+          "hp": 9818,
+          "dps": 519,
+          "recovery": 2350,
+          "tier": 17,
+          "cost": 185000,
+          "seconds": 432000,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 83,
+          "hp": 9945,
+          "dps": 526,
+          "recovery": 2350,
+          "tier": 17,
+          "cost": 190000,
+          "seconds": 432000,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 84,
+          "hp": 10073,
+          "dps": 533,
+          "recovery": 2350,
+          "tier": 17,
+          "cost": 195000,
+          "seconds": 432000,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 85,
+          "hp": 10200,
+          "dps": 540,
+          "recovery": 2500,
+          "tier": 18,
+          "cost": 200000,
+          "seconds": 432000,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 86,
+          "hp": 10328,
+          "dps": 547,
+          "recovery": 2500,
+          "tier": 18,
+          "cost": 215000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 87,
+          "hp": 10455,
+          "dps": 553,
+          "recovery": 2500,
+          "tier": 18,
+          "cost": 225000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 88,
+          "hp": 10583,
+          "dps": 560,
+          "recovery": 2500,
+          "tier": 18,
+          "cost": 235000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 89,
+          "hp": 10710,
+          "dps": 567,
+          "recovery": 2500,
+          "tier": 18,
+          "cost": 245000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 90,
+          "hp": 10838,
+          "dps": 574,
+          "recovery": 2650,
+          "tier": 19,
+          "cost": 255000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 91,
+          "hp": 10965,
+          "dps": 581,
+          "recovery": 2650,
+          "tier": 19,
+          "cost": 280000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 92,
+          "hp": 11093,
+          "dps": 587,
+          "recovery": 2650,
+          "tier": 19,
+          "cost": 290000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 93,
+          "hp": 11220,
+          "dps": 594,
+          "recovery": 2650,
+          "tier": 19,
+          "cost": 300000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 94,
+          "hp": 11348,
+          "dps": 601,
+          "recovery": 2650,
+          "tier": 19,
+          "cost": 310000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 95,
+          "hp": 11475,
+          "dps": 608,
+          "recovery": 2800,
+          "tier": 20,
+          "cost": 320000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 96,
+          "hp": 11600,
+          "dps": 615,
+          "recovery": 2800,
+          "tier": 20,
+          "cost": 340000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 97,
+          "hp": 11725,
+          "dps": 622,
+          "recovery": 2800,
+          "tier": 20,
+          "cost": 350000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 98,
+          "hp": 11850,
+          "dps": 629,
+          "recovery": 2800,
+          "tier": 20,
+          "cost": 360000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 99,
+          "hp": 11975,
+          "dps": 636,
+          "recovery": 2800,
+          "tier": 20,
+          "cost": 370000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 100,
+          "hp": 12100,
+          "dps": 643,
+          "recovery": 2950,
+          "tier": 21,
+          "cost": 380000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 101,
+          "hp": 12225,
+          "dps": 650,
+          "recovery": 2950,
+          "tier": 21,
+          "cost": 400000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 102,
+          "hp": 12350,
+          "dps": 657,
+          "recovery": 2950,
+          "tier": 21,
+          "cost": 410000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 103,
+          "hp": 12475,
+          "dps": 664,
+          "recovery": 2950,
+          "tier": 21,
+          "cost": 420000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 104,
+          "hp": 12600,
+          "dps": 671,
+          "recovery": 2950,
+          "tier": 21,
+          "cost": 430000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 105,
+          "hp": 12725,
+          "dps": 678,
+          "recovery": 3100,
+          "tier": 22,
+          "cost": 450000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 106,
+          "hp": 12850,
+          "dps": 685,
+          "recovery": 3100,
+          "tier": 22,
+          "cost": 460000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 107,
+          "hp": 12975,
+          "dps": 692,
+          "recovery": 3100,
+          "tier": 22,
+          "cost": 470000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 108,
+          "hp": 13100,
+          "dps": 699,
+          "recovery": 3100,
+          "tier": 22,
+          "cost": 475000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 109,
+          "hp": 13225,
+          "dps": 706,
+          "recovery": 3100,
+          "tier": 22,
+          "cost": 485000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 110,
+          "hp": 13350,
+          "dps": 713,
+          "recovery": 3250,
+          "tier": 23,
+          "cost": 490000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        }
+      ]
+    },
+    "archerQueen": {
+      "name": "Archer Queen",
+      "skin": "ArcherQueenDefault",
+      "housing": 25,
+      "speed": 300,
+      "range": 500,
+      "attackSpeed": 750,
+      "flying": false,
+      "airTargets": true,
+      "groundTargets": true,
+      "resource": "dark",
+      "slots": 2,
+      "defaultItems": [
+        "Archer Puppet",
+        "Invisibility Vial"
+      ],
+      "ability": {
+        "name": "ArcherQueenAbilityHeal",
+        "tiers": [
+          {
+            "tier": 1,
+            "heal": 115,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 2,
+            "heal": 130,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 3,
+            "heal": 145,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 4,
+            "heal": 160,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 5,
+            "heal": 175,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 6,
+            "heal": 190,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 7,
+            "heal": 205,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 8,
+            "heal": 220,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 9,
+            "heal": 235,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 10,
+            "heal": 250,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 11,
+            "heal": 265,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 12,
+            "heal": 280,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 13,
+            "heal": 295,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 14,
+            "heal": 310,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 15,
+            "heal": 325,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 16,
+            "heal": 340,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 17,
+            "heal": 355,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 18,
+            "heal": 370,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 19,
+            "heal": 385,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 20,
+            "heal": 400,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 21,
+            "heal": 415,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 22,
+            "heal": 430,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 23,
+            "heal": 445,
+            "seconds": 10.0,
+            "activations": 1
+          }
+        ]
+      },
+      "passives": [],
+      "equipment": [
+        {
+          "name": "Archer Puppet",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Invisibility Vial",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Frozen Arrow",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        },
+        {
+          "name": "Monolith Arrow",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        },
+        {
+          "name": "Piercing Arrow",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "UNUSED2",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": true
+        },
+        {
+          "name": "Healer Puppet",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "UNUSED3",
+          "rarity": "COMMON",
+          "levels": 1,
+          "unused": true
+        },
+        {
+          "name": "Magic Mirror",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        },
+        {
+          "name": "Punch Arrow",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        },
+        {
+          "name": "Action Figure",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "hp": 580,
+          "dps": 136,
+          "recovery": 115,
+          "tier": 1,
+          "cost": 0,
+          "seconds": 0,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 2,
+          "hp": 592,
+          "dps": 139,
+          "recovery": 115,
+          "tier": 1,
+          "cost": 5000,
+          "seconds": 7200,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 3,
+          "hp": 604,
+          "dps": 143,
+          "recovery": 115,
+          "tier": 1,
+          "cost": 5500,
+          "seconds": 14400,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 4,
+          "hp": 617,
+          "dps": 146,
+          "recovery": 115,
+          "tier": 1,
+          "cost": 6000,
+          "seconds": 28800,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 5,
+          "hp": 630,
+          "dps": 150,
+          "recovery": 130,
+          "tier": 2,
+          "cost": 6500,
+          "seconds": 36000,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 6,
+          "hp": 643,
+          "dps": 154,
+          "recovery": 130,
+          "tier": 2,
+          "cost": 7000,
+          "seconds": 43200,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 7,
+          "hp": 657,
+          "dps": 157,
+          "recovery": 130,
+          "tier": 2,
+          "cost": 7500,
+          "seconds": 50400,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 8,
+          "hp": 670,
+          "dps": 162,
+          "recovery": 130,
+          "tier": 2,
+          "cost": 8000,
+          "seconds": 57600,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 9,
+          "hp": 685,
+          "dps": 165,
+          "recovery": 130,
+          "tier": 2,
+          "cost": 8500,
+          "seconds": 64800,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 10,
+          "hp": 699,
+          "dps": 169,
+          "recovery": 145,
+          "tier": 3,
+          "cost": 10000,
+          "seconds": 72000,
+          "townhall": 8,
+          "hall": 2
+        },
+        {
+          "level": 11,
+          "hp": 714,
+          "dps": 173,
+          "recovery": 145,
+          "tier": 3,
+          "cost": 10500,
+          "seconds": 79200,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 12,
+          "hp": 729,
+          "dps": 178,
+          "recovery": 145,
+          "tier": 3,
+          "cost": 11000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 13,
+          "hp": 744,
+          "dps": 183,
+          "recovery": 145,
+          "tier": 3,
+          "cost": 11500,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 14,
+          "hp": 759,
+          "dps": 187,
+          "recovery": 145,
+          "tier": 3,
+          "cost": 12000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 15,
+          "hp": 775,
+          "dps": 192,
+          "recovery": 160,
+          "tier": 4,
+          "cost": 12500,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 16,
+          "hp": 792,
+          "dps": 196,
+          "recovery": 160,
+          "tier": 4,
+          "cost": 13000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 17,
+          "hp": 808,
+          "dps": 201,
+          "recovery": 160,
+          "tier": 4,
+          "cost": 13500,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 18,
+          "hp": 826,
+          "dps": 207,
+          "recovery": 160,
+          "tier": 4,
+          "cost": 14000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 19,
+          "hp": 842,
+          "dps": 212,
+          "recovery": 160,
+          "tier": 4,
+          "cost": 14500,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 20,
+          "hp": 861,
+          "dps": 217,
+          "recovery": 175,
+          "tier": 5,
+          "cost": 15000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 21,
+          "hp": 878,
+          "dps": 223,
+          "recovery": 175,
+          "tier": 5,
+          "cost": 17000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 22,
+          "hp": 897,
+          "dps": 228,
+          "recovery": 175,
+          "tier": 5,
+          "cost": 19000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 23,
+          "hp": 916,
+          "dps": 234,
+          "recovery": 175,
+          "tier": 5,
+          "cost": 21000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 24,
+          "hp": 935,
+          "dps": 240,
+          "recovery": 175,
+          "tier": 5,
+          "cost": 23000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 25,
+          "hp": 954,
+          "dps": 246,
+          "recovery": 190,
+          "tier": 6,
+          "cost": 25000,
+          "seconds": 86400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 26,
+          "hp": 974,
+          "dps": 252,
+          "recovery": 190,
+          "tier": 6,
+          "cost": 27000,
+          "seconds": 172800,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 27,
+          "hp": 995,
+          "dps": 258,
+          "recovery": 190,
+          "tier": 6,
+          "cost": 29000,
+          "seconds": 172800,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 28,
+          "hp": 1016,
+          "dps": 264,
+          "recovery": 190,
+          "tier": 6,
+          "cost": 31000,
+          "seconds": 172800,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 29,
+          "hp": 1038,
+          "dps": 271,
+          "recovery": 190,
+          "tier": 6,
+          "cost": 33000,
+          "seconds": 172800,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 30,
+          "hp": 1059,
+          "dps": 278,
+          "recovery": 205,
+          "tier": 7,
+          "cost": 35000,
+          "seconds": 172800,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 31,
+          "hp": 1082,
+          "dps": 285,
+          "recovery": 205,
+          "tier": 7,
+          "cost": 37000,
+          "seconds": 194400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 32,
+          "hp": 1104,
+          "dps": 292,
+          "recovery": 205,
+          "tier": 7,
+          "cost": 39000,
+          "seconds": 194400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 33,
+          "hp": 1127,
+          "dps": 299,
+          "recovery": 205,
+          "tier": 7,
+          "cost": 41000,
+          "seconds": 194400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 34,
+          "hp": 1151,
+          "dps": 307,
+          "recovery": 205,
+          "tier": 7,
+          "cost": 43000,
+          "seconds": 194400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 35,
+          "hp": 1175,
+          "dps": 315,
+          "recovery": 220,
+          "tier": 8,
+          "cost": 45000,
+          "seconds": 194400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 36,
+          "hp": 1200,
+          "dps": 322,
+          "recovery": 220,
+          "tier": 8,
+          "cost": 47000,
+          "seconds": 216000,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 37,
+          "hp": 1226,
+          "dps": 331,
+          "recovery": 220,
+          "tier": 8,
+          "cost": 49000,
+          "seconds": 216000,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 38,
+          "hp": 1251,
+          "dps": 338,
+          "recovery": 220,
+          "tier": 8,
+          "cost": 51000,
+          "seconds": 216000,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 39,
+          "hp": 1278,
+          "dps": 347,
+          "recovery": 220,
+          "tier": 8,
+          "cost": 53000,
+          "seconds": 216000,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 40,
+          "hp": 1304,
+          "dps": 356,
+          "recovery": 235,
+          "tier": 9,
+          "cost": 55000,
+          "seconds": 216000,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 41,
+          "hp": 1331,
+          "dps": 365,
+          "recovery": 235,
+          "tier": 9,
+          "cost": 58000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 42,
+          "hp": 1359,
+          "dps": 374,
+          "recovery": 235,
+          "tier": 9,
+          "cost": 61000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 43,
+          "hp": 1388,
+          "dps": 383,
+          "recovery": 235,
+          "tier": 9,
+          "cost": 64000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 44,
+          "hp": 1417,
+          "dps": 393,
+          "recovery": 235,
+          "tier": 9,
+          "cost": 67000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 45,
+          "hp": 1447,
+          "dps": 403,
+          "recovery": 250,
+          "tier": 10,
+          "cost": 70000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 46,
+          "hp": 1478,
+          "dps": 413,
+          "recovery": 250,
+          "tier": 10,
+          "cost": 73000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 47,
+          "hp": 1508,
+          "dps": 423,
+          "recovery": 250,
+          "tier": 10,
+          "cost": 76000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 48,
+          "hp": 1540,
+          "dps": 434,
+          "recovery": 250,
+          "tier": 10,
+          "cost": 79000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 49,
+          "hp": 1572,
+          "dps": 445,
+          "recovery": 250,
+          "tier": 10,
+          "cost": 82000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 50,
+          "hp": 1606,
+          "dps": 456,
+          "recovery": 265,
+          "tier": 11,
+          "cost": 85000,
+          "seconds": 259200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 51,
+          "hp": 1646,
+          "dps": 465,
+          "recovery": 265,
+          "tier": 11,
+          "cost": 86000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 52,
+          "hp": 1688,
+          "dps": 474,
+          "recovery": 265,
+          "tier": 11,
+          "cost": 87000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 53,
+          "hp": 1730,
+          "dps": 485,
+          "recovery": 265,
+          "tier": 11,
+          "cost": 88000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 54,
+          "hp": 1774,
+          "dps": 495,
+          "recovery": 265,
+          "tier": 11,
+          "cost": 89000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 55,
+          "hp": 1819,
+          "dps": 505,
+          "recovery": 280,
+          "tier": 12,
+          "cost": 90000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 56,
+          "hp": 1865,
+          "dps": 515,
+          "recovery": 280,
+          "tier": 12,
+          "cost": 93000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 57,
+          "hp": 1912,
+          "dps": 526,
+          "recovery": 280,
+          "tier": 12,
+          "cost": 96000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 58,
+          "hp": 1960,
+          "dps": 537,
+          "recovery": 280,
+          "tier": 12,
+          "cost": 99000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 59,
+          "hp": 2010,
+          "dps": 548,
+          "recovery": 280,
+          "tier": 12,
+          "cost": 102000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 60,
+          "hp": 2060,
+          "dps": 559,
+          "recovery": 295,
+          "tier": 13,
+          "cost": 105000,
+          "seconds": 259200,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 61,
+          "hp": 2111,
+          "dps": 570,
+          "recovery": 295,
+          "tier": 13,
+          "cost": 107000,
+          "seconds": 345600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 62,
+          "hp": 2164,
+          "dps": 581,
+          "recovery": 295,
+          "tier": 13,
+          "cost": 109000,
+          "seconds": 345600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 63,
+          "hp": 2218,
+          "dps": 593,
+          "recovery": 295,
+          "tier": 13,
+          "cost": 111000,
+          "seconds": 345600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 64,
+          "hp": 2274,
+          "dps": 605,
+          "recovery": 295,
+          "tier": 13,
+          "cost": 113000,
+          "seconds": 345600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 65,
+          "hp": 2330,
+          "dps": 617,
+          "recovery": 310,
+          "tier": 14,
+          "cost": 115000,
+          "seconds": 345600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 66,
+          "hp": 2384,
+          "dps": 628,
+          "recovery": 310,
+          "tier": 14,
+          "cost": 117000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 67,
+          "hp": 2432,
+          "dps": 638,
+          "recovery": 310,
+          "tier": 14,
+          "cost": 119000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 68,
+          "hp": 2476,
+          "dps": 648,
+          "recovery": 310,
+          "tier": 14,
+          "cost": 121000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 69,
+          "hp": 2516,
+          "dps": 656,
+          "recovery": 310,
+          "tier": 14,
+          "cost": 123000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 70,
+          "hp": 2552,
+          "dps": 664,
+          "recovery": 325,
+          "tier": 15,
+          "cost": 125000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 71,
+          "hp": 2584,
+          "dps": 671,
+          "recovery": 325,
+          "tier": 15,
+          "cost": 130000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 72,
+          "hp": 2616,
+          "dps": 677,
+          "recovery": 325,
+          "tier": 15,
+          "cost": 135000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 73,
+          "hp": 2648,
+          "dps": 682,
+          "recovery": 325,
+          "tier": 15,
+          "cost": 140000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 74,
+          "hp": 2680,
+          "dps": 687,
+          "recovery": 325,
+          "tier": 15,
+          "cost": 145000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 75,
+          "hp": 2712,
+          "dps": 692,
+          "recovery": 340,
+          "tier": 16,
+          "cost": 150000,
+          "seconds": 345600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 76,
+          "hp": 2740,
+          "dps": 697,
+          "recovery": 340,
+          "tier": 16,
+          "cost": 155000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 77,
+          "hp": 2768,
+          "dps": 701,
+          "recovery": 340,
+          "tier": 16,
+          "cost": 160000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 78,
+          "hp": 2796,
+          "dps": 706,
+          "recovery": 340,
+          "tier": 16,
+          "cost": 165000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 79,
+          "hp": 2824,
+          "dps": 710,
+          "recovery": 340,
+          "tier": 16,
+          "cost": 170000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 80,
+          "hp": 2852,
+          "dps": 714,
+          "recovery": 355,
+          "tier": 17,
+          "cost": 175000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 81,
+          "hp": 2880,
+          "dps": 717,
+          "recovery": 355,
+          "tier": 17,
+          "cost": 180000,
+          "seconds": 432000,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 82,
+          "hp": 2904,
+          "dps": 721,
+          "recovery": 355,
+          "tier": 17,
+          "cost": 185000,
+          "seconds": 432000,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 83,
+          "hp": 2928,
+          "dps": 724,
+          "recovery": 355,
+          "tier": 17,
+          "cost": 190000,
+          "seconds": 432000,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 84,
+          "hp": 2952,
+          "dps": 728,
+          "recovery": 355,
+          "tier": 17,
+          "cost": 195000,
+          "seconds": 432000,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 85,
+          "hp": 2976,
+          "dps": 731,
+          "recovery": 370,
+          "tier": 18,
+          "cost": 200000,
+          "seconds": 432000,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 86,
+          "hp": 3000,
+          "dps": 734,
+          "recovery": 370,
+          "tier": 18,
+          "cost": 215000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 87,
+          "hp": 3024,
+          "dps": 738,
+          "recovery": 370,
+          "tier": 18,
+          "cost": 225000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 88,
+          "hp": 3048,
+          "dps": 741,
+          "recovery": 370,
+          "tier": 18,
+          "cost": 235000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 89,
+          "hp": 3072,
+          "dps": 745,
+          "recovery": 370,
+          "tier": 18,
+          "cost": 245000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 90,
+          "hp": 3096,
+          "dps": 748,
+          "recovery": 385,
+          "tier": 19,
+          "cost": 255000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 91,
+          "hp": 3120,
+          "dps": 751,
+          "recovery": 385,
+          "tier": 19,
+          "cost": 280000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 92,
+          "hp": 3144,
+          "dps": 755,
+          "recovery": 385,
+          "tier": 19,
+          "cost": 290000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 93,
+          "hp": 3168,
+          "dps": 758,
+          "recovery": 385,
+          "tier": 19,
+          "cost": 300000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 94,
+          "hp": 3192,
+          "dps": 762,
+          "recovery": 385,
+          "tier": 19,
+          "cost": 310000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 95,
+          "hp": 3216,
+          "dps": 765,
+          "recovery": 400,
+          "tier": 20,
+          "cost": 320000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 96,
+          "hp": 3240,
+          "dps": 768,
+          "recovery": 400,
+          "tier": 20,
+          "cost": 340000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 97,
+          "hp": 3264,
+          "dps": 771,
+          "recovery": 400,
+          "tier": 20,
+          "cost": 350000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 98,
+          "hp": 3288,
+          "dps": 774,
+          "recovery": 400,
+          "tier": 20,
+          "cost": 360000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 99,
+          "hp": 3312,
+          "dps": 777,
+          "recovery": 400,
+          "tier": 20,
+          "cost": 370000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 100,
+          "hp": 3336,
+          "dps": 780,
+          "recovery": 415,
+          "tier": 21,
+          "cost": 380000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 101,
+          "hp": 3360,
+          "dps": 783,
+          "recovery": 415,
+          "tier": 21,
+          "cost": 400000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 102,
+          "hp": 3384,
+          "dps": 786,
+          "recovery": 415,
+          "tier": 21,
+          "cost": 410000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 103,
+          "hp": 3408,
+          "dps": 789,
+          "recovery": 415,
+          "tier": 21,
+          "cost": 420000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 104,
+          "hp": 3432,
+          "dps": 792,
+          "recovery": 415,
+          "tier": 21,
+          "cost": 430000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 105,
+          "hp": 3456,
+          "dps": 795,
+          "recovery": 430,
+          "tier": 22,
+          "cost": 450000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 106,
+          "hp": 3480,
+          "dps": 798,
+          "recovery": 430,
+          "tier": 22,
+          "cost": 460000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 107,
+          "hp": 3504,
+          "dps": 801,
+          "recovery": 430,
+          "tier": 22,
+          "cost": 470000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 108,
+          "hp": 3528,
+          "dps": 804,
+          "recovery": 430,
+          "tier": 22,
+          "cost": 475000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 109,
+          "hp": 3552,
+          "dps": 807,
+          "recovery": 430,
+          "tier": 22,
+          "cost": 485000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 110,
+          "hp": 3576,
+          "dps": 810,
+          "recovery": 445,
+          "tier": 23,
+          "cost": 490000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        }
+      ]
+    },
+    "grandWarden": {
+      "name": "Grand Warden",
+      "skin": "GrandWardenDefault",
+      "housing": 25,
+      "speed": 200,
+      "range": 700,
+      "attackSpeed": 1800,
+      "flying": false,
+      "airTargets": true,
+      "groundTargets": true,
+      "resource": "elixir",
+      "slots": 2,
+      "defaultItems": [
+        "Eternal Tome",
+        "Life Gem"
+      ],
+      "ability": {
+        "name": "GrandWardenAbilityHeal",
+        "tiers": [
+          {
+            "tier": 1,
+            "heal": 90,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 2,
+            "heal": 97,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 3,
+            "heal": 109,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 4,
+            "heal": 122,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 5,
+            "heal": 135,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 6,
+            "heal": 149,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 7,
+            "heal": 165,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 8,
+            "heal": 182,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 9,
+            "heal": 202,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 10,
+            "heal": 211,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 11,
+            "heal": 220,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 12,
+            "heal": 229,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 13,
+            "heal": 238,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 14,
+            "heal": 247,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 15,
+            "heal": 256,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 16,
+            "heal": 265,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 17,
+            "heal": 275,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 18,
+            "heal": 285,
+            "seconds": 10.0,
+            "activations": 1
+          }
+        ]
+      },
+      "passives": [],
+      "equipment": [
+        {
+          "name": "Eternal Tome",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Life Gem",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Heroic Torch",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        },
+        {
+          "name": "Fireball",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        },
+        {
+          "name": "UNUSED4",
+          "rarity": "COMMON",
+          "levels": 1,
+          "unused": true
+        },
+        {
+          "name": "Rage Gem",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "UNUSED5",
+          "rarity": "COMMON",
+          "levels": 1,
+          "unused": true
+        },
+        {
+          "name": "UNUSED6",
+          "rarity": "COMMON",
+          "levels": 1,
+          "unused": true
+        },
+        {
+          "name": "UNUSED7",
+          "rarity": "COMMON",
+          "levels": 1,
+          "unused": true
+        },
+        {
+          "name": "Healing Tome",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "UNUSED17",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": true
+        },
+        {
+          "name": "Lavaloon Puppet",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "hp": 850,
+          "dps": 43,
+          "recovery": 90,
+          "tier": 1,
+          "cost": 0,
+          "seconds": 0,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 2,
+          "hp": 868,
+          "dps": 44,
+          "recovery": 90,
+          "tier": 1,
+          "cost": 1000000,
+          "seconds": 7200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 3,
+          "hp": 886,
+          "dps": 46,
+          "recovery": 90,
+          "tier": 1,
+          "cost": 1100000,
+          "seconds": 14400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 4,
+          "hp": 904,
+          "dps": 48,
+          "recovery": 90,
+          "tier": 1,
+          "cost": 1200000,
+          "seconds": 28800,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 5,
+          "hp": 923,
+          "dps": 49,
+          "recovery": 97,
+          "tier": 2,
+          "cost": 1400000,
+          "seconds": 36000,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 6,
+          "hp": 942,
+          "dps": 51,
+          "recovery": 97,
+          "tier": 2,
+          "cost": 1500000,
+          "seconds": 43200,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 7,
+          "hp": 961,
+          "dps": 54,
+          "recovery": 97,
+          "tier": 2,
+          "cost": 1700000,
+          "seconds": 50400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 8,
+          "hp": 982,
+          "dps": 56,
+          "recovery": 97,
+          "tier": 2,
+          "cost": 1800000,
+          "seconds": 57600,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 9,
+          "hp": 1003,
+          "dps": 59,
+          "recovery": 97,
+          "tier": 2,
+          "cost": 2000000,
+          "seconds": 64800,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 10,
+          "hp": 1025,
+          "dps": 61,
+          "recovery": 109,
+          "tier": 3,
+          "cost": 2300000,
+          "seconds": 72000,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 11,
+          "hp": 1048,
+          "dps": 64,
+          "recovery": 109,
+          "tier": 3,
+          "cost": 2700000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 12,
+          "hp": 1072,
+          "dps": 66,
+          "recovery": 109,
+          "tier": 3,
+          "cost": 3000000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 13,
+          "hp": 1097,
+          "dps": 70,
+          "recovery": 109,
+          "tier": 3,
+          "cost": 3400000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 14,
+          "hp": 1122,
+          "dps": 73,
+          "recovery": 109,
+          "tier": 3,
+          "cost": 3700000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 15,
+          "hp": 1148,
+          "dps": 77,
+          "recovery": 122,
+          "tier": 4,
+          "cost": 4100000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 16,
+          "hp": 1173,
+          "dps": 80,
+          "recovery": 122,
+          "tier": 4,
+          "cost": 4400000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 17,
+          "hp": 1199,
+          "dps": 83,
+          "recovery": 122,
+          "tier": 4,
+          "cost": 4800000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 18,
+          "hp": 1224,
+          "dps": 87,
+          "recovery": 122,
+          "tier": 4,
+          "cost": 5100000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 19,
+          "hp": 1250,
+          "dps": 90,
+          "recovery": 122,
+          "tier": 4,
+          "cost": 5500000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 20,
+          "hp": 1275,
+          "dps": 94,
+          "recovery": 135,
+          "tier": 5,
+          "cost": 6000000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 21,
+          "hp": 1301,
+          "dps": 98,
+          "recovery": 135,
+          "tier": 5,
+          "cost": 6100000,
+          "seconds": 86400,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 22,
+          "hp": 1327,
+          "dps": 102,
+          "recovery": 135,
+          "tier": 5,
+          "cost": 6200000,
+          "seconds": 86400,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 23,
+          "hp": 1354,
+          "dps": 106,
+          "recovery": 135,
+          "tier": 5,
+          "cost": 6300000,
+          "seconds": 86400,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 24,
+          "hp": 1381,
+          "dps": 111,
+          "recovery": 135,
+          "tier": 5,
+          "cost": 6400000,
+          "seconds": 86400,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 25,
+          "hp": 1409,
+          "dps": 116,
+          "recovery": 149,
+          "tier": 6,
+          "cost": 6500000,
+          "seconds": 86400,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 26,
+          "hp": 1438,
+          "dps": 121,
+          "recovery": 149,
+          "tier": 6,
+          "cost": 6600000,
+          "seconds": 129600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 27,
+          "hp": 1467,
+          "dps": 126,
+          "recovery": 149,
+          "tier": 6,
+          "cost": 6700000,
+          "seconds": 129600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 28,
+          "hp": 1497,
+          "dps": 131,
+          "recovery": 149,
+          "tier": 6,
+          "cost": 6800000,
+          "seconds": 129600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 29,
+          "hp": 1527,
+          "dps": 137,
+          "recovery": 149,
+          "tier": 6,
+          "cost": 6900000,
+          "seconds": 129600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 30,
+          "hp": 1558,
+          "dps": 143,
+          "recovery": 165,
+          "tier": 7,
+          "cost": 7000000,
+          "seconds": 129600,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 31,
+          "hp": 1590,
+          "dps": 149,
+          "recovery": 165,
+          "tier": 7,
+          "cost": 7100000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 32,
+          "hp": 1622,
+          "dps": 155,
+          "recovery": 165,
+          "tier": 7,
+          "cost": 7200000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 33,
+          "hp": 1655,
+          "dps": 162,
+          "recovery": 165,
+          "tier": 7,
+          "cost": 7300000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 34,
+          "hp": 1688,
+          "dps": 168,
+          "recovery": 165,
+          "tier": 7,
+          "cost": 7400000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 35,
+          "hp": 1722,
+          "dps": 175,
+          "recovery": 182,
+          "tier": 8,
+          "cost": 7500000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 36,
+          "hp": 1757,
+          "dps": 183,
+          "recovery": 182,
+          "tier": 8,
+          "cost": 7600000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 37,
+          "hp": 1793,
+          "dps": 190,
+          "recovery": 182,
+          "tier": 8,
+          "cost": 7700000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 38,
+          "hp": 1829,
+          "dps": 198,
+          "recovery": 182,
+          "tier": 8,
+          "cost": 7800000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 39,
+          "hp": 1867,
+          "dps": 207,
+          "recovery": 182,
+          "tier": 8,
+          "cost": 7900000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 40,
+          "hp": 1904,
+          "dps": 215,
+          "recovery": 202,
+          "tier": 9,
+          "cost": 8000000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 41,
+          "hp": 1921,
+          "dps": 221,
+          "recovery": 202,
+          "tier": 9,
+          "cost": 8300000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 42,
+          "hp": 1938,
+          "dps": 226,
+          "recovery": 202,
+          "tier": 9,
+          "cost": 8600000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 43,
+          "hp": 1955,
+          "dps": 230,
+          "recovery": 202,
+          "tier": 9,
+          "cost": 8900000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 44,
+          "hp": 1972,
+          "dps": 234,
+          "recovery": 202,
+          "tier": 9,
+          "cost": 9200000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 45,
+          "hp": 1989,
+          "dps": 237,
+          "recovery": 211,
+          "tier": 10,
+          "cost": 9500000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 46,
+          "hp": 2006,
+          "dps": 241,
+          "recovery": 211,
+          "tier": 10,
+          "cost": 9800000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 47,
+          "hp": 2023,
+          "dps": 244,
+          "recovery": 211,
+          "tier": 10,
+          "cost": 10100000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 48,
+          "hp": 2040,
+          "dps": 247,
+          "recovery": 211,
+          "tier": 10,
+          "cost": 10400000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 49,
+          "hp": 2057,
+          "dps": 251,
+          "recovery": 211,
+          "tier": 10,
+          "cost": 10700000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 50,
+          "hp": 2074,
+          "dps": 254,
+          "recovery": 220,
+          "tier": 11,
+          "cost": 11000000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 51,
+          "hp": 2091,
+          "dps": 258,
+          "recovery": 220,
+          "tier": 11,
+          "cost": 11400000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 52,
+          "hp": 2108,
+          "dps": 261,
+          "recovery": 220,
+          "tier": 11,
+          "cost": 11800000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 53,
+          "hp": 2125,
+          "dps": 264,
+          "recovery": 220,
+          "tier": 11,
+          "cost": 12200000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 54,
+          "hp": 2142,
+          "dps": 268,
+          "recovery": 220,
+          "tier": 11,
+          "cost": 12600000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 55,
+          "hp": 2159,
+          "dps": 271,
+          "recovery": 229,
+          "tier": 12,
+          "cost": 13000000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 56,
+          "hp": 2176,
+          "dps": 274,
+          "recovery": 229,
+          "tier": 12,
+          "cost": 13400000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 57,
+          "hp": 2193,
+          "dps": 276,
+          "recovery": 229,
+          "tier": 12,
+          "cost": 13800000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 58,
+          "hp": 2210,
+          "dps": 279,
+          "recovery": 229,
+          "tier": 12,
+          "cost": 14200000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 59,
+          "hp": 2227,
+          "dps": 281,
+          "recovery": 229,
+          "tier": 12,
+          "cost": 14600000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 60,
+          "hp": 2244,
+          "dps": 284,
+          "recovery": 238,
+          "tier": 13,
+          "cost": 15000000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 61,
+          "hp": 2261,
+          "dps": 286,
+          "recovery": 238,
+          "tier": 13,
+          "cost": 15500000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 62,
+          "hp": 2278,
+          "dps": 289,
+          "recovery": 238,
+          "tier": 13,
+          "cost": 16000000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 63,
+          "hp": 2295,
+          "dps": 292,
+          "recovery": 238,
+          "tier": 13,
+          "cost": 16500000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 64,
+          "hp": 2312,
+          "dps": 294,
+          "recovery": 238,
+          "tier": 13,
+          "cost": 17000000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 65,
+          "hp": 2329,
+          "dps": 297,
+          "recovery": 247,
+          "tier": 14,
+          "cost": 17500000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 66,
+          "hp": 2346,
+          "dps": 299,
+          "recovery": 247,
+          "tier": 14,
+          "cost": 18000000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 67,
+          "hp": 2363,
+          "dps": 302,
+          "recovery": 247,
+          "tier": 14,
+          "cost": 18500000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 68,
+          "hp": 2380,
+          "dps": 304,
+          "recovery": 247,
+          "tier": 14,
+          "cost": 19000000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 69,
+          "hp": 2397,
+          "dps": 307,
+          "recovery": 247,
+          "tier": 14,
+          "cost": 19500000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 70,
+          "hp": 2414,
+          "dps": 309,
+          "recovery": 256,
+          "tier": 15,
+          "cost": 20000000,
+          "seconds": 648000,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 71,
+          "hp": 2431,
+          "dps": 312,
+          "recovery": 256,
+          "tier": 15,
+          "cost": 20500000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 72,
+          "hp": 2448,
+          "dps": 315,
+          "recovery": 256,
+          "tier": 15,
+          "cost": 21000000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 73,
+          "hp": 2465,
+          "dps": 318,
+          "recovery": 256,
+          "tier": 15,
+          "cost": 21500000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 74,
+          "hp": 2482,
+          "dps": 321,
+          "recovery": 256,
+          "tier": 15,
+          "cost": 22000000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 75,
+          "hp": 2499,
+          "dps": 324,
+          "recovery": 265,
+          "tier": 16,
+          "cost": 22500000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 76,
+          "hp": 2516,
+          "dps": 327,
+          "recovery": 265,
+          "tier": 16,
+          "cost": 24000000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 77,
+          "hp": 2533,
+          "dps": 330,
+          "recovery": 265,
+          "tier": 16,
+          "cost": 25500000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 78,
+          "hp": 2550,
+          "dps": 333,
+          "recovery": 265,
+          "tier": 16,
+          "cost": 27000000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 79,
+          "hp": 2567,
+          "dps": 336,
+          "recovery": 265,
+          "tier": 16,
+          "cost": 27500000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 80,
+          "hp": 2584,
+          "dps": 339,
+          "recovery": 275,
+          "tier": 17,
+          "cost": 28000000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 81,
+          "hp": 2601,
+          "dps": 342,
+          "recovery": 275,
+          "tier": 17,
+          "cost": 28500000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 82,
+          "hp": 2618,
+          "dps": 345,
+          "recovery": 275,
+          "tier": 17,
+          "cost": 29000000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 83,
+          "hp": 2635,
+          "dps": 348,
+          "recovery": 275,
+          "tier": 17,
+          "cost": 29500000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 84,
+          "hp": 2652,
+          "dps": 351,
+          "recovery": 275,
+          "tier": 17,
+          "cost": 30000000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 85,
+          "hp": 2669,
+          "dps": 354,
+          "recovery": 285,
+          "tier": 18,
+          "cost": 30500000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        }
+      ]
+    },
+    "royalChampion": {
+      "name": "Royal Champion",
+      "skin": "WarriorPrincessDefault",
+      "housing": 25,
+      "speed": 300,
+      "range": 300,
+      "attackSpeed": 1200,
+      "flying": false,
+      "airTargets": true,
+      "groundTargets": true,
+      "resource": "dark",
+      "slots": 2,
+      "defaultItems": [
+        "Seeking Shield",
+        "Royal Gem"
+      ],
+      "ability": {
+        "name": "RoyalChampionAbilityHeal",
+        "tiers": [
+          {
+            "tier": 1,
+            "heal": 400,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 2,
+            "heal": 500,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 3,
+            "heal": 600,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 4,
+            "heal": 700,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 5,
+            "heal": 800,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 6,
+            "heal": 900,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 7,
+            "heal": 1000,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 8,
+            "heal": 1100,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 9,
+            "heal": 1200,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 10,
+            "heal": 1300,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 11,
+            "heal": 1400,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 12,
+            "heal": 1500,
+            "seconds": 10.0,
+            "activations": 1
+          }
+        ]
+      },
+      "passives": [],
+      "equipment": [
+        {
+          "name": "Seeking Shield",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Royal Gem",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Hog Rider Puppet",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Haste Vial",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Rocket Spear",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        },
+        {
+          "name": "UNUSED8",
+          "rarity": "COMMON",
+          "levels": 1,
+          "unused": true
+        },
+        {
+          "name": "UNUSED9",
+          "rarity": "COMMON",
+          "levels": 1,
+          "unused": true
+        },
+        {
+          "name": "UNUSED10",
+          "rarity": "COMMON",
+          "levels": 1,
+          "unused": true
+        },
+        {
+          "name": "UNUSED11",
+          "rarity": "COMMON",
+          "levels": 1,
+          "unused": true
+        },
+        {
+          "name": "UNUSED13",
+          "rarity": "COMMON",
+          "levels": 1,
+          "unused": true
+        },
+        {
+          "name": "Electro Boots",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        },
+        {
+          "name": "Frost Charm",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "hp": 2508,
+          "dps": 340,
+          "recovery": 400,
+          "tier": 1,
+          "cost": 0,
+          "seconds": 0,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 2,
+          "hp": 2550,
+          "dps": 350,
+          "recovery": 400,
+          "tier": 1,
+          "cost": 10000,
+          "seconds": 14400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 3,
+          "hp": 2593,
+          "dps": 360,
+          "recovery": 400,
+          "tier": 1,
+          "cost": 15000,
+          "seconds": 36000,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 4,
+          "hp": 2635,
+          "dps": 370,
+          "recovery": 400,
+          "tier": 1,
+          "cost": 20000,
+          "seconds": 43200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 5,
+          "hp": 2678,
+          "dps": 375,
+          "recovery": 500,
+          "tier": 2,
+          "cost": 25000,
+          "seconds": 72000,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 6,
+          "hp": 2720,
+          "dps": 380,
+          "recovery": 500,
+          "tier": 2,
+          "cost": 30000,
+          "seconds": 86400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 7,
+          "hp": 2763,
+          "dps": 385,
+          "recovery": 500,
+          "tier": 2,
+          "cost": 35000,
+          "seconds": 86400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 8,
+          "hp": 2805,
+          "dps": 390,
+          "recovery": 500,
+          "tier": 2,
+          "cost": 40000,
+          "seconds": 86400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 9,
+          "hp": 2848,
+          "dps": 396,
+          "recovery": 500,
+          "tier": 2,
+          "cost": 45000,
+          "seconds": 86400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 10,
+          "hp": 2890,
+          "dps": 402,
+          "recovery": 600,
+          "tier": 3,
+          "cost": 50000,
+          "seconds": 86400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 11,
+          "hp": 2933,
+          "dps": 408,
+          "recovery": 600,
+          "tier": 3,
+          "cost": 53000,
+          "seconds": 86400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 12,
+          "hp": 2975,
+          "dps": 414,
+          "recovery": 600,
+          "tier": 3,
+          "cost": 56000,
+          "seconds": 86400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 13,
+          "hp": 3018,
+          "dps": 420,
+          "recovery": 600,
+          "tier": 3,
+          "cost": 59000,
+          "seconds": 86400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 14,
+          "hp": 3060,
+          "dps": 426,
+          "recovery": 600,
+          "tier": 3,
+          "cost": 62000,
+          "seconds": 86400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 15,
+          "hp": 3103,
+          "dps": 432,
+          "recovery": 700,
+          "tier": 4,
+          "cost": 65000,
+          "seconds": 86400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 16,
+          "hp": 3145,
+          "dps": 438,
+          "recovery": 700,
+          "tier": 4,
+          "cost": 70000,
+          "seconds": 129600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 17,
+          "hp": 3188,
+          "dps": 444,
+          "recovery": 700,
+          "tier": 4,
+          "cost": 75000,
+          "seconds": 129600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 18,
+          "hp": 3230,
+          "dps": 448,
+          "recovery": 700,
+          "tier": 4,
+          "cost": 80000,
+          "seconds": 129600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 19,
+          "hp": 3273,
+          "dps": 452,
+          "recovery": 700,
+          "tier": 4,
+          "cost": 85000,
+          "seconds": 129600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 20,
+          "hp": 3315,
+          "dps": 456,
+          "recovery": 800,
+          "tier": 5,
+          "cost": 90000,
+          "seconds": 129600,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 21,
+          "hp": 3349,
+          "dps": 460,
+          "recovery": 800,
+          "tier": 5,
+          "cost": 95000,
+          "seconds": 172800,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 22,
+          "hp": 3383,
+          "dps": 465,
+          "recovery": 800,
+          "tier": 5,
+          "cost": 100000,
+          "seconds": 172800,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 23,
+          "hp": 3417,
+          "dps": 470,
+          "recovery": 800,
+          "tier": 5,
+          "cost": 105000,
+          "seconds": 172800,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 24,
+          "hp": 3451,
+          "dps": 474,
+          "recovery": 800,
+          "tier": 5,
+          "cost": 110000,
+          "seconds": 172800,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 25,
+          "hp": 3485,
+          "dps": 477,
+          "recovery": 900,
+          "tier": 6,
+          "cost": 115000,
+          "seconds": 172800,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 26,
+          "hp": 3519,
+          "dps": 480,
+          "recovery": 900,
+          "tier": 6,
+          "cost": 120000,
+          "seconds": 259200,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 27,
+          "hp": 3553,
+          "dps": 483,
+          "recovery": 900,
+          "tier": 6,
+          "cost": 125000,
+          "seconds": 259200,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 28,
+          "hp": 3587,
+          "dps": 486,
+          "recovery": 900,
+          "tier": 6,
+          "cost": 130000,
+          "seconds": 259200,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 29,
+          "hp": 3621,
+          "dps": 489,
+          "recovery": 900,
+          "tier": 6,
+          "cost": 135000,
+          "seconds": 259200,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 30,
+          "hp": 3655,
+          "dps": 492,
+          "recovery": 1000,
+          "tier": 7,
+          "cost": 140000,
+          "seconds": 259200,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 31,
+          "hp": 3681,
+          "dps": 495,
+          "recovery": 1000,
+          "tier": 7,
+          "cost": 145000,
+          "seconds": 345600,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 32,
+          "hp": 3706,
+          "dps": 498,
+          "recovery": 1000,
+          "tier": 7,
+          "cost": 150000,
+          "seconds": 345600,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 33,
+          "hp": 3732,
+          "dps": 502,
+          "recovery": 1000,
+          "tier": 7,
+          "cost": 155000,
+          "seconds": 345600,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 34,
+          "hp": 3757,
+          "dps": 506,
+          "recovery": 1000,
+          "tier": 7,
+          "cost": 160000,
+          "seconds": 345600,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 35,
+          "hp": 3783,
+          "dps": 510,
+          "recovery": 1100,
+          "tier": 8,
+          "cost": 165000,
+          "seconds": 345600,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 36,
+          "hp": 3808,
+          "dps": 514,
+          "recovery": 1100,
+          "tier": 8,
+          "cost": 170000,
+          "seconds": 432000,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 37,
+          "hp": 3834,
+          "dps": 518,
+          "recovery": 1100,
+          "tier": 8,
+          "cost": 175000,
+          "seconds": 432000,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 38,
+          "hp": 3859,
+          "dps": 522,
+          "recovery": 1100,
+          "tier": 8,
+          "cost": 180000,
+          "seconds": 432000,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 39,
+          "hp": 3885,
+          "dps": 526,
+          "recovery": 1100,
+          "tier": 8,
+          "cost": 200000,
+          "seconds": 432000,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 40,
+          "hp": 3910,
+          "dps": 530,
+          "recovery": 1200,
+          "tier": 9,
+          "cost": 220000,
+          "seconds": 432000,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 41,
+          "hp": 3936,
+          "dps": 533,
+          "recovery": 1200,
+          "tier": 9,
+          "cost": 240000,
+          "seconds": 432000,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 42,
+          "hp": 3961,
+          "dps": 536,
+          "recovery": 1200,
+          "tier": 9,
+          "cost": 260000,
+          "seconds": 518400,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 43,
+          "hp": 3987,
+          "dps": 539,
+          "recovery": 1200,
+          "tier": 9,
+          "cost": 280000,
+          "seconds": 561600,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 44,
+          "hp": 4012,
+          "dps": 542,
+          "recovery": 1200,
+          "tier": 9,
+          "cost": 300000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 45,
+          "hp": 4038,
+          "dps": 545,
+          "recovery": 1300,
+          "tier": 10,
+          "cost": 320000,
+          "seconds": 648000,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 46,
+          "hp": 4064,
+          "dps": 548,
+          "recovery": 1300,
+          "tier": 10,
+          "cost": 340000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 47,
+          "hp": 4090,
+          "dps": 551,
+          "recovery": 1300,
+          "tier": 10,
+          "cost": 350000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 48,
+          "hp": 4116,
+          "dps": 554,
+          "recovery": 1300,
+          "tier": 10,
+          "cost": 360000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 49,
+          "hp": 4142,
+          "dps": 557,
+          "recovery": 1300,
+          "tier": 10,
+          "cost": 370000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 50,
+          "hp": 4168,
+          "dps": 560,
+          "recovery": 1400,
+          "tier": 11,
+          "cost": 380000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 51,
+          "hp": 4194,
+          "dps": 563,
+          "recovery": 1400,
+          "tier": 11,
+          "cost": 400000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 52,
+          "hp": 4220,
+          "dps": 566,
+          "recovery": 1400,
+          "tier": 11,
+          "cost": 410000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 53,
+          "hp": 4246,
+          "dps": 569,
+          "recovery": 1400,
+          "tier": 11,
+          "cost": 420000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 54,
+          "hp": 4272,
+          "dps": 572,
+          "recovery": 1400,
+          "tier": 11,
+          "cost": 430000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 55,
+          "hp": 4298,
+          "dps": 575,
+          "recovery": 1500,
+          "tier": 12,
+          "cost": 450000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        }
+      ]
+    },
+    "minionPrince": {
+      "name": "Minion Prince",
+      "skin": "MinionHeroDefault",
+      "housing": 25,
+      "speed": 300,
+      "range": 450,
+      "attackSpeed": 850,
+      "flying": true,
+      "airTargets": true,
+      "groundTargets": true,
+      "resource": "dark",
+      "slots": 2,
+      "defaultItems": [
+        "Henchmen Puppet",
+        "Dark Orb"
+      ],
+      "ability": {
+        "name": "MinionPrinceAbilityHeal",
+        "tiers": [
+          {
+            "tier": 1,
+            "heal": 200,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 2,
+            "heal": 240,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 3,
+            "heal": 280,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 4,
+            "heal": 320,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 5,
+            "heal": 360,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 6,
+            "heal": 400,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 7,
+            "heal": 440,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 8,
+            "heal": 480,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 9,
+            "heal": 520,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 10,
+            "heal": 560,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 11,
+            "heal": 600,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 12,
+            "heal": 650,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 13,
+            "heal": 700,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 14,
+            "heal": 750,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 15,
+            "heal": 800,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 16,
+            "heal": 850,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 17,
+            "heal": 900,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 18,
+            "heal": 950,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 19,
+            "heal": 1000,
+            "seconds": 10.0,
+            "activations": 1
+          },
+          {
+            "tier": 20,
+            "heal": 1050,
+            "seconds": 10.0,
+            "activations": 1
+          }
+        ]
+      },
+      "passives": [],
+      "equipment": [
+        {
+          "name": "Dark Crown",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        },
+        {
+          "name": "Henchmen Puppet",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Dark Orb",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Metal Pants",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "MP Trap Shield",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Noble Iron",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Meteor Staff",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "hp": 200,
+          "dps": 173,
+          "recovery": 200,
+          "tier": 1,
+          "cost": 0,
+          "seconds": 0,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 2,
+          "hp": 242,
+          "dps": 177,
+          "recovery": 200,
+          "tier": 1,
+          "cost": 5000,
+          "seconds": 7200,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 3,
+          "hp": 284,
+          "dps": 181,
+          "recovery": 200,
+          "tier": 1,
+          "cost": 5500,
+          "seconds": 14400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 4,
+          "hp": 326,
+          "dps": 187,
+          "recovery": 200,
+          "tier": 1,
+          "cost": 6000,
+          "seconds": 28800,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 5,
+          "hp": 368,
+          "dps": 191,
+          "recovery": 240,
+          "tier": 2,
+          "cost": 6500,
+          "seconds": 36000,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 6,
+          "hp": 410,
+          "dps": 196,
+          "recovery": 240,
+          "tier": 2,
+          "cost": 7000,
+          "seconds": 43200,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 7,
+          "hp": 452,
+          "dps": 201,
+          "recovery": 240,
+          "tier": 2,
+          "cost": 7500,
+          "seconds": 50400,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 8,
+          "hp": 494,
+          "dps": 206,
+          "recovery": 240,
+          "tier": 2,
+          "cost": 8000,
+          "seconds": 57600,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 9,
+          "hp": 536,
+          "dps": 211,
+          "recovery": 240,
+          "tier": 2,
+          "cost": 8500,
+          "seconds": 64800,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 10,
+          "hp": 578,
+          "dps": 216,
+          "recovery": 280,
+          "tier": 3,
+          "cost": 10000,
+          "seconds": 72000,
+          "townhall": 9,
+          "hall": 3
+        },
+        {
+          "level": 11,
+          "hp": 620,
+          "dps": 222,
+          "recovery": 280,
+          "tier": 3,
+          "cost": 10500,
+          "seconds": 79200,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 12,
+          "hp": 662,
+          "dps": 227,
+          "recovery": 280,
+          "tier": 3,
+          "cost": 11000,
+          "seconds": 86400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 13,
+          "hp": 704,
+          "dps": 233,
+          "recovery": 280,
+          "tier": 3,
+          "cost": 11500,
+          "seconds": 86400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 14,
+          "hp": 746,
+          "dps": 238,
+          "recovery": 280,
+          "tier": 3,
+          "cost": 12000,
+          "seconds": 86400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 15,
+          "hp": 788,
+          "dps": 244,
+          "recovery": 320,
+          "tier": 4,
+          "cost": 12500,
+          "seconds": 86400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 16,
+          "hp": 830,
+          "dps": 251,
+          "recovery": 320,
+          "tier": 4,
+          "cost": 13000,
+          "seconds": 86400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 17,
+          "hp": 872,
+          "dps": 257,
+          "recovery": 320,
+          "tier": 4,
+          "cost": 13500,
+          "seconds": 86400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 18,
+          "hp": 914,
+          "dps": 263,
+          "recovery": 320,
+          "tier": 4,
+          "cost": 14000,
+          "seconds": 86400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 19,
+          "hp": 956,
+          "dps": 270,
+          "recovery": 320,
+          "tier": 4,
+          "cost": 14500,
+          "seconds": 86400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 20,
+          "hp": 998,
+          "dps": 277,
+          "recovery": 360,
+          "tier": 5,
+          "cost": 15000,
+          "seconds": 86400,
+          "townhall": 10,
+          "hall": 4
+        },
+        {
+          "level": 21,
+          "hp": 1040,
+          "dps": 284,
+          "recovery": 360,
+          "tier": 5,
+          "cost": 17000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 22,
+          "hp": 1082,
+          "dps": 290,
+          "recovery": 360,
+          "tier": 5,
+          "cost": 19000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 23,
+          "hp": 1124,
+          "dps": 298,
+          "recovery": 360,
+          "tier": 5,
+          "cost": 21000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 24,
+          "hp": 1166,
+          "dps": 305,
+          "recovery": 360,
+          "tier": 5,
+          "cost": 23000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 25,
+          "hp": 1208,
+          "dps": 313,
+          "recovery": 400,
+          "tier": 6,
+          "cost": 25000,
+          "seconds": 86400,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 26,
+          "hp": 1250,
+          "dps": 321,
+          "recovery": 400,
+          "tier": 6,
+          "cost": 27000,
+          "seconds": 129600,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 27,
+          "hp": 1292,
+          "dps": 329,
+          "recovery": 400,
+          "tier": 6,
+          "cost": 29000,
+          "seconds": 129600,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 28,
+          "hp": 1334,
+          "dps": 337,
+          "recovery": 400,
+          "tier": 6,
+          "cost": 31000,
+          "seconds": 129600,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 29,
+          "hp": 1376,
+          "dps": 345,
+          "recovery": 400,
+          "tier": 6,
+          "cost": 33000,
+          "seconds": 129600,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 30,
+          "hp": 1418,
+          "dps": 354,
+          "recovery": 440,
+          "tier": 7,
+          "cost": 35000,
+          "seconds": 129600,
+          "townhall": 11,
+          "hall": 5
+        },
+        {
+          "level": 31,
+          "hp": 1460,
+          "dps": 363,
+          "recovery": 440,
+          "tier": 7,
+          "cost": 36000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 32,
+          "hp": 1502,
+          "dps": 372,
+          "recovery": 440,
+          "tier": 7,
+          "cost": 37000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 33,
+          "hp": 1544,
+          "dps": 381,
+          "recovery": 440,
+          "tier": 7,
+          "cost": 38000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 34,
+          "hp": 1586,
+          "dps": 391,
+          "recovery": 440,
+          "tier": 7,
+          "cost": 39000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 35,
+          "hp": 1628,
+          "dps": 401,
+          "recovery": 480,
+          "tier": 8,
+          "cost": 40000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 36,
+          "hp": 1670,
+          "dps": 411,
+          "recovery": 480,
+          "tier": 8,
+          "cost": 41000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 37,
+          "hp": 1712,
+          "dps": 419,
+          "recovery": 480,
+          "tier": 8,
+          "cost": 42000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 38,
+          "hp": 1754,
+          "dps": 427,
+          "recovery": 480,
+          "tier": 8,
+          "cost": 43000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 39,
+          "hp": 1796,
+          "dps": 437,
+          "recovery": 480,
+          "tier": 8,
+          "cost": 44000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 40,
+          "hp": 1838,
+          "dps": 446,
+          "recovery": 520,
+          "tier": 9,
+          "cost": 45000,
+          "seconds": 172800,
+          "townhall": 12,
+          "hall": 6
+        },
+        {
+          "level": 41,
+          "hp": 1880,
+          "dps": 455,
+          "recovery": 520,
+          "tier": 9,
+          "cost": 50000,
+          "seconds": 194400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 42,
+          "hp": 1922,
+          "dps": 464,
+          "recovery": 520,
+          "tier": 9,
+          "cost": 55000,
+          "seconds": 194400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 43,
+          "hp": 1964,
+          "dps": 474,
+          "recovery": 520,
+          "tier": 9,
+          "cost": 60000,
+          "seconds": 194400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 44,
+          "hp": 2006,
+          "dps": 484,
+          "recovery": 520,
+          "tier": 9,
+          "cost": 65000,
+          "seconds": 194400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 45,
+          "hp": 2048,
+          "dps": 494,
+          "recovery": 560,
+          "tier": 10,
+          "cost": 70000,
+          "seconds": 194400,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 46,
+          "hp": 2090,
+          "dps": 504,
+          "recovery": 560,
+          "tier": 10,
+          "cost": 75000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 47,
+          "hp": 2132,
+          "dps": 513,
+          "recovery": 560,
+          "tier": 10,
+          "cost": 80000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 48,
+          "hp": 2174,
+          "dps": 523,
+          "recovery": 560,
+          "tier": 10,
+          "cost": 85000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 49,
+          "hp": 2216,
+          "dps": 534,
+          "recovery": 560,
+          "tier": 10,
+          "cost": 90000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 50,
+          "hp": 2258,
+          "dps": 545,
+          "recovery": 600,
+          "tier": 11,
+          "cost": 95000,
+          "seconds": 259200,
+          "townhall": 13,
+          "hall": 7
+        },
+        {
+          "level": 51,
+          "hp": 2300,
+          "dps": 556,
+          "recovery": 600,
+          "tier": 11,
+          "cost": 100000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 52,
+          "hp": 2342,
+          "dps": 566,
+          "recovery": 600,
+          "tier": 11,
+          "cost": 105000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 53,
+          "hp": 2384,
+          "dps": 575,
+          "recovery": 600,
+          "tier": 11,
+          "cost": 110000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 54,
+          "hp": 2426,
+          "dps": 584,
+          "recovery": 600,
+          "tier": 11,
+          "cost": 115000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 55,
+          "hp": 2468,
+          "dps": 591,
+          "recovery": 650,
+          "tier": 12,
+          "cost": 120000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 56,
+          "hp": 2510,
+          "dps": 598,
+          "recovery": 650,
+          "tier": 12,
+          "cost": 125000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 57,
+          "hp": 2552,
+          "dps": 604,
+          "recovery": 650,
+          "tier": 12,
+          "cost": 130000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 58,
+          "hp": 2594,
+          "dps": 610,
+          "recovery": 650,
+          "tier": 12,
+          "cost": 135000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 59,
+          "hp": 2636,
+          "dps": 614,
+          "recovery": 650,
+          "tier": 12,
+          "cost": 140000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 60,
+          "hp": 2678,
+          "dps": 619,
+          "recovery": 700,
+          "tier": 13,
+          "cost": 145000,
+          "seconds": 345600,
+          "townhall": 14,
+          "hall": 8
+        },
+        {
+          "level": 61,
+          "hp": 2720,
+          "dps": 623,
+          "recovery": 700,
+          "tier": 13,
+          "cost": 150000,
+          "seconds": 432000,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 62,
+          "hp": 2762,
+          "dps": 628,
+          "recovery": 700,
+          "tier": 13,
+          "cost": 155000,
+          "seconds": 432000,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 63,
+          "hp": 2804,
+          "dps": 631,
+          "recovery": 700,
+          "tier": 13,
+          "cost": 160000,
+          "seconds": 432000,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 64,
+          "hp": 2846,
+          "dps": 636,
+          "recovery": 700,
+          "tier": 13,
+          "cost": 165000,
+          "seconds": 432000,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 65,
+          "hp": 2888,
+          "dps": 639,
+          "recovery": 750,
+          "tier": 14,
+          "cost": 170000,
+          "seconds": 432000,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 66,
+          "hp": 2930,
+          "dps": 643,
+          "recovery": 750,
+          "tier": 14,
+          "cost": 175000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 67,
+          "hp": 2972,
+          "dps": 646,
+          "recovery": 750,
+          "tier": 14,
+          "cost": 180000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 68,
+          "hp": 3014,
+          "dps": 649,
+          "recovery": 750,
+          "tier": 14,
+          "cost": 185000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 69,
+          "hp": 3056,
+          "dps": 652,
+          "recovery": 750,
+          "tier": 14,
+          "cost": 190000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 70,
+          "hp": 3098,
+          "dps": 656,
+          "recovery": 800,
+          "tier": 15,
+          "cost": 195000,
+          "seconds": 518400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 71,
+          "hp": 3161,
+          "dps": 658,
+          "recovery": 800,
+          "tier": 15,
+          "cost": 200000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 72,
+          "hp": 3224,
+          "dps": 661,
+          "recovery": 800,
+          "tier": 15,
+          "cost": 205000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 73,
+          "hp": 3287,
+          "dps": 665,
+          "recovery": 800,
+          "tier": 15,
+          "cost": 210000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 74,
+          "hp": 3350,
+          "dps": 670,
+          "recovery": 800,
+          "tier": 15,
+          "cost": 220000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 75,
+          "hp": 3413,
+          "dps": 675,
+          "recovery": 850,
+          "tier": 16,
+          "cost": 230000,
+          "seconds": 604800,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 76,
+          "hp": 3476,
+          "dps": 680,
+          "recovery": 850,
+          "tier": 16,
+          "cost": 240000,
+          "seconds": 648000,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 77,
+          "hp": 3539,
+          "dps": 685,
+          "recovery": 850,
+          "tier": 16,
+          "cost": 250000,
+          "seconds": 648000,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 78,
+          "hp": 3602,
+          "dps": 690,
+          "recovery": 850,
+          "tier": 16,
+          "cost": 260000,
+          "seconds": 648000,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 79,
+          "hp": 3665,
+          "dps": 695,
+          "recovery": 850,
+          "tier": 16,
+          "cost": 270000,
+          "seconds": 648000,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 80,
+          "hp": 3728,
+          "dps": 700,
+          "recovery": 900,
+          "tier": 17,
+          "cost": 280000,
+          "seconds": 648000,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 81,
+          "hp": 3791,
+          "dps": 705,
+          "recovery": 900,
+          "tier": 17,
+          "cost": 290000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 82,
+          "hp": 3854,
+          "dps": 710,
+          "recovery": 900,
+          "tier": 17,
+          "cost": 300000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 83,
+          "hp": 3917,
+          "dps": 715,
+          "recovery": 900,
+          "tier": 17,
+          "cost": 310000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 84,
+          "hp": 3980,
+          "dps": 720,
+          "recovery": 900,
+          "tier": 17,
+          "cost": 320000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 85,
+          "hp": 4043,
+          "dps": 725,
+          "recovery": 950,
+          "tier": 18,
+          "cost": 330000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 86,
+          "hp": 4106,
+          "dps": 730,
+          "recovery": 950,
+          "tier": 18,
+          "cost": 340000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 87,
+          "hp": 4169,
+          "dps": 735,
+          "recovery": 950,
+          "tier": 18,
+          "cost": 350000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 88,
+          "hp": 4232,
+          "dps": 740,
+          "recovery": 950,
+          "tier": 18,
+          "cost": 360000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 89,
+          "hp": 4295,
+          "dps": 745,
+          "recovery": 950,
+          "tier": 18,
+          "cost": 370000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 90,
+          "hp": 4358,
+          "dps": 750,
+          "recovery": 1000,
+          "tier": 19,
+          "cost": 380000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 91,
+          "hp": 4390,
+          "dps": 753,
+          "recovery": 1000,
+          "tier": 19,
+          "cost": 400000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 92,
+          "hp": 4420,
+          "dps": 756,
+          "recovery": 1000,
+          "tier": 19,
+          "cost": 410000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 93,
+          "hp": 4450,
+          "dps": 759,
+          "recovery": 1000,
+          "tier": 19,
+          "cost": 420000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 94,
+          "hp": 4480,
+          "dps": 762,
+          "recovery": 1000,
+          "tier": 19,
+          "cost": 430000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 95,
+          "hp": 4510,
+          "dps": 765,
+          "recovery": 1050,
+          "tier": 20,
+          "cost": 450000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        }
+      ]
+    },
+    "dragonDuke": {
+      "name": "Dragon Duke",
+      "skin": "DragonDukeDefault",
+      "housing": 25,
+      "speed": 250,
+      "range": 125,
+      "attackSpeed": 1200,
+      "flying": true,
+      "airTargets": true,
+      "groundTargets": true,
+      "resource": "dark",
+      "slots": 2,
+      "defaultItems": [
+        "Fire Heart",
+        "Flame Blower"
+      ],
+      "ability": {
+        "name": "DragonDukeAbilityHeal",
+        "tiers": [
+          {
+            "tier": 1,
+            "heal": 3500,
+            "seconds": 1.0,
+            "activations": 1
+          },
+          {
+            "tier": 2,
+            "heal": 3750,
+            "seconds": 1.0,
+            "activations": 1
+          },
+          {
+            "tier": 3,
+            "heal": 4000,
+            "seconds": 1.0,
+            "activations": 1
+          },
+          {
+            "tier": 4,
+            "heal": 4250,
+            "seconds": 1.0,
+            "activations": 1
+          },
+          {
+            "tier": 5,
+            "heal": 4500,
+            "seconds": 1.0,
+            "activations": 1
+          },
+          {
+            "tier": 6,
+            "heal": 4750,
+            "seconds": 1.0,
+            "activations": 1
+          }
+        ]
+      },
+      "passives": [
+        "DragonDukeRageWhenAlone"
+      ],
+      "equipment": [
+        {
+          "name": "Fire Heart",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Rocket Backpack",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        },
+        {
+          "name": "Deadly Dash2",
+          "rarity": "EPIC",
+          "levels": 1,
+          "unused": false
+        },
+        {
+          "name": "Deadly Dash3",
+          "rarity": "EPIC",
+          "levels": 1,
+          "unused": false
+        },
+        {
+          "name": "Stun Blaster",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Flame Blower",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "FlameAttack",
+          "rarity": "EPIC",
+          "levels": 1,
+          "unused": false
+        },
+        {
+          "name": "ElectroAttack",
+          "rarity": "COMMON",
+          "levels": 18,
+          "unused": false
+        },
+        {
+          "name": "Draconic Counter",
+          "rarity": "EPIC",
+          "levels": 27,
+          "unused": false
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "hp": 9100,
+          "dps": 304,
+          "recovery": 3500,
+          "tier": 1,
+          "cost": 0,
+          "seconds": 0,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 2,
+          "hp": 9175,
+          "dps": 308,
+          "recovery": 3500,
+          "tier": 1,
+          "cost": 50000,
+          "seconds": 21600,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 3,
+          "hp": 9250,
+          "dps": 312,
+          "recovery": 3500,
+          "tier": 1,
+          "cost": 60000,
+          "seconds": 43200,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 4,
+          "hp": 9325,
+          "dps": 316,
+          "recovery": 3500,
+          "tier": 1,
+          "cost": 70000,
+          "seconds": 86400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 5,
+          "hp": 9400,
+          "dps": 320,
+          "recovery": 3750,
+          "tier": 2,
+          "cost": 80000,
+          "seconds": 86400,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 6,
+          "hp": 9475,
+          "dps": 324,
+          "recovery": 3750,
+          "tier": 2,
+          "cost": 90000,
+          "seconds": 172800,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 7,
+          "hp": 9550,
+          "dps": 328,
+          "recovery": 3750,
+          "tier": 2,
+          "cost": 100000,
+          "seconds": 172800,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 8,
+          "hp": 9625,
+          "dps": 332,
+          "recovery": 3750,
+          "tier": 2,
+          "cost": 110000,
+          "seconds": 172800,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 9,
+          "hp": 9700,
+          "dps": 336,
+          "recovery": 3750,
+          "tier": 2,
+          "cost": 120000,
+          "seconds": 259200,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 10,
+          "hp": 9775,
+          "dps": 340,
+          "recovery": 4000,
+          "tier": 3,
+          "cost": 130000,
+          "seconds": 259200,
+          "townhall": 15,
+          "hall": 9
+        },
+        {
+          "level": 11,
+          "hp": 9850,
+          "dps": 344,
+          "recovery": 4000,
+          "tier": 3,
+          "cost": 150000,
+          "seconds": 345600,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 12,
+          "hp": 9925,
+          "dps": 348,
+          "recovery": 4000,
+          "tier": 3,
+          "cost": 175000,
+          "seconds": 432000,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 13,
+          "hp": 10000,
+          "dps": 352,
+          "recovery": 4000,
+          "tier": 3,
+          "cost": 200000,
+          "seconds": 432000,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 14,
+          "hp": 10075,
+          "dps": 356,
+          "recovery": 4000,
+          "tier": 3,
+          "cost": 225000,
+          "seconds": 518400,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 15,
+          "hp": 10150,
+          "dps": 360,
+          "recovery": 4250,
+          "tier": 4,
+          "cost": 250000,
+          "seconds": 518400,
+          "townhall": 16,
+          "hall": 10
+        },
+        {
+          "level": 16,
+          "hp": 10225,
+          "dps": 364,
+          "recovery": 4250,
+          "tier": 4,
+          "cost": 275000,
+          "seconds": 604800,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 17,
+          "hp": 10300,
+          "dps": 368,
+          "recovery": 4250,
+          "tier": 4,
+          "cost": 300000,
+          "seconds": 604800,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 18,
+          "hp": 10375,
+          "dps": 372,
+          "recovery": 4250,
+          "tier": 4,
+          "cost": 325000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 19,
+          "hp": 10450,
+          "dps": 376,
+          "recovery": 4250,
+          "tier": 4,
+          "cost": 350000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 20,
+          "hp": 10525,
+          "dps": 380,
+          "recovery": 4500,
+          "tier": 5,
+          "cost": 375000,
+          "seconds": 691200,
+          "townhall": 17,
+          "hall": 11
+        },
+        {
+          "level": 21,
+          "hp": 10600,
+          "dps": 384,
+          "recovery": 4500,
+          "tier": 5,
+          "cost": 400000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 22,
+          "hp": 10675,
+          "dps": 388,
+          "recovery": 4500,
+          "tier": 5,
+          "cost": 420000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 23,
+          "hp": 10750,
+          "dps": 392,
+          "recovery": 4500,
+          "tier": 5,
+          "cost": 440000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 24,
+          "hp": 10825,
+          "dps": 396,
+          "recovery": 4500,
+          "tier": 5,
+          "cost": 460000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        },
+        {
+          "level": 25,
+          "hp": 10900,
+          "dps": 400,
+          "recovery": 4750,
+          "tier": 6,
+          "cost": 480000,
+          "seconds": 691200,
+          "townhall": 18,
+          "hall": 12
+        }
+      ]
+    }
+  }
+}

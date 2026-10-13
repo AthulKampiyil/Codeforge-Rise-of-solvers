@@ -1,0 +1,205 @@
+{
+ "title": "Air Defense/Home Village",
+ "url": "https://clashofclans.fandom.com/wiki/Air_Defense/Home_Village",
+ "revid": 624478,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Air Defense",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 80,
+   "damagePerHit": 80,
+   "hitpoints": 800,
+   "cost": 22000,
+   "buildSeconds": 3600,
+   "xp": 60,
+   "townHall": 4
+  },
+  {
+   "level": 2,
+   "dps": 110,
+   "damagePerHit": 110,
+   "hitpoints": 850,
+   "cost": 90000,
+   "buildSeconds": 7200,
+   "xp": 84,
+   "townHall": 4
+  },
+  {
+   "level": 3,
+   "dps": 140,
+   "damagePerHit": 140,
+   "hitpoints": 900,
+   "cost": 210000,
+   "buildSeconds": 21600,
+   "xp": 146,
+   "townHall": 5
+  },
+  {
+   "level": 4,
+   "dps": 160,
+   "damagePerHit": 160,
+   "hitpoints": 950,
+   "cost": 500000,
+   "buildSeconds": 43200,
+   "xp": 207,
+   "townHall": 6
+  },
+  {
+   "level": 5,
+   "dps": 190,
+   "damagePerHit": 190,
+   "hitpoints": 1000,
+   "cost": 800000,
+   "buildSeconds": 64800,
+   "xp": 254,
+   "townHall": 7
+  },
+  {
+   "level": 6,
+   "dps": 230,
+   "damagePerHit": 230,
+   "hitpoints": 1050,
+   "cost": 1000000,
+   "buildSeconds": 86400,
+   "xp": 293,
+   "townHall": 8
+  },
+  {
+   "level": 7,
+   "dps": 280,
+   "damagePerHit": 280,
+   "hitpoints": 1100,
+   "cost": 1750000,
+   "buildSeconds": 172800,
+   "xp": 415,
+   "townHall": 9
+  },
+  {
+   "level": 8,
+   "dps": 320,
+   "damagePerHit": 320,
+   "hitpoints": 1210,
+   "cost": 2300000,
+   "buildSeconds": 216000,
+   "xp": 464,
+   "townHall": 10
+  },
+  {
+   "level": 9,
+   "dps": 360,
+   "damagePerHit": 360,
+   "hitpoints": 1300,
+   "cost": 3400000,
+   "buildSeconds": 259200,
+   "xp": 509,
+   "townHall": 11
+  },
+  {
+   "level": 10,
+   "dps": 400,
+   "damagePerHit": 400,
+   "hitpoints": 1400,
+   "cost": 5000000,
+   "buildSeconds": 345600,
+   "xp": 587,
+   "townHall": 12
+  },
+  {
+   "level": 11,
+   "dps": 440,
+   "damagePerHit": 440,
+   "hitpoints": 1500,
+   "cost": 5600000,
+   "buildSeconds": 388800,
+   "xp": 623,
+   "townHall": 13
+  },
+  {
+   "level": 12,
+   "dps": 500,
+   "damagePerHit": 500,
+   "hitpoints": 1650,
+   "cost": 6500000,
+   "buildSeconds": 432000,
+   "xp": 657,
+   "townHall": 14
+  },
+  {
+   "level": 13,
+   "dps": 540,
+   "damagePerHit": 540,
+   "hitpoints": 1750,
+   "cost": 8000000,
+   "buildSeconds": 518400,
+   "xp": 720,
+   "townHall": 15
+  },
+  {
+   "level": 14,
+   "dps": 600,
+   "damagePerHit": 600,
+   "hitpoints": 1850,
+   "cost": 9000000,
+   "buildSeconds": 561600,
+   "xp": 749,
+   "townHall": 16
+  },
+  {
+   "level": 15,
+   "dps": 650,
+   "damagePerHit": 650,
+   "hitpoints": 1950,
+   "cost": 15000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 17
+  },
+  {
+   "level": 16,
+   "dps": 700,
+   "damagePerHit": 700,
+   "hitpoints": 2000,
+   "cost": 26000000,
+   "buildSeconds": 1144800,
+   "xp": 1069,
+   "townHall": 18
+  }
+ ],
+ "supercharges": [
+  {
+   "charge": 1,
+   "dps": 720,
+   "damagePerHit": 720,
+   "hitpoints": 2000,
+   "cost": 6000000,
+   "buildSeconds": 237600,
+   "xp": 487,
+   "townHall": 18
+  },
+  {
+   "charge": 2,
+   "dps": 740,
+   "damagePerHit": 740,
+   "hitpoints": 2000,
+   "cost": 3000000,
+   "buildSeconds": 367200,
+   "xp": 605,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 4,
+  "size": "3x3",
+  "range": 10,
+  "minRange": 0,
+  "attackSeconds": 1.0,
+  "targets": "air",
+  "damageType": "single target",
+  "splashTiles": 0
+ },
+ "mismatches": [],
+ "progressionMismatches": []
+}

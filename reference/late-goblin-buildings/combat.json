@@ -1,0 +1,258 @@
+{
+  "worldScale": 1.2,
+  "goblinHallBaseBounds": [
+    -112.5,
+    -15.85,
+    111.25,
+    178.95
+  ],
+  "identities": {
+    "comm-mast": {
+      "hp": [
+        250
+      ],
+      "body": "comm_mast_lvl1",
+      "base": "comm_mast_base",
+      "ruin": "destroyedBuilding_2s_pit_wood",
+      "destroyEffect": "Building Destroyed",
+      "size": 2,
+      "anchor": [
+        0,
+        40
+      ]
+    },
+    "goblin-hall": {
+      "hp": [
+        750,
+        7500
+      ],
+      "levels": [
+        {
+          "body": "goblin_townhall_lvl1",
+          "base": "goblin_townhall_base",
+          "ruin": "destroyedBuilding_4m_base_woodpanel_yellow",
+          "destroyEffect": "Building Destroyed",
+          "size": 4,
+          "anchor": [
+            0,
+            80
+          ]
+        },
+        {
+          "body": "goblin_th02",
+          "base": "goblin_townhall_base",
+          "ruin": "destroyedBuilding_4m_base_woodpanel_yellow",
+          "destroyEffect": "Building Destroyed",
+          "size": 4,
+          "anchor": [
+            0,
+            80
+          ]
+        }
+      ]
+    },
+    "goblin-castle": {
+      "hp": [
+        4000
+      ],
+      "body": "goblin_clancastle_01",
+      "base": "alliance_castle_base",
+      "ruin": "alliance_castle_lvl1_broken",
+      "destroyEffect": "Building Destroyed",
+      "size": 3,
+      "anchor": [
+        0,
+        80
+      ]
+    },
+    "foreboding-cave": {
+      "hp": [
+        25000
+      ],
+      "body": "deco_dragoncave_01",
+      "base": "alliance_castle_base",
+      "ruin": "alliance_castle_lvl1_broken",
+      "destroyEffect": "Building Destroyed",
+      "size": 4,
+      "anchor": [
+        0,
+        80
+      ]
+    },
+    "goblin-boss-th": {
+      "hp": [
+        50000
+      ],
+      "body": "goblin_clancastle_01",
+      "base": "goblin_townhall_base",
+      "ruin": "destroyedBuilding_4m_base_woodpanel_yellow",
+      "destroyEffect": "Building Destroyed",
+      "size": 4,
+      "anchor": [
+        0,
+        80
+      ],
+      "animationActionFrame": 15
+    }
+  },
+  "weapons": {
+    "goblin-hall": {
+      "name": "GoblinTh02",
+      "export": "goblin_th02",
+      "rangeSource": 1000,
+      "intervalMs": 200,
+      "dps": 150,
+      "damagePerHit": 30,
+      "airTargets": true,
+      "groundTargets": true,
+      "multiTargets": true,
+      "numMultiTargets": 3,
+      "damageRadiusSource": 0,
+      "attackEffect": "Goblin Townhall Attack",
+      "hitEffect": "Generic Hit",
+      "activationEffect": "Goblin Townhall Activate",
+      "projectile": "Goblin Townhall Arrow",
+      "projectileExport": "arrow_ammo_small",
+      "projectileSwf": "sc/characters.sc",
+      "projectileSpeed": 1800,
+      "startHeight": 190,
+      "startOffset": 50,
+      "ballisticHeight": 0,
+      "tracking": true,
+      "rotate": true,
+      "scale": 100,
+      "trail": null,
+      "shadow": null,
+      "level": 2,
+      "activateOnDamage": true,
+      "activationDelayMs": 500,
+      "addBuildingClass": "Defense"
+    },
+    "goblin-boss-th": {
+      "name": "GoblinBossTH",
+      "export": "goblin_th02",
+      "rangeSource": 1100,
+      "intervalMs": 1100,
+      "dps": 300,
+      "damagePerHit": 330,
+      "airTargets": false,
+      "groundTargets": true,
+      "multiTargets": true,
+      "numMultiTargets": 0,
+      "damageRadiusSource": 100,
+      "attackEffect": "Bomb Tower Throw Start",
+      "hitEffect": "Bomb Tower Hit",
+      "activationEffect": null,
+      "projectile": "Bomb Tower Ammo1",
+      "projectileExport": "bomb_projectile_lvl1",
+      "projectileSwf": "sc/buildings.sc",
+      "projectileSpeed": 800,
+      "startHeight": 200,
+      "startOffset": 10,
+      "ballisticHeight": 0,
+      "tracking": false,
+      "rotate": true,
+      "scale": 100,
+      "trail": "mortar_trail",
+      "shadow": "simple_shadow_small",
+      "level": 1,
+      "activateOnDamage": false,
+      "activationDelayMs": 500,
+      "addBuildingClass": "Defense"
+    }
+  },
+  "timeline": {
+    "export": "goblin_th02",
+    "fps": 24,
+    "frames": 68,
+    "labels": {
+      "deactive_idle": 0,
+      "active_start": 2,
+      "active_idle": 35
+    },
+    "flagFrames": 24
+  },
+  "caveTimeline": {
+    "export": "deco_dragoncave_01",
+    "fps": 24,
+    "frames": 60
+  },
+  "hiddenBuildingAppearDestructionPercentage": 50,
+  "previews": {
+    "comm-mast": {
+      "path": "assets/buildings/late-goblin-native/comm-mast.png",
+      "bounds": [
+        -61,
+        -23,
+        54,
+        86
+      ],
+      "anchor": [
+        0,
+        40
+      ],
+      "width": 230,
+      "height": 218
+    },
+    "goblin-hall-1": {
+      "path": "assets/buildings/late-goblin-native/goblin-hall-1.png",
+      "bounds": [
+        -115,
+        -17,
+        115,
+        142
+      ],
+      "anchor": [
+        0,
+        80
+      ],
+      "width": 460,
+      "height": 318
+    },
+    "goblin-th02": {
+      "path": "assets/buildings/late-goblin-native/goblin-th02.png",
+      "bounds": [
+        -115,
+        -15,
+        115,
+        142
+      ],
+      "anchor": [
+        0,
+        80
+      ],
+      "width": 460,
+      "height": 314
+    },
+    "goblin-castle": {
+      "path": "assets/buildings/late-goblin-native/goblin-castle.png",
+      "bounds": [
+        -85,
+        -34,
+        84,
+        131
+      ],
+      "anchor": [
+        0,
+        80
+      ],
+      "width": 338,
+      "height": 330
+    },
+    "foreboding-cave": {
+      "path": "assets/buildings/late-goblin-native/foreboding-cave.png",
+      "bounds": [
+        -128,
+        -13,
+        115,
+        178
+      ],
+      "anchor": [
+        0,
+        80
+      ],
+      "width": 486,
+      "height": 382
+    }
+  }
+}

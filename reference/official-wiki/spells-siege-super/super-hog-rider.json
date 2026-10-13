@@ -1,0 +1,240 @@
+{
+  "title": "Super Hog Rider",
+  "url": "https://clashofclans.fandom.com/wiki/Super_Hog_Rider",
+  "revid": 621779,
+  "clientName": "Super Hog Rider",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Super Hog Rider",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "Defenses",
+    "attackType": "Single Target (Ground Only)",
+    "housingSpace": 12,
+    "movementSpeed": 24,
+    "attackSpeedSeconds": 1,
+    "rangeTiles": 0.6,
+    "specialAbility": "Divide and Conquer"
+  },
+  "levels": [
+    {
+      "level": 10,
+      "dps": 180,
+      "damagePerHit": 180,
+      "hitpoints": 1500
+    },
+    {
+      "level": 11,
+      "dps": 200,
+      "damagePerHit": 200,
+      "hitpoints": 1600
+    },
+    {
+      "level": 12,
+      "dps": 230,
+      "damagePerHit": 230,
+      "hitpoints": 1750
+    },
+    {
+      "level": 13,
+      "dps": 250,
+      "damagePerHit": 250,
+      "hitpoints": 1900
+    },
+    {
+      "level": 14,
+      "dps": 270,
+      "damagePerHit": 270,
+      "hitpoints": 2100
+    },
+    {
+      "level": 15,
+      "dps": 300,
+      "damagePerHit": 300,
+      "hitpoints": 2350
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "dps",
+      "level": 10,
+      "wiki": 180,
+      "client": 190,
+      "note": "client DPS"
+    },
+    {
+      "field": "damagePerHit",
+      "level": 10,
+      "wiki": 180,
+      "client": 190,
+      "note": "client DPS*AttackSpeed/1000"
+    },
+    {
+      "field": "dps",
+      "level": 11,
+      "wiki": 200,
+      "client": 210,
+      "note": "client DPS"
+    },
+    {
+      "field": "damagePerHit",
+      "level": 11,
+      "wiki": 200,
+      "client": 210,
+      "note": "client DPS*AttackSpeed/1000"
+    },
+    {
+      "field": "superRider.dps",
+      "level": 10,
+      "wiki": 180,
+      "client": 190,
+      "note": "characters Super Rider"
+    },
+    {
+      "field": "superRider.damageVsWalls",
+      "level": 10,
+      "wiki": 360,
+      "client": 380,
+      "note": "characters Super Rider"
+    },
+    {
+      "field": "superRider.dps",
+      "level": 11,
+      "wiki": 200,
+      "client": 210,
+      "note": "characters Super Rider"
+    },
+    {
+      "field": "superRider.damageVsWalls",
+      "level": 11,
+      "wiki": 400,
+      "client": 420,
+      "note": "characters Super Rider"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "split",
+      "client": "`SpecialAbilities` SuperHogRiderSummonRider (`ProjectileOnActivation` JumpingRiderProjectileN, `AttackRange` 350 throw) ; SuperHogRiderSummonHog (`SelfSpell` SuperHogRiderSummonHog level N); `SpecialAbilitiesLevel` 1..12 = VisualLevel 4..15"
+    },
+    {
+      "mechanic": "sub-units",
+      "client": "characters `Super Rider` (`Speed` 200, `AttackRange` 40, `DamageMultiplierTarget` Wall 200%) and `Super Hog` (`Speed` 400, `AttackRange` 60, `IsJumper` TRUE)"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`DPS`, `Hitpoints`, `Speed` 300, `IsJumper` TRUE, `PreferedTargetBuildingClass` Defense"
+    }
+  ],
+  "extraTables": {
+    "superRider": [
+      {
+        "level": 10,
+        "dps": 180,
+        "damagePerHit": 180,
+        "damageVsWalls": 360,
+        "hitpoints": 550
+      },
+      {
+        "level": 11,
+        "dps": 200,
+        "damagePerHit": 200,
+        "damageVsWalls": 400,
+        "hitpoints": 625
+      },
+      {
+        "level": 12,
+        "dps": 230,
+        "damagePerHit": 230,
+        "damageVsWalls": 460,
+        "hitpoints": 700
+      },
+      {
+        "level": 13,
+        "dps": 250,
+        "damagePerHit": 250,
+        "damageVsWalls": 500,
+        "hitpoints": 750
+      },
+      {
+        "level": 14,
+        "dps": 270,
+        "damagePerHit": 270,
+        "damageVsWalls": 540,
+        "hitpoints": 800
+      },
+      {
+        "level": 15,
+        "dps": 300,
+        "damagePerHit": 300,
+        "damageVsWalls": 600,
+        "hitpoints": 900
+      }
+    ],
+    "superHog": [
+      {
+        "level": 10,
+        "dps": 50,
+        "damagePerAttack": 50,
+        "hitpoints": 800
+      },
+      {
+        "level": 11,
+        "dps": 55,
+        "damagePerAttack": 55,
+        "hitpoints": 900
+      },
+      {
+        "level": 12,
+        "dps": 60,
+        "damagePerAttack": 60,
+        "hitpoints": 1000
+      },
+      {
+        "level": 13,
+        "dps": 65,
+        "damagePerAttack": 65,
+        "hitpoints": 1050
+      },
+      {
+        "level": 14,
+        "dps": 70,
+        "damagePerAttack": 70,
+        "hitpoints": 1100
+      },
+      {
+        "level": 15,
+        "dps": 80,
+        "damagePerAttack": 80,
+        "hitpoints": 1200
+      }
+    ]
+  },
+  "boost": {
+    "wiki": {
+      "baseTroop": "Hog Rider",
+      "minBaseLevel": 10,
+      "townHallRequired": null,
+      "clanCastleLevelToReceive": 7,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperHogRider",
+      "Original": "Hog Rider",
+      "MinOriginalLevel_raw": 9,
+      "minBaseLevel": 10,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_HOG_INTRO",
+      "townHallDerived": 13
+    }
+  }
+}

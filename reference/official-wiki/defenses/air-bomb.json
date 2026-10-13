@@ -1,0 +1,149 @@
+{
+ "title": "Air Bomb",
+ "url": "https://clashofclans.fandom.com/wiki/Air_Bomb",
+ "revid": 623237,
+ "retrieved": "2026-09-15",
+ "category": "trap",
+ "clientName": "Air Bomb",
+ "clientTable": "traps.csv",
+ "levels": [
+  {
+   "level": 1,
+   "damage": 100,
+   "cost": 4000,
+   "townHall": 5
+  },
+  {
+   "level": 2,
+   "damage": 120,
+   "cost": 20000,
+   "buildSeconds": 1800,
+   "xp": 42,
+   "townHall": 5
+  },
+  {
+   "level": 3,
+   "damage": 144,
+   "cost": 75000,
+   "buildSeconds": 3600,
+   "xp": 60,
+   "townHall": 7
+  },
+  {
+   "level": 4,
+   "damage": 173,
+   "cost": 300000,
+   "buildSeconds": 14400,
+   "xp": 120,
+   "townHall": 9
+  },
+  {
+   "level": 5,
+   "damage": 208,
+   "cost": 550000,
+   "buildSeconds": 28800,
+   "xp": 169,
+   "townHall": 11
+  },
+  {
+   "level": 6,
+   "damage": 232,
+   "cost": 800000,
+   "buildSeconds": 43200,
+   "xp": 207,
+   "townHall": 12
+  },
+  {
+   "level": 7,
+   "damage": 252,
+   "cost": 1000000,
+   "buildSeconds": 50400,
+   "xp": 224,
+   "townHall": 13
+  },
+  {
+   "level": 8,
+   "damage": 280,
+   "cost": 1200000,
+   "buildSeconds": 57600,
+   "xp": 240,
+   "townHall": 13
+  },
+  {
+   "level": 9,
+   "damage": 325,
+   "cost": 2000000,
+   "buildSeconds": 86400,
+   "xp": 293,
+   "townHall": 14
+  },
+  {
+   "level": 10,
+   "damage": 350,
+   "cost": 3000000,
+   "buildSeconds": 129600,
+   "xp": 360,
+   "townHall": 15
+  },
+  {
+   "level": 11,
+   "damage": 375,
+   "cost": 5000000,
+   "buildSeconds": 172800,
+   "xp": 415,
+   "townHall": 16
+  },
+  {
+   "level": 12,
+   "damage": 400,
+   "cost": 9500000,
+   "buildSeconds": 259200,
+   "xp": 509,
+   "townHall": 17
+  },
+  {
+   "level": 13,
+   "damage": 425,
+   "cost": 15000000,
+   "buildSeconds": 777600,
+   "xp": 881,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 5,
+  "size": "1x1",
+  "triggerRadius": 4,
+  "damageRadius": 3,
+  "splashTiles": 3,
+  "targets": "air",
+  "favoriteTarget": "none",
+  "seeksTarget": true
+ },
+ "mismatches": [
+  {
+   "field": "townHall",
+   "level": 1,
+   "wiki": 5,
+   "client": 1,
+   "note": "client trap rows use TownHallLevel 1 for level 1 (availability comes from townhall_levels counts); the wiki lists the unlock Town Hall",
+   "table": "Statistics"
+  }
+ ],
+ "progressionMismatches": [
+  {
+   "field": "townhall",
+   "level": 1,
+   "wiki": 5,
+   "progression": 1,
+   "note": "client trap rows use TownHallLevel 1 for level 1 (availability comes from townhall_levels counts); the wiki lists the unlock Town Hall"
+  },
+  {
+   "field": "targets",
+   "level": "all",
+   "wiki": "air",
+   "progression": "ground",
+   "note": "progression.json marks the Air Bomb as a ground trap (AirTrigger not read)"
+  }
+ ]
+}

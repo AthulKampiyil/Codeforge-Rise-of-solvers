@@ -1,0 +1,182 @@
+{
+ "title": "Spirit Fox",
+ "url": "https://clashofclans.fandom.com/wiki/Spirit_Fox",
+ "revid": 620669,
+ "retrieved": "2026-09-15",
+ "clientName": "Spirit Fox",
+ "clientTable": "pets",
+ "category": "pet",
+ "summary": "Pet House 9 ground pet that repeatedly turns itself and its hero invisible (3 → 4 s, then a 6 s gap).",
+ "constants": {
+  "wiki": {
+   "Preferred Target": "Within 4.5 tiles of Hero",
+   "Targets": "Ground",
+   "Attack Type": "Single Target",
+   "Movement Speed": "24",
+   "Attack Speed": "1.6s",
+   "Pet House Level Required": "9",
+   "Range": "2.5 tiles",
+   "Special Ability": "Spirit Walk"
+  },
+  "client": {
+   "HousingSpace": "20",
+   "Speed": "300",
+   "AttackRange": "250",
+   "AttackSpeed": "1600",
+   "IsFlying": "FALSE",
+   "AirTargets": "FALSE",
+   "GroundTargets": "TRUE",
+   "IsJumper": "TRUE",
+   "LeashLength": "200",
+   "SpecialAbilities": "PhaseFennecInvis",
+   "TriggersTraps": "TRUE",
+   "FriendlyGroupWeight": "300",
+   "SpawnDelay": "100",
+   "UpgradeResource": "DarkElixir",
+   "Projectile": "Fennec_projectile",
+   "MovementOffsetSpeed": "0",
+   "levelRows": 10,
+   "levelsByPetHouse": {
+    "Pet House 9": "10"
+   }
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "damagePerSecond": {
+   "wikiHeader": "Damage per Second",
+   "unit": "damage per second"
+  },
+  "damagePerHit": {
+   "wikiHeader": "Damage per Hit",
+   "unit": "damage points"
+  },
+  "invisibilityDurationSeconds": {
+   "wikiHeader": "Invisibility Duration",
+   "unit": "seconds"
+  },
+  "hitpoints": {
+   "wikiHeader": "Hitpoints",
+   "unit": "hitpoints"
+  },
+  "upgradeCost": {
+   "wikiHeader": "Upgrade Cost",
+   "unit": "resource amount"
+  },
+  "upgradeTimeSeconds": {
+   "wikiHeader": "Upgrade Time",
+   "unit": "seconds"
+  },
+  "petHouseLevelRequired": {
+   "wikiHeader": "Pet House Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damagePerSecond": 108,
+   "damagePerHit": 172.8,
+   "invisibilityDurationSeconds": 3,
+   "hitpoints": 1900,
+   "upgradeCost": null,
+   "upgradeTimeSeconds": null,
+   "petHouseLevelRequired": 9
+  },
+  {
+   "level": 2,
+   "damagePerSecond": 116,
+   "damagePerHit": 185.6,
+   "invisibilityDurationSeconds": 3,
+   "hitpoints": 2000,
+   "upgradeCost": 150000,
+   "upgradeTimeSeconds": 259200,
+   "petHouseLevelRequired": 9
+  },
+  {
+   "level": 3,
+   "damagePerSecond": 124,
+   "damagePerHit": 198.4,
+   "invisibilityDurationSeconds": 3,
+   "hitpoints": 2100,
+   "upgradeCost": 160000,
+   "upgradeTimeSeconds": 345600,
+   "petHouseLevelRequired": 9
+  },
+  {
+   "level": 4,
+   "damagePerSecond": 132,
+   "damagePerHit": 211.2,
+   "invisibilityDurationSeconds": 3,
+   "hitpoints": 2200,
+   "upgradeCost": 170000,
+   "upgradeTimeSeconds": 432000,
+   "petHouseLevelRequired": 9
+  },
+  {
+   "level": 5,
+   "damagePerSecond": 140,
+   "damagePerHit": 224,
+   "invisibilityDurationSeconds": 3.5,
+   "hitpoints": 2300,
+   "upgradeCost": 180000,
+   "upgradeTimeSeconds": 475200,
+   "petHouseLevelRequired": 9
+  },
+  {
+   "level": 6,
+   "damagePerSecond": 148,
+   "damagePerHit": 236.8,
+   "invisibilityDurationSeconds": 3.5,
+   "hitpoints": 2400,
+   "upgradeCost": 190000,
+   "upgradeTimeSeconds": 518400,
+   "petHouseLevelRequired": 9
+  },
+  {
+   "level": 7,
+   "damagePerSecond": 156,
+   "damagePerHit": 249.6,
+   "invisibilityDurationSeconds": 3.5,
+   "hitpoints": 2500,
+   "upgradeCost": 200000,
+   "upgradeTimeSeconds": 561600,
+   "petHouseLevelRequired": 9
+  },
+  {
+   "level": 8,
+   "damagePerSecond": 164,
+   "damagePerHit": 262.4,
+   "invisibilityDurationSeconds": 3.5,
+   "hitpoints": 2600,
+   "upgradeCost": 210000,
+   "upgradeTimeSeconds": 604800,
+   "petHouseLevelRequired": 9
+  },
+  {
+   "level": 9,
+   "damagePerSecond": 172,
+   "damagePerHit": 275.6,
+   "invisibilityDurationSeconds": 3.5,
+   "hitpoints": 2700,
+   "upgradeCost": 220000,
+   "upgradeTimeSeconds": 648000,
+   "petHouseLevelRequired": 9
+  },
+  {
+   "level": 10,
+   "damagePerSecond": 180,
+   "damagePerHit": 288,
+   "invisibilityDurationSeconds": 4,
+   "hitpoints": 2800,
+   "upgradeCost": 230000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 9
+  }
+ ],
+ "subpages": [],
+ "mismatches": []
+}

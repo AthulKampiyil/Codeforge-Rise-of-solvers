@@ -1,0 +1,65 @@
+{
+ "title": "Town Hall/Giga Weapons",
+ "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Giga_Weapons",
+ "revid": 621287,
+ "retrieved": "2026-09-15",
+ "category": "mechanic",
+ "clientName": "Townhall12, Townhall13, Townhall14, Townhall15, Townhall16",
+ "clientTable": "weapons.csv",
+ "levels": [],
+ "constants": {
+  "range": 10,
+  "numberOfTargets": 4,
+  "targets": "ground & air",
+  "activation": "damage taken or 51% destruction",
+  "byTownHall": {
+   "12": {
+    "dpsPerTarget": 140,
+    "attackSeconds": 0.5,
+    "deathDamage": 500,
+    "deathRadius": 4
+   },
+   "13": {
+    "dpsPerTarget": 220,
+    "attackSeconds": 0.128,
+    "deathDamage": 700,
+    "deathRadius": 4,
+    "slowPercent": 50,
+    "slowSeconds": 8
+   },
+   "14": {
+    "dpsPerTarget": 280,
+    "attackSeconds": 0.128,
+    "deathDamage": 900,
+    "deathRadius": 4,
+    "poisonDps": 180,
+    "poisonSeconds": 12
+   },
+   "15": {
+    "dpsPerTarget": 300,
+    "attackSeconds": 0.128,
+    "deathDamage": 1000,
+    "deathRadius": 4.5,
+    "poisonDps": 180,
+    "poisonSeconds": 12
+   },
+   "16": {
+    "dpsPerTarget": 300,
+    "attackSeconds": 0.128,
+    "deathDamage": 1100,
+    "deathRadius": 4.5,
+    "poisonDps": 180,
+    "poisonSeconds": 12
+   }
+  }
+ },
+ "mismatches": [
+  {
+   "field": "damageWhenDestroyed",
+   "level": 14,
+   "wiki": 900,
+   "client": 1000,
+   "note": "DieDamage"
+  }
+ ]
+}

@@ -1,0 +1,417 @@
+{
+ "title": "Barbarian",
+ "page": "Barbarian/Home Village",
+ "url": "https://clashofclans.fandom.com/wiki/Barbarian/Home_Village",
+ "tabberParentUrl": "https://clashofclans.fandom.com/wiki/Barbarian",
+ "revid": 624623,
+ "retrieved": "2026-09-15",
+ "clientName": "Barbarian",
+ "clientVersion": "18.400.21",
+ "category": "elixir-troop",
+ "constants": {
+  "housingSpace": 1,
+  "movementSpeedWiki": 18,
+  "internalSpeed": 220,
+  "tilesPerSecond": 2.2,
+  "attackRangeTiles": 0.4,
+  "attackRangeTilesClient": 0.4,
+  "attackSeconds": 1,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Melee (Ground Only)",
+  "targets": "ground",
+  "favoriteTarget": "None",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": false,
+  "unlock": {
+   "building": "Barracks",
+   "level": 1,
+   "townHall": 1
+  },
+  "triggersTraps": true
+ },
+ "client": {
+  "clientName": "Barbarian",
+  "housingSpace": 1,
+  "internalSpeed": 220,
+  "movementSpeedInGameExact": 17.6,
+  "movementSpeedInGameRounded": 18,
+  "tilesPerSecond": 2.2,
+  "attackRangeTiles": 0.4,
+  "attackSeconds": 1,
+  "targets": "ground",
+  "flying": false,
+  "jumpsWalls": false,
+  "favoriteTarget": "None",
+  "productionBuilding": "Barracks",
+  "barracksLevel": 1,
+  "unlockTownHall": 1,
+  "triggersTraps": true,
+  "movementOffsetSpeed": 0
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 9,
+   "damagePerHit": 9,
+   "hitpoints": 45,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 12,
+   "damagePerHit": 12,
+   "hitpoints": 54,
+   "researchCost": 10000,
+   "researchSeconds": 1800,
+   "researchTimeText": "30m",
+   "laboratoryLevel": 1
+  },
+  {
+   "level": 3,
+   "dps": 15,
+   "damagePerHit": 15,
+   "hitpoints": 65,
+   "researchCost": 50000,
+   "researchSeconds": 3600,
+   "researchTimeText": "1h",
+   "laboratoryLevel": 3
+  },
+  {
+   "level": 4,
+   "dps": 18,
+   "damagePerHit": 18,
+   "hitpoints": 85,
+   "researchCost": 130000,
+   "researchSeconds": 7200,
+   "researchTimeText": "2h",
+   "laboratoryLevel": 5
+  },
+  {
+   "level": 5,
+   "dps": 23,
+   "damagePerHit": 23,
+   "hitpoints": 105,
+   "researchCost": 300000,
+   "researchSeconds": 14400,
+   "researchTimeText": "4h",
+   "laboratoryLevel": 6
+  },
+  {
+   "level": 6,
+   "dps": 26,
+   "damagePerHit": 26,
+   "hitpoints": 125,
+   "researchCost": 800000,
+   "researchSeconds": 28800,
+   "researchTimeText": "8h",
+   "laboratoryLevel": 7
+  },
+  {
+   "level": 7,
+   "dps": 30,
+   "damagePerHit": 30,
+   "hitpoints": 160,
+   "researchCost": 1000000,
+   "researchSeconds": 43200,
+   "researchTimeText": "12h",
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 8,
+   "dps": 34,
+   "damagePerHit": 34,
+   "hitpoints": 205,
+   "researchCost": 1500000,
+   "researchSeconds": 86400,
+   "researchTimeText": "1d",
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 9,
+   "dps": 38,
+   "damagePerHit": 38,
+   "hitpoints": 230,
+   "researchCost": 2500000,
+   "researchSeconds": 129600,
+   "researchTimeText": "1d 12h",
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 10,
+   "dps": 42,
+   "damagePerHit": 42,
+   "hitpoints": 250,
+   "researchCost": 4300000,
+   "researchSeconds": 172800,
+   "researchTimeText": "2d",
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 11,
+   "dps": 45,
+   "damagePerHit": 45,
+   "hitpoints": 270,
+   "researchCost": 6000000,
+   "researchSeconds": 259200,
+   "researchTimeText": "3d",
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 12,
+   "dps": 48,
+   "damagePerHit": 48,
+   "hitpoints": 290,
+   "researchCost": 8000000,
+   "researchSeconds": 345600,
+   "researchTimeText": "4d",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 13,
+   "dps": 51,
+   "damagePerHit": 51,
+   "hitpoints": 310,
+   "researchCost": 24000000,
+   "researchSeconds": 1080000,
+   "researchTimeText": "12d 12h",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 45,
+   "dps": 9,
+   "damagePerHit": 9
+  },
+  {
+   "level": 2,
+   "hitpoints": 54,
+   "dps": 12,
+   "damagePerHit": 12,
+   "researchCost": 10000,
+   "researchSeconds": 1800,
+   "laboratoryLevel": 1
+  },
+  {
+   "level": 3,
+   "hitpoints": 65,
+   "dps": 15,
+   "damagePerHit": 15,
+   "researchCost": 50000,
+   "researchSeconds": 3600,
+   "researchSecondsIfMinutesInherited": 5400,
+   "laboratoryLevel": 3
+  },
+  {
+   "level": 4,
+   "hitpoints": 85,
+   "dps": 18,
+   "damagePerHit": 18,
+   "researchCost": 130000,
+   "researchSeconds": 7200,
+   "researchSecondsIfMinutesInherited": 9000,
+   "laboratoryLevel": 5
+  },
+  {
+   "level": 5,
+   "hitpoints": 105,
+   "dps": 23,
+   "damagePerHit": 23,
+   "researchCost": 300000,
+   "researchSeconds": 14400,
+   "researchSecondsIfMinutesInherited": 16200,
+   "laboratoryLevel": 6
+  },
+  {
+   "level": 6,
+   "hitpoints": 125,
+   "dps": 26,
+   "damagePerHit": 26,
+   "researchCost": 800000,
+   "researchSeconds": 28800,
+   "researchSecondsIfMinutesInherited": 30600,
+   "laboratoryLevel": 7
+  },
+  {
+   "level": 7,
+   "hitpoints": 160,
+   "dps": 30,
+   "damagePerHit": 30,
+   "researchCost": 1000000,
+   "researchSeconds": 43200,
+   "researchSecondsIfMinutesInherited": 45000,
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 8,
+   "hitpoints": 205,
+   "dps": 34,
+   "damagePerHit": 34,
+   "researchCost": 1500000,
+   "researchSeconds": 86400,
+   "researchSecondsIfMinutesInherited": 88200,
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 9,
+   "hitpoints": 230,
+   "dps": 38,
+   "damagePerHit": 38,
+   "researchCost": 2500000,
+   "researchSeconds": 129600,
+   "researchSecondsIfMinutesInherited": 131400,
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 10,
+   "hitpoints": 250,
+   "dps": 42,
+   "damagePerHit": 42,
+   "researchCost": 4300000,
+   "researchSeconds": 172800,
+   "researchSecondsIfMinutesInherited": 174600,
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 11,
+   "hitpoints": 270,
+   "dps": 45,
+   "damagePerHit": 45,
+   "researchCost": 6000000,
+   "researchSeconds": 259200,
+   "researchSecondsIfMinutesInherited": 261000,
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 12,
+   "hitpoints": 290,
+   "dps": 48,
+   "damagePerHit": 48,
+   "researchCost": 8000000,
+   "researchSeconds": 345600,
+   "researchSecondsIfMinutesInherited": 347400,
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 13,
+   "hitpoints": 310,
+   "dps": 51,
+   "damagePerHit": 51,
+   "researchCost": 24000000,
+   "researchSeconds": 1080000,
+   "researchSecondsIfMinutesInherited": 1081800,
+   "laboratoryLevel": 16
+  }
+ ],
+ "superTroopBoost": {
+  "super troop": "Super Barbarian",
+  "boost cost": "25,000",
+  "barbarian level required": "8"
+ },
+ "comparison": {
+  "checked": 83,
+  "matched": 83
+ },
+ "mismatches": [
+  {
+   "field": "researchSeconds(inheritedMinutes)",
+   "level": 3,
+   "wiki": 3600,
+   "client": 5400,
+   "clientColumn": "UpgradeTimeM inherited from an earlier row",
+   "note": "wiki agrees with blank UpgradeTimeM = 0; forward inheritance would give 5400 s"
+  },
+  {
+   "field": "researchSeconds(inheritedMinutes)",
+   "level": 4,
+   "wiki": 7200,
+   "client": 9000,
+   "clientColumn": "UpgradeTimeM inherited from an earlier row",
+   "note": "wiki agrees with blank UpgradeTimeM = 0; forward inheritance would give 9000 s"
+  },
+  {
+   "field": "researchSeconds(inheritedMinutes)",
+   "level": 5,
+   "wiki": 14400,
+   "client": 16200,
+   "clientColumn": "UpgradeTimeM inherited from an earlier row",
+   "note": "wiki agrees with blank UpgradeTimeM = 0; forward inheritance would give 16200 s"
+  },
+  {
+   "field": "researchSeconds(inheritedMinutes)",
+   "level": 6,
+   "wiki": 28800,
+   "client": 30600,
+   "clientColumn": "UpgradeTimeM inherited from an earlier row",
+   "note": "wiki agrees with blank UpgradeTimeM = 0; forward inheritance would give 30600 s"
+  },
+  {
+   "field": "researchSeconds(inheritedMinutes)",
+   "level": 7,
+   "wiki": 43200,
+   "client": 45000,
+   "clientColumn": "UpgradeTimeM inherited from an earlier row",
+   "note": "wiki agrees with blank UpgradeTimeM = 0; forward inheritance would give 45000 s"
+  },
+  {
+   "field": "researchSeconds(inheritedMinutes)",
+   "level": 8,
+   "wiki": 86400,
+   "client": 88200,
+   "clientColumn": "UpgradeTimeM inherited from an earlier row",
+   "note": "wiki agrees with blank UpgradeTimeM = 0; forward inheritance would give 88200 s"
+  },
+  {
+   "field": "researchSeconds(inheritedMinutes)",
+   "level": 9,
+   "wiki": 129600,
+   "client": 131400,
+   "clientColumn": "UpgradeTimeM inherited from an earlier row",
+   "note": "wiki agrees with blank UpgradeTimeM = 0; forward inheritance would give 131400 s"
+  },
+  {
+   "field": "researchSeconds(inheritedMinutes)",
+   "level": 10,
+   "wiki": 172800,
+   "client": 174600,
+   "clientColumn": "UpgradeTimeM inherited from an earlier row",
+   "note": "wiki agrees with blank UpgradeTimeM = 0; forward inheritance would give 174600 s"
+  },
+  {
+   "field": "researchSeconds(inheritedMinutes)",
+   "level": 11,
+   "wiki": 259200,
+   "client": 261000,
+   "clientColumn": "UpgradeTimeM inherited from an earlier row",
+   "note": "wiki agrees with blank UpgradeTimeM = 0; forward inheritance would give 261000 s"
+  },
+  {
+   "field": "researchSeconds(inheritedMinutes)",
+   "level": 12,
+   "wiki": 345600,
+   "client": 347400,
+   "clientColumn": "UpgradeTimeM inherited from an earlier row",
+   "note": "wiki agrees with blank UpgradeTimeM = 0; forward inheritance would give 347400 s"
+  },
+  {
+   "field": "researchSeconds(inheritedMinutes)",
+   "level": 13,
+   "wiki": 1080000,
+   "client": 1081800,
+   "clientColumn": "UpgradeTimeM inherited from an earlier row",
+   "note": "wiki agrees with blank UpgradeTimeM = 0; forward inheritance would give 1081800 s"
+  }
+ ],
+ "ambiguities": [
+  "Barbarian row 1 is the only row in the whole 18.400.21 logic set that sets UpgradeTimeM (30) and leaves it blank on later rows. The wiki (troop page and Laboratory/Upgrade Chart) shows 1h for level 3, 2h for level 4, etc., i.e. blank minutes = 0. reference/full-client/progression.json forward-inherits the 30 minutes and therefore lists 5,400 s, 9,000 s ... for levels 3-13 (+1,800 s each)."
+ ]
+}

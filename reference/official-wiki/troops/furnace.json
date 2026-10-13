@@ -1,0 +1,171 @@
+{
+ "title": "Furnace",
+ "page": "Furnace",
+ "url": "https://clashofclans.fandom.com/wiki/Furnace",
+ "revid": 625281,
+ "retrieved": "2026-09-15",
+ "clientName": "Furnace",
+ "clientVersion": "18.400.21",
+ "category": "dark-troop",
+ "constants": {
+  "housingSpace": 18,
+  "movementSpeedWiki": 0,
+  "internalSpeed": 0,
+  "tilesPerSecond": 0,
+  "attackRangeTiles": null,
+  "attackRangeTilesClient": 0.01,
+  "attackSeconds": 0.8,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": null,
+  "targets": "ground+air",
+  "favoriteTarget": "Stationary",
+  "favoriteTargetTemplate": "Stationary",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": false,
+  "unlock": {
+   "building": "Dark Barracks",
+   "level": 12,
+   "townHall": 15
+  },
+  "lifetimeSeconds": 60,
+  "bunkerSpawnDistTilesClient": 1,
+  "triggersTraps": true,
+  "healerWeight": 0
+ },
+ "client": {
+  "clientName": "Furnace",
+  "housingSpace": 18,
+  "internalSpeed": 0,
+  "movementSpeedInGameExact": 0,
+  "movementSpeedInGameRounded": 0,
+  "tilesPerSecond": 0,
+  "attackRangeTiles": 0.01,
+  "attackSeconds": 0.8,
+  "targets": "ground+air",
+  "flying": false,
+  "jumpsWalls": false,
+  "favoriteTarget": "None",
+  "productionBuilding": "Dark Barracks",
+  "barracksLevel": 12,
+  "unlockTownHall": 15,
+  "triggersTraps": true,
+  "healerWeight": 0,
+  "secondarySpawnDist": 200,
+  "movementOffsetSpeed": 0,
+  "lifetimeSeconds": 60,
+  "bunkerSpawnDistTiles": 1
+ },
+ "levels": [
+  {
+   "level": 1,
+   "spawnCount": 19,
+   "hitpoints": 1530,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "spawnCount": 20,
+   "hitpoints": 1620,
+   "researchCost": 200000,
+   "researchSeconds": 777600,
+   "researchTimeText": "9d",
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 3,
+   "spawnCount": 21,
+   "hitpoints": 1710,
+   "researchCost": 260000,
+   "researchSeconds": 950400,
+   "researchTimeText": "11d",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 4,
+   "spawnCount": 22,
+   "hitpoints": 1800,
+   "researchCost": 320000,
+   "researchSeconds": 1296000,
+   "researchTimeText": "15d",
+   "laboratoryLevel": 15
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 1530,
+   "spawnCount": 19
+  },
+  {
+   "level": 2,
+   "hitpoints": 1620,
+   "researchCost": 200000,
+   "researchSeconds": 777600,
+   "laboratoryLevel": 13,
+   "spawnCount": 20
+  },
+  {
+   "level": 3,
+   "hitpoints": 1710,
+   "researchCost": 260000,
+   "researchSeconds": 950400,
+   "laboratoryLevel": 14,
+   "spawnCount": 21
+  },
+  {
+   "level": 4,
+   "hitpoints": 1800,
+   "researchCost": 320000,
+   "researchSeconds": 1296000,
+   "laboratoryLevel": 15,
+   "spawnCount": 22
+  }
+ ],
+ "spawned": {
+  "slug": "furnace-firemite",
+  "title": "Firemite",
+  "clientName": "Firemite Spawn",
+  "trigger": "timed release over 60 s lifetime",
+  "perLevelClient": {
+   "spawnCount": [
+    19,
+    20,
+    21,
+    22
+   ]
+  }
+ },
+ "clientExtra": {
+  "unreleasedHint": {
+   "lastRowUpgradeCost": 380000,
+   "lastRowUpgradeTimeH": 384,
+   "firemiteLevels": 5
+  }
+ },
+ "comparison": {
+  "checked": 23,
+  "matched": 22
+ },
+ "mismatches": [
+  {
+   "field": "maxLevel (unreleased data)",
+   "level": 5,
+   "wiki": 4,
+   "client": "row 4 UpgradeCost=380000, UpgradeTimeH=384; Firemite Spawn L5",
+   "clientColumn": "characters.Furnace row 4 / Firemite Spawn row 5",
+   "note": "probable future level"
+  }
+ ],
+ "ambiguities": [
+  "The exact spawn interval is not published by the wiki and has no column in the client; it is presumably derived from BunkerDegenerationTime and BunkerTroopCount1.",
+  "Client row 4 already carries UpgradeCost=380,000 and UpgradeTimeH=384, and Firemite Spawn has a fifth level (350 HP, 90 damage, FireSpiritBurn level 5 = 165 DPS): unreleased level-5 data, not on the wiki.",
+  "Client DPS 1-4 and AttackRange=1 on the Furnace are placeholders; it never attacks."
+ ]
+}

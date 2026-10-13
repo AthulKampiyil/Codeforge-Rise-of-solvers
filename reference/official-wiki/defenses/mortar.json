@@ -1,0 +1,475 @@
+{
+ "title": "Mortar",
+ "url": "https://clashofclans.fandom.com/wiki/Mortar",
+ "revid": 625094,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Mortar",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 4,
+   "damagePerHit": 20,
+   "hitpoints": 400,
+   "cost": 5000,
+   "buildSeconds": 1800,
+   "xp": 42,
+   "townHall": 3
+  },
+  {
+   "level": 2,
+   "dps": 5,
+   "damagePerHit": 25,
+   "hitpoints": 450,
+   "cost": 25000,
+   "buildSeconds": 3600,
+   "xp": 60,
+   "townHall": 4
+  },
+  {
+   "level": 3,
+   "dps": 6,
+   "damagePerHit": 30,
+   "hitpoints": 500,
+   "cost": 90000,
+   "buildSeconds": 7200,
+   "xp": 84,
+   "townHall": 5
+  },
+  {
+   "level": 4,
+   "dps": 7,
+   "damagePerHit": 35,
+   "hitpoints": 550,
+   "cost": 180000,
+   "buildSeconds": 10800,
+   "xp": 103,
+   "townHall": 6
+  },
+  {
+   "level": 5,
+   "dps": 9,
+   "damagePerHit": 45,
+   "hitpoints": 600,
+   "cost": 300000,
+   "buildSeconds": 21600,
+   "xp": 146,
+   "townHall": 7
+  },
+  {
+   "level": 6,
+   "dps": 11,
+   "damagePerHit": 55,
+   "hitpoints": 650,
+   "cost": 500000,
+   "buildSeconds": 28800,
+   "xp": 169,
+   "townHall": 8
+  },
+  {
+   "level": 7,
+   "dps": 15,
+   "damagePerHit": 75,
+   "hitpoints": 700,
+   "cost": 900000,
+   "buildSeconds": 43200,
+   "xp": 207,
+   "townHall": 9
+  },
+  {
+   "level": 8,
+   "dps": 20,
+   "damagePerHit": 100,
+   "hitpoints": 800,
+   "cost": 1200000,
+   "buildSeconds": 64800,
+   "xp": 254,
+   "townHall": 10,
+   "burstDps": 25,
+   "burstDamagePerHit": 41.6
+  },
+  {
+   "level": 9,
+   "dps": 25,
+   "damagePerHit": 125,
+   "hitpoints": 950,
+   "cost": 1600000,
+   "buildSeconds": 72000,
+   "xp": 268,
+   "townHall": 11,
+   "burstDps": 30,
+   "burstDamagePerHit": 51.58
+  },
+  {
+   "level": 10,
+   "dps": 30,
+   "damagePerHit": 150,
+   "hitpoints": 1100,
+   "cost": 1800000,
+   "buildSeconds": 86400,
+   "xp": 293,
+   "townHall": 11,
+   "burstDps": 37,
+   "burstDamagePerHit": 63.23
+  },
+  {
+   "level": 11,
+   "dps": 35,
+   "damagePerHit": 175,
+   "hitpoints": 1300,
+   "cost": 2300000,
+   "buildSeconds": 108000,
+   "xp": 328,
+   "townHall": 12,
+   "burstDps": 42,
+   "burstDamagePerHit": 71.55
+  },
+  {
+   "level": 12,
+   "dps": 38,
+   "damagePerHit": 190,
+   "hitpoints": 1500,
+   "cost": 2400000,
+   "buildSeconds": 129600,
+   "xp": 360,
+   "townHall": 12,
+   "burstDps": 46,
+   "burstDamagePerHit": 78.2
+  },
+  {
+   "level": 13,
+   "dps": 42,
+   "damagePerHit": 210,
+   "hitpoints": 1700,
+   "cost": 2800000,
+   "buildSeconds": 172800,
+   "xp": 415,
+   "townHall": 13,
+   "burstDps": 51,
+   "burstDamagePerHit": 86.52
+  },
+  {
+   "level": 14,
+   "dps": 48,
+   "damagePerHit": 240,
+   "hitpoints": 1950,
+   "cost": 4300000,
+   "buildSeconds": 216000,
+   "xp": 464,
+   "townHall": 14,
+   "burstDps": 58,
+   "burstDamagePerHit": 98.17
+  },
+  {
+   "level": 15,
+   "dps": 54,
+   "damagePerHit": 270,
+   "hitpoints": 2150,
+   "cost": 5000000,
+   "buildSeconds": 259200,
+   "xp": 509,
+   "townHall": 15,
+   "burstDps": 65,
+   "burstDamagePerHit": 109.82
+  },
+  {
+   "level": 16,
+   "dps": 60,
+   "damagePerHit": 300,
+   "hitpoints": 2300,
+   "cost": 7000000,
+   "buildSeconds": 345600,
+   "xp": 587,
+   "townHall": 16,
+   "burstDps": 73,
+   "burstDamagePerHit": 123.13
+  },
+  {
+   "level": 17,
+   "dps": 66,
+   "damagePerHit": 330,
+   "hitpoints": 2450,
+   "cost": 13000000,
+   "buildSeconds": 432000,
+   "xp": 657,
+   "townHall": 17,
+   "burstDps": 80,
+   "burstDamagePerHit": 134.78
+  },
+  {
+   "level": 18,
+   "dps": 72,
+   "damagePerHit": 360,
+   "hitpoints": 2550,
+   "cost": 21000000,
+   "buildSeconds": 1080000,
+   "xp": 1039,
+   "townHall": 18,
+   "burstDps": 88,
+   "burstDamagePerHit": 148.09
+  }
+ ],
+ "supercharges": [
+  {
+   "charge": 1,
+   "dps": 75,
+   "damagePerHit": 375,
+   "hitpoints": 2550,
+   "cost": 9000000,
+   "buildSeconds": 345600,
+   "xp": 509,
+   "townHall": 18,
+   "burstDps": 91,
+   "burstDamagePerHit": 153.08,
+   "burstHitpoints": 2550,
+   "burstCost": 9000000,
+   "burstBuildSeconds": 345600,
+   "burstXp": 509,
+   "burstTownHall": 17
+  },
+  {
+   "charge": 2,
+   "dps": 75,
+   "damagePerHit": 375,
+   "hitpoints": 2625,
+   "cost": 7000000,
+   "buildSeconds": 518400,
+   "xp": 720,
+   "townHall": 18,
+   "burstDps": 91,
+   "burstDamagePerHit": 153.08,
+   "burstHitpoints": 2625,
+   "burstCost": 7000000,
+   "burstBuildSeconds": 518400,
+   "burstXp": 720,
+   "burstTownHall": 17
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 3,
+  "size": "3x3",
+  "range": 11,
+  "minRange": 4,
+  "attackSeconds": 5.0,
+  "targets": "ground",
+  "damageType": "splash",
+  "splashTiles": 1.5,
+  "knockback": true,
+  "burst": {
+   "shotsPerBurst": 3,
+   "shotIntervalSeconds": 0.5,
+   "burstIntervalSeconds": 4.0,
+   "range": 11,
+   "minRange": 4,
+   "unlockLevel": 8,
+   "gearUpCost": 6000000,
+   "gearUpResource": "gold",
+   "gearUpSeconds": 1209600,
+   "requires": "Multi Mortar level 8"
+  }
+ },
+ "mismatches": [
+  {
+   "field": "damagePerHit",
+   "level": 8,
+   "wiki": 41.6,
+   "client": 37.5,
+   "note": "wiki table implies AltDPS x 4.992 s / 3 (5 s cycle); the wiki's own Feb 23, 2026 History quotes in-game per-shell displays (L9 46, L15 98, L17 120) that instead match the client cycle AltAttackSpeed 3.5 s + 2 x AltBurstDelay 0.5 s = 4.5 s (AltDPS x 1.5, floored after 16 ms tick rounding). The table is probably stale; client timing looks right",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 9,
+   "wiki": 30,
+   "client": 31,
+   "note": "display rounding: wiki shows floor of 3 x truncated per-hit / cycle; client AltDPS is 1 higher",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "damagePerHit",
+   "level": 9,
+   "wiki": 51.58,
+   "client": 46.5,
+   "note": "wiki table implies AltDPS x 4.992 s / 3 (5 s cycle); the wiki's own Feb 23, 2026 History quotes in-game per-shell displays (L9 46, L15 98, L17 120) that instead match the client cycle AltAttackSpeed 3.5 s + 2 x AltBurstDelay 0.5 s = 4.5 s (AltDPS x 1.5, floored after 16 ms tick rounding). The table is probably stale; client timing looks right",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 10,
+   "wiki": 37,
+   "client": 38,
+   "note": "display rounding: wiki shows floor of 3 x truncated per-hit / cycle; client AltDPS is 1 higher",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "damagePerHit",
+   "level": 10,
+   "wiki": 63.23,
+   "client": 57.0,
+   "note": "wiki table implies AltDPS x 4.992 s / 3 (5 s cycle); the wiki's own Feb 23, 2026 History quotes in-game per-shell displays (L9 46, L15 98, L17 120) that instead match the client cycle AltAttackSpeed 3.5 s + 2 x AltBurstDelay 0.5 s = 4.5 s (AltDPS x 1.5, floored after 16 ms tick rounding). The table is probably stale; client timing looks right",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 11,
+   "wiki": 42,
+   "client": 43,
+   "note": "display rounding: wiki shows floor of 3 x truncated per-hit / cycle; client AltDPS is 1 higher",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "damagePerHit",
+   "level": 11,
+   "wiki": 71.55,
+   "client": 64.5,
+   "note": "wiki table implies AltDPS x 4.992 s / 3 (5 s cycle); the wiki's own Feb 23, 2026 History quotes in-game per-shell displays (L9 46, L15 98, L17 120) that instead match the client cycle AltAttackSpeed 3.5 s + 2 x AltBurstDelay 0.5 s = 4.5 s (AltDPS x 1.5, floored after 16 ms tick rounding). The table is probably stale; client timing looks right",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 12,
+   "wiki": 46,
+   "client": 47,
+   "note": "display rounding: wiki shows floor of 3 x truncated per-hit / cycle; client AltDPS is 1 higher",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "damagePerHit",
+   "level": 12,
+   "wiki": 78.2,
+   "client": 70.5,
+   "note": "wiki table implies AltDPS x 4.992 s / 3 (5 s cycle); the wiki's own Feb 23, 2026 History quotes in-game per-shell displays (L9 46, L15 98, L17 120) that instead match the client cycle AltAttackSpeed 3.5 s + 2 x AltBurstDelay 0.5 s = 4.5 s (AltDPS x 1.5, floored after 16 ms tick rounding). The table is probably stale; client timing looks right",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 13,
+   "wiki": 51,
+   "client": 52,
+   "note": "display rounding: wiki shows floor of 3 x truncated per-hit / cycle; client AltDPS is 1 higher",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "damagePerHit",
+   "level": 13,
+   "wiki": 86.52,
+   "client": 78.0,
+   "note": "wiki table implies AltDPS x 4.992 s / 3 (5 s cycle); the wiki's own Feb 23, 2026 History quotes in-game per-shell displays (L9 46, L15 98, L17 120) that instead match the client cycle AltAttackSpeed 3.5 s + 2 x AltBurstDelay 0.5 s = 4.5 s (AltDPS x 1.5, floored after 16 ms tick rounding). The table is probably stale; client timing looks right",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 14,
+   "wiki": 58,
+   "client": 59,
+   "note": "display rounding: wiki shows floor of 3 x truncated per-hit / cycle; client AltDPS is 1 higher",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "damagePerHit",
+   "level": 14,
+   "wiki": 98.17,
+   "client": 88.5,
+   "note": "wiki table implies AltDPS x 4.992 s / 3 (5 s cycle); the wiki's own Feb 23, 2026 History quotes in-game per-shell displays (L9 46, L15 98, L17 120) that instead match the client cycle AltAttackSpeed 3.5 s + 2 x AltBurstDelay 0.5 s = 4.5 s (AltDPS x 1.5, floored after 16 ms tick rounding). The table is probably stale; client timing looks right",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 15,
+   "wiki": 65,
+   "client": 66,
+   "note": "display rounding: wiki shows floor of 3 x truncated per-hit / cycle; client AltDPS is 1 higher",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "damagePerHit",
+   "level": 15,
+   "wiki": 109.82,
+   "client": 99.0,
+   "note": "wiki table implies AltDPS x 4.992 s / 3 (5 s cycle); the wiki's own Feb 23, 2026 History quotes in-game per-shell displays (L9 46, L15 98, L17 120) that instead match the client cycle AltAttackSpeed 3.5 s + 2 x AltBurstDelay 0.5 s = 4.5 s (AltDPS x 1.5, floored after 16 ms tick rounding). The table is probably stale; client timing looks right",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 16,
+   "wiki": 73,
+   "client": 74,
+   "note": "display rounding: wiki shows floor of 3 x truncated per-hit / cycle; client AltDPS is 1 higher",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "damagePerHit",
+   "level": 16,
+   "wiki": 123.13,
+   "client": 111.0,
+   "note": "wiki table implies AltDPS x 4.992 s / 3 (5 s cycle); the wiki's own Feb 23, 2026 History quotes in-game per-shell displays (L9 46, L15 98, L17 120) that instead match the client cycle AltAttackSpeed 3.5 s + 2 x AltBurstDelay 0.5 s = 4.5 s (AltDPS x 1.5, floored after 16 ms tick rounding). The table is probably stale; client timing looks right",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 17,
+   "wiki": 80,
+   "client": 81,
+   "note": "display rounding: wiki shows floor of 3 x truncated per-hit / cycle; client AltDPS is 1 higher",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "damagePerHit",
+   "level": 17,
+   "wiki": 134.78,
+   "client": 121.5,
+   "note": "wiki table implies AltDPS x 4.992 s / 3 (5 s cycle); the wiki's own Feb 23, 2026 History quotes in-game per-shell displays (L9 46, L15 98, L17 120) that instead match the client cycle AltAttackSpeed 3.5 s + 2 x AltBurstDelay 0.5 s = 4.5 s (AltDPS x 1.5, floored after 16 ms tick rounding). The table is probably stale; client timing looks right",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "dps",
+   "level": 18,
+   "wiki": 88,
+   "client": 89,
+   "note": "display rounding: wiki shows floor of 3 x truncated per-hit / cycle; client AltDPS is 1 higher",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "damagePerHit",
+   "level": 18,
+   "wiki": 148.09,
+   "client": 133.5,
+   "note": "wiki table implies AltDPS x 4.992 s / 3 (5 s cycle); the wiki's own Feb 23, 2026 History quotes in-game per-shell displays (L9 46, L15 98, L17 120) that instead match the client cycle AltAttackSpeed 3.5 s + 2 x AltBurstDelay 0.5 s = 4.5 s (AltDPS x 1.5, floored after 16 ms tick rounding). The table is probably stale; client timing looks right",
+   "table": "Burst Mode"
+  },
+  {
+   "field": "townHall",
+   "level": "C1",
+   "wiki": 17,
+   "client": 18,
+   "note": "wiki typo (17) in the burst supercharge table; normal table and client say TH18",
+   "table": "Burst"
+  },
+  {
+   "field": "dps",
+   "level": "C1",
+   "wiki": 91,
+   "client": 92,
+   "note": "burst charge DPS 91 = display of AltDPS 89 + 3 (client bonus applies to both modes)",
+   "table": "Burst"
+  },
+  {
+   "field": "townHall",
+   "level": "C2",
+   "wiki": 17,
+   "client": 18,
+   "note": "wiki typo (17) in the burst supercharge table; normal table and client say TH18",
+   "table": "Burst"
+  },
+  {
+   "field": "dps",
+   "level": "C2",
+   "wiki": 91,
+   "client": 92,
+   "note": "burst charge DPS 91 = display of AltDPS 89 + 3 (client bonus applies to both modes)",
+   "table": "Burst"
+  }
+ ],
+ "progressionMismatches": []
+}

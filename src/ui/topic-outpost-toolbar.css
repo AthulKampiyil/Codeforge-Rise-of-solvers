@@ -1,0 +1,25 @@
+.cf-layout-controls[role="region"] {
+  position: fixed;
+  z-index: 1200;
+  top: max(12px, env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(620px, calc(100vw - 24px));
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 2px solid #7a592d;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #fff8df, #ead6a8);
+  color: #49351e;
+  box-shadow: 0 8px 28px #1d281f66, inset 0 1px #fff9e8;
+  pointer-events: auto;
+}
+.cf-layout-controls[role="region"] h3 { margin: 0 0 5px; font-size: 17px; }
+.cf-layout-controls[role="region"] p { margin: 0 0 9px; line-height: 1.35; }
+.cf-layout-controls[role="region"] .cf-layout-buttons { display: flex; gap: 8px; }
+.cf-layout-controls[role="region"] .cf-layout-buttons .game-btn { min-height: 44px; flex: 1 1 0; }
+@media (max-width: 520px) {
+  .cf-layout-controls[role="region"] { top: auto; bottom: max(12px, env(safe-area-inset-bottom)); width: calc(100vw - 16px); padding: 10px; }
+  .cf-layout-controls[role="region"] .cf-layout-buttons { gap: 6px; }
+  .cf-layout-controls[role="region"] .cf-layout-buttons .game-btn { min-width: 0; padding-inline: 8px; font-size: 13px; }
+}

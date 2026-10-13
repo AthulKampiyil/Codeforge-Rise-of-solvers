@@ -1,0 +1,115 @@
+{
+  "title": "Super Archer",
+  "url": "https://clashofclans.fandom.com/wiki/Super_Archer",
+  "revid": 621780,
+  "clientName": "Super Archer",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Super Archer",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "None",
+    "attackType": "Ranged (Ground & Air)",
+    "housingSpace": 12,
+    "movementSpeed": 24,
+    "attackSpeedSeconds": 1.5,
+    "range": "6 (Target) 12 (Projectile)",
+    "specialAbility": "Sharp Shot",
+    "rangeTiles": 6,
+    "projectileRangeTiles": 12
+  },
+  "levels": [
+    {
+      "level": 8,
+      "dps": 120,
+      "damagePerHit": 180,
+      "hitpoints": 450
+    },
+    {
+      "level": 9,
+      "dps": 132,
+      "damagePerHit": 198,
+      "hitpoints": 510
+    },
+    {
+      "level": 10,
+      "dps": 144,
+      "damagePerHit": 216,
+      "hitpoints": 565
+    },
+    {
+      "level": 11,
+      "dps": 156,
+      "damagePerHit": 234,
+      "hitpoints": 605
+    },
+    {
+      "level": 12,
+      "dps": 162,
+      "damagePerHit": 243,
+      "hitpoints": 645
+    },
+    {
+      "level": 13,
+      "dps": 166,
+      "damagePerHit": 249,
+      "hitpoints": 685
+    },
+    {
+      "level": 14,
+      "dps": 170,
+      "damagePerHit": 255,
+      "hitpoints": 725
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "projectileRangeTiles",
+      "level": null,
+      "wiki": 12,
+      "client": 10,
+      "note": "AttackRange 600 + PenetratingExtraRange 400"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "piercing",
+      "client": "`PenetratingProjectile` TRUE, `PenetratingRadius` 30, `PenetratingExtraRange` 400, `Projectile` magic_archer_projectile"
+    },
+    {
+      "mechanic": "range",
+      "client": "`AttackRange` 600"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`DPS` x 1.5 s, `Hitpoints`, `Speed` 300"
+    }
+  ],
+  "boost": {
+    "wiki": {
+      "baseTroop": "Archer",
+      "minBaseLevel": 8,
+      "townHallRequired": 11,
+      "clanCastleLevelToReceive": 5,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperArcher",
+      "Original": "Archer",
+      "MinOriginalLevel_raw": 7,
+      "minBaseLevel": 8,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_ARCHER_INTRO_TH13",
+      "townHallDerived": 11
+    }
+  }
+}

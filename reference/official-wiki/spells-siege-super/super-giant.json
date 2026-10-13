@@ -1,0 +1,105 @@
+{
+  "title": "Super Giant",
+  "url": "https://clashofclans.fandom.com/wiki/Super_Giant/Home_Village",
+  "revid": 622246,
+  "clientName": "Super Giant",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Super Giant/Home Village",
+  "parentPage": "Super Giant",
+  "parentRevid": 600738,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "Defenses",
+    "attackType": "Melee (Ground Only)",
+    "housingSpace": 10,
+    "movementSpeed": 12,
+    "attackSpeedSeconds": 2,
+    "rangeTiles": 1,
+    "specialAbility": "Wall Buster"
+  },
+  "levels": [
+    {
+      "level": 9,
+      "dps": 130,
+      "damagePerAttack": 260,
+      "damageVsWalls": 1300,
+      "hitpoints": 4000
+    },
+    {
+      "level": 10,
+      "dps": 140,
+      "damagePerAttack": 280,
+      "damageVsWalls": 1400,
+      "hitpoints": 4200
+    },
+    {
+      "level": 11,
+      "dps": 150,
+      "damagePerAttack": 300,
+      "damageVsWalls": 1500,
+      "hitpoints": 4400
+    },
+    {
+      "level": 12,
+      "dps": 160,
+      "damagePerAttack": 320,
+      "damageVsWalls": 1600,
+      "hitpoints": 4600
+    },
+    {
+      "level": 13,
+      "dps": 175,
+      "damagePerAttack": 350,
+      "damageVsWalls": 1750,
+      "hitpoints": 4900
+    },
+    {
+      "level": 14,
+      "dps": 205,
+      "damagePerAttack": 410,
+      "damageVsWalls": 2050,
+      "hitpoints": 5600
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "wall bonus",
+      "client": "`DamageMultiplierTarget` Wall, `DamageMultiplierPercent` 500"
+    },
+    {
+      "mechanic": "targeting",
+      "client": "`PreferedTargetBuildingClass` Defense"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`DPS` x 2 s, `Hitpoints`, `Speed` 150"
+    }
+  ],
+  "boost": {
+    "wiki": {
+      "baseTroop": "Giant",
+      "minBaseLevel": 9,
+      "townHallRequired": 12,
+      "clanCastleLevelToReceive": 6,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperGiant",
+      "Original": "Giant",
+      "MinOriginalLevel_raw": 8,
+      "minBaseLevel": 9,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_GIANT_INTRO_TH13",
+      "townHallDerived": 12
+    }
+  }
+}

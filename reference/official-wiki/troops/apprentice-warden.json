@@ -1,0 +1,158 @@
+{
+ "title": "Apprentice Warden",
+ "page": "Apprentice Warden",
+ "url": "https://clashofclans.fandom.com/wiki/Apprentice_Warden",
+ "revid": 624360,
+ "retrieved": "2026-09-15",
+ "clientName": "Apprentice Warden",
+ "clientVersion": "18.400.21",
+ "category": "dark-troop",
+ "constants": {
+  "housingSpace": 20,
+  "movementSpeedWiki": 20,
+  "internalSpeed": 250,
+  "tilesPerSecond": 2.5,
+  "attackRangeTiles": 5,
+  "attackRangeTilesClient": 5,
+  "attackSeconds": 0.9,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Single Target (Ground & Air)",
+  "targets": "ground+air",
+  "favoriteTarget": "Any",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": true,
+  "underground": false,
+  "unlock": {
+   "building": "Dark Barracks",
+   "level": 10,
+   "townHall": 13
+  },
+  "auraRadiusTiles": 7,
+  "targetGroupsRadiusTilesClient": 5,
+  "targetGroupsRangeTilesClient": 13,
+  "targetGroupsMinWeightClient": 1000,
+  "triggersTraps": true,
+  "healerWeight": 10
+ },
+ "client": {
+  "clientName": "Apprentice Warden",
+  "housingSpace": 20,
+  "internalSpeed": 250,
+  "movementSpeedInGameExact": 20,
+  "movementSpeedInGameRounded": 20,
+  "tilesPerSecond": 2.5,
+  "attackRangeTiles": 5,
+  "attackSeconds": 0.9,
+  "targets": "ground+air",
+  "flying": false,
+  "jumpsWalls": true,
+  "favoriteTarget": "None",
+  "productionBuilding": "Dark Barracks",
+  "barracksLevel": 10,
+  "unlockTownHall": 13,
+  "triggersTraps": true,
+  "healerWeight": 10,
+  "movementOffsetSpeed": 0,
+  "fightWithGroups": true,
+  "auraRadiusTiles": 7,
+  "auraPulseMs": 300,
+  "targetGroupsRadiusTiles": 5,
+  "targetGroupsRangeTiles": 13,
+  "targetGroupsMinWeight": 1000
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 170,
+   "damagePerHit": 153,
+   "auraHpPercent": 20,
+   "hitpoints": 1500,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 185,
+   "damagePerHit": 166.5,
+   "auraHpPercent": 22,
+   "hitpoints": 1650,
+   "researchCost": 90000,
+   "researchSeconds": 518400,
+   "researchTimeText": "6d",
+   "laboratoryLevel": 11
+  },
+  {
+   "level": 3,
+   "dps": 200,
+   "damagePerHit": 180,
+   "auraHpPercent": 24,
+   "hitpoints": 1800,
+   "researchCost": 135000,
+   "researchSeconds": 648000,
+   "researchTimeText": "7d 12h",
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 4,
+   "dps": 215,
+   "damagePerHit": 193.5,
+   "auraHpPercent": 26,
+   "hitpoints": 1950,
+   "researchCost": 160000,
+   "researchSeconds": 691200,
+   "researchTimeText": "8d",
+   "laboratoryLevel": 13
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 1500,
+   "dps": 170,
+   "damagePerHit": 153,
+   "auraHpPercent": 20
+  },
+  {
+   "level": 2,
+   "hitpoints": 1650,
+   "dps": 185,
+   "damagePerHit": 166.5,
+   "researchCost": 90000,
+   "researchSeconds": 518400,
+   "laboratoryLevel": 11,
+   "auraHpPercent": 22
+  },
+  {
+   "level": 3,
+   "hitpoints": 1800,
+   "dps": 200,
+   "damagePerHit": 180,
+   "researchCost": 135000,
+   "researchSeconds": 648000,
+   "laboratoryLevel": 12,
+   "auraHpPercent": 24
+  },
+  {
+   "level": 4,
+   "hitpoints": 1950,
+   "dps": 215,
+   "damagePerHit": 193.5,
+   "researchCost": 160000,
+   "researchSeconds": 691200,
+   "laboratoryLevel": 13,
+   "auraHpPercent": 26
+  }
+ ],
+ "comparison": {
+  "checked": 34,
+  "matched": 34
+ },
+ "mismatches": [],
+ "ambiguities": []
+}

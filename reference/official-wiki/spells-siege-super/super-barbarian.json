@@ -1,0 +1,109 @@
+{
+  "title": "Super Barbarian",
+  "url": "https://clashofclans.fandom.com/wiki/Super_Barbarian/Home_Village",
+  "revid": 622930,
+  "clientName": "Super Barbarian",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Super Barbarian/Home Village",
+  "parentPage": "Super Barbarian",
+  "parentRevid": 588088,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "None",
+    "attackType": "Melee (Ground Only)",
+    "housingSpace": 5,
+    "movementSpeed": 20,
+    "attackSpeedSeconds": 0.8,
+    "rangeTiles": 0.6,
+    "specialAbility": "Rage",
+    "rageSpeedIncrease": 16,
+    "rageDamageIncreasePercent": 70
+  },
+  "levels": [
+    {
+      "level": 8,
+      "dps": 180,
+      "damagePerAttack": 144,
+      "hitpoints": 1000
+    },
+    {
+      "level": 9,
+      "dps": 200,
+      "damagePerAttack": 160,
+      "hitpoints": 1100
+    },
+    {
+      "level": 10,
+      "dps": 220,
+      "damagePerAttack": 176,
+      "hitpoints": 1200
+    },
+    {
+      "level": 11,
+      "dps": 240,
+      "damagePerAttack": 192,
+      "hitpoints": 1300
+    },
+    {
+      "level": 12,
+      "dps": 250,
+      "damagePerAttack": 200,
+      "hitpoints": 1350
+    },
+    {
+      "level": 13,
+      "dps": 270,
+      "damagePerAttack": 216,
+      "hitpoints": 1450
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "rageSpeedIncrease",
+      "level": null,
+      "wiki": 16,
+      "client": 150,
+      "note": "Super Barbarian Ability.SpeedBoost (unit unclear; TroopRage.SpeedBoost = 16)"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "rage",
+      "client": "`SpecialAbilities` 'Super Barbarian Ability': `BoostDamagePercentage` 70, `SpeedBoost` 150, `DeactivateAfterTime` 8000"
+    },
+    {
+      "mechanic": "legacy rage row",
+      "client": "spells `TroopRage` (`SpeedBoost` 16, `DamageBoostPercent` 70) matches the wiki's +16 / +70% exactly"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`DPS` x `AttackSpeed` 800, `Hitpoints`, `Speed` 250, `AttackRange` 60, `VisualLevel` = base Barbarian level (5..13 present)"
+    }
+  ],
+  "boost": {
+    "wiki": {
+      "baseTroop": "Barbarian",
+      "minBaseLevel": 8,
+      "townHallRequired": 11,
+      "clanCastleLevelToReceive": 5,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperBarbarian",
+      "Original": "Barbarian",
+      "MinOriginalLevel_raw": 7,
+      "minBaseLevel": 8,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_BARB_INTRO_TH13",
+      "townHallDerived": 11
+    }
+  }
+}

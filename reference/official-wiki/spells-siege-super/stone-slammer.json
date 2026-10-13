@@ -1,0 +1,120 @@
+{
+  "title": "Stone Slammer",
+  "url": "https://clashofclans.fandom.com/wiki/Stone_Slammer",
+  "revid": 624370,
+  "clientName": "Stone Slammer",
+  "category": "siege-machine",
+  "retrieved": "2026-09-15",
+  "contentPage": "Stone Slammer",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "Defenses",
+    "attackType": "Area Splash 1 and 3 tile Radius (Ground Only)",
+    "movementSpeed": 16,
+    "attackSpeedSeconds": 2.5,
+    "workshopLevel": 3,
+    "hitbox2WikiUncertainLevels": [
+      6
+    ]
+  },
+  "levels": [
+    {
+      "level": 1,
+      "dps": 400,
+      "hitbox1Damage": 1000,
+      "hitbox2MinDamage": 100,
+      "hitbox2MaxDamage": 200,
+      "deathDamage": 500,
+      "hitpoints": 5600,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "dps": 500,
+      "hitbox1Damage": 1250,
+      "hitbox2MinDamage": 150,
+      "hitbox2MaxDamage": 300,
+      "deathDamage": 500,
+      "hitpoints": 5900,
+      "researchCost": 2500000,
+      "researchTimeHours": 48,
+      "laboratoryLevel": 10
+    },
+    {
+      "level": 3,
+      "dps": 600,
+      "hitbox1Damage": 1500,
+      "hitbox2MinDamage": 200,
+      "hitbox2MaxDamage": 400,
+      "deathDamage": 500,
+      "hitpoints": 6200,
+      "researchCost": 3500000,
+      "researchTimeHours": 72,
+      "laboratoryLevel": 10
+    },
+    {
+      "level": 4,
+      "dps": 700,
+      "hitbox1Damage": 1750,
+      "hitbox2MinDamage": 250,
+      "hitbox2MaxDamage": 500,
+      "deathDamage": 500,
+      "hitpoints": 6500,
+      "researchCost": 6500000,
+      "researchTimeHours": 168,
+      "laboratoryLevel": 11
+    },
+    {
+      "level": 5,
+      "dps": 750,
+      "hitbox1Damage": 1875,
+      "hitbox2MinDamage": 300,
+      "hitbox2MaxDamage": 600,
+      "deathDamage": 500,
+      "hitpoints": 6800,
+      "researchCost": 10000000,
+      "researchTimeHours": 216,
+      "laboratoryLevel": 13
+    },
+    {
+      "level": 6,
+      "dps": 820,
+      "hitbox1Damage": 2050,
+      "hitbox2MinDamage": 350,
+      "hitbox2MaxDamage": 700,
+      "deathDamage": 500,
+      "hitpoints": 7200,
+      "researchCost": 26000000,
+      "researchTimeHours": 324,
+      "laboratoryLevel": 16
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "hitbox 1",
+      "client": "`DPS` x `AttackSpeed` 2500 ms, `DamageRadius` 100"
+    },
+    {
+      "mechanic": "hitbox 2",
+      "client": "`Damage2` (max) / `Damage2Min` (min), `Damage2Radius` 300, `Damage2FalloffStart` 200, `Damage2FalloffEnd` 300"
+    },
+    {
+      "mechanic": "wall bonus",
+      "client": "`DamageMultiplierTarget` Wall, `DamageMultiplierPercent` 2500"
+    },
+    {
+      "mechanic": "death",
+      "client": "`DieDamage` 500, `DieDamageRadius` 300, `DieDamageDelay` 416"
+    },
+    {
+      "mechanic": "targeting",
+      "client": "`PreferedTargetBuildingClass` Defense, `NewTargetAttackDelay` 2250, `IsFlying` TRUE, `AirTargets` FALSE"
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "globalId": 1000072,
+  "size": 2,
+  "hero": {
+    "rage": 50,
+    "speed": 50
+  },
+  "levels": [
+    {
+      "level": 1,
+      "townhall": 15,
+      "hp": 2500,
+      "body": "spell_tower_lvl1",
+      "base": "dark_tower_base",
+      "ruin": "destroyedBuilding_2l_pit_rockwood",
+      "construction": "generic_construction_state2",
+      "buildAnim": "air_mortar_upg",
+      "unlockWeapon": "SpellTowerRage",
+      "destroyEffect": "Building Destroyed",
+      "hitEffect": "Generic Hit"
+    },
+    {
+      "level": 2,
+      "townhall": 15,
+      "hp": 2800,
+      "body": "spell_tower_lvl2_rage",
+      "base": "dark_tower_base",
+      "ruin": "destroyedBuilding_2l_pit_rockwood",
+      "construction": "generic_construction_state2",
+      "buildAnim": "air_mortar_upg",
+      "unlockWeapon": "SpellTowerPoison",
+      "destroyEffect": "Building Destroyed",
+      "hitEffect": "Generic Hit"
+    },
+    {
+      "level": 3,
+      "townhall": 15,
+      "hp": 3100,
+      "body": "spell_tower_lvl3_rage",
+      "base": "dark_tower_base",
+      "ruin": "destroyedBuilding_2l_pit_rockwood",
+      "construction": "generic_construction_state2",
+      "buildAnim": "air_mortar_upg",
+      "unlockWeapon": "SpellTowerInvisibility",
+      "destroyEffect": "Building Destroyed",
+      "hitEffect": "Generic Hit"
+    },
+    {
+      "level": 4,
+      "townhall": 17,
+      "hp": 3200,
+      "body": "spell_tower_lvl4_earthquake",
+      "base": "dark_tower_base",
+      "ruin": "destroyedBuilding_2l_pit_rockwood",
+      "construction": "generic_construction_state2",
+      "buildAnim": "air_mortar_upg",
+      "unlockWeapon": "SpellTowerEarthquake",
+      "destroyEffect": "Building Destroyed",
+      "hitEffect": "Generic Hit"
+    }
+  ],
+  "weapons": {
+    "rage": {
+      "name": "SpellTowerRage",
+      "globalId": 49000009,
+      "range": 900,
+      "stateLabels": {
+        "activating_start": 0,
+        "activating_end": 1,
+        "idle": 2,
+        "attack_start": 3,
+        "attack_end": 32,
+        "load_start": 33,
+        "load_end": 1235
+      },
+      "attackSpeedMs": 70000,
+      "coolDownOverrideMs": 68800,
+      "airTargets": true,
+      "groundTargets": true,
+      "selfAsAoeCenter": true,
+      "customTargetHitBuildingInRange": false,
+      "copyOwnerUpgradeLevel": true,
+      "attackCenterOnDeath": true,
+      "highlight": [
+        230,
+        0,
+        230
+      ],
+      "exports": [
+        "spell_tower_lvl1_rage",
+        "spell_tower_lvl2_rage",
+        "spell_tower_lvl3_rage",
+        "spell_tower_lvl4_rage"
+      ],
+      "projectile": {
+        "name": "SpellTowerRageProjectile",
+        "export": "spell_bottle_rage",
+        "speed": 500,
+        "startHeight": 170,
+        "ballistic": true,
+        "ballisticHeight": 300,
+        "trajectoryStyle": 4,
+        "fixedTravelTimeMs": 800,
+        "tracksTarget": false,
+        "useTopLayer": true,
+        "particleEmitter": "rage_smokeRing5",
+        "destroyedEffect": "Elixir Storage Destroyed"
+      },
+      "spell": {
+        "name": "Spell Tower Rage",
+        "globalId": 26000046,
+        "radius": 500,
+        "numberOfHits": 60,
+        "timeBetweenHitsMs": 300,
+        "hitTimeMs": 400,
+        "chargingTimeMs": 300,
+        "deployTimeMs": 0,
+        "randomRadius": 400,
+        "randomRadiusAffectsOnlyGfx": true,
+        "boostTimeMs": 1000,
+        "speedBoost": 30,
+        "speedBoost2": 15,
+        "damageBoostPercent": 60,
+        "buildingDamageBoostPercent": 60,
+        "attackSpeedBoost": 0,
+        "poisonDps": 0,
+        "poisonIncreaseSlowly": false,
+        "poisonAffectAir": false,
+        "boostLinkedToPoison": false,
+        "boostDefenders": false,
+        "heroDamageMultiplier": 100,
+        "invisibilityTimeMs": 0,
+        "immunities": [
+          "ImmunitySiegeMachines"
+        ],
+        "deployEffect": "Rage deploy ST",
+        "deployEffect2": "Rage deploy top"
+      }
+    },
+    "poison": {
+      "name": "SpellTowerPoison",
+      "globalId": 49000008,
+      "range": 900,
+      "stateLabels": {
+        "activating_start": 0,
+        "activating_end": 1,
+        "idle": 2,
+        "attack_start": 3,
+        "attack_end": 32,
+        "load_start": 33,
+        "load_end": 1473
+      },
+      "attackSpeedMs": 70000,
+      "coolDownOverrideMs": 68800,
+      "airTargets": true,
+      "groundTargets": true,
+      "selfAsAoeCenter": false,
+      "customTargetHitBuildingInRange": false,
+      "copyOwnerUpgradeLevel": true,
+      "attackCenterOnDeath": true,
+      "highlight": [
+        -1,
+        -1,
+        -1
+      ],
+      "exports": [
+        "spell_tower_lvl1_poison",
+        "spell_tower_lvl2_poison",
+        "spell_tower_lvl3_poison",
+        "spell_tower_lvl4_poison"
+      ],
+      "projectile": {
+        "name": "SpellTowerPoisonProjectile",
+        "export": "spell_bottle_poison",
+        "speed": 100,
+        "startHeight": 146,
+        "ballistic": true,
+        "ballisticHeight": 300,
+        "trajectoryStyle": 4,
+        "fixedTravelTimeMs": 800,
+        "tracksTarget": false,
+        "useTopLayer": true,
+        "particleEmitter": "Toxic_skull",
+        "destroyedEffect": "Elixir Storage Destroyed"
+      },
+      "spell": {
+        "name": "Spell Tower Poison",
+        "globalId": 26000044,
+        "radius": 500,
+        "numberOfHits": 30,
+        "timeBetweenHitsMs": 400,
+        "hitTimeMs": 0,
+        "chargingTimeMs": 0,
+        "deployTimeMs": 0,
+        "randomRadius": 0,
+        "randomRadiusAffectsOnlyGfx": true,
+        "boostTimeMs": 500,
+        "speedBoost": -35,
+        "speedBoost2": -35,
+        "damageBoostPercent": 0,
+        "buildingDamageBoostPercent": 0,
+        "attackSpeedBoost": -25,
+        "poisonDps": 60,
+        "poisonIncreaseSlowly": false,
+        "poisonAffectAir": true,
+        "boostLinkedToPoison": true,
+        "boostDefenders": true,
+        "heroDamageMultiplier": 20,
+        "invisibilityTimeMs": 0,
+        "immunities": [
+          "ImmunityOtherBuildings",
+          "ImmunitySiegeMachines",
+          "ImmunityStorages",
+          "ImmunityTH_CC",
+          "ImmunityWalls"
+        ],
+        "deployEffect": "Toxic deploy ground halloween ST",
+        "deployEffect2": "Toxic deploy halloween ST"
+      }
+    },
+    "invisibility": {
+      "name": "SpellTowerInvisibility",
+      "globalId": 49000007,
+      "range": 450,
+      "stateLabels": {
+        "activating_start": 0,
+        "activating_end": 1,
+        "idle": 2,
+        "attack_start": 3,
+        "attack_end": 32,
+        "load_start": 33,
+        "load_end": 993
+      },
+      "attackSpeedMs": 50000,
+      "coolDownOverrideMs": 48800,
+      "airTargets": true,
+      "groundTargets": true,
+      "selfAsAoeCenter": true,
+      "customTargetHitBuildingInRange": true,
+      "copyOwnerUpgradeLevel": true,
+      "attackCenterOnDeath": true,
+      "highlight": [
+        0,
+        210,
+        180
+      ],
+      "exports": [
+        "spell_tower_lvl1_invisibility",
+        "spell_tower_lvl2_invisibility",
+        "spell_tower_lvl3_invisibility",
+        "spell_tower_lvl4_invisibility"
+      ],
+      "projectile": {
+        "name": "SpellTowerInvisibilityProjectile",
+        "export": "spell_bottle_invisibility",
+        "speed": 100,
+        "startHeight": 110,
+        "ballistic": true,
+        "ballisticHeight": 300,
+        "trajectoryStyle": 4,
+        "fixedTravelTimeMs": 800,
+        "tracksTarget": false,
+        "useTopLayer": false,
+        "particleEmitter": null,
+        "destroyedEffect": "Elixir Storage Destroyed"
+      },
+      "spell": {
+        "name": "Spell Tower Invisibility",
+        "globalId": 26000048,
+        "radius": 450,
+        "numberOfHits": 18,
+        "timeBetweenHitsMs": 250,
+        "hitTimeMs": 400,
+        "chargingTimeMs": 300,
+        "deployTimeMs": 0,
+        "randomRadius": 200,
+        "randomRadiusAffectsOnlyGfx": true,
+        "boostTimeMs": 0,
+        "speedBoost": 0,
+        "speedBoost2": 0,
+        "damageBoostPercent": 0,
+        "buildingDamageBoostPercent": 0,
+        "attackSpeedBoost": 0,
+        "poisonDps": 0,
+        "poisonIncreaseSlowly": false,
+        "poisonAffectAir": false,
+        "boostLinkedToPoison": false,
+        "boostDefenders": false,
+        "heroDamageMultiplier": 100,
+        "invisibilityTimeMs": 600,
+        "immunities": [
+          "ImmunitySiegeMachines",
+          "ImmunityWalls"
+        ],
+        "deployEffect": "Invisibility ST",
+        "deployEffect2": null
+      }
+    }
+  }
+}

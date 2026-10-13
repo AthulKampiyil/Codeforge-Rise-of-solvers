@@ -1,0 +1,339 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "logic/villager_apprentices.csv": "eb955bf0a5d0a7ecd6535d746d99111ae77b4ffc8536bea0a17c7855b925cff8",
+    "logic/globals.csv": "16210fc28bfb86d00ea04d581a99fe98e128172017b2d4f637b8848c0cf20087",
+    "localization/texts.csv": "affdf43926df044cb3c09d833b07365aa01ea99985771afa5fa0dd926f36c569"
+  },
+  "cooldownSeconds": 82800,
+  "helpers": [
+    {
+      "id": "builder",
+      "name": "Builder's Apprentice",
+      "info": "Builder's Apprentice helps Builders complete upgrades faster. Assign him once a day and level him up to work even faster!",
+      "type": "BUILDER",
+      "costResource": "Diamonds",
+      "levels": [
+        {
+          "level": 1,
+          "townHall": 10,
+          "multiplier": 1,
+          "seconds": 3600,
+          "cost": 500
+        },
+        {
+          "level": 2,
+          "townHall": 10,
+          "multiplier": 2,
+          "seconds": 3600,
+          "cost": 500
+        },
+        {
+          "level": 3,
+          "townHall": 11,
+          "multiplier": 3,
+          "seconds": 3600,
+          "cost": 750
+        },
+        {
+          "level": 4,
+          "townHall": 11,
+          "multiplier": 4,
+          "seconds": 3600,
+          "cost": 750
+        },
+        {
+          "level": 5,
+          "townHall": 12,
+          "multiplier": 5,
+          "seconds": 3600,
+          "cost": 1000
+        },
+        {
+          "level": 6,
+          "townHall": 12,
+          "multiplier": 6,
+          "seconds": 3600,
+          "cost": 1000
+        },
+        {
+          "level": 7,
+          "townHall": 13,
+          "multiplier": 7,
+          "seconds": 3600,
+          "cost": 1000
+        },
+        {
+          "level": 8,
+          "townHall": 14,
+          "multiplier": 8,
+          "seconds": 3600,
+          "cost": 1000
+        }
+      ]
+    },
+    {
+      "id": "lab",
+      "name": "Lab Assistant",
+      "info": "Lab Assistant helps speed up research. Assign him once a day and level him up to work even faster!",
+      "type": "RESEARCHER",
+      "costResource": "Diamonds",
+      "levels": [
+        {
+          "level": 1,
+          "townHall": 9,
+          "multiplier": 1,
+          "seconds": 3600,
+          "cost": 0
+        },
+        {
+          "level": 2,
+          "townHall": 10,
+          "multiplier": 2,
+          "seconds": 3600,
+          "cost": 500
+        },
+        {
+          "level": 3,
+          "townHall": 10,
+          "multiplier": 3,
+          "seconds": 3600,
+          "cost": 500
+        },
+        {
+          "level": 4,
+          "townHall": 11,
+          "multiplier": 4,
+          "seconds": 3600,
+          "cost": 500
+        },
+        {
+          "level": 5,
+          "townHall": 12,
+          "multiplier": 5,
+          "seconds": 3600,
+          "cost": 750
+        },
+        {
+          "level": 6,
+          "townHall": 12,
+          "multiplier": 6,
+          "seconds": 3600,
+          "cost": 750
+        },
+        {
+          "level": 7,
+          "townHall": 13,
+          "multiplier": 7,
+          "seconds": 3600,
+          "cost": 750
+        },
+        {
+          "level": 8,
+          "townHall": 13,
+          "multiplier": 8,
+          "seconds": 3600,
+          "cost": 750
+        },
+        {
+          "level": 9,
+          "townHall": 14,
+          "multiplier": 9,
+          "seconds": 3600,
+          "cost": 1000
+        },
+        {
+          "level": 10,
+          "townHall": 14,
+          "multiplier": 10,
+          "seconds": 3600,
+          "cost": 1000
+        },
+        {
+          "level": 11,
+          "townHall": 15,
+          "multiplier": 11,
+          "seconds": 3600,
+          "cost": 1000
+        },
+        {
+          "level": 12,
+          "townHall": 16,
+          "multiplier": 12,
+          "seconds": 3600,
+          "cost": 1000
+        }
+      ]
+    },
+    {
+      "id": "alchemist",
+      "name": "Alchemist",
+      "info": "Alchemist converts resources into different types once a day. Level her up to increase her effectiveness!",
+      "type": "ALCHEMIST",
+      "costResource": "Diamonds",
+      "levels": [
+        {
+          "level": 1,
+          "townHall": 11,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 100,
+          "capPercent": 100,
+          "ratePercent": 101
+        },
+        {
+          "level": 2,
+          "townHall": 12,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 250,
+          "capPercent": 150,
+          "ratePercent": 102
+        },
+        {
+          "level": 3,
+          "townHall": 13,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 500,
+          "capPercent": 200,
+          "ratePercent": 104
+        },
+        {
+          "level": 4,
+          "townHall": 14,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 1000,
+          "capPercent": 300,
+          "ratePercent": 105
+        },
+        {
+          "level": 5,
+          "townHall": 15,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 1000,
+          "capPercent": 400,
+          "ratePercent": 107
+        },
+        {
+          "level": 6,
+          "townHall": 16,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 1500,
+          "capPercent": 500,
+          "ratePercent": 109
+        },
+        {
+          "level": 7,
+          "townHall": 17,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 1500,
+          "capPercent": 700,
+          "ratePercent": 110
+        }
+      ],
+      "conversion": {
+        "resources": [
+          "Gold",
+          "Elixir",
+          "DarkElixir"
+        ],
+        "caps": [
+          1500000,
+          1500000,
+          10000
+        ]
+      }
+    },
+    {
+      "id": "prospector",
+      "name": "Prospector",
+      "info": "Prospector",
+      "type": "PROSPECTOR",
+      "costResource": "Diamonds",
+      "levels": [
+        {
+          "level": 1,
+          "townHall": 10,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 100,
+          "capPercent": 100,
+          "ratePercent": 100
+        },
+        {
+          "level": 2,
+          "townHall": 10,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 250,
+          "capPercent": 100,
+          "ratePercent": 100
+        },
+        {
+          "level": 3,
+          "townHall": 10,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 500,
+          "capPercent": 100,
+          "ratePercent": 100
+        },
+        {
+          "level": 4,
+          "townHall": 10,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 1000,
+          "capPercent": 100,
+          "ratePercent": 100
+        },
+        {
+          "level": 5,
+          "townHall": 10,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 1000,
+          "capPercent": 100,
+          "ratePercent": 100
+        },
+        {
+          "level": 6,
+          "townHall": 10,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 1500,
+          "capPercent": 100,
+          "ratePercent": 100
+        },
+        {
+          "level": 7,
+          "townHall": 10,
+          "multiplier": 0,
+          "seconds": 4,
+          "cost": 1500,
+          "capPercent": 100,
+          "ratePercent": 100
+        }
+      ],
+      "conversion": {
+        "resources": [
+          "CommonOre",
+          "RareOre",
+          "EpicOre"
+        ],
+        "caps": [
+          2000,
+          120,
+          2
+        ]
+      }
+    }
+  ]
+}

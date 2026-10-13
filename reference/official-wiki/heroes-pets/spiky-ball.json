@@ -1,0 +1,412 @@
+{
+ "title": "Spiky Ball",
+ "url": "https://clashofclans.fandom.com/wiki/Spiky_Ball",
+ "revid": 621313,
+ "retrieved": "2026-09-15",
+ "clientName": "Spiky Ball",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Barbarian King",
+ "summary": "King Epic active item: kicks a ricocheting ball that hits 2 → 8 different buildings for 1,000 → 3,250 each; passive DPS and HP.",
+ "constants": {
+  "wiki": {
+   "User": "Barbarian King",
+   "Ability Type": "Active",
+   "Rarity": "Epic",
+   "Unlock Requirement": "Buy in Clash with Haaland event for 3,100 Golden Boot Medal; Buy in Snake Festival event for 3,100 Snake Medal; Buy in Splash Bash event for 3,100 Splash Medal; Buy in Meltdown Mayhem event for 3,100 Ember Medal; But in Equipment Blast event for 3,100 Relic Medal; or purchasable from the Trader for 1,500 Gem"
+  },
+  "client": {
+   "Rarity": "EPIC",
+   "AllowedCharacters": "Barbarian King;",
+   "MainAbilities": "FootballBounce",
+   "Claimable": "TRUE",
+   "levelRows": 27,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    10
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "projectileDamagePerTarget": {
+   "wikiHeader": "Ability Attributes / Projectile Damage (per Target)",
+   "unit": "damage points"
+  },
+  "numberOfTargets": {
+   "wikiHeader": "Ability Attributes / Number of Targets",
+   "unit": "count/points"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boosts / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostStarryOre": {
+   "wikiHeader": "Upgrade Cost / Starry Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "projectileDamagePerTarget": 1000,
+   "numberOfTargets": 2,
+   "damagePerSecondIncrease": 35,
+   "hitpointIncrease": 365,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "projectileDamagePerTarget": 1000,
+   "numberOfTargets": 2,
+   "damagePerSecondIncrease": 38,
+   "hitpointIncrease": 478,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "projectileDamagePerTarget": 1250,
+   "numberOfTargets": 3,
+   "damagePerSecondIncrease": 42,
+   "hitpointIncrease": 590,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "projectileDamagePerTarget": 1250,
+   "numberOfTargets": 3,
+   "damagePerSecondIncrease": 45,
+   "hitpointIncrease": 703,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "projectileDamagePerTarget": 1250,
+   "numberOfTargets": 3,
+   "damagePerSecondIncrease": 49,
+   "hitpointIncrease": 815,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "projectileDamagePerTarget": 1500,
+   "numberOfTargets": 4,
+   "damagePerSecondIncrease": 52,
+   "hitpointIncrease": 928,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "projectileDamagePerTarget": 1500,
+   "numberOfTargets": 4,
+   "damagePerSecondIncrease": 55,
+   "hitpointIncrease": 1040,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "projectileDamagePerTarget": 1500,
+   "numberOfTargets": 4,
+   "damagePerSecondIncrease": 58,
+   "hitpointIncrease": 1153,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "projectileDamagePerTarget": 1750,
+   "numberOfTargets": 5,
+   "damagePerSecondIncrease": 65,
+   "hitpointIncrease": 1265,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "upgradeCostStarryOre": 10,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "projectileDamagePerTarget": 1750,
+   "numberOfTargets": 5,
+   "damagePerSecondIncrease": 76,
+   "hitpointIncrease": 1378,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 11,
+   "projectileDamagePerTarget": 1750,
+   "numberOfTargets": 5,
+   "damagePerSecondIncrease": 88,
+   "hitpointIncrease": 1490,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 12,
+   "projectileDamagePerTarget": 2000,
+   "numberOfTargets": 6,
+   "damagePerSecondIncrease": 101,
+   "hitpointIncrease": 1603,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "upgradeCostStarryOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 13,
+   "projectileDamagePerTarget": 2000,
+   "numberOfTargets": 6,
+   "damagePerSecondIncrease": 112,
+   "hitpointIncrease": 1715,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 14,
+   "projectileDamagePerTarget": 2000,
+   "numberOfTargets": 6,
+   "damagePerSecondIncrease": 124,
+   "hitpointIncrease": 1828,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 15,
+   "projectileDamagePerTarget": 2250,
+   "numberOfTargets": 6,
+   "damagePerSecondIncrease": 135,
+   "hitpointIncrease": 1940,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 30,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 16,
+   "projectileDamagePerTarget": 2250,
+   "numberOfTargets": 6,
+   "damagePerSecondIncrease": 148,
+   "hitpointIncrease": 2053,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 17,
+   "projectileDamagePerTarget": 2250,
+   "numberOfTargets": 6,
+   "damagePerSecondIncrease": 159,
+   "hitpointIncrease": 2165,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 18,
+   "projectileDamagePerTarget": 2500,
+   "numberOfTargets": 7,
+   "damagePerSecondIncrease": 171,
+   "hitpointIncrease": 2278,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 50,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 19,
+   "projectileDamagePerTarget": 2500,
+   "numberOfTargets": 7,
+   "damagePerSecondIncrease": 176,
+   "hitpointIncrease": 2390,
+   "upgradeCostShinyOre": 2800,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 20,
+   "projectileDamagePerTarget": 2500,
+   "numberOfTargets": 7,
+   "damagePerSecondIncrease": 182,
+   "hitpointIncrease": 2503,
+   "upgradeCostShinyOre": 2900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 21,
+   "projectileDamagePerTarget": 2750,
+   "numberOfTargets": 7,
+   "damagePerSecondIncrease": 188,
+   "hitpointIncrease": 2615,
+   "upgradeCostShinyOre": 3000,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 100,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 22,
+   "projectileDamagePerTarget": 2750,
+   "numberOfTargets": 7,
+   "damagePerSecondIncrease": 194,
+   "hitpointIncrease": 2728,
+   "upgradeCostShinyOre": 3100,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 23,
+   "projectileDamagePerTarget": 2750,
+   "numberOfTargets": 7,
+   "damagePerSecondIncrease": 199,
+   "hitpointIncrease": 2840,
+   "upgradeCostShinyOre": 3200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 24,
+   "projectileDamagePerTarget": 3000,
+   "numberOfTargets": 7,
+   "damagePerSecondIncrease": 205,
+   "hitpointIncrease": 2953,
+   "upgradeCostShinyOre": 3300,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 120,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 25,
+   "projectileDamagePerTarget": 3000,
+   "numberOfTargets": 7,
+   "damagePerSecondIncrease": 211,
+   "hitpointIncrease": 3065,
+   "upgradeCostShinyOre": 3400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 26,
+   "projectileDamagePerTarget": 3000,
+   "numberOfTargets": 7,
+   "damagePerSecondIncrease": 217,
+   "hitpointIncrease": 3178,
+   "upgradeCostShinyOre": 3500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 27,
+   "projectileDamagePerTarget": 3250,
+   "numberOfTargets": 8,
+   "damagePerSecondIncrease": 222,
+   "hitpointIncrease": 3290,
+   "upgradeCostShinyOre": 3600,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 150,
+   "blacksmithLevelRequired": 9
+  }
+ ],
+ "subpages": [],
+ "mismatches": [],
+ "clientColumns": [
+  "MainAbilities:special_abilities[FootballBounce].Damage",
+  "character_items.DPS",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

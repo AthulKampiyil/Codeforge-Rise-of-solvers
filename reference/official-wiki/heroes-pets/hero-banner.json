@@ -1,0 +1,34 @@
+{
+ "title": "Hero Banner",
+ "url": "https://clashofclans.fandom.com/wiki/Hero_Banner",
+ "revid": 622708,
+ "retrieved": "2026-09-15",
+ "clientName": null,
+ "clientTable": null,
+ "category": "building",
+ "summary": "2x2 untargetable defensive post: each banner holds one defending hero; banners come from Hero Hall slots (1/2/3/4 at TH7/9/11/13).",
+ "constants": {
+  "wiki": {},
+  "client": {},
+  "notes": {
+   "numberAvailable": {
+    "TH7": 1,
+    "TH9": 2,
+    "TH11": 3,
+    "TH13": 4
+   },
+   "size": "2x2"
+  }
+ },
+ "fields": {},
+ "levels": [],
+ "mismatches": [
+  {
+   "field": "deploymentMargin",
+   "level": null,
+   "wiki": "blocks deployment one tile around the banner",
+   "client": "hero_flags.EmptyHeroFlag PassableSubtilesAtEdge 2",
+   "note": "margin semantics not directly encoded; verify in engine"
+  }
+ ]
+}

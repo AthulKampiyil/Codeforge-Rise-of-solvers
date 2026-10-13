@@ -1,0 +1,23 @@
+{
+ "title": "Traps/Home Village",
+ "url": "https://clashofclans.fandom.com/wiki/Traps/Home_Village",
+ "revid": 622056,
+ "retrieved": "2026-09-15",
+ "category": "mechanic",
+ "clientName": "(all trap rows)",
+ "clientTable": "traps.csv",
+ "levels": [],
+ "constants": {
+  "rearmCost": 0,
+  "alwaysArmedModes": [
+   "Clan War",
+   "Legend League",
+   "Friendly Battle"
+  ],
+  "countsTowardDestruction": false,
+  "hasRedZone": false,
+  "builderToPlace": false,
+  "builderToUpgrade": true
+ },
+ "mismatches": []
+}

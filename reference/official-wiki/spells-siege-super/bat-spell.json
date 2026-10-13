@@ -1,0 +1,136 @@
+{
+  "title": "Bat Spell",
+  "url": "https://clashofclans.fandom.com/wiki/Bat_Spell",
+  "revid": 623006,
+  "clientName": "Bat Spell",
+  "category": "dark-spell",
+  "retrieved": "2026-09-15",
+  "contentPage": "Bat Spell",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "spells",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "radiusTiles": 3.5,
+    "housingSpace": 1,
+    "targets": "Defenses",
+    "darkSpellFactoryLevel": 5
+  },
+  "levels": [
+    {
+      "level": 1,
+      "batsGenerated": 7,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "batsGenerated": 9,
+      "researchCost": 13000,
+      "researchTimeHours": 18,
+      "laboratoryLevel": 8
+    },
+    {
+      "level": 3,
+      "batsGenerated": 11,
+      "researchCost": 25500,
+      "researchTimeHours": 36,
+      "laboratoryLevel": 8
+    },
+    {
+      "level": 4,
+      "batsGenerated": 16,
+      "researchCost": 35000,
+      "researchTimeHours": 54,
+      "laboratoryLevel": 9
+    },
+    {
+      "level": 5,
+      "batsGenerated": 21,
+      "researchCost": 47500,
+      "researchTimeHours": 96,
+      "laboratoryLevel": 10
+    },
+    {
+      "level": 6,
+      "batsGenerated": 22,
+      "researchCost": 140000,
+      "researchTimeHours": 168,
+      "laboratoryLevel": 13
+    },
+    {
+      "level": 7,
+      "batsGenerated": 23,
+      "researchCost": 220000,
+      "researchTimeHours": 204,
+      "laboratoryLevel": 15
+    },
+    {
+      "level": 8,
+      "batsGenerated": 25,
+      "researchCost": 300000,
+      "researchTimeHours": 312,
+      "laboratoryLevel": 16
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "radiusTiles",
+      "level": null,
+      "wiki": 3.5,
+      "client": 2.25,
+      "note": "client Radius 225"
+    },
+    {
+      "field": "bat.damageVsResourcesMultiplier",
+      "level": null,
+      "wiki": 0.4,
+      "client": 0.15,
+      "note": "Spell Bat DamageReductionToStorages 85; wiki strategy text also says 15%"
+    },
+    {
+      "field": "bat.rangeTiles",
+      "level": null,
+      "wiki": 0.8,
+      "client": 0.3,
+      "note": "Spell Bat AttackRange 30"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "count",
+      "client": "`UnitsToSpawn` (7..25)"
+    },
+    {
+      "mechanic": "spawn schedule",
+      "client": "`SpawnFirstGroupSize` = 2 immediately, remaining over `SpawnDuration` (3000..13800 ms)"
+    },
+    {
+      "mechanic": "unit",
+      "client": "`SummonTroop` 'Spell Bat' (`Speed` 700, `AttackSpeed` 2000, `DPS` 30, `Hitpoints` 20, `AttackRange` 30, `PreferedTargetBuildingClass` Defense)"
+    },
+    {
+      "mechanic": "resource damage",
+      "client": "'Spell Bat'.`DamageReductionToStorages` = 85 (x0.15)"
+    },
+    {
+      "mechanic": "area",
+      "client": "`Radius` 225, `RandomRadius` 200"
+    }
+  ],
+  "extraTables": {
+    "bat": [
+      {
+        "preferredTarget": "Defenses",
+        "attackType": "Air",
+        "movementSpeed": 56,
+        "attackSpeedSeconds": 2,
+        "rangeTiles": 0.8,
+        "dps": 30,
+        "damageVsResourcesMultiplier": 0.4,
+        "hitpoints": 20
+      }
+    ]
+  }
+}

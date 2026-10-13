@@ -1,0 +1,278 @@
+{
+ "title": "Goblin",
+ "page": "Goblin",
+ "url": "https://clashofclans.fandom.com/wiki/Goblin",
+ "revid": 625104,
+ "retrieved": "2026-09-15",
+ "clientName": "Goblin",
+ "clientVersion": "18.400.21",
+ "category": "elixir-troop",
+ "constants": {
+  "housingSpace": 1,
+  "movementSpeedWiki": 32,
+  "internalSpeed": 400,
+  "tilesPerSecond": 4,
+  "attackRangeTiles": 0.4,
+  "attackRangeTilesClient": 0.4,
+  "attackSeconds": 1,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Melee (Ground Only)",
+  "targets": "ground",
+  "favoriteTarget": "Resources (Damage x2)",
+  "favoriteTargetTemplate": "Resources",
+  "favoriteTargetClient": "Resource",
+  "favoriteMultiplier": 2,
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": false,
+  "unlock": {
+   "building": "Barracks",
+   "level": 4,
+   "townHall": 2
+  },
+  "triggersTraps": true
+ },
+ "client": {
+  "clientName": "Goblin",
+  "housingSpace": 1,
+  "internalSpeed": 400,
+  "movementSpeedInGameExact": 32,
+  "movementSpeedInGameRounded": 32,
+  "tilesPerSecond": 4,
+  "attackRangeTiles": 0.4,
+  "attackSeconds": 1,
+  "targets": "ground",
+  "flying": false,
+  "jumpsWalls": false,
+  "favoriteTarget": "Resource",
+  "favoriteMultiplier": 2,
+  "productionBuilding": "Barracks",
+  "barracksLevel": 4,
+  "unlockTownHall": 2,
+  "triggersTraps": true,
+  "movementOffsetSpeed": 0
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 11,
+   "damagePerHit": 11,
+   "dpsVsFavorite": 22,
+   "hitpoints": 25,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 14,
+   "damagePerHit": 14,
+   "dpsVsFavorite": 28,
+   "hitpoints": 30,
+   "researchCost": 45000,
+   "researchSeconds": 7200,
+   "researchTimeText": "2h",
+   "laboratoryLevel": 1
+  },
+  {
+   "level": 3,
+   "dps": 19,
+   "damagePerHit": 19,
+   "dpsVsFavorite": 38,
+   "hitpoints": 36,
+   "researchCost": 100000,
+   "researchSeconds": 10800,
+   "researchTimeText": "3h",
+   "laboratoryLevel": 3
+  },
+  {
+   "level": 4,
+   "dps": 24,
+   "damagePerHit": 24,
+   "dpsVsFavorite": 48,
+   "hitpoints": 50,
+   "researchCost": 500000,
+   "researchSeconds": 21600,
+   "researchTimeText": "6h",
+   "laboratoryLevel": 5
+  },
+  {
+   "level": 5,
+   "dps": 32,
+   "damagePerHit": 32,
+   "dpsVsFavorite": 64,
+   "hitpoints": 65,
+   "researchCost": 700000,
+   "researchSeconds": 43200,
+   "researchTimeText": "12h",
+   "laboratoryLevel": 6
+  },
+  {
+   "level": 6,
+   "dps": 42,
+   "damagePerHit": 42,
+   "dpsVsFavorite": 84,
+   "hitpoints": 80,
+   "researchCost": 1600000,
+   "researchSeconds": 86400,
+   "researchTimeText": "1d",
+   "laboratoryLevel": 7
+  },
+  {
+   "level": 7,
+   "dps": 52,
+   "damagePerHit": 52,
+   "dpsVsFavorite": 104,
+   "hitpoints": 105,
+   "researchCost": 2200000,
+   "researchSeconds": 129600,
+   "researchTimeText": "1d 12h",
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 8,
+   "dps": 62,
+   "damagePerHit": 62,
+   "dpsVsFavorite": 124,
+   "hitpoints": 126,
+   "researchCost": 3700000,
+   "researchSeconds": 194400,
+   "researchTimeText": "2d 6h",
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 9,
+   "dps": 72,
+   "damagePerHit": 72,
+   "dpsVsFavorite": 144,
+   "hitpoints": 146,
+   "researchCost": 8000000,
+   "researchSeconds": 432000,
+   "researchTimeText": "5d",
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 10,
+   "dps": 82,
+   "damagePerHit": 82,
+   "dpsVsFavorite": 164,
+   "hitpoints": 166,
+   "researchCost": 26000000,
+   "researchSeconds": 1209600,
+   "researchTimeText": "14d",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 25,
+   "dps": 11,
+   "damagePerHit": 11,
+   "dpsVsFavorite": 22
+  },
+  {
+   "level": 2,
+   "hitpoints": 30,
+   "dps": 14,
+   "damagePerHit": 14,
+   "researchCost": 45000,
+   "researchSeconds": 7200,
+   "laboratoryLevel": 1,
+   "dpsVsFavorite": 28
+  },
+  {
+   "level": 3,
+   "hitpoints": 36,
+   "dps": 19,
+   "damagePerHit": 19,
+   "researchCost": 100000,
+   "researchSeconds": 10800,
+   "laboratoryLevel": 3,
+   "dpsVsFavorite": 38
+  },
+  {
+   "level": 4,
+   "hitpoints": 50,
+   "dps": 24,
+   "damagePerHit": 24,
+   "researchCost": 500000,
+   "researchSeconds": 21600,
+   "laboratoryLevel": 5,
+   "dpsVsFavorite": 48
+  },
+  {
+   "level": 5,
+   "hitpoints": 65,
+   "dps": 32,
+   "damagePerHit": 32,
+   "researchCost": 700000,
+   "researchSeconds": 43200,
+   "laboratoryLevel": 6,
+   "dpsVsFavorite": 64
+  },
+  {
+   "level": 6,
+   "hitpoints": 80,
+   "dps": 42,
+   "damagePerHit": 42,
+   "researchCost": 1600000,
+   "researchSeconds": 86400,
+   "laboratoryLevel": 7,
+   "dpsVsFavorite": 84
+  },
+  {
+   "level": 7,
+   "hitpoints": 105,
+   "dps": 52,
+   "damagePerHit": 52,
+   "researchCost": 2200000,
+   "researchSeconds": 129600,
+   "laboratoryLevel": 8,
+   "dpsVsFavorite": 104
+  },
+  {
+   "level": 8,
+   "hitpoints": 126,
+   "dps": 62,
+   "damagePerHit": 62,
+   "researchCost": 3700000,
+   "researchSeconds": 194400,
+   "laboratoryLevel": 10,
+   "dpsVsFavorite": 124
+  },
+  {
+   "level": 9,
+   "hitpoints": 146,
+   "dps": 72,
+   "damagePerHit": 72,
+   "researchCost": 8000000,
+   "researchSeconds": 432000,
+   "laboratoryLevel": 13,
+   "dpsVsFavorite": 144
+  },
+  {
+   "level": 10,
+   "hitpoints": 166,
+   "dps": 82,
+   "damagePerHit": 82,
+   "researchCost": 26000000,
+   "researchSeconds": 1209600,
+   "laboratoryLevel": 16,
+   "dpsVsFavorite": 164
+  }
+ ],
+ "superTroopBoost": {
+  "super troop": "Sneaky Goblin",
+  "boost cost": "25,000",
+  "goblin level required": "7"
+ },
+ "comparison": {
+  "checked": 76,
+  "matched": 76
+ },
+ "mismatches": [],
+ "ambiguities": []
+}

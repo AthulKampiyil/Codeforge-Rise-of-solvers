@@ -1,0 +1,159 @@
+{
+  "title": "Rocket Balloon",
+  "url": "https://clashofclans.fandom.com/wiki/Rocket_Balloon/Home_Village",
+  "revid": 622932,
+  "clientName": "Rocket Balloon",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Rocket Balloon/Home Village",
+  "parentPage": "Rocket Balloon",
+  "parentRevid": 588358,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "Defenses",
+    "attackType": "Area Splash",
+    "housingSpace": 8,
+    "movementSpeed": 12,
+    "attackSpeedSeconds": 3,
+    "rangeTiles": 0.5,
+    "deathDamageRadiusTiles": 1.2,
+    "specialAbility": "Boosters",
+    "boosterSpeedIncrease": 52
+  },
+  "levels": [
+    {
+      "level": 5,
+      "eventOnly": true,
+      "dps": 170,
+      "damagePerAttack": 510,
+      "deathDamage": 300,
+      "hitpoints": 390,
+      "townHallLevel": 8
+    },
+    {
+      "level": 6,
+      "eventOnly": true,
+      "dps": 220,
+      "damagePerAttack": 660,
+      "deathDamage": 400,
+      "hitpoints": 545,
+      "townHallLevel": 9
+    },
+    {
+      "level": 7,
+      "eventOnly": true,
+      "dps": 260,
+      "damagePerAttack": 780,
+      "deathDamage": 500,
+      "hitpoints": 690,
+      "townHallLevel": 11
+    },
+    {
+      "level": 8,
+      "dps": 270,
+      "damagePerAttack": 810,
+      "deathDamage": 580,
+      "hitpoints": 840,
+      "townHallLevel": 12
+    },
+    {
+      "level": 9,
+      "dps": 280,
+      "damagePerAttack": 840,
+      "deathDamage": 620,
+      "hitpoints": 940,
+      "townHallLevel": 13
+    },
+    {
+      "level": 10,
+      "dps": 285,
+      "damagePerAttack": 855,
+      "deathDamage": 650,
+      "hitpoints": 1040,
+      "townHallLevel": 14
+    },
+    {
+      "level": 11,
+      "dps": 290,
+      "damagePerAttack": 870,
+      "deathDamage": 700,
+      "hitpoints": 1140,
+      "townHallLevel": 16
+    },
+    {
+      "level": 12,
+      "dps": 304,
+      "damagePerAttack": 912,
+      "deathDamage": 730,
+      "hitpoints": 1240,
+      "townHallLevel": 17
+    },
+    {
+      "level": 13,
+      "dps": 326,
+      "damagePerAttack": 978,
+      "deathDamage": 760,
+      "hitpoints": 1360,
+      "townHallLevel": 18
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "rangeTiles",
+      "level": null,
+      "wiki": 0.5,
+      "client": 0.0,
+      "note": "client AttackRange/100"
+    },
+    {
+      "field": "boosterSpeedIncrease",
+      "level": null,
+      "wiki": 52,
+      "client": 318,
+      "note": "RocketBallonAbility.SpeedBoost (unit unclear; TroopHaste.SpeedBoost = 52)"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "boosters",
+      "client": "`SpecialAbilities` RocketBallonAbility: `SpeedBoost` 318, `DeactivateAfterTime` 4000"
+    },
+    {
+      "mechanic": "legacy haste row",
+      "client": "spells `TroopHaste` (`SpeedBoost` 52, `BoostTimeMS` 4000) matches the wiki's +52 for 4 s"
+    },
+    {
+      "mechanic": "bombing",
+      "client": "`DPS` x 3 s, `DamageRadius` 120, `SelfAsAoeCenter` TRUE, `DieDamage`, `DieDamageRadius` 120, `DieDamageDelay` 416"
+    },
+    {
+      "mechanic": "TH per level",
+      "client": "derived: Laboratory TH needed for the Balloon level"
+    }
+  ],
+  "boost": {
+    "wiki": {
+      "baseTroop": "Balloon",
+      "minBaseLevel": 8,
+      "townHallRequired": 12,
+      "clanCastleLevelToReceive": 6,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperBalloon",
+      "Original": "Balloon",
+      "MinOriginalLevel_raw": 7,
+      "minBaseLevel": 8,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_BALLOON_INTRO_TH13",
+      "townHallDerived": 12
+    }
+  }
+}

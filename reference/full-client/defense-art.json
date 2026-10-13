@@ -1,0 +1,147 @@
+{
+  "clientVersion": "18.400.21",
+  "generator": "scripts/import-native-defense-art.py",
+  "conventions": {
+    "defenders": "DefenderCharacter rows are 2D animation blocks (csv/animations.csv). Count and DefenderZ are source values; the horizontal spacing of multiple rooftop defenders is a local layout (not in the tables).",
+    "beams": "ExportNameBeamStart/End play at the launcher and the landing point with their WarmUp/Loop/Fade labels.",
+    "bodies": "Building bodies, turret and attack frames stay in the village packs (scripts/import-native-village-art.py)."
+  },
+  "sources": {
+    "csv/animations.csv": "b0be152c98d06ccd0689320acfa19b07e04dd2a07fc6a1253558592f67bf29d8",
+    "logic/buildings.csv": "9aed5fed876e2914a22fa7fed688a651c691ab06170d60e2bda8dc9262fbccb1",
+    "logic/projectiles.csv": "71cda0e457ad88a6772f6421a22419b24d6bcf78d0ed305f09184404889a72dc",
+    "logic/special_abilities.csv": "c978dd90ff2335e60d988f3476d78bec72672e8c074344d149096e89951181eb",
+    "logic/spells.csv": "385159e00327e6a1567cd91f1585b4ed0717d3f4475f0823398243482598289d",
+    "logic/traps.csv": "757ca07de02b26b2071b52bb3cb495df2f0ae879731a859d3102ca3552dd528c",
+    "logic/weapons.csv": "38f6891fd14c5287ede72f7a2e873e0648231bf63e29463a9b63f1b8142ec540",
+    "sc/buildings.sc": "f73ec949fc070bc03175d6bb3af8b62d8f607094bf2b343c9846a499a35be0ed",
+    "sc/buildings_39.sctx": "dd27d9612fe135c3be364840eeabe45b53a229b24192246b56a08fa0606fdb16",
+    "sc/chr_archer.sc": "2acaca98c63b3fef734a424a689ca6cdce5c5af9883a70db455119174833e53d",
+    "sc/chr_archer_0.sctx": "ed7d064ae39b823110d9242714fa8637830e6e96d53db77665b1a6a8b2fa7b61",
+    "sc/chr_super_wizard.sc": "e6ace174c08c1b8c135f3eb22eeb542b12754a6c7bf64ec0e16c0e33cc9a1e95",
+    "sc/chr_super_wizard_0.sctx": "8f528c348ace019d82f77c3ba92327286b74909b0968702eac0568b9a9c26c0a"
+  },
+  "totalBytes": 634182,
+  "kinds": {
+    "eagle": {
+      "path": "assets/defenses-native/eagle/graph.json",
+      "sha256": "6855a90f738cc2980f8196c514be0142044c9f84faef22b594977600d6064b1a",
+      "bytes": 173403,
+      "levels": 7,
+      "defenders": [],
+      "beams": [
+        "beam_down",
+        "beam_up"
+      ]
+    },
+    "scattershot": {
+      "path": "assets/defenses-native/scattershot/graph.json",
+      "sha256": "95af3fd2536bf89c6034dc6efe31a5736af76aac4a0e4b2a0caa1f601adb6286",
+      "bytes": 1935,
+      "levels": 7,
+      "defenders": [],
+      "beams": []
+    },
+    "spelltower": {
+      "path": "assets/defenses-native/spelltower/graph.json",
+      "sha256": "eb97e0d5c1d00dd07b49b8f7fc9a405dcc23bf21978a6a731202ca4dd1bc0cc9",
+      "bytes": 3125,
+      "levels": 4,
+      "defenders": [],
+      "beams": []
+    },
+    "monolith": {
+      "path": "assets/defenses-native/monolith/graph.json",
+      "sha256": "92b1f411e6774d4d03bf3c4ae252d54303e264193aa9906ce8864573f9908c88",
+      "bytes": 1361,
+      "levels": 5,
+      "defenders": [],
+      "beams": []
+    },
+    "multiarchertower": {
+      "path": "assets/defenses-native/multiarchertower/graph.json",
+      "sha256": "340d9cf55cc40096498a919f41c17d46247e646a0d4e007fd900f6920c4996e6",
+      "bytes": 310432,
+      "levels": 4,
+      "defenders": [
+        "Archer12",
+        "Archer13"
+      ],
+      "beams": []
+    },
+    "ricochetcannon": {
+      "path": "assets/defenses-native/ricochetcannon/graph.json",
+      "sha256": "ea951c296ad2b0185b74c9e48211b24a3d7d6f2f6a05ca8415fa2ca3a3ede609",
+      "bytes": 764,
+      "levels": 4,
+      "defenders": [],
+      "beams": []
+    },
+    "multigeartower": {
+      "path": "assets/defenses-native/multigeartower/graph.json",
+      "sha256": "c4c43c0e0f34d9e2d73f78d72ab300863a28ac1e72b54fa783e5423d2ccb6a36",
+      "bytes": 1105,
+      "levels": 3,
+      "defenders": [],
+      "beams": []
+    },
+    "firespitter": {
+      "path": "assets/defenses-native/firespitter/graph.json",
+      "sha256": "fb3c986fc36a2e1d1e7ba3b7a99194a9da4179bcd5fa0ea67c8dc4779a1e37ff",
+      "bytes": 535,
+      "levels": 3,
+      "defenders": [],
+      "beams": []
+    },
+    "revengetower": {
+      "path": "assets/defenses-native/revengetower/graph.json",
+      "sha256": "a8799cbeb2f10cfbfeae765f1306e05d37bcfc93d24787fc10dd8f4fdec2823c",
+      "bytes": 9525,
+      "levels": 2,
+      "defenders": [],
+      "beams": []
+    },
+    "superwizardtower": {
+      "path": "assets/defenses-native/superwizardtower/graph.json",
+      "sha256": "217a0be92d8c783e77b661fda8a11cbeefbb8b4eda21862e1be4f398ec2027cf",
+      "bytes": 125251,
+      "levels": 2,
+      "defenders": [
+        "SuperWizard"
+      ],
+      "beams": []
+    },
+    "builder": {
+      "path": "assets/defenses-native/builder/graph.json",
+      "sha256": "c30458e08b18dd39261c2ce5df470c7d0610a27fcc9f4b083a8b5178f0345bd4",
+      "bytes": 1070,
+      "levels": 8,
+      "defenders": [],
+      "beams": []
+    },
+    "townhall": {
+      "path": "assets/defenses-native/townhall/graph.json",
+      "sha256": "7adef44201c9c23e7f6b4f9a133990952f7246ec971987b38e1b6043f22e6607",
+      "bytes": 3897,
+      "levels": 18,
+      "defenders": [],
+      "beams": []
+    },
+    "tornadotrap": {
+      "path": "assets/defenses-native/tornadotrap/graph.json",
+      "sha256": "f7e34cab4acdd55660bcf0069470c573e82326e5a18bd9d28ec7d392496175c4",
+      "bytes": 971,
+      "levels": 3,
+      "defenders": [],
+      "beams": []
+    },
+    "gigabomb": {
+      "path": "assets/defenses-native/gigabomb/graph.json",
+      "sha256": "3fb6ff5f0908de93ff14e1d7014b25cc6acc61f217bcaff17da9067d6b5d0a54",
+      "bytes": 808,
+      "levels": 4,
+      "defenders": [],
+      "beams": []
+    }
+  }
+}

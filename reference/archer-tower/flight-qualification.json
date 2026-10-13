@@ -1,0 +1,102 @@
+{
+  "replayVersion": 41,
+  "nativeExecutableVerified": false,
+  "scope": "Source speed and tracking flag with local continuous homing implementation; complete Node/browser state comparisons, not original executable trajectories.",
+  "reports": {
+    "chromium": [
+      {
+        "level": 1,
+        "states": 828,
+        "result": {
+          "gold": 0,
+          "elixir": 0,
+          "trophies": 0,
+          "stars": 3,
+          "destruction": 100
+        }
+      },
+      {
+        "level": 7,
+        "states": 808,
+        "result": {
+          "gold": 0,
+          "elixir": 0,
+          "trophies": 0,
+          "stars": 3,
+          "destruction": 100
+        }
+      },
+      {
+        "level": 10,
+        "states": 836,
+        "result": {
+          "gold": 0,
+          "elixir": 0,
+          "trophies": 0,
+          "stars": 3,
+          "destruction": 100
+        }
+      },
+      {
+        "level": 12,
+        "states": 870,
+        "result": {
+          "gold": 0,
+          "elixir": 0,
+          "trophies": 0,
+          "stars": 3,
+          "destruction": 100
+        }
+      }
+    ],
+    "webkit": [
+      {
+        "level": 1,
+        "states": 828,
+        "result": {
+          "gold": 0,
+          "elixir": 0,
+          "trophies": 0,
+          "stars": 3,
+          "destruction": 100
+        }
+      },
+      {
+        "level": 7,
+        "states": 808,
+        "result": {
+          "gold": 0,
+          "elixir": 0,
+          "trophies": 0,
+          "stars": 3,
+          "destruction": 100
+        }
+      },
+      {
+        "level": 10,
+        "states": 836,
+        "result": {
+          "gold": 0,
+          "elixir": 0,
+          "trophies": 0,
+          "stars": 3,
+          "destruction": 100
+        }
+      },
+      {
+        "level": 12,
+        "states": 870,
+        "result": {
+          "gold": 0,
+          "elixir": 0,
+          "trophies": 0,
+          "stars": 3,
+          "destruction": 100
+        }
+      }
+    ]
+  },
+  "historicalFixture": "tests/fixtures/archer-tower-v40-level-10.crown-replay.json",
+  "historicalWitness": "tests/fixtures/archer-tower-v40-witness.json",
+  "historicalStates": 836
+}

@@ -1,0 +1,644 @@
+{
+ "title": "Hero Equipment",
+ "url": "https://clashofclans.fandom.com/wiki/Hero_Equipment",
+ "revid": 625074,
+ "retrieved": "2026-09-15",
+ "clientName": null,
+ "clientTable": "character_items",
+ "category": "mechanic",
+ "summary": "Hub page: 42 Home Village equipment items (8 BK, 8 AQ, 6 MP, 7 GW, 7 RC, 6 DD), active vs passive, rarity, history and the 2023 migration table.",
+ "constants": {
+  "wiki": {},
+  "client": {
+   "deprecatedRecords": [
+    "Deadly Dash2",
+    "Deadly Dash3",
+    "FlameAttack",
+    "MP Trap Shield",
+    "Punch Arrow",
+    "UNUSED10",
+    "UNUSED11",
+    "UNUSED13",
+    "UNUSED15",
+    "UNUSED16",
+    "UNUSED17",
+    "UNUSED2",
+    "UNUSED3",
+    "UNUSED4",
+    "UNUSED5",
+    "UNUSED6",
+    "UNUSED7",
+    "UNUSED8",
+    "UNUSED9"
+   ],
+   "defaultItems": {
+    "Barbarian King": "Barbarian Puppet; Rage Vial;",
+    "Archer Queen": "Archer Puppet; Invisibility Vial;",
+    "Grand Warden": "Eternal Tome; Life Gem;",
+    "Royal Champion": "Seeking Shield; Royal Gem;",
+    "Minion Prince": "Henchmen Puppet; Dark Orb;",
+    "Dragon Duke": "Fire Heart; Flame Blower;"
+   },
+   "ItemSlotCount": {
+    "Barbarian King": "2",
+    "Archer Queen": "2",
+    "Grand Warden": "2",
+    "Royal Champion": "2",
+    "Minion Prince": "2",
+    "Dragon Duke": "2"
+   },
+   "MigrationGearLevel": {
+    "Barbarian King": {
+     "1": "1-10",
+     "2": "11-20",
+     "3": "21-25",
+     "4": "26-30",
+     "5": "31-35",
+     "6": "36-40",
+     "7": "41-45",
+     "8": "46-50",
+     "9": "51-55",
+     "10": "56-60",
+     "11": "61-65",
+     "12": "66-70",
+     "13": "71-75",
+     "14": "76-80",
+     "15": "81-110"
+    },
+    "Archer Queen": {
+     "1": "1-10",
+     "2": "11-20",
+     "3": "21-25",
+     "4": "26-30",
+     "5": "31-35",
+     "6": "36-40",
+     "7": "41-45",
+     "8": "46-50",
+     "9": "51-55",
+     "10": "56-60",
+     "11": "61-65",
+     "12": "66-70",
+     "13": "71-75",
+     "14": "76-80",
+     "15": "81-110"
+    },
+    "Grand Warden": {
+     "1": "1-3",
+     "2": "4-5",
+     "3": "6-7",
+     "4": "8-9",
+     "5": "10-11",
+     "6": "12-13",
+     "7": "14-15",
+     "8": "16-20",
+     "9": "21-30",
+     "10": "31-35",
+     "11": "36-40",
+     "12": "41-45",
+     "13": "46-50",
+     "14": "51-55",
+     "15": "56-85"
+    },
+    "Royal Champion": {
+     "1": "1-2",
+     "2": "3-3",
+     "3": "4-4",
+     "4": "5-5",
+     "5": "6-7",
+     "6": "8-9",
+     "7": "10-11",
+     "8": "12-14",
+     "9": "15-17",
+     "10": "18-18",
+     "11": "19-19",
+     "12": "20-24",
+     "13": "25-26",
+     "14": "27-29",
+     "15": "30-55"
+    },
+    "Minion Prince": {
+     "1": "1-5",
+     "2": "6-10",
+     "3": "11-15",
+     "4": "16-20",
+     "5": "21-25",
+     "6": "26-30",
+     "7": "31-35",
+     "8": "36-40",
+     "9": "41-45",
+     "10": "46-50",
+     "11": "51-55",
+     "12": "56-60",
+     "13": "61-65",
+     "14": "66-70",
+     "15": "71-95"
+    }
+   },
+   "roster": [
+    {
+     "hero": "Barbarian King",
+     "title": "Barbarian Puppet",
+     "clientName": "Barbarian Puppet",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "1",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Barbarian King",
+     "title": "Rage Vial",
+     "clientName": "Rage Vial",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "1",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Barbarian King",
+     "title": "Earthquake Boots",
+     "clientName": "Earthquake Boots",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "1",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Barbarian King",
+     "title": "Vampstache",
+     "clientName": "Vampstache",
+     "rarity": "Common",
+     "abilityType": "Passive",
+     "unlock": "3",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Barbarian King",
+     "title": "Giant Gauntlet",
+     "clientName": "Giant Gauntlet",
+     "rarity": "Epic",
+     "abilityType": "Active",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Barbarian King",
+     "title": "Spiky Ball",
+     "clientName": "Spiky Ball",
+     "rarity": "Epic",
+     "abilityType": "Active",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Barbarian King",
+     "title": "Snake Bracelet",
+     "clientName": "Snake Bracelet",
+     "rarity": "Epic",
+     "abilityType": "Passive",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Barbarian King",
+     "title": "Stick Horse",
+     "clientName": "Stick Horse",
+     "rarity": "Epic",
+     "abilityType": "Passive",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Archer Queen",
+     "title": "Archer Puppet",
+     "clientName": "Archer Puppet",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "1",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Archer Queen",
+     "title": "Invisibility Vial",
+     "clientName": "Invisibility Vial",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "1",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Archer Queen",
+     "title": "Giant Arrow",
+     "clientName": "Piercing Arrow",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "2",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Archer Queen",
+     "title": "Healer Puppet",
+     "clientName": "Healer Puppet",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "5",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Archer Queen",
+     "title": "Frozen Arrow",
+     "clientName": "Frozen Arrow",
+     "rarity": "Epic",
+     "abilityType": "Passive",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Archer Queen",
+     "title": "Magic Mirror",
+     "clientName": "Magic Mirror",
+     "rarity": "Epic",
+     "abilityType": "Active",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Archer Queen",
+     "title": "Action Figure",
+     "clientName": "Action Figure",
+     "rarity": "Epic",
+     "abilityType": "Active",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Archer Queen",
+     "title": "Monolith Arrow",
+     "clientName": "Monolith Arrow",
+     "rarity": "Epic",
+     "abilityType": "Passive",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Minion Prince",
+     "title": "Henchmen Puppet",
+     "clientName": "Henchmen Puppet",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "1",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Minion Prince",
+     "title": "Dark Orb",
+     "clientName": "Dark Orb",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "1",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Minion Prince",
+     "title": "Metal Pants",
+     "clientName": "Metal Pants",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "3",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Minion Prince",
+     "title": "Noble Iron",
+     "clientName": "Noble Iron",
+     "rarity": "Common",
+     "abilityType": "Passive",
+     "unlock": "5",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Minion Prince",
+     "title": "Dark Crown",
+     "clientName": "Dark Crown",
+     "rarity": "Epic",
+     "abilityType": "Passive",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Minion Prince",
+     "title": "Meteor Staff",
+     "clientName": "Meteor Staff",
+     "rarity": "Epic",
+     "abilityType": "Passive",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Grand Warden",
+     "title": "Eternal Tome",
+     "clientName": "Eternal Tome",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "1",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Grand Warden",
+     "title": "Life Gem",
+     "clientName": "Life Gem",
+     "rarity": "Common",
+     "abilityType": "Passive",
+     "unlock": "1",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Grand Warden",
+     "title": "Rage Gem",
+     "clientName": "Rage Gem",
+     "rarity": "Common",
+     "abilityType": "Passive",
+     "unlock": "4",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Grand Warden",
+     "title": "Healing Tome",
+     "clientName": "Healing Tome",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "6",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Grand Warden",
+     "title": "Fireball",
+     "clientName": "Fireball",
+     "rarity": "Epic",
+     "abilityType": "Active",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Grand Warden",
+     "title": "Lavaloon Puppet",
+     "clientName": "Lavaloon Puppet",
+     "rarity": "Epic",
+     "abilityType": "Active",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Grand Warden",
+     "title": "Heroic Torch",
+     "clientName": "Heroic Torch",
+     "rarity": "Epic",
+     "abilityType": "Active",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Royal Champion",
+     "title": "Royal Gem",
+     "clientName": "Royal Gem",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "1",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Royal Champion",
+     "title": "Seeking Shield",
+     "clientName": "Seeking Shield",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "1",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Royal Champion",
+     "title": "Hog Rider Puppet",
+     "clientName": "Hog Rider Puppet",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "7",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Royal Champion",
+     "title": "Haste Vial",
+     "clientName": "Haste Vial",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "8",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Royal Champion",
+     "title": "Rocket Spear",
+     "clientName": "Rocket Spear",
+     "rarity": "Epic",
+     "abilityType": "Active",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Royal Champion",
+     "title": "Electro Boots",
+     "clientName": "Electro Boots",
+     "rarity": "Epic",
+     "abilityType": "Passive",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Royal Champion",
+     "title": "Frost Flake",
+     "clientName": "Frost Charm",
+     "rarity": "Epic",
+     "abilityType": "Active",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Dragon Duke",
+     "title": "Fire Heart",
+     "clientName": "Fire Heart",
+     "rarity": "Common",
+     "abilityType": "Passive",
+     "unlock": "1",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Dragon Duke",
+     "title": "Flame Blower",
+     "clientName": "Flame Blower",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "1",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Dragon Duke",
+     "title": "Stun Blaster",
+     "clientName": "Stun Blaster",
+     "rarity": "Common",
+     "abilityType": "Active",
+     "unlock": "9",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Dragon Duke",
+     "title": "Electro Fangs",
+     "clientName": "ElectroAttack",
+     "rarity": "Common",
+     "abilityType": "Passive",
+     "unlock": "10",
+     "maxLevel": 18
+    },
+    {
+     "hero": "Dragon Duke",
+     "title": "Rocket Backpack",
+     "clientName": "Rocket Backpack",
+     "rarity": "Epic",
+     "abilityType": "Active",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    },
+    {
+     "hero": "Dragon Duke",
+     "title": "Revenge Deck",
+     "clientName": "Draconic Counter",
+     "rarity": "Epic",
+     "abilityType": "Passive",
+     "unlock": "event/Trader",
+     "maxLevel": 27
+    }
+   ]
+  },
+  "wikiTables": [
+   {
+    "section": "History",
+    "headers": [
+     "Date",
+     "Description"
+    ],
+    "rows": [
+     {
+      "date": "December 10, 2023",
+      "description": "Announced the Hero Equipment."
+     },
+     {
+      "date": "December 12, 2023",
+      "description": "Split previous abilities into two different Equipment for each Hero and leveling them up to appropriate level based on the Town Hall level:; Barbarian King's Iron Fist: Rage Vial and Barbarian Puppet; Archer Queen's Royal Cloak: Invisibility Vial and Archer Puppet; Grand Warden's Eternal Tome and passive Life Aura: Eternal Tome and Life Gem; Royal Champion's Seeking Shield: Seeking Shield and Royal Gem; Added new Equipment for most Heroes:; Barbarian King: Earthquake Boots and Vampstache; Archer Queen: Giant Arrow and Healer Puppet; Grand Warden: Rage Gem and Healing Tome"
+     },
+     {
+      "date": "December 18, 2023",
+      "description": "Made the Giant Gauntlet available for Barbarian King in the Cookie Rumble event."
+     },
+     {
+      "date": "February 8, 2024",
+      "description": "Made the Frozen Arrow available for Archer Queen in the Dragon Festival event."
+     },
+     {
+      "date": "February 27, 2024",
+      "description": "Added the Hog Rider Puppet and Haste Vial for Royal Champion."
+     },
+     {
+      "date": "March 11, 2024",
+      "description": "Made the Fireball available for Grand Warden in the Super Dragon Spotlight event."
+     },
+     {
+      "date": "May 7, 2024",
+      "description": "Made the Spiky Ball available for Barbarian King in the Clash with Haaland event."
+     },
+     {
+      "date": "June 11, 2024",
+      "description": "Made the Rocket Spear available for Royal Champion in the Super Wall Breaker Spotlight event."
+     },
+     {
+      "date": "August 9, 2024",
+      "description": "Made the Magic Mirror available for Archer Queen in the Anime Clash event."
+     },
+     {
+      "date": "October 11, 2024",
+      "description": "Made the Lavaloon Puppet available for Grand Warden in the Mashup Mania event."
+     },
+     {
+      "date": "November 25, 2024",
+      "description": "Added the Henchmen Puppet and Dark Orb with the addition of Minion Prince."
+     },
+     {
+      "date": "December 11, 2024",
+      "description": "Made the Electro Boots available for Royal Champion in the Toyshop Throwdown event."
+     },
+     {
+      "date": "February 7, 2025",
+      "description": "Made the Snake Bracelet available for Barbarian King in the Snake Festival event."
+     },
+     {
+      "date": "February 10, 2025",
+      "description": "Added the Metal Pants for Minion Prince."
+     },
+     {
+      "date": "March 24, 2025",
+      "description": "Added the Noble Iron for Minion Prince."
+     },
+     {
+      "date": "April 8, 2025",
+      "description": "Made the Action Figure available for Archer Queen in the Friend or Foe event."
+     },
+     {
+      "date": "June 10, 2025",
+      "description": "Made the Dark Crown available for Minion Prince in the Dark Deal event."
+     },
+     {
+      "date": "August 8, 2025",
+      "description": "Made the Heroic Torch available for Grand Warden in the Splash Bash event."
+     },
+     {
+      "date": "October 10, 2025",
+      "description": "Made the Meteor Staff available for Minion Prince in the Cosmic Rock event."
+     },
+     {
+      "date": "December 8, 2025",
+      "description": "Made the Frost Flake available for Royal Champion in the Meltdown Mayhem event."
+     },
+     {
+      "date": "February 9, 2026",
+      "description": "Made the Stick Horse available for Barbarian King in the Wise Warriors event."
+     },
+     {
+      "date": "February 23, 2026",
+      "description": "Added the Fire Heart, Flame Blower, and Stun Blaster with the addition of Dragon Duke."
+     },
+     {
+      "date": "April 8, 2026",
+      "description": "Made the Rocket Backpack available for Dragon Duke in the Sound of Clash event."
+     },
+     {
+      "date": "April 27, 2026",
+      "description": "Added the Electro Fangs for Dragon Duke."
+     },
+     {
+      "date": "June 4, 2026",
+      "description": "Made the Monolith Arrow available for Archer Queen in the Anime Fury Medal Event."
+     },
+     {
+      "date": "August 12, 2026",
+      "description": "Made the Revenge Deck available for Dragon Duke in the Awesome Medal Event."
+     }
+    ]
+   }
+  ]
+ },
+ "fields": {},
+ "levels": [],
+ "subpages": [
+  {
+   "title": "Template:Equipment Migration",
+   "url": "https://clashofclans.fandom.com/wiki/Template:Equipment_Migration",
+   "revid": 601084
+  }
+ ],
+ "mismatches": []
+}

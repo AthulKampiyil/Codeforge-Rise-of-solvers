@@ -1,0 +1,249 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "localization/texts.csv": "affdf43926df044cb3c09d833b07365aa01ea99985771afa5fa0dd926f36c569",
+    "logic/decos.csv": "b60242541efc630279e7ca2b9d91b66ef752eb054d15f561e53d389886eb8173",
+    "sc/buildings.sc": "f73ec949fc070bc03175d6bb3af8b62d8f607094bf2b343c9846a499a35be0ed",
+    "sc/buildings_13.sctx": "79a67dd40bd2f5e3bd956e711f9ca77d6b548e6db528776390fb27c3602146bd",
+    "sc/buildings_14.sctx": "d194f9c0f1d52c99a4efe74890a07f9ce1bcaf5d70d4149baa5bdf61a9b8a432",
+    "sc/buildings_8.sctx": "588eba7d5739a5d9b53d3e14f2ab83bd170cad735363a81dd37bea7bcc0bb3bd"
+  },
+  "texts": {
+    "shopTab": "Decorations",
+    "stash": "Stash",
+    "stashTitle": "Stash Decoration?",
+    "stashText": "<item> will be moved to the Shop and can be placed again at no cost."
+  },
+  "decorations": [
+    {
+      "id": "torch",
+      "name": "Torch",
+      "export": "deco_torch1",
+      "base": "deco_torch1_base",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 500,
+      "chiefLevel": 1,
+      "max": 4,
+      "art": {
+        "path": "assets/decorations-native/torch.png",
+        "width": 78,
+        "height": 83,
+        "originX": 0.5,
+        "originY": 0.24096385542168675,
+        "rgbaSha256": "f8e75edb69dc321930796200f95975b13a525d77b1f295419e357a7b139ddf0b"
+      }
+    },
+    {
+      "id": "white-flag",
+      "name": "White Flag",
+      "export": "deco_white_flag",
+      "base": "deco_flagpole_base",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 5000,
+      "chiefLevel": 5,
+      "max": 1,
+      "art": {
+        "path": "assets/decorations-native/white-flag.png",
+        "width": 79,
+        "height": 108,
+        "originX": 0.5443037974683544,
+        "originY": 0.39814814814814814,
+        "rgbaSha256": "2a3bab831e549d76ae9f35b7f62514882fc96001c31e32350705e86b4db9202b"
+      }
+    },
+    {
+      "id": "flower-box-1",
+      "name": "Cornflower Bed",
+      "export": "deco_flowerbox1",
+      "base": "deco_flowerbox1_base",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 2500,
+      "chiefLevel": 8,
+      "max": 4,
+      "art": {
+        "path": "assets/decorations-native/flower-box-1.png",
+        "width": 93,
+        "height": 70,
+        "originX": 0.5053763440860215,
+        "originY": -0.11428571428571428,
+        "rgbaSha256": "fc4bf7e6221509ed7e80e0875bdaa703301de9336d37b9f519df17c2f9f99b01"
+      }
+    },
+    {
+      "id": "flower-box-2",
+      "name": "Sunflower Bed",
+      "export": "deco_flowerbox2",
+      "base": "deco_flowerbox2_base",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 2500,
+      "chiefLevel": 8,
+      "max": 4,
+      "art": {
+        "path": "assets/decorations-native/flower-box-2.png",
+        "width": 78,
+        "height": 56,
+        "originX": 0.5256410256410257,
+        "originY": -0.25,
+        "rgbaSha256": "4456424c2cd5c96e98eb5fd6f40d58a0e35cca8139ee77b66468bc4bd351c79e"
+      }
+    },
+    {
+      "id": "windmeter",
+      "name": "Weather Vane",
+      "export": "deco_windmeter",
+      "base": "deco_windmeter_base",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 10000,
+      "chiefLevel": 10,
+      "max": 1,
+      "art": {
+        "path": "assets/decorations-native/windmeter.png",
+        "width": 105,
+        "height": 141,
+        "originX": 0.6571428571428571,
+        "originY": 0.5390070921985816,
+        "rgbaSha256": "85f483e09aba702d2fe7dc5f65b96ac1ad7b71982b17e029faaa5f46ca821c40"
+      }
+    },
+    {
+      "id": "down-arrow-flag",
+      "name": "Rally Flag",
+      "export": "deco_downarrow_flag",
+      "base": "deco_flagpole_base",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 15000,
+      "chiefLevel": 12,
+      "max": 1,
+      "art": {
+        "path": "assets/decorations-native/down-arrow-flag.png",
+        "width": 71,
+        "height": 108,
+        "originX": 0.6056338028169014,
+        "originY": 0.39814814814814814,
+        "rgbaSha256": "a1b6a1de4554f72101adeab6b0c336bd528fe5e5ff5504f9281f0c309af8990b"
+      }
+    },
+    {
+      "id": "up-arrow-flag",
+      "name": "Point Flag",
+      "export": "deco_uparrow_flag",
+      "base": "deco_flagpole_base",
+      "size": 2,
+      "resource": "elixir",
+      "cost": 15000,
+      "chiefLevel": 12,
+      "max": 1,
+      "art": {
+        "path": "assets/decorations-native/up-arrow-flag.png",
+        "width": 71,
+        "height": 108,
+        "originX": 0.6056338028169014,
+        "originY": 0.39814814814814814,
+        "rgbaSha256": "9f096d4b60b03d33c56d9cb8ea7ba2d2f2c069629dbf3354f60b5b03534f88af"
+      }
+    },
+    {
+      "id": "skull-altar",
+      "name": "Ancient Skull",
+      "export": "deco_skullaltar",
+      "base": "statue_base",
+      "size": 2,
+      "resource": "gold",
+      "cost": 500000,
+      "chiefLevel": 30,
+      "max": 1,
+      "art": {
+        "path": "assets/decorations-native/skull-altar.png",
+        "width": 102,
+        "height": 79,
+        "originX": 0.5196078431372549,
+        "originY": -0.0379746835443038,
+        "rgbaSha256": "e1400e4cd52e93a9ab73fb3942752234f5773dbec4aca9c2dad5b6fbfd1331f1"
+      }
+    },
+    {
+      "id": "pekka-statue",
+      "name": "Statue of P.E.K.K.A",
+      "export": "deco_pekka_statue",
+      "base": "statue_base",
+      "size": 2,
+      "resource": "gold",
+      "cost": 1000000,
+      "chiefLevel": 75,
+      "max": 1,
+      "art": {
+        "path": "assets/decorations-native/pekka-statue.png",
+        "width": 104,
+        "height": 139,
+        "originX": 0.5769230769230769,
+        "originY": 0.45323741007194246,
+        "rgbaSha256": "c29ccc98f62e3caad51ebc6f11e4da61c59f2718c759dca1e771ba04c0624ccb"
+      }
+    },
+    {
+      "id": "skull-flag",
+      "name": "Pirate Flag",
+      "export": "deco_skull_flag",
+      "base": "deco_flagpole_base",
+      "size": 2,
+      "resource": "gems",
+      "cost": 500,
+      "chiefLevel": 1,
+      "max": 1,
+      "art": {
+        "path": "assets/decorations-native/skull-flag.png",
+        "width": 79,
+        "height": 108,
+        "originX": 0.5443037974683544,
+        "originY": 0.39814814814814814,
+        "rgbaSha256": "e49d55ac8be22c22c69beb1db4477da4310b1d80392a3c0822f4600674b07c8f"
+      }
+    },
+    {
+      "id": "barbarian-statue",
+      "name": "Mighty Statue",
+      "export": "deco_barbarian_statue",
+      "base": "statue_base",
+      "size": 2,
+      "resource": "gems",
+      "cost": 500,
+      "chiefLevel": 1,
+      "max": 1,
+      "art": {
+        "path": "assets/decorations-native/barbarian-statue.png",
+        "width": 98,
+        "height": 124,
+        "originX": 0.5204081632653061,
+        "originY": 0.3951612903225806,
+        "rgbaSha256": "a2ce42f7b18b9d8964df1e975dce3cab82130fb91766cf699cc784a6104a0e0f"
+      }
+    },
+    {
+      "id": "bk-statue",
+      "name": "Mighty Hero Statue",
+      "export": "deco_barbarian_king_statue",
+      "base": "statue_base",
+      "size": 2,
+      "resource": "gems",
+      "cost": 500,
+      "chiefLevel": 1,
+      "max": 1,
+      "art": {
+        "path": "assets/decorations-native/bk-statue.png",
+        "width": 105,
+        "height": 130,
+        "originX": 0.4857142857142857,
+        "originY": 0.4461538461538462,
+        "rgbaSha256": "e7a2ef888c9f2f66c65d907fd5db0ab7f4238f4a11b74bf5fd2cf03c3f395c58"
+      }
+    }
+  ]
+}

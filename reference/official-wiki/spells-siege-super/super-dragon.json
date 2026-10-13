@@ -1,0 +1,235 @@
+{
+  "title": "Super Dragon",
+  "url": "https://clashofclans.fandom.com/wiki/Super_Dragon/Home_Village",
+  "revid": 623387,
+  "clientName": "Super Dragon",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Super Dragon/Home Village",
+  "parentPage": "Super Dragon",
+  "parentRevid": 613580,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "Any",
+    "attackType": "Area Splash",
+    "housingSpace": 40,
+    "movementSpeed": 14,
+    "timeBetweenShotsSeconds": 0.192,
+    "timeBetweenBurstsSeconds": 1.8,
+    "shotsPerBurst": 10,
+    "rangeTiles": 3,
+    "specialAbility": "Roast"
+  },
+  "levels": [
+    {
+      "level": 3,
+      "eventOnly": true,
+      "dps": 300,
+      "damagePerShot": 108,
+      "hitpoints": 3900,
+      "townHallLevel": 8
+    },
+    {
+      "level": 4,
+      "eventOnly": true,
+      "dps": 325,
+      "damagePerShot": 117,
+      "hitpoints": 4500,
+      "townHallLevel": 9
+    },
+    {
+      "level": 5,
+      "eventOnly": true,
+      "dps": 351,
+      "damagePerShot": 126,
+      "hitpoints": 5100,
+      "townHallLevel": 10
+    },
+    {
+      "level": 6,
+      "eventOnly": true,
+      "dps": 376,
+      "damagePerShot": 135,
+      "hitpoints": 5600,
+      "townHallLevel": 11
+    },
+    {
+      "level": 7,
+      "dps": 401,
+      "damagePerShot": 144.07,
+      "hitpoints": 6100,
+      "townHallLevel": 12
+    },
+    {
+      "level": 8,
+      "dps": 426,
+      "damagePerShot": 153.03,
+      "hitpoints": 6400,
+      "townHallLevel": 13
+    },
+    {
+      "level": 9,
+      "dps": 451,
+      "damagePerShot": 161.99,
+      "hitpoints": 6700,
+      "townHallLevel": 14
+    },
+    {
+      "level": 10,
+      "dps": 476,
+      "damagePerShot": 170.95,
+      "hitpoints": 7200,
+      "townHallLevel": 15
+    },
+    {
+      "level": 11,
+      "dps": 496,
+      "damagePerShot": 178.12,
+      "hitpoints": 7600,
+      "townHallLevel": 16
+    },
+    {
+      "level": 12,
+      "dps": 516,
+      "damagePerShot": 185.29,
+      "hitpoints": 8000,
+      "townHallLevel": 17
+    },
+    {
+      "level": 13,
+      "dps": 536,
+      "damagePerShot": 192.46,
+      "hitpoints": 8400,
+      "townHallLevel": 18
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "dps",
+      "level": 3,
+      "wiki": 300,
+      "client": 301,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 4,
+      "wiki": 325,
+      "client": 326,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 5,
+      "wiki": 351,
+      "client": 352,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 6,
+      "wiki": 376,
+      "client": 377,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 7,
+      "wiki": 401,
+      "client": 402,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 8,
+      "wiki": 426,
+      "client": 427,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 9,
+      "wiki": 451,
+      "client": 452,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 10,
+      "wiki": 476,
+      "client": 477,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 11,
+      "wiki": 496,
+      "client": 497,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 12,
+      "wiki": 516,
+      "client": 517,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 13,
+      "wiki": 536,
+      "client": 537,
+      "note": "client DPS"
+    },
+    {
+      "field": "splashRadiusTiles",
+      "level": null,
+      "wiki": 1,
+      "client": 1.6,
+      "note": "DamageRadius 160 (wiki summary approximation)"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "burst",
+      "client": "`BurstCount` 10, `BurstDelay` 192, `AttackSpeed` 1800, `CoolDownOverride` 1500, `Projectile` SuperDragonProjectile"
+    },
+    {
+      "mechanic": "splash",
+      "client": "`DamageRadius` 160"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`DPS`, `Hitpoints`, `Speed` 175, `AttackRange` 300"
+    },
+    {
+      "mechanic": "TH per level",
+      "client": "derived: Laboratory TH needed for the Dragon level"
+    }
+  ],
+  "boost": {
+    "wiki": {
+      "baseTroop": "Dragon",
+      "minBaseLevel": 7,
+      "townHallRequired": 12,
+      "clanCastleLevelToReceive": 8,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperDragon",
+      "Original": "Dragon",
+      "MinOriginalLevel_raw": 6,
+      "minBaseLevel": 7,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_DRAGON_INTRO_TH13",
+      "townHallDerived": 12
+    }
+  }
+}

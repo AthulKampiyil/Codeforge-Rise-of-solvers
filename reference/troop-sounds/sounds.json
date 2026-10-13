@@ -1,0 +1,5943 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "logic/characters.csv": "5c3acc5b46ff9e7978f406b540264e65c93a846b69d03cd43326a9853703cb89",
+    "logic/heroes.csv": "658c9721fb0fd5488b69ca3555ef5597d521f28dde95af051a2a98ccbdd65197",
+    "logic/spells.csv": "385159e00327e6a1567cd91f1585b4ed0717d3f4475f0823398243482598289d",
+    "logic/effects.csv": "5c6d5b67d6407345123b8d55872ed77ee6697b466d20d1fa21e25a723c511e9f",
+    "sfx/Spell_Revive_Activate.ogg": "6585b34f634127f00c6518c9680452d46c8363a55b62197a7f162abe55b703f6",
+    "sfx/Spell_Revive_Deploy.ogg": "27a21d98b7e397417d7f1b654ed3b6a51fe98afb0443b3ba0439b763f8a700ac",
+    "sfx/Spell_de_IceBlock_All.ogg": "e5466d63d04fe3df0ebab25a9dca4759ca98be96598d28e0616b266022f48fd2",
+    "sfx/Troop_BarrelSnake_Attack.ogg": "0e5422c6c8ed413fee08192398dbe2c4327a7a32f48c74ee36df21f38cd45cf1",
+    "sfx/Troop_BarrelSnake_Die.ogg": "31881f9fa54445aaa3eb830b33ee8441d58a07b73b1c9f19ce2a48033b178310",
+    "sfx/Troop_CommandTower_FireBarrel.ogg": "a3516db57e1311de130396eb61cfe4159c253d8b34306c14341f896eb917d338",
+    "sfx/Troop_Furnace_Deploy.ogg": "ae3cf944ae44bccc3a370e5fa0e67be39660fae80a1677f117b814ae6fc714d4",
+    "sfx/Troop_Furnace_Die.ogg": "0510744455ce0656fa544a91cf8e00a2d2ccd6514084b74fcea6e951e172ac49",
+    "sfx/Troop_Furnace_FireSpirit_Attack.ogg": "0e69db6249b485d1bfa8d3cb8b3968bb9f89c76ad92471d6fafc2f102feabd5b",
+    "sfx/Troop_Furnace_FireSpirit_Deploy_01.ogg": "a4a745ffd68c2b4237e257be71290380b1fd5c3a749fae5d8c1f5ef9d029333d",
+    "sfx/Troop_Furnace_FireSpirit_Deploy_02.ogg": "9d2605fa9e4d64cc0e0b6172badc50645fad3b9e03cd855203791650fa61acf7",
+    "sfx/Troop_Furnace_FireSpirit_Die.ogg": "841006e976b28a33f6e24435f0768c67c1f8ce3074810f3af997cb38670da082",
+    "sfx/Troop_MeteorGolem_Deploy_01.ogg": "e507348c3b7ca9568d2e36df34f4e6e248a7c0db7ed02c8e72309f9315e344b2",
+    "sfx/Troop_MeteorGolem_Deploy_02.ogg": "88da951b178e2ec06c8342e5c7eb51c741cecb9864f87df683e78efb40242df7",
+    "sfx/Troop_MeteorGolem_Deploy_03.ogg": "1afc9506328ce2e66b5b47388144b40c44f77c80cb365b4bb93defa7304b6bb9",
+    "sfx/Troop_MeteorGolem_Die_01.ogg": "0048f675d10c3b1b72c6073bf2890ed71760401de7bc57dcab34480d6df5266b",
+    "sfx/Troop_MeteorGolem_Die_02.ogg": "95208acdc164aff998f0292d63a7acd3c3b748070dbfde2b7f54bd3df93d1cd4",
+    "sfx/Troop_MeteorGolem_Die_03.ogg": "cd618bd72a75c0d410162ef589669b30f50ccdf76d8b967da51111378164dbd8",
+    "sfx/Troop_MeteorGolem_MeleeAttack_01.ogg": "66433369c356217d646226f78063055acb4b03e549e62ecbd9f17582b0ada834",
+    "sfx/Troop_MeteorGolem_MeleeAttack_02.ogg": "e2cc725203ee8a7809f0727a6781d09e4e982d1d80a0ff05581d1fb1ea55f14a",
+    "sfx/Troop_MeteorGolem_MeleeAttack_03.ogg": "88e82fbbf978cb8b27976e6784aa4cb27e4dbe0acd14b9d6d411e857c621696d",
+    "sfx/Troop_MeteorGolem_ThrowAttack_01.ogg": "542d32cba20f014b3d588ec0cc686d9d6223ccaec5c8c889f73a2af141d7b82e",
+    "sfx/Troop_MeteorGolem_ThrowAttack_02.ogg": "7373dd7e51410fc9676a7959698bd141e41050737acb46f89784f8fa06dd0d3a",
+    "sfx/Troop_MeteorGolem_ThrowAttack_03.ogg": "2b81422a7b3ef352c1b1294943b5ac14d7ece91f9490917260ff88f372eb4390",
+    "sfx/Troop_MinionBodyguard_Attack_01.ogg": "7e380efaf4af6d5d797e72099602cd519e81bb87a4b3daf225850e82b8f05e9f",
+    "sfx/Troop_MinionBodyguard_Attack_02.ogg": "4b1356d230a6e4813057c723a99b86eb5c296a1111f6606228c47d65791b5847",
+    "sfx/Troop_MinionBodyguard_Attack_03.ogg": "8540177fb3d57bae123e1df1f9154b220be78bd3038bbfd2cb139694d4381b85",
+    "sfx/Troop_MinionBodyguard_Die_01.ogg": "16ee69b11785958e6f891a9ccdcb44eb5642edaf532ce6304d3e7e8edb2ae5e5",
+    "sfx/Troop_MinionBodyguard_Die_02.ogg": "cf089c5fae90bc81d15e5628aefc3e980985276f908c9b71ea4e292c1f1542fa",
+    "sfx/Troop_Snake_Bite.ogg": "04013a1bac694084f7d5701f8dd0fc633fbf8aa0ffbce13e2ffd481ea0ea2a0c",
+    "sfx/Troop_SuperYeti_Attack.ogg": "b6d68a6cfd3578d3b113a958d0c22954ca0839a55d48d69b32edffdfb665f92d",
+    "sfx/Troop_SuperYeti_Deploy.ogg": "8d9a8440f992f84fd8ff9658f7b602884f5f02cb5459b9f55a9eca3674ac2432",
+    "sfx/Troop_SuperYeti_Die.ogg": "1154bee2a70d0db8e6c50b7a20b1624cd76b4e01522e673dd7990cecbe82cb01",
+    "sfx/Troop_SuperYeti_Hit.ogg": "095a199f617c7364b5eb82abb32e80f1cf4bc1e0dae976c74fc06352d9cdae97",
+    "sfx/Troop_SuperYeti_Mite_Deploy.ogg": "7a4c18dd2120166ed383dfd68d64c4379793df2b00c744b25c0b0204cda342aa",
+    "sfx/Troop_SuperYeti_Mite_Die.ogg": "1c8208eadbcfb38552aa75c5b5b664e43d8bdc05a0fecdf4f465ea3f926fca9e",
+    "sfx/Troop_SuperYeti_Mite_Hit.ogg": "16fc78a83235a8ecfd88db5f7120718c6b252fee35dc80c003456d7a87cdbbe6",
+    "sfx/Troop_Thrower_Attack_01.ogg": "83ff1cd86b7c433fee026ee634e0b3342ce4d91d511d59de83cf04a7e42e29f4",
+    "sfx/Troop_Thrower_Attack_02.ogg": "b3c96d80889b48ef0ee5301a45052c6f2b8b1ad9e43759a35aa6c38e903010da",
+    "sfx/Troop_Thrower_Attack_03.ogg": "04351be7b2f44af6207540927b1f3033ea6a4b2dafdac7a73891d1c6e9899c40",
+    "sfx/Troop_Thrower_Deploy.ogg": "357f0008938495737a0018d0bc5549df8e1de79cd4e93fa0e55acf9e932a73da",
+    "sfx/Troop_Thrower_Die.ogg": "0897badb119a121bf0b9b5d5baa84022faed2e0ebef1c5be9474729d9214734d",
+    "sfx/apprentice_warden_attack_01.ogg": "50ab9ef98f0e9061025ed3103ee56e4f86d7ace3e607a0e794fd7cd49d28f4ff",
+    "sfx/apprentice_warden_death.ogg": "cc418be9bae5c4c5160e988eeb169874328325bae522c183261eb111da4977f9",
+    "sfx/apprentice_warden_deploy_01.ogg": "eedaca72ea9bd4693391b74e4bf621420ee64988cdc719e4ec20032c76b8cf12",
+    "sfx/archer_death_05.ogg": "ca2b414c9bf55a2c318df167b87ca0482fdf39bdc1a0239b259334ad657b93bc",
+    "sfx/archer_death_05v2.ogg": "f410af4372277d83d92425e2860f1d6ae5d4756886ad946acd92f599cffba217",
+    "sfx/archer_deploy_09.ogg": "b0914d1277ced21a8976b6e07661e31d42ea34a9c778da2808cb82c915d434fb",
+    "sfx/archer_deploy_09v2.ogg": "1a65e00b2eacddf0c36d1cdd84bb5eaf8b6f3de2d30cc8c82dca04c06b0fd258",
+    "sfx/archer_deploy_09v3.ogg": "77fa9a55b208dfe10c5f247e02fd27cd48e52e7f2bcb538eaef14ba117c5c429",
+    "sfx/arrow_hit_07.ogg": "f331fbb1d307973e4adfc2b673fd167f636e2babb887a90c1c0d3c1481581db3",
+    "sfx/arrow_hit_07v2.ogg": "24012a7b5afc5834cba6cfaa4873dc9a7fd1d65f3fa293b7bcd2a67b439a3b56",
+    "sfx/arrow_hit_07v3.ogg": "05790e6c00742cfab1ab746a8bce34a4d74cb1c86ec6c34fd13b5e1fdfb144b9",
+    "sfx/arrow_hit_12.ogg": "cac3188634691c1cf73da4a59331349eee0d137f5bcf8a6faa8fc265320c2e39",
+    "sfx/baby_dragon_atk_01.ogg": "109835ec49d4e28fce13371cbc5364a85db205d892d3604b1fb3eb862b96e952",
+    "sfx/baby_dragon_death_01.ogg": "dbf4116627baab121d7513df2bdb16282f255313ab4f7e22f9d736617a4dba96",
+    "sfx/baby_dragon_death_02.ogg": "c7d1d6eb124107c6e9b4fcfc87002da7057c4831c6d966fe6ec4b0e157ba8b83",
+    "sfx/babydragon_deploy_01.ogg": "420cd8ced7d186682e4d4d9abf051b5925232def6669f25d5f651f8458c0efa3",
+    "sfx/balloon_deploy_02.ogg": "5b500926fbd61606eb3afc3991cb85e9636fe1bbc56751a85a7305df4e8c9f66",
+    "sfx/balloon_die_01.ogg": "df9c4635294089581c5f08441bc6365ad2ce384916aa76addd5585dc36d140be",
+    "sfx/balloon_hit_01.ogg": "e5571225ed7054ad0e9825d03c5cfb49d2857a79b073b5b49ca54ac0e656a484",
+    "sfx/barb_deploy_11.ogg": "9713f24a57939d9f8a8872301e7dab89908ab389c15b8bd422ea92256f03d146",
+    "sfx/barb_deploy_11v2.ogg": "31e10f720abc40d38e70ccc504c8a528655f5420e672c69e30c35ec5b9687533",
+    "sfx/barb_deploy_11v3.ogg": "8e4c9b287c4a10604aa42314917eb83de336899d4f1248d3ac60ced0d881b0a0",
+    "sfx/barbarian_death_01.ogg": "686d0f80b78fd207d1e978bfef9b7bcd16ccf204b5496987b47482c7b733aef2",
+    "sfx/barbarian_death_02.ogg": "0c6ca7c87d0c20d535146c4e7204354582016c4858acfdd80c9ed9a446590efa",
+    "sfx/barbarian_hit_stuff2.ogg": "a8f0afeb74296e03d3da7d2c5ec9740740592f953d74dd6e8434dba57a7ef721",
+    "sfx/barbarian_hit_stuff3.ogg": "7a99f8fb894527939d84055325ed6036f083e32286e95be00ff1b031d092870d",
+    "sfx/barbarian_hit_stuff4.ogg": "385442a1748731dc225c0852492597dc718cc896d6227991d1c42ba7c6fa3912",
+    "sfx/barbarian_sword_swing_hit_14.ogg": "8d3e4b51139697db4ade432fe58229638bd77817c9816f1ea93235e7db6b2660",
+    "sfx/barbarian_sword_swing_hit_14v2.ogg": "85fe25e0bfe8dd2fca6e1db51f8faa72bb8e6a5c6bf92d0cf6bff6f1c4c45a2f",
+    "sfx/barbarian_sword_swing_hit_14v3.ogg": "6d9e49d9a75b7f794653c3a6d4cd37bbfe893d2ee62f48fd8dd1f2618a8f0017",
+    "sfx/bat_atk_01.ogg": "35c9380472e2a294eeba31b50ce0019a3387ea244d146d114f8277081aeefb6d",
+    "sfx/bat_atk_hit_01.ogg": "8ea36be9420fe52aced56ecda25a46eed160faad8acf370c622ed85440a4e473",
+    "sfx/bat_deploy_01.ogg": "e8e449975e656cb98a6c1e7f3787ddbc9f9e035abf1514dfaf8846dadbe0d8b2",
+    "sfx/battle_drill_atk_01.ogg": "43c98104363a88610799db8bd01563045f6131be1789c7d0a96165cc165090d2",
+    "sfx/battle_drill_deploy_01.ogg": "e61a8064bc8bd34918efcd2bf806dc0ebda71a425920293fedcf68dcc460f484",
+    "sfx/battle_drill_hit_01.ogg": "43934ab3426fe3caab86d7052446d7b283715f7cdcef90e8ab68e0b2917de373",
+    "sfx/boarrider_attack_01.ogg": "8686b819f9740be462c6f7d0a7f6db8156696b1153b7f69764290f2738fd5e12",
+    "sfx/boarrider_attack_02.ogg": "3779e5bf6e975dadd445e0ef35105eb97a28c4f888a93dc592da55727e798d38",
+    "sfx/boarrider_deploy_01.ogg": "7e36d0263323081ae61ed655c817fb5adddac3cd211f5085177f956edde5bff5",
+    "sfx/boarrider_deploy_02.ogg": "ea9c2ca8e3a257030fe286300d9a707f549e88e162917e7c1dbf019f1c62472e",
+    "sfx/boarrider_die_02.ogg": "548bbd68a529306da4a280a1b3207b8e49762a564e5e3c643d2a97ff4c14f37f",
+    "sfx/bomb_tower_hit_01.ogg": "0320c2aeb7f412dace1acf16b4727ea44c04f93240f7c51486be5c23ae42bb84",
+    "sfx/bottle_break_04_lightning_01.ogg": "1e8853573f45b2b213de654f898f2fa20d579a9c525a02f7fcc15df55e82f60a",
+    "sfx/bottle_heal_magic_03.ogg": "74e70563366200b350e9ba68f161b9eb3c6385392ccdadea0376d34081d630eb",
+    "sfx/bottle_jump_spell_01.ogg": "031fb687e2978ee88b7169bc6bcd2d300b68a35b3a3701d4b26dd9399b2fee44",
+    "sfx/bottle_rage_magic_07v2.ogg": "0bc863901ae01414498d7c5a7bbcd37500fd6ef7b11769c13479e1dc6856693e",
+    "sfx/bow_place.ogg": "9b155458cd993e03f02fcef0a51a62522ef8d05c49bd0be1a925bb5ae055dc10",
+    "sfx/building_destroyed_01.ogg": "fd8295765aa86ff5c7c6be1159cd8fc97aed3c858c29fbdb1af5e3d5c5ce7f04",
+    "sfx/cannon_fire3.ogg": "51fc989854ab92f3c2941196f56ef845ec23ebb8966276b2a1515c9d14232e86",
+    "sfx/cannon_fire_01.ogg": "b241da4507e8e69ecf31fdd815a0f0d8293d12ebe11f6abfe452b42cbd7c4deb",
+    "sfx/cannon_fire_hit_01.ogg": "2f46562775a88680fe59a18cbc9fbb9ae1401a93796169dab9d9eb02341afa86",
+    "sfx/capital_golem_hit.ogg": "b17f53cb14794b6c2a2562fcd979c312106a22d50d4bcef9e6634b38f2828e06",
+    "sfx/clash_fire_dragon_atk_01.ogg": "b24bfa857a302c1a5305b60d93db2ed7d6145a92a9587e1c8f3c04cfd112d4e7",
+    "sfx/clash_fire_dragon_dep_01.ogg": "c611d9b6509b8768b09a5389a7dc5588219619941e88ae4a57fa1fc02498311c",
+    "sfx/clashbat_spell_01.ogg": "703cf46f49c529f3840370c4858a20736c4effb4fb2b76705ec6f2f13cf056af",
+    "sfx/copy_spell_deploy_01.ogg": "79ac3bcaa823c2f4b991c98a90f4be067c56e465e69f77a92b3660ae3cb1955e",
+    "sfx/deploy_pekka_05.ogg": "4936e558a4884f9690c9f331e0072210e2ecc5d2710fd2ddc6be1e8465ac1ad0",
+    "sfx/deploy_skeleton_07.ogg": "cd0984e467f778d69acc23c25cd3a8f4d37af740c92058c7970223e964b4e6b6",
+    "sfx/deploy_skeleton_07v2.ogg": "f535c010bbd48dc9993912ade0c16fdc498d05906a64da378c4beb67f81c2bb8",
+    "sfx/deploy_skeleton_07v3.ogg": "a09f394e382d492a2a4ad4954ffb2afc0d400a5915631246fc82fa0986434f3c",
+    "sfx/dragon_attack_01.ogg": "f9016714972eddc5291fd98e597f5c70488ce1cf4994f758386d5fe198b619b6",
+    "sfx/dragon_deploy_01.ogg": "7b48aac8ead8b04989901b50f838dd83c1c09cd1b0c9e87272c742e28e77cd8d",
+    "sfx/dragon_die_01.ogg": "704b6afaa96cbc6f7e5c578c15bbb83749a4ef9bd7a58a1d62f7e5c22b0d0460",
+    "sfx/dragon_rider_atk_01.ogg": "930116b021344a3744dd5f10d320f1bd455fe7814e2eb02a706cc9745090ae66",
+    "sfx/dragon_rider_dep_01.ogg": "0240be003222b2b37b272baed102453b3f0b34be6c9f5c64a6ceb42d2bfb9ecd",
+    "sfx/dragon_rider_die_01.ogg": "c426939001bd7745d2b630ae41482a0e6c6f8a05972f67ab905d39ff9445afc2",
+    "sfx/druid_bear_attack_01.ogg": "93f96eb0ff2e7ee893b89c4ddc96399a8c862c90665b9407454a8ff0c946181e",
+    "sfx/druid_bear_attack_02.ogg": "8d1cde250ef6f454b05f4187e4275fcf2f72f67dd2cbd582b781a524d7da91e7",
+    "sfx/druid_bear_attack_03.ogg": "1d0222a4121c3ede729b83a1f287c3abf6416bcb5530a7f6c763a4216be6e6f7",
+    "sfx/druid_bear_deploy.ogg": "782bdf0cff2f905867a10b49ed975ab2ecb4870ab06d9250b8d926ca18cd3571",
+    "sfx/druid_bear_die.ogg": "5625bde82ee78c4232075e352be9aa949a320c8b87ea31c0a1b53fc0610fbfe0",
+    "sfx/druid_bear_transform.ogg": "023f5c38da0a712617e33bfe5ea0fc8db598915f679d9f6790979f2af67fed2d",
+    "sfx/electro_dragon_sfx_atk_02.ogg": "9e70b720c5aa2d41a5b13aadabff984ee2ef59b9eb620ff9c0ccc1ff64bfed19",
+    "sfx/electro_dragon_sfx_dep_01.ogg": "feae3ee2745e55f361c2ec8efb30d14e393c90e83d30c8446c8eb67f0171c443",
+    "sfx/elektro_titan_atk_01.ogg": "43c503949447ba2306c0c08f53f17b704424a8f364400c7a46bd56c823f6b9ba",
+    "sfx/elektro_titan_dep_01.ogg": "e974decc146470ebc30fd6a70bcb8681e95857fd16023a69e9a6d7d00c22b097",
+    "sfx/elektro_titan_die_01.ogg": "89dfa821c2eb312a9ba9a10ae2f8a188d2eda6009863e70802957c526c58bea1",
+    "sfx/explosive_arrow_01v2.ogg": "2743212b46001112a8dedbc1aee1c944389d21f3f1144ba9e1c5edf3a9b79e4e",
+    "sfx/fire_siege_fire_01.ogg": "4185767e854a23b68f362c53a5bfd6a80ca6b58a9a2b7ec9d78facb7b77d319c",
+    "sfx/freeze_spell_01.ogg": "5af71f1c5dd30d27173649ee585021ba0f08572b28097c280bdcaeff11885c50",
+    "sfx/garg_attack_01.ogg": "b63cf9571aea371a003db483d285d670e0db7e4bad26b5e8b97c953d4e53424a",
+    "sfx/garg_deploy_02.ogg": "5afca23213da1870fbba082f301f0c8caace8dd351e4a6739244d3d65dd09851",
+    "sfx/garg_die_01.ogg": "0221a3232d95b4cc9b9d514ecc1a7d194539f11f612c70f58efcbef4b81175bc",
+    "sfx/generic_hit_01.ogg": "5fca48e71d21be79eb6d40a1ca1ad3a002e3d69ba72388b2eb6a4d2ec10e5934",
+    "sfx/giant_attack_05.ogg": "41395054e6ffabb65303911c9654ba445e78f40b4b340306d951bd5cf6fe1afd",
+    "sfx/giant_attack_06.ogg": "761115b28f4d8d38401164ac714183e933d4231b153ac89608b3df2eb6a581e1",
+    "sfx/giant_attack_hit_01.ogg": "a98d5797598ce2d4b546caefe906b7e2b7287cbe8aa99a498edb4f537aa54376",
+    "sfx/giant_attack_hit_02.ogg": "87c6b4edc3b1238bdf24eca64fa7f20d2d565fbfbafed9fff0dd74753a826ba5",
+    "sfx/giant_death_02.ogg": "df727b05aa60ed37f62fd63bd3f2993bc997d06764fd8484f96240eaa595690b",
+    "sfx/giant_deploy_04.ogg": "519556e4fae936cd92708ba7f431a11799575b733359fce20cb4291eb7756067",
+    "sfx/giant_deploy_04v2.ogg": "c9cb02c7d3118c2168fc19f33e22173be59d73cd22f379038a2d24c4f6c7ca4e",
+    "sfx/giant_deploy_04v3.ogg": "a00102419e39f848bf1ac9bb5562c8d16e709d83b0fdfb565e5f59d4aa352454",
+    "sfx/giantskele_atk_01.ogg": "aea13e2b376e845822adf427a8df19099b5bbc531cac17d6d5e2533ffffa22e0",
+    "sfx/giantskele_die_01.ogg": "a1ab6899172628a3767559376eb841522b151ef80468766b1150271929b396dc",
+    "sfx/gob_attack_01.ogg": "5ebffab23ce2087c2ad6b2346dc106c4025e4bb5adce8578c425845d5e4ea8bb",
+    "sfx/gob_attack_02.ogg": "57f28f68e41c922162c856078889872d79501b03bdf39246d5ef8cb9e68d33a0",
+    "sfx/gob_attack_03.ogg": "a03fcc20cb45f56c63dc2141b9552998952716669847d404fafd20a3e7269511",
+    "sfx/goblin_death_02.ogg": "c0a93345d19173ac47ce3fe52cc0d39bb93e22d7a1b00fb4f22541e70b9f118c",
+    "sfx/goblin_deploy_14.ogg": "19fbbee48c6fe5f69d5bf09adb8e45e826e7d86482a5e84cb0467b7ce8933e53",
+    "sfx/goblin_deploy_14v2.ogg": "9d453541b06214f6cce7e2a321537e19af86d04db77f90a66dc8919e1d5ff606",
+    "sfx/goblin_deploy_14v3.ogg": "6051269bd0d25977b3381c19fa7c00b3c1570a9d86615bcdb0fe000d03d9ff87",
+    "sfx/hasty_balloon_dep_01.ogg": "a621dd1ea2d2664f74b1ed6c8910a5a92f40e779d2fb215aefe5e0c6fd46e6d1",
+    "sfx/headhunter_atk_01.ogg": "dee6542158c2ee3029a17dcceb4ec5f4541a7e3768ea500bc27d5434d71f1ac4",
+    "sfx/headhunter_atk_02.ogg": "a0b4654926983450acbc0c3c81a903d595eb91ea94f9101ac16578c9c11520bd",
+    "sfx/headhunter_dep_01.ogg": "05c824a2f33051f349e82f3774996b331f27a9dbe7f4dfc2e00ea6954201f294",
+    "sfx/headhunter_die_01.ogg": "53b079f314b80d7a1765da10e3c2ee491a0c259d251fbe78f4cc41fc85a0a19f",
+    "sfx/headhunter_hit_01.ogg": "99c035d809cd644f21666c8bad7afb422ce60059281dfb22423c64cad26abbd7",
+    "sfx/healer_attack_01.ogg": "86c41020b6d8790ed65b7ed13f27bfd053bf146a78f76c857342ead6b2bdfc1d",
+    "sfx/healer_deploy_01.ogg": "e0f333c562049499e088d8127d8035eebc152bbd521a487cc55ed159c677e370",
+    "sfx/healer_die_01.ogg": "765e870e42b2f00f99f341e72f3c88badc598e5c227e2a2d796b82b6c32e9ca3",
+    "sfx/healer_hit_02.ogg": "d874a318f1742b88281cdfa230a89eb95791dac58d137f44fbb906a1647cf7fd",
+    "sfx/hogless_rider_dep_01.ogg": "711c10ae092bf90940516a14b8e74a4d96f2065b723a8c554821565f166ab79e",
+    "sfx/hogless_rider_dep_02.ogg": "e9b51b4fe1dc67ef51f8c6d890c6597e23c5d7cae14446263ffbd77e2777c95e",
+    "sfx/hogless_rider_dep_03.ogg": "bbd144632d0fdae1cd6ca390fd2eff4ad04a138a3cd02a64ca76875c0de6cdf3",
+    "sfx/hogless_rider_die_01.ogg": "42e35fc42ce08cd23caf78947dd60df454ee4187971140f15a3c4cad53826bbd",
+    "sfx/ice_archer_deploy_01.ogg": "722bd223ab966a7503db9ca5e565c1dadeb1b4c6732e4a77829bb14de251d9f7",
+    "sfx/ice_archer_die_01.ogg": "0c98efcdec183b28a406a26e1bdb0fd5f3b2740d36944211b4dc016949907b5b",
+    "sfx/ice_archer_fire_01.ogg": "980d3fb845c13f8b91eee1b52b87ff72def460871b469b5355e84e7aa0c865f1",
+    "sfx/ice_golem_deploy_01.ogg": "df50a74b73f96a5878bf5eeb515644db8631fd41afcfefb189fafde93b6bec4d",
+    "sfx/ice_hound_atk_01.ogg": "d5097564467b9bf56954412c70370707459746afcd6dc66b6b3cd763483723b2",
+    "sfx/ice_hound_deploy_01.ogg": "5d2afdb9b890609195c3b7d7dbfe2b968203bc0e97b2cec2e40c8f4daaff18e5",
+    "sfx/ice_hound_die_01.ogg": "3807eca5b3e6c9a91abc1780d63b24536b76ffd17ecfcbbbe7f66a1bc5b940ca",
+    "sfx/ice_mage_impact_01.ogg": "2b145091fe799f47532f5589bce36a4f8ac5289a5240680c5849fb4e13fd381b",
+    "sfx/infdragon_deploy_02.ogg": "2c37ebd986f3e0d7118bc069b01d27e642946ba67de462c74bfedd79982e4ac7",
+    "sfx/infdragon_die_02.ogg": "66ff99186be488b65fcd19ce925fc92fbb9b40d94806d826df080464f9a5bb7c",
+    "sfx/infdragon_fireloop_01.ogg": "7565097dc4682a2b6b6a5627239b1b6b8e6b71869b9c95107c90dfa9c92716bc",
+    "sfx/invis_spell_01.ogg": "266ee80074c090c734ea9481bff5b86a08eb1d07208730ee2ec3a8faa0b553c9",
+    "sfx/lavaloon_deploy_01.ogg": "f12be11f9ff4b92ca6e2105fd518b54e104a19822d9892b02a0fa411e1f96cb0",
+    "sfx/lavaloon_die_01.ogg": "e47f7b7a7cae049fe702adceb9062c7c3f58fef92038df4030683297cc52b90f",
+    "sfx/lightning_amb_01.ogg": "b74fb75c1db5cbd2bbcbd13c9fb4456544320e69e58be19348c9e6eaf30e1d16",
+    "sfx/log_siege_atk_01.ogg": "63aee93714993e73dad7e4436b2f38b9c727984ac98e865092dabb2419ed518b",
+    "sfx/log_siege_deploy_01.ogg": "2161f34fca23dffe8035fc523bd49656b019a366a980d3e0831616e81e7b9bd3",
+    "sfx/mage_attack_02.ogg": "590e29c7e17e6a61b5ac3adff6cfd1538a7a2aa935e4150b34ddebca5311d099",
+    "sfx/mage_attack_02v2.ogg": "31002ba09312ad0d3efa52e68f1959e41d0246191eb35a86a2390b0dbd6a37c9",
+    "sfx/mage_attack_02v3.ogg": "b9683dd1a771e8c1f9615af3cedc4592f148cb3cf04a7d108646d274c3774c54",
+    "sfx/mage_deploy_06.ogg": "be2a90a7ca629ed8ebf3718be96cff3b448f55e7ae007494e95ec4aa0c258d79",
+    "sfx/magic_bottle_fall_05.ogg": "9845e6d457a86d608715cfc3321d167d1c5c714c00edbf70b0eeaa37cd082778",
+    "sfx/miner_atk_clash_01.ogg": "116d14225433ae95c57634bd027f66ed42d3d780db72da470895bf1256f64800",
+    "sfx/miner_death_02.ogg": "c001997d87221e565f06c8861cb36f2b4e3347dd47ab01249549c4bb9d29acfe",
+    "sfx/miner_dig_oneshot_01.ogg": "eea806e20ab439a7f13675c16b1b7edb67c02bd20c452ab32c8aeeeea1d6bf0b",
+    "sfx/mortar_hit_01.ogg": "3d54d10262b8ac7b59faef7a4c75a62c161855bb78ed90a2a02fb414f317d4cc",
+    "sfx/overgrowth_spell_01.ogg": "51a198e32f63e6699f7643bd9db128d1c6bf3791606acb3757218a2b48bbcb0e",
+    "sfx/pekka_attack_02v2.ogg": "3469fd98c9e1ee5e19b630e470e525b15eb53e14a79c0aaccd1a3b2f9d4f44d9",
+    "sfx/pekka_attack_hit_02.ogg": "ca497e4a04b162e96009dbae7318b70f4329d967d17649e59f90a17671219f72",
+    "sfx/pekka_death_06.ogg": "5aabff914b581b4ac1ada84ffea983e51a390087f6393beb643adcccf25e5fa7",
+    "sfx/recall_spell_01.ogg": "2bc4bf96e8acd77461b3d9bfd91357bdd1cd5018347e98542386e537a34ec418",
+    "sfx/rg_atk_hit_01.ogg": "830adf5ff581cf5008e932c5b4bac03a5f8b6bc5ef84bf8c90fc3be97f0df528",
+    "sfx/rock_troll_dep_02.ogg": "4a4b05793ada952085cdb757d09cee4c351320d18d41625bb5e36f07292385d9",
+    "sfx/root_rider_atk_01.ogg": "e3dc599c922f28d2a49b1e7af35c3b5c9dc3e1f9439a4352d92d204ce86ce391",
+    "sfx/root_rider_atk_02.ogg": "dd7082f71f500ff79f9535d401b27dcd527b645411a356a6fb017d18651500f0",
+    "sfx/root_rider_dep_01.ogg": "4a9d030e540f6eecc3ea31be9a54a0990efa5f8e2ed49f87579f85be27c8da38",
+    "sfx/root_rider_dep_02.ogg": "3aa27ebc301a072d31811e4f519e51a8ae47f2f63c2fd97ee1579244f3fbc62a",
+    "sfx/root_rider_die_01.ogg": "196950e0da87f6c40c6ffd7d63115de79d8d27b858eac79b220e8480e8e117f3",
+    "sfx/root_rider_die_02.ogg": "03804d84e1fecf036f32b6cb8ef8ec5a5b89d5047869ad3a5ab485d8205c1d04",
+    "sfx/sb_deploy_01.ogg": "064078606be5c13a98f628e1b9a90e1923ca83fe2b9da43f323b4a171635df4c",
+    "sfx/sfx_spell_def_brainwash_01.ogg": "051753a3839823c65bd3bea1ae8eb144a3c419664cf96585525a12ff6be875a3",
+    "sfx/sfx_spell_def_brainwash_02.ogg": "bb359fc0049fef4251142e3433a75eabe1c0ef2db0feeaed1332215f0172bde5",
+    "sfx/sfx_spell_def_brainwash_03.ogg": "a7bb35127c68afda266f7c1158d8b5ba758b2f9232022ddda207f593f0d58623",
+    "sfx/sfx_spell_def_brainwash_hit_01.ogg": "94180ab32db8a3d60bfcb2f5b0d9c0ba92d5a9dfd7c21342546da04831ce8bf1",
+    "sfx/sfx_spell_def_brainwash_hit_02.ogg": "b770e0b914a77243a3af3797361d6aa098b04f648e6b42626cc4b01c205b7429",
+    "sfx/sfx_spell_def_brainwash_hit_03.ogg": "372adc42ff535f27510432b41d7b8d727918816babf0d43b77f9d382df6a2164",
+    "sfx/sfx_tro_ruinknight_deploy_01.ogg": "db532bf26549fa70d9042f6a5832fc1cbab3794d6f70e86aa40f263a4adad05c",
+    "sfx/sfx_tro_ruinknight_deploy_02.ogg": "68f7accdbfcf5f2052b29690acd401a7af0eefd2ea0c88f996442a4e03d1bd76",
+    "sfx/sfx_tro_ruinknight_deploy_03.ogg": "84e71529279e5941998f27935fcd6a487f449caedd8d4743e51b0789b1b9b04b",
+    "sfx/sfx_tro_ruinwitch_deploy.ogg": "edf07471b6e3c4a7f1da1e2241b3dce5eaf363f1a2d92ce9f65ddf2bb297f982",
+    "sfx/siege_balloon_dep_01.ogg": "deaf31e014ffff7e36b146d6c4d39bd1c3ced66079c636acae2707e6b1e226b5",
+    "sfx/siege_ram_deploy_01.ogg": "dc28922fc5a18a261c6ddf61e9dac9cd77abd13fea7cb101d54cba899b234d08",
+    "sfx/skelly_spell_land_01.ogg": "e3a71a4eae592240a56ec264f6169dce23bf760f96d7210f9adfbe4ff810b7b2",
+    "sfx/slimeball_fire_05.ogg": "4e922606665365afa9e52f045485bb86da7dcf47e0bd5cd64fa7ca38175e83bf",
+    "sfx/sparky_shot_01.ogg": "7f0b92a9b33f9f125801e53847caee4ee6b597b71d07157cb8462d8c16de6525",
+    "sfx/spell_totemtower_deploy_01.ogg": "668c00391dbcff02d58808e50469aa6b45947880b375e9998cc474af12a28dab",
+    "sfx/spell_totemtower_deploy_02.ogg": "ffc4b4504d11ca041f96d0678ea927a0956bfbf43053df77014a4066de0bc93a",
+    "sfx/spell_totemtower_deploy_03.ogg": "3f185273a5e00fb013eca1f9899a99f5e384592e6daeefa28c0535660ee55585",
+    "sfx/spell_totemtower_destroy_01.ogg": "2b9db1ebb7b62d1356cc359ac14fcbd2afec5eca61491f24cfea2be100712ca5",
+    "sfx/spell_totemtower_destroy_02.ogg": "551b85a978b7c2906572f7aa3ad567766524a3290347c217d5f4eec4f8876bb0",
+    "sfx/stone_golem_attack_01.ogg": "5041f71e2d61322c224353ef50c67a6d851958d2248c2496fc0892a6b13bd496",
+    "sfx/stone_golem_death_01.ogg": "d89bd3b77d1ce87dd31784cf5de7d773e64e3d3850dc3b1b17f7028e59ee603e",
+    "sfx/stone_golem_deploy_01.ogg": "65e893366d279ebeefa6727d80d54b4a50c1b4f9b21de5ae40b19ad8bb780dbe",
+    "sfx/stone_golem_hit_01.ogg": "b431d275adedecefc21ec5c06e473ff4f54647f850ea961d60125a0e013c88b7",
+    "sfx/stonestriker_01.ogg": "121634c4dec28a13fd7798c442670c47032e721dbdb1f95248004ec1157504b3",
+    "sfx/summon_attack_01.ogg": "6ae7f73d60a405a0dc0ce3b98e7b82e5f3620b5f4d351a64eb1e244de8f1fb57",
+    "sfx/summon_die_02.ogg": "16018434218b95b71f1e6ba25b8f556c9e7513f8504697e47c22af0478481e04",
+    "sfx/super_barb_deploy_01.ogg": "0cbec5856a4573dce6de8b52d6fcdb059a1dfc4d278497c4e9dde09809d189e0",
+    "sfx/super_barb_deploy_02.ogg": "fcb9e05ddcdf2912c2e9c30e5cf23733c8006942e386f6060c32fb909d443aaa",
+    "sfx/super_bowler_dep_04.ogg": "ccd9b192705ad08a9d893ab56c507bed8df0b53daea1f3d634423a7d40560a02",
+    "sfx/super_giant_deploy_01.ogg": "c5115c416b7a8eaa6c0ac7578c4f338045b65626dce1f4e2e2c4b8e63528330a",
+    "sfx/super_giant_deploy_02.ogg": "4d174804afd7de36720fd02f09c3e78850b439b5819d800ddd26b126f21af0f4",
+    "sfx/super_gob_deploy_01.ogg": "e1d4cc1850f09be573cc9bd9108013746fe44771b84e7f45c202f6e612640168",
+    "sfx/super_gob_deploy_02.ogg": "09d48d04c170817f75e60adb0a6167ac1057324960c4e5103a20f3a2077453a3",
+    "sfx/super_gob_deploy_03..ogg": "048b5fed06e44449ead9c681ad0e1bd258fe1ee50b3df181030c9e7476a27faa",
+    "sfx/super_hog_atk_01.ogg": "3a97d724cb308b1893974c18dfc682146af7adb698067c6dfa7f3a9ae280c854",
+    "sfx/super_hog_atk_02.ogg": "4b8ed9d9a8e26e6de4a6dcc37193d030d3208d39f50559fd40b9d589cef99691",
+    "sfx/super_hog_atk_03.ogg": "600e7a8aa1217ee5053362f6c2330f167cffa8e2c5fc70820d968b976532b495",
+    "sfx/super_hog_dep_01.ogg": "411a19403a8a69e01bbc693ffa7e87571a5eded9f8b2c5d2b0e2eff8a4daa33d",
+    "sfx/super_hog_dep_02.ogg": "e8539129f799609a9b9e70575b8478fddf3c0f9b470561cc745c18573ff96ff4",
+    "sfx/super_hog_dep_03.ogg": "08f1974d1f5e464bdbb41c7757e5cce852672da43292f0d2017b7b492699a566",
+    "sfx/super_hog_die_01.ogg": "c9acc9e703e397b03199444e7abac46d56eb6d9fe1f5218276f279027951baff",
+    "sfx/super_hog_rider_deploy_01.ogg": "0da0f1c952165f07d13a27db538b0abd745eb0a9e2d54fa5a37b0119cf97f411",
+    "sfx/super_hogrider_atk_01.ogg": "9818b6d3f218f5a5a61e7cbeeff3f2470d5b7e4a020d38d58939038494e37272",
+    "sfx/super_hogrider_die_01.ogg": "b1850b8cd277cc60457bed5c432be1d2cd015efa1eeb42657596fe4a42a1090b",
+    "sfx/super_minion_atk_01.ogg": "f25e1827fc1e90d7a7029bd0c2596983ad870de9376544e5583748cc4ee6e1fd",
+    "sfx/super_minion_dep_01.ogg": "09dfc4f10139358c211f266df60b23d0c0c05a59db3d0578edab633b38be3fb0",
+    "sfx/super_skele_deploy_01.ogg": "b11fbc4d86d1feb3a4008283bc7519ccfa0e15cb14ed3391faa0ab82800c56dd",
+    "sfx/super_valk_atk_01.ogg": "c0c0f4c362e258558a33c084f5a5014dee47265fac52de6117d402e8013b8d03",
+    "sfx/super_valk_atk_02.ogg": "18d3e5fb7217169358088d976c75a38abf4226ff56933df84ef88dac9ca26491",
+    "sfx/super_valk_deploy_01.ogg": "76776bbb7ecc7446e0c0fd9ca1d15ed52e324d92009a380834209e3c7437fd47",
+    "sfx/super_witch_deploy_01.ogg": "459ecb7fed5baf8b84bbcceb4cef039d2daef4601ed18c3093aedb3c87188a70",
+    "sfx/super_witch_die_01.ogg": "38d2482f4f48a29496b057f6a277cd89830592006bd856bbe18ecfddafc2319b",
+    "sfx/super_wizard_atk_01.ogg": "020b5a0dcb223b602b93611d8dd409af4cf0a91ab8fb5c8ca08e7e8d289fad71",
+    "sfx/super_wizard_atk_02.ogg": "9baeac30244bde82b2c41cfdba1fe747e264306203cb183a111f76d3afaeb232",
+    "sfx/super_wizard_dep_01.ogg": "e88d4bb4d6d8a8ec473baf0573039b3460308ce560f76ce42c2432c52457f7a3",
+    "sfx/super_wizard_dep_02.ogg": "70d88b734bf789fe7c0c058fce137fac9a47db78b9c00fb0f8522b8c5c2c897b",
+    "sfx/superminer_drill_01.ogg": "d3f858214d2b25fa5f87994613ad1b537997cfca5629916f6eb783eff8a38120",
+    "sfx/sw_skeleton_start_01.ogg": "039c5b687537688038141e74001f5e104cee06ed9df14fb78a74eda233b72985",
+    "sfx/tesla_zap_01.ogg": "3b3cd34b44efc2d82d0de8c7709e692670fe2fb03cf7f49f4825f70884466b38",
+    "sfx/tesla_zap_03.ogg": "cab4f177f4ce290f369f3345b5e42afccabb7fb510ec316ee1e954e7a5672bf8",
+    "sfx/tiny_attack_04.ogg": "b747578b07478f07e7f38201be92ed1515c7b0e75830e9358e9143d835a4b5d2",
+    "sfx/tiny_deploy_05.ogg": "20567b04ae6584b69345457872d65c5eb6ff94a2c1b045aae0cca4b78dd0baea",
+    "sfx/tiny_die_03.ogg": "77dba856bf1eabbd25c13d54e80c30cfe5ceea9b8fd4d86d19f0136804e6a65e",
+    "sfx/tiny_hurt_02.ogg": "55d4d522a8d685248e2fe90188c45e96eeb423be02c8ebd6d712a2a3abedc8d1",
+    "sfx/tiny_ice_die_01.ogg": "8dc1b41e1afd11d892b8295150b658a41c2569227e7e0ce2318b540189a2c0d3",
+    "sfx/tinymite_attack_04.ogg": "112128945a2cb6771f161609ad942d885da42091cd696f75170ad644a7be18d5",
+    "sfx/tinymite_die_03.ogg": "571c379cc9d7932c465548121f2ba182686b16a82576f1dacde0a3dbcffb3afa",
+    "sfx/tinymite_hurt_01.ogg": "d0f9eb04af66c98dc8b10ee0d1a2214cbab4571047de3e595f48d490cda94ae4",
+    "sfx/upfromground_05.ogg": "875b9ef2a1f57c16d1db693f20cc0b4e4dea06f83f7c578b5dc1f6bdadf9eee6",
+    "sfx/vial_earthquake_hit_gound_01.ogg": "6dca81977adb5ef270fdccfd5c0e1886ded39bcadf5b0068ae31e23a803dcaad",
+    "sfx/vial_fall_02.ogg": "06e60eba5d0e3119894e6585e339f6f72f73548070d5d4bf22f9465a4dd51fcf",
+    "sfx/vial_poison_hit_gound_01.ogg": "b32c7facbb20c61c06b6a4c97dee8b59978e514a52f3753203f7dd90e3da8c04",
+    "sfx/vial_speed_hit_gound_01.ogg": "bc6b29f0a743489a1d15f82ef9dbb12a931901aee56a8f32ae210d4a3cf80fed",
+    "sfx/wall_breaker_attack_01.ogg": "1a3719203c32a6f691b351ccab7768a6873388fd28d94fb97a8704acfadde399",
+    "sfx/wall_breaker_die_01.ogg": "5720c0e5ce9f5e22cd6969e06184b8c1c543f36e22061bc395d992f228121c70",
+    "sfx/warriorgirl_die_01.ogg": "e3454e268caffc4dd72d7d025da118cb251a7e9f4636e123e0ba0f2d838040d8",
+    "sfx/warriorgirl_hit_01.ogg": "67fe61445a047b0aced19fb3d06fdc31fc75f8cf945ce74c615dac7abe4026a7",
+    "sfx/warriorgirlattack_01.ogg": "7a88c1002044aba6d463579514a74e53e793ca32351bc02b9d4c40c2d3d3c5b5",
+    "sfx/warriorgirlattack_02.ogg": "d9cc0c652b1c09fe51151bd836fcc350d1aefddcec94a0aa8f15f3d713ceacfc",
+    "sfx/warriorgirlattack_03.ogg": "18c012a8e5c805900231eeb46c99ef53d4f0b11a9989067ec9a88f901d884778",
+    "sfx/warriorgirlattack_04.ogg": "d33a226fb6eb79949d761a08d3119195a127771c48c55b49760799ca7edf2062",
+    "sfx/warriorgirlattack_05.ogg": "fd26cdb0a7335dc4efa3c2cb7613e782272d30fc56a4218ded21c299794c367f",
+    "sfx/warriorgirlattack_06.ogg": "b040b2b70385db5d618a1f141e4725221cbc2c86f07e46e4203079ffb47af014",
+    "sfx/warriorgirldeploy_01.ogg": "6abe4310010565b50115ceab8a6f390bcf30047878a5df733880a51e88d5bc61",
+    "sfx/warriorgirldeploy_02.ogg": "03bdb5d41ba1a970df5297a482e14ffc117c16dd5843974033978fb6aaaa1810",
+    "sfx/witch_deploy_01.ogg": "6a46c400086fdfd41e5ab90b93396bf86e8b3e537c39d02121e088be077527ee",
+    "sfx/witch_die_01.ogg": "a3af83a3191d4f1cd1b10525f48774807da26f2d366ee86d3587d78def8c2c9e",
+    "sfx/wizard_die_01.ogg": "6d42ed71e0ccfcce8b252544b2c48044c5325f35817afe454e4244e5ee51c3a6",
+    "sfx/wizard_hit_01.ogg": "c0ed0e6d5b0781f70d5962034493b23e9ce17d45939e52f873df9566cda28cdf",
+    "sfx/yeti_atk_01.ogg": "9e48e4220de615cba606e290c7860e7eb7ec291d4a2e514936e2d6503f07507b",
+    "sfx/yeti_atk_hit_01.ogg": "7af8ef7195bfcf1e07e7cbbfbe28addbfb628793655fbf6d4813c9df9c45d49e",
+    "sfx/yeti_dep_02.ogg": "50bbb8519b49d184e7778e9ac09e7a1a6c0174d46ac7f9ee6f706204c22d65e6",
+    "sfx/yeti_die_01.ogg": "35b720b258e96f5cc7ca92562e09aaa3c340145a11e683d82595b89368a6b4ea",
+    "sfx/yetimite_die_01.ogg": "582cb708a6edd796f1267d8449e14ce7014d7d1ad32b27772446614fa6ebd5c5"
+  },
+  "troops": {
+    "apprenticewarden": {
+      "name": "Apprentice Warden",
+      "deploy": "ApprenticeWarden Deploy",
+      "attack": "ApprenticeWarden Attack",
+      "hit": "ApprenticeWarden Hit",
+      "die": "ApprenticeWarden Die"
+    },
+    "archer": {
+      "name": "Archer",
+      "deploy": "Archer Deploy",
+      "attack": "Archer Attack",
+      "hit": "Archer Hit",
+      "die": "Archer Die"
+    },
+    "archerqueen": {
+      "name": "Archer Queen",
+      "hit": "Archer Queen Hit"
+    },
+    "babydragon": {
+      "name": "Baby Dragon",
+      "deploy": "Bdragon Deploy",
+      "attack": "Bdragon Attack",
+      "die": "Bdragon Die"
+    },
+    "balloon": {
+      "name": "Balloon",
+      "deploy": "Balloon Goblin Deploy",
+      "attack": "Balloon Goblin Attack",
+      "hit": "Balloon Goblin Hit",
+      "die": "Balloon Goblin Die"
+    },
+    "barbarianking": {
+      "name": "Barbarian King",
+      "hit": "Barbarian King Hit"
+    },
+    "battleblimp": {
+      "name": "Battle Blimp",
+      "deploy": "Balloon Goblin Deploy",
+      "attack": "Balloon Goblin Attack",
+      "hit": "Balloon Goblin Hit",
+      "die": "Balloon Goblin Die"
+    },
+    "battledrill": {
+      "name": "Battle Drill",
+      "deploy": "Battle Drill Deploy",
+      "attack": "Battle Drill Attack",
+      "hit": "Battle Drill Hit",
+      "die": "Siege Ram Die"
+    },
+    "bear": {
+      "name": "Bear",
+      "deploy": "Golem Deploy",
+      "attack": "BattleDruidAttackSFX",
+      "hit": "BattleDruidAttackHit",
+      "die": "BattleDruidDie"
+    },
+    "bigboy": {
+      "name": "Big Boy",
+      "deploy": "Giant Skeleton Deploy",
+      "attack": "Giant Skeleton Attack",
+      "hit": "Giant Hit",
+      "die": "Giant Skeleton Die"
+    },
+    "bowler": {
+      "name": "Bowler",
+      "deploy": "Troll Deploy",
+      "die": "Wizard Die"
+    },
+    "dragon": {
+      "name": "Dragon",
+      "deploy": "Dragon Deploy",
+      "attack": "Dragon Attack",
+      "die": "Dragon Die"
+    },
+    "dragonrider": {
+      "name": "Dragon Rider",
+      "deploy": "DragonRider Deploy",
+      "attack": "DragonRider Attack",
+      "hit": "Dragon Rider Hit",
+      "die": "DragonRider Malfunction"
+    },
+    "druid": {
+      "name": "Druid",
+      "deploy": "BattleDruidDeploy",
+      "hit": "BattleDruidHealingEffect",
+      "die": "druid_bear_transformation"
+    },
+    "electrodragon": {
+      "name": "Electro Dragon",
+      "deploy": "Electro Dragon Deploy",
+      "attack": "Electro Dragon Attack",
+      "hit": "Mega Tesla Hit",
+      "die": "Dragon Die"
+    },
+    "electromite": {
+      "name": "Electromite",
+      "deploy": "SuperYetimite Deploy",
+      "attack": "Zappies Attack",
+      "hit": "SuperYetimite Hit",
+      "die": "SuperYetimite Die"
+    },
+    "electrotitan": {
+      "name": "Electro Titan",
+      "deploy": "Elektro Titan Deploy",
+      "attack": "Electro_Titan Attack_lvl1",
+      "hit": "Golem Hit",
+      "die": "ElektroTitanDie"
+    },
+    "firemite": {
+      "name": "Firemite Spawn",
+      "deploy": "furnace_attack",
+      "attack": "firespirit_attack",
+      "die": "Firespirit Jump"
+    },
+    "flameflinger": {
+      "name": "Flame Flinger",
+      "deploy": "Siege Ram Deploy",
+      "attack": "Catapult Attack",
+      "hit": "Catapult Hit",
+      "die": "Siege Ram Die"
+    },
+    "furnace": {
+      "name": "Furnace",
+      "deploy": "Furnace_Deploy",
+      "attack": "furnace_attack",
+      "hit": "furnace_attack",
+      "die": "furnace_die"
+    },
+    "giant": {
+      "name": "Giant",
+      "deploy": "Giant Deploy",
+      "attack": "Giant Attack",
+      "hit": "Giant Hit",
+      "die": "Giant Die"
+    },
+    "goblin": {
+      "name": "Goblin",
+      "deploy": "Goblin Deploy",
+      "attack": "Goblin Attack",
+      "die": "Goblin Die"
+    },
+    "golem": {
+      "name": "Golem",
+      "deploy": "Golem Deploy",
+      "attack": "Golem Attack",
+      "hit": "Golem Hit",
+      "die": "Golem_split"
+    },
+    "golemite": {
+      "name": "Golemite",
+      "attack": "Small Golem Attack",
+      "hit": "Golem Hit",
+      "die": "Golem_die"
+    },
+    "grandwarden": {
+      "name": "Grand Warden",
+      "hit": "Grand Warden Hit"
+    },
+    "gwlavaloon": {
+      "name": "GW Equipment Lavaloon",
+      "deploy": "Lavaloon Deploy",
+      "attack": "Balloon Goblin Attack",
+      "hit": "LavaloonAttackEffect",
+      "die": "Lavaloon Die"
+    },
+    "gwlavaloonpup": {
+      "name": "GW Equipment Lavaloon Pup",
+      "die": "Tinymite Die"
+    },
+    "headhunter": {
+      "name": "Headhunter",
+      "deploy": "Headhunter Deploy",
+      "attack": "Headhunter_attack",
+      "hit": "Headhunter Hit",
+      "die": "Headhunter Die"
+    },
+    "healer": {
+      "name": "Healer",
+      "deploy": "Healer Deploy",
+      "attack": "Healer Attack",
+      "hit": "Healer Hit",
+      "die": "Healer Die"
+    },
+    "henchman": {
+      "name": "MP Equipment Henchman",
+      "attack": "Troop_MinionBodyguard_Atk",
+      "hit": "Gargoyle Hit",
+      "die": "Troop_MinionBodyguard_Die"
+    },
+    "hogrider": {
+      "name": "Hog Rider",
+      "deploy": "BoarRider Deploy",
+      "attack": "BoarRider Attack",
+      "hit": "BoarRider Hit",
+      "die": "BoarRider Die"
+    },
+    "icegolem": {
+      "name": "Ice Golem",
+      "deploy": "Icegolem Deploy",
+      "hit": "ps_chr_icegolem_hit",
+      "die": "Giant Die"
+    },
+    "icehound": {
+      "name": "Ice Hound",
+      "deploy": "Icehound Deploy",
+      "attack": "Icehound Attack",
+      "hit": "ps_chr_icehound_hit",
+      "die": "ps_chr_icehound_Die"
+    },
+    "icehoundpup": {
+      "name": "Ice Hound Pup",
+      "hit": "ps_chr_icepup_hit",
+      "die": "Ice Tinymite Die"
+    },
+    "infernodragon": {
+      "name": "Inferno Dragon",
+      "deploy": "Infdragon Deploy",
+      "attack": "Inferno Dragon Attack 1",
+      "die": "Infdragon Die"
+    },
+    "lavahound": {
+      "name": "Lava Hound",
+      "deploy": "Tiny Deploy",
+      "attack": "Tiny Attack",
+      "hit": "Tiny Hit",
+      "die": "Tiny Die"
+    },
+    "lavapup": {
+      "name": "Lava Pup",
+      "attack": "Tinymite Attack",
+      "hit": "Tinymite Hit",
+      "die": "Tinymite Die"
+    },
+    "loglauncher": {
+      "name": "Log Launcher",
+      "deploy": "Log Siege Deploy",
+      "attack": "Log Siege Attack",
+      "hit": "Generic Hit",
+      "die": "Siege Ram Die"
+    },
+    "meteorgolem": {
+      "name": "Meteor Golem",
+      "deploy": "Meteor_Golem_deploy",
+      "attack": "Meteor_Golem_ThrowAttack_SFX",
+      "die": "Meteor_Golem_die"
+    },
+    "meteormite": {
+      "name": "Meteormite",
+      "deploy": "Meteor_Golem_ThrowAttack_SFX",
+      "attack": "Meteor_Golem_MeleeAttack_SFX",
+      "die": "Meteor_Golem_die"
+    },
+    "miner": {
+      "name": "Miner",
+      "deploy": "Miner Deploy",
+      "hit": "Miner Hit",
+      "die": "Miner Die"
+    },
+    "minion": {
+      "name": "Minion",
+      "deploy": "Gargoyle Deploy",
+      "attack": "Gargoyle Attack",
+      "hit": "Gargoyle Hit",
+      "die": "Gargoyle Die"
+    },
+    "pekka": {
+      "name": "PEKKA",
+      "deploy": "Pekka Deploy",
+      "attack": "Pekka Attack",
+      "hit": "Pekka Hit",
+      "die": "Pekka Die"
+    },
+    "rocketballoon": {
+      "name": "Rocket Balloon",
+      "deploy": "Balloon Rocket Deploy",
+      "attack": "Balloon Goblin Attack",
+      "hit": "Balloon Goblin Hit",
+      "die": "Balloon Goblin Die"
+    },
+    "rootrider": {
+      "name": "Root Rider",
+      "deploy": "Root Rider Deploy",
+      "attack": "Root Rider Attack",
+      "hit": "Root Rider Hit",
+      "die": "Root Rider Die"
+    },
+    "royalchampion": {
+      "name": "Royal Champion",
+      "hit": "AmazonQ ability hit"
+    },
+    "ruinknight": {
+      "name": "Ruin Knight",
+      "deploy": "ps_chr_rubbleknight_deploy",
+      "attack": "Giant Attack",
+      "die": "Giant Die"
+    },
+    "ruinwitch": {
+      "name": "Ruin Witch",
+      "deploy": "RuinWitch Deploy",
+      "die": "SW Die"
+    },
+    "siegebarracks": {
+      "name": "Siege Barracks",
+      "deploy": "Siege Carrier Deploy",
+      "hit": "Siege Ram Hit",
+      "die": "Siege Ram Die"
+    },
+    "skeleton": {
+      "name": "Skeleton",
+      "deploy": "Skeleton Deploy",
+      "attack": "Skeleton Attack",
+      "hit": "Skeleton Hit",
+      "die": "Skeleton Die"
+    },
+    "snake": {
+      "name": "BK Equipment Snake",
+      "attack": "Troop_BarrelSnake_Attack",
+      "hit": "Snake Hit",
+      "die": "Troop_BarrelSnake_Die"
+    },
+    "sneakygoblin": {
+      "name": "Sneaky Goblin",
+      "deploy": "Sneaky Goblin Deploy",
+      "attack": "Goblin Attack",
+      "die": "Goblin Die"
+    },
+    "spellbat": {
+      "name": "Spell Bat",
+      "deploy": "Bat Deploy",
+      "attack": "Bat Attack",
+      "hit": "Bat Hit",
+      "die": "Tinymite Die"
+    },
+    "spellskeleton": {
+      "name": "Spell Unshielded Skeleton",
+      "deploy": "Skeleton Deploy",
+      "attack": "Skeleton Attack",
+      "hit": "Skeleton Hit",
+      "die": "Skeleton Die"
+    },
+    "spellskeletonshielded": {
+      "name": "Spell Shielded Skeleton",
+      "deploy": "Skeleton Deploy",
+      "attack": "Skeleton Attack",
+      "hit": "Skeleton Hit"
+    },
+    "stoneslammer": {
+      "name": "Stone Slammer",
+      "deploy": "Siege_Bowler_deploy",
+      "attack": "Siege Bowler Attack",
+      "die": "Balloon Goblin Die"
+    },
+    "superarcher": {
+      "name": "Super Archer",
+      "deploy": "IceArcher Deploy",
+      "attack": "IceArcher_attack",
+      "die": "Ice Archer Die"
+    },
+    "superbarbarian": {
+      "name": "Super Barbarian",
+      "deploy": "Super Barbarian Deploy",
+      "attack": "Barbarian Attack",
+      "hit": "Barbarian Hit",
+      "die": "Barbarian Die"
+    },
+    "superbowler": {
+      "name": "Super Bowler",
+      "deploy": "Super Troll Deploy",
+      "die": "Wizard Die"
+    },
+    "superdragon": {
+      "name": "Super Dragon",
+      "deploy": "Super Dragon Deploy",
+      "attack": "Super Dragon Attack",
+      "hit": "Super_Dragon_Hit",
+      "die": "Dragon Die"
+    },
+    "supergiant": {
+      "name": "Super Giant",
+      "deploy": "Super Giant Deploy",
+      "attack": "Giant Attack",
+      "hit": "Giant Hit",
+      "die": "Giant Die"
+    },
+    "superhog": {
+      "name": "Super Hog",
+      "deploy": "SuperBoar Deploy",
+      "attack": "SuperBoar Attack",
+      "hit": "BoarRider Hit",
+      "die": "SuperBoar Die"
+    },
+    "superhogrider": {
+      "name": "Super Hog Rider",
+      "deploy": "SuperBoarRider Deploy",
+      "attack": "SuperBoarRider Attack",
+      "hit": "BoarRider Hit",
+      "die": "SuperBoarRider Die"
+    },
+    "superminer": {
+      "name": "Super Miner",
+      "deploy": "Super Miner Deploy",
+      "hit": "Super Miner Hit",
+      "die": "Miner Die"
+    },
+    "superminion": {
+      "name": "Super Minion",
+      "deploy": "Super_Gargoyle Deploy",
+      "attack": "Super_Gargoyle Attack",
+      "hit": "Moving Cannon Hit",
+      "die": "Gargoyle Die"
+    },
+    "superrider": {
+      "name": "Super Rider",
+      "deploy": "BoarLessRider Deploy",
+      "attack": "SuperBoarRider Attack",
+      "hit": "BoarRider Hit",
+      "die": "BoarLessRider Die"
+    },
+    "supervalkyrie": {
+      "name": "Super Valkyrie",
+      "deploy": "SwarriorGirl Deploy",
+      "attack": "SwarriorGirl Attack2",
+      "hit": "WarriorGirl Hit",
+      "die": "WarriorGirl Die"
+    },
+    "superwallbreaker": {
+      "name": "Super Wall Breaker",
+      "deploy": "Super Wall Breaker Deploy",
+      "attack": "Wall Breaker Attack",
+      "hit": "Wall Breaker Hit",
+      "die": "Super_Bomb"
+    },
+    "superwitch": {
+      "name": "Super Witch",
+      "deploy": "SW Deploy",
+      "attack": "SW Attack",
+      "hit": "Warlock Hit",
+      "die": "SW Die"
+    },
+    "superwizard": {
+      "name": "Super Wizard",
+      "deploy": "Super Wizard Deploy",
+      "attack": "Super Wizard Attack",
+      "hit": "Super Wizard Hit",
+      "die": "Wizard Die"
+    },
+    "superyeti": {
+      "name": "Super Yeti",
+      "deploy": "SuperYeti Deploy",
+      "attack": "SuperYeti Attack",
+      "hit": "SuperYeti Hit",
+      "die": "SuperYeti Die"
+    },
+    "swordsman": {
+      "name": "Barbarian",
+      "deploy": "Barbarian Deploy",
+      "attack": "Barbarian Attack",
+      "hit": "Barbarian Hit",
+      "die": "Barbarian Die"
+    },
+    "thrower": {
+      "name": "Thrower",
+      "deploy": "Troop_Thrower_Deploy",
+      "attack": "Troop_Thrower_Attack",
+      "hit": "Wizard Hit1",
+      "die": "Troop_Thrower_Die"
+    },
+    "totem": {
+      "name": "Totem",
+      "deploy": "Golem Deploy",
+      "attack": "Spell_Totem_Attack",
+      "hit": "Golem Hit",
+      "die": "Spell_Totem_Destroy"
+    },
+    "trooplauncher": {
+      "name": "Troop Launcher",
+      "deploy": "Siege Ram Deploy",
+      "attack": "Command Tower Attack",
+      "hit": "Command Tower Hit",
+      "die": "Siege Ram Die"
+    },
+    "valkyrie": {
+      "name": "Valkyrie",
+      "deploy": "WarriorGirl Deploy",
+      "attack": [
+        "WarriorGirl Attack",
+        "WarriorGirl Attack",
+        "WarriorGirl Attack2",
+        "WarriorGirl Attack2",
+        "WarriorGirl Attack2",
+        "WarriorGirl Attack2",
+        "WarriorGirl Attack2",
+        "WarriorGirl Attack2",
+        "WarriorGirl Attack2",
+        "WarriorGirl Attack2",
+        "WarriorGirl Attack2",
+        "WarriorGirl Attack2"
+      ],
+      "hit": "WarriorGirl Hit",
+      "die": "WarriorGirl Die"
+    },
+    "wallbreaker": {
+      "name": "Wall Breaker",
+      "deploy": "Wall Breaker Deploy",
+      "attack": "Wall Breaker Attack",
+      "hit": "Wall Breaker Hit",
+      "die": "Wall Breaker Die"
+    },
+    "wallwrecker": {
+      "name": "Wall Wrecker",
+      "deploy": "Siege Ram Deploy",
+      "attack": "Siege Ram Attack",
+      "hit": "Siege Ram Hit",
+      "die": "Siege Ram Die"
+    },
+    "witch": {
+      "name": "Witch",
+      "deploy": "Warlock Deploy",
+      "attack": "Warlock Attack",
+      "hit": "Warlock Hit",
+      "die": "Warlock Die"
+    },
+    "wizard": {
+      "name": "Wizard",
+      "deploy": "Wizard Deploy",
+      "attack": [
+        "ps_chr_WizardAttack_01",
+        "ps_chr_WizardAttack_01",
+        "ps_chr_WizardAttack_01",
+        "ps_chr_WizardAttack_Lvl2",
+        "ps_chr_WizardAttack_Lvl2",
+        "ps_chr_WizardAttack_Lvl3",
+        "ps_chr_WizardAttack_Lvl3",
+        "ps_chr_WizardAttack_Lvl4",
+        "ps_chr_WizardAttack_Lvl4",
+        "ps_chr_WizardAttack_Lvl4",
+        "ps_chr_WizardAttack_Lvl4",
+        "ps_chr_WizardAttack_Lvl4",
+        "ps_chr_WizardAttack_Lvl4",
+        "ps_chr_WizardAttack_Lvl4"
+      ],
+      "hit": [
+        "ps_chr_WizardAttack_Hit_01",
+        "ps_chr_WizardAttack_Hit_01",
+        "ps_chr_WizardAttack_Hit_01",
+        "ps_chr_WizardAttack_Hit_Lvl2",
+        "ps_chr_WizardAttack_Hit_Lvl2",
+        "ps_chr_WizardAttack_Hit_Lvl3",
+        "ps_chr_WizardAttack_Hit_Lvl3",
+        "ps_chr_WizardAttack_Hit_Lvl4",
+        "ps_chr_WizardAttack_Hit_Lvl4",
+        "ps_chr_WizardAttack_Hit_Lvl4",
+        "ps_chr_WizardAttack_Hit_Lvl4",
+        "ps_chr_WizardAttack_Hit_Lvl4",
+        "ps_chr_WizardAttack_Hit_Lvl4",
+        "ps_chr_WizardAttack_Hit_Lvl4"
+      ],
+      "die": "Wizard Die"
+    },
+    "yeti": {
+      "name": "Yeti",
+      "deploy": "Yeti Deploy",
+      "attack": "Yeti Attack",
+      "hit": "Yeti Hit",
+      "die": "Yeti Die"
+    },
+    "yetimite": {
+      "name": "Yetimite",
+      "hit": "Yeti Hit",
+      "die": "Yetimite Die"
+    }
+  },
+  "spells": {
+    "AngrySpell": {
+      "key": "angry",
+      "preDeploy": "ps_spells_angryspell_predeploy",
+      "deploy": "AngrySpell_area_Start",
+      "deploy2": "AngrySpell_area_top"
+    },
+    "Bat Spell": {
+      "key": "bat",
+      "preDeploy": "bat_Predeploy",
+      "deploy": [
+        "BatSpell Summon1",
+        "BatSpell Summon2",
+        "BatSpell Summon3",
+        "BatSpell Summon4",
+        "BatSpell Summon5",
+        "BatSpell Summon6",
+        "BatSpell Summon7",
+        "BatSpell Summon8"
+      ]
+    },
+    "Clone": {
+      "key": "clone",
+      "preDeploy": "Clone_Predeploy",
+      "deploy": "Clone deploy"
+    },
+    "Earthquake": {
+      "key": "earthquake",
+      "preDeploy": "Earthquake_Predeploy",
+      "deploy2": [
+        "EarthQuake_deploy_0",
+        "EarthQuake_deploy",
+        "EarthQuake_deploy_2",
+        "EarthQuake_deploy_3",
+        "EarthQuake_deploy_4",
+        "EarthQuake_deploy_4",
+        "EarthQuake_deploy_4",
+        "EarthQuake_deploy_4"
+      ]
+    },
+    "Freeze": {
+      "key": "freeze",
+      "preDeploy": "Freeze predeploy",
+      "deploy": [
+        "Freeze deploy lvl1",
+        "Freeze deploy lvl2",
+        "Freeze deploy lvl3",
+        "Freeze deploy lvl4",
+        "Freeze deploy lvl5",
+        "Freeze deploy lvl6",
+        "Freeze deploy lvl7",
+        "Freeze deploy lvl8"
+      ]
+    },
+    "Haste": {
+      "key": "haste",
+      "preDeploy": "speedup_Predeploy",
+      "deploy": [
+        "Speedup_deploy_lvl1",
+        "Speedup_deploy_lvl2",
+        "Speedup_deploy_lvl3",
+        "Speedup_deploy_lvl4",
+        "Speedup_deploy_lvl5",
+        "Speedup_deploy_lvl5",
+        "Speedup_deploy_lvl6"
+      ]
+    },
+    "Healing": {
+      "key": "heal",
+      "preDeploy": "Heal predeploy",
+      "deploy": "Heal area",
+      "hit": "Heal spell"
+    },
+    "Ice Block": {
+      "key": "iceblock",
+      "preDeploy": "IceBlock predeploy",
+      "deploy": "ps_spells_iceblock_explode"
+    },
+    "Invisibility": {
+      "key": "invisibility",
+      "preDeploy": "Invisibility_Predeploy",
+      "deploy": [
+        "Invisibility area lvl1",
+        "Invisibility area lvl2",
+        "Invisibility area lvl3",
+        "Invisibility area lvl4"
+      ]
+    },
+    "Jump": {
+      "key": "jump",
+      "preDeploy": "Jump predeploy",
+      "deploy": [
+        "Jump deploy lvl1",
+        "Jump deploy lvl2",
+        "Jump deploy lvl3",
+        "Jump deploy lvl4",
+        "Jump deploy lvl5"
+      ]
+    },
+    "Lightning": {
+      "key": "lightning",
+      "preDeploy": "Lightning predeploy",
+      "deploy": "Lightning area small",
+      "charging": "Lightning Spell",
+      "hit": "Lightning Spell Hit"
+    },
+    "Overgrowth": {
+      "key": "overgrowth",
+      "preDeploy": "Entangle_predeploy",
+      "deploy2": [
+        "entangle_spell_circle_radius",
+        "entangle_spell_circle_radius_lvl2",
+        "entangle_spell_circle_radius_lvl3",
+        "entangle_spell_circle_radius_lvl4",
+        "entangle_spell_circle_radius_lvl5"
+      ]
+    },
+    "Poison": {
+      "key": "poison",
+      "preDeploy": "toxic_Predeploy",
+      "deploy2": "Toxic deploy halloween"
+    },
+    "Rage": {
+      "key": "rage",
+      "preDeploy": "Rage predeploy",
+      "deploy": "Rage deploy"
+    },
+    "Recall": {
+      "key": "recall",
+      "preDeploy": "Recall_Predeploy",
+      "deploy2": "RecallDeployAuraTop"
+    },
+    "Revive": {
+      "key": "revive",
+      "preDeploy": "hero_revive_bottle_effect",
+      "deploy2": "hero_revive_ground_layer"
+    },
+    "Skeleton Spell": {
+      "key": "skeleton",
+      "preDeploy": "skele_Predeploy",
+      "deploy": [
+        "SkeleSpell Summon1",
+        "SkeleSpell Summon2",
+        "SkeleSpell Summon3",
+        "SkeleSpell Summon4",
+        "SkeleSpell Summon5",
+        "SkeleSpell Summon6",
+        "SkeleSpell Summon7",
+        "SkeleSpell Summon8"
+      ]
+    },
+    "Totem Spell": {
+      "key": "totem",
+      "preDeploy": "ps_spells_meteortotem_predeploy",
+      "deploy": "ps_spells_meteortotem_Impact"
+    }
+  },
+  "destroyed": "Building Destroyed",
+  "effects": {
+    "AmazonQ ability hit": [
+      {
+        "sound": "sfx/rg_atk_hit_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "AngrySpell_area_Start": [
+      {
+        "sound": "sfx/sfx_spell_def_brainwash_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/sfx_spell_def_brainwash_02.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/sfx_spell_def_brainwash_03.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "AngrySpell_area_top": [
+      {
+        "sound": "sfx/sfx_spell_def_brainwash_hit_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/sfx_spell_def_brainwash_hit_02.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/sfx_spell_def_brainwash_hit_03.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ApprenticeWarden Attack": [
+      {
+        "sound": "sfx/apprentice_warden_attack_01.ogg",
+        "volume": 1.0,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "ApprenticeWarden Deploy": [
+      {
+        "sound": "sfx/apprentice_warden_deploy_01.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ApprenticeWarden Die": [
+      {
+        "sound": "sfx/apprentice_warden_death.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ApprenticeWarden Hit": [
+      {
+        "sound": "sfx/arrow_hit_12.ogg",
+        "volume": 1.0,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Archer Attack": [
+      {
+        "sound": "sfx/arrow_hit_07.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/arrow_hit_07v2.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/arrow_hit_07v3.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Archer Deploy": [
+      {
+        "sound": "sfx/archer_deploy_09.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/archer_deploy_09v2.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/archer_deploy_09v3.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Archer Die": [
+      {
+        "sound": "sfx/archer_death_05.ogg",
+        "volume": 0.3,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/archer_death_05v2.ogg",
+        "volume": 0.3,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Archer Hit": [
+      {
+        "sound": "sfx/arrow_hit_12.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Archer Queen Hit": [
+      {
+        "sound": "sfx/explosive_arrow_01v2.ogg",
+        "volume": 0.65,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Balloon Goblin Attack": [
+      {
+        "sound": "sfx/cannon_fire3.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Balloon Goblin Deploy": [
+      {
+        "sound": "sfx/balloon_deploy_02.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Balloon Goblin Die": [
+      {
+        "sound": "sfx/balloon_die_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Balloon Goblin Hit": [
+      {
+        "sound": "sfx/balloon_hit_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Balloon Rocket Deploy": [
+      {
+        "sound": "sfx/hasty_balloon_dep_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Barbarian Attack": [
+      {
+        "sound": "sfx/barbarian_sword_swing_hit_14.ogg",
+        "volume": 0.4,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/barbarian_sword_swing_hit_14v3.ogg",
+        "volume": 0.4,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/barbarian_sword_swing_hit_14v2.ogg",
+        "volume": 0.4,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Barbarian Deploy": [
+      {
+        "sound": "sfx/barb_deploy_11.ogg",
+        "volume": 0.4,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/barb_deploy_11v2.ogg",
+        "volume": 0.4,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/barb_deploy_11v3.ogg",
+        "volume": 0.4,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Barbarian Die": [
+      {
+        "sound": "sfx/barbarian_death_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/barbarian_death_02.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Barbarian Hit": [
+      {
+        "sound": "sfx/barbarian_hit_stuff2.ogg",
+        "volume": 0.4,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/barbarian_hit_stuff3.ogg",
+        "volume": 0.35,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/barbarian_hit_stuff4.ogg",
+        "volume": 0.3,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Barbarian King Hit": [
+      {
+        "sound": "sfx/barbarian_hit_stuff4.ogg",
+        "volume": 0.7,
+        "minPitch": 0.55,
+        "maxPitch": 0.65,
+        "delay": 0.0
+      }
+    ],
+    "Bat Attack": [
+      {
+        "sound": "sfx/bat_atk_01.ogg",
+        "volume": 0.3,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Bat Deploy": [
+      {
+        "sound": "sfx/bat_deploy_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Bat Hit": [
+      {
+        "sound": "sfx/bat_atk_hit_01.ogg",
+        "volume": 0.15,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/bat_atk_hit_01.ogg",
+        "volume": 0.15,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/bat_atk_hit_01.ogg",
+        "volume": 0.15,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "BatSpell Summon1": [
+      {
+        "sound": "sfx/clashbat_spell_01.ogg",
+        "volume": 0.6,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "BatSpell Summon2": [
+      {
+        "sound": "sfx/clashbat_spell_01.ogg",
+        "volume": 0.6,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "BatSpell Summon3": [
+      {
+        "sound": "sfx/clashbat_spell_01.ogg",
+        "volume": 0.6,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "BatSpell Summon4": [
+      {
+        "sound": "sfx/clashbat_spell_01.ogg",
+        "volume": 0.6,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "BatSpell Summon5": [
+      {
+        "sound": "sfx/clashbat_spell_01.ogg",
+        "volume": 0.6,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "BatSpell Summon6": [
+      {
+        "sound": "sfx/clashbat_spell_01.ogg",
+        "volume": 0.6,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "BatSpell Summon7": [
+      {
+        "sound": "sfx/clashbat_spell_01.ogg",
+        "volume": 0.6,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "BatSpell Summon8": [
+      {
+        "sound": "sfx/clashbat_spell_01.ogg",
+        "volume": 0.6,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Battle Drill Attack": [
+      {
+        "sound": "sfx/battle_drill_atk_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.9,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "Battle Drill Deploy": [
+      {
+        "sound": "sfx/battle_drill_deploy_01.ogg",
+        "volume": 0.9,
+        "minPitch": 0.85,
+        "maxPitch": 0.9,
+        "delay": 0.0
+      }
+    ],
+    "Battle Drill Hit": [
+      {
+        "sound": "sfx/battle_drill_hit_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "BattleDruidAttackHit": [
+      {
+        "sound": "sfx/giant_attack_hit_01.ogg",
+        "volume": 0.4,
+        "minPitch": 0.7,
+        "maxPitch": 0.8,
+        "delay": 0.0
+      }
+    ],
+    "BattleDruidAttackSFX": [
+      {
+        "sound": "sfx/druid_bear_attack_01.ogg",
+        "volume": 1.0,
+        "minPitch": 0.8,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/druid_bear_attack_02.ogg",
+        "volume": 1.0,
+        "minPitch": 0.8,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/druid_bear_attack_03.ogg",
+        "volume": 1.0,
+        "minPitch": 0.8,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      }
+    ],
+    "BattleDruidDeploy": [
+      {
+        "sound": "sfx/druid_bear_deploy.ogg",
+        "volume": 0.8,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "BattleDruidDie": [
+      {
+        "sound": "sfx/druid_bear_die.ogg",
+        "volume": 0.8,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "BattleDruidHealingEffect": [
+      {
+        "sound": "sfx/healer_hit_02.ogg",
+        "volume": 0.6,
+        "minPitch": 0.7,
+        "maxPitch": 0.9,
+        "delay": 0.0
+      }
+    ],
+    "Bdragon Attack": [
+      {
+        "sound": "sfx/baby_dragon_atk_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Bdragon Deploy": [
+      {
+        "sound": "sfx/babydragon_deploy_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Bdragon Die": [
+      {
+        "sound": "sfx/baby_dragon_death_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/baby_dragon_death_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "BoarLessRider Deploy": [
+      {
+        "sound": "sfx/hogless_rider_dep_01.ogg",
+        "volume": 0.3,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/hogless_rider_dep_02.ogg",
+        "volume": 0.3,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/hogless_rider_dep_03.ogg",
+        "volume": 0.3,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "BoarLessRider Die": [
+      {
+        "sound": "sfx/hogless_rider_die_01.ogg",
+        "volume": 0.6,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "BoarRider Attack": [
+      {
+        "sound": "sfx/boarrider_attack_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/boarrider_attack_02.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "BoarRider Deploy": [
+      {
+        "sound": "sfx/boarrider_deploy_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/boarrider_deploy_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "BoarRider Die": [
+      {
+        "sound": "sfx/boarrider_die_02.ogg",
+        "volume": 0.9,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "BoarRider Hit": [
+      {
+        "sound": "sfx/bow_place.ogg",
+        "volume": 0.5,
+        "minPitch": 1.2,
+        "maxPitch": 1.4,
+        "delay": 0.0
+      }
+    ],
+    "Building Destroyed": [
+      {
+        "sound": "sfx/building_destroyed_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.85,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "Catapult Attack": [
+      {
+        "sound": "sfx/fire_siege_fire_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Catapult Hit": [
+      {
+        "sound": "sfx/mortar_hit_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Clone deploy": [
+      {
+        "sound": "sfx/copy_spell_deploy_01.ogg",
+        "volume": 0.95,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Clone_Predeploy": [
+      {
+        "sound": "sfx/vial_fall_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "Command Tower Attack": [
+      {
+        "sound": "sfx/Troop_CommandTower_FireBarrel.ogg",
+        "volume": 1.0,
+        "minPitch": 0.75,
+        "maxPitch": 1.25,
+        "delay": 0.0
+      }
+    ],
+    "Command Tower Hit": [
+      {
+        "sound": "sfx/building_destroyed_01.ogg",
+        "volume": 0.6,
+        "minPitch": 0.6,
+        "maxPitch": 0.8,
+        "delay": 0.0
+      }
+    ],
+    "Dragon Attack": [
+      {
+        "sound": "sfx/dragon_attack_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Dragon Deploy": [
+      {
+        "sound": "sfx/dragon_deploy_01.ogg",
+        "volume": 0.9,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Dragon Die": [
+      {
+        "sound": "sfx/dragon_die_01.ogg",
+        "volume": 0.9,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Dragon Rider Hit": [
+      {
+        "sound": "sfx/bomb_tower_hit_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "DragonRider Attack": [
+      {
+        "sound": "sfx/dragon_rider_atk_01.ogg",
+        "volume": 0.6,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "DragonRider Deploy": [
+      {
+        "sound": "sfx/dragon_rider_dep_01.ogg",
+        "volume": 0.9,
+        "minPitch": 0.98,
+        "maxPitch": 1.02,
+        "delay": 0.0
+      }
+    ],
+    "DragonRider Malfunction": [
+      {
+        "sound": "sfx/dragon_rider_die_01.ogg",
+        "volume": 0.7,
+        "minPitch": 1.4,
+        "maxPitch": 1.5,
+        "delay": 0.0
+      }
+    ],
+    "EarthQuake_deploy": [
+      {
+        "sound": "sfx/vial_earthquake_hit_gound_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "EarthQuake_deploy_0": [
+      {
+        "sound": "sfx/vial_earthquake_hit_gound_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "EarthQuake_deploy_2": [
+      {
+        "sound": "sfx/vial_earthquake_hit_gound_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "EarthQuake_deploy_3": [
+      {
+        "sound": "sfx/vial_earthquake_hit_gound_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "EarthQuake_deploy_4": [
+      {
+        "sound": "sfx/vial_earthquake_hit_gound_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Earthquake_Predeploy": [
+      {
+        "sound": "sfx/vial_fall_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "Electro Dragon Attack": [
+      {
+        "sound": "sfx/electro_dragon_sfx_atk_02.ogg",
+        "volume": 0.9,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Electro Dragon Deploy": [
+      {
+        "sound": "sfx/electro_dragon_sfx_dep_01.ogg",
+        "volume": 0.9,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Electro_Titan Attack_lvl1": [
+      {
+        "sound": "sfx/elektro_titan_atk_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Elektro Titan Deploy": [
+      {
+        "sound": "sfx/elektro_titan_dep_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ElektroTitanDie": [
+      {
+        "sound": "sfx/elektro_titan_die_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Entangle_predeploy": [
+      {
+        "sound": "sfx/vial_fall_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "Firespirit Jump": [
+      {
+        "sound": "sfx/Troop_Furnace_FireSpirit_Die.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      }
+    ],
+    "Freeze deploy lvl1": [
+      {
+        "sound": "sfx/freeze_spell_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.9,
+        "maxPitch": 0.9,
+        "delay": 0.0
+      }
+    ],
+    "Freeze deploy lvl2": [
+      {
+        "sound": "sfx/freeze_spell_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.9,
+        "maxPitch": 0.9,
+        "delay": 0.0
+      }
+    ],
+    "Freeze deploy lvl3": [
+      {
+        "sound": "sfx/freeze_spell_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.9,
+        "maxPitch": 0.9,
+        "delay": 0.0
+      }
+    ],
+    "Freeze deploy lvl4": [
+      {
+        "sound": "sfx/freeze_spell_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.9,
+        "maxPitch": 0.9,
+        "delay": 0.0
+      }
+    ],
+    "Freeze deploy lvl5": [
+      {
+        "sound": "sfx/freeze_spell_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.9,
+        "maxPitch": 0.9,
+        "delay": 0.0
+      }
+    ],
+    "Freeze deploy lvl6": [
+      {
+        "sound": "sfx/freeze_spell_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.9,
+        "maxPitch": 0.9,
+        "delay": 0.0
+      }
+    ],
+    "Freeze deploy lvl7": [
+      {
+        "sound": "sfx/freeze_spell_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.9,
+        "maxPitch": 0.9,
+        "delay": 0.0
+      }
+    ],
+    "Freeze deploy lvl8": [
+      {
+        "sound": "sfx/freeze_spell_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.9,
+        "maxPitch": 0.9,
+        "delay": 0.0
+      }
+    ],
+    "Freeze predeploy": [
+      {
+        "sound": "sfx/magic_bottle_fall_05.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "Furnace_Deploy": [
+      {
+        "sound": "sfx/Troop_Furnace_Deploy.ogg",
+        "volume": 1.0,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Gargoyle Attack": [
+      {
+        "sound": "sfx/garg_attack_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Gargoyle Deploy": [
+      {
+        "sound": "sfx/garg_deploy_02.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Gargoyle Die": [
+      {
+        "sound": "sfx/garg_die_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Gargoyle Hit": [
+      {
+        "sound": "sfx/balloon_hit_01.ogg",
+        "volume": 0.3,
+        "minPitch": 1.1,
+        "maxPitch": 1.3,
+        "delay": 0.0
+      }
+    ],
+    "Generic Hit": [
+      {
+        "sound": "sfx/generic_hit_01.ogg",
+        "volume": 0.3,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Giant Attack": [
+      {
+        "sound": "sfx/giant_attack_06.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/giant_attack_05.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Giant Deploy": [
+      {
+        "sound": "sfx/giant_deploy_04.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/giant_deploy_04v2.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/giant_deploy_04v3.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Giant Die": [
+      {
+        "sound": "sfx/giant_death_02.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Giant Hit": [
+      {
+        "sound": "sfx/giant_attack_hit_01.ogg",
+        "volume": 0.6,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/giant_attack_hit_02.ogg",
+        "volume": 0.6,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Giant Skeleton Attack": [
+      {
+        "sound": "sfx/giantskele_atk_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Giant Skeleton Deploy": [
+      {
+        "sound": "sfx/sw_skeleton_start_01.ogg",
+        "volume": 0.9,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Giant Skeleton Die": [
+      {
+        "sound": "sfx/giantskele_die_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Goblin Attack": [
+      {
+        "sound": "sfx/gob_attack_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/gob_attack_02.ogg",
+        "volume": 0.4,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/gob_attack_03.ogg",
+        "volume": 0.45,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Goblin Deploy": [
+      {
+        "sound": "sfx/goblin_deploy_14.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/goblin_deploy_14v2.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/goblin_deploy_14v3.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Goblin Die": [
+      {
+        "sound": "sfx/goblin_death_02.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Golem Attack": [
+      {
+        "sound": "sfx/stone_golem_attack_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Golem Deploy": [
+      {
+        "sound": "sfx/stone_golem_deploy_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/stone_golem_deploy_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/stone_golem_deploy_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Golem Hit": [
+      {
+        "sound": "sfx/stone_golem_hit_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Golem_die": [
+      {
+        "sound": "sfx/stone_golem_death_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.2,
+        "maxPitch": 1.3,
+        "delay": 0.0
+      }
+    ],
+    "Golem_split": [
+      {
+        "sound": "sfx/stone_golem_death_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Grand Warden Hit": [
+      {
+        "sound": "sfx/wizard_hit_01.ogg",
+        "volume": 0.65,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Headhunter Deploy": [
+      {
+        "sound": "sfx/headhunter_dep_01.ogg",
+        "volume": 0.75,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Headhunter Die": [
+      {
+        "sound": "sfx/headhunter_die_01.ogg",
+        "volume": 0.6,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Headhunter Hit": [
+      {
+        "sound": "sfx/headhunter_hit_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Headhunter_attack": [
+      {
+        "sound": "sfx/headhunter_atk_01.ogg",
+        "volume": 0.65,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/headhunter_atk_02.ogg",
+        "volume": 0.65,
+        "minPitch": 1.0,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Heal area": [
+      {
+        "sound": "sfx/bottle_heal_magic_03.ogg",
+        "volume": 0.6,
+        "minPitch": 0.9,
+        "maxPitch": 0.9,
+        "delay": 0.0
+      }
+    ],
+    "Heal predeploy": [
+      {
+        "sound": "sfx/magic_bottle_fall_05.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "Heal spell": [
+      {
+        "sound": "sfx/healer_attack_01.ogg",
+        "volume": 0.3,
+        "minPitch": 0.8,
+        "maxPitch": 0.9,
+        "delay": 0.0
+      }
+    ],
+    "Healer Attack": [
+      {
+        "sound": "sfx/healer_attack_01.ogg",
+        "volume": 0.2,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Healer Deploy": [
+      {
+        "sound": "sfx/healer_deploy_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Healer Die": [
+      {
+        "sound": "sfx/healer_die_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Healer Hit": [
+      {
+        "sound": "sfx/healer_hit_02.ogg",
+        "volume": 0.4,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Ice Archer Die": [
+      {
+        "sound": "sfx/ice_archer_die_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Ice Tinymite Die": [
+      {
+        "sound": "sfx/tiny_ice_die_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "IceArcher Deploy": [
+      {
+        "sound": "sfx/ice_archer_deploy_01.ogg",
+        "volume": 0.65,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "IceArcher_attack": [
+      {
+        "sound": "sfx/ice_archer_fire_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "IceBlock predeploy": [
+      {
+        "sound": "sfx/magic_bottle_fall_05.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "Icegolem Deploy": [
+      {
+        "sound": "sfx/ice_golem_deploy_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Icehound Attack": [
+      {
+        "sound": "sfx/ice_hound_atk_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Icehound Deploy": [
+      {
+        "sound": "sfx/ice_hound_deploy_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Infdragon Deploy": [
+      {
+        "sound": "sfx/infdragon_deploy_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Infdragon Die": [
+      {
+        "sound": "sfx/infdragon_die_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Inferno Dragon Attack 1": [
+      {
+        "sound": "sfx/infdragon_fireloop_01.ogg",
+        "volume": 0.3,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Invisibility area lvl1": [
+      {
+        "sound": "sfx/invis_spell_01.ogg",
+        "volume": 0.9,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Invisibility area lvl2": [
+      {
+        "sound": "sfx/invis_spell_01.ogg",
+        "volume": 0.9,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Invisibility area lvl3": [
+      {
+        "sound": "sfx/invis_spell_01.ogg",
+        "volume": 0.9,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Invisibility area lvl4": [
+      {
+        "sound": "sfx/invis_spell_01.ogg",
+        "volume": 0.9,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Invisibility_Predeploy": [
+      {
+        "sound": "sfx/vial_fall_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "Jump deploy lvl1": [
+      {
+        "sound": "sfx/bottle_jump_spell_01.ogg",
+        "volume": 0.95,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Jump deploy lvl2": [
+      {
+        "sound": "sfx/bottle_jump_spell_01.ogg",
+        "volume": 0.95,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Jump deploy lvl3": [
+      {
+        "sound": "sfx/bottle_jump_spell_01.ogg",
+        "volume": 0.95,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Jump deploy lvl4": [
+      {
+        "sound": "sfx/bottle_jump_spell_01.ogg",
+        "volume": 0.95,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Jump deploy lvl5": [
+      {
+        "sound": "sfx/bottle_jump_spell_01.ogg",
+        "volume": 0.95,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Jump predeploy": [
+      {
+        "sound": "sfx/magic_bottle_fall_05.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "Lavaloon Deploy": [
+      {
+        "sound": "sfx/lavaloon_deploy_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Lavaloon Die": [
+      {
+        "sound": "sfx/lavaloon_die_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "LavaloonAttackEffect": [
+      {
+        "sound": "sfx/mortar_hit_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.6,
+        "maxPitch": 0.8,
+        "delay": 0.0
+      }
+    ],
+    "Lightning Spell": [
+      {
+        "sound": "sfx/tesla_zap_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      }
+    ],
+    "Lightning Spell Hit": [
+      {
+        "sound": "sfx/lightning_amb_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Lightning area small": [
+      {
+        "sound": "sfx/bottle_break_04_lightning_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Lightning predeploy": [
+      {
+        "sound": "sfx/magic_bottle_fall_05.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "Log Siege Attack": [
+      {
+        "sound": "sfx/log_siege_atk_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.98,
+        "maxPitch": 1.02,
+        "delay": 0.0
+      }
+    ],
+    "Log Siege Deploy": [
+      {
+        "sound": "sfx/log_siege_deploy_01.ogg",
+        "volume": 0.9,
+        "minPitch": 0.98,
+        "maxPitch": 1.02,
+        "delay": 0.0
+      }
+    ],
+    "Mega Tesla Hit": [
+      {
+        "sound": "sfx/tesla_zap_03.ogg",
+        "volume": 0.2,
+        "minPitch": 0.5,
+        "maxPitch": 0.7,
+        "delay": 0.0
+      }
+    ],
+    "Meteor_Golem_MeleeAttack_SFX": [
+      {
+        "sound": "sfx/Troop_MeteorGolem_MeleeAttack_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.017
+      },
+      {
+        "sound": "sfx/Troop_MeteorGolem_MeleeAttack_02.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/Troop_MeteorGolem_MeleeAttack_03.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Meteor_Golem_ThrowAttack_SFX": [
+      {
+        "sound": "sfx/Troop_MeteorGolem_ThrowAttack_01.ogg",
+        "volume": 0.9,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.017
+      },
+      {
+        "sound": "sfx/Troop_MeteorGolem_ThrowAttack_02.ogg",
+        "volume": 0.9,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/Troop_MeteorGolem_ThrowAttack_03.ogg",
+        "volume": 0.9,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Meteor_Golem_deploy": [
+      {
+        "sound": "sfx/Troop_MeteorGolem_Deploy_01.ogg",
+        "volume": 0.9,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/Troop_MeteorGolem_Deploy_02.ogg",
+        "volume": 0.9,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/Troop_MeteorGolem_Deploy_03.ogg",
+        "volume": 0.9,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Meteor_Golem_die": [
+      {
+        "sound": "sfx/Troop_MeteorGolem_Die_01.ogg",
+        "volume": 0.9,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/Troop_MeteorGolem_Die_02.ogg",
+        "volume": 0.9,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/Troop_MeteorGolem_Die_03.ogg",
+        "volume": 0.9,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Miner Deploy": [
+      {
+        "sound": "sfx/miner_dig_oneshot_01.ogg",
+        "volume": 0.4,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Miner Die": [
+      {
+        "sound": "sfx/miner_death_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Miner Hit": [
+      {
+        "sound": "sfx/miner_atk_clash_01.ogg",
+        "volume": 0.4,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Moving Cannon Hit": [
+      {
+        "sound": "sfx/cannon_fire_hit_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Pekka Attack": [
+      {
+        "sound": "sfx/pekka_attack_02v2.ogg",
+        "volume": 0.7,
+        "minPitch": 0.8,
+        "maxPitch": 0.9,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/pekka_attack_02v2.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Pekka Deploy": [
+      {
+        "sound": "sfx/deploy_pekka_05.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Pekka Die": [
+      {
+        "sound": "sfx/pekka_death_06.ogg",
+        "volume": 0.9,
+        "minPitch": 1.0,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Pekka Hit": [
+      {
+        "sound": "sfx/pekka_attack_hit_02.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/pekka_attack_hit_02.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Rage deploy": [
+      {
+        "sound": "sfx/bottle_rage_magic_07v2.ogg",
+        "volume": 0.9,
+        "minPitch": 0.75,
+        "maxPitch": 0.75,
+        "delay": 0.0
+      }
+    ],
+    "Rage predeploy": [
+      {
+        "sound": "sfx/magic_bottle_fall_05.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "RecallDeployAuraTop": [
+      {
+        "sound": "sfx/recall_spell_01.ogg",
+        "volume": 1.0,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Recall_Predeploy": [
+      {
+        "sound": "sfx/vial_fall_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "Root Rider Attack": [
+      {
+        "sound": "sfx/root_rider_atk_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/root_rider_atk_02.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Root Rider Deploy": [
+      {
+        "sound": "sfx/root_rider_dep_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.8,
+        "maxPitch": 0.8,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/root_rider_dep_02.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Root Rider Die": [
+      {
+        "sound": "sfx/root_rider_die_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/root_rider_die_02.ogg",
+        "volume": 1.0,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Root Rider Hit": [
+      {
+        "sound": "sfx/capital_golem_hit.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "RuinWitch Deploy": [
+      {
+        "sound": "sfx/sfx_tro_ruinwitch_deploy.ogg",
+        "volume": 1.0,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "SW Attack": [
+      {
+        "sound": "sfx/super_witch_deploy_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SW Deploy": [
+      {
+        "sound": "sfx/super_witch_deploy_01.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "SW Die": [
+      {
+        "sound": "sfx/super_witch_die_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Siege Bowler Attack": [
+      {
+        "sound": "sfx/stonestriker_01.ogg",
+        "volume": 0.9,
+        "minPitch": 0.98,
+        "maxPitch": 1.02,
+        "delay": 0.0
+      }
+    ],
+    "Siege Carrier Deploy": [
+      {
+        "sound": "sfx/sb_deploy_01.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Siege Ram Attack": [
+      {
+        "sound": "sfx/cannon_fire_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.98,
+        "maxPitch": 1.02,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/cannon_fire3.ogg",
+        "volume": 0.7,
+        "minPitch": 0.98,
+        "maxPitch": 1.02,
+        "delay": 0.0
+      }
+    ],
+    "Siege Ram Deploy": [
+      {
+        "sound": "sfx/siege_ram_deploy_01.ogg",
+        "volume": 0.9,
+        "minPitch": 0.98,
+        "maxPitch": 1.02,
+        "delay": 0.0
+      }
+    ],
+    "Siege Ram Die": [
+      {
+        "sound": "sfx/building_destroyed_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.85,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "Siege Ram Hit": [
+      {
+        "sound": "sfx/cannon_fire_hit_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Siege_Bowler_deploy": [
+      {
+        "sound": "sfx/siege_balloon_dep_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "SkeleSpell Summon1": [
+      {
+        "sound": "sfx/skelly_spell_land_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SkeleSpell Summon2": [
+      {
+        "sound": "sfx/skelly_spell_land_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SkeleSpell Summon3": [
+      {
+        "sound": "sfx/skelly_spell_land_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SkeleSpell Summon4": [
+      {
+        "sound": "sfx/skelly_spell_land_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SkeleSpell Summon5": [
+      {
+        "sound": "sfx/skelly_spell_land_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SkeleSpell Summon6": [
+      {
+        "sound": "sfx/skelly_spell_land_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SkeleSpell Summon7": [
+      {
+        "sound": "sfx/skelly_spell_land_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SkeleSpell Summon8": [
+      {
+        "sound": "sfx/skelly_spell_land_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Skeleton Attack": [
+      {
+        "sound": "sfx/summon_attack_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Skeleton Deploy": [
+      {
+        "sound": "sfx/upfromground_05.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Skeleton Die": [
+      {
+        "sound": "sfx/summon_die_02.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/summon_die_02.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Skeleton Hit": [
+      {
+        "sound": "sfx/barbarian_hit_stuff2.ogg",
+        "volume": 0.2,
+        "minPitch": 0.75,
+        "maxPitch": 0.8,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/barbarian_hit_stuff3.ogg",
+        "volume": 0.2,
+        "minPitch": 0.75,
+        "maxPitch": 0.8,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/barbarian_hit_stuff4.ogg",
+        "volume": 0.2,
+        "minPitch": 0.75,
+        "maxPitch": 0.8,
+        "delay": 0.0
+      }
+    ],
+    "Small Golem Attack": [
+      {
+        "sound": "sfx/stone_golem_attack_01.ogg",
+        "volume": 0.6,
+        "minPitch": 1.2,
+        "maxPitch": 1.3,
+        "delay": 0.0
+      }
+    ],
+    "Snake Hit": [
+      {
+        "sound": "sfx/Troop_Snake_Bite.ogg",
+        "volume": 0.4,
+        "minPitch": 0.75,
+        "maxPitch": 1.25,
+        "delay": 0.0
+      }
+    ],
+    "Sneaky Goblin Deploy": [
+      {
+        "sound": "sfx/super_gob_deploy_01.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/super_gob_deploy_02.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/super_gob_deploy_03..ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Speedup_deploy_lvl1": [
+      {
+        "sound": "sfx/vial_speed_hit_gound_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Speedup_deploy_lvl2": [
+      {
+        "sound": "sfx/vial_speed_hit_gound_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Speedup_deploy_lvl3": [
+      {
+        "sound": "sfx/vial_speed_hit_gound_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Speedup_deploy_lvl4": [
+      {
+        "sound": "sfx/vial_speed_hit_gound_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Speedup_deploy_lvl5": [
+      {
+        "sound": "sfx/vial_speed_hit_gound_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Speedup_deploy_lvl6": [
+      {
+        "sound": "sfx/vial_speed_hit_gound_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Spell_Totem_Attack": [
+      {
+        "sound": "sfx/spell_totemtower_deploy_01.ogg",
+        "volume": 1.0,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/spell_totemtower_deploy_02.ogg",
+        "volume": 1.0,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/spell_totemtower_deploy_03.ogg",
+        "volume": 1.0,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Spell_Totem_Destroy": [
+      {
+        "sound": "sfx/spell_totemtower_destroy_01.ogg",
+        "volume": 1.0,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/spell_totemtower_destroy_02.ogg",
+        "volume": 1.0,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Super Barbarian Deploy": [
+      {
+        "sound": "sfx/super_barb_deploy_01.ogg",
+        "volume": 0.4,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/super_barb_deploy_02.ogg",
+        "volume": 0.4,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Super Dragon Attack": [
+      {
+        "sound": "sfx/clash_fire_dragon_atk_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Super Dragon Deploy": [
+      {
+        "sound": "sfx/clash_fire_dragon_dep_01.ogg",
+        "volume": 0.9,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Super Giant Deploy": [
+      {
+        "sound": "sfx/super_giant_deploy_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/super_giant_deploy_02.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Super Miner Deploy": [
+      {
+        "sound": "sfx/miner_dig_oneshot_01.ogg",
+        "volume": 0.4,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Super Miner Hit": [
+      {
+        "sound": "sfx/superminer_drill_01.ogg",
+        "volume": 0.4,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Super Troll Deploy": [
+      {
+        "sound": "sfx/super_bowler_dep_04.ogg",
+        "volume": 0.9,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Super Wall Breaker Deploy": [
+      {
+        "sound": "sfx/super_skele_deploy_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Super Wizard Attack": [
+      {
+        "sound": "sfx/super_wizard_atk_01.ogg",
+        "volume": 0.9,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/super_wizard_atk_02.ogg",
+        "volume": 0.9,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Super Wizard Deploy": [
+      {
+        "sound": "sfx/super_wizard_dep_01.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/super_wizard_dep_02.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Super Wizard Hit": [
+      {
+        "sound": "sfx/tesla_zap_03.ogg",
+        "volume": 0.2,
+        "minPitch": 0.5,
+        "maxPitch": 0.7,
+        "delay": 0.0
+      }
+    ],
+    "SuperBoar Attack": [
+      {
+        "sound": "sfx/super_hog_atk_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.98,
+        "maxPitch": 1.02,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/super_hog_atk_02.ogg",
+        "volume": 0.7,
+        "minPitch": 0.98,
+        "maxPitch": 1.02,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/super_hog_atk_03.ogg",
+        "volume": 0.7,
+        "minPitch": 0.98,
+        "maxPitch": 1.02,
+        "delay": 0.0
+      }
+    ],
+    "SuperBoar Deploy": [
+      {
+        "sound": "sfx/super_hog_dep_01.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/super_hog_dep_02.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/super_hog_dep_03.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "SuperBoar Die": [
+      {
+        "sound": "sfx/super_hog_die_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.98,
+        "maxPitch": 1.02,
+        "delay": 0.0
+      }
+    ],
+    "SuperBoarRider Attack": [
+      {
+        "sound": "sfx/super_hogrider_atk_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SuperBoarRider Deploy": [
+      {
+        "sound": "sfx/super_hog_rider_deploy_01.ogg",
+        "volume": 0.5,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "SuperBoarRider Die": [
+      {
+        "sound": "sfx/super_hogrider_die_01.ogg",
+        "volume": 0.5,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "SuperYeti Attack": [
+      {
+        "sound": "sfx/Troop_SuperYeti_Attack.ogg",
+        "volume": 1.0,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SuperYeti Deploy": [
+      {
+        "sound": "sfx/Troop_SuperYeti_Deploy.ogg",
+        "volume": 1.0,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SuperYeti Die": [
+      {
+        "sound": "sfx/Troop_SuperYeti_Die.ogg",
+        "volume": 1.0,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SuperYeti Hit": [
+      {
+        "sound": "sfx/Troop_SuperYeti_Hit.ogg",
+        "volume": 1.0,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "SuperYetimite Deploy": [
+      {
+        "sound": "sfx/Troop_SuperYeti_Mite_Deploy.ogg",
+        "volume": 0.35,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SuperYetimite Die": [
+      {
+        "sound": "sfx/Troop_SuperYeti_Mite_Die.ogg",
+        "volume": 1.0,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SuperYetimite Hit": [
+      {
+        "sound": "sfx/Troop_SuperYeti_Mite_Hit.ogg",
+        "volume": 1.0,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Super_Bomb": [
+      {
+        "sound": "sfx/mortar_hit_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.6,
+        "maxPitch": 0.8,
+        "delay": 0.0
+      }
+    ],
+    "Super_Dragon_Hit": [
+      {
+        "sound": "sfx/bomb_tower_hit_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Super_Gargoyle Attack": [
+      {
+        "sound": "sfx/super_minion_atk_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Super_Gargoyle Deploy": [
+      {
+        "sound": "sfx/super_minion_dep_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SwarriorGirl Attack2": [
+      {
+        "sound": "sfx/super_valk_atk_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/super_valk_atk_02.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "SwarriorGirl Deploy": [
+      {
+        "sound": "sfx/super_valk_deploy_01.ogg",
+        "volume": 0.6,
+        "minPitch": 0.95,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Tiny Attack": [
+      {
+        "sound": "sfx/tiny_attack_04.ogg",
+        "volume": 0.6,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Tiny Deploy": [
+      {
+        "sound": "sfx/tiny_deploy_05.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Tiny Die": [
+      {
+        "sound": "sfx/tiny_die_03.ogg",
+        "volume": 0.9,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Tiny Hit": [
+      {
+        "sound": "sfx/tiny_hurt_02.ogg",
+        "volume": 0.6,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Tinymite Attack": [
+      {
+        "sound": "sfx/tinymite_attack_04.ogg",
+        "volume": 0.4,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Tinymite Die": [
+      {
+        "sound": "sfx/tinymite_die_03.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Tinymite Hit": [
+      {
+        "sound": "sfx/tinymite_hurt_01.ogg",
+        "volume": 0.4,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Toxic deploy halloween": [
+      {
+        "sound": "sfx/vial_poison_hit_gound_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.97,
+        "maxPitch": 0.97,
+        "delay": 0.0
+      }
+    ],
+    "Troll Deploy": [
+      {
+        "sound": "sfx/rock_troll_dep_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Troop_BarrelSnake_Attack": [
+      {
+        "sound": "sfx/Troop_BarrelSnake_Attack.ogg",
+        "volume": 0.3,
+        "minPitch": 0.8,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      }
+    ],
+    "Troop_BarrelSnake_Die": [
+      {
+        "sound": "sfx/Troop_BarrelSnake_Die.ogg",
+        "volume": 0.55,
+        "minPitch": 0.8,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      }
+    ],
+    "Troop_MinionBodyguard_Atk": [
+      {
+        "sound": "sfx/Troop_MinionBodyguard_Attack_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.8,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/Troop_MinionBodyguard_Attack_02.ogg",
+        "volume": 0.7,
+        "minPitch": 0.8,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/Troop_MinionBodyguard_Attack_03.ogg",
+        "volume": 0.7,
+        "minPitch": 0.8,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      }
+    ],
+    "Troop_MinionBodyguard_Die": [
+      {
+        "sound": "sfx/Troop_MinionBodyguard_Die_01.ogg",
+        "volume": 0.9,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/Troop_MinionBodyguard_Die_02.ogg",
+        "volume": 0.9,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Troop_Thrower_Attack": [
+      {
+        "sound": "sfx/Troop_Thrower_Attack_01.ogg",
+        "volume": 0.4,
+        "minPitch": 0.8,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/Troop_Thrower_Attack_02.ogg",
+        "volume": 0.4,
+        "minPitch": 0.8,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/Troop_Thrower_Attack_03.ogg",
+        "volume": 0.4,
+        "minPitch": 0.8,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Troop_Thrower_Deploy": [
+      {
+        "sound": "sfx/Troop_Thrower_Deploy.ogg",
+        "volume": 1.0,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Troop_Thrower_Die": [
+      {
+        "sound": "sfx/Troop_Thrower_Die.ogg",
+        "volume": 1.0,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Wall Breaker Attack": [
+      {
+        "sound": "sfx/wall_breaker_attack_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Wall Breaker Deploy": [
+      {
+        "sound": "sfx/deploy_skeleton_07.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/deploy_skeleton_07v2.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/deploy_skeleton_07v3.ogg",
+        "volume": 0.8,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Wall Breaker Die": [
+      {
+        "sound": "sfx/wall_breaker_die_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Wall Breaker Hit": [
+      {
+        "sound": "sfx/cannon_fire3.ogg",
+        "volume": 0.6,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "Warlock Attack": [
+      {
+        "sound": "sfx/slimeball_fire_05.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/slimeball_fire_05.ogg",
+        "volume": 0.4,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/slimeball_fire_05.ogg",
+        "volume": 0.4,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Warlock Deploy": [
+      {
+        "sound": "sfx/witch_deploy_01.ogg",
+        "volume": 0.7,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Warlock Die": [
+      {
+        "sound": "sfx/witch_die_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Warlock Hit": [
+      {
+        "sound": "sfx/wizard_hit_01.ogg",
+        "volume": 0.4,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "WarriorGirl Attack": [
+      {
+        "sound": "sfx/warriorgirlattack_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/warriorgirlattack_02.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/warriorgirlattack_03.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/warriorgirlattack_04.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/warriorgirlattack_05.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/warriorgirlattack_06.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "WarriorGirl Attack2": [
+      {
+        "sound": "sfx/warriorgirlattack_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/warriorgirlattack_02.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/warriorgirlattack_03.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/warriorgirlattack_04.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/warriorgirlattack_05.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/warriorgirlattack_06.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "WarriorGirl Deploy": [
+      {
+        "sound": "sfx/warriorgirldeploy_01.ogg",
+        "volume": 0.6,
+        "minPitch": 0.95,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/warriorgirldeploy_02.ogg",
+        "volume": 0.6,
+        "minPitch": 0.95,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "WarriorGirl Die": [
+      {
+        "sound": "sfx/warriorgirl_die_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "WarriorGirl Hit": [
+      {
+        "sound": "sfx/warriorgirl_hit_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Wizard Deploy": [
+      {
+        "sound": "sfx/mage_deploy_06.ogg",
+        "volume": 0.65,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Wizard Die": [
+      {
+        "sound": "sfx/wizard_die_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Wizard Hit1": [
+      {
+        "sound": "sfx/wizard_hit_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Yeti Attack": [
+      {
+        "sound": "sfx/yeti_atk_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Yeti Deploy": [
+      {
+        "sound": "sfx/yeti_dep_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Yeti Die": [
+      {
+        "sound": "sfx/yeti_die_01.ogg",
+        "volume": 0.95,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Yeti Hit": [
+      {
+        "sound": "sfx/yeti_atk_hit_01.ogg",
+        "volume": 0.7,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "Yetimite Die": [
+      {
+        "sound": "sfx/yetimite_die_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "Zappies Attack": [
+      {
+        "sound": "sfx/sparky_shot_01.ogg",
+        "volume": 0.3,
+        "minPitch": 1.0,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      }
+    ],
+    "bat_Predeploy": [
+      {
+        "sound": "sfx/vial_fall_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "druid_bear_transformation": [
+      {
+        "sound": "sfx/druid_bear_transform.ogg",
+        "volume": 0.8,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "entangle_spell_circle_radius": [
+      {
+        "sound": "sfx/overgrowth_spell_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "entangle_spell_circle_radius_lvl2": [
+      {
+        "sound": "sfx/overgrowth_spell_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "entangle_spell_circle_radius_lvl3": [
+      {
+        "sound": "sfx/overgrowth_spell_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "entangle_spell_circle_radius_lvl4": [
+      {
+        "sound": "sfx/overgrowth_spell_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "entangle_spell_circle_radius_lvl5": [
+      {
+        "sound": "sfx/overgrowth_spell_01.ogg",
+        "volume": 0.8,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "firespirit_attack": [
+      {
+        "sound": "sfx/Troop_Furnace_FireSpirit_Attack.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      }
+    ],
+    "furnace_attack": [
+      {
+        "sound": "sfx/Troop_Furnace_FireSpirit_Deploy_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/Troop_Furnace_FireSpirit_Deploy_02.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.2,
+        "delay": 0.0
+      }
+    ],
+    "furnace_die": [
+      {
+        "sound": "sfx/Troop_Furnace_Die.ogg",
+        "volume": 1.0,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "hero_revive_bottle_effect": [
+      {
+        "sound": "sfx/Spell_Revive_Deploy.ogg",
+        "volume": 1.0,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "hero_revive_ground_layer": [
+      {
+        "sound": "sfx/Spell_Revive_Activate.ogg",
+        "volume": 1.0,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_chr_WizardAttack_01": [
+      {
+        "sound": "sfx/mage_attack_02.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/mage_attack_02v2.ogg",
+        "volume": 0.4,
+        "minPitch": 1.0,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/mage_attack_02v3.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_chr_WizardAttack_Hit_01": [
+      {
+        "sound": "sfx/wizard_hit_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_chr_WizardAttack_Hit_Lvl2": [
+      {
+        "sound": "sfx/wizard_hit_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_chr_WizardAttack_Hit_Lvl3": [
+      {
+        "sound": "sfx/wizard_hit_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_chr_WizardAttack_Hit_Lvl4": [
+      {
+        "sound": "sfx/wizard_hit_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_chr_WizardAttack_Lvl2": [
+      {
+        "sound": "sfx/mage_attack_02.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/mage_attack_02v2.ogg",
+        "volume": 0.4,
+        "minPitch": 1.0,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/mage_attack_02v3.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_chr_WizardAttack_Lvl3": [
+      {
+        "sound": "sfx/mage_attack_02.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/mage_attack_02v2.ogg",
+        "volume": 0.4,
+        "minPitch": 1.0,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/mage_attack_02v3.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_chr_WizardAttack_Lvl4": [
+      {
+        "sound": "sfx/mage_attack_02.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/mage_attack_02v2.ogg",
+        "volume": 0.4,
+        "minPitch": 1.0,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/mage_attack_02v3.ogg",
+        "volume": 0.5,
+        "minPitch": 0.9,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_chr_icegolem_hit": [
+      {
+        "sound": "sfx/ice_mage_impact_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_chr_icehound_Die": [
+      {
+        "sound": "sfx/ice_hound_die_01.ogg",
+        "volume": 0.9,
+        "minPitch": 0.95,
+        "maxPitch": 1.05,
+        "delay": 0.0
+      }
+    ],
+    "ps_chr_icehound_hit": [
+      {
+        "sound": "sfx/ice_mage_impact_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_chr_icepup_hit": [
+      {
+        "sound": "sfx/ice_mage_impact_01.ogg",
+        "volume": 0.5,
+        "minPitch": 0.8,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_chr_rubbleknight_deploy": [
+      {
+        "sound": "sfx/sfx_tro_ruinknight_deploy_01.ogg",
+        "volume": 0.5,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/sfx_tro_ruinknight_deploy_02.ogg",
+        "volume": 1.0,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/sfx_tro_ruinknight_deploy_03.ogg",
+        "volume": 1.0,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_spells_angryspell_predeploy": [
+      {
+        "sound": "sfx/vial_fall_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "ps_spells_iceblock_explode": [
+      {
+        "sound": "sfx/Spell_de_IceBlock_All.ogg",
+        "volume": 1.0,
+        "minPitch": 1.0,
+        "maxPitch": 1.0,
+        "delay": 0.0
+      }
+    ],
+    "ps_spells_meteortotem_Impact": [
+      {
+        "sound": "sfx/spell_totemtower_deploy_01.ogg",
+        "volume": 1.0,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/spell_totemtower_deploy_02.ogg",
+        "volume": 1.0,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      },
+      {
+        "sound": "sfx/spell_totemtower_deploy_03.ogg",
+        "volume": 1.0,
+        "minPitch": 0.9,
+        "maxPitch": 1.1,
+        "delay": 0.0
+      }
+    ],
+    "ps_spells_meteortotem_predeploy": [
+      {
+        "sound": "sfx/vial_fall_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "skele_Predeploy": [
+      {
+        "sound": "sfx/vial_fall_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "speedup_Predeploy": [
+      {
+        "sound": "sfx/vial_fall_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ],
+    "toxic_Predeploy": [
+      {
+        "sound": "sfx/vial_fall_02.ogg",
+        "volume": 0.8,
+        "minPitch": 0.95,
+        "maxPitch": 0.95,
+        "delay": 0.0
+      }
+    ]
+  },
+  "sounds": {
+    "sfx/Spell_Revive_Activate.ogg": {
+      "path": "assets/audio/troops-native/Spell_Revive_Activate.ogg",
+      "bytes": 12227,
+      "sha256": "6585b34f634127f00c6518c9680452d46c8363a55b62197a7f162abe55b703f6"
+    },
+    "sfx/Spell_Revive_Deploy.ogg": {
+      "path": "assets/audio/troops-native/Spell_Revive_Deploy.ogg",
+      "bytes": 10133,
+      "sha256": "27a21d98b7e397417d7f1b654ed3b6a51fe98afb0443b3ba0439b763f8a700ac"
+    },
+    "sfx/Spell_de_IceBlock_All.ogg": {
+      "path": "assets/audio/troops-native/Spell_de_IceBlock_All.ogg",
+      "bytes": 57931,
+      "sha256": "e5466d63d04fe3df0ebab25a9dca4759ca98be96598d28e0616b266022f48fd2"
+    },
+    "sfx/Troop_BarrelSnake_Attack.ogg": {
+      "path": "assets/audio/troops-native/Troop_BarrelSnake_Attack.ogg",
+      "bytes": 6240,
+      "sha256": "0e5422c6c8ed413fee08192398dbe2c4327a7a32f48c74ee36df21f38cd45cf1"
+    },
+    "sfx/Troop_BarrelSnake_Die.ogg": {
+      "path": "assets/audio/troops-native/Troop_BarrelSnake_Die.ogg",
+      "bytes": 8058,
+      "sha256": "31881f9fa54445aaa3eb830b33ee8441d58a07b73b1c9f19ce2a48033b178310"
+    },
+    "sfx/Troop_CommandTower_FireBarrel.ogg": {
+      "path": "assets/audio/troops-native/Troop_CommandTower_FireBarrel.ogg",
+      "bytes": 12773,
+      "sha256": "a3516db57e1311de130396eb61cfe4159c253d8b34306c14341f896eb917d338"
+    },
+    "sfx/Troop_Furnace_Deploy.ogg": {
+      "path": "assets/audio/troops-native/Troop_Furnace_Deploy.ogg",
+      "bytes": 10850,
+      "sha256": "ae3cf944ae44bccc3a370e5fa0e67be39660fae80a1677f117b814ae6fc714d4"
+    },
+    "sfx/Troop_Furnace_Die.ogg": {
+      "path": "assets/audio/troops-native/Troop_Furnace_Die.ogg",
+      "bytes": 15752,
+      "sha256": "0510744455ce0656fa544a91cf8e00a2d2ccd6514084b74fcea6e951e172ac49"
+    },
+    "sfx/Troop_Furnace_FireSpirit_Attack.ogg": {
+      "path": "assets/audio/troops-native/Troop_Furnace_FireSpirit_Attack.ogg",
+      "bytes": 8014,
+      "sha256": "0e69db6249b485d1bfa8d3cb8b3968bb9f89c76ad92471d6fafc2f102feabd5b"
+    },
+    "sfx/Troop_Furnace_FireSpirit_Deploy_01.ogg": {
+      "path": "assets/audio/troops-native/Troop_Furnace_FireSpirit_Deploy_01.ogg",
+      "bytes": 8382,
+      "sha256": "a4a745ffd68c2b4237e257be71290380b1fd5c3a749fae5d8c1f5ef9d029333d"
+    },
+    "sfx/Troop_Furnace_FireSpirit_Deploy_02.ogg": {
+      "path": "assets/audio/troops-native/Troop_Furnace_FireSpirit_Deploy_02.ogg",
+      "bytes": 8393,
+      "sha256": "9d2605fa9e4d64cc0e0b6172badc50645fad3b9e03cd855203791650fa61acf7"
+    },
+    "sfx/Troop_Furnace_FireSpirit_Die.ogg": {
+      "path": "assets/audio/troops-native/Troop_Furnace_FireSpirit_Die.ogg",
+      "bytes": 8223,
+      "sha256": "841006e976b28a33f6e24435f0768c67c1f8ce3074810f3af997cb38670da082"
+    },
+    "sfx/Troop_MeteorGolem_Deploy_01.ogg": {
+      "path": "assets/audio/troops-native/Troop_MeteorGolem_Deploy_01.ogg",
+      "bytes": 12292,
+      "sha256": "e507348c3b7ca9568d2e36df34f4e6e248a7c0db7ed02c8e72309f9315e344b2"
+    },
+    "sfx/Troop_MeteorGolem_Deploy_02.ogg": {
+      "path": "assets/audio/troops-native/Troop_MeteorGolem_Deploy_02.ogg",
+      "bytes": 12548,
+      "sha256": "88da951b178e2ec06c8342e5c7eb51c741cecb9864f87df683e78efb40242df7"
+    },
+    "sfx/Troop_MeteorGolem_Deploy_03.ogg": {
+      "path": "assets/audio/troops-native/Troop_MeteorGolem_Deploy_03.ogg",
+      "bytes": 11873,
+      "sha256": "1afc9506328ce2e66b5b47388144b40c44f77c80cb365b4bb93defa7304b6bb9"
+    },
+    "sfx/Troop_MeteorGolem_Die_01.ogg": {
+      "path": "assets/audio/troops-native/Troop_MeteorGolem_Die_01.ogg",
+      "bytes": 12645,
+      "sha256": "0048f675d10c3b1b72c6073bf2890ed71760401de7bc57dcab34480d6df5266b"
+    },
+    "sfx/Troop_MeteorGolem_Die_02.ogg": {
+      "path": "assets/audio/troops-native/Troop_MeteorGolem_Die_02.ogg",
+      "bytes": 11645,
+      "sha256": "95208acdc164aff998f0292d63a7acd3c3b748070dbfde2b7f54bd3df93d1cd4"
+    },
+    "sfx/Troop_MeteorGolem_Die_03.ogg": {
+      "path": "assets/audio/troops-native/Troop_MeteorGolem_Die_03.ogg",
+      "bytes": 12757,
+      "sha256": "cd618bd72a75c0d410162ef589669b30f50ccdf76d8b967da51111378164dbd8"
+    },
+    "sfx/Troop_MeteorGolem_MeleeAttack_01.ogg": {
+      "path": "assets/audio/troops-native/Troop_MeteorGolem_MeleeAttack_01.ogg",
+      "bytes": 5932,
+      "sha256": "66433369c356217d646226f78063055acb4b03e549e62ecbd9f17582b0ada834"
+    },
+    "sfx/Troop_MeteorGolem_MeleeAttack_02.ogg": {
+      "path": "assets/audio/troops-native/Troop_MeteorGolem_MeleeAttack_02.ogg",
+      "bytes": 5941,
+      "sha256": "e2cc725203ee8a7809f0727a6781d09e4e982d1d80a0ff05581d1fb1ea55f14a"
+    },
+    "sfx/Troop_MeteorGolem_MeleeAttack_03.ogg": {
+      "path": "assets/audio/troops-native/Troop_MeteorGolem_MeleeAttack_03.ogg",
+      "bytes": 5957,
+      "sha256": "88e82fbbf978cb8b27976e6784aa4cb27e4dbe0acd14b9d6d411e857c621696d"
+    },
+    "sfx/Troop_MeteorGolem_ThrowAttack_01.ogg": {
+      "path": "assets/audio/troops-native/Troop_MeteorGolem_ThrowAttack_01.ogg",
+      "bytes": 8915,
+      "sha256": "542d32cba20f014b3d588ec0cc686d9d6223ccaec5c8c889f73a2af141d7b82e"
+    },
+    "sfx/Troop_MeteorGolem_ThrowAttack_02.ogg": {
+      "path": "assets/audio/troops-native/Troop_MeteorGolem_ThrowAttack_02.ogg",
+      "bytes": 9239,
+      "sha256": "7373dd7e51410fc9676a7959698bd141e41050737acb46f89784f8fa06dd0d3a"
+    },
+    "sfx/Troop_MeteorGolem_ThrowAttack_03.ogg": {
+      "path": "assets/audio/troops-native/Troop_MeteorGolem_ThrowAttack_03.ogg",
+      "bytes": 9639,
+      "sha256": "2b81422a7b3ef352c1b1294943b5ac14d7ece91f9490917260ff88f372eb4390"
+    },
+    "sfx/Troop_MinionBodyguard_Attack_01.ogg": {
+      "path": "assets/audio/troops-native/Troop_MinionBodyguard_Attack_01.ogg",
+      "bytes": 6298,
+      "sha256": "7e380efaf4af6d5d797e72099602cd519e81bb87a4b3daf225850e82b8f05e9f"
+    },
+    "sfx/Troop_MinionBodyguard_Attack_02.ogg": {
+      "path": "assets/audio/troops-native/Troop_MinionBodyguard_Attack_02.ogg",
+      "bytes": 6051,
+      "sha256": "4b1356d230a6e4813057c723a99b86eb5c296a1111f6606228c47d65791b5847"
+    },
+    "sfx/Troop_MinionBodyguard_Attack_03.ogg": {
+      "path": "assets/audio/troops-native/Troop_MinionBodyguard_Attack_03.ogg",
+      "bytes": 6250,
+      "sha256": "8540177fb3d57bae123e1df1f9154b220be78bd3038bbfd2cb139694d4381b85"
+    },
+    "sfx/Troop_MinionBodyguard_Die_01.ogg": {
+      "path": "assets/audio/troops-native/Troop_MinionBodyguard_Die_01.ogg",
+      "bytes": 11324,
+      "sha256": "16ee69b11785958e6f891a9ccdcb44eb5642edaf532ce6304d3e7e8edb2ae5e5"
+    },
+    "sfx/Troop_MinionBodyguard_Die_02.ogg": {
+      "path": "assets/audio/troops-native/Troop_MinionBodyguard_Die_02.ogg",
+      "bytes": 11974,
+      "sha256": "cf089c5fae90bc81d15e5628aefc3e980985276f908c9b71ea4e292c1f1542fa"
+    },
+    "sfx/Troop_Snake_Bite.ogg": {
+      "path": "assets/audio/troops-native/Troop_Snake_Bite.ogg",
+      "bytes": 6596,
+      "sha256": "04013a1bac694084f7d5701f8dd0fc633fbf8aa0ffbce13e2ffd481ea0ea2a0c"
+    },
+    "sfx/Troop_SuperYeti_Attack.ogg": {
+      "path": "assets/audio/troops-native/Troop_SuperYeti_Attack.ogg",
+      "bytes": 10159,
+      "sha256": "b6d68a6cfd3578d3b113a958d0c22954ca0839a55d48d69b32edffdfb665f92d"
+    },
+    "sfx/Troop_SuperYeti_Deploy.ogg": {
+      "path": "assets/audio/troops-native/Troop_SuperYeti_Deploy.ogg",
+      "bytes": 18808,
+      "sha256": "8d9a8440f992f84fd8ff9658f7b602884f5f02cb5459b9f55a9eca3674ac2432"
+    },
+    "sfx/Troop_SuperYeti_Die.ogg": {
+      "path": "assets/audio/troops-native/Troop_SuperYeti_Die.ogg",
+      "bytes": 11131,
+      "sha256": "1154bee2a70d0db8e6c50b7a20b1624cd76b4e01522e673dd7990cecbe82cb01"
+    },
+    "sfx/Troop_SuperYeti_Hit.ogg": {
+      "path": "assets/audio/troops-native/Troop_SuperYeti_Hit.ogg",
+      "bytes": 7349,
+      "sha256": "095a199f617c7364b5eb82abb32e80f1cf4bc1e0dae976c74fc06352d9cdae97"
+    },
+    "sfx/Troop_SuperYeti_Mite_Deploy.ogg": {
+      "path": "assets/audio/troops-native/Troop_SuperYeti_Mite_Deploy.ogg",
+      "bytes": 8148,
+      "sha256": "7a4c18dd2120166ed383dfd68d64c4379793df2b00c744b25c0b0204cda342aa"
+    },
+    "sfx/Troop_SuperYeti_Mite_Die.ogg": {
+      "path": "assets/audio/troops-native/Troop_SuperYeti_Mite_Die.ogg",
+      "bytes": 8405,
+      "sha256": "1c8208eadbcfb38552aa75c5b5b664e43d8bdc05a0fecdf4f465ea3f926fca9e"
+    },
+    "sfx/Troop_SuperYeti_Mite_Hit.ogg": {
+      "path": "assets/audio/troops-native/Troop_SuperYeti_Mite_Hit.ogg",
+      "bytes": 5768,
+      "sha256": "16fc78a83235a8ecfd88db5f7120718c6b252fee35dc80c003456d7a87cdbbe6"
+    },
+    "sfx/Troop_Thrower_Attack_01.ogg": {
+      "path": "assets/audio/troops-native/Troop_Thrower_Attack_01.ogg",
+      "bytes": 9014,
+      "sha256": "83ff1cd86b7c433fee026ee634e0b3342ce4d91d511d59de83cf04a7e42e29f4"
+    },
+    "sfx/Troop_Thrower_Attack_02.ogg": {
+      "path": "assets/audio/troops-native/Troop_Thrower_Attack_02.ogg",
+      "bytes": 10285,
+      "sha256": "b3c96d80889b48ef0ee5301a45052c6f2b8b1ad9e43759a35aa6c38e903010da"
+    },
+    "sfx/Troop_Thrower_Attack_03.ogg": {
+      "path": "assets/audio/troops-native/Troop_Thrower_Attack_03.ogg",
+      "bytes": 9194,
+      "sha256": "04351be7b2f44af6207540927b1f3033ea6a4b2dafdac7a73891d1c6e9899c40"
+    },
+    "sfx/Troop_Thrower_Deploy.ogg": {
+      "path": "assets/audio/troops-native/Troop_Thrower_Deploy.ogg",
+      "bytes": 12517,
+      "sha256": "357f0008938495737a0018d0bc5549df8e1de79cd4e93fa0e55acf9e932a73da"
+    },
+    "sfx/Troop_Thrower_Die.ogg": {
+      "path": "assets/audio/troops-native/Troop_Thrower_Die.ogg",
+      "bytes": 8370,
+      "sha256": "0897badb119a121bf0b9b5d5baa84022faed2e0ebef1c5be9474729d9214734d"
+    },
+    "sfx/apprentice_warden_attack_01.ogg": {
+      "path": "assets/audio/troops-native/apprentice_warden_attack_01.ogg",
+      "bytes": 7812,
+      "sha256": "50ab9ef98f0e9061025ed3103ee56e4f86d7ace3e607a0e794fd7cd49d28f4ff"
+    },
+    "sfx/apprentice_warden_death.ogg": {
+      "path": "assets/audio/troops-native/apprentice_warden_death.ogg",
+      "bytes": 8890,
+      "sha256": "cc418be9bae5c4c5160e988eeb169874328325bae522c183261eb111da4977f9"
+    },
+    "sfx/apprentice_warden_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/apprentice_warden_deploy_01.ogg",
+      "bytes": 10094,
+      "sha256": "eedaca72ea9bd4693391b74e4bf621420ee64988cdc719e4ec20032c76b8cf12"
+    },
+    "sfx/archer_death_05.ogg": {
+      "path": "assets/audio/troops-native/archer_death_05.ogg",
+      "bytes": 5823,
+      "sha256": "ca2b414c9bf55a2c318df167b87ca0482fdf39bdc1a0239b259334ad657b93bc"
+    },
+    "sfx/archer_death_05v2.ogg": {
+      "path": "assets/audio/troops-native/archer_death_05v2.ogg",
+      "bytes": 6005,
+      "sha256": "f410af4372277d83d92425e2860f1d6ae5d4756886ad946acd92f599cffba217"
+    },
+    "sfx/archer_deploy_09.ogg": {
+      "path": "assets/audio/troops-native/archer_deploy_09.ogg",
+      "bytes": 5814,
+      "sha256": "b0914d1277ced21a8976b6e07661e31d42ea34a9c778da2808cb82c915d434fb"
+    },
+    "sfx/archer_deploy_09v2.ogg": {
+      "path": "assets/audio/troops-native/archer_deploy_09v2.ogg",
+      "bytes": 6475,
+      "sha256": "1a65e00b2eacddf0c36d1cdd84bb5eaf8b6f3de2d30cc8c82dca04c06b0fd258"
+    },
+    "sfx/archer_deploy_09v3.ogg": {
+      "path": "assets/audio/troops-native/archer_deploy_09v3.ogg",
+      "bytes": 6656,
+      "sha256": "77fa9a55b208dfe10c5f247e02fd27cd48e52e7f2bcb538eaef14ba117c5c429"
+    },
+    "sfx/arrow_hit_07.ogg": {
+      "path": "assets/audio/troops-native/arrow_hit_07.ogg",
+      "bytes": 8206,
+      "sha256": "f331fbb1d307973e4adfc2b673fd167f636e2babb887a90c1c0d3c1481581db3"
+    },
+    "sfx/arrow_hit_07v2.ogg": {
+      "path": "assets/audio/troops-native/arrow_hit_07v2.ogg",
+      "bytes": 8905,
+      "sha256": "24012a7b5afc5834cba6cfaa4873dc9a7fd1d65f3fa293b7bcd2a67b439a3b56"
+    },
+    "sfx/arrow_hit_07v3.ogg": {
+      "path": "assets/audio/troops-native/arrow_hit_07v3.ogg",
+      "bytes": 8482,
+      "sha256": "05790e6c00742cfab1ab746a8bce34a4d74cb1c86ec6c34fd13b5e1fdfb144b9"
+    },
+    "sfx/arrow_hit_12.ogg": {
+      "path": "assets/audio/troops-native/arrow_hit_12.ogg",
+      "bytes": 6899,
+      "sha256": "cac3188634691c1cf73da4a59331349eee0d137f5bcf8a6faa8fc265320c2e39"
+    },
+    "sfx/baby_dragon_atk_01.ogg": {
+      "path": "assets/audio/troops-native/baby_dragon_atk_01.ogg",
+      "bytes": 9421,
+      "sha256": "109835ec49d4e28fce13371cbc5364a85db205d892d3604b1fb3eb862b96e952"
+    },
+    "sfx/baby_dragon_death_01.ogg": {
+      "path": "assets/audio/troops-native/baby_dragon_death_01.ogg",
+      "bytes": 8235,
+      "sha256": "dbf4116627baab121d7513df2bdb16282f255313ab4f7e22f9d736617a4dba96"
+    },
+    "sfx/baby_dragon_death_02.ogg": {
+      "path": "assets/audio/troops-native/baby_dragon_death_02.ogg",
+      "bytes": 8409,
+      "sha256": "c7d1d6eb124107c6e9b4fcfc87002da7057c4831c6d966fe6ec4b0e157ba8b83"
+    },
+    "sfx/babydragon_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/babydragon_deploy_01.ogg",
+      "bytes": 10045,
+      "sha256": "420cd8ced7d186682e4d4d9abf051b5925232def6669f25d5f651f8458c0efa3"
+    },
+    "sfx/balloon_deploy_02.ogg": {
+      "path": "assets/audio/troops-native/balloon_deploy_02.ogg",
+      "bytes": 15111,
+      "sha256": "5b500926fbd61606eb3afc3991cb85e9636fe1bbc56751a85a7305df4e8c9f66"
+    },
+    "sfx/balloon_die_01.ogg": {
+      "path": "assets/audio/troops-native/balloon_die_01.ogg",
+      "bytes": 10764,
+      "sha256": "df9c4635294089581c5f08441bc6365ad2ce384916aa76addd5585dc36d140be"
+    },
+    "sfx/balloon_hit_01.ogg": {
+      "path": "assets/audio/troops-native/balloon_hit_01.ogg",
+      "bytes": 11302,
+      "sha256": "e5571225ed7054ad0e9825d03c5cfb49d2857a79b073b5b49ca54ac0e656a484"
+    },
+    "sfx/barb_deploy_11.ogg": {
+      "path": "assets/audio/troops-native/barb_deploy_11.ogg",
+      "bytes": 6050,
+      "sha256": "9713f24a57939d9f8a8872301e7dab89908ab389c15b8bd422ea92256f03d146"
+    },
+    "sfx/barb_deploy_11v2.ogg": {
+      "path": "assets/audio/troops-native/barb_deploy_11v2.ogg",
+      "bytes": 8452,
+      "sha256": "31e10f720abc40d38e70ccc504c8a528655f5420e672c69e30c35ec5b9687533"
+    },
+    "sfx/barb_deploy_11v3.ogg": {
+      "path": "assets/audio/troops-native/barb_deploy_11v3.ogg",
+      "bytes": 8127,
+      "sha256": "8e4c9b287c4a10604aa42314917eb83de336899d4f1248d3ac60ced0d881b0a0"
+    },
+    "sfx/barbarian_death_01.ogg": {
+      "path": "assets/audio/troops-native/barbarian_death_01.ogg",
+      "bytes": 7947,
+      "sha256": "686d0f80b78fd207d1e978bfef9b7bcd16ccf204b5496987b47482c7b733aef2"
+    },
+    "sfx/barbarian_death_02.ogg": {
+      "path": "assets/audio/troops-native/barbarian_death_02.ogg",
+      "bytes": 7737,
+      "sha256": "0c6ca7c87d0c20d535146c4e7204354582016c4858acfdd80c9ed9a446590efa"
+    },
+    "sfx/barbarian_hit_stuff2.ogg": {
+      "path": "assets/audio/troops-native/barbarian_hit_stuff2.ogg",
+      "bytes": 6648,
+      "sha256": "a8f0afeb74296e03d3da7d2c5ec9740740592f953d74dd6e8434dba57a7ef721"
+    },
+    "sfx/barbarian_hit_stuff3.ogg": {
+      "path": "assets/audio/troops-native/barbarian_hit_stuff3.ogg",
+      "bytes": 6744,
+      "sha256": "7a99f8fb894527939d84055325ed6036f083e32286e95be00ff1b031d092870d"
+    },
+    "sfx/barbarian_hit_stuff4.ogg": {
+      "path": "assets/audio/troops-native/barbarian_hit_stuff4.ogg",
+      "bytes": 6703,
+      "sha256": "385442a1748731dc225c0852492597dc718cc896d6227991d1c42ba7c6fa3912"
+    },
+    "sfx/barbarian_sword_swing_hit_14.ogg": {
+      "path": "assets/audio/troops-native/barbarian_sword_swing_hit_14.ogg",
+      "bytes": 6107,
+      "sha256": "8d3e4b51139697db4ade432fe58229638bd77817c9816f1ea93235e7db6b2660"
+    },
+    "sfx/barbarian_sword_swing_hit_14v2.ogg": {
+      "path": "assets/audio/troops-native/barbarian_sword_swing_hit_14v2.ogg",
+      "bytes": 6713,
+      "sha256": "85fe25e0bfe8dd2fca6e1db51f8faa72bb8e6a5c6bf92d0cf6bff6f1c4c45a2f"
+    },
+    "sfx/barbarian_sword_swing_hit_14v3.ogg": {
+      "path": "assets/audio/troops-native/barbarian_sword_swing_hit_14v3.ogg",
+      "bytes": 6456,
+      "sha256": "6d9e49d9a75b7f794653c3a6d4cd37bbfe893d2ee62f48fd8dd1f2618a8f0017"
+    },
+    "sfx/bat_atk_01.ogg": {
+      "path": "assets/audio/troops-native/bat_atk_01.ogg",
+      "bytes": 7130,
+      "sha256": "35c9380472e2a294eeba31b50ce0019a3387ea244d146d114f8277081aeefb6d"
+    },
+    "sfx/bat_atk_hit_01.ogg": {
+      "path": "assets/audio/troops-native/bat_atk_hit_01.ogg",
+      "bytes": 4697,
+      "sha256": "8ea36be9420fe52aced56ecda25a46eed160faad8acf370c622ed85440a4e473"
+    },
+    "sfx/bat_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/bat_deploy_01.ogg",
+      "bytes": 6737,
+      "sha256": "e8e449975e656cb98a6c1e7f3787ddbc9f9e035abf1514dfaf8846dadbe0d8b2"
+    },
+    "sfx/battle_drill_atk_01.ogg": {
+      "path": "assets/audio/troops-native/battle_drill_atk_01.ogg",
+      "bytes": 14241,
+      "sha256": "43c98104363a88610799db8bd01563045f6131be1789c7d0a96165cc165090d2"
+    },
+    "sfx/battle_drill_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/battle_drill_deploy_01.ogg",
+      "bytes": 17290,
+      "sha256": "e61a8064bc8bd34918efcd2bf806dc0ebda71a425920293fedcf68dcc460f484"
+    },
+    "sfx/battle_drill_hit_01.ogg": {
+      "path": "assets/audio/troops-native/battle_drill_hit_01.ogg",
+      "bytes": 12876,
+      "sha256": "43934ab3426fe3caab86d7052446d7b283715f7cdcef90e8ab68e0b2917de373"
+    },
+    "sfx/boarrider_attack_01.ogg": {
+      "path": "assets/audio/troops-native/boarrider_attack_01.ogg",
+      "bytes": 7876,
+      "sha256": "8686b819f9740be462c6f7d0a7f6db8156696b1153b7f69764290f2738fd5e12"
+    },
+    "sfx/boarrider_attack_02.ogg": {
+      "path": "assets/audio/troops-native/boarrider_attack_02.ogg",
+      "bytes": 8706,
+      "sha256": "3779e5bf6e975dadd445e0ef35105eb97a28c4f888a93dc592da55727e798d38"
+    },
+    "sfx/boarrider_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/boarrider_deploy_01.ogg",
+      "bytes": 10337,
+      "sha256": "7e36d0263323081ae61ed655c817fb5adddac3cd211f5085177f956edde5bff5"
+    },
+    "sfx/boarrider_deploy_02.ogg": {
+      "path": "assets/audio/troops-native/boarrider_deploy_02.ogg",
+      "bytes": 9596,
+      "sha256": "ea9c2ca8e3a257030fe286300d9a707f549e88e162917e7c1dbf019f1c62472e"
+    },
+    "sfx/boarrider_die_02.ogg": {
+      "path": "assets/audio/troops-native/boarrider_die_02.ogg",
+      "bytes": 9540,
+      "sha256": "548bbd68a529306da4a280a1b3207b8e49762a564e5e3c643d2a97ff4c14f37f"
+    },
+    "sfx/bomb_tower_hit_01.ogg": {
+      "path": "assets/audio/troops-native/bomb_tower_hit_01.ogg",
+      "bytes": 7109,
+      "sha256": "0320c2aeb7f412dace1acf16b4727ea44c04f93240f7c51486be5c23ae42bb84"
+    },
+    "sfx/bottle_break_04_lightning_01.ogg": {
+      "path": "assets/audio/troops-native/bottle_break_04_lightning_01.ogg",
+      "bytes": 13378,
+      "sha256": "1e8853573f45b2b213de654f898f2fa20d579a9c525a02f7fcc15df55e82f60a"
+    },
+    "sfx/bottle_heal_magic_03.ogg": {
+      "path": "assets/audio/troops-native/bottle_heal_magic_03.ogg",
+      "bytes": 23518,
+      "sha256": "74e70563366200b350e9ba68f161b9eb3c6385392ccdadea0376d34081d630eb"
+    },
+    "sfx/bottle_jump_spell_01.ogg": {
+      "path": "assets/audio/troops-native/bottle_jump_spell_01.ogg",
+      "bytes": 19626,
+      "sha256": "031fb687e2978ee88b7169bc6bcd2d300b68a35b3a3701d4b26dd9399b2fee44"
+    },
+    "sfx/bottle_rage_magic_07v2.ogg": {
+      "path": "assets/audio/troops-native/bottle_rage_magic_07v2.ogg",
+      "bytes": 22062,
+      "sha256": "0bc863901ae01414498d7c5a7bbcd37500fd6ef7b11769c13479e1dc6856693e"
+    },
+    "sfx/bow_place.ogg": {
+      "path": "assets/audio/troops-native/bow_place.ogg",
+      "bytes": 6871,
+      "sha256": "9b155458cd993e03f02fcef0a51a62522ef8d05c49bd0be1a925bb5ae055dc10"
+    },
+    "sfx/building_destroyed_01.ogg": {
+      "path": "assets/audio/troops-native/building_destroyed_01.ogg",
+      "bytes": 11925,
+      "sha256": "fd8295765aa86ff5c7c6be1159cd8fc97aed3c858c29fbdb1af5e3d5c5ce7f04"
+    },
+    "sfx/cannon_fire3.ogg": {
+      "path": "assets/audio/troops-native/cannon_fire3.ogg",
+      "bytes": 10330,
+      "sha256": "51fc989854ab92f3c2941196f56ef845ec23ebb8966276b2a1515c9d14232e86"
+    },
+    "sfx/cannon_fire_01.ogg": {
+      "path": "assets/audio/troops-native/cannon_fire_01.ogg",
+      "bytes": 8585,
+      "sha256": "b241da4507e8e69ecf31fdd815a0f0d8293d12ebe11f6abfe452b42cbd7c4deb"
+    },
+    "sfx/cannon_fire_hit_01.ogg": {
+      "path": "assets/audio/troops-native/cannon_fire_hit_01.ogg",
+      "bytes": 7839,
+      "sha256": "2f46562775a88680fe59a18cbc9fbb9ae1401a93796169dab9d9eb02341afa86"
+    },
+    "sfx/capital_golem_hit.ogg": {
+      "path": "assets/audio/troops-native/capital_golem_hit.ogg",
+      "bytes": 8943,
+      "sha256": "b17f53cb14794b6c2a2562fcd979c312106a22d50d4bcef9e6634b38f2828e06"
+    },
+    "sfx/clash_fire_dragon_atk_01.ogg": {
+      "path": "assets/audio/troops-native/clash_fire_dragon_atk_01.ogg",
+      "bytes": 9041,
+      "sha256": "b24bfa857a302c1a5305b60d93db2ed7d6145a92a9587e1c8f3c04cfd112d4e7"
+    },
+    "sfx/clash_fire_dragon_dep_01.ogg": {
+      "path": "assets/audio/troops-native/clash_fire_dragon_dep_01.ogg",
+      "bytes": 13236,
+      "sha256": "c611d9b6509b8768b09a5389a7dc5588219619941e88ae4a57fa1fc02498311c"
+    },
+    "sfx/clashbat_spell_01.ogg": {
+      "path": "assets/audio/troops-native/clashbat_spell_01.ogg",
+      "bytes": 16924,
+      "sha256": "703cf46f49c529f3840370c4858a20736c4effb4fb2b76705ec6f2f13cf056af"
+    },
+    "sfx/copy_spell_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/copy_spell_deploy_01.ogg",
+      "bytes": 33168,
+      "sha256": "79ac3bcaa823c2f4b991c98a90f4be067c56e465e69f77a92b3660ae3cb1955e"
+    },
+    "sfx/deploy_pekka_05.ogg": {
+      "path": "assets/audio/troops-native/deploy_pekka_05.ogg",
+      "bytes": 12012,
+      "sha256": "4936e558a4884f9690c9f331e0072210e2ecc5d2710fd2ddc6be1e8465ac1ad0"
+    },
+    "sfx/deploy_skeleton_07.ogg": {
+      "path": "assets/audio/troops-native/deploy_skeleton_07.ogg",
+      "bytes": 11377,
+      "sha256": "cd0984e467f778d69acc23c25cd3a8f4d37af740c92058c7970223e964b4e6b6"
+    },
+    "sfx/deploy_skeleton_07v2.ogg": {
+      "path": "assets/audio/troops-native/deploy_skeleton_07v2.ogg",
+      "bytes": 10995,
+      "sha256": "f535c010bbd48dc9993912ade0c16fdc498d05906a64da378c4beb67f81c2bb8"
+    },
+    "sfx/deploy_skeleton_07v3.ogg": {
+      "path": "assets/audio/troops-native/deploy_skeleton_07v3.ogg",
+      "bytes": 11615,
+      "sha256": "a09f394e382d492a2a4ad4954ffb2afc0d400a5915631246fc82fa0986434f3c"
+    },
+    "sfx/dragon_attack_01.ogg": {
+      "path": "assets/audio/troops-native/dragon_attack_01.ogg",
+      "bytes": 11800,
+      "sha256": "f9016714972eddc5291fd98e597f5c70488ce1cf4994f758386d5fe198b619b6"
+    },
+    "sfx/dragon_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/dragon_deploy_01.ogg",
+      "bytes": 10231,
+      "sha256": "7b48aac8ead8b04989901b50f838dd83c1c09cd1b0c9e87272c742e28e77cd8d"
+    },
+    "sfx/dragon_die_01.ogg": {
+      "path": "assets/audio/troops-native/dragon_die_01.ogg",
+      "bytes": 10553,
+      "sha256": "704b6afaa96cbc6f7e5c578c15bbb83749a4ef9bd7a58a1d62f7e5c22b0d0460"
+    },
+    "sfx/dragon_rider_atk_01.ogg": {
+      "path": "assets/audio/troops-native/dragon_rider_atk_01.ogg",
+      "bytes": 16596,
+      "sha256": "930116b021344a3744dd5f10d320f1bd455fe7814e2eb02a706cc9745090ae66"
+    },
+    "sfx/dragon_rider_dep_01.ogg": {
+      "path": "assets/audio/troops-native/dragon_rider_dep_01.ogg",
+      "bytes": 18947,
+      "sha256": "0240be003222b2b37b272baed102453b3f0b34be6c9f5c64a6ceb42d2bfb9ecd"
+    },
+    "sfx/dragon_rider_die_01.ogg": {
+      "path": "assets/audio/troops-native/dragon_rider_die_01.ogg",
+      "bytes": 12258,
+      "sha256": "c426939001bd7745d2b630ae41482a0e6c6f8a05972f67ab905d39ff9445afc2"
+    },
+    "sfx/druid_bear_attack_01.ogg": {
+      "path": "assets/audio/troops-native/druid_bear_attack_01.ogg",
+      "bytes": 5165,
+      "sha256": "93f96eb0ff2e7ee893b89c4ddc96399a8c862c90665b9407454a8ff0c946181e"
+    },
+    "sfx/druid_bear_attack_02.ogg": {
+      "path": "assets/audio/troops-native/druid_bear_attack_02.ogg",
+      "bytes": 5258,
+      "sha256": "8d1cde250ef6f454b05f4187e4275fcf2f72f67dd2cbd582b781a524d7da91e7"
+    },
+    "sfx/druid_bear_attack_03.ogg": {
+      "path": "assets/audio/troops-native/druid_bear_attack_03.ogg",
+      "bytes": 7522,
+      "sha256": "1d0222a4121c3ede729b83a1f287c3abf6416bcb5530a7f6c763a4216be6e6f7"
+    },
+    "sfx/druid_bear_deploy.ogg": {
+      "path": "assets/audio/troops-native/druid_bear_deploy.ogg",
+      "bytes": 16057,
+      "sha256": "782bdf0cff2f905867a10b49ed975ab2ecb4870ab06d9250b8d926ca18cd3571"
+    },
+    "sfx/druid_bear_die.ogg": {
+      "path": "assets/audio/troops-native/druid_bear_die.ogg",
+      "bytes": 20100,
+      "sha256": "5625bde82ee78c4232075e352be9aa949a320c8b87ea31c0a1b53fc0610fbfe0"
+    },
+    "sfx/druid_bear_transform.ogg": {
+      "path": "assets/audio/troops-native/druid_bear_transform.ogg",
+      "bytes": 22429,
+      "sha256": "023f5c38da0a712617e33bfe5ea0fc8db598915f679d9f6790979f2af67fed2d"
+    },
+    "sfx/electro_dragon_sfx_atk_02.ogg": {
+      "path": "assets/audio/troops-native/electro_dragon_sfx_atk_02.ogg",
+      "bytes": 18776,
+      "sha256": "9e70b720c5aa2d41a5b13aadabff984ee2ef59b9eb620ff9c0ccc1ff64bfed19"
+    },
+    "sfx/electro_dragon_sfx_dep_01.ogg": {
+      "path": "assets/audio/troops-native/electro_dragon_sfx_dep_01.ogg",
+      "bytes": 19203,
+      "sha256": "feae3ee2745e55f361c2ec8efb30d14e393c90e83d30c8446c8eb67f0171c443"
+    },
+    "sfx/elektro_titan_atk_01.ogg": {
+      "path": "assets/audio/troops-native/elektro_titan_atk_01.ogg",
+      "bytes": 13052,
+      "sha256": "43c503949447ba2306c0c08f53f17b704424a8f364400c7a46bd56c823f6b9ba"
+    },
+    "sfx/elektro_titan_dep_01.ogg": {
+      "path": "assets/audio/troops-native/elektro_titan_dep_01.ogg",
+      "bytes": 19480,
+      "sha256": "e974decc146470ebc30fd6a70bcb8681e95857fd16023a69e9a6d7d00c22b097"
+    },
+    "sfx/elektro_titan_die_01.ogg": {
+      "path": "assets/audio/troops-native/elektro_titan_die_01.ogg",
+      "bytes": 15580,
+      "sha256": "89dfa821c2eb312a9ba9a10ae2f8a188d2eda6009863e70802957c526c58bea1"
+    },
+    "sfx/explosive_arrow_01v2.ogg": {
+      "path": "assets/audio/troops-native/explosive_arrow_01v2.ogg",
+      "bytes": 7562,
+      "sha256": "2743212b46001112a8dedbc1aee1c944389d21f3f1144ba9e1c5edf3a9b79e4e"
+    },
+    "sfx/fire_siege_fire_01.ogg": {
+      "path": "assets/audio/troops-native/fire_siege_fire_01.ogg",
+      "bytes": 13249,
+      "sha256": "4185767e854a23b68f362c53a5bfd6a80ca6b58a9a2b7ec9d78facb7b77d319c"
+    },
+    "sfx/freeze_spell_01.ogg": {
+      "path": "assets/audio/troops-native/freeze_spell_01.ogg",
+      "bytes": 22874,
+      "sha256": "5af71f1c5dd30d27173649ee585021ba0f08572b28097c280bdcaeff11885c50"
+    },
+    "sfx/garg_attack_01.ogg": {
+      "path": "assets/audio/troops-native/garg_attack_01.ogg",
+      "bytes": 7168,
+      "sha256": "b63cf9571aea371a003db483d285d670e0db7e4bad26b5e8b97c953d4e53424a"
+    },
+    "sfx/garg_deploy_02.ogg": {
+      "path": "assets/audio/troops-native/garg_deploy_02.ogg",
+      "bytes": 9096,
+      "sha256": "5afca23213da1870fbba082f301f0c8caace8dd351e4a6739244d3d65dd09851"
+    },
+    "sfx/garg_die_01.ogg": {
+      "path": "assets/audio/troops-native/garg_die_01.ogg",
+      "bytes": 8921,
+      "sha256": "0221a3232d95b4cc9b9d514ecc1a7d194539f11f612c70f58efcbef4b81175bc"
+    },
+    "sfx/generic_hit_01.ogg": {
+      "path": "assets/audio/troops-native/generic_hit_01.ogg",
+      "bytes": 5282,
+      "sha256": "5fca48e71d21be79eb6d40a1ca1ad3a002e3d69ba72388b2eb6a4d2ec10e5934"
+    },
+    "sfx/giant_attack_05.ogg": {
+      "path": "assets/audio/troops-native/giant_attack_05.ogg",
+      "bytes": 6579,
+      "sha256": "41395054e6ffabb65303911c9654ba445e78f40b4b340306d951bd5cf6fe1afd"
+    },
+    "sfx/giant_attack_06.ogg": {
+      "path": "assets/audio/troops-native/giant_attack_06.ogg",
+      "bytes": 6362,
+      "sha256": "761115b28f4d8d38401164ac714183e933d4231b153ac89608b3df2eb6a581e1"
+    },
+    "sfx/giant_attack_hit_01.ogg": {
+      "path": "assets/audio/troops-native/giant_attack_hit_01.ogg",
+      "bytes": 9032,
+      "sha256": "a98d5797598ce2d4b546caefe906b7e2b7287cbe8aa99a498edb4f537aa54376"
+    },
+    "sfx/giant_attack_hit_02.ogg": {
+      "path": "assets/audio/troops-native/giant_attack_hit_02.ogg",
+      "bytes": 9286,
+      "sha256": "87c6b4edc3b1238bdf24eca64fa7f20d2d565fbfbafed9fff0dd74753a826ba5"
+    },
+    "sfx/giant_death_02.ogg": {
+      "path": "assets/audio/troops-native/giant_death_02.ogg",
+      "bytes": 10763,
+      "sha256": "df727b05aa60ed37f62fd63bd3f2993bc997d06764fd8484f96240eaa595690b"
+    },
+    "sfx/giant_deploy_04.ogg": {
+      "path": "assets/audio/troops-native/giant_deploy_04.ogg",
+      "bytes": 7418,
+      "sha256": "519556e4fae936cd92708ba7f431a11799575b733359fce20cb4291eb7756067"
+    },
+    "sfx/giant_deploy_04v2.ogg": {
+      "path": "assets/audio/troops-native/giant_deploy_04v2.ogg",
+      "bytes": 9415,
+      "sha256": "c9cb02c7d3118c2168fc19f33e22173be59d73cd22f379038a2d24c4f6c7ca4e"
+    },
+    "sfx/giant_deploy_04v3.ogg": {
+      "path": "assets/audio/troops-native/giant_deploy_04v3.ogg",
+      "bytes": 10098,
+      "sha256": "a00102419e39f848bf1ac9bb5562c8d16e709d83b0fdfb565e5f59d4aa352454"
+    },
+    "sfx/giantskele_atk_01.ogg": {
+      "path": "assets/audio/troops-native/giantskele_atk_01.ogg",
+      "bytes": 7445,
+      "sha256": "aea13e2b376e845822adf427a8df19099b5bbc531cac17d6d5e2533ffffa22e0"
+    },
+    "sfx/giantskele_die_01.ogg": {
+      "path": "assets/audio/troops-native/giantskele_die_01.ogg",
+      "bytes": 8768,
+      "sha256": "a1ab6899172628a3767559376eb841522b151ef80468766b1150271929b396dc"
+    },
+    "sfx/gob_attack_01.ogg": {
+      "path": "assets/audio/troops-native/gob_attack_01.ogg",
+      "bytes": 5827,
+      "sha256": "5ebffab23ce2087c2ad6b2346dc106c4025e4bb5adce8578c425845d5e4ea8bb"
+    },
+    "sfx/gob_attack_02.ogg": {
+      "path": "assets/audio/troops-native/gob_attack_02.ogg",
+      "bytes": 6133,
+      "sha256": "57f28f68e41c922162c856078889872d79501b03bdf39246d5ef8cb9e68d33a0"
+    },
+    "sfx/gob_attack_03.ogg": {
+      "path": "assets/audio/troops-native/gob_attack_03.ogg",
+      "bytes": 6230,
+      "sha256": "a03fcc20cb45f56c63dc2141b9552998952716669847d404fafd20a3e7269511"
+    },
+    "sfx/goblin_death_02.ogg": {
+      "path": "assets/audio/troops-native/goblin_death_02.ogg",
+      "bytes": 9075,
+      "sha256": "c0a93345d19173ac47ce3fe52cc0d39bb93e22d7a1b00fb4f22541e70b9f118c"
+    },
+    "sfx/goblin_deploy_14.ogg": {
+      "path": "assets/audio/troops-native/goblin_deploy_14.ogg",
+      "bytes": 8192,
+      "sha256": "19fbbee48c6fe5f69d5bf09adb8e45e826e7d86482a5e84cb0467b7ce8933e53"
+    },
+    "sfx/goblin_deploy_14v2.ogg": {
+      "path": "assets/audio/troops-native/goblin_deploy_14v2.ogg",
+      "bytes": 8305,
+      "sha256": "9d453541b06214f6cce7e2a321537e19af86d04db77f90a66dc8919e1d5ff606"
+    },
+    "sfx/goblin_deploy_14v3.ogg": {
+      "path": "assets/audio/troops-native/goblin_deploy_14v3.ogg",
+      "bytes": 8383,
+      "sha256": "6051269bd0d25977b3381c19fa7c00b3c1570a9d86615bcdb0fe000d03d9ff87"
+    },
+    "sfx/hasty_balloon_dep_01.ogg": {
+      "path": "assets/audio/troops-native/hasty_balloon_dep_01.ogg",
+      "bytes": 19313,
+      "sha256": "a621dd1ea2d2664f74b1ed6c8910a5a92f40e779d2fb215aefe5e0c6fd46e6d1"
+    },
+    "sfx/headhunter_atk_01.ogg": {
+      "path": "assets/audio/troops-native/headhunter_atk_01.ogg",
+      "bytes": 10016,
+      "sha256": "dee6542158c2ee3029a17dcceb4ec5f4541a7e3768ea500bc27d5434d71f1ac4"
+    },
+    "sfx/headhunter_atk_02.ogg": {
+      "path": "assets/audio/troops-native/headhunter_atk_02.ogg",
+      "bytes": 10056,
+      "sha256": "a0b4654926983450acbc0c3c81a903d595eb91ea94f9101ac16578c9c11520bd"
+    },
+    "sfx/headhunter_dep_01.ogg": {
+      "path": "assets/audio/troops-native/headhunter_dep_01.ogg",
+      "bytes": 11188,
+      "sha256": "05c824a2f33051f349e82f3774996b331f27a9dbe7f4dfc2e00ea6954201f294"
+    },
+    "sfx/headhunter_die_01.ogg": {
+      "path": "assets/audio/troops-native/headhunter_die_01.ogg",
+      "bytes": 9363,
+      "sha256": "53b079f314b80d7a1765da10e3c2ee491a0c259d251fbe78f4cc41fc85a0a19f"
+    },
+    "sfx/headhunter_hit_01.ogg": {
+      "path": "assets/audio/troops-native/headhunter_hit_01.ogg",
+      "bytes": 6395,
+      "sha256": "99c035d809cd644f21666c8bad7afb422ce60059281dfb22423c64cad26abbd7"
+    },
+    "sfx/healer_attack_01.ogg": {
+      "path": "assets/audio/troops-native/healer_attack_01.ogg",
+      "bytes": 14253,
+      "sha256": "86c41020b6d8790ed65b7ed13f27bfd053bf146a78f76c857342ead6b2bdfc1d"
+    },
+    "sfx/healer_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/healer_deploy_01.ogg",
+      "bytes": 9557,
+      "sha256": "e0f333c562049499e088d8127d8035eebc152bbd521a487cc55ed159c677e370"
+    },
+    "sfx/healer_die_01.ogg": {
+      "path": "assets/audio/troops-native/healer_die_01.ogg",
+      "bytes": 8664,
+      "sha256": "765e870e42b2f00f99f341e72f3c88badc598e5c227e2a2d796b82b6c32e9ca3"
+    },
+    "sfx/healer_hit_02.ogg": {
+      "path": "assets/audio/troops-native/healer_hit_02.ogg",
+      "bytes": 8002,
+      "sha256": "d874a318f1742b88281cdfa230a89eb95791dac58d137f44fbb906a1647cf7fd"
+    },
+    "sfx/hogless_rider_dep_01.ogg": {
+      "path": "assets/audio/troops-native/hogless_rider_dep_01.ogg",
+      "bytes": 11006,
+      "sha256": "711c10ae092bf90940516a14b8e74a4d96f2065b723a8c554821565f166ab79e"
+    },
+    "sfx/hogless_rider_dep_02.ogg": {
+      "path": "assets/audio/troops-native/hogless_rider_dep_02.ogg",
+      "bytes": 13710,
+      "sha256": "e9b51b4fe1dc67ef51f8c6d890c6597e23c5d7cae14446263ffbd77e2777c95e"
+    },
+    "sfx/hogless_rider_dep_03.ogg": {
+      "path": "assets/audio/troops-native/hogless_rider_dep_03.ogg",
+      "bytes": 15873,
+      "sha256": "bbd144632d0fdae1cd6ca390fd2eff4ad04a138a3cd02a64ca76875c0de6cdf3"
+    },
+    "sfx/hogless_rider_die_01.ogg": {
+      "path": "assets/audio/troops-native/hogless_rider_die_01.ogg",
+      "bytes": 25962,
+      "sha256": "42e35fc42ce08cd23caf78947dd60df454ee4187971140f15a3c4cad53826bbd"
+    },
+    "sfx/ice_archer_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/ice_archer_deploy_01.ogg",
+      "bytes": 11069,
+      "sha256": "722bd223ab966a7503db9ca5e565c1dadeb1b4c6732e4a77829bb14de251d9f7"
+    },
+    "sfx/ice_archer_die_01.ogg": {
+      "path": "assets/audio/troops-native/ice_archer_die_01.ogg",
+      "bytes": 10055,
+      "sha256": "0c98efcdec183b28a406a26e1bdb0fd5f3b2740d36944211b4dc016949907b5b"
+    },
+    "sfx/ice_archer_fire_01.ogg": {
+      "path": "assets/audio/troops-native/ice_archer_fire_01.ogg",
+      "bytes": 9953,
+      "sha256": "980d3fb845c13f8b91eee1b52b87ff72def460871b469b5355e84e7aa0c865f1"
+    },
+    "sfx/ice_golem_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/ice_golem_deploy_01.ogg",
+      "bytes": 13953,
+      "sha256": "df50a74b73f96a5878bf5eeb515644db8631fd41afcfefb189fafde93b6bec4d"
+    },
+    "sfx/ice_hound_atk_01.ogg": {
+      "path": "assets/audio/troops-native/ice_hound_atk_01.ogg",
+      "bytes": 10667,
+      "sha256": "d5097564467b9bf56954412c70370707459746afcd6dc66b6b3cd763483723b2"
+    },
+    "sfx/ice_hound_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/ice_hound_deploy_01.ogg",
+      "bytes": 11536,
+      "sha256": "5d2afdb9b890609195c3b7d7dbfe2b968203bc0e97b2cec2e40c8f4daaff18e5"
+    },
+    "sfx/ice_hound_die_01.ogg": {
+      "path": "assets/audio/troops-native/ice_hound_die_01.ogg",
+      "bytes": 11080,
+      "sha256": "3807eca5b3e6c9a91abc1780d63b24536b76ffd17ecfcbbbe7f66a1bc5b940ca"
+    },
+    "sfx/ice_mage_impact_01.ogg": {
+      "path": "assets/audio/troops-native/ice_mage_impact_01.ogg",
+      "bytes": 9162,
+      "sha256": "2b145091fe799f47532f5589bce36a4f8ac5289a5240680c5849fb4e13fd381b"
+    },
+    "sfx/infdragon_deploy_02.ogg": {
+      "path": "assets/audio/troops-native/infdragon_deploy_02.ogg",
+      "bytes": 22468,
+      "sha256": "2c37ebd986f3e0d7118bc069b01d27e642946ba67de462c74bfedd79982e4ac7"
+    },
+    "sfx/infdragon_die_02.ogg": {
+      "path": "assets/audio/troops-native/infdragon_die_02.ogg",
+      "bytes": 11423,
+      "sha256": "66ff99186be488b65fcd19ce925fc92fbb9b40d94806d826df080464f9a5bb7c"
+    },
+    "sfx/infdragon_fireloop_01.ogg": {
+      "path": "assets/audio/troops-native/infdragon_fireloop_01.ogg",
+      "bytes": 14806,
+      "sha256": "7565097dc4682a2b6b6a5627239b1b6b8e6b71869b9c95107c90dfa9c92716bc"
+    },
+    "sfx/invis_spell_01.ogg": {
+      "path": "assets/audio/troops-native/invis_spell_01.ogg",
+      "bytes": 25301,
+      "sha256": "266ee80074c090c734ea9481bff5b86a08eb1d07208730ee2ec3a8faa0b553c9"
+    },
+    "sfx/lavaloon_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/lavaloon_deploy_01.ogg",
+      "bytes": 21405,
+      "sha256": "f12be11f9ff4b92ca6e2105fd518b54e104a19822d9892b02a0fa411e1f96cb0"
+    },
+    "sfx/lavaloon_die_01.ogg": {
+      "path": "assets/audio/troops-native/lavaloon_die_01.ogg",
+      "bytes": 19856,
+      "sha256": "e47f7b7a7cae049fe702adceb9062c7c3f58fef92038df4030683297cc52b90f"
+    },
+    "sfx/lightning_amb_01.ogg": {
+      "path": "assets/audio/troops-native/lightning_amb_01.ogg",
+      "bytes": 13809,
+      "sha256": "b74fb75c1db5cbd2bbcbd13c9fb4456544320e69e58be19348c9e6eaf30e1d16"
+    },
+    "sfx/log_siege_atk_01.ogg": {
+      "path": "assets/audio/troops-native/log_siege_atk_01.ogg",
+      "bytes": 15313,
+      "sha256": "63aee93714993e73dad7e4436b2f38b9c727984ac98e865092dabb2419ed518b"
+    },
+    "sfx/log_siege_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/log_siege_deploy_01.ogg",
+      "bytes": 10336,
+      "sha256": "2161f34fca23dffe8035fc523bd49656b019a366a980d3e0831616e81e7b9bd3"
+    },
+    "sfx/mage_attack_02.ogg": {
+      "path": "assets/audio/troops-native/mage_attack_02.ogg",
+      "bytes": 8912,
+      "sha256": "590e29c7e17e6a61b5ac3adff6cfd1538a7a2aa935e4150b34ddebca5311d099"
+    },
+    "sfx/mage_attack_02v2.ogg": {
+      "path": "assets/audio/troops-native/mage_attack_02v2.ogg",
+      "bytes": 9560,
+      "sha256": "31002ba09312ad0d3efa52e68f1959e41d0246191eb35a86a2390b0dbd6a37c9"
+    },
+    "sfx/mage_attack_02v3.ogg": {
+      "path": "assets/audio/troops-native/mage_attack_02v3.ogg",
+      "bytes": 9502,
+      "sha256": "b9683dd1a771e8c1f9615af3cedc4592f148cb3cf04a7d108646d274c3774c54"
+    },
+    "sfx/mage_deploy_06.ogg": {
+      "path": "assets/audio/troops-native/mage_deploy_06.ogg",
+      "bytes": 9964,
+      "sha256": "be2a90a7ca629ed8ebf3718be96cff3b448f55e7ae007494e95ec4aa0c258d79"
+    },
+    "sfx/magic_bottle_fall_05.ogg": {
+      "path": "assets/audio/troops-native/magic_bottle_fall_05.ogg",
+      "bytes": 11737,
+      "sha256": "9845e6d457a86d608715cfc3321d167d1c5c714c00edbf70b0eeaa37cd082778"
+    },
+    "sfx/miner_atk_clash_01.ogg": {
+      "path": "assets/audio/troops-native/miner_atk_clash_01.ogg",
+      "bytes": 8101,
+      "sha256": "116d14225433ae95c57634bd027f66ed42d3d780db72da470895bf1256f64800"
+    },
+    "sfx/miner_death_02.ogg": {
+      "path": "assets/audio/troops-native/miner_death_02.ogg",
+      "bytes": 6553,
+      "sha256": "c001997d87221e565f06c8861cb36f2b4e3347dd47ab01249549c4bb9d29acfe"
+    },
+    "sfx/miner_dig_oneshot_01.ogg": {
+      "path": "assets/audio/troops-native/miner_dig_oneshot_01.ogg",
+      "bytes": 14261,
+      "sha256": "eea806e20ab439a7f13675c16b1b7edb67c02bd20c452ab32c8aeeeea1d6bf0b"
+    },
+    "sfx/mortar_hit_01.ogg": {
+      "path": "assets/audio/troops-native/mortar_hit_01.ogg",
+      "bytes": 23298,
+      "sha256": "3d54d10262b8ac7b59faef7a4c75a62c161855bb78ed90a2a02fb414f317d4cc"
+    },
+    "sfx/overgrowth_spell_01.ogg": {
+      "path": "assets/audio/troops-native/overgrowth_spell_01.ogg",
+      "bytes": 52702,
+      "sha256": "51a198e32f63e6699f7643bd9db128d1c6bf3791606acb3757218a2b48bbcb0e"
+    },
+    "sfx/pekka_attack_02v2.ogg": {
+      "path": "assets/audio/troops-native/pekka_attack_02v2.ogg",
+      "bytes": 7592,
+      "sha256": "3469fd98c9e1ee5e19b630e470e525b15eb53e14a79c0aaccd1a3b2f9d4f44d9"
+    },
+    "sfx/pekka_attack_hit_02.ogg": {
+      "path": "assets/audio/troops-native/pekka_attack_hit_02.ogg",
+      "bytes": 11566,
+      "sha256": "ca497e4a04b162e96009dbae7318b70f4329d967d17649e59f90a17671219f72"
+    },
+    "sfx/pekka_death_06.ogg": {
+      "path": "assets/audio/troops-native/pekka_death_06.ogg",
+      "bytes": 12676,
+      "sha256": "5aabff914b581b4ac1ada84ffea983e51a390087f6393beb643adcccf25e5fa7"
+    },
+    "sfx/recall_spell_01.ogg": {
+      "path": "assets/audio/troops-native/recall_spell_01.ogg",
+      "bytes": 19136,
+      "sha256": "2bc4bf96e8acd77461b3d9bfd91357bdd1cd5018347e98542386e537a34ec418"
+    },
+    "sfx/rg_atk_hit_01.ogg": {
+      "path": "assets/audio/troops-native/rg_atk_hit_01.ogg",
+      "bytes": 14188,
+      "sha256": "830adf5ff581cf5008e932c5b4bac03a5f8b6bc5ef84bf8c90fc3be97f0df528"
+    },
+    "sfx/rock_troll_dep_02.ogg": {
+      "path": "assets/audio/troops-native/rock_troll_dep_02.ogg",
+      "bytes": 6477,
+      "sha256": "4a4b05793ada952085cdb757d09cee4c351320d18d41625bb5e36f07292385d9"
+    },
+    "sfx/root_rider_atk_01.ogg": {
+      "path": "assets/audio/troops-native/root_rider_atk_01.ogg",
+      "bytes": 11500,
+      "sha256": "e3dc599c922f28d2a49b1e7af35c3b5c9dc3e1f9439a4352d92d204ce86ce391"
+    },
+    "sfx/root_rider_atk_02.ogg": {
+      "path": "assets/audio/troops-native/root_rider_atk_02.ogg",
+      "bytes": 10003,
+      "sha256": "dd7082f71f500ff79f9535d401b27dcd527b645411a356a6fb017d18651500f0"
+    },
+    "sfx/root_rider_dep_01.ogg": {
+      "path": "assets/audio/troops-native/root_rider_dep_01.ogg",
+      "bytes": 13764,
+      "sha256": "4a9d030e540f6eecc3ea31be9a54a0990efa5f8e2ed49f87579f85be27c8da38"
+    },
+    "sfx/root_rider_dep_02.ogg": {
+      "path": "assets/audio/troops-native/root_rider_dep_02.ogg",
+      "bytes": 14610,
+      "sha256": "3aa27ebc301a072d31811e4f519e51a8ae47f2f63c2fd97ee1579244f3fbc62a"
+    },
+    "sfx/root_rider_die_01.ogg": {
+      "path": "assets/audio/troops-native/root_rider_die_01.ogg",
+      "bytes": 14535,
+      "sha256": "196950e0da87f6c40c6ffd7d63115de79d8d27b858eac79b220e8480e8e117f3"
+    },
+    "sfx/root_rider_die_02.ogg": {
+      "path": "assets/audio/troops-native/root_rider_die_02.ogg",
+      "bytes": 14387,
+      "sha256": "03804d84e1fecf036f32b6cb8ef8ec5a5b89d5047869ad3a5ab485d8205c1d04"
+    },
+    "sfx/sb_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/sb_deploy_01.ogg",
+      "bytes": 84320,
+      "sha256": "064078606be5c13a98f628e1b9a90e1923ca83fe2b9da43f323b4a171635df4c"
+    },
+    "sfx/sfx_spell_def_brainwash_01.ogg": {
+      "path": "assets/audio/troops-native/sfx_spell_def_brainwash_01.ogg",
+      "bytes": 256104,
+      "sha256": "051753a3839823c65bd3bea1ae8eb144a3c419664cf96585525a12ff6be875a3"
+    },
+    "sfx/sfx_spell_def_brainwash_02.ogg": {
+      "path": "assets/audio/troops-native/sfx_spell_def_brainwash_02.ogg",
+      "bytes": 267763,
+      "sha256": "bb359fc0049fef4251142e3433a75eabe1c0ef2db0feeaed1332215f0172bde5"
+    },
+    "sfx/sfx_spell_def_brainwash_03.ogg": {
+      "path": "assets/audio/troops-native/sfx_spell_def_brainwash_03.ogg",
+      "bytes": 261380,
+      "sha256": "a7bb35127c68afda266f7c1158d8b5ba758b2f9232022ddda207f593f0d58623"
+    },
+    "sfx/sfx_spell_def_brainwash_hit_01.ogg": {
+      "path": "assets/audio/troops-native/sfx_spell_def_brainwash_hit_01.ogg",
+      "bytes": 59637,
+      "sha256": "94180ab32db8a3d60bfcb2f5b0d9c0ba92d5a9dfd7c21342546da04831ce8bf1"
+    },
+    "sfx/sfx_spell_def_brainwash_hit_02.ogg": {
+      "path": "assets/audio/troops-native/sfx_spell_def_brainwash_hit_02.ogg",
+      "bytes": 62662,
+      "sha256": "b770e0b914a77243a3af3797361d6aa098b04f648e6b42626cc4b01c205b7429"
+    },
+    "sfx/sfx_spell_def_brainwash_hit_03.ogg": {
+      "path": "assets/audio/troops-native/sfx_spell_def_brainwash_hit_03.ogg",
+      "bytes": 65647,
+      "sha256": "372adc42ff535f27510432b41d7b8d727918816babf0d43b77f9d382df6a2164"
+    },
+    "sfx/sfx_tro_ruinknight_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/sfx_tro_ruinknight_deploy_01.ogg",
+      "bytes": 33530,
+      "sha256": "db532bf26549fa70d9042f6a5832fc1cbab3794d6f70e86aa40f263a4adad05c"
+    },
+    "sfx/sfx_tro_ruinknight_deploy_02.ogg": {
+      "path": "assets/audio/troops-native/sfx_tro_ruinknight_deploy_02.ogg",
+      "bytes": 29653,
+      "sha256": "68f7accdbfcf5f2052b29690acd401a7af0eefd2ea0c88f996442a4e03d1bd76"
+    },
+    "sfx/sfx_tro_ruinknight_deploy_03.ogg": {
+      "path": "assets/audio/troops-native/sfx_tro_ruinknight_deploy_03.ogg",
+      "bytes": 30138,
+      "sha256": "84e71529279e5941998f27935fcd6a487f449caedd8d4743e51b0789b1b9b04b"
+    },
+    "sfx/sfx_tro_ruinwitch_deploy.ogg": {
+      "path": "assets/audio/troops-native/sfx_tro_ruinwitch_deploy.ogg",
+      "bytes": 31647,
+      "sha256": "edf07471b6e3c4a7f1da1e2241b3dce5eaf363f1a2d92ce9f65ddf2bb297f982"
+    },
+    "sfx/siege_balloon_dep_01.ogg": {
+      "path": "assets/audio/troops-native/siege_balloon_dep_01.ogg",
+      "bytes": 21166,
+      "sha256": "deaf31e014ffff7e36b146d6c4d39bd1c3ced66079c636acae2707e6b1e226b5"
+    },
+    "sfx/siege_ram_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/siege_ram_deploy_01.ogg",
+      "bytes": 15078,
+      "sha256": "dc28922fc5a18a261c6ddf61e9dac9cd77abd13fea7cb101d54cba899b234d08"
+    },
+    "sfx/skelly_spell_land_01.ogg": {
+      "path": "assets/audio/troops-native/skelly_spell_land_01.ogg",
+      "bytes": 21098,
+      "sha256": "e3a71a4eae592240a56ec264f6169dce23bf760f96d7210f9adfbe4ff810b7b2"
+    },
+    "sfx/slimeball_fire_05.ogg": {
+      "path": "assets/audio/troops-native/slimeball_fire_05.ogg",
+      "bytes": 8903,
+      "sha256": "4e922606665365afa9e52f045485bb86da7dcf47e0bd5cd64fa7ca38175e83bf"
+    },
+    "sfx/sparky_shot_01.ogg": {
+      "path": "assets/audio/troops-native/sparky_shot_01.ogg",
+      "bytes": 11435,
+      "sha256": "7f0b92a9b33f9f125801e53847caee4ee6b597b71d07157cb8462d8c16de6525"
+    },
+    "sfx/spell_totemtower_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/spell_totemtower_deploy_01.ogg",
+      "bytes": 15221,
+      "sha256": "668c00391dbcff02d58808e50469aa6b45947880b375e9998cc474af12a28dab"
+    },
+    "sfx/spell_totemtower_deploy_02.ogg": {
+      "path": "assets/audio/troops-native/spell_totemtower_deploy_02.ogg",
+      "bytes": 14878,
+      "sha256": "ffc4b4504d11ca041f96d0678ea927a0956bfbf43053df77014a4066de0bc93a"
+    },
+    "sfx/spell_totemtower_deploy_03.ogg": {
+      "path": "assets/audio/troops-native/spell_totemtower_deploy_03.ogg",
+      "bytes": 14887,
+      "sha256": "3f185273a5e00fb013eca1f9899a99f5e384592e6daeefa28c0535660ee55585"
+    },
+    "sfx/spell_totemtower_destroy_01.ogg": {
+      "path": "assets/audio/troops-native/spell_totemtower_destroy_01.ogg",
+      "bytes": 10922,
+      "sha256": "2b9db1ebb7b62d1356cc359ac14fcbd2afec5eca61491f24cfea2be100712ca5"
+    },
+    "sfx/spell_totemtower_destroy_02.ogg": {
+      "path": "assets/audio/troops-native/spell_totemtower_destroy_02.ogg",
+      "bytes": 10760,
+      "sha256": "551b85a978b7c2906572f7aa3ad567766524a3290347c217d5f4eec4f8876bb0"
+    },
+    "sfx/stone_golem_attack_01.ogg": {
+      "path": "assets/audio/troops-native/stone_golem_attack_01.ogg",
+      "bytes": 7312,
+      "sha256": "5041f71e2d61322c224353ef50c67a6d851958d2248c2496fc0892a6b13bd496"
+    },
+    "sfx/stone_golem_death_01.ogg": {
+      "path": "assets/audio/troops-native/stone_golem_death_01.ogg",
+      "bytes": 11005,
+      "sha256": "d89bd3b77d1ce87dd31784cf5de7d773e64e3d3850dc3b1b17f7028e59ee603e"
+    },
+    "sfx/stone_golem_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/stone_golem_deploy_01.ogg",
+      "bytes": 10316,
+      "sha256": "65e893366d279ebeefa6727d80d54b4a50c1b4f9b21de5ae40b19ad8bb780dbe"
+    },
+    "sfx/stone_golem_hit_01.ogg": {
+      "path": "assets/audio/troops-native/stone_golem_hit_01.ogg",
+      "bytes": 8760,
+      "sha256": "b431d275adedecefc21ec5c06e473ff4f54647f850ea961d60125a0e013c88b7"
+    },
+    "sfx/stonestriker_01.ogg": {
+      "path": "assets/audio/troops-native/stonestriker_01.ogg",
+      "bytes": 20364,
+      "sha256": "121634c4dec28a13fd7798c442670c47032e721dbdb1f95248004ec1157504b3"
+    },
+    "sfx/summon_attack_01.ogg": {
+      "path": "assets/audio/troops-native/summon_attack_01.ogg",
+      "bytes": 7386,
+      "sha256": "6ae7f73d60a405a0dc0ce3b98e7b82e5f3620b5f4d351a64eb1e244de8f1fb57"
+    },
+    "sfx/summon_die_02.ogg": {
+      "path": "assets/audio/troops-native/summon_die_02.ogg",
+      "bytes": 8984,
+      "sha256": "16018434218b95b71f1e6ba25b8f556c9e7513f8504697e47c22af0478481e04"
+    },
+    "sfx/super_barb_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/super_barb_deploy_01.ogg",
+      "bytes": 12066,
+      "sha256": "0cbec5856a4573dce6de8b52d6fcdb059a1dfc4d278497c4e9dde09809d189e0"
+    },
+    "sfx/super_barb_deploy_02.ogg": {
+      "path": "assets/audio/troops-native/super_barb_deploy_02.ogg",
+      "bytes": 12428,
+      "sha256": "fcb9e05ddcdf2912c2e9c30e5cf23733c8006942e386f6060c32fb909d443aaa"
+    },
+    "sfx/super_bowler_dep_04.ogg": {
+      "path": "assets/audio/troops-native/super_bowler_dep_04.ogg",
+      "bytes": 15618,
+      "sha256": "ccd9b192705ad08a9d893ab56c507bed8df0b53daea1f3d634423a7d40560a02"
+    },
+    "sfx/super_giant_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/super_giant_deploy_01.ogg",
+      "bytes": 14177,
+      "sha256": "c5115c416b7a8eaa6c0ac7578c4f338045b65626dce1f4e2e2c4b8e63528330a"
+    },
+    "sfx/super_giant_deploy_02.ogg": {
+      "path": "assets/audio/troops-native/super_giant_deploy_02.ogg",
+      "bytes": 13237,
+      "sha256": "4d174804afd7de36720fd02f09c3e78850b439b5819d800ddd26b126f21af0f4"
+    },
+    "sfx/super_gob_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/super_gob_deploy_01.ogg",
+      "bytes": 17253,
+      "sha256": "e1d4cc1850f09be573cc9bd9108013746fe44771b84e7f45c202f6e612640168"
+    },
+    "sfx/super_gob_deploy_02.ogg": {
+      "path": "assets/audio/troops-native/super_gob_deploy_02.ogg",
+      "bytes": 10807,
+      "sha256": "09d48d04c170817f75e60adb0a6167ac1057324960c4e5103a20f3a2077453a3"
+    },
+    "sfx/super_gob_deploy_03..ogg": {
+      "path": "assets/audio/troops-native/super_gob_deploy_03..ogg",
+      "bytes": 17397,
+      "sha256": "048b5fed06e44449ead9c681ad0e1bd258fe1ee50b3df181030c9e7476a27faa"
+    },
+    "sfx/super_hog_atk_01.ogg": {
+      "path": "assets/audio/troops-native/super_hog_atk_01.ogg",
+      "bytes": 6653,
+      "sha256": "3a97d724cb308b1893974c18dfc682146af7adb698067c6dfa7f3a9ae280c854"
+    },
+    "sfx/super_hog_atk_02.ogg": {
+      "path": "assets/audio/troops-native/super_hog_atk_02.ogg",
+      "bytes": 6427,
+      "sha256": "4b8ed9d9a8e26e6de4a6dcc37193d030d3208d39f50559fd40b9d589cef99691"
+    },
+    "sfx/super_hog_atk_03.ogg": {
+      "path": "assets/audio/troops-native/super_hog_atk_03.ogg",
+      "bytes": 5702,
+      "sha256": "600e7a8aa1217ee5053362f6c2330f167cffa8e2c5fc70820d968b976532b495"
+    },
+    "sfx/super_hog_dep_01.ogg": {
+      "path": "assets/audio/troops-native/super_hog_dep_01.ogg",
+      "bytes": 15228,
+      "sha256": "411a19403a8a69e01bbc693ffa7e87571a5eded9f8b2c5d2b0e2eff8a4daa33d"
+    },
+    "sfx/super_hog_dep_02.ogg": {
+      "path": "assets/audio/troops-native/super_hog_dep_02.ogg",
+      "bytes": 16084,
+      "sha256": "e8539129f799609a9b9e70575b8478fddf3c0f9b470561cc745c18573ff96ff4"
+    },
+    "sfx/super_hog_dep_03.ogg": {
+      "path": "assets/audio/troops-native/super_hog_dep_03.ogg",
+      "bytes": 12821,
+      "sha256": "08f1974d1f5e464bdbb41c7757e5cce852672da43292f0d2017b7b492699a566"
+    },
+    "sfx/super_hog_die_01.ogg": {
+      "path": "assets/audio/troops-native/super_hog_die_01.ogg",
+      "bytes": 21697,
+      "sha256": "c9acc9e703e397b03199444e7abac46d56eb6d9fe1f5218276f279027951baff"
+    },
+    "sfx/super_hog_rider_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/super_hog_rider_deploy_01.ogg",
+      "bytes": 23311,
+      "sha256": "0da0f1c952165f07d13a27db538b0abd745eb0a9e2d54fa5a37b0119cf97f411"
+    },
+    "sfx/super_hogrider_atk_01.ogg": {
+      "path": "assets/audio/troops-native/super_hogrider_atk_01.ogg",
+      "bytes": 6892,
+      "sha256": "9818b6d3f218f5a5a61e7cbeeff3f2470d5b7e4a020d38d58939038494e37272"
+    },
+    "sfx/super_hogrider_die_01.ogg": {
+      "path": "assets/audio/troops-native/super_hogrider_die_01.ogg",
+      "bytes": 20439,
+      "sha256": "b1850b8cd277cc60457bed5c432be1d2cd015efa1eeb42657596fe4a42a1090b"
+    },
+    "sfx/super_minion_atk_01.ogg": {
+      "path": "assets/audio/troops-native/super_minion_atk_01.ogg",
+      "bytes": 12647,
+      "sha256": "f25e1827fc1e90d7a7029bd0c2596983ad870de9376544e5583748cc4ee6e1fd"
+    },
+    "sfx/super_minion_dep_01.ogg": {
+      "path": "assets/audio/troops-native/super_minion_dep_01.ogg",
+      "bytes": 14929,
+      "sha256": "09dfc4f10139358c211f266df60b23d0c0c05a59db3d0578edab633b38be3fb0"
+    },
+    "sfx/super_skele_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/super_skele_deploy_01.ogg",
+      "bytes": 20544,
+      "sha256": "b11fbc4d86d1feb3a4008283bc7519ccfa0e15cb14ed3391faa0ab82800c56dd"
+    },
+    "sfx/super_valk_atk_01.ogg": {
+      "path": "assets/audio/troops-native/super_valk_atk_01.ogg",
+      "bytes": 9962,
+      "sha256": "c0c0f4c362e258558a33c084f5a5014dee47265fac52de6117d402e8013b8d03"
+    },
+    "sfx/super_valk_atk_02.ogg": {
+      "path": "assets/audio/troops-native/super_valk_atk_02.ogg",
+      "bytes": 9898,
+      "sha256": "18d3e5fb7217169358088d976c75a38abf4226ff56933df84ef88dac9ca26491"
+    },
+    "sfx/super_valk_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/super_valk_deploy_01.ogg",
+      "bytes": 10918,
+      "sha256": "76776bbb7ecc7446e0c0fd9ca1d15ed52e324d92009a380834209e3c7437fd47"
+    },
+    "sfx/super_witch_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/super_witch_deploy_01.ogg",
+      "bytes": 12052,
+      "sha256": "459ecb7fed5baf8b84bbcceb4cef039d2daef4601ed18c3093aedb3c87188a70"
+    },
+    "sfx/super_witch_die_01.ogg": {
+      "path": "assets/audio/troops-native/super_witch_die_01.ogg",
+      "bytes": 10534,
+      "sha256": "38d2482f4f48a29496b057f6a277cd89830592006bd856bbe18ecfddafc2319b"
+    },
+    "sfx/super_wizard_atk_01.ogg": {
+      "path": "assets/audio/troops-native/super_wizard_atk_01.ogg",
+      "bytes": 12288,
+      "sha256": "020b5a0dcb223b602b93611d8dd409af4cf0a91ab8fb5c8ca08e7e8d289fad71"
+    },
+    "sfx/super_wizard_atk_02.ogg": {
+      "path": "assets/audio/troops-native/super_wizard_atk_02.ogg",
+      "bytes": 13172,
+      "sha256": "9baeac30244bde82b2c41cfdba1fe747e264306203cb183a111f76d3afaeb232"
+    },
+    "sfx/super_wizard_dep_01.ogg": {
+      "path": "assets/audio/troops-native/super_wizard_dep_01.ogg",
+      "bytes": 15592,
+      "sha256": "e88d4bb4d6d8a8ec473baf0573039b3460308ce560f76ce42c2432c52457f7a3"
+    },
+    "sfx/super_wizard_dep_02.ogg": {
+      "path": "assets/audio/troops-native/super_wizard_dep_02.ogg",
+      "bytes": 16175,
+      "sha256": "70d88b734bf789fe7c0c058fce137fac9a47db78b9c00fb0f8522b8c5c2c897b"
+    },
+    "sfx/superminer_drill_01.ogg": {
+      "path": "assets/audio/troops-native/superminer_drill_01.ogg",
+      "bytes": 10055,
+      "sha256": "d3f858214d2b25fa5f87994613ad1b537997cfca5629916f6eb783eff8a38120"
+    },
+    "sfx/sw_skeleton_start_01.ogg": {
+      "path": "assets/audio/troops-native/sw_skeleton_start_01.ogg",
+      "bytes": 11664,
+      "sha256": "039c5b687537688038141e74001f5e104cee06ed9df14fb78a74eda233b72985"
+    },
+    "sfx/tesla_zap_01.ogg": {
+      "path": "assets/audio/troops-native/tesla_zap_01.ogg",
+      "bytes": 7714,
+      "sha256": "3b3cd34b44efc2d82d0de8c7709e692670fe2fb03cf7f49f4825f70884466b38"
+    },
+    "sfx/tesla_zap_03.ogg": {
+      "path": "assets/audio/troops-native/tesla_zap_03.ogg",
+      "bytes": 7546,
+      "sha256": "cab4f177f4ce290f369f3345b5e42afccabb7fb510ec316ee1e954e7a5672bf8"
+    },
+    "sfx/tiny_attack_04.ogg": {
+      "path": "assets/audio/troops-native/tiny_attack_04.ogg",
+      "bytes": 6823,
+      "sha256": "b747578b07478f07e7f38201be92ed1515c7b0e75830e9358e9143d835a4b5d2"
+    },
+    "sfx/tiny_deploy_05.ogg": {
+      "path": "assets/audio/troops-native/tiny_deploy_05.ogg",
+      "bytes": 10937,
+      "sha256": "20567b04ae6584b69345457872d65c5eb6ff94a2c1b045aae0cca4b78dd0baea"
+    },
+    "sfx/tiny_die_03.ogg": {
+      "path": "assets/audio/troops-native/tiny_die_03.ogg",
+      "bytes": 11481,
+      "sha256": "77dba856bf1eabbd25c13d54e80c30cfe5ceea9b8fd4d86d19f0136804e6a65e"
+    },
+    "sfx/tiny_hurt_02.ogg": {
+      "path": "assets/audio/troops-native/tiny_hurt_02.ogg",
+      "bytes": 8140,
+      "sha256": "55d4d522a8d685248e2fe90188c45e96eeb423be02c8ebd6d712a2a3abedc8d1"
+    },
+    "sfx/tiny_ice_die_01.ogg": {
+      "path": "assets/audio/troops-native/tiny_ice_die_01.ogg",
+      "bytes": 9065,
+      "sha256": "8dc1b41e1afd11d892b8295150b658a41c2569227e7e0ce2318b540189a2c0d3"
+    },
+    "sfx/tinymite_attack_04.ogg": {
+      "path": "assets/audio/troops-native/tinymite_attack_04.ogg",
+      "bytes": 6799,
+      "sha256": "112128945a2cb6771f161609ad942d885da42091cd696f75170ad644a7be18d5"
+    },
+    "sfx/tinymite_die_03.ogg": {
+      "path": "assets/audio/troops-native/tinymite_die_03.ogg",
+      "bytes": 9385,
+      "sha256": "571c379cc9d7932c465548121f2ba182686b16a82576f1dacde0a3dbcffb3afa"
+    },
+    "sfx/tinymite_hurt_01.ogg": {
+      "path": "assets/audio/troops-native/tinymite_hurt_01.ogg",
+      "bytes": 6232,
+      "sha256": "d0f9eb04af66c98dc8b10ee0d1a2214cbab4571047de3e595f48d490cda94ae4"
+    },
+    "sfx/upfromground_05.ogg": {
+      "path": "assets/audio/troops-native/upfromground_05.ogg",
+      "bytes": 9595,
+      "sha256": "875b9ef2a1f57c16d1db693f20cc0b4e4dea06f83f7c578b5dc1f6bdadf9eee6"
+    },
+    "sfx/vial_earthquake_hit_gound_01.ogg": {
+      "path": "assets/audio/troops-native/vial_earthquake_hit_gound_01.ogg",
+      "bytes": 28824,
+      "sha256": "6dca81977adb5ef270fdccfd5c0e1886ded39bcadf5b0068ae31e23a803dcaad"
+    },
+    "sfx/vial_fall_02.ogg": {
+      "path": "assets/audio/troops-native/vial_fall_02.ogg",
+      "bytes": 11053,
+      "sha256": "06e60eba5d0e3119894e6585e339f6f72f73548070d5d4bf22f9465a4dd51fcf"
+    },
+    "sfx/vial_poison_hit_gound_01.ogg": {
+      "path": "assets/audio/troops-native/vial_poison_hit_gound_01.ogg",
+      "bytes": 32947,
+      "sha256": "b32c7facbb20c61c06b6a4c97dee8b59978e514a52f3753203f7dd90e3da8c04"
+    },
+    "sfx/vial_speed_hit_gound_01.ogg": {
+      "path": "assets/audio/troops-native/vial_speed_hit_gound_01.ogg",
+      "bytes": 21757,
+      "sha256": "bc6b29f0a743489a1d15f82ef9dbb12a931901aee56a8f32ae210d4a3cf80fed"
+    },
+    "sfx/wall_breaker_attack_01.ogg": {
+      "path": "assets/audio/troops-native/wall_breaker_attack_01.ogg",
+      "bytes": 9908,
+      "sha256": "1a3719203c32a6f691b351ccab7768a6873388fd28d94fb97a8704acfadde399"
+    },
+    "sfx/wall_breaker_die_01.ogg": {
+      "path": "assets/audio/troops-native/wall_breaker_die_01.ogg",
+      "bytes": 11732,
+      "sha256": "5720c0e5ce9f5e22cd6969e06184b8c1c543f36e22061bc395d992f228121c70"
+    },
+    "sfx/warriorgirl_die_01.ogg": {
+      "path": "assets/audio/troops-native/warriorgirl_die_01.ogg",
+      "bytes": 9313,
+      "sha256": "e3454e268caffc4dd72d7d025da118cb251a7e9f4636e123e0ba0f2d838040d8"
+    },
+    "sfx/warriorgirl_hit_01.ogg": {
+      "path": "assets/audio/troops-native/warriorgirl_hit_01.ogg",
+      "bytes": 6648,
+      "sha256": "67fe61445a047b0aced19fb3d06fdc31fc75f8cf945ce74c615dac7abe4026a7"
+    },
+    "sfx/warriorgirlattack_01.ogg": {
+      "path": "assets/audio/troops-native/warriorgirlattack_01.ogg",
+      "bytes": 8590,
+      "sha256": "7a88c1002044aba6d463579514a74e53e793ca32351bc02b9d4c40c2d3d3c5b5"
+    },
+    "sfx/warriorgirlattack_02.ogg": {
+      "path": "assets/audio/troops-native/warriorgirlattack_02.ogg",
+      "bytes": 8616,
+      "sha256": "d9cc0c652b1c09fe51151bd836fcc350d1aefddcec94a0aa8f15f3d713ceacfc"
+    },
+    "sfx/warriorgirlattack_03.ogg": {
+      "path": "assets/audio/troops-native/warriorgirlattack_03.ogg",
+      "bytes": 8896,
+      "sha256": "18c012a8e5c805900231eeb46c99ef53d4f0b11a9989067ec9a88f901d884778"
+    },
+    "sfx/warriorgirlattack_04.ogg": {
+      "path": "assets/audio/troops-native/warriorgirlattack_04.ogg",
+      "bytes": 9014,
+      "sha256": "d33a226fb6eb79949d761a08d3119195a127771c48c55b49760799ca7edf2062"
+    },
+    "sfx/warriorgirlattack_05.ogg": {
+      "path": "assets/audio/troops-native/warriorgirlattack_05.ogg",
+      "bytes": 8733,
+      "sha256": "fd26cdb0a7335dc4efa3c2cb7613e782272d30fc56a4218ded21c299794c367f"
+    },
+    "sfx/warriorgirlattack_06.ogg": {
+      "path": "assets/audio/troops-native/warriorgirlattack_06.ogg",
+      "bytes": 8065,
+      "sha256": "b040b2b70385db5d618a1f141e4725221cbc2c86f07e46e4203079ffb47af014"
+    },
+    "sfx/warriorgirldeploy_01.ogg": {
+      "path": "assets/audio/troops-native/warriorgirldeploy_01.ogg",
+      "bytes": 8639,
+      "sha256": "6abe4310010565b50115ceab8a6f390bcf30047878a5df733880a51e88d5bc61"
+    },
+    "sfx/warriorgirldeploy_02.ogg": {
+      "path": "assets/audio/troops-native/warriorgirldeploy_02.ogg",
+      "bytes": 10153,
+      "sha256": "03bdb5d41ba1a970df5297a482e14ffc117c16dd5843974033978fb6aaaa1810"
+    },
+    "sfx/witch_deploy_01.ogg": {
+      "path": "assets/audio/troops-native/witch_deploy_01.ogg",
+      "bytes": 9190,
+      "sha256": "6a46c400086fdfd41e5ab90b93396bf86e8b3e537c39d02121e088be077527ee"
+    },
+    "sfx/witch_die_01.ogg": {
+      "path": "assets/audio/troops-native/witch_die_01.ogg",
+      "bytes": 10438,
+      "sha256": "a3af83a3191d4f1cd1b10525f48774807da26f2d366ee86d3587d78def8c2c9e"
+    },
+    "sfx/wizard_die_01.ogg": {
+      "path": "assets/audio/troops-native/wizard_die_01.ogg",
+      "bytes": 10520,
+      "sha256": "6d42ed71e0ccfcce8b252544b2c48044c5325f35817afe454e4244e5ee51c3a6"
+    },
+    "sfx/wizard_hit_01.ogg": {
+      "path": "assets/audio/troops-native/wizard_hit_01.ogg",
+      "bytes": 8139,
+      "sha256": "c0ed0e6d5b0781f70d5962034493b23e9ce17d45939e52f873df9566cda28cdf"
+    },
+    "sfx/yeti_atk_01.ogg": {
+      "path": "assets/audio/troops-native/yeti_atk_01.ogg",
+      "bytes": 9255,
+      "sha256": "9e48e4220de615cba606e290c7860e7eb7ec291d4a2e514936e2d6503f07507b"
+    },
+    "sfx/yeti_atk_hit_01.ogg": {
+      "path": "assets/audio/troops-native/yeti_atk_hit_01.ogg",
+      "bytes": 6412,
+      "sha256": "7af8ef7195bfcf1e07e7cbbfbe28addbfb628793655fbf6d4813c9df9c45d49e"
+    },
+    "sfx/yeti_dep_02.ogg": {
+      "path": "assets/audio/troops-native/yeti_dep_02.ogg",
+      "bytes": 14296,
+      "sha256": "50bbb8519b49d184e7778e9ac09e7a1a6c0174d46ac7f9ee6f706204c22d65e6"
+    },
+    "sfx/yeti_die_01.ogg": {
+      "path": "assets/audio/troops-native/yeti_die_01.ogg",
+      "bytes": 9830,
+      "sha256": "35b720b258e96f5cc7ca92562e09aaa3c340145a11e683d82595b89368a6b4ea"
+    },
+    "sfx/yetimite_die_01.ogg": {
+      "path": "assets/audio/troops-native/yetimite_die_01.ogg",
+      "bytes": 7859,
+      "sha256": "582cb708a6edd796f1267d8449e14ce7014d7d1ad32b27772446614fa6ebd5c5"
+    }
+  }
+}

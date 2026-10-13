@@ -1,0 +1,4335 @@
+{
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "withheld": {
+    "CHALLENGE_TH8_GOWIVA": "Balloon 5 garrison",
+    "CHALLENGE_TH12_YETI": "Lava Hound 5 and Baby Dragon 6 garrison",
+    "CHALLENGE_TH13_HYBRID": "Ice Golem 5 garrison",
+    "CHALLENGE_TH9_BABYDQW": "UseFullMapSize layout exceeds the 48-tile grid",
+    "CHALLENGE_TH10_MINER": "UseFullMapSize layout exceeds the 48-tile grid",
+    "CHALLENGE_TH12_DRAGBAT": "UseFullMapSize layout exceeds the 48-tile grid"
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "id": "TutorialNPC",
+      "name": "Payback",
+      "family": "goblin",
+      "dependencies": [],
+      "gold": 500,
+      "elixir": 500,
+      "darkElixir": 0,
+      "recommendedTownHall": null,
+      "nativeRows": [
+        {
+          "Name": "TutorialNPC",
+          "MapInstanceName": "npc1",
+          "TID": "TID_NPC_NAME_TUTORIAL",
+          "ExpLevel": "1",
+          "UnitType": "Tutorial Goblin",
+          "UnitCount": "6",
+          "LevelFile": "level/tutorial_npc.json",
+          "Gold": "500",
+          "Elixir": "500",
+          "AlwaysUnlocked": "TRUE",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "id": "TutorialNPC2",
+      "name": "Goblin Forest",
+      "family": "goblin",
+      "dependencies": [
+        1
+      ],
+      "gold": 500,
+      "elixir": 500,
+      "darkElixir": 0,
+      "recommendedTownHall": null,
+      "nativeRows": [
+        {
+          "Name": "TutorialNPC2",
+          "MapInstanceName": "npc2",
+          "MapDependencies": "TutorialNPC",
+          "TID": "TID_NPC_NAME_TUTORIAL2",
+          "ExpLevel": "2",
+          "UnitType": "Tutorial Goblin",
+          "UnitCount": "3",
+          "LevelFile": "level/tutorial_npc2.json",
+          "Gold": "500",
+          "Elixir": "500",
+          "AlwaysUnlocked": "TRUE",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 3,
+      "id": "NPC1",
+      "name": "Goblin Outpost",
+      "family": "goblin",
+      "dependencies": [
+        2
+      ],
+      "gold": 1500,
+      "elixir": 1500,
+      "darkElixir": 0,
+      "recommendedTownHall": 2,
+      "nativeRows": [
+        {
+          "Name": "NPC1",
+          "MapInstanceName": "npc3",
+          "MapDependencies": "TutorialNPC2",
+          "TID": "TID_NPC1",
+          "ExpLevel": "4",
+          "minRecommendedTHLevel": "2",
+          "LevelFile": "level/npc1.json",
+          "Gold": "1500",
+          "Elixir": "1500",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 4,
+      "id": "NPC2",
+      "name": "Rocky Fort",
+      "family": "goblin",
+      "dependencies": [
+        3
+      ],
+      "gold": 2500,
+      "elixir": 2500,
+      "darkElixir": 0,
+      "recommendedTownHall": 2,
+      "nativeRows": [
+        {
+          "Name": "NPC2",
+          "MapInstanceName": "npc4",
+          "MapDependencies": "NPC1",
+          "TID": "TID_NPC2",
+          "ExpLevel": "4",
+          "minRecommendedTHLevel": "2",
+          "LevelFile": "level/npc2.json",
+          "Gold": "2500",
+          "Elixir": "2500",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 5,
+      "id": "NPC3",
+      "name": "Goblin Gauntlet",
+      "family": "goblin",
+      "dependencies": [
+        4
+      ],
+      "gold": 3000,
+      "elixir": 3000,
+      "darkElixir": 0,
+      "recommendedTownHall": 3,
+      "nativeRows": [
+        {
+          "Name": "NPC3",
+          "MapInstanceName": "npc5",
+          "MapDependencies": "NPC2",
+          "TID": "TID_NPC3",
+          "ExpLevel": "6",
+          "minRecommendedTHLevel": "3",
+          "LevelFile": "level/npc3.json",
+          "Gold": "3000",
+          "Elixir": "3000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 6,
+      "id": "NPC4",
+      "name": "Cannonball Run",
+      "family": "goblin",
+      "dependencies": [
+        5
+      ],
+      "gold": 4000,
+      "elixir": 4000,
+      "darkElixir": 0,
+      "recommendedTownHall": 3,
+      "nativeRows": [
+        {
+          "Name": "NPC4",
+          "MapInstanceName": "npc6",
+          "MapDependencies": "NPC3",
+          "TID": "TID_NPC4",
+          "ExpLevel": "6",
+          "minRecommendedTHLevel": "3",
+          "LevelFile": "level/npc4.json",
+          "Gold": "4000",
+          "Elixir": "4000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 7,
+      "id": "NPC5",
+      "name": "Two Smoking Barrels",
+      "family": "goblin",
+      "dependencies": [
+        6
+      ],
+      "gold": 5000,
+      "elixir": 5000,
+      "darkElixir": 0,
+      "recommendedTownHall": 3,
+      "nativeRows": [
+        {
+          "Name": "NPC5",
+          "MapInstanceName": "npc7",
+          "MapDependencies": "NPC4",
+          "TID": "TID_NPC5",
+          "ExpLevel": "7",
+          "minRecommendedTHLevel": "3",
+          "LevelFile": "level/npc5.json",
+          "Gold": "5000",
+          "Elixir": "5000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 8,
+      "id": "NPC6",
+      "name": "Gold Rush",
+      "family": "goblin",
+      "dependencies": [
+        7
+      ],
+      "gold": 8000,
+      "elixir": 4000,
+      "darkElixir": 0,
+      "recommendedTownHall": 3,
+      "nativeRows": [
+        {
+          "Name": "NPC6",
+          "MapInstanceName": "npc8",
+          "MapDependencies": "NPC5",
+          "TID": "TID_NPC6",
+          "ExpLevel": "8",
+          "minRecommendedTHLevel": "3",
+          "LevelFile": "level/npc6.json",
+          "Gold": "8000",
+          "Elixir": "4000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 9,
+      "id": "NPC7",
+      "name": "Maginot Line",
+      "family": "goblin",
+      "dependencies": [
+        8
+      ],
+      "gold": 8000,
+      "elixir": 8000,
+      "darkElixir": 0,
+      "recommendedTownHall": 4,
+      "nativeRows": [
+        {
+          "Name": "NPC7",
+          "MapInstanceName": "npc9",
+          "MapDependencies": "NPC6",
+          "TID": "TID_NPC7",
+          "ExpLevel": "10",
+          "minRecommendedTHLevel": "4",
+          "LevelFile": "level/npc7.json",
+          "Gold": "8000",
+          "Elixir": "8000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 10,
+      "id": "NPC8",
+      "name": "Rat Valley",
+      "family": "goblin",
+      "dependencies": [
+        9
+      ],
+      "gold": 8000,
+      "elixir": 12000,
+      "darkElixir": 0,
+      "recommendedTownHall": 4,
+      "nativeRows": [
+        {
+          "Name": "NPC8",
+          "MapInstanceName": "npc10",
+          "MapDependencies": "NPC7",
+          "TID": "TID_NPC8",
+          "ExpLevel": "10",
+          "minRecommendedTHLevel": "4",
+          "LevelFile": "level/npc8.json",
+          "Gold": "8000",
+          "Elixir": "12000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 11,
+      "id": "NPC9",
+      "name": "Brute Force",
+      "family": "goblin",
+      "dependencies": [
+        10
+      ],
+      "gold": 10000,
+      "elixir": 14000,
+      "darkElixir": 0,
+      "recommendedTownHall": 4,
+      "nativeRows": [
+        {
+          "Name": "NPC9",
+          "MapInstanceName": "npc11",
+          "MapDependencies": "NPC8",
+          "TID": "TID_NPC9",
+          "ExpLevel": "12",
+          "minRecommendedTHLevel": "4",
+          "LevelFile": "level/npc9.json",
+          "Gold": "10000",
+          "Elixir": "14000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 12,
+      "id": "NPC10",
+      "name": "Gobbotown",
+      "family": "goblin",
+      "dependencies": [
+        11
+      ],
+      "gold": 20000,
+      "elixir": 6000,
+      "darkElixir": 0,
+      "recommendedTownHall": 4,
+      "nativeRows": [
+        {
+          "Name": "NPC10",
+          "MapInstanceName": "npc12",
+          "MapDependencies": "NPC9",
+          "TID": "TID_NPC10",
+          "ExpLevel": "12",
+          "minRecommendedTHLevel": "4",
+          "LevelFile": "level/npc10.json",
+          "Gold": "20000",
+          "Elixir": "6000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 13,
+      "id": "NPC11",
+      "name": "M is for Mortar",
+      "family": "goblin",
+      "dependencies": [
+        12
+      ],
+      "gold": 14000,
+      "elixir": 14000,
+      "darkElixir": 0,
+      "recommendedTownHall": 5,
+      "nativeRows": [
+        {
+          "Name": "NPC11",
+          "MapInstanceName": "npc13",
+          "MapDependencies": "NPC10",
+          "TID": "TID_NPC11",
+          "ExpLevel": "13",
+          "minRecommendedTHLevel": "5",
+          "LevelFile": "level/npc11.json",
+          "Gold": "14000",
+          "Elixir": "14000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000051"
+        }
+      ]
+    },
+    {
+      "stage": 14,
+      "id": "NPC12",
+      "name": "Megablaster",
+      "family": "goblin",
+      "dependencies": [
+        13
+      ],
+      "gold": 20000,
+      "elixir": 10000,
+      "darkElixir": 0,
+      "recommendedTownHall": 5,
+      "nativeRows": [
+        {
+          "Name": "NPC12",
+          "MapInstanceName": "npc14",
+          "MapDependencies": "NPC11",
+          "TID": "TID_NPC12",
+          "ExpLevel": "13",
+          "minRecommendedTHLevel": "5",
+          "LevelFile": "level/npc12.json",
+          "Gold": "20000",
+          "Elixir": "10000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 15,
+      "id": "NPC13",
+      "name": "Immovable Object",
+      "family": "goblin",
+      "dependencies": [
+        14
+      ],
+      "gold": 16000,
+      "elixir": 16000,
+      "darkElixir": 0,
+      "recommendedTownHall": 5,
+      "nativeRows": [
+        {
+          "Name": "NPC13",
+          "MapInstanceName": "npc15",
+          "MapDependencies": "NPC12",
+          "TID": "TID_NPC13",
+          "ExpLevel": "13",
+          "minRecommendedTHLevel": "5",
+          "LevelFile": "level/npc13.json",
+          "Gold": "16000",
+          "Elixir": "16000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 16,
+      "id": "NPC14",
+      "name": "Fort Knobs",
+      "family": "goblin",
+      "dependencies": [
+        15
+      ],
+      "gold": 17000,
+      "elixir": 17000,
+      "darkElixir": 0,
+      "recommendedTownHall": 5,
+      "nativeRows": [
+        {
+          "Name": "NPC14",
+          "MapInstanceName": "npc16",
+          "MapDependencies": "NPC13",
+          "TID": "TID_NPC14",
+          "ExpLevel": "13",
+          "minRecommendedTHLevel": "5",
+          "LevelFile": "level/npc14.json",
+          "Gold": "17000",
+          "Elixir": "17000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 17,
+      "id": "NPC15",
+      "name": "Watchtower",
+      "family": "goblin",
+      "dependencies": [
+        16,
+        13
+      ],
+      "gold": 16000,
+      "elixir": 20000,
+      "darkElixir": 0,
+      "recommendedTownHall": 5,
+      "nativeRows": [
+        {
+          "Name": "NPC15",
+          "MapInstanceName": "npc17",
+          "MapDependencies": "NPC14",
+          "TID": "TID_NPC15",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "5",
+          "LevelFile": "level/npc15.json",
+          "Gold": "16000",
+          "Elixir": "20000",
+          "SinglePlayer": "TRUE"
+        },
+        {
+          "MapDependencies": "NPC11",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 18,
+      "id": "NPC16",
+      "name": "Fool's Gold",
+      "family": "goblin",
+      "dependencies": [
+        17
+      ],
+      "gold": 24000,
+      "elixir": 14000,
+      "darkElixir": 0,
+      "recommendedTownHall": 5,
+      "nativeRows": [
+        {
+          "Name": "NPC16",
+          "MapInstanceName": "npc18",
+          "MapDependencies": "NPC15",
+          "TID": "TID_NPC16",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "5",
+          "LevelFile": "level/npc16.json",
+          "Gold": "24000",
+          "Elixir": "14000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 19,
+      "id": "NPC17",
+      "name": "Thoroughfare",
+      "family": "goblin",
+      "dependencies": [
+        18
+      ],
+      "gold": 20000,
+      "elixir": 20000,
+      "darkElixir": 0,
+      "recommendedTownHall": 6,
+      "nativeRows": [
+        {
+          "Name": "NPC17",
+          "MapInstanceName": "npc19",
+          "MapDependencies": "NPC16",
+          "TID": "TID_NPC17",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "6",
+          "LevelFile": "level/npc17.json",
+          "Gold": "20000",
+          "Elixir": "20000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 20,
+      "id": "NPC18",
+      "name": "Bouncy Castle",
+      "family": "goblin",
+      "dependencies": [
+        19
+      ],
+      "gold": 15000,
+      "elixir": 30000,
+      "darkElixir": 0,
+      "recommendedTownHall": 6,
+      "nativeRows": [
+        {
+          "Name": "NPC18",
+          "MapInstanceName": "npc20",
+          "MapDependencies": "NPC17",
+          "TID": "TID_NPC18",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "6",
+          "LevelFile": "level/npc18.json",
+          "Gold": "15000",
+          "Elixir": "30000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 21,
+      "id": "NPC19",
+      "name": "Fikova",
+      "family": "goblin",
+      "dependencies": [
+        20
+      ],
+      "gold": 24000,
+      "elixir": 24000,
+      "darkElixir": 0,
+      "recommendedTownHall": 6,
+      "nativeRows": [
+        {
+          "Name": "NPC19",
+          "MapInstanceName": "npc21",
+          "MapDependencies": "NPC18",
+          "TID": "TID_NPC19",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "6",
+          "LevelFile": "level/npc19.json",
+          "Gold": "24000",
+          "Elixir": "24000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 22,
+      "id": "NPC20",
+      "name": "Gobbo Campus",
+      "family": "goblin",
+      "dependencies": [
+        21
+      ],
+      "gold": 25000,
+      "elixir": 25000,
+      "darkElixir": 0,
+      "recommendedTownHall": 6,
+      "nativeRows": [
+        {
+          "Name": "NPC20",
+          "MapInstanceName": "npc22",
+          "MapDependencies": "NPC19",
+          "TID": "TID_NPC20",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "6",
+          "LevelFile": "level/npc20.json",
+          "Gold": "25000",
+          "Elixir": "25000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 23,
+      "id": "NPC21",
+      "name": "Danny Boy",
+      "family": "goblin",
+      "dependencies": [
+        22
+      ],
+      "gold": 30000,
+      "elixir": 30000,
+      "darkElixir": 0,
+      "recommendedTownHall": 6,
+      "nativeRows": [
+        {
+          "Name": "NPC21",
+          "MapInstanceName": "npc23",
+          "MapDependencies": "NPC20",
+          "TID": "TID_NPC21",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "6",
+          "LevelFile": "level/npc21.json",
+          "Gold": "30000",
+          "Elixir": "30000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 24,
+      "id": "NPC22",
+      "name": "Ommahha Beech",
+      "family": "goblin",
+      "dependencies": [
+        23
+      ],
+      "gold": 35000,
+      "elixir": 35000,
+      "darkElixir": 0,
+      "recommendedTownHall": 6,
+      "nativeRows": [
+        {
+          "Name": "NPC22",
+          "MapInstanceName": "npc24",
+          "MapDependencies": "NPC21",
+          "TID": "TID_NPC22",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "6",
+          "LevelFile": "level/npc22.json",
+          "Gold": "35000",
+          "Elixir": "35000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 25,
+      "id": "NPC23",
+      "name": "Walls of Steel",
+      "family": "goblin",
+      "dependencies": [
+        24
+      ],
+      "gold": 40000,
+      "elixir": 40000,
+      "darkElixir": 0,
+      "recommendedTownHall": 6,
+      "nativeRows": [
+        {
+          "Name": "NPC23",
+          "MapInstanceName": "npc25",
+          "MapDependencies": "NPC22",
+          "TID": "TID_NPC23",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "6",
+          "LevelFile": "level/npc23.json",
+          "Gold": "40000",
+          "Elixir": "40000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 26,
+      "id": "NPC24",
+      "name": "Sicilian Defense",
+      "family": "goblin",
+      "dependencies": [
+        25
+      ],
+      "gold": 45000,
+      "elixir": 45000,
+      "darkElixir": 0,
+      "recommendedTownHall": 6,
+      "nativeRows": [
+        {
+          "Name": "NPC24",
+          "MapInstanceName": "npc26",
+          "MapDependencies": "NPC23",
+          "TID": "TID_NPC24",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "6",
+          "LevelFile": "level/npc24.json",
+          "Gold": "45000",
+          "Elixir": "45000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 27,
+      "id": "NPC25",
+      "name": "Obsidian Tower",
+      "family": "goblin",
+      "dependencies": [
+        26
+      ],
+      "gold": 20000,
+      "elixir": 80000,
+      "darkElixir": 0,
+      "recommendedTownHall": 7,
+      "nativeRows": [
+        {
+          "Name": "NPC25",
+          "MapInstanceName": "npc27",
+          "MapDependencies": "NPC24",
+          "TID": "TID_NPC25",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "7",
+          "LevelFile": "level/npc25.json",
+          "Gold": "20000",
+          "Elixir": "80000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 28,
+      "id": "NPC26",
+      "name": "Arrow Head",
+      "family": "goblin",
+      "dependencies": [
+        27
+      ],
+      "gold": 60000,
+      "elixir": 60000,
+      "darkElixir": 0,
+      "recommendedTownHall": 7,
+      "nativeRows": [
+        {
+          "Name": "NPC26",
+          "MapInstanceName": "npc28",
+          "MapDependencies": "NPC25",
+          "TID": "TID_NPC26",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "7",
+          "LevelFile": "level/npc26.json",
+          "Gold": "60000",
+          "Elixir": "60000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 29,
+      "id": "NPC27",
+      "name": "Red Carpet",
+      "family": "goblin",
+      "dependencies": [
+        28
+      ],
+      "gold": 70000,
+      "elixir": 70000,
+      "darkElixir": 0,
+      "recommendedTownHall": 7,
+      "nativeRows": [
+        {
+          "Name": "NPC27",
+          "MapInstanceName": "npc29",
+          "MapDependencies": "NPC26",
+          "TID": "TID_NPC27",
+          "ExpLevel": "15",
+          "minRecommendedTHLevel": "7",
+          "LevelFile": "level/npc27.json",
+          "Gold": "70000",
+          "Elixir": "70000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 30,
+      "id": "NPC28",
+      "name": "Natural Defense",
+      "family": "goblin",
+      "dependencies": [
+        29
+      ],
+      "gold": 150000,
+      "elixir": 2000,
+      "darkElixir": 0,
+      "recommendedTownHall": 7,
+      "nativeRows": [
+        {
+          "Name": "NPC28",
+          "MapInstanceName": "npc30",
+          "MapDependencies": "NPC27",
+          "TID": "TID_NPC28",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "7",
+          "LevelFile": "level/npc28.json",
+          "Gold": "150000",
+          "Elixir": "2000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 31,
+      "id": "NPC29",
+      "name": "Steel Gauntlet",
+      "family": "goblin",
+      "dependencies": [
+        30
+      ],
+      "gold": 80000,
+      "elixir": 80000,
+      "darkElixir": 0,
+      "recommendedTownHall": 7,
+      "nativeRows": [
+        {
+          "Name": "NPC29",
+          "MapInstanceName": "npc31",
+          "MapDependencies": "NPC28",
+          "TID": "TID_NPC29",
+          "ExpLevel": "14",
+          "minRecommendedTHLevel": "7",
+          "LevelFile": "level/npc29.json",
+          "Gold": "80000",
+          "Elixir": "80000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 32,
+      "id": "NPC30",
+      "name": "Queen's Gambit",
+      "family": "goblin",
+      "dependencies": [
+        31
+      ],
+      "gold": 90000,
+      "elixir": 90000,
+      "darkElixir": 0,
+      "recommendedTownHall": 7,
+      "nativeRows": [
+        {
+          "Name": "NPC30",
+          "MapInstanceName": "npc32",
+          "MapDependencies": "NPC29",
+          "TID": "TID_NPC30",
+          "ExpLevel": "15",
+          "minRecommendedTHLevel": "7",
+          "LevelFile": "level/npc30.json",
+          "Gold": "90000",
+          "Elixir": "90000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 33,
+      "id": "NPC31",
+      "name": "Full Frontal",
+      "family": "goblin",
+      "dependencies": [
+        32
+      ],
+      "gold": 50000,
+      "elixir": 140000,
+      "darkElixir": 0,
+      "recommendedTownHall": 7,
+      "nativeRows": [
+        {
+          "Name": "NPC31",
+          "MapInstanceName": "npc33",
+          "MapDependencies": "NPC30",
+          "TID": "TID_NPC31",
+          "ExpLevel": "15",
+          "minRecommendedTHLevel": "7",
+          "LevelFile": "level/npc31.json",
+          "Gold": "50000",
+          "Elixir": "140000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 34,
+      "id": "NPC32",
+      "name": "Chimp in Armor",
+      "family": "goblin",
+      "dependencies": [
+        33
+      ],
+      "gold": 150000,
+      "elixir": 50000,
+      "darkElixir": 0,
+      "recommendedTownHall": 7,
+      "nativeRows": [
+        {
+          "Name": "NPC32",
+          "MapInstanceName": "npc34",
+          "MapDependencies": "NPC31",
+          "TID": "TID_NPC32",
+          "ExpLevel": "15",
+          "minRecommendedTHLevel": "7",
+          "LevelFile": "level/npc32.json",
+          "Gold": "150000",
+          "Elixir": "50000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 35,
+      "id": "NPC33",
+      "name": "Faulty Towers",
+      "family": "goblin",
+      "dependencies": [
+        34
+      ],
+      "gold": 110000,
+      "elixir": 110000,
+      "darkElixir": 0,
+      "recommendedTownHall": 8,
+      "nativeRows": [
+        {
+          "Name": "NPC33",
+          "MapInstanceName": "npc35",
+          "MapDependencies": "NPC32",
+          "TID": "TID_NPC33",
+          "ExpLevel": "15",
+          "minRecommendedTHLevel": "8",
+          "LevelFile": "level/npc33.json",
+          "Gold": "110000",
+          "Elixir": "110000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 36,
+      "id": "NPC34",
+      "name": "Point Man",
+      "family": "goblin",
+      "dependencies": [
+        35
+      ],
+      "gold": 120000,
+      "elixir": 120000,
+      "darkElixir": 0,
+      "recommendedTownHall": 8,
+      "nativeRows": [
+        {
+          "Name": "NPC34",
+          "MapInstanceName": "npc36",
+          "MapDependencies": "NPC33",
+          "TID": "TID_NPC34",
+          "ExpLevel": "15",
+          "minRecommendedTHLevel": "8",
+          "LevelFile": "level/npc34.json",
+          "Gold": "120000",
+          "Elixir": "120000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 37,
+      "id": "NPC35",
+      "name": "Triple A",
+      "family": "goblin",
+      "dependencies": [
+        36
+      ],
+      "gold": 130000,
+      "elixir": 130000,
+      "darkElixir": 0,
+      "recommendedTownHall": 8,
+      "nativeRows": [
+        {
+          "Name": "NPC35",
+          "MapInstanceName": "npc37",
+          "MapDependencies": "NPC34",
+          "TID": "TID_NPC35",
+          "ExpLevel": "15",
+          "minRecommendedTHLevel": "8",
+          "LevelFile": "level/npc35.json",
+          "Gold": "130000",
+          "Elixir": "130000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 38,
+      "id": "NPC36",
+      "name": "Goblin Picnic",
+      "family": "goblin",
+      "dependencies": [
+        37
+      ],
+      "gold": 2000,
+      "elixir": 270000,
+      "darkElixir": 0,
+      "recommendedTownHall": 8,
+      "nativeRows": [
+        {
+          "Name": "NPC36",
+          "MapInstanceName": "npc38",
+          "MapDependencies": "NPC35",
+          "TID": "TID_NPC36",
+          "ExpLevel": "15",
+          "minRecommendedTHLevel": "8",
+          "LevelFile": "level/npc36.json",
+          "Gold": "2000",
+          "Elixir": "270000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 39,
+      "id": "NPC37",
+      "name": "Bait 'n Switch",
+      "family": "goblin",
+      "dependencies": [
+        38
+      ],
+      "gold": 140000,
+      "elixir": 140000,
+      "darkElixir": 0,
+      "recommendedTownHall": 8,
+      "nativeRows": [
+        {
+          "Name": "NPC37",
+          "MapInstanceName": "npc39",
+          "MapDependencies": "NPC36",
+          "TID": "TID_NPC37",
+          "ExpLevel": "15",
+          "minRecommendedTHLevel": "8",
+          "LevelFile": "level/npc37.json",
+          "Gold": "140000",
+          "Elixir": "140000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 40,
+      "id": "NPC38",
+      "name": "Collateral Damage",
+      "family": "goblin",
+      "dependencies": [
+        39
+      ],
+      "gold": 150000,
+      "elixir": 150000,
+      "darkElixir": 0,
+      "recommendedTownHall": 8,
+      "nativeRows": [
+        {
+          "Name": "NPC38",
+          "MapInstanceName": "npc40",
+          "MapDependencies": "NPC37",
+          "TID": "TID_NPC38",
+          "ExpLevel": "15",
+          "minRecommendedTHLevel": "8",
+          "LevelFile": "level/npc38.json",
+          "Gold": "150000",
+          "Elixir": "150000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 41,
+      "id": "NPC39",
+      "name": "Choose Wisely",
+      "family": "goblin",
+      "dependencies": [
+        40
+      ],
+      "gold": 150000,
+      "elixir": 150000,
+      "darkElixir": 0,
+      "recommendedTownHall": 8,
+      "nativeRows": [
+        {
+          "Name": "NPC39",
+          "MapInstanceName": "npc41",
+          "MapDependencies": "NPC38",
+          "TID": "TID_NPC39",
+          "ExpLevel": "15",
+          "minRecommendedTHLevel": "8",
+          "LevelFile": "level/npc39.json",
+          "Gold": "150000",
+          "Elixir": "150000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 42,
+      "id": "NPC40",
+      "name": "Mega Evil",
+      "family": "goblin",
+      "dependencies": [
+        41
+      ],
+      "gold": 150000,
+      "elixir": 150000,
+      "darkElixir": 0,
+      "recommendedTownHall": 8,
+      "nativeRows": [
+        {
+          "Name": "NPC40",
+          "MapInstanceName": "npc42",
+          "MapDependencies": "NPC39",
+          "TID": "TID_NPC40",
+          "ExpLevel": "15",
+          "minRecommendedTHLevel": "8",
+          "LevelFile": "level/npc40.json",
+          "Gold": "150000",
+          "Elixir": "150000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 43,
+      "id": "NPC41",
+      "name": "Crystal Crust",
+      "family": "goblin",
+      "dependencies": [
+        42
+      ],
+      "gold": 200000,
+      "elixir": 200000,
+      "darkElixir": 0,
+      "recommendedTownHall": 9,
+      "nativeRows": [
+        {
+          "Name": "NPC41",
+          "MapInstanceName": "npc43",
+          "MapDependencies": "NPC40",
+          "TID": "TID_NPC41",
+          "ExpLevel": "16",
+          "minRecommendedTHLevel": "9",
+          "LevelFile": "level/npc41.json",
+          "Gold": "200000",
+          "Elixir": "200000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 44,
+      "id": "NPC42",
+      "name": "Cold as Ice",
+      "family": "goblin",
+      "dependencies": [
+        43
+      ],
+      "gold": 250000,
+      "elixir": 250000,
+      "darkElixir": 0,
+      "recommendedTownHall": 9,
+      "nativeRows": [
+        {
+          "Name": "NPC42",
+          "MapInstanceName": "npc44",
+          "MapDependencies": "NPC41",
+          "TID": "TID_NPC42",
+          "ExpLevel": "16",
+          "minRecommendedTHLevel": "9",
+          "LevelFile": "level/npc42.json",
+          "Gold": "250000",
+          "Elixir": "250000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 45,
+      "id": "NPC43",
+      "name": "Jump Around",
+      "family": "goblin",
+      "dependencies": [
+        44
+      ],
+      "gold": 300000,
+      "elixir": 300000,
+      "darkElixir": 0,
+      "recommendedTownHall": 9,
+      "nativeRows": [
+        {
+          "Name": "NPC43",
+          "MapInstanceName": "npc45",
+          "MapDependencies": "NPC42",
+          "TID": "TID_NPC43",
+          "ExpLevel": "16",
+          "minRecommendedTHLevel": "9",
+          "LevelFile": "level/npc43.json",
+          "Gold": "300000",
+          "Elixir": "300000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 46,
+      "id": "NPC44",
+      "name": "Kitchen Sink",
+      "family": "goblin",
+      "dependencies": [
+        45,
+        41
+      ],
+      "gold": 400000,
+      "elixir": 400000,
+      "darkElixir": 0,
+      "recommendedTownHall": 9,
+      "nativeRows": [
+        {
+          "Name": "NPC44",
+          "MapInstanceName": "npc46",
+          "MapDependencies": "NPC43",
+          "TID": "TID_NPC44",
+          "ExpLevel": "17",
+          "minRecommendedTHLevel": "9",
+          "LevelFile": "level/npc44.json",
+          "Gold": "400000",
+          "Elixir": "400000",
+          "SinglePlayer": "TRUE"
+        },
+        {
+          "MapDependencies": "NPC39",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 47,
+      "id": "NPC45",
+      "name": "Rolling Terror",
+      "family": "goblin",
+      "dependencies": [
+        46
+      ],
+      "gold": 500000,
+      "elixir": 500000,
+      "darkElixir": 0,
+      "recommendedTownHall": 9,
+      "nativeRows": [
+        {
+          "Name": "NPC45",
+          "MapInstanceName": "npc47",
+          "MapDependencies": "NPC44",
+          "TID": "TID_NPC45",
+          "ExpLevel": "17",
+          "minRecommendedTHLevel": "9",
+          "LevelFile": "level/npc45.json",
+          "Gold": "500000",
+          "Elixir": "500000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000051"
+        }
+      ]
+    },
+    {
+      "stage": 48,
+      "id": "NPC46",
+      "name": "Megamansion",
+      "family": "goblin",
+      "dependencies": [
+        47
+      ],
+      "gold": 600000,
+      "elixir": 600000,
+      "darkElixir": 0,
+      "recommendedTownHall": 9,
+      "nativeRows": [
+        {
+          "Name": "NPC46",
+          "MapInstanceName": "npc48",
+          "MapDependencies": "NPC45",
+          "TID": "TID_NPC46",
+          "ExpLevel": "17",
+          "minRecommendedTHLevel": "9",
+          "LevelFile": "level/npc46.json",
+          "Gold": "600000",
+          "Elixir": "600000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 49,
+      "id": "NPC47",
+      "name": "P.E.K.K.A's Playhouse",
+      "family": "goblin",
+      "dependencies": [
+        48
+      ],
+      "gold": 700000,
+      "elixir": 700000,
+      "darkElixir": 0,
+      "recommendedTownHall": 9,
+      "nativeRows": [
+        {
+          "Name": "NPC47",
+          "MapInstanceName": "npc49",
+          "MapDependencies": "NPC46",
+          "TID": "TID_NPC47",
+          "ExpLevel": "17",
+          "minRecommendedTHLevel": "9",
+          "LevelFile": "level/npc47.json",
+          "Gold": "700000",
+          "Elixir": "700000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 50,
+      "id": "NPC48",
+      "name": "Sherbet Towers",
+      "family": "goblin",
+      "dependencies": [
+        49
+      ],
+      "gold": 800000,
+      "elixir": 800000,
+      "darkElixir": 0,
+      "recommendedTownHall": 9,
+      "nativeRows": [
+        {
+          "Name": "NPC48",
+          "MapInstanceName": "npc50",
+          "MapDependencies": "NPC47",
+          "TID": "TID_NPC48",
+          "ExpLevel": "17",
+          "minRecommendedTHLevel": "9",
+          "LevelFile": "level/npc48.json",
+          "Gold": "800000",
+          "Elixir": "800000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 51,
+      "id": "NPC51",
+      "name": "Invaders",
+      "family": "goblin",
+      "dependencies": [
+        50
+      ],
+      "gold": 300000,
+      "elixir": 300000,
+      "darkElixir": 2000,
+      "recommendedTownHall": 9,
+      "nativeRows": [
+        {
+          "Name": "NPC51",
+          "MapInstanceName": "npc51",
+          "MapDependencies": "NPC48",
+          "TID": "TID_NPC51",
+          "ExpLevel": "17",
+          "minRecommendedTHLevel": "9",
+          "LevelFile": "level/npc49.json",
+          "Gold": "300000",
+          "Elixir": "300000",
+          "DarkElixir": "2000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 52,
+      "id": "NPC52",
+      "name": "Cross and Bows",
+      "family": "goblin",
+      "dependencies": [
+        51
+      ],
+      "gold": 350000,
+      "elixir": 350000,
+      "darkElixir": 2500,
+      "recommendedTownHall": 10,
+      "nativeRows": [
+        {
+          "Name": "NPC52",
+          "MapInstanceName": "npc52",
+          "MapDependencies": "NPC51",
+          "TID": "TID_NPC52",
+          "ExpLevel": "17",
+          "minRecommendedTHLevel": "10",
+          "LevelFile": "level/npc50.json",
+          "Gold": "350000",
+          "Elixir": "350000",
+          "DarkElixir": "2500",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 53,
+      "id": "NPC53",
+      "name": "Forest Outing",
+      "family": "goblin",
+      "dependencies": [
+        52
+      ],
+      "gold": 350000,
+      "elixir": 350000,
+      "darkElixir": 3000,
+      "recommendedTownHall": 10,
+      "nativeRows": [
+        {
+          "Name": "NPC53",
+          "MapInstanceName": "npc53",
+          "MapDependencies": "NPC52",
+          "TID": "TID_NPC53",
+          "ExpLevel": "17",
+          "minRecommendedTHLevel": "10",
+          "LevelFile": "level/npc51.json",
+          "Gold": "350000",
+          "Elixir": "350000",
+          "DarkElixir": "3000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 54,
+      "id": "NPC54",
+      "name": "Skeleton Run",
+      "family": "goblin",
+      "dependencies": [
+        53
+      ],
+      "gold": 400000,
+      "elixir": 400000,
+      "darkElixir": 3500,
+      "recommendedTownHall": 10,
+      "nativeRows": [
+        {
+          "Name": "NPC54",
+          "MapInstanceName": "npc54",
+          "MapDependencies": "NPC53",
+          "TID": "TID_NPC54",
+          "ExpLevel": "17",
+          "minRecommendedTHLevel": "10",
+          "LevelFile": "level/npc52.json",
+          "Gold": "400000",
+          "Elixir": "400000",
+          "DarkElixir": "3500",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 55,
+      "id": "NPC55",
+      "name": "Magic Practice",
+      "family": "goblin",
+      "dependencies": [
+        54
+      ],
+      "gold": 400000,
+      "elixir": 400000,
+      "darkElixir": 4000,
+      "recommendedTownHall": 10,
+      "nativeRows": [
+        {
+          "Name": "NPC55",
+          "MapInstanceName": "npc55",
+          "MapDependencies": "NPC54",
+          "TID": "TID_NPC55",
+          "ExpLevel": "17",
+          "minRecommendedTHLevel": "10",
+          "LevelFile": "level/npc53.json",
+          "Gold": "400000",
+          "Elixir": "400000",
+          "DarkElixir": "4000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 56,
+      "id": "NPC56",
+      "name": "High Pressure",
+      "family": "goblin",
+      "dependencies": [
+        55
+      ],
+      "gold": 450000,
+      "elixir": 450000,
+      "darkElixir": 4000,
+      "recommendedTownHall": 10,
+      "nativeRows": [
+        {
+          "Name": "NPC56",
+          "MapInstanceName": "npc56",
+          "MapDependencies": "NPC55",
+          "TID": "TID_NPC56",
+          "ExpLevel": "18",
+          "minRecommendedTHLevel": "10",
+          "LevelFile": "level/npc54.json",
+          "Gold": "450000",
+          "Elixir": "450000",
+          "DarkElixir": "4000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 57,
+      "id": "NPC57",
+      "name": "No Flight Zone",
+      "family": "goblin",
+      "dependencies": [
+        56
+      ],
+      "gold": 450000,
+      "elixir": 450000,
+      "darkElixir": 4500,
+      "recommendedTownHall": 10,
+      "nativeRows": [
+        {
+          "Name": "NPC57",
+          "MapInstanceName": "npc57",
+          "MapDependencies": "NPC56",
+          "TID": "TID_NPC57",
+          "ExpLevel": "18",
+          "minRecommendedTHLevel": "10",
+          "LevelFile": "level/npc55.json",
+          "Gold": "450000",
+          "Elixir": "450000",
+          "DarkElixir": "4500",
+          "SinglePlayer": "TRUE",
+          "AllianceUnitType": "Dragon",
+          "AllianceUnitLevel": "7",
+          "AllianceUnitCount": "1"
+        },
+        {
+          "AllianceUnitType": "Balloon",
+          "AllianceUnitLevel": "8",
+          "AllianceUnitCount": "3"
+        }
+      ]
+    },
+    {
+      "stage": 58,
+      "id": "NPC58",
+      "name": "Graduation Ceremony",
+      "family": "goblin",
+      "dependencies": [
+        57
+      ],
+      "gold": 500000,
+      "elixir": 500000,
+      "darkElixir": 4500,
+      "recommendedTownHall": 10,
+      "nativeRows": [
+        {
+          "Name": "NPC58",
+          "MapInstanceName": "npc58",
+          "MapDependencies": "NPC57",
+          "TID": "TID_NPC58",
+          "ExpLevel": "18",
+          "minRecommendedTHLevel": "10",
+          "LevelFile": "level/npc56.json",
+          "Gold": "500000",
+          "Elixir": "500000",
+          "DarkElixir": "4500",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 59,
+      "id": "NPC59",
+      "name": "Midnight Oil",
+      "family": "goblin",
+      "dependencies": [
+        58
+      ],
+      "gold": 500000,
+      "elixir": 500000,
+      "darkElixir": 5000,
+      "recommendedTownHall": 10,
+      "nativeRows": [
+        {
+          "Name": "NPC59",
+          "MapInstanceName": "npc59",
+          "MapDependencies": "NPC58",
+          "TID": "TID_NPC59",
+          "ExpLevel": "18",
+          "minRecommendedTHLevel": "10",
+          "LevelFile": "level/npc57.json",
+          "Gold": "500000",
+          "Elixir": "500000",
+          "DarkElixir": "5000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 60,
+      "id": "NPC60",
+      "name": "All Angle Attack",
+      "family": "goblin",
+      "dependencies": [
+        59
+      ],
+      "gold": 550000,
+      "elixir": 550000,
+      "darkElixir": 5000,
+      "recommendedTownHall": 11,
+      "nativeRows": [
+        {
+          "Name": "NPC60",
+          "MapInstanceName": "npc60",
+          "MapDependencies": "NPC59",
+          "TID": "TID_NPC60",
+          "ExpLevel": "18",
+          "minRecommendedTHLevel": "11",
+          "LevelFile": "level/npc58.json",
+          "Gold": "550000",
+          "Elixir": "550000",
+          "DarkElixir": "5000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 61,
+      "id": "NPC61",
+      "name": "Burning Sensation",
+      "family": "goblin",
+      "dependencies": [
+        59
+      ],
+      "gold": 550000,
+      "elixir": 550000,
+      "darkElixir": 5500,
+      "recommendedTownHall": 11,
+      "nativeRows": [
+        {
+          "Name": "NPC61",
+          "MapInstanceName": "npc61",
+          "MapDependencies": "NPC59",
+          "TID": "TID_NPC61",
+          "ExpLevel": "18",
+          "minRecommendedTHLevel": "11",
+          "LevelFile": "level/npc59.json",
+          "Gold": "550000",
+          "Elixir": "550000",
+          "DarkElixir": "5500",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 62,
+      "id": "NPC62",
+      "name": "Underground Workaround",
+      "family": "goblin",
+      "dependencies": [
+        60
+      ],
+      "gold": 600000,
+      "elixir": 600000,
+      "darkElixir": 5500,
+      "recommendedTownHall": 11,
+      "nativeRows": [
+        {
+          "Name": "NPC62",
+          "MapInstanceName": "npc62",
+          "MapDependencies": "NPC60",
+          "TID": "TID_NPC62",
+          "ExpLevel": "18",
+          "minRecommendedTHLevel": "11",
+          "LevelFile": "level/npc60.json",
+          "Gold": "600000",
+          "Elixir": "600000",
+          "DarkElixir": "5500",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 63,
+      "id": "NPC63",
+      "name": "Teamwork Opportunity",
+      "family": "goblin",
+      "dependencies": [
+        61
+      ],
+      "gold": 600000,
+      "elixir": 600000,
+      "darkElixir": 6000,
+      "recommendedTownHall": 11,
+      "nativeRows": [
+        {
+          "Name": "NPC63",
+          "MapInstanceName": "npc63",
+          "MapDependencies": "NPC61",
+          "TID": "TID_NPC63",
+          "ExpLevel": "18",
+          "minRecommendedTHLevel": "11",
+          "LevelFile": "level/npc61.json",
+          "Gold": "600000",
+          "Elixir": "600000",
+          "DarkElixir": "6000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 64,
+      "id": "NPC64",
+      "name": "Bowling Alley",
+      "family": "goblin",
+      "dependencies": [
+        63
+      ],
+      "gold": 650000,
+      "elixir": 650000,
+      "darkElixir": 6000,
+      "recommendedTownHall": 11,
+      "nativeRows": [
+        {
+          "Name": "NPC64",
+          "MapInstanceName": "npc64",
+          "MapDependencies": "NPC63",
+          "TID": "TID_NPC64",
+          "ExpLevel": "18",
+          "minRecommendedTHLevel": "11",
+          "LevelFile": "level/npc62.json",
+          "Gold": "650000",
+          "Elixir": "650000",
+          "DarkElixir": "6000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 65,
+      "id": "NPC65",
+      "name": "Keep Your Cool",
+      "family": "goblin",
+      "dependencies": [
+        64
+      ],
+      "gold": 650000,
+      "elixir": 650000,
+      "darkElixir": 6500,
+      "recommendedTownHall": 11,
+      "nativeRows": [
+        {
+          "Name": "NPC65",
+          "MapInstanceName": "npc65",
+          "MapDependencies": "NPC64",
+          "TID": "TID_NPC65",
+          "ExpLevel": "18",
+          "minRecommendedTHLevel": "11",
+          "LevelFile": "level/npc63.json",
+          "Gold": "650000",
+          "Elixir": "650000",
+          "DarkElixir": "6500",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 66,
+      "id": "NPC66",
+      "name": "Where Eagles Dare",
+      "family": "goblin",
+      "dependencies": [
+        65
+      ],
+      "gold": 700000,
+      "elixir": 700000,
+      "darkElixir": 6500,
+      "recommendedTownHall": 11,
+      "nativeRows": [
+        {
+          "Name": "NPC66",
+          "MapInstanceName": "npc66",
+          "MapDependencies": "NPC65",
+          "TID": "TID_NPC66",
+          "ExpLevel": "19",
+          "minRecommendedTHLevel": "11",
+          "LevelFile": "level/npc64.json",
+          "Gold": "700000",
+          "Elixir": "700000",
+          "DarkElixir": "6500",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 67,
+      "id": "NPC67",
+      "name": "Fireworks Inc.",
+      "family": "goblin",
+      "dependencies": [
+        66
+      ],
+      "gold": 700000,
+      "elixir": 700000,
+      "darkElixir": 7000,
+      "recommendedTownHall": 11,
+      "nativeRows": [
+        {
+          "Name": "NPC67",
+          "MapInstanceName": "npc67",
+          "MapDependencies": "NPC66",
+          "TID": "TID_NPC67",
+          "ExpLevel": "19",
+          "minRecommendedTHLevel": "11",
+          "LevelFile": "level/npc65.json",
+          "Gold": "700000",
+          "Elixir": "700000",
+          "DarkElixir": "7000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 68,
+      "id": "NPC68",
+      "name": "Goblin Capital",
+      "family": "goblin",
+      "dependencies": [
+        67
+      ],
+      "gold": 750000,
+      "elixir": 750000,
+      "darkElixir": 7000,
+      "recommendedTownHall": 12,
+      "nativeRows": [
+        {
+          "Name": "NPC68",
+          "MapInstanceName": "npc68",
+          "MapDependencies": "NPC67",
+          "TID": "TID_NPC68",
+          "ExpLevel": "19",
+          "minRecommendedTHLevel": "12",
+          "LevelFile": "level/npc66.json",
+          "Gold": "750000",
+          "Elixir": "750000",
+          "DarkElixir": "7000",
+          "SinglePlayer": "TRUE",
+          "AllianceUnitType": "Goblin",
+          "AllianceUnitLevel": "7",
+          "AllianceUnitCount": "40"
+        }
+      ]
+    },
+    {
+      "stage": 69,
+      "id": "NPC69",
+      "name": "Pick Your Poison",
+      "family": "goblin",
+      "dependencies": [
+        68
+      ],
+      "gold": 750000,
+      "elixir": 750000,
+      "darkElixir": 7500,
+      "recommendedTownHall": 12,
+      "nativeRows": [
+        {
+          "Name": "NPC69",
+          "MapInstanceName": "npc69",
+          "MapDependencies": "NPC68",
+          "TID": "TID_NPC69",
+          "ExpLevel": "19",
+          "minRecommendedTHLevel": "12",
+          "LevelFile": "level/npc67.json",
+          "Gold": "750000",
+          "Elixir": "750000",
+          "DarkElixir": "7500",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 70,
+      "id": "NPC70",
+      "name": "The Arena",
+      "family": "goblin",
+      "dependencies": [
+        68
+      ],
+      "gold": 800000,
+      "elixir": 800000,
+      "darkElixir": 7500,
+      "recommendedTownHall": 12,
+      "nativeRows": [
+        {
+          "Name": "NPC70",
+          "MapInstanceName": "npc70",
+          "MapDependencies": "NPC68",
+          "TID": "TID_NPC70",
+          "ExpLevel": "19",
+          "minRecommendedTHLevel": "12",
+          "LevelFile": "level/npc68.json",
+          "Gold": "800000",
+          "Elixir": "800000",
+          "DarkElixir": "7500",
+          "SinglePlayer": "TRUE",
+          "AllianceUnitType": "Electro Dragon",
+          "AllianceUnitLevel": "3",
+          "AllianceUnitCount": "1"
+        },
+        {
+          "AllianceUnitType": "Golem",
+          "AllianceUnitLevel": "8",
+          "AllianceUnitCount": "1"
+        },
+        {
+          "AllianceUnitType": "Dragon",
+          "AllianceUnitLevel": "7",
+          "AllianceUnitCount": "1"
+        },
+        {
+          "AllianceUnitType": "PEKKA",
+          "AllianceUnitLevel": "8",
+          "AllianceUnitCount": "1"
+        },
+        {
+          "AllianceUnitType": "Valkyrie",
+          "AllianceUnitLevel": "7",
+          "AllianceUnitCount": "1"
+        },
+        {
+          "AllianceUnitType": "Witch",
+          "AllianceUnitLevel": "4",
+          "AllianceUnitCount": "1"
+        },
+        {
+          "AllianceUnitType": "Bowler",
+          "AllianceUnitLevel": "4",
+          "AllianceUnitCount": "1"
+        },
+        {
+          "AllianceUnitType": "Baby Dragon",
+          "AllianceUnitLevel": "6",
+          "AllianceUnitCount": "1"
+        }
+      ]
+    },
+    {
+      "stage": 71,
+      "id": "NPC71",
+      "name": "Paper Map",
+      "family": "goblin",
+      "dependencies": [
+        70
+      ],
+      "gold": 800000,
+      "elixir": 800000,
+      "darkElixir": 8000,
+      "recommendedTownHall": 12,
+      "nativeRows": [
+        {
+          "Name": "NPC71",
+          "MapInstanceName": "npc71",
+          "MapDependencies": "NPC70",
+          "TID": "TID_NPC71",
+          "ExpLevel": "19",
+          "minRecommendedTHLevel": "12",
+          "LevelFile": "level/npc69.json",
+          "Gold": "800000",
+          "Elixir": "800000",
+          "DarkElixir": "8000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 72,
+      "id": "NPC72",
+      "name": "Flagged for Traps",
+      "family": "goblin",
+      "dependencies": [
+        71
+      ],
+      "gold": 850000,
+      "elixir": 850000,
+      "darkElixir": 8000,
+      "recommendedTownHall": 12,
+      "nativeRows": [
+        {
+          "Name": "NPC72",
+          "MapInstanceName": "npc72",
+          "MapDependencies": "NPC71",
+          "TID": "TID_NPC72",
+          "ExpLevel": "19",
+          "minRecommendedTHLevel": "12",
+          "LevelFile": "level/npc70.json",
+          "Gold": "850000",
+          "Elixir": "850000",
+          "DarkElixir": "8000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 73,
+      "id": "NPC73",
+      "name": "Grand Avenue",
+      "family": "goblin",
+      "dependencies": [
+        72
+      ],
+      "gold": 1000000,
+      "elixir": 1000000,
+      "darkElixir": 10000,
+      "recommendedTownHall": 12,
+      "nativeRows": [
+        {
+          "Name": "NPC73",
+          "MapInstanceName": "npc73",
+          "MapDependencies": "NPC72",
+          "TID": "TID_NPC73",
+          "ExpLevel": "19",
+          "minRecommendedTHLevel": "12",
+          "LevelFile": "level/npc71.json",
+          "Gold": "1000000",
+          "Elixir": "1000000",
+          "DarkElixir": "10000",
+          "SinglePlayer": "TRUE",
+          "AllianceUnitType": "Dragon",
+          "AllianceUnitLevel": "5",
+          "AllianceUnitCount": "3"
+        }
+      ]
+    },
+    {
+      "stage": 74,
+      "id": "NPC74",
+      "name": "Besieged",
+      "family": "goblin",
+      "dependencies": [
+        73
+      ],
+      "gold": 1250000,
+      "elixir": 1250000,
+      "darkElixir": 12500,
+      "recommendedTownHall": 12,
+      "nativeRows": [
+        {
+          "Name": "NPC74",
+          "MapInstanceName": "npc74",
+          "MapDependencies": "NPC73",
+          "TID": "TID_NPC74",
+          "ExpLevel": "19",
+          "minRecommendedTHLevel": "12",
+          "LevelFile": "level/npc72.json",
+          "Gold": "1250000",
+          "Elixir": "1250000",
+          "DarkElixir": "12500",
+          "SinglePlayer": "TRUE",
+          "AllianceUnitType": "Electro Dragon",
+          "AllianceUnitLevel": "3",
+          "AllianceUnitCount": "3"
+        }
+      ]
+    },
+    {
+      "stage": 75,
+      "id": "NPC75",
+      "name": "Dragon's Lair",
+      "family": "goblin",
+      "dependencies": [
+        74
+      ],
+      "gold": 2500000,
+      "elixir": 2500000,
+      "darkElixir": 25000,
+      "recommendedTownHall": 12,
+      "nativeRows": [
+        {
+          "Name": "NPC75",
+          "MapInstanceName": "npc75",
+          "MapDependencies": "NPC74",
+          "TID": "TID_NPC75",
+          "ExpLevel": "19",
+          "minRecommendedTHLevel": "12",
+          "LevelFile": "level/npc73.json",
+          "Gold": "2500000",
+          "Elixir": "2500000",
+          "DarkElixir": "25000",
+          "SinglePlayer": "TRUE",
+          "AllianceUnitType": "Golden Dragon",
+          "AllianceUnitLevel": "1",
+          "AllianceUnitCount": "1"
+        }
+      ]
+    },
+    {
+      "stage": 76,
+      "id": "NPC76",
+      "name": "Go to Bat",
+      "family": "goblin",
+      "dependencies": [
+        75
+      ],
+      "gold": 800000,
+      "elixir": 800000,
+      "darkElixir": 8000,
+      "recommendedTownHall": 13,
+      "nativeRows": [
+        {
+          "Name": "NPC76",
+          "MapInstanceName": "npc76",
+          "MapDependencies": "NPC75",
+          "TID": "TID_NPC76",
+          "ExpLevel": "20",
+          "minRecommendedTHLevel": "13",
+          "LevelFile": "level/npc74.json",
+          "Gold": "800000",
+          "Elixir": "800000",
+          "DarkElixir": "8000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 77,
+      "id": "NPC77",
+      "name": "Ring of Power",
+      "family": "goblin",
+      "dependencies": [
+        76
+      ],
+      "gold": 820000,
+      "elixir": 820000,
+      "darkElixir": 8200,
+      "recommendedTownHall": 13,
+      "nativeRows": [
+        {
+          "Name": "NPC77",
+          "MapInstanceName": "npc77",
+          "MapDependencies": "NPC76",
+          "TID": "TID_NPC77",
+          "ExpLevel": "20",
+          "minRecommendedTHLevel": "13",
+          "LevelFile": "level/npc75.json",
+          "Gold": "820000",
+          "Elixir": "820000",
+          "DarkElixir": "8200",
+          "SinglePlayer": "TRUE",
+          "AllianceUnitType": "Lava Hound",
+          "AllianceUnitLevel": "6",
+          "AllianceUnitCount": "1"
+        },
+        {
+          "AllianceUnitType": "Headhunter",
+          "AllianceUnitLevel": "3",
+          "AllianceUnitCount": "2"
+        },
+        {
+          "AllianceUnitType": "Archer",
+          "AllianceUnitLevel": "9",
+          "AllianceUnitCount": "3"
+        }
+      ]
+    },
+    {
+      "stage": 78,
+      "id": "NPC78",
+      "name": "Suspicious Gap",
+      "family": "goblin",
+      "dependencies": [
+        77
+      ],
+      "gold": 840000,
+      "elixir": 840000,
+      "darkElixir": 8400,
+      "recommendedTownHall": 13,
+      "nativeRows": [
+        {
+          "Name": "NPC78",
+          "MapInstanceName": "npc78",
+          "MapDependencies": "NPC77",
+          "TID": "TID_NPC78",
+          "ExpLevel": "20",
+          "minRecommendedTHLevel": "13",
+          "LevelFile": "level/npc76.json",
+          "Gold": "840000",
+          "Elixir": "840000",
+          "DarkElixir": "8400",
+          "SinglePlayer": "TRUE",
+          "AllianceUnitType": "Super Minion",
+          "AllianceUnitLevel": "9",
+          "AllianceUnitCount": "4"
+        },
+        {
+          "AllianceUnitType": "Archer",
+          "AllianceUnitLevel": "9",
+          "AllianceUnitCount": "2"
+        }
+      ]
+    },
+    {
+      "stage": 79,
+      "id": "NPC79",
+      "name": "Stay on Target",
+      "family": "goblin",
+      "dependencies": [
+        78
+      ],
+      "gold": 860000,
+      "elixir": 860000,
+      "darkElixir": 8600,
+      "recommendedTownHall": 13,
+      "nativeRows": [
+        {
+          "Name": "NPC79",
+          "MapInstanceName": "npc79",
+          "MapDependencies": "NPC78",
+          "TID": "TID_NPC79",
+          "ExpLevel": "20",
+          "minRecommendedTHLevel": "13",
+          "LevelFile": "level/npc77.json",
+          "Gold": "860000",
+          "Elixir": "860000",
+          "DarkElixir": "8600",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 80,
+      "id": "NPC80",
+      "name": "Such a Tease",
+      "family": "goblin",
+      "dependencies": [
+        79
+      ],
+      "gold": 880000,
+      "elixir": 880000,
+      "darkElixir": 8800,
+      "recommendedTownHall": 13,
+      "nativeRows": [
+        {
+          "Name": "NPC80",
+          "MapInstanceName": "npc80",
+          "MapDependencies": "NPC79",
+          "TID": "TID_NPC80",
+          "ExpLevel": "20",
+          "minRecommendedTHLevel": "13",
+          "LevelFile": "level/npc78.json",
+          "Gold": "880000",
+          "Elixir": "880000",
+          "DarkElixir": "8800",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 81,
+      "id": "NPC81",
+      "name": "Titanic",
+      "family": "goblin",
+      "dependencies": [
+        80
+      ],
+      "gold": 900000,
+      "elixir": 900000,
+      "darkElixir": 9000,
+      "recommendedTownHall": 14,
+      "nativeRows": [
+        {
+          "Name": "NPC81",
+          "MapInstanceName": "npc81",
+          "MapDependencies": "NPC80",
+          "TID": "TID_NPC81",
+          "ExpLevel": "21",
+          "minRecommendedTHLevel": "14",
+          "LevelFile": "level/npc79.json",
+          "Gold": "900000",
+          "Elixir": "900000",
+          "DarkElixir": "9000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 82,
+      "id": "NPC82",
+      "name": "Cold Flame",
+      "family": "goblin",
+      "dependencies": [
+        81
+      ],
+      "gold": 920000,
+      "elixir": 920000,
+      "darkElixir": 9200,
+      "recommendedTownHall": 14,
+      "nativeRows": [
+        {
+          "Name": "NPC82",
+          "MapInstanceName": "npc82",
+          "MapDependencies": "NPC81",
+          "TID": "TID_NPC82",
+          "ExpLevel": "21",
+          "minRecommendedTHLevel": "14",
+          "LevelFile": "level/npc80.json",
+          "Gold": "920000",
+          "Elixir": "920000",
+          "DarkElixir": "9200",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 83,
+      "id": "NPC83",
+      "name": "Corner Case",
+      "family": "goblin",
+      "dependencies": [
+        82
+      ],
+      "gold": 940000,
+      "elixir": 940000,
+      "darkElixir": 9400,
+      "recommendedTownHall": 14,
+      "nativeRows": [
+        {
+          "Name": "NPC83",
+          "MapInstanceName": "npc83",
+          "MapDependencies": "NPC82",
+          "TID": "TID_NPC83",
+          "ExpLevel": "21",
+          "minRecommendedTHLevel": "14",
+          "LevelFile": "level/npc81.json",
+          "Gold": "940000",
+          "Elixir": "940000",
+          "DarkElixir": "9400",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000050"
+        }
+      ]
+    },
+    {
+      "stage": 84,
+      "id": "NPC84",
+      "name": "Path to Pain",
+      "family": "goblin",
+      "dependencies": [
+        83
+      ],
+      "gold": 960000,
+      "elixir": 960000,
+      "darkElixir": 9600,
+      "recommendedTownHall": 14,
+      "nativeRows": [
+        {
+          "Name": "NPC84",
+          "MapInstanceName": "npc84",
+          "MapDependencies": "NPC83",
+          "TID": "TID_NPC84",
+          "ExpLevel": "21",
+          "minRecommendedTHLevel": "14",
+          "LevelFile": "level/npc82.json",
+          "Gold": "960000",
+          "Elixir": "960000",
+          "DarkElixir": "9600",
+          "SinglePlayer": "TRUE",
+          "AllianceUnitType": "Electro Titan",
+          "AllianceUnitLevel": "2",
+          "AllianceUnitCount": "5"
+        }
+      ]
+    },
+    {
+      "stage": 85,
+      "id": "NPC85",
+      "name": "Builderopolis",
+      "family": "goblin",
+      "dependencies": [
+        84
+      ],
+      "gold": 980000,
+      "elixir": 980000,
+      "darkElixir": 9800,
+      "recommendedTownHall": 14,
+      "nativeRows": [
+        {
+          "Name": "NPC85",
+          "MapInstanceName": "npc85",
+          "MapDependencies": "NPC84",
+          "TID": "TID_NPC85",
+          "ExpLevel": "21",
+          "minRecommendedTHLevel": "14",
+          "LevelFile": "level/npc83.json",
+          "Gold": "980000",
+          "Elixir": "980000",
+          "DarkElixir": "9800",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 86,
+      "id": "NPC86",
+      "name": "Monolithic",
+      "family": "goblin",
+      "dependencies": [
+        85
+      ],
+      "gold": 1000000,
+      "elixir": 1000000,
+      "darkElixir": 10000,
+      "recommendedTownHall": 15,
+      "nativeRows": [
+        {
+          "Name": "NPC86",
+          "MapInstanceName": "npc86",
+          "MapDependencies": "NPC85",
+          "TID": "TID_NPC86",
+          "ExpLevel": "22",
+          "minRecommendedTHLevel": "15",
+          "LevelFile": "level/npc84.json",
+          "Gold": "1000000",
+          "Elixir": "1000000",
+          "DarkElixir": "10000",
+          "SinglePlayer": "TRUE",
+          "VillageBackground": "60000051"
+        }
+      ]
+    },
+    {
+      "stage": 87,
+      "id": "NPC87",
+      "name": "Raging Headache",
+      "family": "goblin",
+      "dependencies": [
+        86
+      ],
+      "gold": 1050000,
+      "elixir": 1050000,
+      "darkElixir": 10500,
+      "recommendedTownHall": 15,
+      "nativeRows": [
+        {
+          "Name": "NPC87",
+          "MapInstanceName": "npc87",
+          "MapDependencies": "NPC86",
+          "TID": "TID_NPC87",
+          "ExpLevel": "22",
+          "minRecommendedTHLevel": "15",
+          "LevelFile": "level/npc85.json",
+          "Gold": "1050000",
+          "Elixir": "1050000",
+          "DarkElixir": "10500",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 88,
+      "id": "NPC88",
+      "name": "Toxic Town Square",
+      "family": "goblin",
+      "dependencies": [
+        87
+      ],
+      "gold": 1100000,
+      "elixir": 1100000,
+      "darkElixir": 11000,
+      "recommendedTownHall": 15,
+      "nativeRows": [
+        {
+          "Name": "NPC88",
+          "MapInstanceName": "npc88",
+          "MapDependencies": "NPC87",
+          "TID": "TID_NPC88",
+          "ExpLevel": "22",
+          "minRecommendedTHLevel": "15",
+          "LevelFile": "level/npc86.json",
+          "Gold": "1100000",
+          "Elixir": "1100000",
+          "DarkElixir": "11000",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 89,
+      "id": "NPC89",
+      "name": "Disappearing Dilemma",
+      "family": "goblin",
+      "dependencies": [
+        88
+      ],
+      "gold": 1150000,
+      "elixir": 1150000,
+      "darkElixir": 11500,
+      "recommendedTownHall": 15,
+      "nativeRows": [
+        {
+          "Name": "NPC89",
+          "MapInstanceName": "npc89",
+          "MapDependencies": "NPC88",
+          "TID": "TID_NPC89",
+          "ExpLevel": "22",
+          "minRecommendedTHLevel": "15",
+          "LevelFile": "level/npc87.json",
+          "Gold": "1150000",
+          "Elixir": "1150000",
+          "DarkElixir": "11500",
+          "SinglePlayer": "TRUE"
+        }
+      ]
+    },
+    {
+      "stage": 90,
+      "id": "NPC90",
+      "name": "M.O.M.M.A's Madhouse",
+      "family": "goblin",
+      "dependencies": [
+        89
+      ],
+      "gold": 2500000,
+      "elixir": 2500000,
+      "darkElixir": 25000,
+      "recommendedTownHall": 15,
+      "nativeRows": [
+        {
+          "Name": "NPC90",
+          "MapInstanceName": "npc90",
+          "MapDependencies": "NPC89",
+          "TID": "TID_NPC90",
+          "ExpLevel": "22",
+          "minRecommendedTHLevel": "15",
+          "LevelFile": "level/npc88.json",
+          "Gold": "2500000",
+          "Elixir": "2500000",
+          "DarkElixir": "25000",
+          "SinglePlayer": "TRUE",
+          "AllianceUnitType": "MOMMA",
+          "AllianceUnitLevel": "1",
+          "AllianceUnitCount": "1"
+        }
+      ]
+    },
+    {
+      "stage": 91,
+      "id": "CHALLENGE_TH4_GIANT",
+      "name": "Giant Smash",
+      "family": "challenge",
+      "dependencies": [],
+      "gold": 100000,
+      "elixir": 100000,
+      "darkElixir": 0,
+      "recommendedTownHall": 4,
+      "nativeRows": [
+        {
+          "Name": "CHALLENGE_TH4_GIANT",
+          "TID": "TID_CHALLENGE_TH4_GIANT",
+          "Type": "TUTORIAL",
+          "TutorialUnlockTHLevel": "4",
+          "TutorialTHLevel": "4",
+          "LevelFile": "level/challenge_th4_giant.json",
+          "Gold": "100000",
+          "Elixir": "100000",
+          "DarkElixir": "0",
+          "SinglePlayer": "TRUE",
+          "FixedArmyUnitType": "Giant",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "13",
+          "DeploySteps": "TH4_Giant_Giants1",
+          "UseFullMapSize": "TRUE",
+          "VillageBackground": "60000000"
+        },
+        {
+          "FixedArmyUnitType": "Wall Breaker",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "Wait_500ms"
+        },
+        {
+          "FixedArmyUnitType": "Goblin",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "11",
+          "DeploySteps": "TH4_Giant_WallBreakers"
+        },
+        {
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "DeploySteps": "TH4_Giant_Giants2"
+        },
+        {
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "DeploySteps": "TH4_Giant_Goblins"
+        }
+      ]
+    },
+    {
+      "stage": 92,
+      "id": "CHALLENGE_TH5_LOON",
+      "name": "Balloon Parade",
+      "family": "challenge",
+      "dependencies": [],
+      "gold": 125000,
+      "elixir": 125000,
+      "darkElixir": 0,
+      "recommendedTownHall": 5,
+      "nativeRows": [
+        {
+          "Name": "CHALLENGE_TH5_LOON",
+          "TID": "TID_CHALLENGE_TH5_LOON",
+          "Type": "TUTORIAL",
+          "TutorialUnlockTHLevel": "5",
+          "TutorialTHLevel": "5",
+          "LevelFile": "level/challenge_th5_loon.json",
+          "Gold": "125000",
+          "Elixir": "125000",
+          "DarkElixir": "0",
+          "SinglePlayer": "TRUE",
+          "FixedArmyUnitType": "Balloon",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "27",
+          "DeploySteps": "TH5_Loon_Loons1",
+          "UseFullMapSize": "TRUE",
+          "VillageBackground": "60000000"
+        },
+        {
+          "DeploySteps": "Wait_500ms"
+        },
+        {
+          "DeploySteps": "TH5_Loon_Loons2"
+        },
+        {
+          "DeploySteps": "Wait_500ms"
+        },
+        {
+          "DeploySteps": "TH5_Loon_Loons3"
+        },
+        {
+          "DeploySteps": "Wait_500ms"
+        },
+        {
+          "DeploySteps": "TH5_Loon_Loons4"
+        }
+      ]
+    },
+    {
+      "stage": 93,
+      "id": "CHALLENGE_TH6_GIWIWA",
+      "name": "Meat Shield",
+      "family": "challenge",
+      "dependencies": [],
+      "gold": 150000,
+      "elixir": 150000,
+      "darkElixir": 0,
+      "recommendedTownHall": 6,
+      "nativeRows": [
+        {
+          "Name": "CHALLENGE_TH6_GIWIWA",
+          "TID": "TID_CHALLENGE_TH6_GIWIWA",
+          "Type": "TUTORIAL",
+          "TutorialUnlockTHLevel": "6",
+          "TutorialTHLevel": "6",
+          "LevelFile": "level/challenge_th6_giwiwa.json",
+          "Gold": "150000",
+          "Elixir": "150000",
+          "DarkElixir": "0",
+          "SinglePlayer": "TRUE",
+          "FixedArmyUnitType": "Giant",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "14",
+          "DeploySteps": "TH6_Giwiwa_Giant1",
+          "UseFullMapSize": "TRUE",
+          "VillageBackground": "60000000"
+        },
+        {
+          "FixedArmyUnitType": "Wizard",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "16",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Wall Breaker",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "8",
+          "DeploySteps": "TH6_Giwiwa_WallBreakers1"
+        },
+        {
+          "FixedArmyUnitType": "Healing",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "DeploySteps": "TH6_Giwiwa_Giant2"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH6_Giwiwa_Heal1"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH6_Giwiwa_Wizards1"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH6_Giwiwa_WallBreakers2"
+        },
+        {
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "DeploySteps": "TH6_Giwiwa_Wizards2"
+        },
+        {
+          "DeploySteps": "TH6_Giwiwa_Wait_For_Heal"
+        },
+        {
+          "DeploySteps": "TH6_Giwiwa_Heal2"
+        }
+      ]
+    },
+    {
+      "stage": 94,
+      "id": "CHALLENGE_TH7_DRAGON",
+      "name": "Hot Stuff",
+      "family": "challenge",
+      "dependencies": [],
+      "gold": 200000,
+      "elixir": 200000,
+      "darkElixir": 0,
+      "recommendedTownHall": 7,
+      "nativeRows": [
+        {
+          "Name": "CHALLENGE_TH7_DRAGON",
+          "TID": "TID_CHALLENGE_TH7_DRAGON",
+          "Type": "TUTORIAL",
+          "TutorialUnlockTHLevel": "7",
+          "TutorialTHLevel": "7",
+          "LevelFile": "level/challenge_th7_dragon.json",
+          "Gold": "200000",
+          "Elixir": "200000",
+          "DarkElixir": "0",
+          "SinglePlayer": "TRUE",
+          "FixedArmyUnitType": "Dragon",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "10",
+          "DeploySteps": "TH7_Dragon_Info_AirSweeper",
+          "UseFullMapSize": "TRUE",
+          "DefendingHero": "Barbarian King",
+          "DefendingHeroLevel": "5",
+          "VillageBackground": "60000000"
+        },
+        {
+          "FixedArmyUnitType": "Lightning",
+          "FixedArmyUnitLevel": "4",
+          "FixedArmyUnitCountOrStage": "6",
+          "DeploySteps": "TH7_Dragon_Lightning"
+        },
+        {
+          "FixedArmyUnitType": "Barbarian King",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH7_Dragon_BarbarianKing"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH7_Dragon_Dragons1"
+        },
+        {
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "DeploySteps": "TH7_Dragon_Dragons2"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH7_Dragon_Dragons3"
+        }
+      ]
+    },
+    {
+      "stage": 95,
+      "id": "CHALLENGE_TH7_HOG",
+      "name": "Hog Rush",
+      "family": "challenge",
+      "dependencies": [],
+      "gold": 200000,
+      "elixir": 200000,
+      "darkElixir": 0,
+      "recommendedTownHall": 7,
+      "nativeRows": [
+        {
+          "Name": "CHALLENGE_TH7_HOG",
+          "TID": "TID_CHALLENGE_TH7_HOG",
+          "Type": "TUTORIAL",
+          "TutorialUnlockTHLevel": "7",
+          "TutorialTHLevel": "7",
+          "LevelFile": "level/challenge_th7_hog.json",
+          "Gold": "200000",
+          "Elixir": "200000",
+          "DarkElixir": "0",
+          "SinglePlayer": "TRUE",
+          "FixedArmyUnitType": "Hog Rider",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "36",
+          "DeploySteps": "TH7_Hog_BarbarianKing",
+          "UseFullMapSize": "TRUE",
+          "DefendingHero": "Barbarian King",
+          "DefendingHeroLevel": "5",
+          "VillageBackground": "60000000"
+        },
+        {
+          "FixedArmyUnitType": "Wizard",
+          "FixedArmyUnitLevel": "4",
+          "FixedArmyUnitCountOrStage": "5",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Barbarian King",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH7_Hog_Wizards"
+        },
+        {
+          "FixedArmyUnitType": "Healing",
+          "FixedArmyUnitLevel": "4",
+          "FixedArmyUnitCountOrStage": "3",
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH7_Hog_Hogs"
+        },
+        {
+          "DeploySteps": "KingHealthLow"
+        },
+        {
+          "DeploySteps": "TH7_Hog_Wait_For_Heal"
+        },
+        {
+          "DeploySteps": "TH7_Hog_Heal1"
+        },
+        {
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "DeploySteps": "TH7_Hog_Heal2"
+        }
+      ]
+    },
+    {
+      "stage": 96,
+      "id": "CHALLENGE_TH7_MINION",
+      "name": "Air Raid",
+      "family": "challenge",
+      "dependencies": [],
+      "gold": 200000,
+      "elixir": 200000,
+      "darkElixir": 0,
+      "recommendedTownHall": 7,
+      "nativeRows": [
+        {
+          "Name": "CHALLENGE_TH7_MINION",
+          "TID": "TID_CHALLENGE_TH7_MINION",
+          "Type": "TUTORIAL",
+          "TutorialUnlockTHLevel": "7",
+          "TutorialTHLevel": "7",
+          "LevelFile": "level/challenge_th7_minion.json",
+          "Gold": "200000",
+          "Elixir": "200000",
+          "DarkElixir": "0",
+          "SinglePlayer": "TRUE",
+          "FixedArmyUnitType": "Balloon",
+          "FixedArmyUnitLevel": "4",
+          "FixedArmyUnitCountOrStage": "30",
+          "DeploySteps": "TH7_Minion_Info_AirSweeper",
+          "UseFullMapSize": "TRUE",
+          "DefendingHero": "Barbarian King",
+          "DefendingHeroLevel": "5",
+          "VillageBackground": "60000000"
+        },
+        {
+          "FixedArmyUnitType": "Minion",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "25",
+          "DeploySteps": "TH7_Minion_Balloons"
+        },
+        {
+          "FixedArmyUnitType": "Barbarian King",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "FixedArmyUnitType": "Rage",
+          "FixedArmyUnitLevel": "4",
+          "FixedArmyUnitCountOrStage": "3",
+          "DeploySteps": "TH7_Minion_Rage1"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH7_Minion_BarbarianKing"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH7_Minion_Minions"
+        },
+        {
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "DeploySteps": "TH7_Minion_Rage2"
+        }
+      ]
+    },
+    {
+      "stage": 97,
+      "id": "CHALLENGE_TH8_GOWIPE",
+      "name": "Heavy Hitters",
+      "family": "challenge",
+      "dependencies": [],
+      "gold": 250000,
+      "elixir": 250000,
+      "darkElixir": 1500,
+      "recommendedTownHall": 8,
+      "nativeRows": [
+        {
+          "Name": "CHALLENGE_TH8_GOWIPE",
+          "TID": "TID_CHALLENGE_TH8_GOWIPE",
+          "Type": "TUTORIAL",
+          "TutorialUnlockTHLevel": "8",
+          "TutorialTHLevel": "8",
+          "LevelFile": "level/challenge_th8_gowipe.json",
+          "Gold": "250000",
+          "Elixir": "250000",
+          "DarkElixir": "1500",
+          "SinglePlayer": "TRUE",
+          "FixedArmyUnitType": "Golem",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH8_Gowipe_Earthquake",
+          "UseFullMapSize": "TRUE",
+          "DefendingHero": "Barbarian King",
+          "DefendingHeroLevel": "10",
+          "VillageBackground": "60000000"
+        },
+        {
+          "FixedArmyUnitType": "PEKKA",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "4",
+          "DeploySteps": "Wait_500ms"
+        },
+        {
+          "FixedArmyUnitType": "Wizard",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "16",
+          "DeploySteps": "TH8_Gowipe_Funnel_Pekkas"
+        },
+        {
+          "FixedArmyUnitType": "Wall Breaker",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Archer",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "TH8_Gowipe_Wizards1"
+        },
+        {
+          "FixedArmyUnitType": "Healing",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Rage",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH8_Gowipe_Golem"
+        },
+        {
+          "FixedArmyUnitType": "Earthquake",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Barbarian King",
+          "FixedArmyUnitLevel": "10",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH8_Gowipe_WallBreakers"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH8_Gowipe_BarbarianKing"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH8_Gowipe_Support_Pekkas"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH8_Gowipe_Wizards2"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH8_Gowipe_Heal1"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH8_Gowipe_Rage"
+        },
+        {
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH8_Gowipe_Heal2"
+        },
+        {
+          "DeploySteps": "TH8_Gowipe_Clean_Up"
+        }
+      ]
+    },
+    {
+      "stage": 98,
+      "id": "CHALLENGE_TH9_LAVALOON",
+      "name": "Lava & Loons",
+      "family": "challenge",
+      "dependencies": [],
+      "gold": 300000,
+      "elixir": 300000,
+      "darkElixir": 3000,
+      "recommendedTownHall": 9,
+      "nativeRows": [
+        {
+          "Name": "CHALLENGE_TH9_LAVALOON",
+          "TID": "TID_CHALLENGE_TH9_LAVALOON",
+          "Type": "TUTORIAL",
+          "TutorialUnlockTHLevel": "9",
+          "TutorialTHLevel": "9",
+          "LevelFile": "level/challenge_th9_lavaloon.json",
+          "Gold": "300000",
+          "Elixir": "300000",
+          "DarkElixir": "3000",
+          "SinglePlayer": "TRUE",
+          "FixedArmyUnitType": "Lava Hound",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "TH9_Lavaloon_BarbarianKing_1",
+          "UseFullMapSize": "TRUE",
+          "DefendingHero": "Barbarian King",
+          "DefendingHeroLevel": "30",
+          "VillageBackground": "60000000"
+        },
+        {
+          "FixedArmyUnitType": "Balloon",
+          "FixedArmyUnitLevel": "6",
+          "FixedArmyUnitCountOrStage": "26",
+          "DeploySteps": "TH9_Lavaloon_BarbarianKing_2",
+          "DefendingHero": "Archer Queen",
+          "DefendingHeroLevel": "30"
+        },
+        {
+          "FixedArmyUnitType": "Baby Dragon",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "TH9_Lavaloon_BarbarianKing_3"
+        },
+        {
+          "FixedArmyUnitType": "Minion",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "5",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Rage",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "TH9_Lavaloon_KingAbility"
+        },
+        {
+          "FixedArmyUnitType": "Haste",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "4",
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "FixedArmyUnitType": "Freeze",
+          "FixedArmyUnitLevel": "1",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH9_Lavaloon_ArcherQueen"
+        },
+        {
+          "FixedArmyUnitType": "Barbarian King",
+          "FixedArmyUnitLevel": "30",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH9_Lavaloon_Wait_For_Hounds"
+        },
+        {
+          "FixedArmyUnitType": "Archer Queen",
+          "FixedArmyUnitLevel": "30",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH9_Lavaloon_Haste1"
+        },
+        {
+          "DeploySteps": "Wait_500ms"
+        },
+        {
+          "DeploySteps": "TH9_Lavaloon_Hounds"
+        },
+        {
+          "DeploySteps": "Wait_500ms"
+        },
+        {
+          "DeploySteps": "TH9_Lavaloon_Balloons"
+        },
+        {
+          "DeploySteps": "Wait_500ms"
+        },
+        {
+          "DeploySteps": "TH9_Lavaloon_Freeze"
+        },
+        {
+          "DeploySteps": "Wait_500ms"
+        },
+        {
+          "DeploySteps": "TH9_Lavaloon_Rage1"
+        },
+        {
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "DeploySteps": "TH9_Lavaloon_Rage2"
+        },
+        {
+          "DeploySteps": "Wait_500ms"
+        },
+        {
+          "DeploySteps": "TH9_Lavaloon_Haste2"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH9_Lavaloon_CleanUp"
+        }
+      ]
+    },
+    {
+      "stage": 99,
+      "id": "CHALLENGE_TH9_WITCH",
+      "name": "Witch Slap",
+      "family": "challenge",
+      "dependencies": [],
+      "gold": 300000,
+      "elixir": 300000,
+      "darkElixir": 3000,
+      "recommendedTownHall": 9,
+      "nativeRows": [
+        {
+          "Name": "CHALLENGE_TH9_WITCH",
+          "TID": "TID_CHALLENGE_TH9_WITCH",
+          "Type": "TUTORIAL",
+          "TutorialUnlockTHLevel": "9",
+          "TutorialTHLevel": "9",
+          "LevelFile": "level/challenge_th9_witch.json",
+          "Gold": "300000",
+          "Elixir": "300000",
+          "DarkElixir": "3000",
+          "SinglePlayer": "TRUE",
+          "FixedArmyUnitType": "Barbarian King",
+          "FixedArmyUnitLevel": "30",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH9_Witch_FunnelWizard",
+          "UseFullMapSize": "TRUE",
+          "DefendingHero": "Barbarian King",
+          "DefendingHeroLevel": "30",
+          "VillageBackground": "60000000"
+        },
+        {
+          "FixedArmyUnitType": "Archer Queen",
+          "FixedArmyUnitLevel": "30",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_1000ms",
+          "DefendingHero": "Archer Queen",
+          "DefendingHeroLevel": "30"
+        },
+        {
+          "FixedArmyUnitType": "Witch",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "8",
+          "DeploySteps": "TH9_Witch_ArcherQueen"
+        },
+        {
+          "FixedArmyUnitType": "Golem",
+          "FixedArmyUnitLevel": "4",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "FixedArmyUnitType": "Wizard",
+          "FixedArmyUnitLevel": "6",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "TH9_Witch_Healers"
+        },
+        {
+          "FixedArmyUnitType": "Healer",
+          "FixedArmyUnitLevel": "4",
+          "FixedArmyUnitCountOrStage": "4",
+          "DeploySteps": "TH9_Witch_Wait_For_Earthquake"
+        },
+        {
+          "FixedArmyUnitType": "Earthquake",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "4",
+          "DeploySteps": "TH9_Witch_Earthquake"
+        },
+        {
+          "FixedArmyUnitType": "Rage",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH9_Witch_Wait_For_Deploy"
+        },
+        {
+          "FixedArmyUnitType": "Poison",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH9_Witch_Golems"
+        },
+        {
+          "FixedArmyUnitType": "Jump",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH9_Witch_Witches1"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH9_Witch_Witches2"
+        },
+        {
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "DeploySteps": "TH9_Witch_BarbarianKing"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH9_Witch_Rage"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH9_Witch_Poison"
+        },
+        {
+          "DeploySteps": "TH9_Witch_Wait_For_Jump"
+        },
+        {
+          "DeploySteps": "TH9_Witch_Jump"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH9_Witch_Wizard"
+        }
+      ]
+    },
+    {
+      "stage": 100,
+      "id": "CHALLENGE_TH10_BOBAT",
+      "name": "Bowling with Bats",
+      "family": "challenge",
+      "dependencies": [],
+      "gold": 400000,
+      "elixir": 400000,
+      "darkElixir": 4000,
+      "recommendedTownHall": 10,
+      "nativeRows": [
+        {
+          "Name": "CHALLENGE_TH10_BOBAT",
+          "TID": "TID_CHALLENGE_TH10_BOBAT",
+          "Type": "TUTORIAL",
+          "TutorialUnlockTHLevel": "10",
+          "TutorialTHLevel": "10",
+          "LevelFile": "level/challenge_th10_bobat.json",
+          "Gold": "400000",
+          "Elixir": "400000",
+          "DarkElixir": "4000",
+          "SinglePlayer": "TRUE",
+          "FixedArmyUnitType": "Barbarian King",
+          "FixedArmyUnitLevel": "40",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH10_Bobat_ArcherQueen",
+          "UseFullMapSize": "TRUE",
+          "DefendingHero": "Barbarian King",
+          "DefendingHeroLevel": "40",
+          "VillageBackground": "60000000"
+        },
+        {
+          "FixedArmyUnitType": "Archer Queen",
+          "FixedArmyUnitLevel": "40",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_2500ms",
+          "DefendingHero": "Archer Queen",
+          "DefendingHeroLevel": "40"
+        },
+        {
+          "FixedArmyUnitType": "PEKKA",
+          "FixedArmyUnitLevel": "6",
+          "FixedArmyUnitCountOrStage": "4",
+          "DeploySteps": "TH10_Bobat_Healers"
+        },
+        {
+          "FixedArmyUnitType": "Bowler",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "11",
+          "DeploySteps": "TH10_Bobat_Wait_For_Rage"
+        },
+        {
+          "FixedArmyUnitType": "Healer",
+          "FixedArmyUnitLevel": "4",
+          "FixedArmyUnitCountOrStage": "5",
+          "DeploySteps": "TH10_Bobat_Rage1"
+        },
+        {
+          "FixedArmyUnitType": "Wall Breaker",
+          "FixedArmyUnitLevel": "6",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "FixedArmyUnitType": "Wall Wrecker",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH10_Bobat_WallBreakers"
+        },
+        {
+          "FixedArmyUnitType": "Giant",
+          "FixedArmyUnitLevel": "9",
+          "FixedArmyUnitCountOrStage": "2",
+          "FixedArmyUnitAlliance": "TRUE",
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "FixedArmyUnitType": "PEKKA",
+          "FixedArmyUnitLevel": "8",
+          "FixedArmyUnitCountOrStage": "1",
+          "FixedArmyUnitAlliance": "TRUE",
+          "DeploySteps": "TH10_Bobat_WallWrecker"
+        },
+        {
+          "FixedArmyUnitType": "Rage",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "FixedArmyUnitType": "Freeze",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "3",
+          "DeploySteps": "TH10_Bobat_BarbarianKing"
+        },
+        {
+          "FixedArmyUnitType": "Bat Spell",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "5",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH10_Bobat_PEKKAs"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH10_Bobat_Bowlers"
+        },
+        {
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "DeploySteps": "TH10_Bobat_Rage2"
+        },
+        {
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "DeploySteps": "TH10_Bobat_Batwave"
+        },
+        {
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "DeploySteps": "TH10_Bobat_Freezes"
+        }
+      ]
+    },
+    {
+      "stage": 101,
+      "id": "CHALLENGE_TH11_EDRAG",
+      "name": "Electro Surgery",
+      "family": "challenge",
+      "dependencies": [],
+      "gold": 500000,
+      "elixir": 500000,
+      "darkElixir": 5000,
+      "recommendedTownHall": 11,
+      "nativeRows": [
+        {
+          "Name": "CHALLENGE_TH11_EDRAG",
+          "TID": "TID_CHALLENGE_TH11_EDRAG",
+          "Type": "TUTORIAL",
+          "TutorialUnlockTHLevel": "11",
+          "TutorialTHLevel": "11",
+          "LevelFile": "level/challenge_th11_edrag.json",
+          "Gold": "500000",
+          "Elixir": "500000",
+          "DarkElixir": "5000",
+          "SinglePlayer": "TRUE",
+          "FixedArmyUnitType": "Barbarian King",
+          "FixedArmyUnitLevel": "50",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH11_Edrag_FunnelEdrag1",
+          "UseFullMapSize": "TRUE",
+          "DefendingHero": "Barbarian King",
+          "DefendingHeroLevel": "50",
+          "VillageBackground": "60000000"
+        },
+        {
+          "FixedArmyUnitType": "Archer Queen",
+          "FixedArmyUnitLevel": "50",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH11_Edrag_Wait_For_Queen",
+          "DefendingHero": "Archer Queen",
+          "DefendingHeroLevel": "50"
+        },
+        {
+          "FixedArmyUnitType": "Grand Warden",
+          "FixedArmyUnitLevel": "20",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH11_Edrag_ArcherQueen",
+          "DefendingHero": "Grand Warden",
+          "DefendingHeroLevel": "20"
+        },
+        {
+          "FixedArmyUnitType": "Battle Blimp",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH11_Edrag_Wait_For_Blimp"
+        },
+        {
+          "FixedArmyUnitType": "Electro Dragon",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "1",
+          "FixedArmyUnitAlliance": "TRUE",
+          "DeploySteps": "TH11_Edrag_BattleBlimp"
+        },
+        {
+          "FixedArmyUnitType": "Balloon",
+          "FixedArmyUnitLevel": "8",
+          "FixedArmyUnitCountOrStage": "1",
+          "FixedArmyUnitAlliance": "TRUE",
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "FixedArmyUnitType": "Electro Dragon",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "8",
+          "DeploySteps": "TH11_Edrag_Rage1"
+        },
+        {
+          "FixedArmyUnitType": "Balloon",
+          "FixedArmyUnitLevel": "7",
+          "FixedArmyUnitCountOrStage": "4",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Rage",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "3",
+          "DeploySteps": "TH11_Edrag_Clones"
+        },
+        {
+          "FixedArmyUnitType": "Haste",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Clone",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "TH11_Edrag_Deploy_Blimp"
+        },
+        {
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "DeploySteps": "TH11_Edrag_FunnelEdrag2"
+        },
+        {
+          "DeploySteps": "Wait_5000ms"
+        },
+        {
+          "DeploySteps": "TH11_Edrag_Edrags"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH11_Edrag_GrandWarden"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH11_Edrag_Balloons"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH11_Edrag_BarbarianKing"
+        },
+        {
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "DeploySteps": "TH11_Edrag_Rage2"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "WardenAbility"
+        },
+        {
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "DeploySteps": "TH11_Edrag_Clean_Up"
+        }
+      ]
+    },
+    {
+      "stage": 102,
+      "id": "CHALLENGE_TH11_LAVALOON",
+      "name": "Lava & More Loons",
+      "family": "challenge",
+      "dependencies": [],
+      "gold": 500000,
+      "elixir": 500000,
+      "darkElixir": 5000,
+      "recommendedTownHall": 11,
+      "nativeRows": [
+        {
+          "Name": "CHALLENGE_TH11_LAVALOON",
+          "TID": "TID_CHALLENGE_TH11_LAVALOON",
+          "Type": "TUTORIAL",
+          "TutorialUnlockTHLevel": "11",
+          "TutorialTHLevel": "11",
+          "LevelFile": "level/challenge_th11_lavaloon.json",
+          "Gold": "500000",
+          "Elixir": "500000",
+          "DarkElixir": "5000",
+          "SinglePlayer": "TRUE",
+          "FixedArmyUnitType": "Balloon",
+          "FixedArmyUnitLevel": "7",
+          "FixedArmyUnitCountOrStage": "29",
+          "DeploySteps": "TH11_Lavaloon_Info_Eagle",
+          "UseFullMapSize": "TRUE",
+          "DefendingHero": "Archer Queen",
+          "DefendingHeroLevel": "50",
+          "VillageBackground": "60000000"
+        },
+        {
+          "FixedArmyUnitType": "Minion",
+          "FixedArmyUnitLevel": "7",
+          "FixedArmyUnitCountOrStage": "5",
+          "DeploySteps": "TH11_Lavaloon_Info_Queen",
+          "DefendingHero": "Barbarian King",
+          "DefendingHeroLevel": "50"
+        },
+        {
+          "FixedArmyUnitType": "Lava Hound",
+          "FixedArmyUnitLevel": "4",
+          "FixedArmyUnitCountOrStage": "3",
+          "DeploySteps": "TH11_Lavaloon_Jump",
+          "DefendingHero": "Grand Warden",
+          "DefendingHeroLevel": "20"
+        },
+        {
+          "FixedArmyUnitType": "Rage",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Haste",
+          "FixedArmyUnitLevel": "4",
+          "FixedArmyUnitCountOrStage": "4",
+          "DeploySteps": "TH11_Lavaloon_IceGolem"
+        },
+        {
+          "FixedArmyUnitType": "Poison",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Archer Queen",
+          "FixedArmyUnitLevel": "50",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH11_Lavaloon_BarbarianKing"
+        },
+        {
+          "FixedArmyUnitType": "Barbarian King",
+          "FixedArmyUnitLevel": "50",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Grand Warden",
+          "FixedArmyUnitLevel": "20",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH11_Lavaloon_ArcherQueen"
+        },
+        {
+          "FixedArmyUnitType": "Jump",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH11_Lavaloon_Wait_For_KingAbility"
+        },
+        {
+          "FixedArmyUnitType": "Ice Golem",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH11_Lavaloon_KingAbility"
+        },
+        {
+          "FixedArmyUnitType": "Stone Slammer",
+          "FixedArmyUnitLevel": "2",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Balloon",
+          "FixedArmyUnitLevel": "7",
+          "FixedArmyUnitCountOrStage": "7",
+          "FixedArmyUnitAlliance": "TRUE",
+          "DeploySteps": "TH11_Lavaloon_Poison"
+        },
+        {
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH11_Lavaloon_Haste1"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH11_Lavaloon_Hounds1"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH11_Lavaloon_Balloons1"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH11_Lavaloon_GrandWarden"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH11_Lavaloon_StoneSlammer"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH11_Lavaloon_Balloons2"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH11_Lavaloon_Hounds2"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH11_Lavaloon_Balloons3"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH11_Lavaloon_Rage"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH11_Lavaloon_WardenAbility"
+        },
+        {
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "DeploySteps": "TH11_Lavaloon_Haste2"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH11_Lavaloon_Minions"
+        }
+      ]
+    },
+    {
+      "stage": 103,
+      "id": "CHALLENGE_TH12_BOWIGI",
+      "name": "Bowling with Witches",
+      "family": "challenge",
+      "dependencies": [],
+      "gold": 600000,
+      "elixir": 600000,
+      "darkElixir": 6000,
+      "recommendedTownHall": 12,
+      "nativeRows": [
+        {
+          "Name": "CHALLENGE_TH12_BOWIGI",
+          "TID": "TID_CHALLENGE_TH12_BOWIGI",
+          "Type": "TUTORIAL",
+          "TutorialUnlockTHLevel": "12",
+          "TutorialTHLevel": "12",
+          "LevelFile": "level/challenge_th12_bowigi.json",
+          "Gold": "600000",
+          "Elixir": "600000",
+          "DarkElixir": "6000",
+          "SinglePlayer": "TRUE",
+          "FixedArmyUnitType": "Giant",
+          "FixedArmyUnitLevel": "9",
+          "FixedArmyUnitCountOrStage": "5",
+          "DeploySteps": "TH12_Bowigi_Balloon1",
+          "UseFullMapSize": "TRUE",
+          "DefendingHero": "Barbarian King",
+          "DefendingHeroLevel": "40",
+          "VillageBackground": "60000000"
+        },
+        {
+          "FixedArmyUnitType": "Wall Breaker",
+          "FixedArmyUnitLevel": "8",
+          "FixedArmyUnitCountOrStage": "7",
+          "DeploySteps": "Wait_2500ms",
+          "DefendingHero": "Archer Queen",
+          "DefendingHeroLevel": "40"
+        },
+        {
+          "FixedArmyUnitType": "Balloon",
+          "FixedArmyUnitLevel": "8",
+          "FixedArmyUnitCountOrStage": "3",
+          "DeploySteps": "TH12_Bowigi_Healers",
+          "DefendingHero": "Grand Warden",
+          "DefendingHeroLevel": "20"
+        },
+        {
+          "FixedArmyUnitType": "Wizard",
+          "FixedArmyUnitLevel": "9",
+          "FixedArmyUnitCountOrStage": "5",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Healer",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "5",
+          "DeploySteps": "TH12_Bowigi_ArcherQueen"
+        },
+        {
+          "FixedArmyUnitType": "Baby Dragon",
+          "FixedArmyUnitLevel": "6",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "FixedArmyUnitType": "Witch",
+          "FixedArmyUnitLevel": "4",
+          "FixedArmyUnitCountOrStage": "3",
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "FixedArmyUnitType": "Bowler",
+          "FixedArmyUnitLevel": "4",
+          "FixedArmyUnitCountOrStage": "15",
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "FixedArmyUnitType": "Wall Wrecker",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH12_Bowigi_Rage1"
+        },
+        {
+          "FixedArmyUnitType": "Giant",
+          "FixedArmyUnitLevel": "9",
+          "FixedArmyUnitCountOrStage": "8",
+          "FixedArmyUnitAlliance": "TRUE",
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "FixedArmyUnitType": "Barbarian King",
+          "FixedArmyUnitLevel": "60",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "FixedArmyUnitType": "Archer Queen",
+          "FixedArmyUnitLevel": "60",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH12_Bowigi_Giants"
+        },
+        {
+          "FixedArmyUnitType": "Grand Warden",
+          "FixedArmyUnitLevel": "30",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "FixedArmyUnitType": "Rage",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "3",
+          "DeploySteps": "TH12_Bowigi_WallWrecker"
+        },
+        {
+          "FixedArmyUnitType": "Jump",
+          "FixedArmyUnitLevel": "3",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "TH12_Bowigi_GrandWarden"
+        },
+        {
+          "FixedArmyUnitType": "Freeze",
+          "FixedArmyUnitLevel": "7",
+          "FixedArmyUnitCountOrStage": "2",
+          "DeploySteps": "TH12_Bowigi_BarbarianKing"
+        },
+        {
+          "FixedArmyUnitType": "Poison",
+          "FixedArmyUnitLevel": "5",
+          "FixedArmyUnitCountOrStage": "1",
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH12_Bowigi_Witches"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH12_Bowigi_Bowlers"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH12_Bowigi_WallBreakers"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH12_Bowigi_Freeze1"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH12_Bowigi_Freeze2"
+        },
+        {
+          "DeploySteps": "Wait_1000ms"
+        },
+        {
+          "DeploySteps": "TH12_Bowigi_Rage2"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH12_Bowigi_Jump"
+        },
+        {
+          "DeploySteps": "Wait_2500ms"
+        },
+        {
+          "DeploySteps": "TH12_Bowigi_KingAbility"
+        },
+        {
+          "DeploySteps": "TH12_Bowigi_WaitForWarden"
+        },
+        {
+          "DeploySteps": "WardenAbility"
+        },
+        {
+          "DeploySteps": "Wait_7500ms"
+        },
+        {
+          "DeploySteps": "TH12_Bowigi_CleanUp"
+        }
+      ]
+    }
+  ],
+  "entities": {
+    "1000001": {
+      "Name": "Town Hall",
+      "Width": "4",
+      "Height": "4",
+      "TID": "TID_BUILDING_TOWN_HALL"
+    },
+    "1000014": {
+      "Name": "Clan Castle",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_ALLIANCE_CASTLE"
+    },
+    "1000005": {
+      "Name": "Gold Storage",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_GOLD_STORAGE"
+    },
+    "1000003": {
+      "Name": "Elixir Storage",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_ELIXIR_STORAGE"
+    },
+    "1000024": {
+      "Name": "Dark Elixir Storage",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_DARK_ELIXIR_STORAGE"
+    },
+    "1000004": {
+      "Name": "Gold Mine",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_GOLD_MINE"
+    },
+    "1000002": {
+      "Name": "Elixir Collector",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_ELIXIR_PUMP"
+    },
+    "1000023": {
+      "Name": "Dark Elixir Drill",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_DARK_ELIXIR_PUMP"
+    },
+    "1000000": {
+      "Name": "Army Camp",
+      "Width": "4",
+      "Height": "4",
+      "TID": "TID_BUILDING_HOUSING"
+    },
+    "1000007": {
+      "Name": "Laboratory",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_LABORATORY"
+    },
+    "1000006": {
+      "Name": "Barracks",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_BARRACK"
+    },
+    "1000026": {
+      "Name": "Dark Barracks",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_DARK_ELIXIR_BARRACK"
+    },
+    "1000020": {
+      "Name": "Spell Factory",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_SPELL_FORGE"
+    },
+    "1000029": {
+      "Name": "Dark Spell Factory",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_MINI_SPELL_FACTORY"
+    },
+    "1000071": {
+      "Name": "Hero Hall",
+      "Width": "4",
+      "Height": "4",
+      "TID": "TID_HERO_TAVERN"
+    },
+    "1000015": {
+      "Name": "Builders Hut",
+      "Width": "2",
+      "Height": "2",
+      "TID": "TID_WORKER_BUILDING"
+    },
+    "1000010": {
+      "Name": "Wall",
+      "Width": "1",
+      "Height": "1",
+      "TID": "TID_BUILDING_WALL"
+    },
+    "1000008": {
+      "Name": "Cannon",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_CANNON"
+    },
+    "1000009": {
+      "Name": "Archer Tower",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_ARCHER_TOWER"
+    },
+    "1000013": {
+      "Name": "Mortar",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_MORTAR"
+    },
+    "1000012": {
+      "Name": "Air Defense",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_AIR_DEFENSE"
+    },
+    "1000011": {
+      "Name": "Wizard Tower",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_WIZARD_TOWER"
+    },
+    "1000019": {
+      "Name": "Hidden Tesla",
+      "Width": "2",
+      "Height": "2",
+      "TID": "TID_BUILDING_TESLA_TOWER"
+    },
+    "1000028": {
+      "Name": "Air Sweeper",
+      "Width": "2",
+      "Height": "2",
+      "TID": "TID_AIR_BLASTER"
+    },
+    "1000032": {
+      "Name": "Bomb Tower",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_BOMB_TOWER"
+    },
+    "1000021": {
+      "Name": "X-Bow",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_BOW"
+    },
+    "1000027": {
+      "Name": "Inferno Tower",
+      "Width": "2",
+      "Height": "2",
+      "TID": "TID_BUILDING_DARK_TOWER"
+    },
+    "1000031": {
+      "Name": "Eagle Artillery",
+      "Width": "4",
+      "Height": "4",
+      "TID": "TID_BUILDING_ARTILLERY"
+    },
+    "1000067": {
+      "Name": "Scattershot",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_SCATTERSHOT"
+    },
+    "1000072": {
+      "Name": "Spell Tower",
+      "Width": "2",
+      "Height": "2",
+      "TID": "TID_BUILDING_SPELL_TOWER"
+    },
+    "1000077": {
+      "Name": "Monolith",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_MONOLITH"
+    },
+    "1000016": {
+      "Name": "Communications mast",
+      "Width": "2",
+      "Height": "2",
+      "TID": "TID_CAPBUILD_GOBLIN_HUT"
+    },
+    "1000017": {
+      "Name": "Goblin Hall",
+      "Width": "4",
+      "Height": "4",
+      "TID": "TID_BUILDING_GOBLIN_HALL"
+    },
+    "1000018": {
+      "Name": "Goblin Hut",
+      "Width": "2",
+      "Height": "2",
+      "TID": "TID_CAPBUILD_GOBLIN_HUT"
+    },
+    "1000060": {
+      "Name": "Tutorial Cannon",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_CANNON"
+    },
+    "1000061": {
+      "Name": "Goblin Castle",
+      "Width": "3",
+      "Height": "3",
+      "TID": "TID_BUILDING_GOBLIN_CASTLE"
+    },
+    "1000062": {
+      "Name": "Foreboding Cave",
+      "Width": "4",
+      "Height": "4",
+      "TID": "TID_BUILDING_DRAGON_CAVE"
+    },
+    "1000069": {
+      "Name": "Goblin Boss TH",
+      "Width": "4",
+      "Height": "4",
+      "TID": "TID_BUILDING_GOBLIN_HALL"
+    },
+    "12000000": {
+      "Name": "Bomb",
+      "Width": "1",
+      "Height": "1",
+      "TID": "TID_TRAP_MINE"
+    },
+    "12000001": {
+      "Name": "Spring Trap",
+      "Width": "1",
+      "Height": "1",
+      "TID": "TID_TRAP_EJECTOR"
+    },
+    "12000005": {
+      "Name": "Air Bomb",
+      "Width": "1",
+      "Height": "1",
+      "TID": "TID_TRAP_AIR"
+    },
+    "12000002": {
+      "Name": "Giant Bomb",
+      "Width": "2",
+      "Height": "2",
+      "TID": "TID_TRAP_SUPERBOMB"
+    },
+    "12000006": {
+      "Name": "Seeking Air Mine",
+      "Width": "1",
+      "Height": "1",
+      "TID": "TID_TRAP_AIR_MEGA"
+    },
+    "12000008": {
+      "Name": "Skeleton Trap",
+      "Width": "1",
+      "Height": "1",
+      "TID": "TID_TRAP_HALLOWEEN_SKEL"
+    },
+    "12000016": {
+      "Name": "Tornado Trap",
+      "Width": "1",
+      "Height": "1",
+      "TID": "TID_TRAP_TORNADO"
+    },
+    "12000003": {
+      "Name": "Halloweenbomb",
+      "Width": "1",
+      "Height": "1",
+      "TID": "TID_TRAP_HALLOWEENBOMB"
+    },
+    "12000007": {
+      "Name": "SantaTrap",
+      "Width": "1",
+      "Height": "1",
+      "TID": "TID_TRAP_SANTA"
+    },
+    "12000017": {
+      "Name": "ShrinkTrap_SinglePlayer",
+      "Width": "2",
+      "Height": "2",
+      "TID": "TID_TRAP_SHRINK_SP"
+    },
+    "12000018": {
+      "Name": "FreezeTrap_SinglePlayer",
+      "Width": "2",
+      "Height": "2",
+      "TID": "TID_TRAP_FREEZE_SP"
+    },
+    "12000019": {
+      "Name": "Ghost Trap",
+      "Width": "1",
+      "Height": "1",
+      "TID": "TID_TRAP_HALLOWEEN_SKEL"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "title": "Sneaky Goblin",
+  "url": "https://clashofclans.fandom.com/wiki/Sneaky_Goblin",
+  "revid": 622829,
+  "clientName": "Sneaky Goblin",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Sneaky Goblin",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "Resources (Damage x2)",
+    "attackType": "Melee (Ground Only)",
+    "housingSpace": 3,
+    "movementSpeed": 32,
+    "attackSpeedSeconds": 1,
+    "rangeTiles": 0.4,
+    "specialAbility": "Cloak"
+  },
+  "levels": [
+    {
+      "level": 7,
+      "dps": 155,
+      "damagePerAttack": 155,
+      "dpsVsResources": 310,
+      "hitpoints": 270
+    },
+    {
+      "level": 8,
+      "dps": 170,
+      "damagePerAttack": 170,
+      "dpsVsResources": 340,
+      "hitpoints": 320
+    },
+    {
+      "level": 9,
+      "dps": 180,
+      "damagePerAttack": 180,
+      "dpsVsResources": 360,
+      "hitpoints": 350
+    },
+    {
+      "level": 10,
+      "dps": 190,
+      "damagePerAttack": 190,
+      "dpsVsResources": 380,
+      "hitpoints": 380
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "cloak",
+      "client": "`SpecialAbilities` EliteGoblinAbility: `IsInvisible` TRUE, `DeactivateAfterTime` 5000"
+    },
+    {
+      "mechanic": "resource bonus",
+      "client": "`PreferedTargetBuildingClass` Resource + `PreferedTargetDamageMod` 2"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`DPS`, `Hitpoints`, `Speed` 400"
+    }
+  ],
+  "boost": {
+    "wiki": {
+      "baseTroop": "Goblin",
+      "minBaseLevel": 7,
+      "townHallRequired": 11,
+      "clanCastleLevelToReceive": 4,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperGoblin",
+      "Original": "Goblin",
+      "MinOriginalLevel_raw": 6,
+      "minBaseLevel": 7,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_GOBLIN_INTRO_TH13",
+      "townHallDerived": 11
+    }
+  }
+}

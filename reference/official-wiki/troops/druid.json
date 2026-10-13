@@ -1,0 +1,209 @@
+{
+ "title": "Druid",
+ "page": "Druid",
+ "url": "https://clashofclans.fandom.com/wiki/Druid",
+ "revid": 624267,
+ "retrieved": "2026-09-15",
+ "clientName": "Druid",
+ "clientVersion": "18.400.21",
+ "category": "dark-troop",
+ "constants": {
+  "housingSpace": 16,
+  "movementSpeedWiki": 24,
+  "internalSpeed": 300,
+  "tilesPerSecond": 3,
+  "attackRangeTiles": 5,
+  "attackRangeTilesClient": 5,
+  "attackSeconds": 1,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Ranged (Ground & Air) / Chain Healing",
+  "targets": "ground+air",
+  "favoriteTarget": "None",
+  "favoriteTargetTemplate": "HealTransitionToAttack",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": true,
+  "underground": false,
+  "unlock": {
+   "building": "Dark Barracks",
+   "level": 11,
+   "townHall": 14
+  },
+  "chainTargets": 4,
+  "evolveSeconds": 30,
+  "bounceDistanceTilesClient": 4.5,
+  "triggersTraps": true
+ },
+ "client": {
+  "clientName": "Druid",
+  "housingSpace": 16,
+  "internalSpeed": 300,
+  "movementSpeedInGameExact": 24,
+  "movementSpeedInGameRounded": 24,
+  "tilesPerSecond": 3,
+  "attackRangeTiles": 5,
+  "attackSeconds": 1,
+  "targets": "ground+air",
+  "flying": false,
+  "jumpsWalls": true,
+  "favoriteTarget": "None",
+  "productionBuilding": "Dark Barracks",
+  "barracksLevel": 11,
+  "unlockTownHall": 14,
+  "triggersTraps": true,
+  "coolDownOverride": 450,
+  "movementOffsetSpeed": 50,
+  "dontSpawnSecondaryWhenEjected": true,
+  "chainTargets": 4,
+  "evolveSeconds": 30,
+  "bounceDistanceTiles": 4.5
+ },
+ "levels": [
+  {
+   "level": 1,
+   "hps": 80,
+   "healPerHit": 80,
+   "heroHealPerHit": 84,
+   "hitpoints": 1300,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "hps": 85,
+   "healPerHit": 85,
+   "heroHealPerHit": 89.25,
+   "hitpoints": 1400,
+   "researchCost": 125000,
+   "researchSeconds": 691200,
+   "researchTimeText": "8d",
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 3,
+   "hps": 90,
+   "healPerHit": 90,
+   "heroHealPerHit": 99,
+   "hitpoints": 1500,
+   "researchCost": 175000,
+   "researchSeconds": 777600,
+   "researchTimeText": "9d",
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 4,
+   "hps": 95,
+   "healPerHit": 95,
+   "heroHealPerHit": 104.5,
+   "hitpoints": 1600,
+   "researchCost": 187500,
+   "researchSeconds": 950400,
+   "researchTimeText": "11d",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 5,
+   "hps": 105,
+   "healPerHit": 105,
+   "heroHealPerHit": 120.75,
+   "hitpoints": 1700,
+   "researchCost": 300000,
+   "researchSeconds": 1036800,
+   "researchTimeText": "12d",
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 6,
+   "hps": 115,
+   "healPerHit": 115,
+   "heroHealPerHit": 132.25,
+   "hitpoints": 1850,
+   "researchCost": 380000,
+   "researchSeconds": 1339200,
+   "researchTimeText": "15d 12h",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 1300,
+   "hps": 80,
+   "healPerHit": 80,
+   "heroHealPercent": 105,
+   "heroHealPerHit": 84
+  },
+  {
+   "level": 2,
+   "hitpoints": 1400,
+   "hps": 85,
+   "researchCost": 125000,
+   "researchSeconds": 691200,
+   "laboratoryLevel": 12,
+   "healPerHit": 85,
+   "heroHealPercent": 105,
+   "heroHealPerHit": 89.25
+  },
+  {
+   "level": 3,
+   "hitpoints": 1500,
+   "hps": 90,
+   "researchCost": 175000,
+   "researchSeconds": 777600,
+   "laboratoryLevel": 13,
+   "healPerHit": 90,
+   "heroHealPercent": 110,
+   "heroHealPerHit": 99
+  },
+  {
+   "level": 4,
+   "hitpoints": 1600,
+   "hps": 95,
+   "researchCost": 187500,
+   "researchSeconds": 950400,
+   "laboratoryLevel": 14,
+   "healPerHit": 95,
+   "heroHealPercent": 110,
+   "heroHealPerHit": 104.5
+  },
+  {
+   "level": 5,
+   "hitpoints": 1700,
+   "hps": 105,
+   "researchCost": 300000,
+   "researchSeconds": 1036800,
+   "laboratoryLevel": 15,
+   "healPerHit": 105,
+   "heroHealPercent": 115,
+   "heroHealPerHit": 120.75
+  },
+  {
+   "level": 6,
+   "hitpoints": 1850,
+   "hps": 115,
+   "researchCost": 380000,
+   "researchSeconds": 1339200,
+   "laboratoryLevel": 16,
+   "healPerHit": 115,
+   "heroHealPercent": 115,
+   "heroHealPerHit": 132.25
+  }
+ ],
+ "spawned": {
+  "slug": "druid-bear",
+  "title": "Bear (Druid form)",
+  "clientName": "Bear",
+  "trigger": "transforms after 30 s or on death",
+  "perLevelClient": {}
+ },
+ "comparison": {
+  "checked": 49,
+  "matched": 49
+ },
+ "mismatches": [],
+ "ambiguities": []
+}

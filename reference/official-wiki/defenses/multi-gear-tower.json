@@ -1,0 +1,129 @@
+{
+ "title": "Multi-Gear Tower",
+ "url": "https://clashofclans.fandom.com/wiki/Multi-Gear_Tower",
+ "revid": 624494,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Multi Gear Tower",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 350,
+   "damagePerHit": 350,
+   "hitpoints": 4000,
+   "cost": 17000000,
+   "buildSeconds": 691200,
+   "xp": 831,
+   "townHall": 17,
+   "fastAttackDps": 650,
+   "fastAttackDamagePerHit": 156
+  },
+  {
+   "level": 2,
+   "dps": 370,
+   "damagePerHit": 370,
+   "hitpoints": 4200,
+   "cost": 18000000,
+   "buildSeconds": 777600,
+   "xp": 881,
+   "townHall": 17,
+   "fastAttackDps": 690,
+   "fastAttackDamagePerHit": 165.6
+  },
+  {
+   "level": 3,
+   "dps": 390,
+   "damagePerHit": 390,
+   "hitpoints": 4350,
+   "cost": 28000000,
+   "buildSeconds": 1209600,
+   "xp": 1099,
+   "townHall": 18,
+   "fastAttackDps": 710,
+   "fastAttackDamagePerHit": 170.4
+  }
+ ],
+ "supercharges": [
+  {
+   "dps": 400,
+   "damagePerHit": 400,
+   "hitpoints": 4350,
+   "cost": 12000000,
+   "buildSeconds": 518400,
+   "xp": 720,
+   "townHall": 18,
+   "charge": 1,
+   "fastAttackDps": 720,
+   "fastAttackDamagePerHit": 172.8,
+   "fastAttackHitpoints": 4350,
+   "fastAttackCost": 12000000,
+   "fastAttackBuildSeconds": 518400,
+   "fastAttackXp": 720,
+   "fastAttackTownHall": 18
+  },
+  {
+   "dps": 400,
+   "damagePerHit": 400,
+   "hitpoints": 4500,
+   "cost": 10000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 18,
+   "charge": 2,
+   "fastAttackDps": 720,
+   "fastAttackDamagePerHit": 172.8,
+   "fastAttackHitpoints": 4500,
+   "fastAttackCost": 10000000,
+   "fastAttackBuildSeconds": 604800,
+   "fastAttackXp": 777,
+   "fastAttackTownHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 17,
+  "size": "3x3",
+  "targets": "ground & air",
+  "mergeFrom": "geared-up Cannon 21 + geared-up Archer Tower 21",
+  "longRange": {
+   "range": 12,
+   "attackSeconds": 1.0
+  },
+  "fastAttack": {
+   "range": 8,
+   "shotsPerBurst": 4,
+   "shotIntervalSeconds": 0.192,
+   "burstIntervalSeconds": 0.383,
+   "cycleSecondsObserved": 0.958
+  },
+  "range": 12,
+  "attackSeconds": 1.0
+ },
+ "mismatches": [
+  {
+   "field": "damagePerHit",
+   "level": 1,
+   "wiki": 156,
+   "client": 150.475,
+   "note": "wiki/in-game per-ball damage implies a 0.96 s burst cycle (0.384 + 3 x 0.192); client AltAttackSpeed 350 + 3 x AltBurstDelay 192 = 0.926 s gives 3.5% less per ball",
+   "table": "Fast Attack Mode"
+  },
+  {
+   "field": "damagePerHit",
+   "level": 2,
+   "wiki": 165.6,
+   "client": 159.735,
+   "note": "wiki/in-game per-ball damage implies a 0.96 s burst cycle (0.384 + 3 x 0.192); client AltAttackSpeed 350 + 3 x AltBurstDelay 192 = 0.926 s gives 3.5% less per ball",
+   "table": "Fast Attack Mode"
+  },
+  {
+   "field": "damagePerHit",
+   "level": 3,
+   "wiki": 170.4,
+   "client": 164.365,
+   "note": "wiki/in-game per-ball damage implies a 0.96 s burst cycle (0.384 + 3 x 0.192); client AltAttackSpeed 350 + 3 x AltBurstDelay 192 = 0.926 s gives 3.5% less per ball",
+   "table": "Fast Attack Mode"
+  }
+ ],
+ "progressionMismatches": []
+}

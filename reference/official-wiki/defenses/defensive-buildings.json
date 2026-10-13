@@ -1,0 +1,37 @@
+{
+ "title": "Defensive Buildings/Home Village",
+ "url": "https://clashofclans.fandom.com/wiki/Defensive_Buildings/Home_Village",
+ "revid": 624965,
+ "retrieved": "2026-09-15",
+ "category": "mechanic",
+ "clientName": null,
+ "clientTable": null,
+ "levels": [],
+ "constants": {
+  "unlockTownHall": {
+   "Cannon": 1,
+   "Archer Tower": 2,
+   "Mortar": 3,
+   "Air Defense": 4,
+   "Wizard Tower": 5,
+   "Air Sweeper": 6,
+   "Hidden Tesla": 7,
+   "Bomb Tower": 8,
+   "X-Bow": 9,
+   "Inferno Tower": 10,
+   "Eagle Artillery": 11,
+   "Scattershot": 13,
+   "Builder's Hut (weaponized)": 14,
+   "Spell Tower": 15,
+   "Monolith": 15,
+   "Multi-Archer Tower": 16,
+   "Ricochet Cannon": 16,
+   "Multi-Gear Tower": 17,
+   "Firespitter": 17,
+   "Revenge Tower": 18,
+   "Super Wizard Tower": 18,
+   "Wall": 2
+  }
+ },
+ "mismatches": []
+}

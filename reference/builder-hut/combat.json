@@ -1,0 +1,177 @@
+{
+  "worldScale": 1.2,
+  "anchor": [
+    0,
+    40
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "hp": 250,
+      "dps": 0,
+      "body": "worker_building",
+      "base": "worker_building_base",
+      "ruin": "destroyedBuilding_2s_pit_wood_darkbrown",
+      "destroyEffect": "Building Destroyed",
+      "projectile": null,
+      "defenceTroop": null,
+      "defenceTroopLevel": null
+    },
+    {
+      "level": 2,
+      "hp": 1000,
+      "dps": 80,
+      "body": "worker_building_armed_lvl1",
+      "base": "worker_building_base",
+      "ruin": "rockWood_destructed_tiles2_battlebuilder",
+      "destroyEffect": "Building Destroyed",
+      "projectile": "Nail Ammo",
+      "defenceTroop": "Defending Builder",
+      "defenceTroopLevel": 1
+    },
+    {
+      "level": 3,
+      "hp": 1300,
+      "dps": 100,
+      "body": "worker_building_armed_lvl2",
+      "base": "worker_building_base",
+      "ruin": "rockWood_destructed_tiles2_battlebuilder",
+      "destroyEffect": "Building Destroyed",
+      "projectile": "Nail Ammo",
+      "defenceTroop": "Defending Builder",
+      "defenceTroopLevel": 2
+    },
+    {
+      "level": 4,
+      "hp": 1600,
+      "dps": 120,
+      "body": "worker_building_armed_lvl3",
+      "base": "worker_building_base",
+      "ruin": "rockWood_destructed_tiles2_battlebuilder",
+      "destroyEffect": "Building Destroyed",
+      "projectile": "Nail Ammo 2",
+      "defenceTroop": "Defending Builder",
+      "defenceTroopLevel": 3
+    }
+  ],
+  "weapon": {
+    "rangeSource": 700,
+    "intervalMs": 400,
+    "airTargets": true,
+    "groundTargets": true,
+    "attackEffect": "Nailgun Attack FX",
+    "hitEffect": "Generic Hit",
+    "wakeUpSpace": 1,
+    "wakeUpSpeedMs": 1600,
+    "addBuildingClass": "Defense",
+    "projectiles": {
+      "Nail Ammo": {
+        "export": "nail_ammo",
+        "speed": 1800,
+        "startHeight": 160,
+        "startOffset": 100,
+        "ballisticHeight": 50,
+        "tracking": true,
+        "topLayer": true
+      },
+      "Nail Ammo 2": {
+        "export": "nail_ammo_2",
+        "speed": 1800,
+        "startHeight": 160,
+        "startOffset": 100,
+        "ballisticHeight": 50,
+        "tracking": true,
+        "topLayer": true
+      }
+    }
+  },
+  "housing": {
+    "unit": 100,
+    "spell": 500,
+    "hero": 100,
+    "alliance": 0,
+    "barbarianKing": 25
+  },
+  "turret": {
+    "frames": 360,
+    "directions": 36,
+    "load": {
+      "idle": 0,
+      "activatingStart": 1,
+      "activatingEnd": 37,
+      "battleIdle": 38
+    }
+  },
+  "sleep": {
+    "rootFrames": 94,
+    "fps": 24,
+    "sleepFrames": [
+      2,
+      73
+    ],
+    "awakeFrame": 0,
+    "marker": 2081
+  },
+  "previews": {
+    "1": {
+      "path": "assets/buildings/builder-hut-native/level-1.png",
+      "bounds": [
+        -52,
+        -26,
+        45,
+        78
+      ],
+      "anchor": [
+        0,
+        40
+      ],
+      "width": 194,
+      "height": 208
+    },
+    "2": {
+      "path": "assets/buildings/builder-hut-native/level-2.png",
+      "bounds": [
+        -52,
+        -35,
+        44,
+        77
+      ],
+      "anchor": [
+        0,
+        40
+      ],
+      "width": 192,
+      "height": 224
+    },
+    "3": {
+      "path": "assets/buildings/builder-hut-native/level-3.png",
+      "bounds": [
+        -52,
+        -43,
+        52,
+        89
+      ],
+      "anchor": [
+        0,
+        40
+      ],
+      "width": 208,
+      "height": 264
+    },
+    "4": {
+      "path": "assets/buildings/builder-hut-native/level-4.png",
+      "bounds": [
+        -52,
+        -43,
+        52,
+        83
+      ],
+      "anchor": [
+        0,
+        40
+      ],
+      "width": 208,
+      "height": 252
+    }
+  }
+}

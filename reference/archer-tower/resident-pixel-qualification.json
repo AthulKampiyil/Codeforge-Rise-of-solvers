@@ -1,0 +1,32 @@
+{
+  "nativePlaybackVerified": false,
+  "qualification": "All retained individual resident frames and export frame zero; not world attachment or native executable proof.",
+  "sourceSha256": "6f3f7682e318fd84a90eb83bc7adf04001123bd85b905142460963bcaa16e305",
+  "thresholds": {
+    "meanError": 1,
+    "largeFraction": 0.003
+  },
+  "reports": {
+    "chromium": {
+      "pages": 17,
+      "cases": 2708,
+      "maximumMeanError": 0.43592436974789917,
+      "maximumChannelError": 85,
+      "maximumLargeFraction": 0.0019537609899055682,
+      "batchChanges": 0,
+      "contextChanges": 0,
+      "glErrors": 0
+    },
+    "webkit": {
+      "pages": 17,
+      "cases": 2708,
+      "maximumMeanError": 0.583859649122807,
+      "maximumChannelError": 85,
+      "maximumLargeFraction": 0.0019537609899055682,
+      "batchChanges": 0,
+      "contextChanges": 0,
+      "glErrors": 0
+    }
+  },
+  "webkitRuns": "First run completed pages 1\u201314; after process loss, the remaining pages 15\u201317 passed in a separate run."
+}

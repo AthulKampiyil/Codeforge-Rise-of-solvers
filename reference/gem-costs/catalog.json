@@ -1,0 +1,185 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "localization/texts.csv": "affdf43926df044cb3c09d833b07365aa01ea99985771afa5fa0dd926f36c569",
+    "logic/globals.csv": "16210fc28bfb86d00ea04d581a99fe98e128172017b2d4f637b8848c0cf20087",
+    "sc/shop.sc": "d058f8404a65539b578c7470e3fc17bbbe8837de5792e3f8e7f251639e724de2"
+  },
+  "time": [
+    [
+      60,
+      1
+    ],
+    [
+      3600,
+      20
+    ],
+    [
+      86400,
+      260
+    ],
+    [
+      604800,
+      1000
+    ]
+  ],
+  "resource": [
+    [
+      100,
+      1
+    ],
+    [
+      1000,
+      5
+    ],
+    [
+      10000,
+      20
+    ],
+    [
+      100000,
+      100
+    ],
+    [
+      1000000,
+      250
+    ],
+    [
+      10000000,
+      2000
+    ]
+  ],
+  "dark": [
+    [
+      1,
+      1
+    ],
+    [
+      10,
+      5
+    ],
+    [
+      100,
+      20
+    ],
+    [
+      1000,
+      100
+    ],
+    [
+      10000,
+      250
+    ],
+    [
+      100000,
+      2000
+    ]
+  ],
+  "texts": {
+    "header": "You need more <resource>",
+    "text": "Buy the missing <count> <resource>?",
+    "notEnoughGems": "Not enough Gems",
+    "cancel": "Cancel",
+    "gold": "Gold",
+    "elixir": "Elixir",
+    "dark": "Dark Elixir",
+    "treasureTab": "Treasure",
+    "packLocked": "Not enough storage space!",
+    "packHeader": "Buy <resource>?",
+    "packText": "Are you sure you want to buy <count> <resource>?"
+  },
+  "packs": [
+    {
+      "resource": "gold",
+      "share": 10,
+      "name": "Fill Storages by 10%",
+      "art": {
+        "path": "assets/treasure-native/gold-10.png",
+        "width": 160,
+        "height": 102
+      }
+    },
+    {
+      "resource": "gold",
+      "share": 50,
+      "name": "Fill Storages by Half",
+      "art": {
+        "path": "assets/treasure-native/gold-50.png",
+        "width": 160,
+        "height": 87
+      }
+    },
+    {
+      "resource": "gold",
+      "share": 100,
+      "name": "Fill Gold Storages",
+      "art": {
+        "path": "assets/treasure-native/gold-100.png",
+        "width": 160,
+        "height": 75
+      }
+    },
+    {
+      "resource": "elixir",
+      "share": 10,
+      "name": "Fill Storages by 10%",
+      "art": {
+        "path": "assets/treasure-native/elixir-10.png",
+        "width": 160,
+        "height": 179
+      }
+    },
+    {
+      "resource": "elixir",
+      "share": 50,
+      "name": "Fill Storages by Half",
+      "art": {
+        "path": "assets/treasure-native/elixir-50.png",
+        "width": 160,
+        "height": 110
+      }
+    },
+    {
+      "resource": "elixir",
+      "share": 100,
+      "name": "Fill Elixir Storages",
+      "art": {
+        "path": "assets/treasure-native/elixir-100.png",
+        "width": 160,
+        "height": 119
+      }
+    },
+    {
+      "resource": "dark",
+      "share": 10,
+      "name": "Fill Storages by 10%",
+      "art": {
+        "path": "assets/treasure-native/dark-10.png",
+        "width": 160,
+        "height": 199
+      }
+    },
+    {
+      "resource": "dark",
+      "share": 50,
+      "name": "Fill Storages by Half",
+      "art": {
+        "path": "assets/treasure-native/dark-50.png",
+        "width": 160,
+        "height": 151
+      }
+    },
+    {
+      "resource": "dark",
+      "share": 100,
+      "name": "Fill Dark Elixir Storages",
+      "art": {
+        "path": "assets/treasure-native/dark-100.png",
+        "width": 160,
+        "height": 120
+      }
+    }
+  ]
+}

@@ -1,0 +1,461 @@
+{
+ "title": "Monolith Arrow",
+ "url": "https://clashofclans.fandom.com/wiki/Monolith_Arrow",
+ "revid": 625282,
+ "retrieved": "2026-09-15",
+ "clientName": "Monolith Arrow",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Archer Queen",
+ "summary": "Queen Epic passive item: attacks deal bonus damage equal to a % of the target's max HP (9.5% → 14%, reduced after 180 and 250 housing deployed) plus 3% → 10% damage reduction; passive HP.",
+ "constants": {
+  "wiki": {
+   "User": "Archer Queen",
+   "Ability Type": "Passive",
+   "Rarity": "Epic",
+   "Unlock Requirement": "Buy in Anime Fury Medal Event for 3,100 Meow Medal; or purchasable from the Trader for 1,500 Gem"
+  },
+  "client": {
+   "Rarity": "EPIC",
+   "AllowedCharacters": "Archer Queen;",
+   "MainAbilities": "ArcherQueenMonolithArrow",
+   "ExtraAbilities": "ArcherQueenMonolithArrowMid;ArcherQueenMonolithArrowMin",
+   "Claimable": "TRUE",
+   "levelRows": 27,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    10
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "highestExtraDamageBelow180HousingSpacePercent": {
+   "wikiHeader": "Ability Attributes / Highest Extra Damage (Below 180 Housing Space)",
+   "unit": "percent"
+  },
+  "extraDamage181250HousingSpacePercent": {
+   "wikiHeader": "Ability Attributes / Extra Damage (181-250 Housing Space)",
+   "unit": "percent"
+  },
+  "extraDamage251HousingSpacePercent": {
+   "wikiHeader": "Ability Attributes / Extra Damage (251+ Housing Space)",
+   "unit": "percent"
+  },
+  "incomingDamageReductionPercent": {
+   "wikiHeader": "Ability Attributes / Incoming Damage Reduction",
+   "unit": "percent"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostStarryOre": {
+   "wikiHeader": "Upgrade Cost / Starry Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "highestExtraDamageBelow180HousingSpacePercent": 9.5,
+   "extraDamage181250HousingSpacePercent": 7,
+   "extraDamage251HousingSpacePercent": 4,
+   "incomingDamageReductionPercent": 3,
+   "hitpointIncrease": 100,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "highestExtraDamageBelow180HousingSpacePercent": 9.5,
+   "extraDamage181250HousingSpacePercent": 7,
+   "extraDamage251HousingSpacePercent": 4,
+   "incomingDamageReductionPercent": 3,
+   "hitpointIncrease": 140,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "highestExtraDamageBelow180HousingSpacePercent": 10,
+   "extraDamage181250HousingSpacePercent": 7.5,
+   "extraDamage251HousingSpacePercent": 4.1,
+   "incomingDamageReductionPercent": 3,
+   "hitpointIncrease": 180,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "highestExtraDamageBelow180HousingSpacePercent": 10,
+   "extraDamage181250HousingSpacePercent": 7.5,
+   "extraDamage251HousingSpacePercent": 4.1,
+   "incomingDamageReductionPercent": 3,
+   "hitpointIncrease": 220,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "highestExtraDamageBelow180HousingSpacePercent": 10,
+   "extraDamage181250HousingSpacePercent": 7.5,
+   "extraDamage251HousingSpacePercent": 4.1,
+   "incomingDamageReductionPercent": 3,
+   "hitpointIncrease": 260,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "highestExtraDamageBelow180HousingSpacePercent": 10.5,
+   "extraDamage181250HousingSpacePercent": 8,
+   "extraDamage251HousingSpacePercent": 4.2,
+   "incomingDamageReductionPercent": 3,
+   "hitpointIncrease": 300,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "highestExtraDamageBelow180HousingSpacePercent": 10.5,
+   "extraDamage181250HousingSpacePercent": 8,
+   "extraDamage251HousingSpacePercent": 4.2,
+   "incomingDamageReductionPercent": 3,
+   "hitpointIncrease": 340,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "highestExtraDamageBelow180HousingSpacePercent": 10.5,
+   "extraDamage181250HousingSpacePercent": 8,
+   "extraDamage251HousingSpacePercent": 4.2,
+   "incomingDamageReductionPercent": 3,
+   "hitpointIncrease": 380,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "highestExtraDamageBelow180HousingSpacePercent": 11,
+   "extraDamage181250HousingSpacePercent": 8.5,
+   "extraDamage251HousingSpacePercent": 4.3,
+   "incomingDamageReductionPercent": 4,
+   "hitpointIncrease": 420,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "upgradeCostStarryOre": 10,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "highestExtraDamageBelow180HousingSpacePercent": 11,
+   "extraDamage181250HousingSpacePercent": 8.5,
+   "extraDamage251HousingSpacePercent": 4.3,
+   "incomingDamageReductionPercent": 4,
+   "hitpointIncrease": 460,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 11,
+   "highestExtraDamageBelow180HousingSpacePercent": 11,
+   "extraDamage181250HousingSpacePercent": 8.5,
+   "extraDamage251HousingSpacePercent": 4.3,
+   "incomingDamageReductionPercent": 4,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 12,
+   "highestExtraDamageBelow180HousingSpacePercent": 11.5,
+   "extraDamage181250HousingSpacePercent": 9,
+   "extraDamage251HousingSpacePercent": 4.4,
+   "incomingDamageReductionPercent": 5,
+   "hitpointIncrease": 540,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "upgradeCostStarryOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 13,
+   "highestExtraDamageBelow180HousingSpacePercent": 11.5,
+   "extraDamage181250HousingSpacePercent": 9,
+   "extraDamage251HousingSpacePercent": 4.4,
+   "incomingDamageReductionPercent": 5,
+   "hitpointIncrease": 580,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 14,
+   "highestExtraDamageBelow180HousingSpacePercent": 11.5,
+   "extraDamage181250HousingSpacePercent": 9,
+   "extraDamage251HousingSpacePercent": 4.4,
+   "incomingDamageReductionPercent": 5,
+   "hitpointIncrease": 620,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 15,
+   "highestExtraDamageBelow180HousingSpacePercent": 12,
+   "extraDamage181250HousingSpacePercent": 9.2,
+   "extraDamage251HousingSpacePercent": 4.5,
+   "incomingDamageReductionPercent": 6,
+   "hitpointIncrease": 680,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 30,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 16,
+   "highestExtraDamageBelow180HousingSpacePercent": 12,
+   "extraDamage181250HousingSpacePercent": 9.2,
+   "extraDamage251HousingSpacePercent": 4.5,
+   "incomingDamageReductionPercent": 6,
+   "hitpointIncrease": 700,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 17,
+   "highestExtraDamageBelow180HousingSpacePercent": 12,
+   "extraDamage181250HousingSpacePercent": 9.2,
+   "extraDamage251HousingSpacePercent": 4.5,
+   "incomingDamageReductionPercent": 6,
+   "hitpointIncrease": 740,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 18,
+   "highestExtraDamageBelow180HousingSpacePercent": 12.5,
+   "extraDamage181250HousingSpacePercent": 9.4,
+   "extraDamage251HousingSpacePercent": 4.6,
+   "incomingDamageReductionPercent": 7,
+   "hitpointIncrease": 780,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 50,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 19,
+   "highestExtraDamageBelow180HousingSpacePercent": 12.5,
+   "extraDamage181250HousingSpacePercent": 9.4,
+   "extraDamage251HousingSpacePercent": 4.6,
+   "incomingDamageReductionPercent": 7,
+   "hitpointIncrease": 820,
+   "upgradeCostShinyOre": 2800,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 20,
+   "highestExtraDamageBelow180HousingSpacePercent": 12.5,
+   "extraDamage181250HousingSpacePercent": 9.4,
+   "extraDamage251HousingSpacePercent": 4.6,
+   "incomingDamageReductionPercent": 7,
+   "hitpointIncrease": 860,
+   "upgradeCostShinyOre": 2900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 21,
+   "highestExtraDamageBelow180HousingSpacePercent": 13,
+   "extraDamage181250HousingSpacePercent": 9.6,
+   "extraDamage251HousingSpacePercent": 4.7,
+   "incomingDamageReductionPercent": 8,
+   "hitpointIncrease": 900,
+   "upgradeCostShinyOre": 3000,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 100,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 22,
+   "highestExtraDamageBelow180HousingSpacePercent": 13,
+   "extraDamage181250HousingSpacePercent": 9.6,
+   "extraDamage251HousingSpacePercent": 4.7,
+   "incomingDamageReductionPercent": 8,
+   "hitpointIncrease": 940,
+   "upgradeCostShinyOre": 3100,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 23,
+   "highestExtraDamageBelow180HousingSpacePercent": 13,
+   "extraDamage181250HousingSpacePercent": 9.6,
+   "extraDamage251HousingSpacePercent": 4.7,
+   "incomingDamageReductionPercent": 8,
+   "hitpointIncrease": 980,
+   "upgradeCostShinyOre": 3200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 24,
+   "highestExtraDamageBelow180HousingSpacePercent": 13.5,
+   "extraDamage181250HousingSpacePercent": 9.8,
+   "extraDamage251HousingSpacePercent": 4.8,
+   "incomingDamageReductionPercent": 9,
+   "hitpointIncrease": 1020,
+   "upgradeCostShinyOre": 3300,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 120,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 25,
+   "highestExtraDamageBelow180HousingSpacePercent": 13.5,
+   "extraDamage181250HousingSpacePercent": 9.8,
+   "extraDamage251HousingSpacePercent": 4.8,
+   "incomingDamageReductionPercent": 9,
+   "hitpointIncrease": 1080,
+   "upgradeCostShinyOre": 3400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 26,
+   "highestExtraDamageBelow180HousingSpacePercent": 13.5,
+   "extraDamage181250HousingSpacePercent": 9.8,
+   "extraDamage251HousingSpacePercent": 4.8,
+   "incomingDamageReductionPercent": 9,
+   "hitpointIncrease": 1120,
+   "upgradeCostShinyOre": 3500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 27,
+   "highestExtraDamageBelow180HousingSpacePercent": 14,
+   "extraDamage181250HousingSpacePercent": 10,
+   "extraDamage251HousingSpacePercent": 5,
+   "incomingDamageReductionPercent": 10,
+   "hitpointIncrease": 1160,
+   "upgradeCostShinyOre": 3600,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 150,
+   "blacksmithLevelRequired": 9
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "damageReductionStacking",
+   "level": null,
+   "wiki": "one 3–10% reduction",
+   "client": "ShieldProtectionPercent on all three simultaneously active stage abilities",
+   "note": "verify that shields from concurrent abilities do not add"
+  },
+  {
+   "field": "stageSelection",
+   "level": null,
+   "wiki": "only one stage applies (9.5% at ≤180 housing)",
+   "client": "Main+Mid+Min abilities are all active below 181 housing (only Main/Mid carry DeactivateAfterHousingSpaceDeployed)",
+   "note": "engine must pick the highest active stage rather than summing DamagePermilHp"
+  }
+ ],
+ "clientColumns": [
+  "ExtraAbilities:special_abilities[ArcherQueenMonolithArrowMid].DamagePermilHp",
+  "ExtraAbilities:special_abilities[ArcherQueenMonolithArrowMin].DamagePermilHp",
+  "MainAbilities:special_abilities[ArcherQueenMonolithArrow].DamagePermilHp",
+  "MainAbilities:special_abilities[ArcherQueenMonolithArrow].ShieldProtectionPercent",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

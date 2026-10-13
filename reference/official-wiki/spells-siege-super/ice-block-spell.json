@@ -1,0 +1,93 @@
+{
+  "title": "Ice Block Spell",
+  "url": "https://clashofclans.fandom.com/wiki/Ice_Block_Spell",
+  "revid": 623794,
+  "clientName": "Ice Block",
+  "category": "dark-spell",
+  "retrieved": "2026-09-15",
+  "contentPage": "Ice Block Spell",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "spells",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "radiusTiles": 5,
+    "effectType": "Area Splash",
+    "targets": "Ground & Air",
+    "housingSpace": 1,
+    "darkSpellFactoryLevel": 7
+  },
+  "levels": [
+    {
+      "level": 1,
+      "damageReductionPercent": 86,
+      "durationSeconds": 7,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "damageReductionPercent": 88,
+      "durationSeconds": 7,
+      "researchCost": 140000,
+      "researchTimeHours": 240,
+      "laboratoryLevel": 12
+    },
+    {
+      "level": 3,
+      "damageReductionPercent": 90,
+      "durationSeconds": 7,
+      "researchCost": 200000,
+      "researchTimeHours": 264,
+      "laboratoryLevel": 13
+    },
+    {
+      "level": 4,
+      "damageReductionPercent": 92,
+      "durationSeconds": 7,
+      "researchCost": 280000,
+      "researchTimeHours": 288,
+      "laboratoryLevel": 14
+    },
+    {
+      "level": 5,
+      "damageReductionPercent": 94,
+      "durationSeconds": 7,
+      "researchCost": 320000,
+      "researchTimeHours": 336,
+      "laboratoryLevel": 15
+    },
+    {
+      "level": 6,
+      "damageReductionPercent": 96,
+      "durationSeconds": 7,
+      "researchCost": 380000,
+      "researchTimeHours": 384,
+      "laboratoryLevel": 16
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "duration",
+      "client": "`FreezeTimeMS` = `FreezeOuterTimeMS` = 7000; ability `DeactivateAfterTime` 7000"
+    },
+    {
+      "mechanic": "damage reduction",
+      "client": "`GiveSpecialAbility` 'IceBlockSpell' at `GivenSpecialAbilityLevel` 1..6 -> special_abilities `IceBlockSpell`.`ShieldProtectionPercent` 86..96"
+    },
+    {
+      "mechanic": "flags",
+      "client": "`BoostDefenders` = TRUE, `ImmunitySiegeMachines`, `ImmunityTotems`"
+    },
+    {
+      "mechanic": "radius",
+      "client": "`Radius` 500"
+    },
+    {
+      "mechanic": "recall",
+      "client": "ability `NotPausedWhileRecalled` TRUE"
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+{
+ "title": "Stun Blaster",
+ "url": "https://clashofclans.fandom.com/wiki/Stun_Blaster",
+ "revid": 624501,
+ "retrieved": "2026-09-15",
+ "clientName": "Stun Blaster",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Dragon Duke",
+ "summary": "Duke Common active item (Blacksmith 9): an 8-tile shockwave that damages (150 → 400) and stuns defenses and defending troops for 4.5 → 7.5 s; passive DPS, HP and recovery.",
+ "constants": {
+  "wiki": {
+   "User": "Dragon Duke",
+   "Ability Type": "Active",
+   "Rarity": "Common",
+   "Unlock Requirement": "Blacksmith level 9",
+   "Damage Radius": "8 tiles"
+  },
+  "client": {
+   "Rarity": "COMMON",
+   "AllowedCharacters": "Dragon Duke;",
+   "MainAbilities": "DDBlastAbility",
+   "levelRows": 18,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "abilityTotalDamage": {
+   "wikiHeader": "Ability Total Damage",
+   "unit": "damage points"
+  },
+  "stunDurationSeconds": {
+   "wikiHeader": "Stun Duration",
+   "unit": "seconds"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boosts / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "healthRecovery": {
+   "wikiHeader": "Hero Boosts / Health Recovery",
+   "unit": "hitpoints"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "abilityTotalDamage": 150,
+   "stunDurationSeconds": 4.5,
+   "damagePerSecondIncrease": 40,
+   "healthRecovery": 150,
+   "hitpointIncrease": 450,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": null
+  },
+  {
+   "level": 2,
+   "abilityTotalDamage": 150,
+   "stunDurationSeconds": 4.5,
+   "damagePerSecondIncrease": 43,
+   "healthRecovery": 250,
+   "hitpointIncrease": 650,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 3,
+   "abilityTotalDamage": 200,
+   "stunDurationSeconds": 5,
+   "damagePerSecondIncrease": 46,
+   "healthRecovery": 350,
+   "hitpointIncrease": 850,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 4,
+   "abilityTotalDamage": 200,
+   "stunDurationSeconds": 5,
+   "damagePerSecondIncrease": 49,
+   "healthRecovery": 450,
+   "hitpointIncrease": 1000,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 5,
+   "abilityTotalDamage": 200,
+   "stunDurationSeconds": 5,
+   "damagePerSecondIncrease": 52,
+   "healthRecovery": 550,
+   "hitpointIncrease": 1150,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 6,
+   "abilityTotalDamage": 250,
+   "stunDurationSeconds": 5.5,
+   "damagePerSecondIncrease": 55,
+   "healthRecovery": 650,
+   "hitpointIncrease": 1300,
+   "upgradeCostShinyOre": 940,
+   "upgradeCostGlowyOre": 100,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 7,
+   "abilityTotalDamage": 250,
+   "stunDurationSeconds": 5.5,
+   "damagePerSecondIncrease": 58,
+   "healthRecovery": 750,
+   "hitpointIncrease": 1450,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 8,
+   "abilityTotalDamage": 250,
+   "stunDurationSeconds": 5.5,
+   "damagePerSecondIncrease": 61,
+   "healthRecovery": 850,
+   "hitpointIncrease": 1600,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 9,
+   "abilityTotalDamage": 300,
+   "stunDurationSeconds": 6,
+   "damagePerSecondIncrease": 64,
+   "healthRecovery": 950,
+   "hitpointIncrease": 1750,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 10,
+   "abilityTotalDamage": 300,
+   "stunDurationSeconds": 6,
+   "damagePerSecondIncrease": 67,
+   "healthRecovery": 1050,
+   "hitpointIncrease": 1900,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 11,
+   "abilityTotalDamage": 300,
+   "stunDurationSeconds": 6,
+   "damagePerSecondIncrease": 70,
+   "healthRecovery": 1100,
+   "hitpointIncrease": 2000,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 12,
+   "abilityTotalDamage": 350,
+   "stunDurationSeconds": 6.5,
+   "damagePerSecondIncrease": 73,
+   "healthRecovery": 1150,
+   "hitpointIncrease": 2100,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 13,
+   "abilityTotalDamage": 350,
+   "stunDurationSeconds": 6.5,
+   "damagePerSecondIncrease": 76,
+   "healthRecovery": 1180,
+   "hitpointIncrease": 2200,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 14,
+   "abilityTotalDamage": 350,
+   "stunDurationSeconds": 6.5,
+   "damagePerSecondIncrease": 79,
+   "healthRecovery": 1210,
+   "hitpointIncrease": 2275,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 15,
+   "abilityTotalDamage": 375,
+   "stunDurationSeconds": 7,
+   "damagePerSecondIncrease": 82,
+   "healthRecovery": 1240,
+   "hitpointIncrease": 2325,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 16,
+   "abilityTotalDamage": 375,
+   "stunDurationSeconds": 7,
+   "damagePerSecondIncrease": 85,
+   "healthRecovery": 1270,
+   "hitpointIncrease": 2375,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 17,
+   "abilityTotalDamage": 375,
+   "stunDurationSeconds": 7,
+   "damagePerSecondIncrease": 88,
+   "healthRecovery": 1290,
+   "hitpointIncrease": 2400,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 18,
+   "abilityTotalDamage": 400,
+   "stunDurationSeconds": 7.5,
+   "damagePerSecondIncrease": 90,
+   "healthRecovery": 1300,
+   "hitpointIncrease": 2400,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 9
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "upgradeCostShinyOre",
+   "level": 6,
+   "wiki": 940,
+   "client": 840,
+   "note": "client stores this on row L−1 (`UpgradeCosts`)"
+  },
+  {
+   "field": "hitCount",
+   "level": null,
+   "wiki": "'deals damage multiple times in a short period' (total damage column)",
+   "client": "NumberOfHits 1",
+   "note": "single hit in client data"
+  },
+  {
+   "field": "immunity",
+   "level": null,
+   "wiki": "resource buildings immune",
+   "client": "ImmunityStorages TRUE only",
+   "note": "whether collectors/drills are hit is unclear"
+  }
+ ],
+ "clientColumns": [
+  "MainAbilities:special_abilities[DDBlastAbility] → SelfSpell:spells[DDBlastSpell].Damage",
+  "MainAbilities:special_abilities[DDBlastAbility] → SelfSpell:spells[DDBlastSpell].StunTimeMS",
+  "character_items.DPS",
+  "character_items.HealOnActivation",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

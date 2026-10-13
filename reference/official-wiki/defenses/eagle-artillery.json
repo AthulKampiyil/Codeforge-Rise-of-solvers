@@ -1,0 +1,243 @@
+{
+ "title": "Eagle Artillery",
+ "url": "https://clashofclans.fandom.com/wiki/Eagle_Artillery",
+ "revid": 625122,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Eagle Artillery",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "damagePerHit": 225,
+   "dps": 67.5,
+   "shockwaveDamage": 20,
+   "hitpoints": 4000,
+   "cost": 5000000,
+   "buildSeconds": 345600,
+   "xp": 587,
+   "townHall": 11
+  },
+  {
+   "level": 2,
+   "damagePerHit": 250,
+   "dps": 75,
+   "shockwaveDamage": 25,
+   "hitpoints": 4400,
+   "cost": 6000000,
+   "buildSeconds": 432000,
+   "xp": 657,
+   "townHall": 11
+  },
+  {
+   "level": 3,
+   "damagePerHit": 275,
+   "dps": 82.5,
+   "shockwaveDamage": 30,
+   "hitpoints": 4800,
+   "cost": 9000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 12
+  },
+  {
+   "level": 4,
+   "damagePerHit": 350,
+   "dps": 105,
+   "shockwaveDamage": 35,
+   "hitpoints": 5200,
+   "cost": 10000000,
+   "buildSeconds": 648000,
+   "xp": 804,
+   "townHall": 13
+  },
+  {
+   "level": 5,
+   "damagePerHit": 425,
+   "dps": 127.5,
+   "shockwaveDamage": 40,
+   "hitpoints": 5600,
+   "cost": 12000000,
+   "buildSeconds": 691200,
+   "xp": 831,
+   "townHall": 14
+  },
+  {
+   "level": 6,
+   "damagePerHit": 475,
+   "dps": 142.5,
+   "shockwaveDamage": 45,
+   "hitpoints": 5900,
+   "cost": 13000000,
+   "buildSeconds": 777600,
+   "xp": 881,
+   "townHall": 15
+  },
+  {
+   "level": 7,
+   "damagePerHit": 525,
+   "dps": 157.5,
+   "shockwaveDamage": 50,
+   "hitpoints": 6200,
+   "cost": 14000000,
+   "buildSeconds": 820800,
+   "xp": 905,
+   "townHall": 16
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 11,
+  "size": "4x4",
+  "range": 50,
+  "minRange": 7,
+  "targets": "ground & air",
+  "favoriteTarget": "any (densest hitpoints)",
+  "activationHousingSpace": 200,
+  "activationWarningEvery": 50,
+  "heroHousingEquivalent": 25,
+  "spellHousingMultiplier": 5,
+  "siegeMachineHousingEquivalent": 1,
+  "shotsPerBurst": 3,
+  "shotIntervalSeconds": 0.75,
+  "burstIntervalSeconds": 10,
+  "volleyCycleSeconds": 11.5,
+  "mainSplashTiles": 0.75,
+  "shockwaveRadiusTiles": 3.0,
+  "shockwaveKnockback": true,
+  "ammoShells": 90,
+  "attackSeconds": 10,
+  "splashTiles": 0.75
+ },
+ "mismatches": [
+  {
+   "field": "countPerTownHall",
+   "level": "TH17",
+   "wiki": "0",
+   "client": 1,
+   "note": "the Eagle Artillery disappears when merged into the TH17 Town Hall; client townhall_levels still carries the TH11 count of 1 forward",
+   "table": "NumberAvailable"
+  },
+  {
+   "field": "countPerTownHall",
+   "level": "TH18",
+   "wiki": "0",
+   "client": 1,
+   "note": "the Eagle Artillery disappears when merged into the TH17 Town Hall; client townhall_levels still carries the TH11 count of 1 forward",
+   "table": "NumberAvailable"
+  }
+ ],
+ "progressionMismatches": [
+  {
+   "field": "dps",
+   "level": 1,
+   "wiki": 67.5,
+   "progression": 2.0,
+   "note": "progression.json dps = shockwave/10 s; wiki DPS = 3 x main shell / 10 s"
+  },
+  {
+   "field": "dps",
+   "level": 2,
+   "wiki": 75,
+   "progression": 2.5,
+   "note": "progression.json dps = shockwave/10 s; wiki DPS = 3 x main shell / 10 s"
+  },
+  {
+   "field": "dps",
+   "level": 3,
+   "wiki": 82.5,
+   "progression": 3.0,
+   "note": "progression.json dps = shockwave/10 s; wiki DPS = 3 x main shell / 10 s"
+  },
+  {
+   "field": "dps",
+   "level": 4,
+   "wiki": 105,
+   "progression": 3.5,
+   "note": "progression.json dps = shockwave/10 s; wiki DPS = 3 x main shell / 10 s"
+  },
+  {
+   "field": "dps",
+   "level": 5,
+   "wiki": 127.5,
+   "progression": 4.0,
+   "note": "progression.json dps = shockwave/10 s; wiki DPS = 3 x main shell / 10 s"
+  },
+  {
+   "field": "dps",
+   "level": 6,
+   "wiki": 142.5,
+   "progression": 4.5,
+   "note": "progression.json dps = shockwave/10 s; wiki DPS = 3 x main shell / 10 s"
+  },
+  {
+   "field": "dps",
+   "level": 7,
+   "wiki": 157.5,
+   "progression": 5.0,
+   "note": "progression.json dps = shockwave/10 s; wiki DPS = 3 x main shell / 10 s"
+  },
+  {
+   "field": "damage",
+   "level": 1,
+   "wiki": 225,
+   "progression": 20.0,
+   "note": "progression.json uses buildings.csv Damage (the shockwave, 20-50) as damage per hit; the main shell damage is in spells.csv 'Eagle Artillery Hit Spell' (225-525)"
+  },
+  {
+   "field": "damage",
+   "level": 2,
+   "wiki": 250,
+   "progression": 25.0,
+   "note": "progression.json uses buildings.csv Damage (the shockwave, 20-50) as damage per hit; the main shell damage is in spells.csv 'Eagle Artillery Hit Spell' (225-525)"
+  },
+  {
+   "field": "damage",
+   "level": 3,
+   "wiki": 275,
+   "progression": 30.0,
+   "note": "progression.json uses buildings.csv Damage (the shockwave, 20-50) as damage per hit; the main shell damage is in spells.csv 'Eagle Artillery Hit Spell' (225-525)"
+  },
+  {
+   "field": "damage",
+   "level": 4,
+   "wiki": 350,
+   "progression": 35.0,
+   "note": "progression.json uses buildings.csv Damage (the shockwave, 20-50) as damage per hit; the main shell damage is in spells.csv 'Eagle Artillery Hit Spell' (225-525)"
+  },
+  {
+   "field": "damage",
+   "level": 5,
+   "wiki": 425,
+   "progression": 40.0,
+   "note": "progression.json uses buildings.csv Damage (the shockwave, 20-50) as damage per hit; the main shell damage is in spells.csv 'Eagle Artillery Hit Spell' (225-525)"
+  },
+  {
+   "field": "damage",
+   "level": 6,
+   "wiki": 475,
+   "progression": 45.0,
+   "note": "progression.json uses buildings.csv Damage (the shockwave, 20-50) as damage per hit; the main shell damage is in spells.csv 'Eagle Artillery Hit Spell' (225-525)"
+  },
+  {
+   "field": "damage",
+   "level": 7,
+   "wiki": 525,
+   "progression": 50.0,
+   "note": "progression.json uses buildings.csv Damage (the shockwave, 20-50) as damage per hit; the main shell damage is in spells.csv 'Eagle Artillery Hit Spell' (225-525)"
+  },
+  {
+   "field": "splash",
+   "level": "all",
+   "wiki": "0.75 main / 3.0 shockwave",
+   "progression": 3.0,
+   "note": "progression.json splash 3 = shockwave radius only; main shell radius is 0.75 tiles (Hit Spell Radius 75)"
+  },
+  {
+   "field": "rate",
+   "level": "all",
+   "wiki": "3 shells, 0.75 s apart, every 10 s (11.5 s cycle)",
+   "progression": 10.0,
+   "note": "burst of 3 not represented"
+  }
+ ]
+}

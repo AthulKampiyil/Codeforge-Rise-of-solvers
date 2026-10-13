@@ -1,0 +1,373 @@
+{
+ "title": "Pet House",
+ "url": "https://clashofclans.fandom.com/wiki/Pet_House",
+ "revid": 625146,
+ "retrieved": "2026-09-15",
+ "clientName": "Pet House",
+ "clientTable": "buildings",
+ "category": "building",
+ "summary": "3x3 army building (TH14+) that unlocks one new pet per level (12 levels) and researches pet upgrades with Dark Elixir, one at a time.",
+ "constants": {
+  "wiki": {},
+  "client": {
+   "buildingSize": "3x3",
+   "BOOSTER_PET_SHOP_SPEEDUP": "24",
+   "PET_HOUSING_COST_MULTIPLIER": "0"
+  },
+  "notes": {
+   "numberAvailable": "1 from TH14",
+   "size": "3x3"
+  },
+  "wikiTables": [
+   {
+    "section": "Max Level Chart",
+    "headers": [
+     "Pet House Level",
+     "Max level / L.A.S.S.I",
+     "Max level / Electro Owl",
+     "Max level / Mighty Yak",
+     "Max level / Unicorn",
+     "Max level / Frosty",
+     "Max level / Diggy",
+     "Max level / Poison Lizard",
+     "Max level / Phoenix",
+     "Max level / Spirit Fox",
+     "Max level / Angry Jelly",
+     "Max level / Sneezy",
+     "Max level / Greedy Raven"
+    ],
+    "rows": [
+     {
+      "petHouseLevel": 1,
+      "maxLevelLASSI": 10,
+      "maxLevelElectroOwl": null,
+      "maxLevelMightyYak": null,
+      "maxLevelUnicorn": null,
+      "maxLevelFrosty": null,
+      "maxLevelDiggy": null,
+      "maxLevelPoisonLizard": null,
+      "maxLevelPhoenix": null,
+      "maxLevelSpiritFox": null,
+      "maxLevelAngryJelly": null,
+      "maxLevelSneezy": null,
+      "maxLevelGreedyRaven": null
+     },
+     {
+      "petHouseLevel": 2,
+      "maxLevelLASSI": 10,
+      "maxLevelElectroOwl": 10,
+      "maxLevelMightyYak": null,
+      "maxLevelUnicorn": null,
+      "maxLevelFrosty": null,
+      "maxLevelDiggy": null,
+      "maxLevelPoisonLizard": null,
+      "maxLevelPhoenix": null,
+      "maxLevelSpiritFox": null,
+      "maxLevelAngryJelly": null,
+      "maxLevelSneezy": null,
+      "maxLevelGreedyRaven": null
+     },
+     {
+      "petHouseLevel": 3,
+      "maxLevelLASSI": 10,
+      "maxLevelElectroOwl": 10,
+      "maxLevelMightyYak": 10,
+      "maxLevelUnicorn": null,
+      "maxLevelFrosty": null,
+      "maxLevelDiggy": null,
+      "maxLevelPoisonLizard": null,
+      "maxLevelPhoenix": null,
+      "maxLevelSpiritFox": null,
+      "maxLevelAngryJelly": null,
+      "maxLevelSneezy": null,
+      "maxLevelGreedyRaven": null
+     },
+     {
+      "petHouseLevel": 4,
+      "maxLevelLASSI": 10,
+      "maxLevelElectroOwl": 10,
+      "maxLevelMightyYak": 10,
+      "maxLevelUnicorn": 10,
+      "maxLevelFrosty": null,
+      "maxLevelDiggy": null,
+      "maxLevelPoisonLizard": null,
+      "maxLevelPhoenix": null,
+      "maxLevelSpiritFox": null,
+      "maxLevelAngryJelly": null,
+      "maxLevelSneezy": null,
+      "maxLevelGreedyRaven": null
+     },
+     {
+      "petHouseLevel": 5,
+      "maxLevelLASSI": 15,
+      "maxLevelElectroOwl": 10,
+      "maxLevelMightyYak": 10,
+      "maxLevelUnicorn": 10,
+      "maxLevelFrosty": 10,
+      "maxLevelDiggy": null,
+      "maxLevelPoisonLizard": null,
+      "maxLevelPhoenix": null,
+      "maxLevelSpiritFox": null,
+      "maxLevelAngryJelly": null,
+      "maxLevelSneezy": null,
+      "maxLevelGreedyRaven": null
+     },
+     {
+      "petHouseLevel": 6,
+      "maxLevelLASSI": 15,
+      "maxLevelElectroOwl": 10,
+      "maxLevelMightyYak": 10,
+      "maxLevelUnicorn": 10,
+      "maxLevelFrosty": 10,
+      "maxLevelDiggy": 10,
+      "maxLevelPoisonLizard": null,
+      "maxLevelPhoenix": null,
+      "maxLevelSpiritFox": null,
+      "maxLevelAngryJelly": null,
+      "maxLevelSneezy": null,
+      "maxLevelGreedyRaven": null
+     },
+     {
+      "petHouseLevel": 7,
+      "maxLevelLASSI": 15,
+      "maxLevelElectroOwl": 10,
+      "maxLevelMightyYak": 15,
+      "maxLevelUnicorn": 10,
+      "maxLevelFrosty": 10,
+      "maxLevelDiggy": 10,
+      "maxLevelPoisonLizard": 10,
+      "maxLevelPhoenix": null,
+      "maxLevelSpiritFox": null,
+      "maxLevelAngryJelly": null,
+      "maxLevelSneezy": null,
+      "maxLevelGreedyRaven": null
+     },
+     {
+      "petHouseLevel": 8,
+      "maxLevelLASSI": 15,
+      "maxLevelElectroOwl": 10,
+      "maxLevelMightyYak": 15,
+      "maxLevelUnicorn": 10,
+      "maxLevelFrosty": 10,
+      "maxLevelDiggy": 10,
+      "maxLevelPoisonLizard": 10,
+      "maxLevelPhoenix": 10,
+      "maxLevelSpiritFox": null,
+      "maxLevelAngryJelly": null,
+      "maxLevelSneezy": null,
+      "maxLevelGreedyRaven": null
+     },
+     {
+      "petHouseLevel": 9,
+      "maxLevelLASSI": 15,
+      "maxLevelElectroOwl": 15,
+      "maxLevelMightyYak": 15,
+      "maxLevelUnicorn": 10,
+      "maxLevelFrosty": 10,
+      "maxLevelDiggy": 10,
+      "maxLevelPoisonLizard": 10,
+      "maxLevelPhoenix": 10,
+      "maxLevelSpiritFox": 10,
+      "maxLevelAngryJelly": null,
+      "maxLevelSneezy": null,
+      "maxLevelGreedyRaven": null
+     },
+     {
+      "petHouseLevel": 10,
+      "maxLevelLASSI": 15,
+      "maxLevelElectroOwl": 15,
+      "maxLevelMightyYak": 15,
+      "maxLevelUnicorn": 10,
+      "maxLevelFrosty": 10,
+      "maxLevelDiggy": 10,
+      "maxLevelPoisonLizard": 10,
+      "maxLevelPhoenix": 10,
+      "maxLevelSpiritFox": 10,
+      "maxLevelAngryJelly": 10,
+      "maxLevelSneezy": null,
+      "maxLevelGreedyRaven": null
+     },
+     {
+      "petHouseLevel": 11,
+      "maxLevelLASSI": 15,
+      "maxLevelElectroOwl": 15,
+      "maxLevelMightyYak": 15,
+      "maxLevelUnicorn": 15,
+      "maxLevelFrosty": 15,
+      "maxLevelDiggy": 10,
+      "maxLevelPoisonLizard": 15,
+      "maxLevelPhoenix": 10,
+      "maxLevelSpiritFox": 10,
+      "maxLevelAngryJelly": 10,
+      "maxLevelSneezy": 10,
+      "maxLevelGreedyRaven": null
+     },
+     {
+      "petHouseLevel": 12,
+      "maxLevelLASSI": 15,
+      "maxLevelElectroOwl": 15,
+      "maxLevelMightyYak": 15,
+      "maxLevelUnicorn": 15,
+      "maxLevelFrosty": 15,
+      "maxLevelDiggy": 15,
+      "maxLevelPoisonLizard": 15,
+      "maxLevelPhoenix": 10,
+      "maxLevelSpiritFox": 10,
+      "maxLevelAngryJelly": 10,
+      "maxLevelSneezy": 10,
+      "maxLevelGreedyRaven": 10
+     }
+    ]
+   }
+  ]
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "unlockedPet": {
+   "wikiHeader": "Unlocked Pet",
+   "unit": "count/points"
+  },
+  "hitpoints": {
+   "wikiHeader": "Hitpoints",
+   "unit": "hitpoints"
+  },
+  "buildCost": {
+   "wikiHeader": "Build Cost",
+   "unit": "resource amount"
+  },
+  "buildTimeSeconds": {
+   "wikiHeader": "Build Time",
+   "unit": "seconds"
+  },
+  "experienceGained": {
+   "wikiHeader": "Experience Gained",
+   "unit": "count/points"
+  },
+  "townHallLevelRequired": {
+   "wikiHeader": "Town Hall Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "unlockedPet": "L.A.S.S.I",
+   "hitpoints": 700,
+   "buildCost": 3000000,
+   "buildTimeSeconds": 86400,
+   "experienceGained": 293,
+   "townHallLevelRequired": 14
+  },
+  {
+   "level": 2,
+   "unlockedPet": "Electro Owl",
+   "hitpoints": 800,
+   "buildCost": 4000000,
+   "buildTimeSeconds": 172800,
+   "experienceGained": 415,
+   "townHallLevelRequired": 14
+  },
+  {
+   "level": 3,
+   "unlockedPet": "Mighty Yak",
+   "hitpoints": 900,
+   "buildCost": 5000000,
+   "buildTimeSeconds": 259200,
+   "experienceGained": 509,
+   "townHallLevelRequired": 14
+  },
+  {
+   "level": 4,
+   "unlockedPet": "Unicorn",
+   "hitpoints": 1000,
+   "buildCost": 6000000,
+   "buildTimeSeconds": 302400,
+   "experienceGained": 549,
+   "townHallLevelRequired": 14
+  },
+  {
+   "level": 5,
+   "unlockedPet": "Frosty",
+   "hitpoints": 1050,
+   "buildCost": 7000000,
+   "buildTimeSeconds": 345600,
+   "experienceGained": 587,
+   "townHallLevelRequired": 15
+  },
+  {
+   "level": 6,
+   "unlockedPet": "Diggy",
+   "hitpoints": 1100,
+   "buildCost": 8000000,
+   "buildTimeSeconds": 388800,
+   "experienceGained": 623,
+   "townHallLevelRequired": 15
+  },
+  {
+   "level": 7,
+   "unlockedPet": "Poison Lizard",
+   "hitpoints": 1150,
+   "buildCost": 9000000,
+   "buildTimeSeconds": 432000,
+   "experienceGained": 657,
+   "townHallLevelRequired": 15
+  },
+  {
+   "level": 8,
+   "unlockedPet": "Phoenix",
+   "hitpoints": 1200,
+   "buildCost": 10000000,
+   "buildTimeSeconds": 475200,
+   "experienceGained": 689,
+   "townHallLevelRequired": 15
+  },
+  {
+   "level": 9,
+   "unlockedPet": "Spirit Fox",
+   "hitpoints": 1250,
+   "buildCost": 11000000,
+   "buildTimeSeconds": 518400,
+   "experienceGained": 720,
+   "townHallLevelRequired": 16
+  },
+  {
+   "level": 10,
+   "unlockedPet": "Angry Jelly",
+   "hitpoints": 1300,
+   "buildCost": 12000000,
+   "buildTimeSeconds": 604800,
+   "experienceGained": 777,
+   "townHallLevelRequired": 16
+  },
+  {
+   "level": 11,
+   "unlockedPet": "Sneezy",
+   "hitpoints": 1350,
+   "buildCost": 16500000,
+   "buildTimeSeconds": 691200,
+   "experienceGained": 831,
+   "townHallLevelRequired": 17
+  },
+  {
+   "level": 12,
+   "unlockedPet": "Greedy Raven",
+   "hitpoints": 1400,
+   "buildCost": 25500000,
+   "buildTimeSeconds": 1166400,
+   "experienceGained": 1080,
+   "townHallLevelRequired": 18
+  }
+ ],
+ "mismatches": [
+  {
+   "field": "maxLevel.Diggy",
+   "level": 12,
+   "wiki": 15,
+   "client": 10,
+   "note": "max pet level with LaboratoryLevel ≤ Pet House level; client has only 10 Diggy rows"
+  }
+ ]
+}

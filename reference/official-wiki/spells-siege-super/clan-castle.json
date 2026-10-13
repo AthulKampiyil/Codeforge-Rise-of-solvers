@@ -1,0 +1,348 @@
+{
+  "title": "Clan Castle",
+  "url": "https://clashofclans.fandom.com/wiki/Clan_Castle",
+  "revid": 623293,
+  "clientName": "Clan Castle",
+  "category": "building",
+  "retrieved": "2026-09-15",
+  "contentPage": "Clan Castle",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "buildings",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "triggerRadiusTiles": 13,
+    "footprint": "3x3"
+  },
+  "levels": [
+    {
+      "level": 1,
+      "hitpoints": 600,
+      "troopCapacity": 10,
+      "spellCapacity": null,
+      "siegeCapacity": null,
+      "laboratoryLevelCap": 5,
+      "buildCost": 10000,
+      "buildTimeHours": null,
+      "experience": null,
+      "townHallLevel": 2
+    },
+    {
+      "level": 2,
+      "hitpoints": 1200,
+      "troopCapacity": 15,
+      "spellCapacity": null,
+      "siegeCapacity": null,
+      "laboratoryLevelCap": 6,
+      "buildCost": 50000,
+      "buildTimeHours": 2,
+      "experience": 84,
+      "townHallLevel": 4
+    },
+    {
+      "level": 3,
+      "hitpoints": 1800,
+      "troopCapacity": 20,
+      "spellCapacity": null,
+      "siegeCapacity": null,
+      "laboratoryLevelCap": 7,
+      "buildCost": 600000,
+      "buildTimeHours": 12,
+      "experience": 207,
+      "townHallLevel": 6
+    },
+    {
+      "level": 4,
+      "hitpoints": 2600,
+      "troopCapacity": 25,
+      "spellCapacity": 1,
+      "siegeCapacity": null,
+      "laboratoryLevelCap": 8,
+      "buildCost": 1200000,
+      "buildTimeHours": 24,
+      "experience": 293,
+      "townHallLevel": 8
+    },
+    {
+      "level": 5,
+      "hitpoints": 3000,
+      "troopCapacity": 30,
+      "spellCapacity": 1,
+      "siegeCapacity": null,
+      "laboratoryLevelCap": 9,
+      "buildCost": 2000000,
+      "buildTimeHours": 36,
+      "experience": 360,
+      "townHallLevel": 9
+    },
+    {
+      "level": 6,
+      "hitpoints": 3400,
+      "troopCapacity": 35,
+      "spellCapacity": 1,
+      "siegeCapacity": 1,
+      "laboratoryLevelCap": 10,
+      "buildCost": 3000000,
+      "buildTimeHours": 48,
+      "experience": 415,
+      "townHallLevel": 10
+    },
+    {
+      "level": 7,
+      "hitpoints": 4000,
+      "troopCapacity": 35,
+      "spellCapacity": 2,
+      "siegeCapacity": 1,
+      "laboratoryLevelCap": 11,
+      "buildCost": 5000000,
+      "buildTimeHours": 72,
+      "experience": 509,
+      "townHallLevel": 11
+    },
+    {
+      "level": 8,
+      "hitpoints": 4400,
+      "troopCapacity": 40,
+      "spellCapacity": 2,
+      "siegeCapacity": 1,
+      "laboratoryLevelCap": 12,
+      "buildCost": 5000000,
+      "buildTimeHours": 96,
+      "experience": 587,
+      "townHallLevel": 12
+    },
+    {
+      "level": 9,
+      "hitpoints": 4800,
+      "troopCapacity": 45,
+      "spellCapacity": 2,
+      "siegeCapacity": 1,
+      "laboratoryLevelCap": 13,
+      "buildCost": 8000000,
+      "buildTimeHours": 144,
+      "experience": 720,
+      "townHallLevel": 13
+    },
+    {
+      "level": 10,
+      "hitpoints": 5200,
+      "troopCapacity": 45,
+      "spellCapacity": 3,
+      "siegeCapacity": 1,
+      "laboratoryLevelCap": 14,
+      "buildCost": 10000000,
+      "buildTimeHours": 168,
+      "experience": 777,
+      "townHallLevel": 14
+    },
+    {
+      "level": 11,
+      "hitpoints": 5400,
+      "troopCapacity": 50,
+      "spellCapacity": 3,
+      "siegeCapacity": 1,
+      "laboratoryLevelCap": 15,
+      "buildCost": 12000000,
+      "buildTimeHours": 192,
+      "experience": 831,
+      "townHallLevel": 15
+    },
+    {
+      "level": 12,
+      "hitpoints": 5600,
+      "troopCapacity": 50,
+      "spellCapacity": 3,
+      "siegeCapacity": 2,
+      "laboratoryLevelCap": 16,
+      "buildCost": 14500000,
+      "buildTimeHours": 216,
+      "experience": 881,
+      "townHallLevel": 16
+    },
+    {
+      "level": 13,
+      "hitpoints": 5800,
+      "troopCapacity": 55,
+      "spellCapacity": 3,
+      "siegeCapacity": 2,
+      "laboratoryLevelCap": 16,
+      "buildCost": 19000000,
+      "buildTimeHours": 240,
+      "experience": 929,
+      "townHallLevel": 17
+    },
+    {
+      "level": 14,
+      "hitpoints": 6000,
+      "troopCapacity": 55,
+      "spellCapacity": 4,
+      "siegeCapacity": 2,
+      "laboratoryLevelCap": 16,
+      "buildCost": 28000000,
+      "buildTimeHours": 336,
+      "experience": 1099,
+      "townHallLevel": 18
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "townHallLevel",
+      "level": 1,
+      "wiki": "2*",
+      "client": 3,
+      "note": "wiki footnote: TH3 through normal play"
+    },
+    {
+      "field": "requestCooldownMinutes",
+      "level": null,
+      "wiki": 10,
+      "client": "1200",
+      "note": "globals ALLIANCE_TROOP_REQUEST_COOLDOWN (unit likely seconds = 20 min); perks may shorten it"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "troop capacity",
+      "client": "`HousingSpace`"
+    },
+    {
+      "mechanic": "spell capacity",
+      "client": "`HousingSpaceAlt`"
+    },
+    {
+      "mechanic": "siege capacity",
+      "client": "`HousingSpaceSiege`"
+    },
+    {
+      "mechanic": "HP / cost / time / TH",
+      "client": "`Hitpoints`, `BuildCost`, `BuildTimeD/H/M/S`, `TownHallLevel`"
+    },
+    {
+      "mechanic": "trigger radius",
+      "client": "globals `CLAN_CASTLE_RADIUS` = 13"
+    },
+    {
+      "mechanic": "donation XP",
+      "client": "globals `SIEGE_DONATE_XP_MULTIPLIER` = 30, `SPELL_DONATE_XP_MULTIPLIER` = 5, `SIEGE_DONATE_COUNT_MULTIPLIER` = 30"
+    },
+    {
+      "mechanic": "Raid Medal reinforcement",
+      "client": "globals `SIEGE_DONATE_COST_MULTIPLIER` = 15, `SPELL_DONATE_COST_MULTIPLIER` = 3"
+    },
+    {
+      "mechanic": "per-request limits",
+      "client": "globals `MAX_SIEGE_DONATION_COUNT` = 1, `MAX_SPELL_DONATION_COUNT` = 1 (base values before clan perks)"
+    },
+    {
+      "mechanic": "siege release",
+      "client": "globals `SIEGE_MACHINE_SELF_DESTRUCT_ON_REACHING_TARGET` = TRUE; every siege row has a `...SelfDestruct` special ability with `ActiveAfterPlayerInput` = TRUE (manual release)"
+    },
+    {
+      "mechanic": "request cooldown",
+      "client": "globals `ALLIANCE_TROOP_REQUEST_COOLDOWN` = 1200"
+    }
+  ],
+  "extraTables": {
+    "siegeLevelCapByClanCastleLevel": [
+      {
+        "siegeMachine": "Wall Wrecker",
+        "cc6": 2,
+        "cc7": 3,
+        "cc8": 4,
+        "cc9": 5,
+        "cc10": 6,
+        "cc11": 6,
+        "cc12": 6,
+        "cc13plus": 6
+      },
+      {
+        "siegeMachine": "Battle Blimp",
+        "cc6": 2,
+        "cc7": 3,
+        "cc8": 4,
+        "cc9": 5,
+        "cc10": 6,
+        "cc11": 6,
+        "cc12": 6,
+        "cc13plus": 6
+      },
+      {
+        "siegeMachine": "Stone Slammer",
+        "cc6": 2,
+        "cc7": 3,
+        "cc8": 4,
+        "cc9": 5,
+        "cc10": 6,
+        "cc11": 6,
+        "cc12": 6,
+        "cc13plus": 6
+      },
+      {
+        "siegeMachine": "Siege Barracks",
+        "cc6": null,
+        "cc7": 2,
+        "cc8": 3,
+        "cc9": 4,
+        "cc10": 5,
+        "cc11": 6,
+        "cc12": 6,
+        "cc13plus": 6
+      },
+      {
+        "siegeMachine": "Log Launcher",
+        "cc6": null,
+        "cc7": 2,
+        "cc8": 3,
+        "cc9": 4,
+        "cc10": 5,
+        "cc11": 6,
+        "cc12": 6,
+        "cc13plus": 6
+      },
+      {
+        "siegeMachine": "Flame Flinger",
+        "cc6": null,
+        "cc7": null,
+        "cc8": 2,
+        "cc9": 3,
+        "cc10": 4,
+        "cc11": 5,
+        "cc12": 5,
+        "cc13plus": 5
+      },
+      {
+        "siegeMachine": "Battle Drill",
+        "cc6": null,
+        "cc7": null,
+        "cc8": null,
+        "cc9": 2,
+        "cc10": 3,
+        "cc11": 4,
+        "cc12": 5,
+        "cc13plus": 6
+      },
+      {
+        "siegeMachine": "Troop Launcher",
+        "cc6": null,
+        "cc7": null,
+        "cc8": null,
+        "cc9": null,
+        "cc10": 2,
+        "cc11": 3,
+        "cc12": 4,
+        "cc13plus": 4
+      },
+      {
+        "siegeMachine": "Sky Wagon",
+        "cc6": null,
+        "cc7": null,
+        "cc8": null,
+        "cc9": null,
+        "cc10": null,
+        "cc11": 2,
+        "cc12": 3,
+        "cc13plus": 4
+      }
+    ]
+  }
+}

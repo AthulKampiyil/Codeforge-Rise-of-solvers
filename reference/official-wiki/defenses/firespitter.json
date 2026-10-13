@@ -1,0 +1,158 @@
+{
+ "title": "Firespitter",
+ "url": "https://clashofclans.fandom.com/wiki/Firespitter",
+ "revid": 624733,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Firespitter",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 410,
+   "damagePerHit": 46.03,
+   "hitpoints": 4500,
+   "cost": 17000000,
+   "buildSeconds": 734400,
+   "xp": 856,
+   "townHall": 17
+  },
+  {
+   "level": 2,
+   "dps": 437,
+   "damagePerHit": 49.05,
+   "hitpoints": 5000,
+   "cost": 18000000,
+   "buildSeconds": 864000,
+   "xp": 929,
+   "townHall": 17
+  },
+  {
+   "level": 3,
+   "dps": 455,
+   "damagePerHit": 51.07,
+   "hitpoints": 5300,
+   "cost": 29000000,
+   "buildSeconds": 1296000,
+   "xp": 1138,
+   "townHall": 18
+  }
+ ],
+ "supercharges": [
+  {
+   "charge": 1,
+   "dps": 473,
+   "damagePerHit": 53.08,
+   "hitpoints": 5300,
+   "cost": 14000000,
+   "buildSeconds": 561600,
+   "xp": 749,
+   "townHall": 18
+  },
+  {
+   "charge": 2,
+   "dps": 473,
+   "damagePerHit": 53.08,
+   "hitpoints": 5550,
+   "cost": 12000000,
+   "buildSeconds": 648000,
+   "xp": 804,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 17,
+  "size": "3x3",
+  "range": 16,
+  "arcDegrees": 150,
+  "rotationStepDegrees": 90,
+  "targets": "ground & air",
+  "favoriteTarget": "any",
+  "damageType": "piercing burst",
+  "shotsPerBurst": 20,
+  "shotIntervalSeconds": 0.064,
+  "burstIntervalSeconds": 1.0167,
+  "cycleSecondsImplied": 2.24,
+  "hitsPerProjectile": 2,
+  "attackSeconds": 1.0
+ },
+ "mismatches": [
+  {
+   "field": "dps",
+   "level": 1,
+   "wiki": 410,
+   "client": 411,
+   "note": "display rounding: client DPS is 1 higher than the wiki's displayed DPS",
+   "table": "Statistics"
+  },
+  {
+   "field": "dps",
+   "level": 2,
+   "wiki": 437,
+   "client": 438,
+   "note": "display rounding: client DPS is 1 higher than the wiki's displayed DPS",
+   "table": "Statistics"
+  },
+  {
+   "field": "dps",
+   "level": 3,
+   "wiki": 455,
+   "client": 456,
+   "note": "display rounding: client DPS is 1 higher than the wiki's displayed DPS",
+   "table": "Statistics"
+  },
+  {
+   "field": "dps",
+   "level": "C1",
+   "wiki": 473,
+   "client": 474,
+   "note": "display rounding: client DPS is 1 higher than the wiki's displayed DPS",
+   "table": "Supercharges"
+  },
+  {
+   "field": "dps",
+   "level": "C2",
+   "wiki": 473,
+   "client": 474,
+   "note": "display rounding: client DPS is 1 higher than the wiki's displayed DPS",
+   "table": "Supercharges"
+  },
+  {
+   "field": "damagePerHit (formula)",
+   "level": "all",
+   "wiki": "DPS x 2.24/20 (46.03 at L1)",
+   "client": "DPS x (1000 + 19 x 64)/20 = 45.54 at L1",
+   "note": "the client's AttackSpeed 1000 + 19 x BurstDelay 64 = 2.216 s cycle is ~1% shorter than the cycle the wiki/in-game numbers imply"
+  }
+ ],
+ "progressionMismatches": [
+  {
+   "field": "dps",
+   "level": 1,
+   "wiki": 410,
+   "progression": 411.0,
+   "note": "display rounding (progression.json uses client DPS)"
+  },
+  {
+   "field": "dps",
+   "level": 2,
+   "wiki": 437,
+   "progression": 438.0,
+   "note": "display rounding (progression.json uses client DPS)"
+  },
+  {
+   "field": "dps",
+   "level": 3,
+   "wiki": 455,
+   "progression": 456.0,
+   "note": "display rounding (progression.json uses client DPS)"
+  },
+  {
+   "field": "rate",
+   "level": "all",
+   "wiki": "20-shot bursts, 0.064 s apart, ~2.24 s cycle",
+   "progression": 1.0,
+   "note": "progression.json rate 1.0 = AttackSpeed only; burst/pierce/arc not represented"
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+  "goblin-townhall": {
+    "globalId": 1000001,
+    "size": 4,
+    "levels": [
+      {
+        "level": 1,
+        "hp": 400,
+        "export": "goblin_townhall_lvl1"
+      },
+      {
+        "level": 2,
+        "hp": 800,
+        "export": "goblin_townhall_lvl1"
+      },
+      {
+        "level": 3,
+        "hp": 1600,
+        "export": "goblin_townhall_lvl1"
+      },
+      {
+        "level": 4,
+        "hp": 2000,
+        "export": "goblin_townhall_lvl1"
+      },
+      {
+        "level": 5,
+        "hp": 2400,
+        "export": "goblin_townhall_lvl1"
+      },
+      {
+        "level": 6,
+        "hp": 2800,
+        "export": "goblin_townhall_lvl1"
+      },
+      {
+        "level": 7,
+        "hp": 3300,
+        "export": "goblin_townhall_lvl1"
+      },
+      {
+        "level": 8,
+        "hp": 3900,
+        "export": "goblin_townhall_lvl1"
+      },
+      {
+        "level": 9,
+        "hp": 4600,
+        "export": "goblin_townhall_lvl1"
+      },
+      {
+        "level": 10,
+        "hp": 5500,
+        "export": "goblin_townhall_lvl1"
+      },
+      {
+        "level": 11,
+        "hp": 6800,
+        "export": "goblin_townhall_lvl1"
+      }
+    ]
+  },
+  "goblin-hut": {
+    "globalId": 1000018,
+    "size": 2,
+    "levels": [
+      {
+        "level": 1,
+        "hp": 250,
+        "export": "goblin_hut_lvl1"
+      }
+    ]
+  }
+}

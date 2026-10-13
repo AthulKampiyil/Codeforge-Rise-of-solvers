@@ -1,0 +1,372 @@
+{
+ "title": "Baby Dragon",
+ "page": "Baby Dragon/Home Village",
+ "url": "https://clashofclans.fandom.com/wiki/Baby_Dragon/Home_Village",
+ "tabberParentUrl": "https://clashofclans.fandom.com/wiki/Baby_Dragon",
+ "revid": 624765,
+ "retrieved": "2026-09-15",
+ "clientName": "Baby Dragon",
+ "clientVersion": "18.400.21",
+ "category": "elixir-troop",
+ "constants": {
+  "housingSpace": 10,
+  "movementSpeedWiki": 20,
+  "internalSpeed": 250,
+  "tilesPerSecond": 2.5,
+  "attackRangeTiles": 2.75,
+  "attackRangeTilesClient": 2.25,
+  "attackSeconds": 1,
+  "splashTiles": 0.3,
+  "splashTilesClient": 0.3,
+  "attackTypeWiki": "Area Splash - 0.3 Tiles Radius (Ground & Air)",
+  "targets": "ground+air",
+  "favoriteTarget": "None",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": true,
+  "jumpsWalls": false,
+  "underground": false,
+  "unlock": {
+   "building": "Barracks",
+   "level": 11,
+   "townHall": 9
+  },
+  "abilityDamagePercent": 100,
+  "abilityAttackSpeedPercent": 50,
+  "aloneRadiusTilesClient": 4.5,
+  "triggersTraps": true
+ },
+ "client": {
+  "clientName": "Baby Dragon",
+  "housingSpace": 10,
+  "internalSpeed": 250,
+  "movementSpeedInGameExact": 20,
+  "movementSpeedInGameRounded": 20,
+  "tilesPerSecond": 2.5,
+  "attackRangeTiles": 2.25,
+  "attackSeconds": 1,
+  "splashTiles": 0.3,
+  "targets": "ground+air",
+  "flying": true,
+  "jumpsWalls": false,
+  "favoriteTarget": "None",
+  "productionBuilding": "Barracks",
+  "barracksLevel": 11,
+  "unlockTownHall": 9,
+  "triggersTraps": true,
+  "movementOffsetSpeed": 30,
+  "abilityDamagePercent": 100,
+  "abilityAttackSpeedPercent": 50,
+  "aloneRadiusTiles": 4.5
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 75,
+   "enragedDps": 225,
+   "damagePerHit": 75,
+   "enragedDamagePerHit": 150,
+   "hitpoints": 1200,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 85,
+   "enragedDps": 255,
+   "damagePerHit": 85,
+   "enragedDamagePerHit": 170,
+   "hitpoints": 1300,
+   "researchCost": 1500000,
+   "researchSeconds": 86400,
+   "researchTimeText": "1d",
+   "laboratoryLevel": 7
+  },
+  {
+   "level": 3,
+   "dps": 95,
+   "enragedDps": 285,
+   "damagePerHit": 95,
+   "enragedDamagePerHit": 190,
+   "hitpoints": 1400,
+   "researchCost": 2000000,
+   "researchSeconds": 129600,
+   "researchTimeText": "1d 12h",
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 4,
+   "dps": 105,
+   "enragedDps": 315,
+   "damagePerHit": 105,
+   "enragedDamagePerHit": 210,
+   "hitpoints": 1500,
+   "researchCost": 2800000,
+   "researchSeconds": 172800,
+   "researchTimeText": "2d",
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 5,
+   "dps": 115,
+   "enragedDps": 345,
+   "damagePerHit": 115,
+   "enragedDamagePerHit": 230,
+   "hitpoints": 1600,
+   "researchCost": 3700000,
+   "researchSeconds": 237600,
+   "researchTimeText": "2d 18h",
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 6,
+   "dps": 125,
+   "enragedDps": 375,
+   "damagePerHit": 125,
+   "enragedDamagePerHit": 250,
+   "hitpoints": 1700,
+   "researchCost": 4800000,
+   "researchSeconds": 259200,
+   "researchTimeText": "3d",
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 7,
+   "dps": 135,
+   "enragedDps": 405,
+   "damagePerHit": 135,
+   "enragedDamagePerHit": 270,
+   "hitpoints": 1800,
+   "researchCost": 6200000,
+   "researchSeconds": 345600,
+   "researchTimeText": "4d",
+   "laboratoryLevel": 11
+  },
+  {
+   "level": 8,
+   "dps": 145,
+   "enragedDps": 435,
+   "damagePerHit": 145,
+   "enragedDamagePerHit": 290,
+   "hitpoints": 1900,
+   "researchCost": 9500000,
+   "researchSeconds": 518400,
+   "researchTimeText": "6d",
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 9,
+   "dps": 155,
+   "enragedDps": 465,
+   "damagePerHit": 155,
+   "enragedDamagePerHit": 310,
+   "hitpoints": 2000,
+   "researchCost": 11000000,
+   "researchSeconds": 604800,
+   "researchTimeText": "7d",
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 10,
+   "dps": 165,
+   "enragedDps": 495,
+   "damagePerHit": 165,
+   "enragedDamagePerHit": 330,
+   "hitpoints": 2100,
+   "researchCost": 13500000,
+   "researchSeconds": 626400,
+   "researchTimeText": "7d 6h",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 11,
+   "dps": 175,
+   "enragedDps": 525,
+   "damagePerHit": 175,
+   "enragedDamagePerHit": 350,
+   "hitpoints": 2200,
+   "researchCost": 16500000,
+   "researchSeconds": 864000,
+   "researchTimeText": "10d",
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 12,
+   "dps": 185,
+   "enragedDps": 555,
+   "damagePerHit": 185,
+   "enragedDamagePerHit": 370,
+   "hitpoints": 2350,
+   "researchCost": 29000000,
+   "researchSeconds": 1317600,
+   "researchTimeText": "15d 6h",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 1200,
+   "dps": 75,
+   "damagePerHit": 75,
+   "enragedDamagePerHit": 150,
+   "enragedDps": 225
+  },
+  {
+   "level": 2,
+   "hitpoints": 1300,
+   "dps": 85,
+   "damagePerHit": 85,
+   "researchCost": 1500000,
+   "researchSeconds": 86400,
+   "laboratoryLevel": 7,
+   "enragedDamagePerHit": 170,
+   "enragedDps": 255
+  },
+  {
+   "level": 3,
+   "hitpoints": 1400,
+   "dps": 95,
+   "damagePerHit": 95,
+   "researchCost": 2000000,
+   "researchSeconds": 129600,
+   "laboratoryLevel": 8,
+   "enragedDamagePerHit": 190,
+   "enragedDps": 285
+  },
+  {
+   "level": 4,
+   "hitpoints": 1500,
+   "dps": 105,
+   "damagePerHit": 105,
+   "researchCost": 2800000,
+   "researchSeconds": 172800,
+   "laboratoryLevel": 8,
+   "enragedDamagePerHit": 210,
+   "enragedDps": 315
+  },
+  {
+   "level": 5,
+   "hitpoints": 1600,
+   "dps": 115,
+   "damagePerHit": 115,
+   "researchCost": 3700000,
+   "researchSeconds": 237600,
+   "laboratoryLevel": 9,
+   "enragedDamagePerHit": 230,
+   "enragedDps": 345
+  },
+  {
+   "level": 6,
+   "hitpoints": 1700,
+   "dps": 125,
+   "damagePerHit": 125,
+   "researchCost": 4800000,
+   "researchSeconds": 259200,
+   "laboratoryLevel": 10,
+   "enragedDamagePerHit": 250,
+   "enragedDps": 375
+  },
+  {
+   "level": 7,
+   "hitpoints": 1800,
+   "dps": 135,
+   "damagePerHit": 135,
+   "researchCost": 6200000,
+   "researchSeconds": 345600,
+   "laboratoryLevel": 11,
+   "enragedDamagePerHit": 270,
+   "enragedDps": 405
+  },
+  {
+   "level": 8,
+   "hitpoints": 1900,
+   "dps": 145,
+   "damagePerHit": 145,
+   "researchCost": 9500000,
+   "researchSeconds": 518400,
+   "laboratoryLevel": 12,
+   "enragedDamagePerHit": 290,
+   "enragedDps": 435
+  },
+  {
+   "level": 9,
+   "hitpoints": 2000,
+   "dps": 155,
+   "damagePerHit": 155,
+   "researchCost": 11000000,
+   "researchSeconds": 604800,
+   "laboratoryLevel": 13,
+   "enragedDamagePerHit": 310,
+   "enragedDps": 465
+  },
+  {
+   "level": 10,
+   "hitpoints": 2100,
+   "dps": 165,
+   "damagePerHit": 165,
+   "researchCost": 13500000,
+   "researchSeconds": 626400,
+   "laboratoryLevel": 14,
+   "enragedDamagePerHit": 330,
+   "enragedDps": 495
+  },
+  {
+   "level": 11,
+   "hitpoints": 2200,
+   "dps": 175,
+   "damagePerHit": 175,
+   "researchCost": 16500000,
+   "researchSeconds": 864000,
+   "laboratoryLevel": 15,
+   "enragedDamagePerHit": 350,
+   "enragedDps": 525
+  },
+  {
+   "level": 12,
+   "hitpoints": 2350,
+   "dps": 185,
+   "damagePerHit": 185,
+   "researchCost": 29000000,
+   "researchSeconds": 1317600,
+   "laboratoryLevel": 16,
+   "enragedDamagePerHit": 370,
+   "enragedDps": 555
+  }
+ ],
+ "superTroopBoost": {
+  "super troop": "Inferno Dragon",
+  "boost cost": "25,000",
+  "baby dragon level required": "6"
+ },
+ "comparison": {
+  "checked": 105,
+  "matched": 103
+ },
+ "mismatches": [
+  {
+   "field": "attackRangeTiles",
+   "level": null,
+   "wiki": 2.75,
+   "client": 2.25,
+   "clientColumn": "characters.AttackRange/100",
+   "note": "wiki - client = +0.5 tiles; flying unit (most wiki flyer ranges are client range + 0.5 tiles)"
+  },
+  {
+   "field": "movementSpeed (Troop Movement Speed page)",
+   "level": null,
+   "wiki": "16 / internal 200",
+   "client": "Speed=250 (20)",
+   "clientColumn": "characters.Speed",
+   "note": "troop page (20) matches client; TMS page stale"
+  }
+ ],
+ "ambiguities": [
+  "Range: wiki 2.75 tiles vs client AttackRange=225 (2.25 tiles).",
+  "Troop Movement Speed page still lists 16 / internal 200; the troop page (20) matches client Speed=250.",
+  "Enraged DPS on the wiki (225 at level 1) implies the +50% attack-speed boost multiplies attack rate (x1.5), not the interval."
+ ]
+}

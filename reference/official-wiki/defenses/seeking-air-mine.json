@@ -1,0 +1,131 @@
+{
+ "title": "Seeking Air Mine",
+ "url": "https://clashofclans.fandom.com/wiki/Seeking_Air_Mine",
+ "revid": 623233,
+ "retrieved": "2026-09-15",
+ "category": "trap",
+ "clientName": "Seeking Air Mine",
+ "clientTable": "traps.csv",
+ "levels": [
+  {
+   "level": 1,
+   "damage": 1500,
+   "cost": 12000,
+   "townHall": 7
+  },
+  {
+   "level": 2,
+   "damage": 1800,
+   "cost": 600000,
+   "buildSeconds": 21600,
+   "xp": 146,
+   "townHall": 9
+  },
+  {
+   "level": 3,
+   "damage": 2100,
+   "cost": 1200000,
+   "buildSeconds": 86400,
+   "xp": 293,
+   "townHall": 10
+  },
+  {
+   "level": 4,
+   "damage": 2500,
+   "cost": 2500000,
+   "buildSeconds": 129600,
+   "xp": 360,
+   "townHall": 13
+  },
+  {
+   "level": 5,
+   "damage": 2800,
+   "cost": 5000000,
+   "buildSeconds": 172800,
+   "xp": 415,
+   "townHall": 15
+  },
+  {
+   "level": 6,
+   "damage": 3000,
+   "cost": 6500000,
+   "buildSeconds": 259200,
+   "xp": 509,
+   "townHall": 16
+  },
+  {
+   "level": 7,
+   "damage": 3200,
+   "cost": 12000000,
+   "buildSeconds": 432000,
+   "xp": 657,
+   "townHall": 17
+  },
+  {
+   "level": 8,
+   "damage": 3350,
+   "cost": 19000000,
+   "buildSeconds": 993600,
+   "xp": 996,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 7,
+  "size": "1x1",
+  "triggerRadius": 4,
+  "targets": "air",
+  "minTriggerHousingSpace": 5,
+  "damageType": "single target",
+  "favoriteTarget": "none"
+ },
+ "mismatches": [
+  {
+   "field": "townHall",
+   "level": 1,
+   "wiki": 7,
+   "client": 1,
+   "note": "client trap rows use TownHallLevel 1 for level 1 (availability comes from townhall_levels counts); the wiki lists the unlock Town Hall",
+   "table": "Statistics"
+  },
+  {
+   "field": "buildSeconds",
+   "level": 3,
+   "wiki": 86400,
+   "client": 43200,
+   "note": "level 3 build time: wiki 1d (XP 293) vs client 12h (XP 207)",
+   "table": "Statistics"
+  },
+  {
+   "field": "xp",
+   "level": 3,
+   "wiki": 293,
+   "client": 207,
+   "note": "follows the build time difference",
+   "table": "Statistics"
+  }
+ ],
+ "progressionMismatches": [
+  {
+   "field": "townhall",
+   "level": 1,
+   "wiki": 7,
+   "progression": 1,
+   "note": "client trap rows use TownHallLevel 1 for level 1 (availability comes from townhall_levels counts); the wiki lists the unlock Town Hall"
+  },
+  {
+   "field": "seconds",
+   "level": 3,
+   "wiki": 86400,
+   "progression": 43200.0,
+   "note": "level 3 build time differs (see above)"
+  },
+  {
+   "field": "targets",
+   "level": "all",
+   "wiki": "air",
+   "progression": "ground",
+   "note": "progression.json marks the Seeking Air Mine as a ground trap (AirTrigger not read)"
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "title": "Army Camp (housing space)",
+ "page": "Army Camp/Home Village",
+ "url": "https://clashofclans.fandom.com/wiki/Army_Camp/Home_Village",
+ "revid": 624555,
+ "retrieved": "2026-09-15",
+ "clientName": "buildings.Army Camp.HousingSpace",
+ "clientVersion": "18.400.21",
+ "category": "mechanic",
+ "levels": [
+  {
+   "level": 1,
+   "capacity": 20,
+   "townHall": 1
+  },
+  {
+   "level": 2,
+   "capacity": 30,
+   "townHall": 2
+  },
+  {
+   "level": 3,
+   "capacity": 35,
+   "townHall": 3
+  },
+  {
+   "level": 4,
+   "capacity": 40,
+   "townHall": 4
+  },
+  {
+   "level": 5,
+   "capacity": 45,
+   "townHall": 5
+  },
+  {
+   "level": 6,
+   "capacity": 50,
+   "townHall": 6
+  },
+  {
+   "level": 7,
+   "capacity": 55,
+   "townHall": 9
+  },
+  {
+   "level": 8,
+   "capacity": 60,
+   "townHall": 10
+  },
+  {
+   "level": 9,
+   "capacity": 65,
+   "townHall": 11
+  },
+  {
+   "level": 10,
+   "capacity": 70,
+   "townHall": 12
+  },
+  {
+   "level": 11,
+   "capacity": 75,
+   "townHall": 13
+  },
+  {
+   "level": 12,
+   "capacity": 80,
+   "townHall": 15
+  },
+  {
+   "level": 13,
+   "capacity": 85,
+   "townHall": 17
+  },
+  {
+   "level": 14,
+   "capacity": 88,
+   "townHall": 18
+  }
+ ],
+ "comparison": {
+  "checked": 28,
+  "matched": 28
+ },
+ "mismatches": [],
+ "housingNotes": [
+  "No standalone \"Housing Space\" article exists; housing is documented on the Army Camp page and each troop info box.",
+  "Maximum army capacity 352 (4 camps x 88), plus Clan Castle space (wiki).",
+  "Heroes, Pets and Siege Machines use no Army Camp space; Clan Castle troops do not occupy Army Camps.",
+  "Secondary units list a housing value used only for Spring/Tornado Trap, Clone and Recall weight."
+ ]
+}

@@ -1,0 +1,556 @@
+{
+  "sourceSha256": "646950cc4fb4210740371a663d17ed70edee3cac8aad67354c27c720fb659073",
+  "units": {
+    "intervalMs": "milliseconds",
+    "range": "100 source units per map tile"
+  },
+  "scope": "Base levels and explicit source weapon fields. Gearing eligibility, alternate-mode arithmetic and mini-level bonuses are separate.",
+  "levels": [
+    {
+      "level": 1,
+      "hp": 380,
+      "cost": 1000,
+      "seconds": 15,
+      "townHall": 2,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 11,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 22,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 2,
+      "hp": 420,
+      "cost": 2000,
+      "seconds": 120,
+      "townHall": 2,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 15,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 30,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 3,
+      "hp": 460,
+      "cost": 5000,
+      "seconds": 1200,
+      "townHall": 3,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 19,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 38,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 4,
+      "hp": 500,
+      "cost": 20000,
+      "seconds": 3600,
+      "townHall": 4,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 25,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow Fire",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 50,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow Fire",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 5,
+      "hp": 540,
+      "cost": 70000,
+      "seconds": 5400,
+      "townHall": 5,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 30,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow Fire",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 60,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow Fire",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 6,
+      "hp": 580,
+      "cost": 80000,
+      "seconds": 7200,
+      "townHall": 5,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 35,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow Fire",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 70,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow Fire",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 7,
+      "hp": 630,
+      "cost": 150000,
+      "seconds": 10800,
+      "townHall": 6,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 42,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow ElixFire",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 84,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow ElixFire",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 8,
+      "hp": 690,
+      "cost": 200000,
+      "seconds": 14400,
+      "townHall": 7,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 48,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow ElixFire",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 96,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow ElixFire",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 9,
+      "hp": 750,
+      "cost": 400000,
+      "seconds": 18000,
+      "townHall": 8,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 56,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow ElixFire",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 112,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow ElixFire",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 10,
+      "hp": 810,
+      "cost": 460000,
+      "seconds": 21600,
+      "townHall": 8,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 63,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow ElixFire",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 126,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow ElixFire LOW",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 11,
+      "hp": 890,
+      "cost": 600000,
+      "seconds": 25200,
+      "townHall": 9,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 70,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow DarkElixFire",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 140,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow DarkElixFire LOW",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 12,
+      "hp": 970,
+      "cost": 700000,
+      "seconds": 28800,
+      "townHall": 10,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 74,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow Fire2",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 150,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow Fire2 LOW",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 13,
+      "hp": 1050,
+      "cost": 1000000,
+      "seconds": 36000,
+      "townHall": 10,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 78,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow Fire3",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 160,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow Fire3 LOW",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 14,
+      "hp": 1130,
+      "cost": 1100000,
+      "seconds": 39600,
+      "townHall": 11,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 82,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow Fire3",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 180,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow Fire3 LOW",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 15,
+      "hp": 1230,
+      "cost": 1300000,
+      "seconds": 43200,
+      "townHall": 11,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 85,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow Fire3",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 200,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow Fire3 LOW",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 16,
+      "hp": 1310,
+      "cost": 1600000,
+      "seconds": 57600,
+      "townHall": 12,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 90,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow Fire3",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 210,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow Fire3 LOW",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 17,
+      "hp": 1390,
+      "cost": 1800000,
+      "seconds": 72000,
+      "townHall": 12,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 100,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow Fire3",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 220,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow Fire3 LOW",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 18,
+      "hp": 1510,
+      "cost": 2000000,
+      "seconds": 86400,
+      "townHall": 13,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 110,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow Fire3",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 240,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow Fire3 LOW",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 19,
+      "hp": 1600,
+      "cost": 2200000,
+      "seconds": 108000,
+      "townHall": 13,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 120,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow Fire3",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 260,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow Fire3 LOW",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 20,
+      "hp": 1700,
+      "cost": 3000000,
+      "seconds": 129600,
+      "townHall": 14,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 135,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow Fire3",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 276,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow Fire3 LOW",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    },
+    {
+      "level": 21,
+      "hp": 1800,
+      "cost": 4000000,
+      "seconds": 172800,
+      "townHall": 15,
+      "resource": "Gold",
+      "width": 3,
+      "height": 3,
+      "weapon": {
+        "dps": 145,
+        "intervalMs": 500,
+        "range": 1000,
+        "projectile": "Tower Arrow Fire3",
+        "airTargets": true,
+        "groundTargets": true
+      },
+      "alternateWeapon": {
+        "dps": 290,
+        "intervalMs": 250,
+        "range": 800,
+        "projectile": "Tower Arrow Fire3 LOW",
+        "airTargets": true,
+        "groundTargets": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+ "title": "Skeleton (Witch)",
+ "page": "Witch/Skeleton",
+ "url": "https://clashofclans.fandom.com/wiki/Witch/Skeleton",
+ "revid": 624632,
+ "retrieved": "2026-09-15",
+ "clientName": "Skeleton",
+ "clientVersion": "18.400.21",
+ "category": "secondary-unit",
+ "parent": "witch",
+ "constants": {
+  "housingSpace": 1,
+  "movementSpeedWiki": 24,
+  "internalSpeed": 300,
+  "tilesPerSecond": 3,
+  "attackRangeTiles": 0.4,
+  "attackRangeTilesClient": 0.4,
+  "attackSeconds": 1,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Melee (Ground Only)",
+  "targets": "ground",
+  "favoriteTarget": "None",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": false,
+  "springWeight": 1,
+  "triggersTraps": false,
+  "doesNotOpenCC": true,
+  "healerWeight": 0
+ },
+ "client": {
+  "clientName": "Skeleton",
+  "housingSpace": 1,
+  "internalSpeed": 300,
+  "movementSpeedInGameExact": 24,
+  "movementSpeedInGameRounded": 24,
+  "tilesPerSecond": 3,
+  "attackRangeTiles": 0.4,
+  "attackSeconds": 1,
+  "targets": "ground",
+  "flying": false,
+  "jumpsWalls": false,
+  "favoriteTarget": "None",
+  "triggersTraps": false,
+  "healerWeight": 0,
+  "movementOffsetSpeed": 0,
+  "doesNotOpenCC": true,
+  "isSecondaryTroop": true,
+  "springWeight": 1
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 25,
+   "damagePerHit": 25,
+   "hitpoints": 30
+  },
+  {
+   "level": 2,
+   "dps": 30,
+   "damagePerHit": 30,
+   "hitpoints": 45
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 30,
+   "dps": 25,
+   "damagePerHit": 25
+  },
+  {
+   "level": 2,
+   "hitpoints": 45,
+   "dps": 30,
+   "damagePerHit": 30
+  }
+ ],
+ "comparison": {
+  "checked": 13,
+  "matched": 13
+ },
+ "mismatches": [],
+ "ambiguities": []
+}

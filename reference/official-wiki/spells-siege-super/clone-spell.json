@@ -1,0 +1,112 @@
+{
+  "title": "Clone Spell",
+  "url": "https://clashofclans.fandom.com/wiki/Clone_Spell",
+  "revid": 622840,
+  "clientName": "Clone",
+  "category": "elixir-spell",
+  "retrieved": "2026-09-15",
+  "contentPage": "Clone Spell",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "spells",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "radiusTiles": 3.5,
+    "spellDurationSeconds": 18,
+    "clonedLifespanSeconds": 30,
+    "housingSpace": 3,
+    "spellFactoryLevel": 5
+  },
+  "levels": [
+    {
+      "level": 1,
+      "clonedCapacityHousing": 22,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "clonedCapacityHousing": 24,
+      "researchCost": 1500000,
+      "researchTimeHours": 24,
+      "laboratoryLevel": 8
+    },
+    {
+      "level": 3,
+      "clonedCapacityHousing": 26,
+      "researchCost": 2500000,
+      "researchTimeHours": 48,
+      "laboratoryLevel": 8
+    },
+    {
+      "level": 4,
+      "clonedCapacityHousing": 28,
+      "researchCost": 3000000,
+      "researchTimeHours": 54,
+      "laboratoryLevel": 9
+    },
+    {
+      "level": 5,
+      "clonedCapacityHousing": 30,
+      "researchCost": 4000000,
+      "researchTimeHours": 60,
+      "laboratoryLevel": 9
+    },
+    {
+      "level": 6,
+      "clonedCapacityHousing": 34,
+      "researchCost": 5000000,
+      "researchTimeHours": 96,
+      "laboratoryLevel": 11
+    },
+    {
+      "level": 7,
+      "clonedCapacityHousing": 38,
+      "researchCost": 8000000,
+      "researchTimeHours": 120,
+      "laboratoryLevel": 12
+    },
+    {
+      "level": 8,
+      "clonedCapacityHousing": 42,
+      "researchCost": 9000000,
+      "researchTimeHours": 168,
+      "laboratoryLevel": 13
+    },
+    {
+      "level": 9,
+      "clonedCapacityHousing": 48,
+      "researchCost": 26000000,
+      "researchTimeHours": 324,
+      "laboratoryLevel": 16
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "clone capacity",
+      "client": "`DuplicateHousing` (22..48)"
+    },
+    {
+      "mechanic": "clone lifetime",
+      "client": "`DuplicateLifetime` = 30000 ms"
+    },
+    {
+      "mechanic": "zone duration",
+      "client": "`NumberOfHits` 60 x `TimeBetweenHitsMS` 300 = 18 s"
+    },
+    {
+      "mechanic": "radius",
+      "client": "`Radius` 350"
+    },
+    {
+      "mechanic": "immunities",
+      "client": "`ImmunitySiegeMachines`, `ImmunityTotems`"
+    },
+    {
+      "mechanic": "Healer AI",
+      "client": "globals `CLONE_HEALER_WEIGHT_PERCENT` = 40"
+    }
+  ]
+}

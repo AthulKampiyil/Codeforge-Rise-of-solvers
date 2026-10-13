@@ -1,0 +1,1457 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "sc/buildings.sc": "f73ec949fc070bc03175d6bb3af8b62d8f607094bf2b343c9846a499a35be0ed",
+    "sc/buildings_8.sctx": "588eba7d5739a5d9b53d3e14f2ab83bd170cad735363a81dd37bea7bcc0bb3bd",
+    "sc/buildings_37.sctx": "bf4e486ffcd139075200b4fdb7faa7849973d19878036b6b4d4659d505f5a195",
+    "logic/buildings.csv": "9aed5fed876e2914a22fa7fed688a651c691ab06170d60e2bda8dc9262fbccb1"
+  },
+  "building": {
+    "Town Hall": [
+      {
+        "Name": "Town Hall",
+        "GlobalID": "1000001",
+        "BuildingLevel": "1",
+        "TID": "TID_BUILDING_TOWN_HALL",
+        "InfoTID": "TID_TOWN_HALL_INFO",
+        "BuildingClass": "Town Hall",
+        "SecondaryTargetingClass": "Resource",
+        "SWF": "sc/buildings.sc",
+        "ExportName": "town_hall_lvl1",
+        "ExportNameNpc": "goblin_townhall_lvl1",
+        "ExportNameConstruction": "town_hall_const",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildResource": "Gold",
+        "BuildCost": "0",
+        "TownHallLevel": "0",
+        "Width": "4",
+        "Height": "4",
+        "ExportNameBuildAnim": "town_hall_upg",
+        "MaxStoredGold": "1000",
+        "MaxStoredElixir": "1000",
+        "LootOnDestruction": "TRUE",
+        "Hitpoints": "400",
+        "RegenTime": "20",
+        "DestroyEffect": "Town Hall Destroyed",
+        "ExportNameDamaged": "destroyedBuilding_4m_base_woodpanel_yellow",
+        "BuildingW": "3",
+        "BuildingH": "3",
+        "ExportNameBase": "townhall_base",
+        "PickUpEffect": "Town Hall Pickup",
+        "PlacingEffect": "Town Hall Placing",
+        "DestructionXP": "1",
+        "StartingHomeCount": "1",
+        "IsRed": "TRUE",
+        "ActivatedCombatAddBuildingClass": "Defense",
+        "HintPriority": "100",
+        "PreviewScenario": "NoCombatBuilding"
+      },
+      {
+        "BuildingLevel": "2",
+        "ExportName": "town_hall_lvl2",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "10",
+        "BuildCost": "1000",
+        "TownHallLevel": "1",
+        "MaxStoredGold": "2500",
+        "MaxStoredElixir": "2500",
+        "Hitpoints": "800",
+        "RegenTime": "21",
+        "ExportNameDamaged": "destroyedBuilding_4m_base_rockwoodpanel_yellow",
+        "ExportNameBase": "townhall_base",
+        "DestructionXP": "2"
+      },
+      {
+        "BuildingLevel": "3",
+        "ExportName": "town_hall_lvl3",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "30",
+        "BuildTimeS": "0",
+        "BuildCost": "4000",
+        "TownHallLevel": "2",
+        "MaxStoredGold": "10000",
+        "MaxStoredElixir": "10000",
+        "Hitpoints": "1600",
+        "RegenTime": "22",
+        "ExportNameDamaged": "destroyedBuilding_4m_base_rockwoodpanel_yellow",
+        "ExportNameBase": "townhall_base",
+        "DestructionXP": "3"
+      },
+      {
+        "BuildingLevel": "4",
+        "ExportName": "town_hall_lvl4",
+        "BuildTimeD": "0",
+        "BuildTimeH": "3",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "25000",
+        "TownHallLevel": "3",
+        "MaxStoredGold": "50000",
+        "MaxStoredElixir": "50000",
+        "Hitpoints": "2000",
+        "RegenTime": "23",
+        "ExportNameDamaged": "destroyedBuilding_4m_base_rockwoodpanel_yellow",
+        "ExportNameBase": "townhall_base",
+        "DestructionXP": "4"
+      },
+      {
+        "BuildingLevel": "5",
+        "ExportName": "town_hall_lvl5",
+        "BuildTimeD": "0",
+        "BuildTimeH": "6",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "150000",
+        "TownHallLevel": "4",
+        "MaxStoredGold": "100000",
+        "MaxStoredElixir": "100000",
+        "Hitpoints": "2400",
+        "RegenTime": "24",
+        "ExportNameDamaged": "destroyedBuilding_4m_base_rockwoodpanel_yellow",
+        "ExportNameBase": "townhall_base",
+        "DestructionXP": "5"
+      },
+      {
+        "BuildingLevel": "6",
+        "ExportName": "town_hall_lvl6",
+        "BuildTimeD": "0",
+        "BuildTimeH": "12",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "500000",
+        "TownHallLevel": "5",
+        "MaxStoredGold": "300000",
+        "MaxStoredElixir": "300000",
+        "Hitpoints": "2800",
+        "RegenTime": "25",
+        "ExportNameDamaged": "destroyedBuilding_4m_base_rockwoodpanel_yellow",
+        "ExportNameBase": "townhall_base",
+        "DestructionXP": "6"
+      },
+      {
+        "BuildingLevel": "7",
+        "ExportName": "town_hall_lvl7",
+        "BuildTimeD": "0",
+        "BuildTimeH": "18",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "1000000",
+        "TownHallLevel": "6",
+        "MaxStoredGold": "500000",
+        "MaxStoredElixir": "500000",
+        "MaxStoredDarkElixir": "2500",
+        "PercentageStoredDarkElixir": "20",
+        "Hitpoints": "3300",
+        "RegenTime": "26",
+        "ExportNameDamaged": "destroyedBuilding_4m_base_rockwoodpanel_yellow",
+        "ExportNameBase": "townhall_base",
+        "DestructionXP": "7"
+      },
+      {
+        "BuildingLevel": "8",
+        "ExportName": "town_hall_lvl8",
+        "BuildTimeD": "1",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "2000000",
+        "TownHallLevel": "7",
+        "MaxStoredGold": "750000",
+        "MaxStoredElixir": "750000",
+        "MaxStoredDarkElixir": "5000",
+        "PercentageStoredDarkElixir": "20",
+        "Hitpoints": "3900",
+        "RegenTime": "27",
+        "ExportNameDamaged": "destroyedBuilding_4m_base_rockwoodpanel_yellow",
+        "ExportNameBase": "townhall_base",
+        "DestructionXP": "8"
+      },
+      {
+        "BuildingLevel": "9",
+        "ExportName": "town_hall_lvl9",
+        "BuildTimeD": "2",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "2500000",
+        "TownHallLevel": "8",
+        "MaxStoredGold": "1000000",
+        "MaxStoredElixir": "1000000",
+        "MaxStoredDarkElixir": "10000",
+        "PercentageStoredDarkElixir": "20",
+        "Hitpoints": "4600",
+        "RegenTime": "28",
+        "ExportNameDamaged": "destroyedBuilding_4l_base_rockwoodpanel_grey",
+        "ExportNameBase": "townhall_base",
+        "DestructionXP": "9"
+      },
+      {
+        "BuildingLevel": "10",
+        "ExportName": "town_hall_lvl10",
+        "BuildTimeD": "3",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "3500000",
+        "TownHallLevel": "9",
+        "MaxStoredGold": "1500000",
+        "MaxStoredElixir": "1500000",
+        "MaxStoredDarkElixir": "20000",
+        "PercentageStoredDarkElixir": "20",
+        "Hitpoints": "5500",
+        "RegenTime": "29",
+        "ExportNameDamaged": "destroyedBuilding_4l_base_rockwoodpanel_grey",
+        "ExportNameBase": "townhall_lvl10_base",
+        "DestructionXP": "10"
+      },
+      {
+        "BuildingLevel": "11",
+        "ExportName": "town_hall_lvl11",
+        "BuildTimeD": "5",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "4000000",
+        "TownHallLevel": "10",
+        "MaxStoredGold": "2000000",
+        "MaxStoredElixir": "2000000",
+        "MaxStoredDarkElixir": "20000",
+        "PercentageStoredDarkElixir": "20",
+        "Hitpoints": "6800",
+        "RegenTime": "30",
+        "ExportNameDamaged": "destroyedBuilding_4l_base_rockwoodpanel_white",
+        "ExportNameBase": "townhall_base",
+        "DestructionXP": "11"
+      },
+      {
+        "BuildingLevel": "12",
+        "ExportName": "town_hall_lvl12_t5",
+        "BuildTimeD": "6",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "6000000",
+        "TownHallLevel": "11",
+        "MaxStoredGold": "2000000",
+        "MaxStoredElixir": "2000000",
+        "MaxStoredDarkElixir": "20000",
+        "PercentageStoredDarkElixir": "20",
+        "Hitpoints": "7500",
+        "RegenTime": "31",
+        "ExportNameDamaged": "destroyedBuilding_4l_base_rockwoodpanel_blue",
+        "ExportNameBase": "townhall_base_th12",
+        "DestructionXP": "12",
+        "ActivateCombatOnDamageTaken": "1",
+        "CombatActivationDelay": "500",
+        "Weapon": "Townhall12"
+      },
+      {
+        "BuildingLevel": "13",
+        "ExportName": "town_hall_lvl13_t5",
+        "BuildTimeD": "7",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "9000000",
+        "TownHallLevel": "12",
+        "MaxStoredGold": "2000000",
+        "MaxStoredElixir": "2000000",
+        "MaxStoredDarkElixir": "20000",
+        "PercentageStoredDarkElixir": "20",
+        "Hitpoints": "8200",
+        "RegenTime": "31",
+        "ExportNameDamaged": "destroyedBuilding_4l_base_rockwoodpanel_blue",
+        "ExportNameBase": "townhall_base_th12",
+        "DestructionXP": "13",
+        "ActivateCombatOnDamageTaken": "1",
+        "CombatActivationDelay": "500",
+        "Weapon": "Townhall13"
+      },
+      {
+        "BuildingLevel": "14",
+        "ExportName": "town_hall_lvl14_t5",
+        "BuildTimeD": "7",
+        "BuildTimeH": "12",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "12000000",
+        "TownHallLevel": "13",
+        "MaxStoredGold": "3000000",
+        "MaxStoredElixir": "3000000",
+        "MaxStoredDarkElixir": "30000",
+        "PercentageStoredDarkElixir": "20",
+        "Hitpoints": "8900",
+        "RegenTime": "31",
+        "ExportNameDamaged": "destroyedBuilding_4m_base_rockwoodpanel_yellow",
+        "ExportNameBase": "townhall_base_th12",
+        "DestructionXP": "14",
+        "ActivateCombatOnDamageTaken": "1",
+        "CombatActivationDelay": "500",
+        "Weapon": "Townhall14"
+      },
+      {
+        "BuildingLevel": "15",
+        "ExportName": "town_hall_lvl15_t5",
+        "BuildTimeD": "8",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "13000000",
+        "TownHallLevel": "14",
+        "MaxStoredGold": "3000000",
+        "MaxStoredElixir": "3000000",
+        "MaxStoredDarkElixir": "30000",
+        "PercentageStoredDarkElixir": "20",
+        "Hitpoints": "9600",
+        "RegenTime": "31",
+        "ExportNameDamaged": "destroyedBuilding_4l_base_rockwoodpanel_darkpurple",
+        "ExportNameBase": "townhall_base_th12",
+        "DestructionXP": "15",
+        "ActivateCombatOnDamageTaken": "1",
+        "CombatActivationDelay": "500",
+        "Weapon": "Townhall15"
+      },
+      {
+        "BuildingLevel": "16",
+        "ExportName": "town_hall_lvl16",
+        "BuildTimeD": "9",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "15000000",
+        "TownHallLevel": "15",
+        "MaxStoredGold": "4000000",
+        "MaxStoredElixir": "4000000",
+        "MaxStoredDarkElixir": "40000",
+        "PercentageStoredDarkElixir": "20",
+        "Hitpoints": "10000",
+        "RegenTime": "32",
+        "ExportNameDamaged": "DestroyedBuilding_4l_base_rockwoodpanel_orange",
+        "ExportNameBase": "townhall_base_th12",
+        "DestructionXP": "16",
+        "ActivateCombatOnDamageTaken": "1",
+        "CombatActivationDelay": "500",
+        "Weapon": "Townhall16"
+      },
+      {
+        "BuildingLevel": "17",
+        "ExportName": "town_hall_lvl17_t1",
+        "BuildTimeD": "10",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "16000000",
+        "TownHallLevel": "16",
+        "MaxStoredGold": "4000000",
+        "MaxStoredElixir": "4000000",
+        "MaxStoredDarkElixir": "40000",
+        "PercentageStoredDarkElixir": "20",
+        "Hitpoints": "10400",
+        "RegenTime": "33",
+        "ExportNameDamaged": "DestroyedBuilding_4l_base_rockwoodpanel_darkblue",
+        "ExportNameBase": "townhall_base_th12",
+        "DestructionXP": "17",
+        "ActivateCombatOnDamageTaken": "0",
+        "ActivateAfterSeconds": "1",
+        "CombatActivationDelay": "500",
+        "Weapon": "Townhall17",
+        "MergeRequirement": "Eagle Artillery:7:0",
+        "Animation": "TownHall17"
+      },
+      {
+        "BuildingLevel": "18",
+        "ExportName": "town_hall_lvl18_t1",
+        "BuildTimeD": "12",
+        "BuildTimeH": "0",
+        "BuildTimeM": "0",
+        "BuildTimeS": "0",
+        "BuildCost": "25000000",
+        "TownHallLevel": "17",
+        "AreEdgesUnpassableByVillagers": "TRUE",
+        "MaxStoredGold": "5000000",
+        "MaxStoredElixir": "5000000",
+        "MaxStoredDarkElixir": "50000",
+        "PercentageStoredDarkElixir": "20",
+        "Hitpoints": "10800",
+        "RegenTime": "34",
+        "ExportNameDamaged": "DestroyedBuilding_4l_base_rockwoodpanel_darkblue",
+        "ExportNameBase": "town_hall_lvl18_t1_base",
+        "DefenderZ": "190",
+        "DestructionXP": "18",
+        "HousesGuardians": "TRUE",
+        "PreviewScenarioUpgradePreview": "TownHall18Fake",
+        "PreviewScenarioUpgrading": "TownHall17Upgrading",
+        "Animation": "TownHall18"
+      }
+    ],
+    "Goblin Hut": [
+      {
+        "Name": "Goblin Hut",
+        "GlobalID": "1000018",
+        "BuildingLevel": "1",
+        "TID": "TID_CAPBUILD_GOBLIN_HUT",
+        "InfoTID": "TID_CAPBUILD_GOBLIN_HUT_INFO",
+        "BuildingClass": "Npc",
+        "SWF": "sc/buildings.sc",
+        "ExportName": "goblin_hut_lvl1",
+        "BuildTimeD": "0",
+        "BuildTimeH": "0",
+        "BuildTimeM": "5",
+        "BuildTimeS": "0",
+        "BuildResource": "Elixir",
+        "BuildCost": "250",
+        "TownHallLevel": "1",
+        "CapitalHallLevel": "1",
+        "Width": "2",
+        "Height": "2",
+        "ExportNameBuildAnim": "generic_upgrade_state2",
+        "Hitpoints": "250",
+        "RegenTime": "30",
+        "DestroyEffect": "Building Destroyed",
+        "ExportNameDamaged": "destroyedBuilding_2s_pit_wood",
+        "BuildingW": "2",
+        "BuildingH": "2",
+        "ExportNameBase": "goblin_hut_base",
+        "PickUpEffect": "Troop Housing Pickup",
+        "PlacingEffect": "Troop Housing Placing"
+      }
+    ]
+  },
+  "graph": {
+    "exports": {
+      "goblin_townhall_lvl1": 15305,
+      "goblin_hut_lvl1": 15306,
+      "goblin_townhall_base": 2698,
+      "goblin_hut_base": 2699
+    },
+    "shapes": {
+      "2462": [
+        [
+          8,
+          [
+            -29.5,
+            -24.5,
+            0.0,
+            0.0,
+            -29.5,
+            24.5,
+            0.0,
+            5412.0,
+            29.5,
+            -24.5,
+            6642.0,
+            0.0,
+            29.5,
+            24.5,
+            6642.0,
+            5412.0
+          ]
+        ]
+      ],
+      "2464": [
+        [
+          8,
+          [
+            -31.950000762939453,
+            6.5,
+            32029.0,
+            61731.0,
+            -64.44999694824219,
+            32.54999923706055,
+            29077.0,
+            65388.0,
+            3.200000047683716,
+            6.5,
+            32029.0,
+            57781.0,
+            -64.44999694824219,
+            48.150001525878906,
+            27306.0,
+            65388.0,
+            43.599998474121094,
+            36.45000076293945,
+            28634.0,
+            53247.0,
+            -21.5,
+            80.75,
+            23616.0,
+            60561.0,
+            43.599998474121094,
+            50.75,
+            27011.0,
+            53247.0,
+            3.200000047683716,
+            80.75,
+            23616.0,
+            57781.0
+          ]
+        ]
+      ],
+      "2468": [
+        [
+          8,
+          [
+            106.30000305175781,
+            77.9000015258789,
+            39999.0,
+            47395.0,
+            -13.25,
+            -15.850000381469727,
+            65535.0,
+            44323.0,
+            111.25,
+            82.8499984741211,
+            38819.0,
+            47395.0,
+            -112.5,
+            83.4000015258789,
+            65535.0,
+            20772.0,
+            15.149999618530273,
+            178.9499969482422,
+            38819.0,
+            24575.0,
+            -103.30000305175781,
+            92.5999984741211,
+            63320.0,
+            20772.0
+          ]
+        ]
+      ],
+      "2469": [
+        [
+          8,
+          [
+            -6.5,
+            2.549999952316284,
+            49594.0,
+            0.0,
+            -54.599998474121094,
+            38.95000076293945,
+            38671.0,
+            8191.0,
+            3.9000000953674316,
+            2.549999952316284,
+            51955.0,
+            0.0,
+            -54.599998474121094,
+            45.45000076293945,
+            38671.0,
+            9654.0,
+            53.29999923706055,
+            38.29999923706055,
+            63173.0,
+            8045.0,
+            -4.550000190734863,
+            82.55000305175781,
+            50036.0,
+            17992.0,
+            53.29999923706055,
+            45.45000076293945,
+            63173.0,
+            9654.0,
+            2.5999999046325684,
+            82.55000305175781,
+            51660.0,
+            17992.0
+          ]
+        ]
+      ],
+      "15266": [
+        [
+          37,
+          [
+            54.349998474121094,
+            56.29999923706055,
+            49736.0,
+            6221.0,
+            54.349998474121094,
+            79.1500015258789,
+            49736.0,
+            11060.0,
+            74.5999984741211,
+            56.29999923706055,
+            54271.0,
+            6221.0,
+            74.5999984741211,
+            79.1500015258789,
+            54271.0,
+            11060.0
+          ]
+        ]
+      ],
+      "15267": [
+        [
+          37,
+          [
+            54.349998474121094,
+            56.29999923706055,
+            61877.0,
+            7604.0,
+            54.349998474121094,
+            79.1500015258789,
+            56757.0,
+            7604.0,
+            74.5999984741211,
+            56.29999923706055,
+            61877.0,
+            11890.0,
+            74.5999984741211,
+            79.1500015258789,
+            56757.0,
+            11890.0
+          ]
+        ]
+      ],
+      "15268": [
+        [
+          37,
+          [
+            54.349998474121094,
+            56.29999923706055,
+            0.0,
+            59866.0,
+            54.349998474121094,
+            78.5,
+            0.0,
+            64567.0,
+            74.5999984741211,
+            56.29999923706055,
+            4534.0,
+            59866.0,
+            74.5999984741211,
+            78.5,
+            4534.0,
+            64567.0
+          ]
+        ]
+      ],
+      "15269": [
+        [
+          37,
+          [
+            54.349998474121094,
+            56.29999923706055,
+            11848.0,
+            59866.0,
+            54.349998474121094,
+            78.5,
+            11848.0,
+            64567.0,
+            74.5999984741211,
+            56.29999923706055,
+            16383.0,
+            59866.0,
+            74.5999984741211,
+            78.5,
+            16383.0,
+            64567.0
+          ]
+        ]
+      ],
+      "15270": [
+        [
+          37,
+          [
+            54.349998474121094,
+            56.29999923706055,
+            22235.0,
+            60972.0,
+            54.349998474121094,
+            78.5,
+            17261.0,
+            60972.0,
+            74.5999984741211,
+            56.29999923706055,
+            22235.0,
+            65258.0,
+            74.5999984741211,
+            78.5,
+            17261.0,
+            65258.0
+          ]
+        ]
+      ],
+      "15271": [
+        [
+          37,
+          [
+            54.349998474121094,
+            56.29999923706055,
+            28232.0,
+            60972.0,
+            54.349998474121094,
+            79.1500015258789,
+            23112.0,
+            60972.0,
+            73.94999694824219,
+            56.29999923706055,
+            28232.0,
+            65120.0,
+            73.94999694824219,
+            79.1500015258789,
+            23112.0,
+            65120.0
+          ]
+        ]
+      ],
+      "15272": [
+        [
+          37,
+          [
+            54.349998474121094,
+            56.29999923706055,
+            35254.0,
+            9816.0,
+            54.349998474121094,
+            79.80000305175781,
+            35254.0,
+            14793.0,
+            73.94999694824219,
+            56.29999923706055,
+            39642.0,
+            9816.0,
+            73.94999694824219,
+            79.80000305175781,
+            39642.0,
+            14793.0
+          ]
+        ]
+      ],
+      "15273": [
+        [
+          37,
+          [
+            53.70000076293945,
+            56.29999923706055,
+            44177.0,
+            6221.0,
+            53.70000076293945,
+            79.1500015258789,
+            44177.0,
+            11060.0,
+            74.5999984741211,
+            56.29999923706055,
+            48858.0,
+            6221.0,
+            74.5999984741211,
+            79.1500015258789,
+            48858.0,
+            11060.0
+          ]
+        ]
+      ],
+      "15274": [
+        [
+          37,
+          [
+            -33.599998474121094,
+            -8.149999618530273,
+            34961.0,
+            33320.0,
+            -70.05000305175781,
+            36.099998474121094,
+            44909.0,
+            41063.0,
+            14.649999618530273,
+            -8.149999618530273,
+            34961.0,
+            23089.0,
+            -70.05000305175781,
+            97.3499984741211,
+            58659.0,
+            41063.0,
+            67.44999694824219,
+            36.099998474121094,
+            44909.0,
+            11890.0,
+            -34.900001525878906,
+            127.3499984741211,
+            65388.0,
+            33597.0,
+            67.44999694824219,
+            74.55000305175781,
+            53539.0,
+            11890.0,
+            50.5,
+            127.3499984741211,
+            65388.0,
+            15485.0
+          ]
+        ]
+      ],
+      "15275": [
+        [
+          37,
+          [
+            -8.149999618530273,
+            -14.050000190734863,
+            51199.0,
+            41892.0,
+            -45.95000076293945,
+            18.5,
+            42714.0,
+            48805.0,
+            1.600000023841858,
+            -14.050000190734863,
+            53393.0,
+            41892.0,
+            -45.95000076293945,
+            52.400001525878906,
+            42714.0,
+            55995.0,
+            45.29999923706055,
+            21.100000381469727,
+            63194.0,
+            49358.0,
+            -12.75,
+            77.8499984741211,
+            50175.0,
+            61387.0,
+            45.29999923706055,
+            51.75,
+            63194.0,
+            55856.0,
+            12.050000190734863,
+            77.8499984741211,
+            55734.0,
+            61387.0
+          ]
+        ]
+      ]
+    },
+    "clips": {
+      "2576": {
+        "fps": 24,
+        "children": [
+          2468
+        ],
+        "names": [
+          ""
+        ],
+        "blending": [
+          0
+        ],
+        "frames": [
+          [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "timeline": [
+          0,
+          0,
+          0
+        ],
+        "labels": []
+      },
+      "2578": {
+        "fps": 24,
+        "children": [
+          2469
+        ],
+        "names": [
+          ""
+        ],
+        "blending": [
+          0
+        ],
+        "frames": [
+          [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "timeline": [
+          0
+        ],
+        "labels": []
+      },
+      "2698": {
+        "fps": 24,
+        "children": [
+          2576,
+          2462
+        ],
+        "names": [
+          "base",
+          ""
+        ],
+        "blending": [
+          0,
+          0
+        ],
+        "frames": [
+          [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        ],
+        "timeline": [
+          0
+        ],
+        "labels": []
+      },
+      "2699": {
+        "fps": 24,
+        "children": [
+          2578,
+          2464
+        ],
+        "names": [
+          "base",
+          ""
+        ],
+        "blending": [
+          0,
+          0
+        ],
+        "frames": [
+          [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        ],
+        "timeline": [
+          0
+        ],
+        "labels": []
+      },
+      "15304": {
+        "fps": 24,
+        "children": [
+          15266,
+          15267,
+          15268,
+          15269,
+          15270,
+          15271,
+          15272,
+          15273
+        ],
+        "names": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "blending": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "frames": [
+          [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              2,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              3,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              4,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              5,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              6,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              7,
+              0,
+              0
+            ]
+          ]
+        ],
+        "timeline": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          7,
+          7,
+          7
+        ],
+        "labels": []
+      },
+      "15305": {
+        "fps": 24,
+        "children": [
+          15304,
+          15274
+        ],
+        "names": [
+          "",
+          ""
+        ],
+        "blending": [
+          0,
+          0
+        ],
+        "frames": [
+          [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        ],
+        "timeline": [
+          0
+        ],
+        "labels": []
+      },
+      "15306": {
+        "fps": 24,
+        "children": [
+          15275
+        ],
+        "names": [
+          ""
+        ],
+        "blending": [
+          0
+        ],
+        "frames": [
+          [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "timeline": [
+          0
+        ],
+        "labels": []
+      }
+    },
+    "matrices": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        2.0,
+        0.0,
+        -14.0,
+        0.0,
+        2.0,
+        85.70000457763672
+      ]
+    ],
+    "colors": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  "textures": {
+    "8": {
+      "path": "assets/buildings/goblin-native/texture-8.png",
+      "sourceSize": [
+        444,
+        448
+      ],
+      "bounds": [
+        0,
+        0,
+        444,
+        448
+      ],
+      "packing": "packed source regions",
+      "width": 256,
+      "height": 352,
+      "rgbaSha256": "64c8546596e49ba0f308287483f2851a77320f3dce106e65559e2358d012512a",
+      "regions": [
+        {
+          "bounds": [
+            0,
+            0,
+            46,
+            38
+          ],
+          "placement": [
+            1,
+            313
+          ],
+          "rgbaSha256": "98a5e4c3180528d7dfc2f60297c9e7c88c6eb0385ccfd921d08d6a228cfc0fdf"
+        },
+        {
+          "bounds": [
+            159,
+            363,
+            218,
+            448
+          ],
+          "placement": [
+            171,
+            187
+          ],
+          "rgbaSha256": "0bb66a525f7ce00b2cfe5b52e94c5d180fadd205e27aa150cc5f0b29fbc17b77"
+        },
+        {
+          "bounds": [
+            261,
+            0,
+            429,
+            124
+          ],
+          "placement": [
+            1,
+            187
+          ],
+          "rgbaSha256": "fceca254f26ac45d9fe6f3a5112e9f7869e4539e974fb1283bf371d23964ac20"
+        },
+        {
+          "bounds": [
+            262,
+            141,
+            444,
+            325
+          ],
+          "placement": [
+            1,
+            1
+          ],
+          "rgbaSha256": "25d9382fd751fbfb4683f9e0a4a82bac1118ea37aa232efed8b029a024767619"
+        }
+      ]
+    },
+    "37": {
+      "path": "assets/buildings/goblin-native/texture-37.png",
+      "sourceSize": [
+        448,
+        474
+      ],
+      "bounds": [
+        0,
+        44,
+        448,
+        473
+      ],
+      "packing": "packed source regions",
+      "width": 256,
+      "height": 398,
+      "rgbaSha256": "8553bdb3ffb50dda78693a3a1e0f3380f4dc1b29ca223bba5a40dc6b60a0b176",
+      "regions": [
+        {
+          "bounds": [
+            0,
+            432,
+            32,
+            468
+          ],
+          "placement": [
+            36,
+            361
+          ],
+          "rgbaSha256": "2e01a5d3f7f0fa2eccbbd3d32248894589243becc37665b75a8c8d18335ddf21"
+        },
+        {
+          "bounds": [
+            80,
+            432,
+            113,
+            468
+          ],
+          "placement": [
+            1,
+            361
+          ],
+          "rgbaSha256": "9bf8c5c86739f25f5738bd48d7532790fd930d1c17b97590ea5dfa289d4506c2"
+        },
+        {
+          "bounds": [
+            117,
+            440,
+            153,
+            473
+          ],
+          "placement": [
+            109,
+            361
+          ],
+          "rgbaSha256": "4b4e687ef275aa93a7f58942526d2fe2b924b42d92039b7d89dc4c457471edea"
+        },
+        {
+          "bounds": [
+            157,
+            440,
+            194,
+            472
+          ],
+          "placement": [
+            147,
+            361
+          ],
+          "rgbaSha256": "edd9376e8fe937061a15825bcf1a1f2ce4371feccb1d89a64db6467cd4c6bbf5"
+        },
+        {
+          "bounds": [
+            238,
+            85,
+            448,
+            298
+          ],
+          "placement": [
+            1,
+            1
+          ],
+          "rgbaSha256": "a55de50782545afd9ce9358e38465868072384c57deaa5d0d85dd5e9b99ebe58"
+        },
+        {
+          "bounds": [
+            240,
+            70,
+            272,
+            108
+          ],
+          "placement": [
+            145,
+            216
+          ],
+          "rgbaSha256": "745295bbf5c1f816e5f3cb9b3b5a2041ef48ab4fbd80df1dfbe7715c869fd352"
+        },
+        {
+          "bounds": [
+            291,
+            302,
+            433,
+            445
+          ],
+          "placement": [
+            1,
+            216
+          ],
+          "rgbaSha256": "6f868e8dabe275cdb0c679a03c7fc74790093105428824805e77e41926d6427d"
+        },
+        {
+          "bounds": [
+            301,
+            44,
+            335,
+            81
+          ],
+          "placement": [
+            179,
+            216
+          ],
+          "rgbaSha256": "eea7eed76e4b76c3a01d59c96029a3c2776468765ddb89b7bb0e811ca4171661"
+        },
+        {
+          "bounds": [
+            339,
+            44,
+            372,
+            81
+          ],
+          "placement": [
+            215,
+            216
+          ],
+          "rgbaSha256": "ab46258ea528c3706996b281a0a4951497c0b59cc80cc3af4354148bd7753b02"
+        },
+        {
+          "bounds": [
+            387,
+            54,
+            424,
+            87
+          ],
+          "placement": [
+            70,
+            361
+          ],
+          "rgbaSha256": "708de1d53ccdebefa4fc20c0f6668cab97c4297ef76ffc3df8515766aba51d43"
+        }
+      ]
+    }
+  },
+  "previews": {
+    "goblin_townhall_lvl1": {
+      "path": "assets/buildings/goblin-native/goblin_townhall_lvl1.png",
+      "bounds": [
+        -100,
+        -30,
+        100,
+        150
+      ],
+      "width": 400,
+      "height": 360,
+      "rgbaSha256": "7713652ae868711f069af98afdb12b07d7f587ea1673e4d2e3daeb7181c82702"
+    },
+    "goblin_hut_lvl1": {
+      "path": "assets/buildings/goblin-native/goblin_hut_lvl1.png",
+      "bounds": [
+        -70,
+        -30,
+        70,
+        100
+      ],
+      "width": 280,
+      "height": 260,
+      "rgbaSha256": "62ab3e4dedb94018335b9532d8935d16584f691d8a1169efc6513b39bb1a8d0a"
+    },
+    "goblin_townhall_base": {
+      "path": "assets/buildings/goblin-native/goblin_townhall_base.png",
+      "bounds": [
+        -120,
+        -25,
+        120,
+        185
+      ],
+      "width": 480,
+      "height": 420,
+      "rgbaSha256": "68b664061cbe59e582bc8e66fdc0f38017334ecbcbbaafcfaecaf4774ce790f2"
+    },
+    "goblin_hut_base": {
+      "path": "assets/buildings/goblin-native/goblin_hut_base.png",
+      "bounds": [
+        -70,
+        -5,
+        65,
+        90
+      ],
+      "width": 270,
+      "height": 190,
+      "rgbaSha256": "bd7e6a15879efb6e0780200d1a953c341f663da9c3274b2363f93f7f5f095d29"
+    }
+  },
+  "animation": {
+    "goblin_townhall_lvl1": {
+      "fps": 24,
+      "frames": 24,
+      "distinctStates": 8
+    },
+    "goblin_hut_lvl1": {
+      "fps": 24,
+      "frames": 1,
+      "distinctStates": 1
+    },
+    "goblin_townhall_base": {
+      "fps": 24,
+      "frames": 1,
+      "distinctStates": 1
+    },
+    "goblin_hut_base": {
+      "fps": 24,
+      "frames": 1,
+      "distinctStates": 1
+    }
+  },
+  "reconstruction": {
+    "worldProjectionVerified": false,
+    "nativeBaseAssociationVerified": false,
+    "scope": "11 passive campaign Hall levels and Goblin Hut; weapon-bearing Home Halls excluded"
+  }
+}

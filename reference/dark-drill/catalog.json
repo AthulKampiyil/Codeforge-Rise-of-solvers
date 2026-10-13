@@ -1,0 +1,281 @@
+{
+  "name": "Dark Elixir Drill",
+  "globalId": 1000023,
+  "levels": [
+    {
+      "level": 1,
+      "hp": 800,
+      "size": [
+        3,
+        3
+      ],
+      "townhall": 7,
+      "buildResource": "Elixir",
+      "cost": 180000,
+      "seconds": 14400,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "darkelixir_pump_lvl1",
+        "ExportNameConstruction": "darkelixir_pump_const",
+        "ExportNameBuildAnim": "darkelixir_pump_upg",
+        "ExportNameDamaged": "destroyedBuilding_3s_pit_rock",
+        "ExportNameBase": "dark_elixir_pump_base"
+      },
+      "production": {
+        "resource": "DarkElixir",
+        "per100Hours": 2000,
+        "capacity": 160
+      }
+    },
+    {
+      "level": 2,
+      "hp": 860,
+      "size": [
+        3,
+        3
+      ],
+      "townhall": 7,
+      "buildResource": "Elixir",
+      "cost": 270000,
+      "seconds": 21600,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "darkelixir_pump_lvl2",
+        "ExportNameConstruction": "darkelixir_pump_const",
+        "ExportNameBuildAnim": "darkelixir_pump_upg",
+        "ExportNameDamaged": "destroyedBuilding_3s_pit_rock",
+        "ExportNameBase": "dark_elixir_pump_base"
+      },
+      "production": {
+        "resource": "DarkElixir",
+        "per100Hours": 3000,
+        "capacity": 300
+      }
+    },
+    {
+      "level": 3,
+      "hp": 920,
+      "size": [
+        3,
+        3
+      ],
+      "townhall": 7,
+      "buildResource": "Elixir",
+      "cost": 540000,
+      "seconds": 43200,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "darkelixir_pump_lvl3",
+        "ExportNameConstruction": "darkelixir_pump_const",
+        "ExportNameBuildAnim": "darkelixir_pump_upg",
+        "ExportNameDamaged": "destroyedBuilding_3s_pit_rock",
+        "ExportNameBase": "dark_elixir_pump_base"
+      },
+      "production": {
+        "resource": "DarkElixir",
+        "per100Hours": 4500,
+        "capacity": 540
+      }
+    },
+    {
+      "level": 4,
+      "hp": 980,
+      "size": [
+        3,
+        3
+      ],
+      "townhall": 9,
+      "buildResource": "Elixir",
+      "cost": 900000,
+      "seconds": 64800,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "darkelixir_pump_lvl4",
+        "ExportNameConstruction": "darkelixir_pump_const",
+        "ExportNameBuildAnim": "darkelixir_pump_upg",
+        "ExportNameDamaged": "destroyedBuilding_3s_pit_rock",
+        "ExportNameBase": "dark_elixir_pump_base"
+      },
+      "production": {
+        "resource": "DarkElixir",
+        "per100Hours": 6000,
+        "capacity": 840
+      }
+    },
+    {
+      "level": 5,
+      "hp": 1060,
+      "size": [
+        3,
+        3
+      ],
+      "townhall": 9,
+      "buildResource": "Elixir",
+      "cost": 1200000,
+      "seconds": 86400,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "darkelixir_pump_lvl5",
+        "ExportNameConstruction": "darkelixir_pump_const",
+        "ExportNameBuildAnim": "darkelixir_pump_upg",
+        "ExportNameDamaged": "destroyedBuilding_3s_pit_rock",
+        "ExportNameBase": "dark_elixir_pump_base"
+      },
+      "production": {
+        "resource": "DarkElixir",
+        "per100Hours": 8000,
+        "capacity": 1280
+      }
+    },
+    {
+      "level": 6,
+      "hp": 1160,
+      "size": [
+        3,
+        3
+      ],
+      "townhall": 9,
+      "buildResource": "Elixir",
+      "cost": 1800000,
+      "seconds": 129600,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "darkelixir_pump_lvl6",
+        "ExportNameConstruction": "darkelixir_pump_const",
+        "ExportNameBuildAnim": "darkelixir_pump_upg",
+        "ExportNameDamaged": "destroyedBuilding_3s_pit_rock",
+        "ExportNameBase": "dark_elixir_pump_base"
+      },
+      "production": {
+        "resource": "DarkElixir",
+        "per100Hours": 10000,
+        "capacity": 1800
+      }
+    },
+    {
+      "level": 7,
+      "hp": 1280,
+      "size": [
+        3,
+        3
+      ],
+      "townhall": 10,
+      "buildResource": "Elixir",
+      "cost": 2100000,
+      "seconds": 151200,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "darkelixir_pump_lvl7",
+        "ExportNameConstruction": "darkelixir_pump_const",
+        "ExportNameBuildAnim": "darkelixir_pump_upg",
+        "ExportNameDamaged": "destroyedBuilding_3s_pit_rock",
+        "ExportNameBase": "dark_elixir_pump_base"
+      },
+      "production": {
+        "resource": "DarkElixir",
+        "per100Hours": 12000,
+        "capacity": 2400
+      }
+    },
+    {
+      "level": 8,
+      "hp": 1380,
+      "size": [
+        3,
+        3
+      ],
+      "townhall": 11,
+      "buildResource": "Elixir",
+      "cost": 2400000,
+      "seconds": 172800,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "darkelixir_pump_lvl8",
+        "ExportNameConstruction": "darkelixir_pump_const",
+        "ExportNameBuildAnim": "darkelixir_pump_upg",
+        "ExportNameDamaged": "destroyedBuilding_3s_pit_rock",
+        "ExportNameBase": "dark_elixir_pump_base"
+      },
+      "production": {
+        "resource": "DarkElixir",
+        "per100Hours": 14000,
+        "capacity": 3000
+      }
+    },
+    {
+      "level": 9,
+      "hp": 1480,
+      "size": [
+        3,
+        3
+      ],
+      "townhall": 12,
+      "buildResource": "Elixir",
+      "cost": 3700000,
+      "seconds": 216000,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "darkelixir_pump_lvl9",
+        "ExportNameConstruction": "darkelixir_pump_const",
+        "ExportNameBuildAnim": "darkelixir_pump_upg",
+        "ExportNameDamaged": "destroyedBuilding_3s_pit_rock",
+        "ExportNameBase": "dark_elixir_pump_base"
+      },
+      "production": {
+        "resource": "DarkElixir",
+        "per100Hours": 16000,
+        "capacity": 3600
+      }
+    },
+    {
+      "level": 10,
+      "hp": 1550,
+      "size": [
+        3,
+        3
+      ],
+      "townhall": 14,
+      "buildResource": "Elixir",
+      "cost": 5300000,
+      "seconds": 259200,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "darkelixir_pump_lvl10",
+        "ExportNameConstruction": "darkelixir_pump_const",
+        "ExportNameBuildAnim": "darkelixir_pump_upg",
+        "ExportNameDamaged": "destroyedBuilding_3s_pit_rock",
+        "ExportNameBase": "dark_elixir_pump_base"
+      },
+      "production": {
+        "resource": "DarkElixir",
+        "per100Hours": 18000,
+        "capacity": 4200
+      }
+    },
+    {
+      "level": 11,
+      "hp": 1600,
+      "size": [
+        3,
+        3
+      ],
+      "townhall": 16,
+      "buildResource": "Elixir",
+      "cost": 12000000,
+      "seconds": 518400,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "darkelixir_pump_lvl11",
+        "ExportNameConstruction": "darkelixir_pump_const",
+        "ExportNameBuildAnim": "darkelixir_pump_upg",
+        "ExportNameDamaged": "destroyedBuilding_3s_pit_rock",
+        "ExportNameBase": "dark_elixir_pump_base"
+      },
+      "production": {
+        "resource": "DarkElixir",
+        "per100Hours": 20000,
+        "capacity": 4600
+      }
+    }
+  ]
+}

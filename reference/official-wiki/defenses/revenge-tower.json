@@ -1,0 +1,174 @@
+{
+ "title": "Revenge Tower",
+ "url": "https://clashofclans.fandom.com/wiki/Revenge_Tower",
+ "revid": 624636,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Revenge Tower",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "hitpoints": 5800,
+   "cost": 430000,
+   "buildSeconds": 1123205,
+   "xp": 1059,
+   "townHall": 18,
+   "stage1Dps": 375,
+   "stage1DamagePerHit": 450,
+   "stage2MaximumDamagePerSecond": 375,
+   "stage2DamagePerHitPrimary": 225,
+   "stage2DamagePerHitSecondary": 135,
+   "stage3MaximumDamagePerSecond": 642,
+   "stage3DamagePerHitPrimary": 225,
+   "stage3DamagePerHitSecondary": 135,
+   "stage3DamagePerHitTertiary": 81
+  },
+  {
+   "level": 2,
+   "hitpoints": 6200,
+   "cost": 460000,
+   "buildSeconds": 1209600,
+   "xp": 1099,
+   "townHall": 18,
+   "stage1Dps": 416,
+   "stage1DamagePerHit": 500,
+   "stage2MaximumDamagePerSecond": 416,
+   "stage2DamagePerHitPrimary": 250,
+   "stage2DamagePerHitSecondary": 150,
+   "stage3MaximumDamagePerSecond": 714,
+   "stage3DamagePerHitPrimary": 250,
+   "stage3DamagePerHitSecondary": 150,
+   "stage3DamagePerHitTertiary": 90
+  }
+ ],
+ "supercharges": [
+  {
+   "charge": 1,
+   "hitpoints": 6200,
+   "cost": 220000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 18,
+   "stage1Dps": 425,
+   "stage1DamagePerHit": 510,
+   "stage1Hitpoints": 6200,
+   "stage1Cost": 220000,
+   "stage1BuildSeconds": 604800,
+   "stage1Xp": 777,
+   "stage1TownHall": 18,
+   "stage2MaximumDamagePerSecond": 433,
+   "stage2DamagePerHitPrimary": 260,
+   "stage2DamagePerHitSecondary": 156,
+   "stage2Hitpoints": 6200,
+   "stage2Cost": 220000,
+   "stage2BuildSeconds": 604800,
+   "stage2Xp": 777,
+   "stage2TownHall": 18,
+   "stage3MaximumDamagePerSecond": 742,
+   "stage3DamagePerHitPrimary": 260,
+   "stage3DamagePerHitSecondary": 156,
+   "stage3DamagePerHitTertiary": 93.6,
+   "stage3Hitpoints": 6200,
+   "stage3Cost": 220000,
+   "stage3BuildSeconds": 604800,
+   "stage3Xp": 777,
+   "stage3TownHall": 18
+  },
+  {
+   "charge": 2,
+   "hitpoints": 6300,
+   "cost": 200000,
+   "buildSeconds": 691200,
+   "xp": 831,
+   "townHall": 18,
+   "stage1Dps": 425,
+   "stage1DamagePerHit": 510,
+   "stage1Hitpoints": 6300,
+   "stage1Cost": 200000,
+   "stage1BuildSeconds": 691200,
+   "stage1Xp": 831,
+   "stage1TownHall": 18,
+   "stage2MaximumDamagePerSecond": 433,
+   "stage2DamagePerHitPrimary": 260,
+   "stage2DamagePerHitSecondary": 156,
+   "stage2Hitpoints": 6300,
+   "stage2Cost": 200000,
+   "stage2BuildSeconds": 691200,
+   "stage2Xp": 831,
+   "stage2TownHall": 18,
+   "stage3MaximumDamagePerSecond": 742,
+   "stage3DamagePerHitPrimary": 260,
+   "stage3DamagePerHitSecondary": 156,
+   "stage3DamagePerHitTertiary": 93.6,
+   "stage3Hitpoints": 6300,
+   "stage3Cost": 200000,
+   "stage3BuildSeconds": 691200,
+   "stage3Xp": 831,
+   "stage3TownHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 18,
+  "size": "3x3",
+  "range": 11,
+  "targets": "ground & air",
+  "resource": "dark elixir",
+  "stages": [
+   {
+    "stage": 0,
+    "name": "dormant",
+    "activeAfterDestroyedBuildings": 0,
+    "attacks": false
+   },
+   {
+    "stage": 1,
+    "activeAfterDestroyedBuildings": 5,
+    "attackSeconds": 1.2,
+    "bounces": 0
+   },
+   {
+    "stage": 2,
+    "activeAfterDestroyedBuildings": 25,
+    "attackSeconds": 0.6,
+    "bounces": 1,
+    "bounceRangeTiles": "~2 (wiki estimate; client 4.5)",
+    "bounceDamagePercent": 60
+   },
+   {
+    "stage": 3,
+    "activeAfterDestroyedBuildings": 50,
+    "attackSeconds": 0.35,
+    "bounces": 2,
+    "bounceRangeTiles": "~2 (wiki estimate; client 4.5)",
+    "bounceDamagePercent": 60
+   }
+  ],
+  "attackSeconds": 1.2
+ },
+ "mismatches": [
+  {
+   "field": "bounceRangeTiles",
+   "level": "stages 2-3",
+   "wiki": "~2 tiles from the previous target",
+   "client": "RevengeTowerProjectile2/3 MaxBounceDistance 450 (4.5 tiles)",
+   "note": "the wiki's '~2 tiles' is an observation; the client bounce search distance is 4.5 tiles"
+  },
+  {
+   "field": "damage (building row)",
+   "level": "1-2",
+   "wiki": "not listed",
+   "client": "Damage 50/60",
+   "note": "unused/placeholder on the building row; the stage abilities carry the real damage"
+  }
+ ],
+ "progressionMismatches": [
+  {
+   "field": "damage/dps",
+   "level": "1-2",
+   "wiki": "stage 1: 450/500 per shot (375/416 DPS); stages 2-3: 225/250",
+   "progression": "damage 50/60, dps 41.7/50, rate 1.2",
+   "note": "progression.json uses the building row's Damage column (50/60), which is not the stage damage; real values are in special_abilities DebrisTowerTier2-4"
+  }
+ ]
+}

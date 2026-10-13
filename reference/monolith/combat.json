@@ -1,0 +1,162 @@
+{
+  "globalId": 1000077,
+  "size": 3,
+  "range": 1100,
+  "attackSpeedMs": 1500,
+  "coolDownOverrideMs": 750,
+  "animationActionFrame": 5,
+  "defenderZ": 155,
+  "airTargets": true,
+  "groundTargets": true,
+  "levels": [
+    {
+      "level": 1,
+      "townhall": 15,
+      "hp": 4747,
+      "dps": 150,
+      "damagePermilHp": 110,
+      "variantThresholds": [
+        600,
+        2500
+      ],
+      "defaultVariant": 3,
+      "body": "monolith_lvl_1",
+      "upgrade": "monolith_lvl_1_upgrade",
+      "base": "dark_tower_base",
+      "ruin": "destroyedBuilding_3l_base_rockwood",
+      "construction": "tower_turret_const",
+      "buildAnim": "tower_turret_upg",
+      "attackEffect": "Monolith Attack",
+      "hitEffect": "Explosive Arrow",
+      "destroyEffect": "Building Destroyed"
+    },
+    {
+      "level": 2,
+      "townhall": 15,
+      "hp": 5050,
+      "dps": 175,
+      "damagePermilHp": 120,
+      "variantThresholds": [
+        650,
+        2750
+      ],
+      "defaultVariant": 3,
+      "body": "monolith_lvl_2",
+      "upgrade": "monolith_lvl_2_upgrade",
+      "base": "dark_tower_base",
+      "ruin": "destroyedBuilding_3l_base_rockwood",
+      "construction": "tower_turret_const",
+      "buildAnim": "tower_turret_upg",
+      "attackEffect": "Monolith Attack",
+      "hitEffect": "Explosive Arrow",
+      "destroyEffect": "Building Destroyed"
+    },
+    {
+      "level": 3,
+      "townhall": 16,
+      "hp": 5353,
+      "dps": 193,
+      "damagePermilHp": 130,
+      "variantThresholds": [
+        700,
+        3000
+      ],
+      "defaultVariant": 3,
+      "body": "monolith_lvl_3",
+      "upgrade": "monolith_lvl_3_upgrade",
+      "base": "dark_tower_base",
+      "ruin": "destroyedBuilding_3l_base_rockwood",
+      "construction": "tower_turret_const",
+      "buildAnim": "tower_turret_upg",
+      "attackEffect": "Monolith Attack",
+      "hitEffect": "Explosive Arrow",
+      "destroyEffect": "Building Destroyed"
+    },
+    {
+      "level": 4,
+      "townhall": 17,
+      "hp": 5656,
+      "dps": 209,
+      "damagePermilHp": 140,
+      "variantThresholds": [
+        750,
+        3250
+      ],
+      "defaultVariant": 3,
+      "body": "monolith_lvl_4",
+      "upgrade": "monolith_lvl_4_upgrade",
+      "base": "dark_tower_base",
+      "ruin": "destroyedBuilding_3l_base_rockwood",
+      "construction": "tower_turret_const",
+      "buildAnim": "tower_turret_upg",
+      "attackEffect": "Monolith Attack",
+      "hitEffect": "Explosive Arrow",
+      "destroyEffect": "Building Destroyed"
+    },
+    {
+      "level": 5,
+      "townhall": 18,
+      "hp": 5959,
+      "dps": 225,
+      "damagePermilHp": 150,
+      "variantThresholds": [
+        800,
+        3500
+      ],
+      "defaultVariant": 3,
+      "body": "monolith_lvl_5",
+      "upgrade": "monolith_lvl_5_upgrade",
+      "base": "dark_tower_base",
+      "ruin": "destroyedBuilding_3l_base_rockwood",
+      "construction": "tower_turret_const",
+      "buildAnim": "tower_turret_upg",
+      "attackEffect": "Monolith Attack",
+      "hitEffect": "Explosive Arrow",
+      "destroyEffect": "Building Destroyed"
+    }
+  ],
+  "projectiles": [
+    {
+      "name": "MonolithProjectileMin",
+      "export": "monolith_projectile_min",
+      "speed": 2200,
+      "scale": 100,
+      "startHeight": 220,
+      "startOffset": 60,
+      "tracksTarget": true,
+      "rotates": true,
+      "scaleTimeline": true,
+      "trailEffect": "MonolithProjectilTrailMinEffect",
+      "spawnEffect": "MonolithAtkMin",
+      "destroyedEffect": "MonolithHitMin"
+    },
+    {
+      "name": "MonolithProjectileMed",
+      "export": "monolith_projectile_med",
+      "speed": 2200,
+      "scale": 150,
+      "startHeight": 220,
+      "startOffset": 60,
+      "tracksTarget": true,
+      "rotates": true,
+      "scaleTimeline": true,
+      "trailEffect": "MonolithProjectilTrailMedEffect",
+      "spawnEffect": "MonolithAtkMed",
+      "destroyedEffect": "MonolithHitMed"
+    },
+    {
+      "name": "MonolithProjectileMax",
+      "export": "monolith_projectile_max",
+      "speed": 2200,
+      "scale": 200,
+      "startHeight": 220,
+      "startOffset": 60,
+      "tracksTarget": true,
+      "rotates": true,
+      "scaleTimeline": true,
+      "trailEffect": "MonolithProjectilTrailMaxEffect",
+      "spawnEffect": "MonolithAtkMax",
+      "destroyedEffect": "MonolithHitMax"
+    }
+  ]
+}

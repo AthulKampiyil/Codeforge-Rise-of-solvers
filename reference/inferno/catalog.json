@@ -1,0 +1,570 @@
+{
+  "name": "Inferno Tower",
+  "globalId": 1000027,
+  "levels": [
+    {
+      "level": 1,
+      "hp": 1500,
+      "size": [
+        2,
+        2
+      ],
+      "townhall": 10,
+      "buildResource": "Gold",
+      "cost": 1000000,
+      "seconds": 43200,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "dark_tower_lvl1",
+        "ExportNameConstruction": "dark_tower_const",
+        "ExportNameBuildAnim": "dark_tower_upg",
+        "ExportNameUpgradeAnim": "dark_tower_lvl1_upgrade",
+        "AlternateExportName": "dark_tower_lvl1_multi",
+        "AlternateUpgradeExportName": "dark_tower_lvl1_upgrade_multi",
+        "ExportNameDamaged": "destroyedBuilding_2l_round_pit_rockwood",
+        "ExportNameBase": "dark_tower_base"
+      },
+      "weapon": {
+        "intervalMs": 128,
+        "rangeSource": 900,
+        "alternateRangeSource": 1000,
+        "dps": [
+          30,
+          80,
+          800
+        ],
+        "switchTimesMs": [
+          1500,
+          5250
+        ],
+        "alternateTargets": 5,
+        "alternatePickNewTargetDelay": 50,
+        "ammoCount": 1000,
+        "ammoCost": 500,
+        "ammoResource": "DarkElixir",
+        "airTargets": true,
+        "groundTargets": true,
+        "alternateAirTargets": true,
+        "alternateGroundTargets": true,
+        "increasingDamage": true
+      }
+    },
+    {
+      "level": 2,
+      "hp": 1800,
+      "size": [
+        2,
+        2
+      ],
+      "townhall": 10,
+      "buildResource": "Gold",
+      "cost": 1200000,
+      "seconds": 86400,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "dark_tower_lvl2",
+        "ExportNameConstruction": "dark_tower_const",
+        "ExportNameBuildAnim": "dark_tower_upg",
+        "ExportNameUpgradeAnim": "dark_tower_lvl2_upgrade",
+        "AlternateExportName": "dark_tower_lvl2_multi",
+        "AlternateUpgradeExportName": "dark_tower_lvl2_upgrade_multi",
+        "ExportNameDamaged": "destroyedBuilding_2l_round_pit_rockwood",
+        "ExportNameBase": "dark_tower_base"
+      },
+      "weapon": {
+        "intervalMs": 128,
+        "rangeSource": 900,
+        "alternateRangeSource": 1000,
+        "dps": [
+          35,
+          100,
+          1000
+        ],
+        "switchTimesMs": [
+          1500,
+          5250
+        ],
+        "alternateTargets": 5,
+        "alternatePickNewTargetDelay": 50,
+        "ammoCount": 1000,
+        "ammoCost": 600,
+        "ammoResource": "DarkElixir",
+        "airTargets": true,
+        "groundTargets": true,
+        "alternateAirTargets": true,
+        "alternateGroundTargets": true,
+        "increasingDamage": true
+      }
+    },
+    {
+      "level": 3,
+      "hp": 2100,
+      "size": [
+        2,
+        2
+      ],
+      "townhall": 10,
+      "buildResource": "Gold",
+      "cost": 2400000,
+      "seconds": 172800,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "dark_tower_lvl3",
+        "ExportNameConstruction": "dark_tower_const",
+        "ExportNameBuildAnim": "dark_tower_upg",
+        "ExportNameUpgradeAnim": "dark_tower_lvl3_upgrade",
+        "AlternateExportName": "dark_tower_lvl3_multi",
+        "AlternateUpgradeExportName": "dark_tower_lvl3_upgrade_multi",
+        "ExportNameDamaged": "destroyedBuilding_2l_round_pit_rockwood",
+        "ExportNameBase": "dark_tower_base"
+      },
+      "weapon": {
+        "intervalMs": 128,
+        "rangeSource": 900,
+        "alternateRangeSource": 1000,
+        "dps": [
+          40,
+          120,
+          1200
+        ],
+        "switchTimesMs": [
+          1500,
+          5250
+        ],
+        "alternateTargets": 5,
+        "alternatePickNewTargetDelay": 50,
+        "ammoCount": 1000,
+        "ammoCost": 700,
+        "ammoResource": "DarkElixir",
+        "airTargets": true,
+        "groundTargets": true,
+        "alternateAirTargets": true,
+        "alternateGroundTargets": true,
+        "increasingDamage": true
+      }
+    },
+    {
+      "level": 4,
+      "hp": 2400,
+      "size": [
+        2,
+        2
+      ],
+      "townhall": 11,
+      "buildResource": "Gold",
+      "cost": 3400000,
+      "seconds": 216000,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "dark_tower_lvl4",
+        "ExportNameConstruction": "dark_tower_const",
+        "ExportNameBuildAnim": "dark_tower_upg",
+        "ExportNameUpgradeAnim": "dark_tower_lvl4_upgrade",
+        "AlternateExportName": "dark_tower_lvl4_multi",
+        "AlternateUpgradeExportName": "dark_tower_lvl4_upgrade_multi",
+        "ExportNameDamaged": "destroyedBuilding_2l_round_pit_rockwood",
+        "ExportNameBase": "dark_tower_base"
+      },
+      "weapon": {
+        "intervalMs": 128,
+        "rangeSource": 900,
+        "alternateRangeSource": 1000,
+        "dps": [
+          45,
+          140,
+          1400
+        ],
+        "switchTimesMs": [
+          1500,
+          5250
+        ],
+        "alternateTargets": 5,
+        "alternatePickNewTargetDelay": 50,
+        "ammoCount": 1000,
+        "ammoCost": 800,
+        "ammoResource": "DarkElixir",
+        "airTargets": true,
+        "groundTargets": true,
+        "alternateAirTargets": true,
+        "alternateGroundTargets": true,
+        "increasingDamage": true
+      }
+    },
+    {
+      "level": 5,
+      "hp": 2700,
+      "size": [
+        2,
+        2
+      ],
+      "townhall": 11,
+      "buildResource": "Gold",
+      "cost": 4000000,
+      "seconds": 259200,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "dark_tower_lvl5",
+        "ExportNameConstruction": "dark_tower_const",
+        "ExportNameBuildAnim": "dark_tower_upg",
+        "ExportNameUpgradeAnim": "dark_tower_lvl5_upgrade",
+        "AlternateExportName": "dark_tower_lvl5_multi",
+        "AlternateUpgradeExportName": "dark_tower_lvl5_upgrade_multi",
+        "ExportNameDamaged": "destroyedBuilding_2l_round_pit_rockwood",
+        "ExportNameBase": "dark_tower_base"
+      },
+      "weapon": {
+        "intervalMs": 128,
+        "rangeSource": 900,
+        "alternateRangeSource": 1000,
+        "dps": [
+          50,
+          150,
+          1500
+        ],
+        "switchTimesMs": [
+          1500,
+          5250
+        ],
+        "alternateTargets": 5,
+        "alternatePickNewTargetDelay": 50,
+        "ammoCount": 1000,
+        "ammoCost": 900,
+        "ammoResource": "DarkElixir",
+        "airTargets": true,
+        "groundTargets": true,
+        "alternateAirTargets": true,
+        "alternateGroundTargets": true,
+        "increasingDamage": true
+      }
+    },
+    {
+      "level": 6,
+      "hp": 3000,
+      "size": [
+        2,
+        2
+      ],
+      "townhall": 12,
+      "buildResource": "Gold",
+      "cost": 6000000,
+      "seconds": 345600,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "dark_tower_lvl6",
+        "ExportNameConstruction": "dark_tower_const",
+        "ExportNameBuildAnim": "dark_tower_upg",
+        "ExportNameUpgradeAnim": "dark_tower_lvl6_upgrade",
+        "AlternateExportName": "dark_tower_lvl6_multi",
+        "AlternateUpgradeExportName": "dark_tower_lvl6_upgrade_multi",
+        "ExportNameDamaged": "destroyedBuilding_2l_round_pit_rockwood",
+        "ExportNameBase": "dark_tower_base"
+      },
+      "weapon": {
+        "intervalMs": 128,
+        "rangeSource": 900,
+        "alternateRangeSource": 1000,
+        "dps": [
+          55,
+          160,
+          1600
+        ],
+        "switchTimesMs": [
+          1500,
+          5250
+        ],
+        "alternateTargets": 5,
+        "alternatePickNewTargetDelay": 50,
+        "ammoCount": 1000,
+        "ammoCost": 1000,
+        "ammoResource": "DarkElixir",
+        "airTargets": true,
+        "groundTargets": true,
+        "alternateAirTargets": true,
+        "alternateGroundTargets": true,
+        "increasingDamage": true
+      }
+    },
+    {
+      "level": 7,
+      "hp": 3300,
+      "size": [
+        2,
+        2
+      ],
+      "townhall": 13,
+      "buildResource": "Gold",
+      "cost": 8000000,
+      "seconds": 432000,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "dark_tower_lvl7",
+        "ExportNameConstruction": "dark_tower_const",
+        "ExportNameBuildAnim": "dark_tower_upg",
+        "ExportNameUpgradeAnim": "dark_tower_lvl7_upgrade",
+        "AlternateExportName": "dark_tower_lvl7_multi",
+        "AlternateUpgradeExportName": "dark_tower_lvl7_upgrade_multi",
+        "ExportNameDamaged": "destroyedBuilding_2l_round_pit_rockwood",
+        "ExportNameBase": "dark_tower_base"
+      },
+      "weapon": {
+        "intervalMs": 128,
+        "rangeSource": 900,
+        "alternateRangeSource": 1000,
+        "dps": [
+          65,
+          180,
+          1800
+        ],
+        "switchTimesMs": [
+          1500,
+          5250
+        ],
+        "alternateTargets": 5,
+        "alternatePickNewTargetDelay": 50,
+        "ammoCount": 1000,
+        "ammoCost": 1100,
+        "ammoResource": "DarkElixir",
+        "airTargets": true,
+        "groundTargets": true,
+        "alternateAirTargets": true,
+        "alternateGroundTargets": true,
+        "increasingDamage": true
+      }
+    },
+    {
+      "level": 8,
+      "hp": 3700,
+      "size": [
+        2,
+        2
+      ],
+      "townhall": 14,
+      "buildResource": "Gold",
+      "cost": 9500000,
+      "seconds": 518400,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "dark_tower_lvl8",
+        "ExportNameConstruction": "dark_tower_const",
+        "ExportNameBuildAnim": "dark_tower_upg",
+        "ExportNameUpgradeAnim": "dark_tower_lvl8_upgrade",
+        "AlternateExportName": "dark_tower_lvl8_multi",
+        "AlternateUpgradeExportName": "dark_tower_lvl8_upgrade_multi",
+        "ExportNameDamaged": "destroyedBuilding_2l_round_pit_rockwood",
+        "ExportNameBase": "dark_tower_base"
+      },
+      "weapon": {
+        "intervalMs": 128,
+        "rangeSource": 900,
+        "alternateRangeSource": 1000,
+        "dps": [
+          80,
+          210,
+          2100
+        ],
+        "switchTimesMs": [
+          1500,
+          5250
+        ],
+        "alternateTargets": 6,
+        "alternatePickNewTargetDelay": 50,
+        "ammoCount": 1000,
+        "ammoCost": 1200,
+        "ammoResource": "DarkElixir",
+        "airTargets": true,
+        "groundTargets": true,
+        "alternateAirTargets": true,
+        "alternateGroundTargets": true,
+        "increasingDamage": true
+      }
+    },
+    {
+      "level": 9,
+      "hp": 4000,
+      "size": [
+        2,
+        2
+      ],
+      "townhall": 15,
+      "buildResource": "Gold",
+      "cost": 10000000,
+      "seconds": 561600,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "dark_tower_lvl9",
+        "ExportNameConstruction": "dark_tower_const",
+        "ExportNameBuildAnim": "dark_tower_upg",
+        "ExportNameUpgradeAnim": "dark_tower_lvl9_upgrade",
+        "AlternateExportName": "dark_tower_lvl9_multi",
+        "AlternateUpgradeExportName": "dark_tower_lvl9_upgrade_multi",
+        "ExportNameDamaged": "destroyedBuilding_2l_round_pit_rockwood",
+        "ExportNameBase": "dark_tower_base"
+      },
+      "weapon": {
+        "intervalMs": 128,
+        "rangeSource": 900,
+        "alternateRangeSource": 1000,
+        "dps": [
+          100,
+          230,
+          2300
+        ],
+        "switchTimesMs": [
+          1500,
+          5250
+        ],
+        "alternateTargets": 6,
+        "alternatePickNewTargetDelay": 50,
+        "ammoCount": 1000,
+        "ammoCost": 1300,
+        "ammoResource": "DarkElixir",
+        "airTargets": true,
+        "groundTargets": true,
+        "alternateAirTargets": true,
+        "alternateGroundTargets": true,
+        "increasingDamage": true
+      }
+    },
+    {
+      "level": 10,
+      "hp": 4400,
+      "size": [
+        2,
+        2
+      ],
+      "townhall": 16,
+      "buildResource": "Gold",
+      "cost": 11000000,
+      "seconds": 604800,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "dark_tower_lvl10",
+        "ExportNameConstruction": "dark_tower_const",
+        "ExportNameBuildAnim": "dark_tower_upg",
+        "ExportNameUpgradeAnim": "dark_tower_lvl10_upgrade",
+        "AlternateExportName": "dark_tower_lvl10_multi",
+        "AlternateUpgradeExportName": "dark_tower_lvl10_upgrade_multi",
+        "ExportNameDamaged": "destroyedBuilding_2l_round_pit_rockwood",
+        "ExportNameBase": "dark_tower_base"
+      },
+      "weapon": {
+        "intervalMs": 128,
+        "rangeSource": 900,
+        "alternateRangeSource": 1000,
+        "dps": [
+          120,
+          260,
+          2600
+        ],
+        "switchTimesMs": [
+          1500,
+          5250
+        ],
+        "alternateTargets": 6,
+        "alternatePickNewTargetDelay": 50,
+        "ammoCount": 1000,
+        "ammoCost": 1400,
+        "ammoResource": "DarkElixir",
+        "airTargets": true,
+        "groundTargets": true,
+        "alternateAirTargets": true,
+        "alternateGroundTargets": true,
+        "increasingDamage": true
+      }
+    },
+    {
+      "level": 11,
+      "hp": 4800,
+      "size": [
+        2,
+        2
+      ],
+      "townhall": 17,
+      "buildResource": "Gold",
+      "cost": 16000000,
+      "seconds": 691200,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "dark_tower_lvl11",
+        "ExportNameConstruction": "dark_tower_const",
+        "ExportNameBuildAnim": "dark_tower_upg",
+        "ExportNameUpgradeAnim": "dark_tower_lvl11_upgrade",
+        "AlternateExportName": "dark_tower_lvl11_multi",
+        "AlternateUpgradeExportName": "dark_tower_lvl11_upgrade_multi",
+        "ExportNameDamaged": "destroyedBuilding_2l_round_pit_rockwood",
+        "ExportNameBase": "dark_tower_base"
+      },
+      "weapon": {
+        "intervalMs": 128,
+        "rangeSource": 900,
+        "alternateRangeSource": 1000,
+        "dps": [
+          140,
+          290,
+          2900
+        ],
+        "switchTimesMs": [
+          1500,
+          5250
+        ],
+        "alternateTargets": 6,
+        "alternatePickNewTargetDelay": 50,
+        "ammoCount": 1000,
+        "ammoCost": 1500,
+        "ammoResource": "DarkElixir",
+        "airTargets": true,
+        "groundTargets": true,
+        "alternateAirTargets": true,
+        "alternateGroundTargets": true,
+        "increasingDamage": true
+      }
+    },
+    {
+      "level": 12,
+      "hp": 5100,
+      "size": [
+        2,
+        2
+      ],
+      "townhall": 18,
+      "buildResource": "Gold",
+      "cost": 26500000,
+      "seconds": 1166400,
+      "art": {
+        "SWF": "sc/buildings.sc",
+        "ExportName": "dark_tower_lvl12",
+        "ExportNameConstruction": "dark_tower_const",
+        "ExportNameBuildAnim": "dark_tower_upg",
+        "ExportNameUpgradeAnim": "dark_tower_lvl12_upgrade",
+        "AlternateExportName": "dark_tower_lvl12_multi",
+        "AlternateUpgradeExportName": "dark_tower_lvl12_upgrade_multi",
+        "ExportNameDamaged": "destroyedBuilding_2l_round_pit_rockwood",
+        "ExportNameBase": "dark_tower_base"
+      },
+      "weapon": {
+        "intervalMs": 128,
+        "rangeSource": 900,
+        "alternateRangeSource": 1000,
+        "dps": [
+          155,
+          330,
+          3300
+        ],
+        "switchTimesMs": [
+          1500,
+          5250
+        ],
+        "alternateTargets": 6,
+        "alternatePickNewTargetDelay": 50,
+        "ammoCount": 1000,
+        "ammoCost": 1600,
+        "ammoResource": "DarkElixir",
+        "airTargets": true,
+        "groundTargets": true,
+        "alternateAirTargets": true,
+        "alternateGroundTargets": true,
+        "increasingDamage": true
+      }
+    }
+  ]
+}

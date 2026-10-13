@@ -1,0 +1,256 @@
+{
+ "title": "Rage Gem",
+ "url": "https://clashofclans.fandom.com/wiki/Rage_Gem",
+ "revid": 622981,
+ "retrieved": "2026-09-15",
+ "clientName": "Rage Gem",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Grand Warden",
+ "summary": "Warden Common passive item (Blacksmith 4): aura raising allies' damage (or healing) by 15% → 50% without speed boosts; passive DPS and attack speed.",
+ "constants": {
+  "wiki": {
+   "User": "Grand Warden",
+   "Ability Type": "Passive",
+   "Rarity": "Common",
+   "Unlock Requirement": "Blacksmith level 4"
+  },
+  "client": {
+   "Rarity": "COMMON",
+   "AllowedCharacters": "Grand Warden;",
+   "MainAbilities": "GrandWardenRageAura",
+   "levelRows": 18,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "percentDamageIncrease": {
+   "wikiHeader": "% Damage Increase",
+   "unit": "damage points"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boosts / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "attackSpeedIncreasePercent": {
+   "wikiHeader": "Hero Boosts / Attack Speed Increase",
+   "unit": "percent"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "percentDamageIncrease": 15,
+   "damagePerSecondIncrease": 12,
+   "attackSpeedIncreasePercent": 5,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 4
+  },
+  {
+   "level": 2,
+   "percentDamageIncrease": 15,
+   "damagePerSecondIncrease": 14,
+   "attackSpeedIncreasePercent": 6,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 4
+  },
+  {
+   "level": 3,
+   "percentDamageIncrease": 20,
+   "damagePerSecondIncrease": 16,
+   "attackSpeedIncreasePercent": 7,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "blacksmithLevelRequired": 4
+  },
+  {
+   "level": 4,
+   "percentDamageIncrease": 20,
+   "damagePerSecondIncrease": 18,
+   "attackSpeedIncreasePercent": 8,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 4
+  },
+  {
+   "level": 5,
+   "percentDamageIncrease": 20,
+   "damagePerSecondIncrease": 20,
+   "attackSpeedIncreasePercent": 9,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 4
+  },
+  {
+   "level": 6,
+   "percentDamageIncrease": 25,
+   "damagePerSecondIncrease": 22,
+   "attackSpeedIncreasePercent": 10,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "blacksmithLevelRequired": 4
+  },
+  {
+   "level": 7,
+   "percentDamageIncrease": 25,
+   "damagePerSecondIncrease": 24,
+   "attackSpeedIncreasePercent": 11,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 4
+  },
+  {
+   "level": 8,
+   "percentDamageIncrease": 25,
+   "damagePerSecondIncrease": 26,
+   "attackSpeedIncreasePercent": 12,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 4
+  },
+  {
+   "level": 9,
+   "percentDamageIncrease": 30,
+   "damagePerSecondIncrease": 30,
+   "attackSpeedIncreasePercent": 13,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "blacksmithLevelRequired": 4
+  },
+  {
+   "level": 10,
+   "percentDamageIncrease": 30,
+   "damagePerSecondIncrease": 36,
+   "attackSpeedIncreasePercent": 14,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 4
+  },
+  {
+   "level": 11,
+   "percentDamageIncrease": 30,
+   "damagePerSecondIncrease": 43,
+   "attackSpeedIncreasePercent": 15,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 4
+  },
+  {
+   "level": 12,
+   "percentDamageIncrease": 35,
+   "damagePerSecondIncrease": 49,
+   "attackSpeedIncreasePercent": 16,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "blacksmithLevelRequired": 4
+  },
+  {
+   "level": 13,
+   "percentDamageIncrease": 35,
+   "damagePerSecondIncrease": 56,
+   "attackSpeedIncreasePercent": 17,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 14,
+   "percentDamageIncrease": 35,
+   "damagePerSecondIncrease": 62,
+   "attackSpeedIncreasePercent": 18,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 15,
+   "percentDamageIncrease": 45,
+   "damagePerSecondIncrease": 69,
+   "attackSpeedIncreasePercent": 19,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 16,
+   "percentDamageIncrease": 45,
+   "damagePerSecondIncrease": 75,
+   "attackSpeedIncreasePercent": 20,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 17,
+   "percentDamageIncrease": 45,
+   "damagePerSecondIncrease": 82,
+   "attackSpeedIncreasePercent": 21,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 18,
+   "percentDamageIncrease": 50,
+   "damagePerSecondIncrease": 88,
+   "attackSpeedIncreasePercent": 22,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 7
+  }
+ ],
+ "subpages": [],
+ "mismatches": [],
+ "clientColumns": [
+  "MainAbilities:special_abilities[GrandWardenRageAura] → AuraSpell:spells[Rage Gem Aura].DamageBoostPercent",
+  "character_items.AttackSpeedPercentage",
+  "character_items.DPS",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

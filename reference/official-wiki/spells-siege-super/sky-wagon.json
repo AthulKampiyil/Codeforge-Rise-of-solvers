@@ -1,0 +1,137 @@
+{
+  "title": "Sky Wagon",
+  "url": "https://clashofclans.fandom.com/wiki/Sky_Wagon",
+  "revid": 624686,
+  "clientName": "Air Troop Launcher",
+  "category": "siege-machine",
+  "retrieved": "2026-09-15",
+  "contentPage": "Sky Wagon",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "rangeTiles": 5.5,
+    "housingSpace": 1,
+    "movementSpeed": 16,
+    "attackSpeedSeconds": 8,
+    "workshopLevel": 9
+  },
+  "levels": [
+    {
+      "level": 1,
+      "dps": 1,
+      "damagePerHit": 8,
+      "hitpoints": 3600,
+      "barrelCount": 4,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "dps": 2,
+      "damagePerHit": 16,
+      "hitpoints": 3800,
+      "barrelCount": 4,
+      "researchCost": 22000000,
+      "researchTimeHours": 240,
+      "laboratoryLevel": 15
+    },
+    {
+      "level": 3,
+      "dps": 3,
+      "damagePerHit": 24,
+      "hitpoints": 4000,
+      "barrelCount": 5,
+      "researchCost": 26000000,
+      "researchTimeHours": 324,
+      "laboratoryLevel": 16
+    },
+    {
+      "level": 4,
+      "dps": 4,
+      "damagePerHit": 32,
+      "hitpoints": 4200,
+      "barrelCount": 5,
+      "researchCost": 29000000,
+      "researchTimeHours": 384,
+      "laboratoryLevel": 16
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "preferredTarget",
+      "level": null,
+      "wiki": "Defenses (summary text)",
+      "client": "Any Building",
+      "note": "PreferedTargetBuildingClass"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "barrels",
+      "client": "`AttackCount` 4,4,5,5; `AttackSpeed` 8000; `CoolDownOverride` 6000; `AttackRange` 550"
+    },
+    {
+      "mechanic": "barrel content",
+      "client": "`Projectile` 'Air Troop Launcher Barrel1..4' -> `HitSpell` AirTroopSummon level 1..4 (`HasBunkerTroops` TRUE, `FixedTravelTime` 1500)"
+    },
+    {
+      "mechanic": "troops",
+      "client": "AirTroopSummon `SummonTroop` Minion;Balloon;Baby Dragon, `UnitsToSpawn`, `SpawnUpgradeLevel`"
+    },
+    {
+      "mechanic": "impact damage",
+      "client": "`DPS` 1..4 x 8 s"
+    },
+    {
+      "mechanic": "targeting",
+      "client": "`PreferedTargetBuildingClass` 'Any Building', `IsFlying` TRUE, `TargetAlwaysValidDuringAttack` TRUE"
+    },
+    {
+      "mechanic": "manual release",
+      "client": "SiegeMachineAirTroopLauncherSelfDestruct"
+    }
+  ],
+  "extraTables": {
+    "barrel": [
+      {
+        "level": 1,
+        "minions": 2,
+        "balloons": 1,
+        "babyDragons": 1,
+        "minionLevel": 10,
+        "balloonLevel": 9,
+        "babyDragonLevel": 8
+      },
+      {
+        "level": 2,
+        "minions": 3,
+        "balloons": 1,
+        "babyDragons": 1,
+        "minionLevel": 11,
+        "balloonLevel": 10,
+        "babyDragonLevel": 9
+      },
+      {
+        "level": 3,
+        "minions": 4,
+        "balloons": 1,
+        "babyDragons": 1,
+        "minionLevel": 12,
+        "balloonLevel": 11,
+        "babyDragonLevel": 10
+      },
+      {
+        "level": 4,
+        "minions": 4,
+        "balloons": 1,
+        "babyDragons": 1,
+        "minionLevel": 13,
+        "balloonLevel": 12,
+        "babyDragonLevel": 11
+      }
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+ "title": "Town Hall",
+ "url": "https://clashofclans.fandom.com/wiki/Town_Hall",
+ "revid": 624170,
+ "retrieved": "2026-09-15",
+ "category": "building",
+ "clientName": "Town Hall",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "hitpoints": 400,
+   "maximumNumberOfBuildingsAvailable": 13,
+   "goldAvailable": 1000,
+   "elixirAvailable": 1000
+  },
+  {
+   "level": 2,
+   "hitpoints": 800,
+   "cost": 1000,
+   "buildSeconds": 10,
+   "xp": 3,
+   "maximumNumberOfBuildingsAvailable": 17,
+   "goldAvailable": 2500,
+   "elixirAvailable": 2500
+  },
+  {
+   "level": 3,
+   "hitpoints": 1600,
+   "cost": 4000,
+   "buildSeconds": 1800,
+   "xp": 42,
+   "maximumNumberOfBuildingsAvailable": 25,
+   "maximumNumberOfTrapsAvailable": 2,
+   "goldAvailable": 10000,
+   "elixirAvailable": 10000
+  },
+  {
+   "level": 4,
+   "hitpoints": 2000,
+   "cost": 25000,
+   "buildSeconds": 10800,
+   "xp": 103,
+   "maximumNumberOfBuildingsAvailable": 29,
+   "maximumNumberOfTrapsAvailable": 4,
+   "goldAvailable": 50000,
+   "elixirAvailable": 50000
+  },
+  {
+   "level": 5,
+   "hitpoints": 2400,
+   "cost": 150000,
+   "buildSeconds": 21600,
+   "xp": 146,
+   "maximumNumberOfBuildingsAvailable": 36,
+   "maximumNumberOfTrapsAvailable": 8,
+   "goldAvailable": 100000,
+   "elixirAvailable": 100000
+  },
+  {
+   "level": 6,
+   "hitpoints": 2800,
+   "cost": 500000,
+   "buildSeconds": 43200,
+   "xp": 207,
+   "maximumNumberOfBuildingsAvailable": 42,
+   "maximumNumberOfTrapsAvailable": 11,
+   "goldAvailable": 300000,
+   "elixirAvailable": 300000
+  },
+  {
+   "level": 7,
+   "hitpoints": 3300,
+   "cost": 1000000,
+   "buildSeconds": 64800,
+   "xp": 254,
+   "maximumNumberOfBuildingsAvailable": 54,
+   "maximumNumberOfTrapsAvailable": 15,
+   "goldAvailable": 500000,
+   "elixirAvailable": 500000,
+   "darkElixirAvailable": 2500
+  },
+  {
+   "level": 8,
+   "hitpoints": 3900,
+   "cost": 2000000,
+   "buildSeconds": 86400,
+   "xp": 293,
+   "maximumNumberOfBuildingsAvailable": 64,
+   "maximumNumberOfTrapsAvailable": 23,
+   "goldAvailable": 750000,
+   "elixirAvailable": 750000,
+   "darkElixirAvailable": 5000
+  },
+  {
+   "level": 9,
+   "hitpoints": 4600,
+   "cost": 2500000,
+   "buildSeconds": 172800,
+   "xp": 415,
+   "maximumNumberOfBuildingsAvailable": 77,
+   "maximumNumberOfTrapsAvailable": 26,
+   "goldAvailable": 1000000,
+   "elixirAvailable": 1000000,
+   "darkElixirAvailable": 10000
+  },
+  {
+   "level": 10,
+   "hitpoints": 5500,
+   "cost": 3500000,
+   "buildSeconds": 259200,
+   "xp": 509,
+   "maximumNumberOfBuildingsAvailable": 84,
+   "maximumNumberOfTrapsAvailable": 30,
+   "goldAvailable": 1500000,
+   "elixirAvailable": 1500000,
+   "darkElixirAvailable": 20000
+  },
+  {
+   "level": 11,
+   "hitpoints": 6800,
+   "cost": 4000000,
+   "buildSeconds": 432000,
+   "xp": 657,
+   "maximumNumberOfBuildingsAvailable": 89,
+   "maximumNumberOfTrapsAvailable": 31
+  },
+  {
+   "level": 12,
+   "hitpoints": 7500,
+   "cost": 6000000,
+   "buildSeconds": 518400,
+   "xp": 720,
+   "maximumNumberOfBuildingsAvailable": 92,
+   "maximumNumberOfTrapsAvailable": 36
+  },
+  {
+   "level": 13,
+   "hitpoints": 8200,
+   "cost": 9000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "maximumNumberOfBuildingsAvailable": 94,
+   "maximumNumberOfTrapsAvailable": 39
+  },
+  {
+   "level": 14,
+   "hitpoints": 8900,
+   "cost": 12000000,
+   "buildSeconds": 648000,
+   "xp": 804,
+   "maximumNumberOfBuildingsAvailable": 95,
+   "maximumNumberOfTrapsAvailable": 44
+  },
+  {
+   "level": 15,
+   "hitpoints": 9600,
+   "cost": 13000000,
+   "buildSeconds": 691200,
+   "xp": 831,
+   "maximumNumberOfBuildingsAvailable": 98,
+   "maximumNumberOfTrapsAvailable": 44
+  },
+  {
+   "level": 16,
+   "hitpoints": 10000,
+   "cost": 15000000,
+   "buildSeconds": 777600,
+   "xp": 881,
+   "maximumNumberOfBuildingsAvailable": 94,
+   "maximumNumberOfTrapsAvailable": 44
+  },
+  {
+   "level": 17,
+   "hitpoints": 10400,
+   "cost": 16000000,
+   "buildSeconds": 864000,
+   "xp": 929,
+   "maximumNumberOfBuildingsAvailable": 93,
+   "maximumNumberOfTrapsAvailable": 47
+  },
+  {
+   "level": 18,
+   "hitpoints": 10800,
+   "cost": 25000000,
+   "buildSeconds": 1036800,
+   "xp": 1018,
+   "maximumNumberOfBuildingsAvailable": 94,
+   "maximumNumberOfTrapsAvailable": 47,
+   "goldAvailable": 5000000,
+   "elixirAvailable": 5000000,
+   "darkElixirAvailable": 50000
+  }
+ ],
+ "constants": {
+  "size": "4x4",
+  "weaponTownHalls": {
+   "TH12": "Giga Tesla",
+   "TH13": "Giga Inferno",
+   "TH14": "Giga Inferno",
+   "TH15": "Giga Inferno",
+   "TH16": "Giga Inferno",
+   "TH17": "Inferno Artillery",
+   "TH18": "Guardians (no weapon)"
+  },
+  "gigaActivation": "on damage or 51% destruction",
+  "upgradeBoostDays": {
+   "4-6": 3,
+   "7-9": 4,
+   "10+": 5
+  }
+ },
+ "mismatches": [
+  {
+   "field": "Weapon (inherited)",
+   "level": 18,
+   "wiki": "no weapon; Guardians defend",
+   "client": "row has no Weapon value -> forward inheritance yields Townhall17; HousesGuardians TRUE",
+   "note": "do not inherit Weapon/MergeRequirement/ActivateAfterSeconds into TH18; weapons.csv 'Townhall18' (a TH18Heal healing weapon, DPS -600, range 20) exists but is not referenced by the TH18 row"
+  },
+  {
+   "field": "activation destruction %",
+   "level": "12-16",
+   "wiki": "51%",
+   "client": "globals HIDDEN_BUILDING_APPEAR_DESTRUCTION_PERCENTAGE 50",
+   "note": "probably 'more than 50%' in code; same rule reveals Hidden Teslas"
+  }
+ ],
+ "progressionMismatches": [
+  {
+   "field": "weapon",
+   "level": 18,
+   "wiki": "no weapon (Guardians)",
+   "progression": "dps 40, rate 3.5, range 12, merge 'Eagle Artillery:7:0'",
+   "note": "forward inheritance copies the TH17 Weapon/MergeRequirement onto TH18 (its row leaves them blank); the live TH18 has no weapon and no merge requirement"
+  }
+ ]
+}

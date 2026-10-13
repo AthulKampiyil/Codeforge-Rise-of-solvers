@@ -1,0 +1,194 @@
+{
+ "title": "Scattershot",
+ "url": "https://clashofclans.fandom.com/wiki/Scattershot",
+ "revid": 624490,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Scattershot",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 125,
+   "damagePerHit": "300-400",
+   "damagePerHitMin": 300,
+   "damagePerHitMax": 400,
+   "splashDamage": "100-300",
+   "splashDamageMin": 100,
+   "splashDamageMax": 300,
+   "hitpoints": 3600,
+   "cost": 8000000,
+   "buildSeconds": 432000,
+   "xp": 657,
+   "townHall": 13
+  },
+  {
+   "level": 2,
+   "dps": 150,
+   "damagePerHit": "360-480",
+   "damagePerHitMin": 360,
+   "damagePerHitMax": 480,
+   "splashDamage": "120-360",
+   "splashDamageMin": 120,
+   "splashDamageMax": 360,
+   "hitpoints": 4200,
+   "cost": 9000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 13
+  },
+  {
+   "level": 3,
+   "dps": 170,
+   "damagePerHit": "380-544",
+   "damagePerHitMin": 380,
+   "damagePerHitMax": 544,
+   "splashDamage": "130-380",
+   "splashDamageMin": 130,
+   "splashDamageMax": 380,
+   "hitpoints": 4800,
+   "cost": 11000000,
+   "buildSeconds": 648000,
+   "xp": 804,
+   "townHall": 14
+  },
+  {
+   "level": 4,
+   "dps": 175,
+   "damagePerHit": "400-560",
+   "damagePerHitMin": 400,
+   "damagePerHitMax": 560,
+   "splashDamage": "140-400",
+   "splashDamageMin": 140,
+   "splashDamageMax": 400,
+   "hitpoints": 5100,
+   "cost": 11500000,
+   "buildSeconds": 691200,
+   "xp": 831,
+   "townHall": 15
+  },
+  {
+   "level": 5,
+   "dps": 180,
+   "damagePerHit": "420-576",
+   "damagePerHitMin": 420,
+   "damagePerHitMax": 576,
+   "splashDamage": "150-420",
+   "splashDamageMin": 150,
+   "splashDamageMax": 420,
+   "hitpoints": 5410,
+   "cost": 12000000,
+   "buildSeconds": 734400,
+   "xp": 856,
+   "townHall": 16
+  },
+  {
+   "level": 6,
+   "dps": 185,
+   "damagePerHit": "440-592",
+   "damagePerHitMin": 440,
+   "damagePerHitMax": 592,
+   "splashDamage": "155-440",
+   "splashDamageMin": 155,
+   "splashDamageMax": 440,
+   "hitpoints": 5600,
+   "cost": 16500000,
+   "buildSeconds": 777600,
+   "xp": 881,
+   "townHall": 17
+  },
+  {
+   "level": 7,
+   "dps": 190,
+   "damagePerHit": "450-608",
+   "damagePerHitMin": 450,
+   "damagePerHitMax": 608,
+   "splashDamage": "160-450",
+   "splashDamageMin": 160,
+   "splashDamageMax": 450,
+   "hitpoints": 5800,
+   "cost": 26500000,
+   "buildSeconds": 1296000,
+   "xp": 1138,
+   "townHall": 18
+  }
+ ],
+ "supercharges": [
+  {
+   "charge": 1,
+   "dps": 193,
+   "damagePerHit": "450-617.6",
+   "damagePerHitMin": 450,
+   "damagePerHitMax": 617.6,
+   "splashDamage": "160-450",
+   "splashDamageMin": 160,
+   "splashDamageMax": 450,
+   "hitpoints": 5800,
+   "cost": 14500000,
+   "buildSeconds": 432000,
+   "xp": 657,
+   "townHall": 18
+  },
+  {
+   "charge": 2,
+   "dps": 193,
+   "damagePerHit": "450-617.6",
+   "damagePerHitMin": 450,
+   "damagePerHitMax": 617.6,
+   "splashDamage": "160-450",
+   "splashDamageMin": 160,
+   "splashDamageMax": 450,
+   "hitpoints": 5950,
+   "cost": 9500000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 13,
+  "size": "3x3",
+  "range": 10,
+  "minRange": 3,
+  "attackSeconds": 3.2,
+  "targets": "ground & air (one layer per shot)",
+  "damageType": "cone splash",
+  "splashConeDegrees": 90,
+  "splashInnerTiles": 1.0,
+  "splashOuterTiles": 5.0,
+  "splashTiles": 5.0,
+  "ammo": 90
+ },
+ "mismatches": [
+  {
+   "field": "attackSeconds",
+   "level": "all",
+   "wiki": 3.2,
+   "client": 3.228,
+   "note": "client AttackSpeed 3228 ms (with CoolDownOverride 1500); wiki trivia says patch notes quote 3.228 s but the real rate is 3.2 s, and wiki per-hit values use 3.2"
+  },
+  {
+   "field": "supercharge ProjectileSpellDamageBoost",
+   "level": "C1",
+   "wiki": "splash unchanged (160-450)",
+   "client": 3,
+   "note": "Scattershot Mini Levels charge 1 also has ProjectileSpellDamageBoost 3; the wiki lists no splash change - unit (flat vs %) unknown"
+  }
+ ],
+ "progressionMismatches": [
+  {
+   "field": "rate",
+   "level": "all",
+   "wiki": 3.2,
+   "progression": 3.228,
+   "note": "progression.json uses client AttackSpeed 3228 ms; the wiki says the real cadence is 3.2 s"
+  },
+  {
+   "field": "splash",
+   "level": "all",
+   "wiki": "90-degree cone, 1 tile + 1-5 tiles falloff",
+   "progression": 1.0,
+   "note": "cone shape, 5-tile reach and falloff are not represented"
+  }
+ ]
+}

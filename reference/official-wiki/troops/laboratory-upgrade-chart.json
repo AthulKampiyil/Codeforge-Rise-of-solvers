@@ -1,0 +1,1803 @@
+{
+ "title": "Laboratory research (troops)",
+ "page": "Laboratory/Upgrade Chart",
+ "url": "https://clashofclans.fandom.com/wiki/Laboratory/Upgrade_Chart",
+ "revid": 623672,
+ "retrieved": "2026-09-15",
+ "clientName": "characters.UpgradeCost/UpgradeTimeH/UpgradeTimeM/LaboratoryLevel",
+ "clientVersion": "18.400.21",
+ "category": "mechanic",
+ "laboratoryPageRevid": 625132,
+ "laboratoryTownHall": [
+  {
+   "level": 1,
+   "townHall": 3
+  },
+  {
+   "level": 2,
+   "townHall": 4
+  },
+  {
+   "level": 3,
+   "townHall": 5
+  },
+  {
+   "level": 4,
+   "townHall": 6
+  },
+  {
+   "level": 5,
+   "townHall": 7
+  },
+  {
+   "level": 6,
+   "townHall": 8
+  },
+  {
+   "level": 7,
+   "townHall": 9
+  },
+  {
+   "level": 8,
+   "townHall": 10
+  },
+  {
+   "level": 9,
+   "townHall": 11
+  },
+  {
+   "level": 10,
+   "townHall": 12
+  },
+  {
+   "level": 11,
+   "townHall": 13
+  },
+  {
+   "level": 12,
+   "townHall": 14
+  },
+  {
+   "level": 13,
+   "townHall": 15
+  },
+  {
+   "level": 14,
+   "townHall": 16
+  },
+  {
+   "level": 15,
+   "townHall": 17
+  },
+  {
+   "level": 16,
+   "townHall": 18
+  }
+ ],
+ "researchByTroop": {
+  "barbarian": [
+   {
+    "level": 2,
+    "laboratoryLevel": 1,
+    "researchCost": 10000,
+    "researchSeconds": 1800
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 3,
+    "researchCost": 50000,
+    "researchSeconds": 3600
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 5,
+    "researchCost": 130000,
+    "researchSeconds": 7200
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 6,
+    "researchCost": 300000,
+    "researchSeconds": 14400
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 7,
+    "researchCost": 800000,
+    "researchSeconds": 28800
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 8,
+    "researchCost": 1000000,
+    "researchSeconds": 43200
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 9,
+    "researchCost": 1500000,
+    "researchSeconds": 86400
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 10,
+    "researchCost": 2500000,
+    "researchSeconds": 129600
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 12,
+    "researchCost": 4300000,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 13,
+    "researchCost": 6000000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 14,
+    "researchCost": 8000000,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 13,
+    "laboratoryLevel": 16,
+    "researchCost": 24000000,
+    "researchSeconds": 1080000
+   }
+  ],
+  "archer": [
+   {
+    "level": 2,
+    "laboratoryLevel": 1,
+    "researchCost": 20000,
+    "researchSeconds": 3600
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 3,
+    "researchCost": 80000,
+    "researchSeconds": 7200
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 5,
+    "researchCost": 200000,
+    "researchSeconds": 10800
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 6,
+    "researchCost": 500000,
+    "researchSeconds": 28800
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 7,
+    "researchCost": 1000000,
+    "researchSeconds": 43200
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 8,
+    "researchCost": 1500000,
+    "researchSeconds": 86400
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 9,
+    "researchCost": 2300000,
+    "researchSeconds": 129600
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 10,
+    "researchCost": 3000000,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 12,
+    "researchCost": 4500000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 13,
+    "researchCost": 6500000,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 14,
+    "researchCost": 9000000,
+    "researchSeconds": 388800
+   },
+   {
+    "level": 13,
+    "laboratoryLevel": 15,
+    "researchCost": 14000000,
+    "researchSeconds": 777600
+   },
+   {
+    "level": 14,
+    "laboratoryLevel": 16,
+    "researchCost": 25000000,
+    "researchSeconds": 1166400
+   }
+  ],
+  "giant": [
+   {
+    "level": 2,
+    "laboratoryLevel": 2,
+    "researchCost": 40000,
+    "researchSeconds": 7200
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 4,
+    "researchCost": 150000,
+    "researchSeconds": 14400
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 5,
+    "researchCost": 400000,
+    "researchSeconds": 21600
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 6,
+    "researchCost": 800000,
+    "researchSeconds": 43200
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 7,
+    "researchCost": 1500000,
+    "researchSeconds": 86400
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 8,
+    "researchCost": 2300000,
+    "researchSeconds": 129600
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 9,
+    "researchCost": 2600000,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 10,
+    "researchCost": 3400000,
+    "researchSeconds": 194400
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 11,
+    "researchCost": 5000000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 13,
+    "researchCost": 7500000,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 14,
+    "researchCost": 10000000,
+    "researchSeconds": 432000
+   },
+   {
+    "level": 13,
+    "laboratoryLevel": 15,
+    "researchCost": 15000000,
+    "researchSeconds": 820800
+   },
+   {
+    "level": 14,
+    "laboratoryLevel": 16,
+    "researchCost": 25000000,
+    "researchSeconds": 1166400
+   }
+  ],
+  "goblin": [
+   {
+    "level": 2,
+    "laboratoryLevel": 1,
+    "researchCost": 45000,
+    "researchSeconds": 7200
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 3,
+    "researchCost": 100000,
+    "researchSeconds": 10800
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 5,
+    "researchCost": 500000,
+    "researchSeconds": 21600
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 6,
+    "researchCost": 700000,
+    "researchSeconds": 43200
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 7,
+    "researchCost": 1600000,
+    "researchSeconds": 86400
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 8,
+    "researchCost": 2200000,
+    "researchSeconds": 129600
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 10,
+    "researchCost": 3700000,
+    "researchSeconds": 194400
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 13,
+    "researchCost": 8000000,
+    "researchSeconds": 432000
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 16,
+    "researchCost": 26000000,
+    "researchSeconds": 1209600
+   }
+  ],
+  "wall-breaker": [
+   {
+    "level": 2,
+    "laboratoryLevel": 2,
+    "researchCost": 80000,
+    "researchSeconds": 10800
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 4,
+    "researchCost": 200000,
+    "researchSeconds": 14400
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 5,
+    "researchCost": 450000,
+    "researchSeconds": 43200
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 6,
+    "researchCost": 1000000,
+    "researchSeconds": 57600
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 8,
+    "researchCost": 2400000,
+    "researchSeconds": 86400
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 9,
+    "researchCost": 2800000,
+    "researchSeconds": 129600
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 10,
+    "researchCost": 3800000,
+    "researchSeconds": 216000
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 11,
+    "researchCost": 5200000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 12,
+    "researchCost": 6500000,
+    "researchSeconds": 432000
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 13,
+    "researchCost": 9500000,
+    "researchSeconds": 475200
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 14,
+    "researchCost": 11000000,
+    "researchSeconds": 518400
+   },
+   {
+    "level": 13,
+    "laboratoryLevel": 15,
+    "researchCost": 15500000,
+    "researchSeconds": 864000
+   },
+   {
+    "level": 14,
+    "laboratoryLevel": 16,
+    "researchCost": 26000000,
+    "researchSeconds": 1209600
+   }
+  ],
+  "balloon": [
+   {
+    "level": 2,
+    "laboratoryLevel": 2,
+    "researchCost": 100000,
+    "researchSeconds": 14400
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 4,
+    "researchCost": 400000,
+    "researchSeconds": 21600
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 5,
+    "researchCost": 720000,
+    "researchSeconds": 64800
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 6,
+    "researchCost": 1300000,
+    "researchSeconds": 86400
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 7,
+    "researchCost": 2750000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 9,
+    "researchCost": 4400000,
+    "researchSeconds": 280800
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 10,
+    "researchCost": 5000000,
+    "researchSeconds": 302400
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 11,
+    "researchCost": 7000000,
+    "researchSeconds": 388800
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 12,
+    "researchCost": 10000000,
+    "researchSeconds": 604800
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 14,
+    "researchCost": 14000000,
+    "researchSeconds": 734400
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 15,
+    "researchCost": 17500000,
+    "researchSeconds": 950400
+   },
+   {
+    "level": 13,
+    "laboratoryLevel": 16,
+    "researchCost": 28000000,
+    "researchSeconds": 1274400
+   }
+  ],
+  "wizard": [
+   {
+    "level": 2,
+    "laboratoryLevel": 3,
+    "researchCost": 120000,
+    "researchSeconds": 14400
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 4,
+    "researchCost": 300000,
+    "researchSeconds": 18000
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 5,
+    "researchCost": 600000,
+    "researchSeconds": 43200
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 6,
+    "researchCost": 1200000,
+    "researchSeconds": 64800
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 7,
+    "researchCost": 2000000,
+    "researchSeconds": 129600
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 8,
+    "researchCost": 2500000,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 9,
+    "researchCost": 3100000,
+    "researchSeconds": 194400
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 10,
+    "researchCost": 4000000,
+    "researchSeconds": 216000
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 11,
+    "researchCost": 5500000,
+    "researchSeconds": 302400
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 13,
+    "researchCost": 10000000,
+    "researchSeconds": 475200
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 14,
+    "researchCost": 11500000,
+    "researchSeconds": 604800
+   },
+   {
+    "level": 13,
+    "laboratoryLevel": 15,
+    "researchCost": 16000000,
+    "researchSeconds": 1080000
+   },
+   {
+    "level": 14,
+    "laboratoryLevel": 16,
+    "researchCost": 27000000,
+    "researchSeconds": 1209600
+   }
+  ],
+  "healer": [
+   {
+    "level": 2,
+    "laboratoryLevel": 5,
+    "researchCost": 450000,
+    "researchSeconds": 43200
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 6,
+    "researchCost": 900000,
+    "researchSeconds": 86400
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 7,
+    "researchCost": 2500000,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 9,
+    "researchCost": 4000000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 11,
+    "researchCost": 6000000,
+    "researchSeconds": 388800
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 12,
+    "researchCost": 9500000,
+    "researchSeconds": 561600
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 13,
+    "researchCost": 11000000,
+    "researchSeconds": 604800
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 14,
+    "researchCost": 13000000,
+    "researchSeconds": 626400
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 15,
+    "researchCost": 17000000,
+    "researchSeconds": 950400
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 16,
+    "researchCost": 28500000,
+    "researchSeconds": 1296000
+   }
+  ],
+  "dragon": [
+   {
+    "level": 2,
+    "laboratoryLevel": 5,
+    "researchCost": 1000000,
+    "researchSeconds": 64800
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 6,
+    "researchCost": 2000000,
+    "researchSeconds": 129600
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 7,
+    "researchCost": 3000000,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 8,
+    "researchCost": 3800000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 9,
+    "researchCost": 4900000,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 10,
+    "researchCost": 5000000,
+    "researchSeconds": 388800
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 11,
+    "researchCost": 7500000,
+    "researchSeconds": 432000
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 12,
+    "researchCost": 10500000,
+    "researchSeconds": 604800
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 13,
+    "researchCost": 12000000,
+    "researchSeconds": 648000
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 14,
+    "researchCost": 14000000,
+    "researchSeconds": 734400
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 15,
+    "researchCost": 18500000,
+    "researchSeconds": 864000
+   },
+   {
+    "level": 13,
+    "laboratoryLevel": 16,
+    "researchCost": 28500000,
+    "researchSeconds": 1296000
+   }
+  ],
+  "pekka": [
+   {
+    "level": 2,
+    "laboratoryLevel": 6,
+    "researchCost": 600000,
+    "researchSeconds": 43200
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 6,
+    "researchCost": 1300000,
+    "researchSeconds": 64800
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 7,
+    "researchCost": 2000000,
+    "researchSeconds": 86400
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 8,
+    "researchCost": 2100000,
+    "researchSeconds": 129600
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 8,
+    "researchCost": 2500000,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 9,
+    "researchCost": 4500000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 10,
+    "researchCost": 5000000,
+    "researchSeconds": 302400
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 11,
+    "researchCost": 5800000,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 13,
+    "researchCost": 10500000,
+    "researchSeconds": 475200
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 14,
+    "researchCost": 12000000,
+    "researchSeconds": 604800
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 15,
+    "researchCost": 16000000,
+    "researchSeconds": 864000
+   },
+   {
+    "level": 13,
+    "laboratoryLevel": 16,
+    "researchCost": 28000000,
+    "researchSeconds": 1252800
+   }
+  ],
+  "baby-dragon": [
+   {
+    "level": 2,
+    "laboratoryLevel": 7,
+    "researchCost": 1500000,
+    "researchSeconds": 86400
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 8,
+    "researchCost": 2000000,
+    "researchSeconds": 129600
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 8,
+    "researchCost": 2800000,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 9,
+    "researchCost": 3700000,
+    "researchSeconds": 237600
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 10,
+    "researchCost": 4800000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 11,
+    "researchCost": 6200000,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 12,
+    "researchCost": 9500000,
+    "researchSeconds": 518400
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 13,
+    "researchCost": 11000000,
+    "researchSeconds": 604800
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 14,
+    "researchCost": 13500000,
+    "researchSeconds": 626400
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 15,
+    "researchCost": 16500000,
+    "researchSeconds": 864000
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 16,
+    "researchCost": 29000000,
+    "researchSeconds": 1317600
+   }
+  ],
+  "miner": [
+   {
+    "level": 2,
+    "laboratoryLevel": 8,
+    "researchCost": 1500000,
+    "researchSeconds": 86400
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 8,
+    "researchCost": 2600000,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 9,
+    "researchCost": 3000000,
+    "researchSeconds": 194400
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 9,
+    "researchCost": 4000000,
+    "researchSeconds": 216000
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 10,
+    "researchCost": 4800000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 11,
+    "researchCost": 6000000,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 12,
+    "researchCost": 8600000,
+    "researchSeconds": 518400
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 13,
+    "researchCost": 10500000,
+    "researchSeconds": 561600
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 14,
+    "researchCost": 12500000,
+    "researchSeconds": 604800
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 15,
+    "researchCost": 16500000,
+    "researchSeconds": 820800
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 16,
+    "researchCost": 28000000,
+    "researchSeconds": 1252800
+   }
+  ],
+  "electro-dragon": [
+   {
+    "level": 2,
+    "laboratoryLevel": 9,
+    "researchCost": 6000000,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 10,
+    "researchCost": 7000000,
+    "researchSeconds": 388800
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 11,
+    "researchCost": 9000000,
+    "researchSeconds": 604800
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 12,
+    "researchCost": 11000000,
+    "researchSeconds": 691200
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 13,
+    "researchCost": 14000000,
+    "researchSeconds": 734400
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 14,
+    "researchCost": 16000000,
+    "researchSeconds": 777600
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 15,
+    "researchCost": 20000000,
+    "researchSeconds": 864000
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 16,
+    "researchCost": 30000000,
+    "researchSeconds": 1382400
+   }
+  ],
+  "yeti": [
+   {
+    "level": 2,
+    "laboratoryLevel": 10,
+    "researchCost": 5000000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 11,
+    "researchCost": 6500000,
+    "researchSeconds": 388800
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 12,
+    "researchCost": 10000000,
+    "researchSeconds": 604800
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 13,
+    "researchCost": 12000000,
+    "researchSeconds": 648000
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 14,
+    "researchCost": 14500000,
+    "researchSeconds": 712800
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 15,
+    "researchCost": 17000000,
+    "researchSeconds": 864000
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 16,
+    "researchCost": 27500000,
+    "researchSeconds": 1339200
+   }
+  ],
+  "dragon-rider": [
+   {
+    "level": 2,
+    "laboratoryLevel": 11,
+    "researchCost": 7500000,
+    "researchSeconds": 518400
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 12,
+    "researchCost": 12000000,
+    "researchSeconds": 691200
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 14,
+    "researchCost": 14500000,
+    "researchSeconds": 777600
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 15,
+    "researchCost": 19000000,
+    "researchSeconds": 885600
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 16,
+    "researchCost": 29500000,
+    "researchSeconds": 1339200
+   }
+  ],
+  "electro-titan": [
+   {
+    "level": 2,
+    "laboratoryLevel": 12,
+    "researchCost": 14000000,
+    "researchSeconds": 691200
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 13,
+    "researchCost": 16000000,
+    "researchSeconds": 777600
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 14,
+    "researchCost": 18500000,
+    "researchSeconds": 950400
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 16,
+    "researchCost": 30000000,
+    "researchSeconds": 1382400
+   }
+  ],
+  "root-rider": [
+   {
+    "level": 2,
+    "laboratoryLevel": 13,
+    "researchCost": 15000000,
+    "researchSeconds": 691200
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 14,
+    "researchCost": 17600000,
+    "researchSeconds": 864000
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 16,
+    "researchCost": 30000000,
+    "researchSeconds": 1382400
+   }
+  ],
+  "thrower": [
+   {
+    "level": 2,
+    "laboratoryLevel": 14,
+    "researchCost": 16000000,
+    "researchSeconds": 820800
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 15,
+    "researchCost": 18000000,
+    "researchSeconds": 907200
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 16,
+    "researchCost": 27000000,
+    "researchSeconds": 1296000
+   }
+  ],
+  "meteor-golem": [
+   {
+    "level": 2,
+    "laboratoryLevel": 15,
+    "researchCost": 28000000,
+    "researchSeconds": 1209600
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 16,
+    "researchCost": 30000000,
+    "researchSeconds": 1382400
+   }
+  ],
+  "minion": [
+   {
+    "level": 2,
+    "laboratoryLevel": 5,
+    "researchCost": 1000,
+    "researchSeconds": 21600
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 6,
+    "researchCost": 2500,
+    "researchSeconds": 28800
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 6,
+    "researchCost": 5000,
+    "researchSeconds": 43200
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 7,
+    "researchCost": 10000,
+    "researchSeconds": 86400
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 8,
+    "researchCost": 15000,
+    "researchSeconds": 129600
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 9,
+    "researchCost": 31500,
+    "researchSeconds": 151200
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 10,
+    "researchCost": 47500,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 11,
+    "researchCost": 75000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 12,
+    "researchCost": 100000,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 13,
+    "researchCost": 115000,
+    "researchSeconds": 388800
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 14,
+    "researchCost": 160000,
+    "researchSeconds": 432000
+   },
+   {
+    "level": 13,
+    "laboratoryLevel": 15,
+    "researchCost": 220000,
+    "researchSeconds": 777600
+   },
+   {
+    "level": 14,
+    "laboratoryLevel": 16,
+    "researchCost": 335000,
+    "researchSeconds": 1209600
+   }
+  ],
+  "hog-rider": [
+   {
+    "level": 2,
+    "laboratoryLevel": 5,
+    "researchCost": 2000,
+    "researchSeconds": 36000
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 6,
+    "researchCost": 3500,
+    "researchSeconds": 64800
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 6,
+    "researchCost": 5000,
+    "researchSeconds": 86400
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 7,
+    "researchCost": 10000,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 8,
+    "researchCost": 18500,
+    "researchSeconds": 194400
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 9,
+    "researchCost": 35000,
+    "researchSeconds": 216000
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 10,
+    "researchCost": 47500,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 10,
+    "researchCost": 50000,
+    "researchSeconds": 302400
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 11,
+    "researchCost": 85000,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 12,
+    "researchCost": 107500,
+    "researchSeconds": 432000
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 13,
+    "researchCost": 125000,
+    "researchSeconds": 475200
+   },
+   {
+    "level": 13,
+    "laboratoryLevel": 14,
+    "researchCost": 175000,
+    "researchSeconds": 561600
+   },
+   {
+    "level": 14,
+    "laboratoryLevel": 15,
+    "researchCost": 240000,
+    "researchSeconds": 864000
+   },
+   {
+    "level": 15,
+    "laboratoryLevel": 16,
+    "researchCost": 340000,
+    "researchSeconds": 1252800
+   }
+  ],
+  "valkyrie": [
+   {
+    "level": 2,
+    "laboratoryLevel": 6,
+    "researchCost": 3000,
+    "researchSeconds": 28800
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 7,
+    "researchCost": 5000,
+    "researchSeconds": 86400
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 7,
+    "researchCost": 10000,
+    "researchSeconds": 129600
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 8,
+    "researchCost": 16000,
+    "researchSeconds": 151200
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 9,
+    "researchCost": 31500,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 10,
+    "researchCost": 55000,
+    "researchSeconds": 194400
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 11,
+    "researchCost": 77500,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 12,
+    "researchCost": 105000,
+    "researchSeconds": 388800
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 13,
+    "researchCost": 120000,
+    "researchSeconds": 432000
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 14,
+    "researchCost": 170000,
+    "researchSeconds": 518400
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 15,
+    "researchCost": 340000,
+    "researchSeconds": 1209600
+   }
+  ],
+  "golem": [
+   {
+    "level": 2,
+    "laboratoryLevel": 6,
+    "researchCost": 4000,
+    "researchSeconds": 57600
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 7,
+    "researchCost": 6000,
+    "researchSeconds": 129600
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 7,
+    "researchCost": 10000,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 8,
+    "researchCost": 18500,
+    "researchSeconds": 194400
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 9,
+    "researchCost": 26500,
+    "researchSeconds": 216000
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 9,
+    "researchCost": 38500,
+    "researchSeconds": 237600
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 10,
+    "researchCost": 50000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 10,
+    "researchCost": 62500,
+    "researchSeconds": 302400
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 11,
+    "researchCost": 80000,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 11,
+    "laboratoryLevel": 12,
+    "researchCost": 105000,
+    "researchSeconds": 432000
+   },
+   {
+    "level": 12,
+    "laboratoryLevel": 13,
+    "researchCost": 122500,
+    "researchSeconds": 475200
+   },
+   {
+    "level": 13,
+    "laboratoryLevel": 14,
+    "researchCost": 175000,
+    "researchSeconds": 518400
+   },
+   {
+    "level": 14,
+    "laboratoryLevel": 15,
+    "researchCost": 230000,
+    "researchSeconds": 864000
+   },
+   {
+    "level": 15,
+    "laboratoryLevel": 16,
+    "researchCost": 350000,
+    "researchSeconds": 1252800
+   }
+  ],
+  "witch": [
+   {
+    "level": 2,
+    "laboratoryLevel": 7,
+    "researchCost": 20000,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 8,
+    "researchCost": 29000,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 9,
+    "researchCost": 45000,
+    "researchSeconds": 302400
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 10,
+    "researchCost": 62500,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 13,
+    "researchCost": 150000,
+    "researchSeconds": 475200
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 14,
+    "researchCost": 180000,
+    "researchSeconds": 626400
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 16,
+    "researchCost": 355000,
+    "researchSeconds": 1339200
+   }
+  ],
+  "lava-hound": [
+   {
+    "level": 2,
+    "laboratoryLevel": 7,
+    "researchCost": 14000,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 8,
+    "researchCost": 21500,
+    "researchSeconds": 216000
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 9,
+    "researchCost": 42500,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 10,
+    "researchCost": 60000,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 11,
+    "researchCost": 80000,
+    "researchSeconds": 604800
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 14,
+    "researchCost": 200000,
+    "researchSeconds": 691200
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 16,
+    "researchCost": 345000,
+    "researchSeconds": 1317600
+   }
+  ],
+  "bowler": [
+   {
+    "level": 2,
+    "laboratoryLevel": 8,
+    "researchCost": 32500,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 9,
+    "researchCost": 44000,
+    "researchSeconds": 216000
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 10,
+    "researchCost": 62500,
+    "researchSeconds": 259200
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 11,
+    "researchCost": 85000,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 12,
+    "researchCost": 110000,
+    "researchSeconds": 518400
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 13,
+    "researchCost": 145000,
+    "researchSeconds": 604800
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 14,
+    "researchCost": 175000,
+    "researchSeconds": 648000
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 15,
+    "researchCost": 260000,
+    "researchSeconds": 864000
+   },
+   {
+    "level": 10,
+    "laboratoryLevel": 16,
+    "researchCost": 360000,
+    "researchSeconds": 1296000
+   }
+  ],
+  "ice-golem": [
+   {
+    "level": 2,
+    "laboratoryLevel": 9,
+    "researchCost": 27500,
+    "researchSeconds": 172800
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 9,
+    "researchCost": 42500,
+    "researchSeconds": 216000
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 10,
+    "researchCost": 50000,
+    "researchSeconds": 280800
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 10,
+    "researchCost": 62500,
+    "researchSeconds": 345600
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 12,
+    "researchCost": 110000,
+    "researchSeconds": 561600
+   },
+   {
+    "level": 7,
+    "laboratoryLevel": 13,
+    "researchCost": 140000,
+    "researchSeconds": 648000
+   },
+   {
+    "level": 8,
+    "laboratoryLevel": 14,
+    "researchCost": 180000,
+    "researchSeconds": 691200
+   },
+   {
+    "level": 9,
+    "laboratoryLevel": 15,
+    "researchCost": 280000,
+    "researchSeconds": 914400
+   }
+  ],
+  "headhunter": [
+   {
+    "level": 2,
+    "laboratoryLevel": 10,
+    "researchCost": 57500,
+    "researchSeconds": 432000
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 11,
+    "researchCost": 90000,
+    "researchSeconds": 604800
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 16,
+    "researchCost": 370000,
+    "researchSeconds": 1339200
+   }
+  ],
+  "apprentice-warden": [
+   {
+    "level": 2,
+    "laboratoryLevel": 11,
+    "researchCost": 90000,
+    "researchSeconds": 518400
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 12,
+    "researchCost": 135000,
+    "researchSeconds": 648000
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 13,
+    "researchCost": 160000,
+    "researchSeconds": 691200
+   }
+  ],
+  "druid": [
+   {
+    "level": 2,
+    "laboratoryLevel": 12,
+    "researchCost": 125000,
+    "researchSeconds": 691200
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 13,
+    "researchCost": 175000,
+    "researchSeconds": 777600
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 14,
+    "researchCost": 187500,
+    "researchSeconds": 950400
+   },
+   {
+    "level": 5,
+    "laboratoryLevel": 15,
+    "researchCost": 300000,
+    "researchSeconds": 1036800
+   },
+   {
+    "level": 6,
+    "laboratoryLevel": 16,
+    "researchCost": 380000,
+    "researchSeconds": 1339200
+   }
+  ],
+  "furnace": [
+   {
+    "level": 2,
+    "laboratoryLevel": 13,
+    "researchCost": 200000,
+    "researchSeconds": 777600
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 14,
+    "researchCost": 260000,
+    "researchSeconds": 950400
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 15,
+    "researchCost": 320000,
+    "researchSeconds": 1296000
+   }
+  ],
+  "ruin-witch": [
+   {
+    "level": 2,
+    "laboratoryLevel": 14,
+    "researchCost": 220000,
+    "researchSeconds": 950400
+   },
+   {
+    "level": 3,
+    "laboratoryLevel": 15,
+    "researchCost": 300000,
+    "researchSeconds": 1036800
+   },
+   {
+    "level": 4,
+    "laboratoryLevel": 16,
+    "researchCost": 380000,
+    "researchSeconds": 1339200
+   }
+  ]
+ },
+ "comparison": {
+  "checked": 819,
+  "matched": 818,
+  "labTownHallChecked": 16,
+  "labTownHallMatched": 16
+ },
+ "mismatches": [
+  {
+   "field": "researchSeconds",
+   "level": 13,
+   "wiki": 1080000,
+   "client": 907200,
+   "note": "wizard (chart cell ('13', '16M', '12d 12h'))"
+  },
+  {
+   "field": "intro text",
+   "level": 3,
+   "wiki": "chart intro: Archer level 3 at Laboratory 3 costs 80,000 and takes 6 hours",
+   "client": "chart cell and client: 80,000 / 2h",
+   "note": "stale example text"
+  }
+ ]
+}

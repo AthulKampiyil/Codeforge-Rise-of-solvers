@@ -1,0 +1,486 @@
+{
+ "title": "Dark Crown",
+ "url": "https://clashofclans.fandom.com/wiki/Dark_Crown",
+ "revid": 624599,
+ "retrieved": "2026-09-15",
+ "clientName": "Dark Crown",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Minion Prince",
+ "summary": "Prince Epic passive item: gains up to three stacking-tier buffs (+10/20/30% HP and damage at max) as 60/120/180 housing of his allies die; passive HP and attack speed.",
+ "constants": {
+  "wiki": {
+   "User": "Minion Prince",
+   "Ability Type": "Passive",
+   "Rarity": "Epic",
+   "Unlock Requirement": "Buy in Dark Deal event for 3,100 Mischief Medal; Buy in Meltdown Mayhem event for 3,100 Ember Medal; Buy in Equipment Blast event for 3,100 Relic Medal; or purchasable from the Trader for 1,500 Gem"
+  },
+  "client": {
+   "Rarity": "EPIC",
+   "AllowedCharacters": "Minion Prince;",
+   "MainAbilities": "MinionDarkCrownAbilityHighestTier",
+   "ExtraAbilities": "MinionDarkCrownAbilityLowestTier;MinionDarkCrownAbilityMediumTier;MinionDarkCrownAbilityConstantAura",
+   "Claimable": "TRUE",
+   "levelRows": 27,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    10
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "firstHealthAndDamageIncreasePercent": {
+   "wikiHeader": "Ability Attributes / First Health & Damage Increase",
+   "unit": "percent"
+  },
+  "secondHealthAndDamageIncreasePercent": {
+   "wikiHeader": "Ability Attributes / Second Health & Damage Increase",
+   "unit": "percent"
+  },
+  "maxHealthIncreasePercent": {
+   "wikiHeader": "Ability Attributes / Max Health Increase",
+   "unit": "percent"
+  },
+  "maxDamageIncreasePercent": {
+   "wikiHeader": "Ability Attributes / Max Damage Increase",
+   "unit": "percent"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "attackSpeedIncreasePercent": {
+   "wikiHeader": "Hero Boosts / Attack Speed Increase",
+   "unit": "percent"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostStarryOre": {
+   "wikiHeader": "Upgrade Cost / Starry Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "firstHealthAndDamageIncreasePercent": 1,
+   "secondHealthAndDamageIncreasePercent": 2,
+   "maxHealthIncreasePercent": 3,
+   "maxDamageIncreasePercent": 3,
+   "hitpointIncrease": 550,
+   "attackSpeedIncreasePercent": 1,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "firstHealthAndDamageIncreasePercent": 1,
+   "secondHealthAndDamageIncreasePercent": 2,
+   "maxHealthIncreasePercent": 3,
+   "maxDamageIncreasePercent": 3,
+   "hitpointIncrease": 575,
+   "attackSpeedIncreasePercent": 2,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "firstHealthAndDamageIncreasePercent": 2,
+   "secondHealthAndDamageIncreasePercent": 4,
+   "maxHealthIncreasePercent": 6,
+   "maxDamageIncreasePercent": 6,
+   "hitpointIncrease": 600,
+   "attackSpeedIncreasePercent": 2,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "firstHealthAndDamageIncreasePercent": 2,
+   "secondHealthAndDamageIncreasePercent": 4,
+   "maxHealthIncreasePercent": 6,
+   "maxDamageIncreasePercent": 6,
+   "hitpointIncrease": 625,
+   "attackSpeedIncreasePercent": 3,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "firstHealthAndDamageIncreasePercent": 2,
+   "secondHealthAndDamageIncreasePercent": 4,
+   "maxHealthIncreasePercent": 6,
+   "maxDamageIncreasePercent": 6,
+   "hitpointIncrease": 650,
+   "attackSpeedIncreasePercent": 3,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "firstHealthAndDamageIncreasePercent": 3,
+   "secondHealthAndDamageIncreasePercent": 6,
+   "maxHealthIncreasePercent": 9,
+   "maxDamageIncreasePercent": 9,
+   "hitpointIncrease": 675,
+   "attackSpeedIncreasePercent": 3,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "firstHealthAndDamageIncreasePercent": 3,
+   "secondHealthAndDamageIncreasePercent": 6,
+   "maxHealthIncreasePercent": 9,
+   "maxDamageIncreasePercent": 9,
+   "hitpointIncrease": 700,
+   "attackSpeedIncreasePercent": 4,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "firstHealthAndDamageIncreasePercent": 3,
+   "secondHealthAndDamageIncreasePercent": 6,
+   "maxHealthIncreasePercent": 9,
+   "maxDamageIncreasePercent": 9,
+   "hitpointIncrease": 725,
+   "attackSpeedIncreasePercent": 4,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "firstHealthAndDamageIncreasePercent": 4,
+   "secondHealthAndDamageIncreasePercent": 8,
+   "maxHealthIncreasePercent": 12,
+   "maxDamageIncreasePercent": 12,
+   "hitpointIncrease": 750,
+   "attackSpeedIncreasePercent": 4,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "upgradeCostStarryOre": 10,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "firstHealthAndDamageIncreasePercent": 4,
+   "secondHealthAndDamageIncreasePercent": 8,
+   "maxHealthIncreasePercent": 12,
+   "maxDamageIncreasePercent": 12,
+   "hitpointIncrease": 775,
+   "attackSpeedIncreasePercent": 5,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 11,
+   "firstHealthAndDamageIncreasePercent": 4,
+   "secondHealthAndDamageIncreasePercent": 8,
+   "maxHealthIncreasePercent": 12,
+   "maxDamageIncreasePercent": 12,
+   "hitpointIncrease": 800,
+   "attackSpeedIncreasePercent": 5,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 12,
+   "firstHealthAndDamageIncreasePercent": 5,
+   "secondHealthAndDamageIncreasePercent": 10,
+   "maxHealthIncreasePercent": 15,
+   "maxDamageIncreasePercent": 15,
+   "hitpointIncrease": 825,
+   "attackSpeedIncreasePercent": 5,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "upgradeCostStarryOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 13,
+   "firstHealthAndDamageIncreasePercent": 5,
+   "secondHealthAndDamageIncreasePercent": 10,
+   "maxHealthIncreasePercent": 15,
+   "maxDamageIncreasePercent": 15,
+   "hitpointIncrease": 850,
+   "attackSpeedIncreasePercent": 6,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 14,
+   "firstHealthAndDamageIncreasePercent": 5,
+   "secondHealthAndDamageIncreasePercent": 10,
+   "maxHealthIncreasePercent": 15,
+   "maxDamageIncreasePercent": 15,
+   "hitpointIncrease": 875,
+   "attackSpeedIncreasePercent": 6,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 15,
+   "firstHealthAndDamageIncreasePercent": 6,
+   "secondHealthAndDamageIncreasePercent": 12,
+   "maxHealthIncreasePercent": 18,
+   "maxDamageIncreasePercent": 18,
+   "hitpointIncrease": 900,
+   "attackSpeedIncreasePercent": 6,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 30,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 16,
+   "firstHealthAndDamageIncreasePercent": 6,
+   "secondHealthAndDamageIncreasePercent": 12,
+   "maxHealthIncreasePercent": 18,
+   "maxDamageIncreasePercent": 18,
+   "hitpointIncrease": 925,
+   "attackSpeedIncreasePercent": 7,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 17,
+   "firstHealthAndDamageIncreasePercent": 6,
+   "secondHealthAndDamageIncreasePercent": 12,
+   "maxHealthIncreasePercent": 18,
+   "maxDamageIncreasePercent": 18,
+   "hitpointIncrease": 950,
+   "attackSpeedIncreasePercent": 7,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 18,
+   "firstHealthAndDamageIncreasePercent": 7,
+   "secondHealthAndDamageIncreasePercent": 14,
+   "maxHealthIncreasePercent": 21,
+   "maxDamageIncreasePercent": 21,
+   "hitpointIncrease": 975,
+   "attackSpeedIncreasePercent": 7,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 50,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 19,
+   "firstHealthAndDamageIncreasePercent": 7,
+   "secondHealthAndDamageIncreasePercent": 14,
+   "maxHealthIncreasePercent": 21,
+   "maxDamageIncreasePercent": 21,
+   "hitpointIncrease": 1000,
+   "attackSpeedIncreasePercent": 8,
+   "upgradeCostShinyOre": 2800,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 20,
+   "firstHealthAndDamageIncreasePercent": 7,
+   "secondHealthAndDamageIncreasePercent": 14,
+   "maxHealthIncreasePercent": 21,
+   "maxDamageIncreasePercent": 21,
+   "hitpointIncrease": 1025,
+   "attackSpeedIncreasePercent": 8,
+   "upgradeCostShinyOre": 2900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 21,
+   "firstHealthAndDamageIncreasePercent": 8,
+   "secondHealthAndDamageIncreasePercent": 16,
+   "maxHealthIncreasePercent": 24,
+   "maxDamageIncreasePercent": 24,
+   "hitpointIncrease": 1050,
+   "attackSpeedIncreasePercent": 8,
+   "upgradeCostShinyOre": 3000,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 100,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 22,
+   "firstHealthAndDamageIncreasePercent": 8,
+   "secondHealthAndDamageIncreasePercent": 16,
+   "maxHealthIncreasePercent": 24,
+   "maxDamageIncreasePercent": 24,
+   "hitpointIncrease": 1075,
+   "attackSpeedIncreasePercent": 9,
+   "upgradeCostShinyOre": 3100,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 23,
+   "firstHealthAndDamageIncreasePercent": 8,
+   "secondHealthAndDamageIncreasePercent": 16,
+   "maxHealthIncreasePercent": 24,
+   "maxDamageIncreasePercent": 24,
+   "hitpointIncrease": 1100,
+   "attackSpeedIncreasePercent": 9,
+   "upgradeCostShinyOre": 3200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 24,
+   "firstHealthAndDamageIncreasePercent": 9,
+   "secondHealthAndDamageIncreasePercent": 18,
+   "maxHealthIncreasePercent": 27,
+   "maxDamageIncreasePercent": 27,
+   "hitpointIncrease": 1125,
+   "attackSpeedIncreasePercent": 9,
+   "upgradeCostShinyOre": 3300,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 120,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 25,
+   "firstHealthAndDamageIncreasePercent": 9,
+   "secondHealthAndDamageIncreasePercent": 18,
+   "maxHealthIncreasePercent": 27,
+   "maxDamageIncreasePercent": 27,
+   "hitpointIncrease": 1150,
+   "attackSpeedIncreasePercent": 10,
+   "upgradeCostShinyOre": 3400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 26,
+   "firstHealthAndDamageIncreasePercent": 9,
+   "secondHealthAndDamageIncreasePercent": 18,
+   "maxHealthIncreasePercent": 27,
+   "maxDamageIncreasePercent": 27,
+   "hitpointIncrease": 1175,
+   "attackSpeedIncreasePercent": 10,
+   "upgradeCostShinyOre": 3500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 27,
+   "firstHealthAndDamageIncreasePercent": 10,
+   "secondHealthAndDamageIncreasePercent": 20,
+   "maxHealthIncreasePercent": 30,
+   "maxDamageIncreasePercent": 30,
+   "hitpointIncrease": 1200,
+   "attackSpeedIncreasePercent": 11,
+   "upgradeCostShinyOre": 3600,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 150,
+   "blacksmithLevelRequired": 9
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "growth",
+   "level": null,
+   "wiki": "about 5% larger per tier (max ≈ 15%)",
+   "client": "GrowthScale 4 / 8 / 12",
+   "note": "client growth is 4/8/12 (units presumably %)"
+  }
+ ],
+ "clientColumns": [
+  "ExtraAbilities:special_abilities[MinionDarkCrownAbilityLowestTier].PercentHealthIncrease",
+  "ExtraAbilities:special_abilities[MinionDarkCrownAbilityMediumTier].PercentHealthIncrease",
+  "MainAbilities:special_abilities[MinionDarkCrownAbilityHighestTier].BoostDamagePercentage",
+  "MainAbilities:special_abilities[MinionDarkCrownAbilityHighestTier].PercentHealthIncrease",
+  "character_items.AttackSpeedPercentage",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

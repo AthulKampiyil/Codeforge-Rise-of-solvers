@@ -1,0 +1,129 @@
+{
+  "title": "Super Witch",
+  "url": "https://clashofclans.fandom.com/wiki/Super_Witch",
+  "revid": 623218,
+  "clientName": "Super Witch",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Super Witch",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "None",
+    "attackType": "Area Splash",
+    "housingSpace": 40,
+    "movementSpeed": 12,
+    "attackSpeedSeconds": 0.7,
+    "rangeTiles": 4,
+    "specialAbility": "Big Boy"
+  },
+  "levels": [
+    {
+      "level": 1,
+      "eventOnly": true,
+      "dps": 240,
+      "damagePerAttack": 168,
+      "hitpoints": 2400
+    },
+    {
+      "level": 2,
+      "eventOnly": true,
+      "dps": 270,
+      "damagePerAttack": 189,
+      "hitpoints": 2600
+    },
+    {
+      "level": 3,
+      "eventOnly": true,
+      "dps": 300,
+      "damagePerAttack": 210,
+      "hitpoints": 2800
+    },
+    {
+      "level": 4,
+      "eventOnly": true,
+      "dps": 330,
+      "damagePerAttack": 231,
+      "hitpoints": 3000
+    },
+    {
+      "level": 5,
+      "dps": 360,
+      "damagePerAttack": 252,
+      "hitpoints": 3200
+    },
+    {
+      "level": 6,
+      "dps": 390,
+      "damagePerAttack": 273,
+      "hitpoints": 3400
+    },
+    {
+      "level": 7,
+      "dps": 430,
+      "damagePerAttack": 301,
+      "hitpoints": 3750
+    },
+    {
+      "level": 8,
+      "dps": 470,
+      "damagePerAttack": 329,
+      "hitpoints": 4100
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "summon",
+      "client": "`SummonTroop` Big Boy, `SummonTroopCount` 1, `SummonLimit` 1, `SummonTime` 1000, `SummonCooldown` 25000, `SummonLevel` 1, `SecondarySpawnDist` 150"
+    },
+    {
+      "mechanic": "Big Boy",
+      "client": "characters `Big Boy`: `Hitpoints` 4100, `DPS` 350, `AttackSpeed` 2000, `Speed` 150, `AttackRange` 100, `HousingSpace` 20 (single level)"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`DPS` x 0.7 s, `Hitpoints`, `Speed` 150, `AttackRange` 400, `DamageRadius` 30, `Projectile` Witch_projectile"
+    }
+  ],
+  "extraTables": {
+    "bigBoy": [
+      {
+        "dps": 350,
+        "damagePerAttack": 700,
+        "hitpoints": 4100,
+        "preferredTarget": "None",
+        "attackType": "Single Target",
+        "movementSpeed": 12,
+        "attackSpeedSeconds": 2,
+        "rangeTiles": 1
+      }
+    ]
+  },
+  "boost": {
+    "wiki": {
+      "baseTroop": "Witch",
+      "minBaseLevel": 5,
+      "townHallRequired": 12,
+      "clanCastleLevelToReceive": 8,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperWitch",
+      "Original": "Witch",
+      "MinOriginalLevel_raw": 4,
+      "minBaseLevel": 5,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_WITCH_INTRO_TH13",
+      "townHallDerived": 12
+    }
+  }
+}

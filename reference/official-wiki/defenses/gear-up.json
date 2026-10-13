@@ -1,0 +1,101 @@
+{
+ "title": "Gear Up (synthesized)",
+ "url": null,
+ "revid": null,
+ "retrieved": "2026-09-15",
+ "category": "mechanic",
+ "sources": [
+  {
+   "title": "Cannon/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Cannon/Home_Village",
+   "revid": 624457
+  },
+  {
+   "title": "Archer Tower/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Archer_Tower/Home_Village",
+   "revid": 624456
+  },
+  {
+   "title": "Mortar",
+   "url": "https://clashofclans.fandom.com/wiki/Mortar",
+   "revid": 625094
+  }
+ ],
+ "levels": [],
+ "constants": {
+  "gearUps": [
+   {
+    "defense": "Cannon",
+    "mode": "Burst mode",
+    "builderBaseBuilding": "Double Cannon",
+    "homeVillageLevelRequired": 7,
+    "townHall": 6,
+    "builderBaseLevelRequired": 4,
+    "builderHall": 4,
+    "gearUpCost": 1000000,
+    "gearUpResource": "gold",
+    "gearUpSeconds": 172800,
+    "effect": "4-ball bursts, 0.192 s apart, 1.6 s between bursts; range 9 -> 7; DPS x2; per-ball +36%",
+    "client": {
+     "GearUpBuilding": "BB Double Cannon",
+     "GearUpLevelRequirement": "3",
+     "GearUpCost": "1000000",
+     "GearUpTime": "2880",
+     "GearUpResource": "Gold",
+     "countColumn": "Cannon_gearup",
+     "countPerTownHall": "1"
+    }
+   },
+   {
+    "defense": "Archer Tower",
+    "mode": "Fast Attack mode",
+    "builderBaseBuilding": "Archer Tower",
+    "homeVillageLevelRequired": 10,
+    "townHall": 8,
+    "builderBaseLevelRequired": 6,
+    "builderHall": 6,
+    "gearUpCost": 3000000,
+    "gearUpResource": "gold",
+    "gearUpSeconds": 604800,
+    "effect": "fire interval 0.5 -> 0.25 s; range 10 -> 8; DPS x2",
+    "client": {
+     "GearUpBuilding": "BB Archer Tower",
+     "GearUpLevelRequirement": "5",
+     "GearUpCost": "3000000",
+     "GearUpTime": "10080",
+     "GearUpResource": "Gold",
+     "countColumn": "Archer Tower_gearup",
+     "countPerTownHall": "1"
+    }
+   },
+   {
+    "defense": "Mortar",
+    "mode": "Burst mode",
+    "builderBaseBuilding": "Multi Mortar",
+    "homeVillageLevelRequired": 8,
+    "townHall": 10,
+    "builderBaseLevelRequired": 8,
+    "builderHall": 8,
+    "gearUpCost": 6000000,
+    "gearUpResource": "gold",
+    "gearUpSeconds": 1209600,
+    "effect": "3-shell bursts, 0.5 s apart; range unchanged (4-11); per-shell damage reduced, DPS up",
+    "client": {
+     "GearUpBuilding": "BB Multi Mortar",
+     "GearUpLevelRequirement": "7",
+     "GearUpCost": "6000000",
+     "GearUpTime": "20160",
+     "GearUpResource": "Gold",
+     "countColumn": "Mortar_gearup",
+     "countPerTownHall": "1"
+    }
+   }
+  ],
+  "performedBy": "Master Builder (must be free)",
+  "permanent": true,
+  "maxPerType": 1
+ },
+ "clientName": "GearUp* columns (buildings.csv) + townhall_levels <name>_gearup",
+ "clientTable": "buildings.csv",
+ "mismatches": []
+}

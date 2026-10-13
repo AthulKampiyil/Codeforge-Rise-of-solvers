@@ -1,0 +1,189 @@
+{
+  "title": "Ice Hound",
+  "url": "https://clashofclans.fandom.com/wiki/Ice_Hound",
+  "revid": 622637,
+  "clientName": "Ice Hound",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Ice Hound",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "Air Defense",
+    "attackType": "Melee (Ground Only)",
+    "housingSpace": 40,
+    "movementSpeed": 20,
+    "attackSpeedSeconds": 2,
+    "rangeTiles": 0.75,
+    "specialAbility": "Dish Served Cold"
+  },
+  "levels": [
+    {
+      "level": 1,
+      "eventOnly": true,
+      "dps": 2,
+      "damagePerAttack": 4,
+      "freezeSecondsOnDeath": 3.75,
+      "icePupsOffense": 6,
+      "icePupsDefense": 6,
+      "hitpoints": 7500,
+      "townHallLevel": 7
+    },
+    {
+      "level": 2,
+      "eventOnly": true,
+      "dps": 4,
+      "damagePerAttack": 8,
+      "freezeSecondsOnDeath": 3.75,
+      "icePupsOffense": 7,
+      "icePupsDefense": 7,
+      "hitpoints": 8000,
+      "townHallLevel": 9
+    },
+    {
+      "level": 3,
+      "eventOnly": true,
+      "dps": 6,
+      "damagePerAttack": 12,
+      "freezeSecondsOnDeath": 3.75,
+      "icePupsOffense": 8,
+      "icePupsDefense": 8,
+      "hitpoints": 8500,
+      "townHallLevel": 10
+    },
+    {
+      "level": 4,
+      "eventOnly": true,
+      "dps": 8,
+      "damagePerAttack": 16,
+      "freezeSecondsOnDeath": 3.75,
+      "icePupsOffense": 9,
+      "icePupsDefense": 9,
+      "hitpoints": 9000,
+      "townHallLevel": 11
+    },
+    {
+      "level": 5,
+      "dps": 10,
+      "damagePerAttack": 20,
+      "freezeSecondsOnDeath": 3.75,
+      "icePupsOffense": 10,
+      "icePupsDefense": 10,
+      "hitpoints": 9500,
+      "townHallLevel": 12
+    },
+    {
+      "level": 6,
+      "dps": 15,
+      "damagePerAttack": 30,
+      "freezeSecondsOnDeath": 4.25,
+      "icePupsOffense": 12,
+      "icePupsDefense": 11,
+      "hitpoints": 10000,
+      "townHallLevel": 13
+    },
+    {
+      "level": 7,
+      "dps": 20,
+      "damagePerAttack": 40,
+      "freezeSecondsOnDeath": 4.75,
+      "icePupsOffense": 14,
+      "icePupsDefense": 12,
+      "hitpoints": 10500,
+      "townHallLevel": 16
+    },
+    {
+      "level": 8,
+      "dps": 25,
+      "damagePerAttack": 50,
+      "freezeSecondsOnDeath": 5.25,
+      "icePupsOffense": 16,
+      "icePupsDefense": 13,
+      "hitpoints": 11500,
+      "townHallLevel": 18
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "rangeTiles",
+      "level": null,
+      "wiki": 0.75,
+      "client": 0.25,
+      "note": "client AttackRange/100"
+    },
+    {
+      "field": "icePup.rangeTiles",
+      "level": null,
+      "wiki": 2.75,
+      "client": 2.25,
+      "note": "Ice Hound Pup AttackRange 225"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "chill on hit",
+      "client": "`FrostOnHitTime` 2000, `FrostOnHitPercent` 50"
+    },
+    {
+      "mechanic": "death freeze",
+      "client": "`SpecialAbilities` IceHoundOnDeath (level 1,1,1,1,1,2,3,4 by troop level) -> `SelfSpell` IceHoundFreeze: `FreezeTimeMS` 3750/4250/4750/5250, `FreezeOuterTimeMS` ~75%, `Radius` 650"
+    },
+    {
+      "mechanic": "pups",
+      "client": "`SecondaryTroop` Ice Hound Pup, `SecondaryTroopCnt` (offense); `Defensive Ice Hound`.`SecondaryTroopCnt` (defense); `SecondarySpawnDist` 250"
+    },
+    {
+      "mechanic": "targeting",
+      "client": "`PreferedTargetBuilding` Air Defense"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`DPS` x 2 s, `Hitpoints`, `Speed` 250, `AttackRange` 25"
+    },
+    {
+      "mechanic": "TH per level",
+      "client": "derived: Laboratory TH needed for the Lava Hound level"
+    }
+  ],
+  "extraTables": {
+    "icePup": [
+      {
+        "preferredTarget": "None",
+        "attackType": "Ranged (Ground & Air)",
+        "housingSpace": 1,
+        "movementSpeed": 32,
+        "attackSpeedSeconds": 1,
+        "rangeTiles": 2.75,
+        "dps": 35,
+        "damagePerAttack": 35,
+        "hitpoints": 50
+      }
+    ]
+  },
+  "boost": {
+    "wiki": {
+      "baseTroop": "Lava Hound",
+      "minBaseLevel": 5,
+      "townHallRequired": 12,
+      "clanCastleLevelToReceive": 8,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "IceHound",
+      "Original": "Lava Hound",
+      "MinOriginalLevel_raw": 4,
+      "minBaseLevel": 5,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_LAVAHOUND_INTRO_TH13",
+      "townHallDerived": 12
+    }
+  }
+}

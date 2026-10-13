@@ -1,0 +1,271 @@
+{
+ "title": "Yeti",
+ "page": "Yeti",
+ "url": "https://clashofclans.fandom.com/wiki/Yeti",
+ "revid": 624065,
+ "retrieved": "2026-09-15",
+ "clientName": "Yeti",
+ "clientVersion": "18.400.21",
+ "category": "elixir-troop",
+ "constants": {
+  "housingSpace": 18,
+  "movementSpeedWiki": 12,
+  "internalSpeed": 150,
+  "tilesPerSecond": 1.5,
+  "attackRangeTiles": 0.8,
+  "attackRangeTilesClient": 0.8,
+  "attackSeconds": 1,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Melee (Ground Only)",
+  "targets": "ground",
+  "favoriteTarget": "Any",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": false,
+  "unlock": {
+   "building": "Barracks",
+   "level": 14,
+   "townHall": 12
+  },
+  "spawnPerDamageClient": 600,
+  "triggersTraps": true
+ },
+ "client": {
+  "clientName": "Yeti",
+  "housingSpace": 18,
+  "internalSpeed": 150,
+  "movementSpeedInGameExact": 12,
+  "movementSpeedInGameRounded": 12,
+  "tilesPerSecond": 1.5,
+  "attackRangeTiles": 0.8,
+  "attackSeconds": 1,
+  "targets": "ground",
+  "flying": false,
+  "jumpsWalls": false,
+  "favoriteTarget": "None",
+  "productionBuilding": "Barracks",
+  "barracksLevel": 14,
+  "unlockTownHall": 12,
+  "triggersTraps": true,
+  "secondarySpawnDist": 100,
+  "movementOffsetSpeed": 0,
+  "spawnPerDamage": 600,
+  "spawnWhenDamaged": 600,
+  "spawnRemainingOnDeath": true
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 230,
+   "damagePerHit": 230,
+   "hitpoints": 2900,
+   "spawnCount": 8,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 250,
+   "damagePerHit": 250,
+   "hitpoints": 3200,
+   "spawnCount": 9,
+   "researchCost": 5000000,
+   "researchSeconds": 259200,
+   "researchTimeText": "3d",
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 3,
+   "dps": 270,
+   "damagePerHit": 270,
+   "hitpoints": 3500,
+   "spawnCount": 10,
+   "researchCost": 6500000,
+   "researchSeconds": 388800,
+   "researchTimeText": "4d 12h",
+   "laboratoryLevel": 11
+  },
+  {
+   "level": 4,
+   "dps": 290,
+   "damagePerHit": 290,
+   "hitpoints": 3700,
+   "spawnCount": 11,
+   "researchCost": 10000000,
+   "researchSeconds": 604800,
+   "researchTimeText": "7d",
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 5,
+   "dps": 310,
+   "damagePerHit": 310,
+   "hitpoints": 3900,
+   "spawnCount": 12,
+   "researchCost": 12000000,
+   "researchSeconds": 648000,
+   "researchTimeText": "7d 12h",
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 6,
+   "dps": 330,
+   "damagePerHit": 330,
+   "hitpoints": 4100,
+   "spawnCount": 13,
+   "researchCost": 14500000,
+   "researchSeconds": 712800,
+   "researchTimeText": "8d 6h",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 7,
+   "dps": 350,
+   "damagePerHit": 350,
+   "hitpoints": 4300,
+   "spawnCount": 13,
+   "researchCost": 17000000,
+   "researchSeconds": 864000,
+   "researchTimeText": "10d",
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 8,
+   "dps": 380,
+   "damagePerHit": 380,
+   "hitpoints": 4650,
+   "spawnCount": 14,
+   "researchCost": 27500000,
+   "researchSeconds": 1339200,
+   "researchTimeText": "15d 12h",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 2900,
+   "dps": 230,
+   "damagePerHit": 230,
+   "spawnCount": 8,
+   "spawnLevel": 1
+  },
+  {
+   "level": 2,
+   "hitpoints": 3200,
+   "dps": 250,
+   "damagePerHit": 250,
+   "researchCost": 5000000,
+   "researchSeconds": 259200,
+   "laboratoryLevel": 10,
+   "spawnCount": 9,
+   "spawnLevel": 2
+  },
+  {
+   "level": 3,
+   "hitpoints": 3500,
+   "dps": 270,
+   "damagePerHit": 270,
+   "researchCost": 6500000,
+   "researchSeconds": 388800,
+   "laboratoryLevel": 11,
+   "spawnCount": 10,
+   "spawnLevel": 3
+  },
+  {
+   "level": 4,
+   "hitpoints": 3700,
+   "dps": 290,
+   "damagePerHit": 290,
+   "researchCost": 10000000,
+   "researchSeconds": 604800,
+   "laboratoryLevel": 12,
+   "spawnCount": 11,
+   "spawnLevel": 4
+  },
+  {
+   "level": 5,
+   "hitpoints": 3900,
+   "dps": 310,
+   "damagePerHit": 310,
+   "researchCost": 12000000,
+   "researchSeconds": 648000,
+   "laboratoryLevel": 13,
+   "spawnCount": 12,
+   "spawnLevel": 5
+  },
+  {
+   "level": 6,
+   "hitpoints": 4100,
+   "dps": 330,
+   "damagePerHit": 330,
+   "researchCost": 14500000,
+   "researchSeconds": 712800,
+   "laboratoryLevel": 14,
+   "spawnCount": 13,
+   "spawnLevel": 6
+  },
+  {
+   "level": 7,
+   "hitpoints": 4300,
+   "dps": 350,
+   "damagePerHit": 350,
+   "researchCost": 17000000,
+   "researchSeconds": 864000,
+   "laboratoryLevel": 15,
+   "spawnCount": 13,
+   "spawnLevel": 7
+  },
+  {
+   "level": 8,
+   "hitpoints": 4650,
+   "dps": 380,
+   "damagePerHit": 380,
+   "researchCost": 27500000,
+   "researchSeconds": 1339200,
+   "laboratoryLevel": 16,
+   "spawnCount": 14,
+   "spawnLevel": 8
+  }
+ ],
+ "spawned": {
+  "slug": "yeti-yetimite",
+  "title": "Yetimite",
+  "clientName": "Yetimite",
+  "trigger": "per 600 damage taken, remainder on death",
+  "perLevelClient": {
+   "spawnCount": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    13,
+    14
+   ],
+   "spawnLevel": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ },
+ "comparison": {
+  "checked": 61,
+  "matched": 61
+ },
+ "mismatches": [],
+ "ambiguities": []
+}

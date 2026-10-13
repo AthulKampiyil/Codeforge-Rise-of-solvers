@@ -1,0 +1,1299 @@
+{
+  "clientVersion": "18.400.21",
+  "generator": "scripts/native3d/bake_hero_art.py --set guardians",
+  "conventions": {
+    "camera": {
+      "source": "csv/client_globals.csv: 3D_CAMERA_POSITION, 3D_CAMERA_LOOK_AT, 3D_CAMERA_FOV, USE_3D_ORTHO_PROJECTION (grouped with 3D_CHARACTER_ATLAS_* sizes)",
+      "position": [
+        0,
+        70,
+        45
+      ],
+      "lookAt": [
+        0,
+        0,
+        0
+      ],
+      "fov": 35,
+      "orthographic": true,
+      "elevationDegrees": 57.2648,
+      "viewDirection": [
+        -0.0,
+        -0.841178,
+        -0.540758
+      ],
+      "axes": "Y-up like every Odin model and the skins.csv portrait/reward cameras (x;y;z); feet at y=0, models face +Z; screen right = +X"
+    },
+    "crossChecks": "2D art is drawn from a shallower camera than the client 3D character camera (57.26 deg): building_bases.sc base_2x2..base_5x5 diamonds measure 1.34:1 (orthographic elevation ~48 deg; 4:3 = 48.6 deg) and the Wall Wrecker 2D direction sprites (wheel layers, edge-on vs side view) give ~46-52 deg; this project draws a 2:1 (30 deg) grid. Pass --elevation to re-bake for another camera.",
+    "pixelsPerWorldUnit": 3.568044,
+    "clientPixelsPerWorldUnit": 3.568044,
+    "pixelScaleNote": "Client character viewport 225x225 px covers 2*(CameraDistance 10000/100)*tan(FOV/2) world units; atlases are baked at 1x that density. Draw at 1/1 for client scale.",
+    "directions": {
+      "count": 8,
+      "names": [
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW",
+        "N",
+        "NE"
+      ],
+      "index": "frames[k] faces screen angle 45*k degrees clockwise from screen right (y down): 0=E, 2=S (toward camera), 6=N",
+      "yaw": "model yaw about +Y = atan2(cos(phi), sin(phi)/sin(elevation)); no mirroring is used"
+    },
+    "anchor": "anchorX/anchorY: pixel offset inside the frame rectangle of the projected model origin, i.e. the ground point under the character. Guardians are ground units without OffsetY, so no flying offset applies; the jump clip keeps its own in-place leap height (the sprite rises above the anchor).",
+    "sampling": "Sources are 30 fps. A state uses native frames from its range (whole clip; for looping walk states only the cycle from LoopStartFrame; other looping states keep the intro and set loopStart). The last native frame is dropped when it repeats the cycle start pose. Frames are decimated by the smallest integer step that keeps <= 24 frames; state fps = 30 / step. actionFrame maps the 1-based CSV ActionFrame to the nearest sampled frame.",
+    "lookAtCamera": "States flagged LookAtCamera (die/stunned and celebrate) are rendered once facing the camera (S) and referenced by all 8 directions.",
+    "rig": "Animation clips contain the full authoring rig; joint globals are evaluated in the clip hierarchy (untracked nodes keep the clip node TRS) and mapped to geometry joints by name.",
+    "shading": "Approximation, not the client \"character\" shader: gamma-space base colour * (0.72 + 0.45 * lambert) with a view-space light from the upper left, tangent-space normal map (ASTC RRRG: x red, y alpha), additive emission map. Material maps are pinned but not applied; the all-zero a_color1 stream of a second vertex buffer is ignored. No particles, outlines, stun stars, bloom or ground shadows.",
+    "antialiasing": "4x4 supersampled, box filtered, straight alpha, tight alpha crop.",
+    "states": "idle, walk, attack, attack2, die, jump, celebrate from the skins.csv Animation block of the guardians.csv DisplaySkin: attack2 is the unnamed second attack variant row, die uses the stunned clip (HasDirections FALSE, not looping) and celebrate the intro clip. The menu row (ui1 clip, a menu-screen pose) is not baked. Non-baked CSV cells (HasDirections, VariationWeight, StopToLast, ParticleEffect3D, Effect3DFrame, EffectFrame, Effect) are recorded per state as csvNotBaked and the skins.csv effect and bone names as csvSkinEffects; particle and sound effects are not rendered.",
+    "geometry": "All meshDataInfo vertex buffers are used, concatenated in order (the Guardian Logger legs use a second buffer). The animation row Scale (recorded per state as scale) scales the model before projection.",
+    "sharedCamera": "Camera, pixelsPerWorldUnit, sampling and antialiasing are identical to reference/full-client/hero-art.json (its elevationOverrideDegrees, if any, is inherited unless --elevation is given)."
+  },
+  "sources": {
+    "csv/animations.csv": "b0be152c98d06ccd0689320acfa19b07e04dd2a07fc6a1253558592f67bf29d8",
+    "csv/client_globals.csv": "2844ea910bc4c464fc38b8be35eee81cacdf186648976cdeb311e58a52bd717d",
+    "logic/guardians.csv": "6965d323cc1d8e5b393f031c83503880c503c13c682d763d5896797daf5da4d7",
+    "logic/skins.csv": "709da5743c729dedff1d1b9b02946452fc346dfaf09e385fda637c00eb812ad4",
+    "sc3d/guardianlogger_default_a.sctx": "87badbd7c616ea94da7e1a0d38dbabc113aaa3334778c6a41bfee4286621a9c5",
+    "sc3d/guardianlogger_default_attack1.glb": "95b215fef4eae31fcf01e0b98d1e119aca1684cac67884f8cd97afd83c264e9a",
+    "sc3d/guardianlogger_default_attack2.glb": "c6759d5aa115dd616b028f4c2138433d846f8d628ccd228f271d8d8ff582f85a",
+    "sc3d/guardianlogger_default_e.sctx": "b38337a3aff26461901c150406382b8a02af08b41b77cdddb8a3d436d10a1c5c",
+    "sc3d/guardianlogger_default_geo.glb": "7a8ae1dc6f147fadb5d6e6626801818c571673738c15a7dcfce870ade222a8a9",
+    "sc3d/guardianlogger_default_idle1.glb": "1b4fa71230587f349fa9353943b75a0909295f2e3e5d67bb15163765d710ccd2",
+    "sc3d/guardianlogger_default_intro1.glb": "3a7c85ea829847f8724fb3bdff503b7de64799f6950bcba3225823496b5c8f4c",
+    "sc3d/guardianlogger_default_jump1.glb": "63b34fa3fe5c70260c48f0556688703177cb0c79936137a046e22bc747925a4a",
+    "sc3d/guardianlogger_default_m.sctx": "713f0243c98a538dbab0cf3a6433e6e8f8fde59518daa39f888a1f087b6921b8",
+    "sc3d/guardianlogger_default_n.sctx": "6bd386d6045807e7f5e251ddad9c6558ce14589f85b21921d4942718005e3767",
+    "sc3d/guardianlogger_default_stunned1.glb": "8a3218b71b04de3e13dc37a2c8ab87db602007152a60a0ebfeafb4786fc44d60",
+    "sc3d/guardianlogger_default_walk1.glb": "42ca4d69b7edc66ffaf4237b39772ae5ebcb9ae854b2892dea61d88dbb08c81f",
+    "sc3d/guardianmelee_default_a.sctx": "9efb58e75e0083074af2b0ae2c0e1d9a9f6b6094b03703090aa6a04921a0ef9e",
+    "sc3d/guardianmelee_default_attack1.glb": "1c67464d6f8a0928af1d26303a544057fd08b93c52f594af8f00056caeafbc83",
+    "sc3d/guardianmelee_default_attack2.glb": "aa636b3d8e91abe028dcfe70b118c19c0a35881e14a46ae0b12fba2bfc5f0306",
+    "sc3d/guardianmelee_default_e.sctx": "00aaaa527988386608abf0fe25d54e44fcaec1a5c860a330239bf8e2de6ad1ba",
+    "sc3d/guardianmelee_default_geo.glb": "854a4eec98c3870f4847749e943594ea2d6647eb6ea6bf9f9f295682cdf8a04b",
+    "sc3d/guardianmelee_default_idle1.glb": "8acbe72c5ed56fcfdd3dabbaabaec033fc9560611705d51e236dba4764693508",
+    "sc3d/guardianmelee_default_intro1.glb": "186bbc4ada77d8ec35137842361875ebeee6ef74a7c3767c6571f5dfc52b8d54",
+    "sc3d/guardianmelee_default_jump1.glb": "5c2a2336174c4c0f12a08d54111880ea233749ee0d56290acd5a5ece577e9ac5",
+    "sc3d/guardianmelee_default_m.sctx": "62a4ca483361eb10b1c5e20bc2a977d5ccf6b5770938cf4937a2417435f74686",
+    "sc3d/guardianmelee_default_n.sctx": "830d2f3b3435667d66eb9ec208b543ea35123ea7a45571138c107b2ac6fd102c",
+    "sc3d/guardianmelee_default_stunned1.glb": "78bec0153dfeda7745fc7149ef23569783043bd2a5b4c37c03b20e57c852cff0",
+    "sc3d/guardianmelee_default_walk1.glb": "535d6fbb582159e129bc64adf7ee391d3e4217d79a5ace8b7e5e73382c2bc762",
+    "sc3d/guardianranged_default_a.sctx": "8198c2c04cbd3b8cfe9cb55b60c2d4dfb2db655a4a5b7ce5aa003ba90eb4ee4e",
+    "sc3d/guardianranged_default_attack1.glb": "b7d56dec8c8cf7e25c87718b41ac0119ba619f54ad3aedaeb3cb2776f6238172",
+    "sc3d/guardianranged_default_attack2.glb": "75a3a1d171692a3fbd7d5555e46ef10279001d2cce3b4778784b3d4548cd8eb2",
+    "sc3d/guardianranged_default_e.sctx": "6d16ee18b57906d5ddd701614aa66db869b82fb285aa64242e795967e0d236f0",
+    "sc3d/guardianranged_default_geo.glb": "a5f637e8bc9c36a54feaa913e379cd94c16fef3ce8a41a11b99ab2b297eff36c",
+    "sc3d/guardianranged_default_idle1.glb": "06575bd6146c4e75bbac70c390a59a43b2158ef4022797bb09bdc40a70b98014",
+    "sc3d/guardianranged_default_intro1.glb": "5419ee688cd5c4cd19fa9976dc14073f84c642ca8505336280f13fb485355003",
+    "sc3d/guardianranged_default_jump1.glb": "752a06fce7f1d3ba56744285c64ebccadd6c3c8360218fbdfb8bf791346935d7",
+    "sc3d/guardianranged_default_m.sctx": "dc804f1ceca3a7b069719b022a8d6b658a28ceaea3f42e32890d9ac02d9dc56c",
+    "sc3d/guardianranged_default_n.sctx": "953f99c43e24ec64d950d1e78dd315db69cc9882f840d89a1d8314ee7928bf99",
+    "sc3d/guardianranged_default_stunned1.glb": "c0f9682c6e4aaa0cc8fe33004664d2663aaf067f943f32b8a47adaa66b0635e4",
+    "sc3d/guardianranged_default_walk1.glb": "df864ef86ed39b7123dd5b3a70916179b2b570265eda1bc06d64068df9006134"
+  },
+  "characters": {
+    "longshot": {
+      "record": "logic/guardians.csv:InfernoArtillery",
+      "clientSkin": "RangedGuardian",
+      "clientCharacter": "Longshot",
+      "animation": "RangedGuardian",
+      "altAnimation": null,
+      "geometry": "sc3d/guardianranged_default_geo.glb",
+      "textures": {
+        "base": "sc3d/guardianranged_default_a.sctx",
+        "normal": "sc3d/guardianranged_default_n.sctx",
+        "material": "sc3d/guardianranged_default_m.sctx",
+        "emission": "sc3d/guardianranged_default_e.sctx"
+      },
+      "appliedMaps": {
+        "normal": true,
+        "emission": true
+      },
+      "shadowScale": 150,
+      "csvSkinEffects": {
+        "AttackEffect": "ps_chr_guardianRanged_AtkStart",
+        "AttackEffect2": "RangedGuardian_Atk_1_SFX",
+        "HitEffect": "ps_chr_guardianRanged_Hit",
+        "DieEffect": "RangedGuardian_Die_SFX",
+        "GunBone": "arrow_s"
+      },
+      "vertexBuffers": 1,
+      "joints": 52,
+      "vertices": 5923,
+      "triangles": 8236,
+      "states": {
+        "walk": {
+          "clip": "sc3d/guardianranged_default_walk1.glb",
+          "block": "RangedGuardian",
+          "event": "walk",
+          "loop": true,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE"
+          },
+          "frames": 20,
+          "fps": 15.0,
+          "nativeFrames": 40,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            38
+          ],
+          "step": 2,
+          "sampledNativeFrames": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ],
+          "lastFrameRepeatsCycleStart": true
+        },
+        "idle": {
+          "clip": "sc3d/guardianranged_default_idle1.glb",
+          "block": "RangedGuardian",
+          "event": "idle",
+          "loop": true,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE"
+          },
+          "frames": 17,
+          "fps": 15.0,
+          "nativeFrames": 34,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            32
+          ],
+          "step": 2,
+          "sampledNativeFrames": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ],
+          "lastFrameRepeatsCycleStart": true
+        },
+        "attack": {
+          "clip": "sc3d/guardianranged_default_attack1.glb",
+          "block": "RangedGuardian",
+          "event": "attack",
+          "loop": false,
+          "csvActionFrame": 9,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "VariationWeight": "1"
+          },
+          "frames": 16,
+          "fps": 15.0,
+          "nativeFrames": 32,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            31
+          ],
+          "step": 2,
+          "sampledNativeFrames": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30
+          ]
+        },
+        "celebrate": {
+          "clip": "sc3d/guardianranged_default_intro1.glb",
+          "block": "RangedGuardian",
+          "event": "celebrate",
+          "loop": false,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": true,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "ParticleEffect3D": "ps_chr_th18guardianRanged_Cheer",
+            "EffectFrame": "1",
+            "Effect": "RangedGuardian_Cheer_SFX"
+          },
+          "frames": 23,
+          "fps": 10.0,
+          "nativeFrames": 68,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            67
+          ],
+          "step": 3,
+          "sampledNativeFrames": [
+            0,
+            3,
+            6,
+            9,
+            12,
+            15,
+            18,
+            21,
+            24,
+            27,
+            30,
+            33,
+            36,
+            39,
+            42,
+            45,
+            48,
+            51,
+            54,
+            57,
+            60,
+            63,
+            66
+          ]
+        },
+        "die": {
+          "clip": "sc3d/guardianranged_default_stunned1.glb",
+          "block": "RangedGuardian",
+          "event": "die",
+          "loop": false,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": true,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "FALSE"
+          },
+          "frames": 17,
+          "fps": 15.0,
+          "nativeFrames": 34,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            33
+          ],
+          "step": 2,
+          "sampledNativeFrames": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
+        },
+        "jump": {
+          "clip": "sc3d/guardianranged_default_jump1.glb",
+          "block": "RangedGuardian",
+          "event": "jump",
+          "loop": false,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "ParticleEffect3D": "ps_chr_th18guardianRanged_Jump",
+            "EffectFrame": "1"
+          },
+          "frames": 18,
+          "fps": 10.0,
+          "nativeFrames": 54,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            53
+          ],
+          "step": 3,
+          "sampledNativeFrames": [
+            0,
+            3,
+            6,
+            9,
+            12,
+            15,
+            18,
+            21,
+            24,
+            27,
+            30,
+            33,
+            36,
+            39,
+            42,
+            45,
+            48,
+            51
+          ]
+        },
+        "attack2": {
+          "clip": "sc3d/guardianranged_default_attack2.glb",
+          "block": "RangedGuardian",
+          "event": "attack variant 2",
+          "loop": false,
+          "csvActionFrame": 9,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "VariationWeight": "1"
+          },
+          "frames": 16,
+          "fps": 15.0,
+          "nativeFrames": 32,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            31
+          ],
+          "step": 2,
+          "sampledNativeFrames": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30
+          ]
+        }
+      },
+      "atlas": {
+        "path": "assets/guardians-native/longshot/atlas.json",
+        "sha256": "b062df099a20953879215bf43973f9a8e03852718815085924ed495551f45b79"
+      },
+      "images": {
+        "walk.png": {
+          "sha256": "b929621de7b0aec01e1ac323141783363c07fbe63c02042eec1087ae690df054",
+          "width": 1151,
+          "height": 1141,
+          "bytes": 1814865
+        },
+        "idle.png": {
+          "sha256": "b3a7bfdec142c6861dc14ecf4ace1bbbb3ca877f340621be2312cc7467362045",
+          "width": 1070,
+          "height": 1028,
+          "bytes": 1503487
+        },
+        "attack.png": {
+          "sha256": "2a49c53924e5e2bab82576f06e343f74c5b5687a3ecfb4476f4db2b7044564e4",
+          "width": 1100,
+          "height": 1036,
+          "bytes": 1549368
+        },
+        "celebrate.png": {
+          "sha256": "08e466dc26c7bfbd7a8260708a9256aae72cd25a988c177db0dfff018f7a2c88",
+          "width": 477,
+          "height": 495,
+          "bytes": 307775
+        },
+        "die.png": {
+          "sha256": "7dc71886a1d6ce9d90f2b276fee118af76030d805a4a7a41700c16a185ca9e84",
+          "width": 427,
+          "height": 536,
+          "bytes": 223907
+        },
+        "jump.png": {
+          "sha256": "39f1dba4a03d48d351e64bb49b542391de1a7a4f94370b4d9fbcd2626655a418",
+          "width": 1107,
+          "height": 1026,
+          "bytes": 1646287
+        },
+        "attack2.png": {
+          "sha256": "8ec26ae92a11b2ab5467bc4e13a99b04b07ee8a411e19ff1865e8f2ec47f0a8c",
+          "width": 1065,
+          "height": 1021,
+          "bytes": 1517658
+        }
+      },
+      "bytes": 8643583
+    },
+    "smasher": {
+      "record": "logic/guardians.csv:MeleeAreaaaa",
+      "clientSkin": "MeleeGuardian",
+      "clientCharacter": "Smasher",
+      "animation": "MeleeGuardian",
+      "altAnimation": null,
+      "geometry": "sc3d/guardianmelee_default_geo.glb",
+      "textures": {
+        "base": "sc3d/guardianmelee_default_a.sctx",
+        "normal": "sc3d/guardianmelee_default_n.sctx",
+        "material": "sc3d/guardianmelee_default_m.sctx",
+        "emission": "sc3d/guardianmelee_default_e.sctx"
+      },
+      "appliedMaps": {
+        "normal": true,
+        "emission": true
+      },
+      "shadowScale": 150,
+      "csvSkinEffects": {
+        "AttackEffect2": "MeleeGuardian_Atk_1_SFX",
+        "HitEffect": "ps_chr_guardianMelee_Hit",
+        "DieEffect": "MeleeGuardian_Die_SFX",
+        "GunBone": "L_weapon_01_s"
+      },
+      "vertexBuffers": 1,
+      "joints": 50,
+      "vertices": 5466,
+      "triangles": 6926,
+      "states": {
+        "walk": {
+          "clip": "sc3d/guardianmelee_default_walk1.glb",
+          "block": "MeleeGuardian",
+          "event": "walk",
+          "loop": true,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "ParticleEffect3D": "ps_chr_th18guardianMelee_Idle"
+          },
+          "frames": 19,
+          "fps": 30.0,
+          "nativeFrames": 20,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            18
+          ],
+          "step": 1,
+          "sampledNativeFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "lastFrameRepeatsCycleStart": true
+        },
+        "idle": {
+          "clip": "sc3d/guardianmelee_default_idle1.glb",
+          "block": "MeleeGuardian",
+          "event": "idle",
+          "loop": true,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "ParticleEffect3D": "ps_chr_th18guardianMelee_Idle"
+          },
+          "frames": 17,
+          "fps": 15.0,
+          "nativeFrames": 34,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            32
+          ],
+          "step": 2,
+          "sampledNativeFrames": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ],
+          "lastFrameRepeatsCycleStart": true
+        },
+        "attack": {
+          "clip": "sc3d/guardianmelee_default_attack1.glb",
+          "block": "MeleeGuardian",
+          "event": "attack",
+          "loop": false,
+          "csvActionFrame": 21,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "VariationWeight": "1",
+            "StopToLast": "TRUE",
+            "ParticleEffect3D": "ps_chr_th18guardianMelee_Attack",
+            "Effect3DFrame": "1"
+          },
+          "frames": 16,
+          "fps": 15.0,
+          "nativeFrames": 32,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            31
+          ],
+          "step": 2,
+          "sampledNativeFrames": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30
+          ]
+        },
+        "celebrate": {
+          "clip": "sc3d/guardianmelee_default_intro1.glb",
+          "block": "MeleeGuardian",
+          "event": "celebrate",
+          "loop": false,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": true,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "ParticleEffect3D": "ps_chr_th18guardianMelee_Cheer",
+            "EffectFrame": "1",
+            "Effect": "MeleeGuardian_Cheer_SFX"
+          },
+          "frames": 24,
+          "fps": 10.0,
+          "nativeFrames": 70,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            69
+          ],
+          "step": 3,
+          "sampledNativeFrames": [
+            0,
+            3,
+            6,
+            9,
+            12,
+            15,
+            18,
+            21,
+            24,
+            27,
+            30,
+            33,
+            36,
+            39,
+            42,
+            45,
+            48,
+            51,
+            54,
+            57,
+            60,
+            63,
+            66,
+            69
+          ]
+        },
+        "die": {
+          "clip": "sc3d/guardianmelee_default_stunned1.glb",
+          "block": "MeleeGuardian",
+          "event": "die",
+          "loop": false,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": true,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "FALSE",
+            "EffectFrame": "1"
+          },
+          "frames": 17,
+          "fps": 15.0,
+          "nativeFrames": 34,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            33
+          ],
+          "step": 2,
+          "sampledNativeFrames": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
+        },
+        "jump": {
+          "clip": "sc3d/guardianmelee_default_jump1.glb",
+          "block": "MeleeGuardian",
+          "event": "jump",
+          "loop": false,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "ParticleEffect3D": "ps_chr_th18guardianMelee_Jump",
+            "Effect3DFrame": "1",
+            "EffectFrame": "1"
+          },
+          "frames": 18,
+          "fps": 10.0,
+          "nativeFrames": 54,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            53
+          ],
+          "step": 3,
+          "sampledNativeFrames": [
+            0,
+            3,
+            6,
+            9,
+            12,
+            15,
+            18,
+            21,
+            24,
+            27,
+            30,
+            33,
+            36,
+            39,
+            42,
+            45,
+            48,
+            51
+          ]
+        },
+        "attack2": {
+          "clip": "sc3d/guardianmelee_default_attack2.glb",
+          "block": "MeleeGuardian",
+          "event": "attack variant 2",
+          "loop": false,
+          "csvActionFrame": 20,
+          "csvLoopStartFrame": null,
+          "scale": 1.3,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "VariationWeight": "1",
+            "ParticleEffect3D": "ps_chr_th18guardianMelee_Attack_02",
+            "Effect3DFrame": "1"
+          },
+          "frames": 16,
+          "fps": 15.0,
+          "nativeFrames": 32,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            31
+          ],
+          "step": 2,
+          "sampledNativeFrames": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30
+          ]
+        }
+      },
+      "atlas": {
+        "path": "assets/guardians-native/smasher/atlas.json",
+        "sha256": "5e4e5f63801d2bce5f2d8b421728c25d740a8cb8e24fca450014bfcf0d6dae47"
+      },
+      "images": {
+        "walk.png": {
+          "sha256": "2dbbac4c1b4117f0ac3423558e02d845d912b770d3f96afc1c403ba8722c4108",
+          "width": 1675,
+          "height": 1530,
+          "bytes": 2310404
+        },
+        "idle.png": {
+          "sha256": "c17201f9c5ac92fb604946139c383f1d2da9ebd38ffddf0a1115c5823d5acb66",
+          "width": 1341,
+          "height": 1302,
+          "bytes": 1685395
+        },
+        "attack.png": {
+          "sha256": "424ed344ef15b1c29497e83a22f9a5cb1219263ad6f37dbab3711a1d90c49301",
+          "width": 1535,
+          "height": 1448,
+          "bytes": 1961810
+        },
+        "celebrate.png": {
+          "sha256": "6d8550b70b718401e90148a3df80fd0b93ba8f9cb220e6002fe17bc7e6854610",
+          "width": 606,
+          "height": 686,
+          "bytes": 383177
+        },
+        "die.png": {
+          "sha256": "047f7d5ba54adab4f3efd6036a7efc384017ff5a9cca52192fa4ad36deab7cd8",
+          "width": 533,
+          "height": 770,
+          "bytes": 313153
+        },
+        "jump.png": {
+          "sha256": "fce4a1a7f293dcc6c87490a5e114efb78541f009b13ad49a2d5fc17d29c1e90a",
+          "width": 1360,
+          "height": 1313,
+          "bytes": 1912885
+        },
+        "attack2.png": {
+          "sha256": "18eecb63be887d0cb4ad4617944210b717d97568f5e641ac481c8e31804b191a",
+          "width": 1496,
+          "height": 1420,
+          "bytes": 1919853
+        }
+      },
+      "bytes": 10568879
+    },
+    "logger": {
+      "record": "logic/guardians.csv:Logger",
+      "clientSkin": "LoggerGuardian",
+      "clientCharacter": "Guardian Logger",
+      "animation": "LoggerGuardian",
+      "altAnimation": null,
+      "geometry": "sc3d/guardianlogger_default_geo.glb",
+      "textures": {
+        "base": "sc3d/guardianlogger_default_a.sctx",
+        "normal": "sc3d/guardianlogger_default_n.sctx",
+        "material": "sc3d/guardianlogger_default_m.sctx",
+        "emission": "sc3d/guardianlogger_default_e.sctx"
+      },
+      "appliedMaps": {
+        "normal": true,
+        "emission": true
+      },
+      "shadowScale": 150,
+      "csvSkinEffects": {
+        "HitEffect": "ps_chr_guardianLogger_Hit",
+        "DieEffect": "ps_chr_guardianLogger_Die",
+        "GunBone": "arrow_s"
+      },
+      "vertexBuffers": 2,
+      "joints": 78,
+      "vertices": 7167,
+      "triangles": 7768,
+      "states": {
+        "walk": {
+          "clip": "sc3d/guardianlogger_default_walk1.glb",
+          "block": "LoggerGuardian",
+          "event": "walk",
+          "loop": true,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.2,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE"
+          },
+          "frames": 19,
+          "fps": 15.0,
+          "nativeFrames": 39,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            37
+          ],
+          "step": 2,
+          "sampledNativeFrames": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ],
+          "lastFrameRepeatsCycleStart": true
+        },
+        "idle": {
+          "clip": "sc3d/guardianlogger_default_idle1.glb",
+          "block": "LoggerGuardian",
+          "event": "idle",
+          "loop": true,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.2,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE"
+          },
+          "frames": 20,
+          "fps": 15.0,
+          "nativeFrames": 39,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            38
+          ],
+          "step": 2,
+          "sampledNativeFrames": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ],
+          "lastFrameRepeatsCycleStart": false
+        },
+        "attack": {
+          "clip": "sc3d/guardianlogger_default_attack1.glb",
+          "block": "LoggerGuardian",
+          "event": "attack",
+          "loop": false,
+          "csvActionFrame": 28,
+          "csvLoopStartFrame": null,
+          "scale": 1.2,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "VariationWeight": "1",
+            "EffectFrame": "1",
+            "Effect": "Troop_Guardian_Logger_Attack_1_SFX"
+          },
+          "frames": 19,
+          "fps": 7.5,
+          "nativeFrames": 74,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            73
+          ],
+          "step": 4,
+          "sampledNativeFrames": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72
+          ]
+        },
+        "celebrate": {
+          "clip": "sc3d/guardianlogger_default_intro1.glb",
+          "block": "LoggerGuardian",
+          "event": "celebrate",
+          "loop": false,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.2,
+          "lookAtCamera": true,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "ParticleEffect3D": "ps_chr_guardianLogger_Cheer",
+            "EffectFrame": "1",
+            "Effect": "Troop_Guardian_Logger_Intro_SFX"
+          },
+          "frames": 23,
+          "fps": 10.0,
+          "nativeFrames": 69,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            68
+          ],
+          "step": 3,
+          "sampledNativeFrames": [
+            0,
+            3,
+            6,
+            9,
+            12,
+            15,
+            18,
+            21,
+            24,
+            27,
+            30,
+            33,
+            36,
+            39,
+            42,
+            45,
+            48,
+            51,
+            54,
+            57,
+            60,
+            63,
+            66
+          ]
+        },
+        "die": {
+          "clip": "sc3d/guardianlogger_default_stunned1.glb",
+          "block": "LoggerGuardian",
+          "event": "die",
+          "loop": false,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.2,
+          "lookAtCamera": true,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "FALSE",
+            "ParticleEffect3D": "ps_chr_guardianLogger_Stun",
+            "EffectFrame": "1"
+          },
+          "frames": 17,
+          "fps": 15.0,
+          "nativeFrames": 34,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            33
+          ],
+          "step": 2,
+          "sampledNativeFrames": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
+        },
+        "jump": {
+          "clip": "sc3d/guardianlogger_default_jump1.glb",
+          "block": "LoggerGuardian",
+          "event": "jump",
+          "loop": false,
+          "csvActionFrame": null,
+          "csvLoopStartFrame": null,
+          "scale": 1.2,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "ParticleEffect3D": "ps_chr_guardianLogger_Jump",
+            "EffectFrame": "1",
+            "Effect": "Troop_Guardian_Logger_Jump_SFX"
+          },
+          "frames": 18,
+          "fps": 10.0,
+          "nativeFrames": 54,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            53
+          ],
+          "step": 3,
+          "sampledNativeFrames": [
+            0,
+            3,
+            6,
+            9,
+            12,
+            15,
+            18,
+            21,
+            24,
+            27,
+            30,
+            33,
+            36,
+            39,
+            42,
+            45,
+            48,
+            51
+          ]
+        },
+        "attack2": {
+          "clip": "sc3d/guardianlogger_default_attack2.glb",
+          "block": "LoggerGuardian",
+          "event": "attack variant 2",
+          "loop": false,
+          "csvActionFrame": 28,
+          "csvLoopStartFrame": null,
+          "scale": 1.2,
+          "lookAtCamera": false,
+          "csvOffsetY": null,
+          "csvNotBaked": {
+            "HasDirections": "TRUE",
+            "VariationWeight": "1",
+            "ParticleEffect3D": "ps_chr_guardianLogger_Attack_02",
+            "EffectFrame": "1",
+            "Effect": "Troop_Guardian_Logger_Attack_2_SFX"
+          },
+          "frames": 19,
+          "fps": 7.5,
+          "nativeFrames": 74,
+          "nativeFps": 30.0,
+          "nativeRange": [
+            0,
+            73
+          ],
+          "step": 4,
+          "sampledNativeFrames": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72
+          ]
+        }
+      },
+      "atlas": {
+        "path": "assets/guardians-native/logger/atlas.json",
+        "sha256": "7e6acad55140e62be3857d9a50014033fa714dc114f1cf1cf77245d96334bba3"
+      },
+      "images": {
+        "walk.png": {
+          "sha256": "4efc7f16aa1d3254179858ef744c8c5fe67edc84cb0bf4faa515e4192ce45dc8",
+          "width": 1415,
+          "height": 1350,
+          "bytes": 2474652
+        },
+        "idle.png": {
+          "sha256": "5edd1943daf4d2a1d16d3d2bc29391d46b11d0f5ef1941897e45d7f3af5c07ef",
+          "width": 1487,
+          "height": 1434,
+          "bytes": 2612703
+        },
+        "attack.png": {
+          "sha256": "0aaa735602c4d89937ea46411f03a2da2e511d71cde98eab0ee3ab9c43f2b46c",
+          "width": 1315,
+          "height": 1251,
+          "bytes": 2306856
+        },
+        "celebrate.png": {
+          "sha256": "f25589072d3a01a313b799fb5cd8ec76d3724465694abac0a2d2cc4e4a422b77",
+          "width": 703,
+          "height": 821,
+          "bytes": 491774
+        },
+        "die.png": {
+          "sha256": "6681235c4bc9826dcf2ceff8de3aa8b2138ae1afe3db7f0db614bf72e918e579",
+          "width": 479,
+          "height": 534,
+          "bytes": 319983
+        },
+        "jump.png": {
+          "sha256": "29c79b2a57c99b976faaa0fceda524cefd07c0a8e31cfa952655b038cb514f60",
+          "width": 1481,
+          "height": 1463,
+          "bytes": 2588499
+        },
+        "attack2.png": {
+          "sha256": "cdec29a008d29266c92e8d9f69dbc54fb21ddfb0e0978291b4445f43bf04d456",
+          "width": 1314,
+          "height": 1356,
+          "bytes": 2318531
+        }
+      },
+      "bytes": 13200198
+    }
+  },
+  "totalBytes": 32412660
+}

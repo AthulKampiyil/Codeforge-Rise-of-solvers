@@ -1,0 +1,544 @@
+{
+ "title": "Lavaloon Puppet",
+ "url": "https://clashofclans.fandom.com/wiki/Lavaloon_Puppet",
+ "revid": 623290,
+ "retrieved": "2026-09-15",
+ "clientName": "Lavaloon Puppet",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Grand Warden",
+ "summary": "Warden Epic active item: summons 1 → 3 weakened Lavaloons (level 1 → 11) that hunt Air Defenses, bomb as they fly and burst into pups; passive DPS and HP.",
+ "constants": {
+  "wiki": {
+   "User": "Grand Warden",
+   "Ability Type": "Active",
+   "Rarity": "Epic",
+   "Unlock Requirement": "Buy in Mashup Mania event for 3,100 Mashup Medal; Buy in Friend or Foe event for 3,100 Champ Medal; Buy in Meltdown Mayhem event for 3,100 Ember Medal; or purchasable from the Trader for 1,500 Gem"
+  },
+  "client": {
+   "Rarity": "EPIC",
+   "AllowedCharacters": "Grand Warden;",
+   "MainAbilities": "GrandWardenSummonLavaloon",
+   "Claimable": "TRUE",
+   "levelRows": 27,
+   "abilityTierStartLevels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "summonedLavaloons": {
+   "wikiHeader": "Ability Attributes / Summoned Lavaloons",
+   "unit": "count/points"
+  },
+  "lavaloonLevel": {
+   "wikiHeader": "Ability Attributes / Lavaloon Level",
+   "unit": "level"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boosts / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostStarryOre": {
+   "wikiHeader": "Upgrade Cost / Starry Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "summonedLavaloons": 1,
+   "lavaloonLevel": 1,
+   "damagePerSecondIncrease": 10,
+   "hitpointIncrease": 50,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "summonedLavaloons": 1,
+   "lavaloonLevel": 1,
+   "damagePerSecondIncrease": 12,
+   "hitpointIncrease": 55,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "summonedLavaloons": 1,
+   "lavaloonLevel": 2,
+   "damagePerSecondIncrease": 13,
+   "hitpointIncrease": 57,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "summonedLavaloons": 1,
+   "lavaloonLevel": 2,
+   "damagePerSecondIncrease": 15,
+   "hitpointIncrease": 60,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "summonedLavaloons": 1,
+   "lavaloonLevel": 2,
+   "damagePerSecondIncrease": 16,
+   "hitpointIncrease": 65,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "summonedLavaloons": 1,
+   "lavaloonLevel": 3,
+   "damagePerSecondIncrease": 18,
+   "hitpointIncrease": 67,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "summonedLavaloons": 1,
+   "lavaloonLevel": 3,
+   "damagePerSecondIncrease": 20,
+   "hitpointIncrease": 70,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "summonedLavaloons": 1,
+   "lavaloonLevel": 3,
+   "damagePerSecondIncrease": 22,
+   "hitpointIncrease": 75,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "summonedLavaloons": 2,
+   "lavaloonLevel": 4,
+   "damagePerSecondIncrease": 23,
+   "hitpointIncrease": 77,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "upgradeCostStarryOre": 10,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "summonedLavaloons": 2,
+   "lavaloonLevel": 4,
+   "damagePerSecondIncrease": 25,
+   "hitpointIncrease": 80,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 11,
+   "summonedLavaloons": 2,
+   "lavaloonLevel": 4,
+   "damagePerSecondIncrease": 28,
+   "hitpointIncrease": 85,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 12,
+   "summonedLavaloons": 2,
+   "lavaloonLevel": 5,
+   "damagePerSecondIncrease": 30,
+   "hitpointIncrease": 87,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "upgradeCostStarryOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 13,
+   "summonedLavaloons": 2,
+   "lavaloonLevel": 5,
+   "damagePerSecondIncrease": 31,
+   "hitpointIncrease": 90,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 14,
+   "summonedLavaloons": 2,
+   "lavaloonLevel": 5,
+   "damagePerSecondIncrease": 33,
+   "hitpointIncrease": 95,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 15,
+   "summonedLavaloons": 2,
+   "lavaloonLevel": 6,
+   "damagePerSecondIncrease": 35,
+   "hitpointIncrease": 97,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 30,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 16,
+   "summonedLavaloons": 2,
+   "lavaloonLevel": 6,
+   "damagePerSecondIncrease": 37,
+   "hitpointIncrease": 100,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 17,
+   "summonedLavaloons": 2,
+   "lavaloonLevel": 6,
+   "damagePerSecondIncrease": 38,
+   "hitpointIncrease": 105,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 18,
+   "summonedLavaloons": 2,
+   "lavaloonLevel": 7,
+   "damagePerSecondIncrease": 40,
+   "hitpointIncrease": 107,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 50,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 19,
+   "summonedLavaloons": 2,
+   "lavaloonLevel": 7,
+   "damagePerSecondIncrease": 41,
+   "hitpointIncrease": 110,
+   "upgradeCostShinyOre": 2800,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 20,
+   "summonedLavaloons": 2,
+   "lavaloonLevel": 7,
+   "damagePerSecondIncrease": 42,
+   "hitpointIncrease": 115,
+   "upgradeCostShinyOre": 2900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 21,
+   "summonedLavaloons": 3,
+   "lavaloonLevel": 8,
+   "damagePerSecondIncrease": 43,
+   "hitpointIncrease": 117,
+   "upgradeCostShinyOre": 3000,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 100,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 22,
+   "summonedLavaloons": 3,
+   "lavaloonLevel": 8,
+   "damagePerSecondIncrease": 45,
+   "hitpointIncrease": 120,
+   "upgradeCostShinyOre": 3100,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 23,
+   "summonedLavaloons": 3,
+   "lavaloonLevel": 9,
+   "damagePerSecondIncrease": 46,
+   "hitpointIncrease": 125,
+   "upgradeCostShinyOre": 3200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 24,
+   "summonedLavaloons": 3,
+   "lavaloonLevel": 9,
+   "damagePerSecondIncrease": 47,
+   "hitpointIncrease": 127,
+   "upgradeCostShinyOre": 3300,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 120,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 25,
+   "summonedLavaloons": 3,
+   "lavaloonLevel": 10,
+   "damagePerSecondIncrease": 48,
+   "hitpointIncrease": 130,
+   "upgradeCostShinyOre": 3400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 26,
+   "summonedLavaloons": 3,
+   "lavaloonLevel": 10,
+   "damagePerSecondIncrease": 49,
+   "hitpointIncrease": 135,
+   "upgradeCostShinyOre": 3500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 27,
+   "summonedLavaloons": 3,
+   "lavaloonLevel": 11,
+   "damagePerSecondIncrease": 50,
+   "hitpointIncrease": 150,
+   "upgradeCostShinyOre": 3600,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 150,
+   "blacksmithLevelRequired": 9
+  }
+ ],
+ "subpages": [
+  {
+   "title": "Lavaloon Puppet/Lavaloon",
+   "url": "https://clashofclans.fandom.com/wiki/Lavaloon_Puppet/Lavaloon",
+   "revid": 620198,
+   "clientName": "GW Equipment Lavaloon",
+   "levels": [
+    {
+     "level": 1,
+     "damagePerSecond": 45,
+     "damagePerAttack": 112.5,
+     "hitpoints": 970,
+     "damageWhenDestroyed": 180,
+     "lavaloonPupsSpawnedAfterDeath": 1
+    },
+    {
+     "level": 2,
+     "damagePerSecond": 63,
+     "damagePerAttack": 157.5,
+     "hitpoints": 1420,
+     "damageWhenDestroyed": 405,
+     "lavaloonPupsSpawnedAfterDeath": 2
+    },
+    {
+     "level": 3,
+     "damagePerSecond": 81,
+     "damagePerAttack": 202.5,
+     "hitpoints": 1860,
+     "damageWhenDestroyed": 450,
+     "lavaloonPupsSpawnedAfterDeath": 2
+    },
+    {
+     "level": 4,
+     "damagePerSecond": 99,
+     "damagePerAttack": 247.5,
+     "hitpoints": 2300,
+     "damageWhenDestroyed": 540,
+     "lavaloonPupsSpawnedAfterDeath": 3
+    },
+    {
+     "level": 5,
+     "damagePerSecond": 117,
+     "damagePerAttack": 292.5,
+     "hitpoints": 2750,
+     "damageWhenDestroyed": 648,
+     "lavaloonPupsSpawnedAfterDeath": 3
+    },
+    {
+     "level": 6,
+     "damagePerSecond": 135,
+     "damagePerAttack": 337.5,
+     "hitpoints": 3200,
+     "damageWhenDestroyed": 756,
+     "lavaloonPupsSpawnedAfterDeath": 4
+    },
+    {
+     "level": 7,
+     "damagePerSecond": 153,
+     "damagePerAttack": 382.5,
+     "hitpoints": 3650,
+     "damageWhenDestroyed": 864,
+     "lavaloonPupsSpawnedAfterDeath": 4
+    },
+    {
+     "level": 8,
+     "damagePerSecond": 171,
+     "damagePerAttack": 427.5,
+     "hitpoints": 4000,
+     "damageWhenDestroyed": 900,
+     "lavaloonPupsSpawnedAfterDeath": 4
+    },
+    {
+     "level": 9,
+     "damagePerSecond": 189,
+     "damagePerAttack": 472.5,
+     "hitpoints": 4370,
+     "damageWhenDestroyed": 945,
+     "lavaloonPupsSpawnedAfterDeath": 4
+    },
+    {
+     "level": 10,
+     "damagePerSecond": 198,
+     "damagePerAttack": 495,
+     "hitpoints": 4500,
+     "damageWhenDestroyed": 990,
+     "lavaloonPupsSpawnedAfterDeath": 4
+    },
+    {
+     "level": 11,
+     "damagePerSecond": 202,
+     "damagePerAttack": 505,
+     "hitpoints": 4590,
+     "damageWhenDestroyed": 1035,
+     "lavaloonPupsSpawnedAfterDeath": 5
+    }
+   ],
+   "constants": {
+    "Preferred Target": "Air Defense",
+    "Attack Type": "Area Splash (Ground only)",
+    "Housing Space": "21",
+    "Movement Speed": "16",
+    "Attack Speed": "2.5s",
+    "Barracks Level Required": "1",
+    "Range": "???"
+   }
+  }
+ ],
+ "mismatches": [
+  {
+   "field": "Lavaloon.bombSplashRadius",
+   "level": null,
+   "wiki": "not given ('???' range)",
+   "client": "DamageRadius 180 (1.8 tiles), AttackRange 0",
+   "note": "wiki omits"
+  }
+ ],
+ "clientColumns": [
+  "MainAbilities:special_abilities[GrandWardenSummonLavaloon].TroopCount",
+  "MainAbilities:special_abilities[GrandWardenSummonLavaloon].TroopLevel",
+  "character_items.DPS",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

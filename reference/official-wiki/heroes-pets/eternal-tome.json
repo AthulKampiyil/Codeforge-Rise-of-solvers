@@ -1,0 +1,220 @@
+{
+ "title": "Eternal Tome",
+ "url": "https://clashofclans.fandom.com/wiki/Eternal_Tome",
+ "revid": 621300,
+ "retrieved": "2026-09-15",
+ "clientName": "Eternal Tome",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Grand Warden",
+ "summary": "Warden's starting active item: makes himself and all friendly units in his ring invincible for 3.2 → 8.2 s; no passive boosts.",
+ "constants": {
+  "wiki": {
+   "User": "Grand Warden",
+   "Ability Type": "Active",
+   "Rarity": "Common",
+   "Unlock Requirement": "Available by default"
+  },
+  "client": {
+   "Rarity": "COMMON",
+   "AllowedCharacters": "Grand Warden;",
+   "MainAbilities": "GrandWardenInvulnerability",
+   "levelRows": 18,
+   "abilityTierStartLevels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "abilityDurationSeconds": {
+   "wikiHeader": "Ability Duration",
+   "unit": "seconds"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "abilityDurationSeconds": 3.2,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": null
+  },
+  {
+   "level": 2,
+   "abilityDurationSeconds": 3.5,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "abilityDurationSeconds": 4.2,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "abilityDurationSeconds": 4.5,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "abilityDurationSeconds": 4.7,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "abilityDurationSeconds": 5.5,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "abilityDurationSeconds": 5.7,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "abilityDurationSeconds": 6,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "abilityDurationSeconds": 6.7,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "abilityDurationSeconds": 6.8,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 11,
+   "abilityDurationSeconds": 6.9,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 12,
+   "abilityDurationSeconds": 7.2,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 13,
+   "abilityDurationSeconds": 7.3,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 14,
+   "abilityDurationSeconds": 7.4,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 15,
+   "abilityDurationSeconds": 7.7,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 16,
+   "abilityDurationSeconds": 7.8,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 17,
+   "abilityDurationSeconds": 7.9,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 18,
+   "abilityDurationSeconds": 8.2,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 7
+  }
+ ],
+ "subpages": [],
+ "mismatches": [],
+ "clientColumns": [
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

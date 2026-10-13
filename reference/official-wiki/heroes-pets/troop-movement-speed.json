@@ -1,0 +1,148 @@
+{
+ "title": "Troop Movement Speed",
+ "url": "https://clashofclans.fandom.com/wiki/Troop_Movement_Speed",
+ "revid": 624844,
+ "retrieved": "2026-09-15",
+ "clientName": null,
+ "clientTable": null,
+ "category": "mechanic",
+ "summary": "Reference for converting internal speed values (tiles/s × 100) to the wiki's in-game speed numbers (internal ÷ 12.5); hero and pet rows only are relevant here.",
+ "constants": {
+  "wiki": {},
+  "client": {},
+  "wikiTables": [
+   {
+    "section": "Heroes and Pets",
+    "headers": [
+     "Hero/Pet",
+     "In Game Speed",
+     "Internal Speed",
+     "Speed in Tiles/Second"
+    ],
+    "rows": [
+     {
+      "heroPet": "Barbarian King",
+      "inGameSpeed": 16,
+      "internalSpeed": 200,
+      "speedInTilesSecond": 2
+     },
+     {
+      "heroPet": "Archer Queen",
+      "inGameSpeed": 24,
+      "internalSpeed": 300,
+      "speedInTilesSecond": 3
+     },
+     {
+      "heroPet": "Minion Prince",
+      "inGameSpeed": 24,
+      "internalSpeed": 300,
+      "speedInTilesSecond": 3
+     },
+     {
+      "heroPet": "Grand Warden",
+      "inGameSpeed": 16,
+      "internalSpeed": 200,
+      "speedInTilesSecond": 2
+     },
+     {
+      "heroPet": "Royal Champion",
+      "inGameSpeed": 24,
+      "internalSpeed": 300,
+      "speedInTilesSecond": 3
+     },
+     {
+      "heroPet": "L.A.S.S.I",
+      "inGameSpeed": 32,
+      "internalSpeed": 400,
+      "speedInTilesSecond": 4
+     },
+     {
+      "heroPet": "Electro Owl",
+      "inGameSpeed": 20,
+      "internalSpeed": 250,
+      "speedInTilesSecond": 2.5
+     },
+     {
+      "heroPet": "Mighty Yak",
+      "inGameSpeed": 20,
+      "internalSpeed": 250,
+      "speedInTilesSecond": 2.5
+     },
+     {
+      "heroPet": "Unicorn",
+      "inGameSpeed": 16,
+      "internalSpeed": 200,
+      "speedInTilesSecond": 2
+     },
+     {
+      "heroPet": "Frosty",
+      "inGameSpeed": 24,
+      "internalSpeed": 300,
+      "speedInTilesSecond": 3
+     },
+     {
+      "heroPet": "Diggy",
+      "inGameSpeed": 32,
+      "internalSpeed": 400,
+      "speedInTilesSecond": 4
+     },
+     {
+      "heroPet": "Poison Lizard",
+      "inGameSpeed": 36,
+      "internalSpeed": 450,
+      "speedInTilesSecond": 4.5
+     },
+     {
+      "heroPet": "Phoenix",
+      "inGameSpeed": 16,
+      "internalSpeed": 200,
+      "speedInTilesSecond": 2
+     },
+     {
+      "heroPet": "Spirit Fox",
+      "inGameSpeed": 24,
+      "internalSpeed": 300,
+      "speedInTilesSecond": 3
+     },
+     {
+      "heroPet": "Angry Jelly",
+      "inGameSpeed": 16,
+      "internalSpeed": 200,
+      "speedInTilesSecond": 2
+     },
+     {
+      "heroPet": "Sneezy",
+      "inGameSpeed": 24,
+      "internalSpeed": 300,
+      "speedInTilesSecond": 3
+     }
+    ]
+   }
+  ]
+ },
+ "fields": {},
+ "levels": [],
+ "mismatches": [
+  {
+   "field": "Mighty Yak.internalSpeed",
+   "level": null,
+   "wiki": 250,
+   "client": 300.0,
+   "note": "pets[Mighty Yak].Speed"
+  },
+  {
+   "field": "Dragon Duke.speedRow",
+   "level": null,
+   "wiki": "not listed",
+   "client": "250",
+   "note": "table omits this unit"
+  },
+  {
+   "field": "Greedy Raven.speedRow",
+   "level": null,
+   "wiki": "not listed",
+   "client": "350",
+   "note": "table omits this unit"
+  }
+ ]
+}

@@ -1,0 +1,1807 @@
+{
+  "clientVersion": "18.400.21",
+  "generator": "scripts/import-native-projectile-art.py",
+  "conventions": {
+    "placement": "Local village projection shared with the native defense renderers: source x/y units are 1/100 tile (0.32 px/unit across, 0.16 px/unit down), altitude units draw at 0.8 px, art at 1.2x.",
+    "rotation": "UseRotate art points along source +Y; it follows the projected flight tangent (atan2 - 90 degrees).",
+    "directions": "DirectionCount rows use numbered roots (_1.._N, half the declared count) mirrored for leftward flight, like troop direction roots. DirectionFrame rows play their timeline on the flight clock.",
+    "ballistic": "IsBallistic arcs use BallisticHeight source units as the peak altitude of a parabola between the StartHeight launch point and the target; native TrajectoryStyle curves are not reconstructed.",
+    "shadow": "ShadowExportName draws on the ground under the flight point when declared.",
+    "effects": "Trail emitters and projectile effects are shared packs listed in reference/full-client/effect-art.json."
+  },
+  "sources": {
+    "logic/projectiles.csv": "71cda0e457ad88a6772f6421a22419b24d6bcf78d0ed305f09184404889a72dc",
+    "sc/buildings.sc": "f73ec949fc070bc03175d6bb3af8b62d8f607094bf2b343c9846a499a35be0ed",
+    "sc/buildings_0.sctx": "de9908c494173b6baf33061fc8a09f5d13837d281a3cb96be294a9912b4c541c",
+    "sc/buildings_17.sctx": "bce86a6857d43a6705833a6cb0a5ec269d8ff9990e8e15c5b9011422d59ab201",
+    "sc/buildings_18.sctx": "bd0c3b2eece3e9c43b2b3d61463e5b12ff4d274ae6adcc0ce33ceed63df58ffa",
+    "sc/buildings_19.sctx": "26df2233dcb1d4470f9bf3f110dfd1d354361850181fb7b3c69d866aea9b7b7c",
+    "sc/buildings_2.sctx": "ff0f766b8d361eeb942384600ace1082a11c7c7404bed41d976fbafbdd2dc622",
+    "sc/buildings_33.sctx": "9ae5ed0d8f74ab23260a5af3f784a4645fb00bcd47de4abc9abd20aea1749666",
+    "sc/buildings_36.sctx": "9b0798f9eeb63bc6d5994c8424af84262835f7fc968b0130f5f6d1f01a7d7749",
+    "sc/buildings_39.sctx": "dd27d9612fe135c3be364840eeabe45b53a229b24192246b56a08fa0606fdb16",
+    "sc/buildings_40.sctx": "0e3a207454e5392dd9d73d61c2fb17399f93bd7f9e680c34838fa303207bea7d",
+    "sc/buildings_45.sctx": "ce0425622f22f1dade3fd1614e1c3ce5fabe4e09d9c5f32d014dd1f12cdc9287",
+    "sc/buildings_5.sctx": "6403f600eb8303935d63df9edfd7832ba8eb84d8fc4cd1ecf2f3788fc0285184",
+    "sc/buildings_6.sctx": "68d97a39c2bfbcf94f820f4091c078a9516f41dafe27744e7de26e30864d1ffc",
+    "sc/buildings_63.sctx": "489915a32ff1edf0036d5c4b9a1973572aca4305bd5fb528ea71bfae359efad0",
+    "sc/buildings_66.sctx": "c65a2f6e362edfd51d5fc634d5a6c30ec353bd936fa06fa8775b856aeb7baff0",
+    "sc/buildings_8.sctx": "588eba7d5739a5d9b53d3e14f2ab83bd170cad735363a81dd37bea7bcc0bb3bd",
+    "sc/characters.sc": "0e23bd3745176fe7db3d61e490d9da07c63a42e95462f514d6eac696314c3798",
+    "sc/characters_1.sctx": "723d76b6bc5f7920142769c4d354e96bc39b96af460c5443b614bbbbde3de769",
+    "sc/characters_3.sctx": "1dc6d84d6202d2a0a696a366b468ad3aec8aea3cb56239f64bc4ad56c9b9e466",
+    "sc/characters_4.sctx": "14359b0105e61d27820c1cd49ad54bace63a8348f502eaad92f6b82a1c2448f3",
+    "sc/characters_7.sctx": "e90c58ec5665bb886b64b2d2518fdf3aac08f229ba25dd913a2d89cc3e86c039",
+    "sc/chr_apprentice_warden.sc": "dc28c0326fbef24cc842f18877f865fdff3559f50e988c53ff7a6a65543d8d62",
+    "sc/chr_apprentice_warden_0.sctx": "f911e3653b6e7486b9c5de5e9a3d0088a8a1ddfbd78d9520a507178bd5279202",
+    "sc/chr_frostmite.sc": "cbc6d909d0b0c0db561af0802c85edd479e19fabcc534debb1e3b99063f1ded4",
+    "sc/chr_frostmite_0.sctx": "f84db02c47847b04f1f3016391ae98999eb076373adf618632d98370c6c1935c",
+    "sc/chr_furnace.sc": "85d6cb909e0ce8abc7eb7d7e984497778078a975c49d639ec0c49402c767a6e9",
+    "sc/chr_furnace_0.sctx": "7db3fc8e8a56daa224d8692c24112388df3e3bb95edbd2bfca3da893a2d54ebc",
+    "sc/chr_headhunter.sc": "20b94df2871a5d467d2662001aa02e10ac63d81c38dc6642cb4571d3dfe0810f",
+    "sc/chr_headhunter_0.sctx": "b1319af66acedfa66078c270dfbe7af8a1fe6781751762465ba00de2a2a2daa4",
+    "sc/chr_lavaloon.sc": "0e3f3b3b972d59051e14a141d1cb21ee184fc04a074cd5a3f7467681c38eea6b",
+    "sc/chr_lavaloon_0.sctx": "245e3e92833a9d1b63580ba352a497a22a40b5845c9c2bbc6f440cd000277d1e",
+    "sc/chr_siege_machine_catapult.sc": "bb75ca42f0674f7b898d1e60c0fe26ee69b35d845c1cf741b3b6f742474d4cd7",
+    "sc/chr_siege_machine_catapult_0.sctx": "fea0e2272061222359d0411875084dbd97f332988e30bb145f95a1c9887b0abc",
+    "sc/chr_siege_machine_command_tower.sc": "166504ed194a67ee0eabe4f1d8a92805038cedae9575b9c48e11c83a31ef8e93",
+    "sc/chr_siege_machine_command_tower_0.sctx": "85b25348d5c3afde03d1bc3b04ab2391bb225e31e904d59b38bd7127e0d332d5",
+    "sc/chr_split_golem.sc": "51f3a030648f1377570079cb45aac31f9f92d64087152c2ca7869c57079c7270",
+    "sc/chr_split_golem_0.sctx": "faa7790c4c9d8aee154962dd0d262977122b75c2437f3bc1531bab5d9482a045",
+    "sc/chr_super_archer.sc": "182b414983d179bb23e7dce372daded2c413327fcb142d33a897aa184673abe0",
+    "sc/chr_super_archer_0.sctx": "d741c2494029e633d0b651e0a2a1388acd5737eb2b04e3713411e9fe8cada411",
+    "sc/chr_super_hog_rider.sc": "b90e9be571722c4ae74c4ddb5b65d5dd3e799b643f2faed19d29fb68eed8d0d3",
+    "sc/chr_super_hog_rider_0.sctx": "d2de674b492917252c0f6b7426bce53610f826d89a0e37d87bb327154cd7caa5",
+    "sc/chr_super_minion.sc": "b8874ddd6fb3228bad6cd8a3e5eb28fcbabc00b6a1916b899b59f6b7adf97e13",
+    "sc/chr_super_minion_0.sctx": "35dbcd6ea7a48eeba8a97c3c7b01a9d5f15775a3b0639a53eb0af155ee410148",
+    "sc/chr_thrower.sc": "bec507fe3c3e03e03f0603b239a65712fee2115cc62058d027c84c5e0a1bd429",
+    "sc/chr_thrower_0.sctx": "7f48346c1a218b198910267e1b813984752fb2dc89342f98ca1e06b80e30843f",
+    "sc/chr_yeti.sc": "601a12b66bc8d66102e57f4f0d027f131a751a996efca3ce611e5a0efd51637f",
+    "sc/chr_yeti_0.sctx": "337a4897ff7e1a6f8ac59fab730db2e32aca2a459f8864e857bfc6b62bc10ff2",
+    "sc/chr_yeti_1.sctx": "82718ffbb0b50130bf28c9eee7057102e20ee0b8e9cf17b3dbca4078b11a6194",
+    "sc/pet_crow_default.sc": "ddb1d5f7a4967b881a50c4e6089675150224c91cd97093d5cc199a3610e14cdb",
+    "sc/vfx_character.sc": "1fedfef75fd781233c33535b2b0f11a45298ef02f93105d8f3730554c67e74e6",
+    "sc/vfx_character_0.sctx": "48cb7ca2399f4cc03c857727ceb76883c16694e1ec62da0d12878fb5dd3608d6",
+    "sc/vfx_character_1.sctx": "d55ba36a6eb53d15c4d15849cbb50bb9e34ba49cf17992c6b041fb7498d75c96",
+    "sc/vfx_character_3.sctx": "e8ea8adbb777e3c0e11f0695f53956a7a8e3c1e710a045af1af23771dbf3f5a1",
+    "sc/vfx_character_4.sctx": "b114e33741f626bd468310aa1b97b44390cc8099cba1938d3527e155ae4a2a84",
+    "sc/vfx_character_7.sctx": "7d544006c2b4ebe7fb660e8a42ef3ac9565606da2567888aa8505d93ab1db0e1",
+    "sc/vfx_character_8.sctx": "44e0458c6ec9f38e55399975e119e0b7b349fb74c52f503f22c71f056419d45c",
+    "sc/vfx_character_9.sctx": "6f67e83eed735880edd56cdc5fb89b6af81f15300dd23c1cdb815b48cf32034a",
+    "sc/vfx_env.sc": "8a85e7cfb07c5b92f83a4c944b13a18beb65c1b68dc1fd9ea283aebb3073703e",
+    "sc/vfx_env_2.sctx": "36578887a41381699efe7cf4e9f013254a053b02c95dc37db886a2d5415c9995"
+  },
+  "totalBytes": 13145556,
+  "packs": {
+    "arrow-small": {
+      "path": "assets/projectiles-native/arrow-small/graph.json",
+      "sha256": "4cc2031f24345e5274f0190e31b5bbc8e55d9a978ef656319f17b7061de01c75",
+      "bytes": 2733,
+      "projectiles": [
+        "Arrow_small",
+        "Tower Arrow",
+        "Goblin Townhall Arrow"
+      ]
+    },
+    "arrow-small-fire": {
+      "path": "assets/projectiles-native/arrow-small-fire/graph.json",
+      "sha256": "da354fc413855af8cf5075284074cab27791fb073c9553333827578ff699801f",
+      "bytes": 6470,
+      "projectiles": [
+        "Arrow_small_fire",
+        "Tower Arrow Fire",
+        "Tower Arrow Fire2",
+        "Tower Arrow Fire2 LOW",
+        "Tower Arrow Fire3",
+        "Tower Arrow Fire3 LOW",
+        "super_archer_tower_projectile"
+      ]
+    },
+    "arrow-small-elixirfire": {
+      "path": "assets/projectiles-native/arrow-small-elixirfire/graph.json",
+      "sha256": "15d3afc34c0ee4c6fd7e4ac0901d9a89e09162c8270b9fe1f3ebb69a3015a744",
+      "bytes": 13299,
+      "projectiles": [
+        "Arrow_small_elixirFire",
+        "Tower Arrow ElixFire",
+        "Tower Arrow ElixFire LOW"
+      ]
+    },
+    "arrow-small-darkelixirfire": {
+      "path": "assets/projectiles-native/arrow-small-darkelixirfire/graph.json",
+      "sha256": "dd1f3a7ebc608622b4c348a42cd41683b7c0882b9af4d153efa9a0ef290387a4",
+      "bytes": 13287,
+      "projectiles": [
+        "Arrow_small_darkElixirFire",
+        "Tower Arrow DarkElixFire",
+        "Tower Arrow DarkElixFire LOW"
+      ]
+    },
+    "arrow-small-darkelixirfire2": {
+      "path": "assets/projectiles-native/arrow-small-darkelixirfire2/graph.json",
+      "sha256": "f6359e98147c838b9eaec10b7cbd10f0a9c7c603fa6dcec70d0c77091576d9e2",
+      "bytes": 9245,
+      "projectiles": [
+        "Arrow_small_darkElixirFire2"
+      ]
+    },
+    "ps-chr-wizardattack-projectile": {
+      "path": "assets/projectiles-native/ps-chr-wizardattack-projectile/graph.json",
+      "sha256": "c7d48bf81a9b90441869ad877b979f92d7e56715b7ca678783abd02a4c500f9c",
+      "bytes": 34023,
+      "projectiles": [
+        "ps_chr_WizardAttack_Projectile",
+        "ps_chr_WizardAttack_TowerProjectile"
+      ]
+    },
+    "ps-chr-wizardattack-projectile-lvl2": {
+      "path": "assets/projectiles-native/ps-chr-wizardattack-projectile-lvl2/graph.json",
+      "sha256": "8213d6eab59762c04de6c8959eff9a56d2df30c06a98ba76b8aff7b0f6238444",
+      "bytes": 42317,
+      "projectiles": [
+        "ps_chr_WizardAttack_Projectile_lvl2",
+        "ps_chr_WizardAttack_TowerProjectile_lvl2"
+      ]
+    },
+    "ps-chr-wizardattack-projectile-lvl3": {
+      "path": "assets/projectiles-native/ps-chr-wizardattack-projectile-lvl3/graph.json",
+      "sha256": "e084ff434b153161516b51654df8ab90cea3b1717988d2b642b26ad08cd2c414",
+      "bytes": 34758,
+      "projectiles": [
+        "ps_chr_WizardAttack_Projectile_lvl3",
+        "ps_chr_WizardAttack_TowerProjectile_lvl3"
+      ]
+    },
+    "ps-chr-wizardattack-projectile-lvl4": {
+      "path": "assets/projectiles-native/ps-chr-wizardattack-projectile-lvl4/graph.json",
+      "sha256": "f8131b9f8919ca0dff7aa0df7d5afc16eb86ad0637db5cef801142fbbd59a19f",
+      "bytes": 39320,
+      "projectiles": [
+        "ps_chr_WizardAttack_Projectile_lvl4",
+        "ps_chr_WizardAttack_TowerProjectile_lvl4"
+      ]
+    },
+    "healerenergy": {
+      "path": "assets/projectiles-native/healerenergy/graph.json",
+      "sha256": "fc1c213ec98893b611a1c9da0ab46de6efe88b58900642482afba5cd0f36ff71",
+      "bytes": 3587,
+      "projectiles": [
+        "HealerEnergy",
+        "UnicornHealEnergy",
+        "pet_sneezy_void_attack",
+        "Air Blaster Ammo1",
+        "TH18Heal"
+      ]
+    },
+    "babydragon-projectile": {
+      "path": "assets/projectiles-native/babydragon-projectile/graph.json",
+      "sha256": "4f749d6a169ab96d91d68d7f54dbdb563b8e811169c2ea526dddafecc0bf8453",
+      "bytes": 17330,
+      "projectiles": [
+        "babydragon_projectile"
+      ]
+    },
+    "babydragon-projectile-lvl2": {
+      "path": "assets/projectiles-native/babydragon-projectile-lvl2/graph.json",
+      "sha256": "f80f55c2997bdecdb5b21a6adc1494ce4c1183c09a2101665b409a5c858118cd",
+      "bytes": 23873,
+      "projectiles": [
+        "babydragon_projectile_lvl2"
+      ]
+    },
+    "babydragon-projectile-lvl3": {
+      "path": "assets/projectiles-native/babydragon-projectile-lvl3/graph.json",
+      "sha256": "40605b728e62cfcc3f60a99d5168524385856e667b378b320bbf3bf6e9c9e89a",
+      "bytes": 19460,
+      "projectiles": [
+        "babydragon_projectile_lvl3"
+      ]
+    },
+    "babydragon-projectile-lvl10": {
+      "path": "assets/projectiles-native/babydragon-projectile-lvl10/graph.json",
+      "sha256": "86f8e1e9d01dd139a98f706657b55615b2b249f94a0ccc3ef6179d3dc71585b3",
+      "bytes": 19423,
+      "projectiles": [
+        "babydragon_projectile_lvl10"
+      ]
+    },
+    "dragonriderprojectile": {
+      "path": "assets/projectiles-native/dragonriderprojectile/graph.json",
+      "sha256": "018dc6ed116a9f200f589342c1b5e0cdc149e0788be40c466b116713347cdd9a",
+      "bytes": 4093,
+      "projectiles": [
+        "DragonRiderProjectile"
+      ]
+    },
+    "dragonriderprojectile-2": {
+      "path": "assets/projectiles-native/dragonriderprojectile-2/graph.json",
+      "sha256": "ceeb962a9cc40b2436f1bfa2a84d843415918c15479b97ee64d982249df18127",
+      "bytes": 3496,
+      "projectiles": [
+        "DragonRiderProjectile 2"
+      ]
+    },
+    "dragonriderprojectile-3": {
+      "path": "assets/projectiles-native/dragonriderprojectile-3/graph.json",
+      "sha256": "fe31f5f6472b281076489f9cb95d551640b446b36736ab42e2f0dd5d555f6908",
+      "bytes": 2290,
+      "projectiles": [
+        "DragonRiderProjectile 3"
+      ]
+    },
+    "throwerprojectile1": {
+      "path": "assets/projectiles-native/throwerprojectile1/graph.json",
+      "sha256": "7febda50f6f55bd3500188a595d525d1acc25cb812d98b533d4b0d932eb5ddae",
+      "bytes": 14704,
+      "projectiles": [
+        "ThrowerProjectile1"
+      ]
+    },
+    "throwerprojectile2": {
+      "path": "assets/projectiles-native/throwerprojectile2/graph.json",
+      "sha256": "b821e28fc44425c08f74c4afb63ce2953724648e3fbeaa25e4602840f01fb6a8",
+      "bytes": 22410,
+      "projectiles": [
+        "ThrowerProjectile2"
+      ]
+    },
+    "throwerprojectile3": {
+      "path": "assets/projectiles-native/throwerprojectile3/graph.json",
+      "sha256": "a67d2969d9314b3f20f6bf9972b56ae8a0ef8bb737ed695290cc61469f53c15c",
+      "bytes": 33130,
+      "projectiles": [
+        "ThrowerProjectile3"
+      ]
+    },
+    "throwerprojectile4": {
+      "path": "assets/projectiles-native/throwerprojectile4/graph.json",
+      "sha256": "e238dfa3af33e1c098f2da2c0b92897903911bc8cdb80d8c944ee6838cda9881",
+      "bytes": 15116,
+      "projectiles": [
+        "ThrowerProjectile4"
+      ]
+    },
+    "meteoritegolemprojectile": {
+      "path": "assets/projectiles-native/meteoritegolemprojectile/graph.json",
+      "sha256": "a9aacc13d03c81506f0ad18648e49e439e2dee10a28df0f5f8e4b9db15b190b6",
+      "bytes": 9416,
+      "projectiles": [
+        "MeteoriteGolemProjectile"
+      ]
+    },
+    "meteoritegolemprojectilelvl2": {
+      "path": "assets/projectiles-native/meteoritegolemprojectilelvl2/graph.json",
+      "sha256": "46d425c5bec61359ef62bc98576835ae8263d595a87e7ddddaaa1647427d96d4",
+      "bytes": 9392,
+      "projectiles": [
+        "MeteoriteGolemProjectileLvl2"
+      ]
+    },
+    "meteoritegolemprojectilelvl3": {
+      "path": "assets/projectiles-native/meteoritegolemprojectilelvl3/graph.json",
+      "sha256": "4ca09e64ff4293cf86c843f8871c79047268bc3bc6ddc09210556b9048e0c88d",
+      "bytes": 9394,
+      "projectiles": [
+        "MeteoriteGolemProjectileLvl3"
+      ]
+    },
+    "gargoyle-projectile": {
+      "path": "assets/projectiles-native/gargoyle-projectile/graph.json",
+      "sha256": "640c63d58fd5a27299560583cc529e0452de94208340860f353be8eadc856703",
+      "bytes": 3758,
+      "projectiles": [
+        "gargoyle_projectile"
+      ]
+    },
+    "witch-projectile": {
+      "path": "assets/projectiles-native/witch-projectile/graph.json",
+      "sha256": "57497f0b0c8a11678fa20eab9aa95ad0178fd1d2f7e4039b3f6ef96a10bef419",
+      "bytes": 13312,
+      "projectiles": [
+        "Witch_projectile"
+      ]
+    },
+    "hound-projectile": {
+      "path": "assets/projectiles-native/hound-projectile/graph.json",
+      "sha256": "c842cbeba0fa77d18489a712fa1648204a1f62c7b5e9036e30d1d4fdc8e8c58a",
+      "bytes": 6871,
+      "projectiles": [
+        "hound_projectile"
+      ]
+    },
+    "trollboulder-lvl1": {
+      "path": "assets/projectiles-native/trollboulder-lvl1/graph.json",
+      "sha256": "cf643af6b9e98e6c32e6da4a845431cc532c19ac087292ae4d0ba63657bdcdb1",
+      "bytes": 295911,
+      "projectiles": [
+        "trollBoulder_lvl1"
+      ]
+    },
+    "trollboulder-lvl2": {
+      "path": "assets/projectiles-native/trollboulder-lvl2/graph.json",
+      "sha256": "7692e0870ad9057a2b79eaceac06918b481dfab05a5276245e84650d6a3818bd",
+      "bytes": 93213,
+      "projectiles": [
+        "trollBoulder_lvl2"
+      ]
+    },
+    "trollboulder-lvl3": {
+      "path": "assets/projectiles-native/trollboulder-lvl3/graph.json",
+      "sha256": "1aeb34da0e884f712ab66e81161998e16380d6ccfa730f8fe4445b16140b926c",
+      "bytes": 93263,
+      "projectiles": [
+        "trollBoulder_lvl3"
+      ]
+    },
+    "trollboulder-lvl5": {
+      "path": "assets/projectiles-native/trollboulder-lvl5/graph.json",
+      "sha256": "f0348ed02ea55f6f7c94dd2d82c97c55902cd03323be167124f9c07bc8cac09b",
+      "bytes": 93277,
+      "projectiles": [
+        "trollBoulder_lvl5"
+      ]
+    },
+    "trollboulder-lvl6": {
+      "path": "assets/projectiles-native/trollboulder-lvl6/graph.json",
+      "sha256": "33e6088c893f0ca669dc9aa9cbd25686344c855c39294c5f353d881ca135164b",
+      "bytes": 93277,
+      "projectiles": [
+        "trollBoulder_lvl6"
+      ]
+    },
+    "trollboulder-lvl7": {
+      "path": "assets/projectiles-native/trollboulder-lvl7/graph.json",
+      "sha256": "3a3a399e15daf7a5d06b336e7df788350d6e02284a1203f9163286b83686a526",
+      "bytes": 438784,
+      "projectiles": [
+        "trollBoulder_lvl7"
+      ]
+    },
+    "trollboulder-lvl8": {
+      "path": "assets/projectiles-native/trollboulder-lvl8/graph.json",
+      "sha256": "7c61dd93a0478bb4dcff27f08f29e273b9c280695dc65fdc6c4f9362f6f16996",
+      "bytes": 139484,
+      "projectiles": [
+        "trollBoulder_lvl8"
+      ]
+    },
+    "trollboulder-lvl9": {
+      "path": "assets/projectiles-native/trollboulder-lvl9/graph.json",
+      "sha256": "5f306f6fde1000ebf21e24ed656964b75b4cbdf33287ff3e8047f00e8404008c",
+      "bytes": 429380,
+      "projectiles": [
+        "trollBoulder_lvl9"
+      ]
+    },
+    "trollboulder-lvl10": {
+      "path": "assets/projectiles-native/trollboulder-lvl10/graph.json",
+      "sha256": "1a3a7419a41e7eb1c3e8447eaf2ed3a0d155bb1fc01086d090082254512428e9",
+      "bytes": 453648,
+      "projectiles": [
+        "trollBoulder_lvl10"
+      ]
+    },
+    "headhunter-card-lvl1": {
+      "path": "assets/projectiles-native/headhunter-card-lvl1/graph.json",
+      "sha256": "b0db22a0a959b2825e4bcf39c730d9d49748290dee1d2f9b97fd6a3045041606",
+      "bytes": 4671,
+      "projectiles": [
+        "Headhunter_Card_lvl1",
+        "Headhunter_Card_lvl2",
+        "Headhunter_Card_lvl3",
+        "Headhunter_Card_lvl4"
+      ]
+    },
+    "apprenticewarden-small": {
+      "path": "assets/projectiles-native/apprenticewarden-small/graph.json",
+      "sha256": "3dcb671e2acc4dca59f3d89768d1abd37a5336ecc2353d286e2f0f501c113e39",
+      "bytes": 9633,
+      "projectiles": [
+        "ApprenticeWarden_small"
+      ]
+    },
+    "apprenticewarden-small2": {
+      "path": "assets/projectiles-native/apprenticewarden-small2/graph.json",
+      "sha256": "8e610400b10a9df1279f748fba52bf638fe5b2fd1caa9a53f448225effcc9b15",
+      "bytes": 6072,
+      "projectiles": [
+        "ApprenticeWarden_small2"
+      ]
+    },
+    "battledruidprojectile": {
+      "path": "assets/projectiles-native/battledruidprojectile/graph.json",
+      "sha256": "577dac24542ba33ff25d65ad4d2690b2cff3a0d50d8537d30ca7d16a17b8cab1",
+      "bytes": 16728,
+      "projectiles": [
+        "BattleDruidProjectile"
+      ]
+    },
+    "magic-archer-projectile": {
+      "path": "assets/projectiles-native/magic-archer-projectile/graph.json",
+      "sha256": "2e6a4b3c2fc83b24c8e69fb2a0df7909865a4e5b77cb817b64d1411ce5517a24",
+      "bytes": 16214,
+      "projectiles": [
+        "magic_archer_projectile"
+      ]
+    },
+    "superdragonprojectile": {
+      "path": "assets/projectiles-native/superdragonprojectile/graph.json",
+      "sha256": "0ded6bc8a877862dd56ae495abe46a5b199105910b5275e194fe0a8147d42cf6",
+      "bytes": 22183,
+      "projectiles": [
+        "SuperDragonProjectile"
+      ]
+    },
+    "super-gargoyle-projectile": {
+      "path": "assets/projectiles-native/super-gargoyle-projectile/graph.json",
+      "sha256": "6612c659c205fbd56ad7020aeed2d735a387fbf06df600e5196ef4e6667fe615",
+      "bytes": 5714,
+      "projectiles": [
+        "super_gargoyle_projectile"
+      ]
+    },
+    "superbowlerprojectile": {
+      "path": "assets/projectiles-native/superbowlerprojectile/graph.json",
+      "sha256": "990240845e962f9861c18d3f103de6bd923a0d8853adb26b0e0a38758a688fe1",
+      "bytes": 41649,
+      "projectiles": [
+        "SuperBowlerProjectile"
+      ]
+    },
+    "siege-zeppelin-projectile": {
+      "path": "assets/projectiles-native/siege-zeppelin-projectile/graph.json",
+      "sha256": "47bdd086c97ad6231b0879e7695fe79d34a6b6d642d56fb214c3b746cd4c9eec",
+      "bytes": 2100,
+      "projectiles": [
+        "Siege Zeppelin Projectile"
+      ]
+    },
+    "rollinglog": {
+      "path": "assets/projectiles-native/rollinglog/graph.json",
+      "sha256": "759fde0ca0dd5072c70388abed3c23f2ffa628b49e8f47b1c94be1b01a16fa76",
+      "bytes": 54911,
+      "projectiles": [
+        "RollingLog"
+      ]
+    },
+    "firecatapultprojectile1": {
+      "path": "assets/projectiles-native/firecatapultprojectile1/graph.json",
+      "sha256": "bb1b3c6a17b8de17e56edf70d6e818227ddb0b813c60a591709c3f83be66ca2b",
+      "bytes": 20126,
+      "projectiles": [
+        "FireCatapultProjectile1",
+        "FireCatapultProjectile2",
+        "FireCatapultProjectile3",
+        "FireCatapultProjectile4",
+        "FireCatapultProjectile5"
+      ]
+    },
+    "commandtower-barrel1": {
+      "path": "assets/projectiles-native/commandtower-barrel1/graph.json",
+      "sha256": "1b88c85e5abe2e4aeafa4bfbe6ea57c8d01ee1a19423aa7d760ad7c3546e6a41",
+      "bytes": 36297,
+      "projectiles": [
+        "CommandTower Barrel1",
+        "CommandTower Barrel2",
+        "CommandTower Barrel3",
+        "CommandTower Barrel4"
+      ]
+    },
+    "guardianrangedprojectile": {
+      "path": "assets/projectiles-native/guardianrangedprojectile/graph.json",
+      "sha256": "92410e54c152500e4a502c2b00c060c87c05b7a72197cd028e11456a1cb2e3be",
+      "bytes": 21884,
+      "projectiles": [
+        "GuardianRangedProjectile"
+      ]
+    },
+    "loggerprojectile": {
+      "path": "assets/projectiles-native/loggerprojectile/graph.json",
+      "sha256": "342245bee130dfd57598e381b05cd67b98539e162564014632f561cc8bb72ba5",
+      "bytes": 1022529,
+      "projectiles": [
+        "LoggerProjectile"
+      ]
+    },
+    "tinyhound-projectile": {
+      "path": "assets/projectiles-native/tinyhound-projectile/graph.json",
+      "sha256": "8c3eaa2880f649c01e90193dfdbd2a4398c7298e9b9c7636623077119ac40e52",
+      "bytes": 6204,
+      "projectiles": [
+        "tinyhound_projectile"
+      ]
+    },
+    "firespiritjump1": {
+      "path": "assets/projectiles-native/firespiritjump1/graph.json",
+      "sha256": "d8b50ad7d991b0b54494aa6fb58ae4885e22e6ee4e4d065b7d40498ceb80e46f",
+      "bytes": 128493,
+      "projectiles": [
+        "FireSpiritJump1",
+        "FireSpiritJump2",
+        "FireSpiritJump3",
+        "FireSpiritJump4",
+        "FireSpiritJump5",
+        "FireSpiritJump1_DEF",
+        "FireSpiritJump2_DEF",
+        "FireSpiritJump3_DEF",
+        "FireSpiritJump4_DEF"
+      ]
+    },
+    "icy-tinyhound-projectile": {
+      "path": "assets/projectiles-native/icy-tinyhound-projectile/graph.json",
+      "sha256": "5fc40a7e9b4a3e49529ce75cca0cb95d7b9aa000ac6b794ab3cff65b077754b2",
+      "bytes": 6189,
+      "projectiles": [
+        "icy_tinyhound_projectile"
+      ]
+    },
+    "archerqueen-arrow-lvl1": {
+      "path": "assets/projectiles-native/archerqueen-arrow-lvl1/graph.json",
+      "sha256": "7eb30c412300d0efa2095130a1393d41b1855c6afe27789d92aaffd55df12097",
+      "bytes": 6017,
+      "projectiles": [
+        "ArcherQueen arrow lvl1"
+      ]
+    },
+    "archerqueen-arrow-lvl2": {
+      "path": "assets/projectiles-native/archerqueen-arrow-lvl2/graph.json",
+      "sha256": "530814fcd4bbd261e51aba2a5312716e3d026ad3cb625164220378758cd7ce40",
+      "bytes": 3982,
+      "projectiles": [
+        "ArcherQueen arrow lvl2"
+      ]
+    },
+    "archerqueen-arrow-lvl3": {
+      "path": "assets/projectiles-native/archerqueen-arrow-lvl3/graph.json",
+      "sha256": "72eb10e6eeed1fb3a31379943d7f96e649b69fdb9d338640409e5069c4f9a586",
+      "bytes": 4044,
+      "projectiles": [
+        "ArcherQueen arrow lvl3"
+      ]
+    },
+    "amazonqueen-javelin": {
+      "path": "assets/projectiles-native/amazonqueen-javelin/graph.json",
+      "sha256": "a2fcde20a9437bd05786054ff117ba441c67896f90ccce5cbc9e0e2f426bec3c",
+      "bytes": 2569,
+      "projectiles": [
+        "AmazonQueen_javelin"
+      ]
+    },
+    "minionheroattackprojectile": {
+      "path": "assets/projectiles-native/minionheroattackprojectile/graph.json",
+      "sha256": "d9bbb2a5e94ebc8830ee485be431f51469e3254b4aca7fc349df198d20a4315b",
+      "bytes": 34152,
+      "projectiles": [
+        "MinionHeroAttackProjectile"
+      ]
+    },
+    "phoenixprojectile": {
+      "path": "assets/projectiles-native/phoenixprojectile/graph.json",
+      "sha256": "80e65fab3d7802cca09606cd7ed1acc92f129850eef0793ee8bce3df7b334bbb",
+      "bytes": 7981,
+      "projectiles": [
+        "PhoenixProjectile"
+      ]
+    },
+    "phoenixresurrect": {
+      "path": "assets/projectiles-native/phoenixresurrect/graph.json",
+      "sha256": "8867a7d5320057fcdd155922dbd33b7b7ea92bab0abfa14a72b085ded1dd1d7b",
+      "bytes": 39477,
+      "projectiles": [
+        "PhoenixResurrect"
+      ]
+    },
+    "fireiguanaproto": {
+      "path": "assets/projectiles-native/fireiguanaproto/graph.json",
+      "sha256": "09384b7bfb4a33a762a30002e7e045cde6af56cc8f519e0b5933a88a8f5b49cd",
+      "bytes": 8116,
+      "projectiles": [
+        "fireIguanaProto"
+      ]
+    },
+    "frosty-projectile": {
+      "path": "assets/projectiles-native/frosty-projectile/graph.json",
+      "sha256": "7b68c8e65be6132d0c7d756a73a299a858cffb04343030bc21e8e098ca297537",
+      "bytes": 3360,
+      "projectiles": [
+        "Frosty_projectile"
+      ]
+    },
+    "fennec-projectile": {
+      "path": "assets/projectiles-native/fennec-projectile/graph.json",
+      "sha256": "519184b895480f977fe04e2b21dac4b172a9799668a5392a9f0f3b6cfcd703b6",
+      "bytes": 11081,
+      "projectiles": [
+        "Fennec_projectile"
+      ]
+    },
+    "pet-sneezy-projectile-shockwave": {
+      "path": "assets/projectiles-native/pet-sneezy-projectile-shockwave/graph.json",
+      "sha256": "e21ccc8bff091cb811c9adeb0b7030487a559503621d0616d46f41612bbd6ecf",
+      "bytes": 3545,
+      "projectiles": [
+        "pet_sneezy_projectile_ShockWave"
+      ]
+    },
+    "crowprojectile": {
+      "path": "assets/projectiles-native/crowprojectile/graph.json",
+      "sha256": "d8547ad3482ab5d989da9aee349803e28018da7245dd3223642ea4ccd5bdc1be",
+      "bytes": 63291,
+      "projectiles": [
+        "CrowProjectile"
+      ]
+    },
+    "super-gargoyle-projectile-big": {
+      "path": "assets/projectiles-native/super-gargoyle-projectile-big/graph.json",
+      "sha256": "89082214e4d5735aa3ac1ecdf4b5f1f88bbcdee981214651b7980a7f211a6ae7",
+      "bytes": 5880,
+      "projectiles": [
+        "super_gargoyle_projectile_big"
+      ]
+    },
+    "jumpingriderprojectile1": {
+      "path": "assets/projectiles-native/jumpingriderprojectile1/graph.json",
+      "sha256": "ca68844b0a44ab0678d2db39196ae53036718bd418816666fb26887b2dd5093b",
+      "bytes": 15680,
+      "projectiles": [
+        "JumpingRiderProjectile1",
+        "JumpingRiderProjectile2",
+        "JumpingRiderProjectile3",
+        "JumpingRiderProjectile4",
+        "JumpingRiderProjectile5",
+        "JumpingRiderProjectile6",
+        "JumpingRiderProjectile7",
+        "JumpingRiderProjectile8",
+        "JumpingRiderProjectile9",
+        "JumpingRiderProjectile10",
+        "JumpingRiderProjectile11",
+        "JumpingRiderProjectile12"
+      ]
+    },
+    "amazonqueen-shield": {
+      "path": "assets/projectiles-native/amazonqueen-shield/graph.json",
+      "sha256": "284bb1d3163c9fc1837020e63aa3e686de14837840afc533a262b5bdeff68dcb",
+      "bytes": 8391,
+      "projectiles": [
+        "AmazonQueen_shield"
+      ]
+    },
+    "rocketspearprojectile": {
+      "path": "assets/projectiles-native/rocketspearprojectile/graph.json",
+      "sha256": "75fe7c4d91379dac483f1bd59f4b8776c66e002c53b6c27628b24d25121ac93f",
+      "bytes": 9154,
+      "projectiles": [
+        "RocketSpearProjectile"
+      ]
+    },
+    "barbariankinggearfootball": {
+      "path": "assets/projectiles-native/barbariankinggearfootball/graph.json",
+      "sha256": "0d4784d4c952cee1b5ae09302fdf5c7634749b88d1ef23ce998c89dce69dc86f",
+      "bytes": 40550,
+      "projectiles": [
+        "BarbarianKingGearFootball"
+      ]
+    },
+    "queenfrostyprojectile": {
+      "path": "assets/projectiles-native/queenfrostyprojectile/graph.json",
+      "sha256": "fc0a66b757554924382074a5105026762e390b9696e1c0842194c906d4ac784a",
+      "bytes": 3396,
+      "projectiles": [
+        "QueenFrostyProjectile"
+      ]
+    },
+    "archerqueenmonolithprojectile2": {
+      "path": "assets/projectiles-native/archerqueenmonolithprojectile2/graph.json",
+      "sha256": "57059647437db84ff7a18ea3ff1707d87cf4a4a451cf2001e2fbe79766c46f57",
+      "bytes": 45423,
+      "projectiles": [
+        "ArcherQueenMonolithProjectile2"
+      ]
+    },
+    "archerqueenmonolithprojectile1": {
+      "path": "assets/projectiles-native/archerqueenmonolithprojectile1/graph.json",
+      "sha256": "9f9dd8e99fc6bb79c86ea170885f0c8e9524236cad0636f3c5b1e4a2f44957e0",
+      "bytes": 45508,
+      "projectiles": [
+        "ArcherQueenMonolithProjectile1"
+      ]
+    },
+    "archerqueenmonolithprojectile3": {
+      "path": "assets/projectiles-native/archerqueenmonolithprojectile3/graph.json",
+      "sha256": "1fdfa3912e782c6f17c4bd013c9118950a0bc770c8419f6451e2178bebb4e987",
+      "bytes": 45475,
+      "projectiles": [
+        "ArcherQueenMonolithProjectile3"
+      ]
+    },
+    "queenpierceprojectile": {
+      "path": "assets/projectiles-native/queenpierceprojectile/graph.json",
+      "sha256": "589143c21d20f39025c49294674b1df359e1493c3dc8b569088b77e0b5e35b04",
+      "bytes": 17241,
+      "projectiles": [
+        "QueenPierceProjectile"
+      ]
+    },
+    "vfx-chr-gw-fireball-lvl1": {
+      "path": "assets/projectiles-native/vfx-chr-gw-fireball-lvl1/graph.json",
+      "sha256": "4004af305618e4241a68a574a3b15effa1c78a756f149a2a6d8cffafecf4aecd",
+      "bytes": 53754,
+      "projectiles": [
+        "vfx_chr_gw_Fireball_lvl1"
+      ]
+    },
+    "vfx-chr-gw-fireball-lvl2": {
+      "path": "assets/projectiles-native/vfx-chr-gw-fireball-lvl2/graph.json",
+      "sha256": "a0533bf240e2ed683ab16ec051227533a6fac656b6a578caa485ca2a5f93face",
+      "bytes": 58157,
+      "projectiles": [
+        "vfx_chr_gw_Fireball_lvl2"
+      ]
+    },
+    "vfx-chr-gw-fireball-lvl3": {
+      "path": "assets/projectiles-native/vfx-chr-gw-fireball-lvl3/graph.json",
+      "sha256": "1a01866b8efff1665eeef82bce5c94659449b8a797eb1f0220b796dea6866cd2",
+      "bytes": 65772,
+      "projectiles": [
+        "vfx_chr_gw_Fireball_lvl3"
+      ]
+    },
+    "vfx-projectile-darkorb": {
+      "path": "assets/projectiles-native/vfx-projectile-darkorb/graph.json",
+      "sha256": "ae7d65f59f668f8805e129c2759452d451408208c9792df32b23e1a03b30d59d",
+      "bytes": 816,
+      "projectiles": [
+        "vfx_projectile_DarkOrb"
+      ],
+      "skipped": {
+        "sc/characters.sc:vfx_chr_DarkOrb_Crystal": "Masks are unsupported"
+      }
+    },
+    "kickedfootball": {
+      "path": "assets/projectiles-native/kickedfootball/graph.json",
+      "sha256": "96027a09209acb1a5d4860c64f5c2b2141eda9a7f5b0152d174760d5ace1aa6a",
+      "bytes": 13199,
+      "projectiles": [
+        "KickedFootball"
+      ]
+    },
+    "turbostartprojectile": {
+      "path": "assets/projectiles-native/turbostartprojectile/graph.json",
+      "sha256": "e4d613ab7f4a2ac94134d8a97335bccaa69846e088b432a70b025dd8a856f971",
+      "bytes": 9122,
+      "projectiles": [
+        "TurboStartProjectile"
+      ]
+    },
+    "rc-gear-frostblast-projectile": {
+      "path": "assets/projectiles-native/rc-gear-frostblast-projectile/graph.json",
+      "sha256": "a8b6896573b6058c196f5256b36b734720ad52ef3cbbde2a8e83a4605781d398",
+      "bytes": 25777,
+      "projectiles": [
+        "rc_gear_frostblast_Projectile"
+      ]
+    },
+    "ddreversalcardprojectile": {
+      "path": "assets/projectiles-native/ddreversalcardprojectile/graph.json",
+      "sha256": "65013310a56164f544023ebf545f138788d375f72282e2c8b0cee3de44f1308a",
+      "bytes": 348848,
+      "projectiles": [
+        "ddreversalcardprojectile"
+      ]
+    },
+    "nail-ammo": {
+      "path": "assets/projectiles-native/nail-ammo/graph.json",
+      "sha256": "470296b8686264ba5fa01e7486f773ec451d1109562cf9c60a94edb03b5df450",
+      "bytes": 1746,
+      "projectiles": [
+        "Nail Ammo"
+      ]
+    },
+    "nail-ammo-2": {
+      "path": "assets/projectiles-native/nail-ammo-2/graph.json",
+      "sha256": "b98855858e64cbc7a9258d1102a64f622433a6e3bbc52bb68ec03e29158f3e52",
+      "bytes": 8791,
+      "projectiles": [
+        "Nail Ammo 2"
+      ]
+    },
+    "cannonball": {
+      "path": "assets/projectiles-native/cannonball/graph.json",
+      "sha256": "12f9719b7b133bf0de47da890e2ee5dffa5f054d9b896252d743a6cc30720063",
+      "bytes": 3243,
+      "projectiles": [
+        "Cannonball"
+      ]
+    },
+    "cannonball2": {
+      "path": "assets/projectiles-native/cannonball2/graph.json",
+      "sha256": "61c25517412d4874a7fb90fea25ef57cc03933445fd1e557fc5f8312b84242da",
+      "bytes": 3528,
+      "projectiles": [
+        "Cannonball2"
+      ]
+    },
+    "cannonball4": {
+      "path": "assets/projectiles-native/cannonball4/graph.json",
+      "sha256": "e4aeb33cb9f0c5a4bfd1a569c9a93a36dfa89a3e80f4a3087494852d0aaf4551",
+      "bytes": 3680,
+      "projectiles": [
+        "Cannonball4"
+      ]
+    },
+    "cannonball5": {
+      "path": "assets/projectiles-native/cannonball5/graph.json",
+      "sha256": "c328e9408dfa6835837cc30c6b501467227ccaa3f234f329d4507ab9cfcf5f46",
+      "bytes": 3745,
+      "projectiles": [
+        "Cannonball5"
+      ]
+    },
+    "cannonball7": {
+      "path": "assets/projectiles-native/cannonball7/graph.json",
+      "sha256": "399cb9a9e86a465271b6d27557dcb3372f2334b8a56646201c50c794607fb02f",
+      "bytes": 4122,
+      "projectiles": [
+        "Cannonball7"
+      ]
+    },
+    "cannonball10": {
+      "path": "assets/projectiles-native/cannonball10/graph.json",
+      "sha256": "e917798cc1aa1d29ec9cc9640c75d05aead38a2cfdecf3bccda7eb8ca3ff1d80",
+      "bytes": 4990,
+      "projectiles": [
+        "Cannonball10"
+      ]
+    },
+    "cannonball12": {
+      "path": "assets/projectiles-native/cannonball12/graph.json",
+      "sha256": "482746e7e3b82c761f439c257bb81d0ce7387e62095a772eaf083af46c6161b8",
+      "bytes": 5248,
+      "projectiles": [
+        "Cannonball12"
+      ]
+    },
+    "cannonball13": {
+      "path": "assets/projectiles-native/cannonball13/graph.json",
+      "sha256": "9fd2edf56abc31a2e73d2d8dc71a33106ebdf2d4cb8430f5a8bdc369a0d73735",
+      "bytes": 7561,
+      "projectiles": [
+        "Cannonball13"
+      ]
+    },
+    "cannonball14": {
+      "path": "assets/projectiles-native/cannonball14/graph.json",
+      "sha256": "e531a8437f0042c83e6d4a5b0078f32ca2ae1bac3e4abf476aabc3771aa9e827",
+      "bytes": 2218,
+      "projectiles": [
+        "Cannonball14"
+      ]
+    },
+    "cannonball15": {
+      "path": "assets/projectiles-native/cannonball15/graph.json",
+      "sha256": "f394dfcb4312c628b7c986b15c52f6a2839cc4b347754f36527df6f7485bb6a6",
+      "bytes": 21123,
+      "projectiles": [
+        "Cannonball15"
+      ]
+    },
+    "cannonball16": {
+      "path": "assets/projectiles-native/cannonball16/graph.json",
+      "sha256": "2373817be7006e9d6fc54c23b262296c2cb1dcab18908a3885bacf62273e8433",
+      "bytes": 3767,
+      "projectiles": [
+        "Cannonball16"
+      ]
+    },
+    "mortar-ammo1": {
+      "path": "assets/projectiles-native/mortar-ammo1/graph.json",
+      "sha256": "8632bbe65cc7130959f73ff5e0ecb66b77e02770a197eda1097833f51516e171",
+      "bytes": 4330,
+      "projectiles": [
+        "Mortar Ammo1"
+      ]
+    },
+    "mortar-ammo2": {
+      "path": "assets/projectiles-native/mortar-ammo2/graph.json",
+      "sha256": "ec6d196166b9dfce9c40be69a8b4905f8add6167e30a563defbff8a8ae085775",
+      "bytes": 4330,
+      "projectiles": [
+        "Mortar Ammo2"
+      ]
+    },
+    "mortar-ammo3": {
+      "path": "assets/projectiles-native/mortar-ammo3/graph.json",
+      "sha256": "dc80c4d7c4184e081dc9f39f273b68d315e8b79b5b0d6639e58a1e451bd57416",
+      "bytes": 4332,
+      "projectiles": [
+        "Mortar Ammo3"
+      ]
+    },
+    "mortar-ammo4": {
+      "path": "assets/projectiles-native/mortar-ammo4/graph.json",
+      "sha256": "23406455f0b46e3d679e82ae7fe7126b564d35013a7e98667449adc0ebddc34e",
+      "bytes": 4409,
+      "projectiles": [
+        "Mortar Ammo4"
+      ]
+    },
+    "mortar-ammo5": {
+      "path": "assets/projectiles-native/mortar-ammo5/graph.json",
+      "sha256": "5c83b0d1412b51e6bd8022813a23f194f942c84e966c6bf9f567835cd538911a",
+      "bytes": 4409,
+      "projectiles": [
+        "Mortar Ammo5"
+      ]
+    },
+    "mortar-ammo6": {
+      "path": "assets/projectiles-native/mortar-ammo6/graph.json",
+      "sha256": "607693e7c73e45dd6947e5fdbd65d9abd53b98936c58ba8e1032f528ff586b87",
+      "bytes": 7403,
+      "projectiles": [
+        "Mortar Ammo6"
+      ]
+    },
+    "mortar-ammo8": {
+      "path": "assets/projectiles-native/mortar-ammo8/graph.json",
+      "sha256": "6f97820b4e288de4e16951ee1bad89fb5aff3b7d5d463af757ac2c11c30bed5d",
+      "bytes": 8276,
+      "projectiles": [
+        "Mortar Ammo8"
+      ]
+    },
+    "mortar-ammo9": {
+      "path": "assets/projectiles-native/mortar-ammo9/graph.json",
+      "sha256": "34d67f295138291a2381ae05948bf4fd57d447d29f5c76c15639996ad0eb4b00",
+      "bytes": 8332,
+      "projectiles": [
+        "Mortar Ammo9"
+      ]
+    },
+    "mortar-ammo10": {
+      "path": "assets/projectiles-native/mortar-ammo10/graph.json",
+      "sha256": "1ffc4864ee161b8a659f94df15bda3d4371aac03cbce4e253fa380dfb0ec00a0",
+      "bytes": 8671,
+      "projectiles": [
+        "Mortar Ammo10"
+      ]
+    },
+    "mortar-ammo11": {
+      "path": "assets/projectiles-native/mortar-ammo11/graph.json",
+      "sha256": "db691f060ad98d715ffb2293f44e8697aed85fa8c9b2fac1480299c427f6ccbc",
+      "bytes": 8609,
+      "projectiles": [
+        "Mortar Ammo11"
+      ]
+    },
+    "mortar-ammo-lvl16": {
+      "path": "assets/projectiles-native/mortar-ammo-lvl16/graph.json",
+      "sha256": "45052d80618fca45ad6e92a36886dc0b05c315b46f1bc256eb2d14ce5b7e08f5",
+      "bytes": 6504,
+      "projectiles": [
+        "Mortar Ammo lvl16"
+      ]
+    },
+    "mortar-ammo-lvl17": {
+      "path": "assets/projectiles-native/mortar-ammo-lvl17/graph.json",
+      "sha256": "e10fc7ecdb989fa6872fd9f80b39acd8045bd47e70f131b1b14a0d6062dc5c3f",
+      "bytes": 8476,
+      "projectiles": [
+        "Mortar Ammo lvl17"
+      ]
+    },
+    "mortar-ammo-lvl18": {
+      "path": "assets/projectiles-native/mortar-ammo-lvl18/graph.json",
+      "sha256": "69f83a46835cd2ebc4e4b17fc64709ad5f4e784f770e46c52bc4822ec8ca7113",
+      "bytes": 8421,
+      "projectiles": [
+        "Mortar Ammo lvl18"
+      ]
+    },
+    "firework": {
+      "path": "assets/projectiles-native/firework/graph.json",
+      "sha256": "c0fa449bc62d39a2619f2eeb3e21a7b1adc32354ff98921b695a0bb11b92dd7d",
+      "bytes": 16022,
+      "projectiles": [
+        "Firework"
+      ]
+    },
+    "firework2": {
+      "path": "assets/projectiles-native/firework2/graph.json",
+      "sha256": "b862cdabd9de3178563645cfb9d3e97dde7680eee938596551310da129fe7a02",
+      "bytes": 16591,
+      "projectiles": [
+        "Firework2"
+      ]
+    },
+    "firework3": {
+      "path": "assets/projectiles-native/firework3/graph.json",
+      "sha256": "ba8f42fbc087e6c4ea2b77146f136dc561c9c2f032527f1ffd33e811ed945e8c",
+      "bytes": 16748,
+      "projectiles": [
+        "Firework3"
+      ]
+    },
+    "firework4": {
+      "path": "assets/projectiles-native/firework4/graph.json",
+      "sha256": "36c960421fffcaee8391e974432d83ac7b28733354481496c6a20b1c8128420e",
+      "bytes": 17108,
+      "projectiles": [
+        "Firework4"
+      ]
+    },
+    "firework5": {
+      "path": "assets/projectiles-native/firework5/graph.json",
+      "sha256": "1f776e71390e4ae30edbe05aa163498d943c49cd04d6eaee05f2857163fe3330",
+      "bytes": 17362,
+      "projectiles": [
+        "Firework5"
+      ]
+    },
+    "firework6": {
+      "path": "assets/projectiles-native/firework6/graph.json",
+      "sha256": "09515191bbf6810624c346cdde6b4b6a5e68b51002aa9c0be698b65533207b2c",
+      "bytes": 17799,
+      "projectiles": [
+        "Firework6"
+      ]
+    },
+    "firework7": {
+      "path": "assets/projectiles-native/firework7/graph.json",
+      "sha256": "a678c530220c7b5772cad6dddf17715ec7f63dc9af4fc51e4a7381d57d4915fb",
+      "bytes": 17745,
+      "projectiles": [
+        "Firework7"
+      ]
+    },
+    "firework8": {
+      "path": "assets/projectiles-native/firework8/graph.json",
+      "sha256": "07b94d36c049683a9f83769c87a819cdaed0d9843f6d685cb52ed6f3142e0e70",
+      "bytes": 18290,
+      "projectiles": [
+        "Firework8"
+      ]
+    },
+    "firework9": {
+      "path": "assets/projectiles-native/firework9/graph.json",
+      "sha256": "aa15daffbb9eba314df2f93da923433906ac6f27310ebb1f27487c5638870552",
+      "bytes": 18060,
+      "projectiles": [
+        "Firework9"
+      ]
+    },
+    "firework15": {
+      "path": "assets/projectiles-native/firework15/graph.json",
+      "sha256": "7bfcb390b8c71870a691cb2812cacf141de09821b6165c24c3307761e0116b59",
+      "bytes": 17548,
+      "projectiles": [
+        "Firework15"
+      ]
+    },
+    "firework16": {
+      "path": "assets/projectiles-native/firework16/graph.json",
+      "sha256": "cbb62587d732340a5d9c85e6858e7ae54035227fc2caeccb16622c83536352ba",
+      "bytes": 18048,
+      "projectiles": [
+        "Firework16"
+      ]
+    },
+    "bomb-tower-ammo1": {
+      "path": "assets/projectiles-native/bomb-tower-ammo1/graph.json",
+      "sha256": "31d8fe51e4be0f2db2e6450cf189bc804840deb9d3e432ed5ac1377b4719582e",
+      "bytes": 5097,
+      "projectiles": [
+        "Bomb Tower Ammo1"
+      ]
+    },
+    "bomb-tower-ammo2": {
+      "path": "assets/projectiles-native/bomb-tower-ammo2/graph.json",
+      "sha256": "e36679566e5380a178568ca058f3113aad81d4fd48266023d6f551b5098d02bf",
+      "bytes": 5072,
+      "projectiles": [
+        "Bomb Tower Ammo2"
+      ]
+    },
+    "bomb-tower-ammo3": {
+      "path": "assets/projectiles-native/bomb-tower-ammo3/graph.json",
+      "sha256": "86ebdfc82049859db4e38b032aac94fbac7c1c645d15a0cd1b3cc0bd1e1df11b",
+      "bytes": 5117,
+      "projectiles": [
+        "Bomb Tower Ammo3"
+      ]
+    },
+    "x-bow-projectile-1": {
+      "path": "assets/projectiles-native/x-bow-projectile-1/graph.json",
+      "sha256": "23e05e8966f82de1089c1ac13f95c32fc29d2e39e32c0b9f75185c7b348e2089",
+      "bytes": 2949,
+      "projectiles": [
+        "X-Bow Projectile 1"
+      ]
+    },
+    "x-bow-projectile-2": {
+      "path": "assets/projectiles-native/x-bow-projectile-2/graph.json",
+      "sha256": "163fb43b69819fc3ec2c2089805daca0fcf840ff25695bd3b19e87a949197be5",
+      "bytes": 1939,
+      "projectiles": [
+        "X-Bow Projectile 2"
+      ]
+    },
+    "x-bow-projectile-3": {
+      "path": "assets/projectiles-native/x-bow-projectile-3/graph.json",
+      "sha256": "639b2a17f0dbcb918ad2dc9aabd828fc98b6ff7522db9b968073dd8724f7ed1b",
+      "bytes": 3462,
+      "projectiles": [
+        "X-Bow Projectile 3"
+      ]
+    },
+    "x-bow-projectile-4": {
+      "path": "assets/projectiles-native/x-bow-projectile-4/graph.json",
+      "sha256": "6dd95593edb20600c770636c94242310ef6bec587943051c9f9d21c43e774a96",
+      "bytes": 24795,
+      "projectiles": [
+        "X-Bow Projectile 4"
+      ]
+    },
+    "x-bow-projectile-5": {
+      "path": "assets/projectiles-native/x-bow-projectile-5/graph.json",
+      "sha256": "c76809b5aac64aa975e706ec413ade0ded1ef8247cc80ffd671364b7236377c6",
+      "bytes": 11222,
+      "projectiles": [
+        "X-Bow Projectile 5"
+      ]
+    },
+    "x-bow-projectile-6": {
+      "path": "assets/projectiles-native/x-bow-projectile-6/graph.json",
+      "sha256": "147ca2e2e0c2922248f31bf41b1813cd5bc894bc0d86c1703ecf5b18b77b8e46",
+      "bytes": 11712,
+      "projectiles": [
+        "X-Bow Projectile 6"
+      ]
+    },
+    "x-bow-projectile-7": {
+      "path": "assets/projectiles-native/x-bow-projectile-7/graph.json",
+      "sha256": "f755896bf55825b5afd66c7416cb1a6a3aaf82feecf436ea7f05f1abd2b11f75",
+      "bytes": 12182,
+      "projectiles": [
+        "X-Bow Projectile 7"
+      ]
+    },
+    "artillery-ammo1": {
+      "path": "assets/projectiles-native/artillery-ammo1/graph.json",
+      "sha256": "6ae9f1e5b80b1993494a4531f303ad42ef32b8a7ef1d1a6cb25397b79f6b8835",
+      "bytes": 13001,
+      "projectiles": [
+        "Artillery Ammo1"
+      ]
+    },
+    "artillery-ammo2": {
+      "path": "assets/projectiles-native/artillery-ammo2/graph.json",
+      "sha256": "222d10ee7ba683a3e4bab44e19ac6ada050242061bcec8b5257f2316a1bb47bb",
+      "bytes": 7571,
+      "projectiles": [
+        "Artillery Ammo2",
+        "Artillery Ammo3",
+        "Artillery Ammo4",
+        "Artillery Ammo5",
+        "Artillery Ammo6",
+        "Artillery Ammo7"
+      ]
+    },
+    "scattershot-projectile-1": {
+      "path": "assets/projectiles-native/scattershot-projectile-1/graph.json",
+      "sha256": "e92514bb12155fe4b38f72fb043259eeb8c8471877acbd7e892d3ea0913e2f5c",
+      "bytes": 10455,
+      "projectiles": [
+        "Scattershot Projectile 1"
+      ]
+    },
+    "scattershot-projectile-2": {
+      "path": "assets/projectiles-native/scattershot-projectile-2/graph.json",
+      "sha256": "5408acbbb3d21405a683808865fe8e08e4d60c12f68ea14cf433a9dd63d65621",
+      "bytes": 11381,
+      "projectiles": [
+        "Scattershot Projectile 2",
+        "Scattershot Projectile 3",
+        "Scattershot Projectile 4"
+      ]
+    },
+    "scattershot-projectile-5": {
+      "path": "assets/projectiles-native/scattershot-projectile-5/graph.json",
+      "sha256": "16135a06a768d66b4881fea6145065d84db0803df0b2959da086f6f71f7af369",
+      "bytes": 13208,
+      "projectiles": [
+        "Scattershot Projectile 5"
+      ]
+    },
+    "scattershot-projectile-6": {
+      "path": "assets/projectiles-native/scattershot-projectile-6/graph.json",
+      "sha256": "e232d0d4fe887897053ac8d40f13cda0802eb68f7c83bad19ee0e0a66f068e96",
+      "bytes": 11474,
+      "projectiles": [
+        "Scattershot Projectile 6"
+      ]
+    },
+    "scattershot-projectile-7": {
+      "path": "assets/projectiles-native/scattershot-projectile-7/graph.json",
+      "sha256": "f2b9e4fefb8ee4cdcf76b4171e0faa9262bab8e2c2078bc0e39b133361d275d2",
+      "bytes": 8406,
+      "projectiles": [
+        "Scattershot Projectile 7"
+      ]
+    },
+    "monolithprojectilemin": {
+      "path": "assets/projectiles-native/monolithprojectilemin/graph.json",
+      "sha256": "336d9acf4fe40a5c7fd4def3561b71e0b75ba90264528865febc9a05e9d5a157",
+      "bytes": 38625,
+      "projectiles": [
+        "MonolithProjectileMin"
+      ]
+    },
+    "monolithprojectilemed": {
+      "path": "assets/projectiles-native/monolithprojectilemed/graph.json",
+      "sha256": "5af02e27fab97aad765c1cea7f4e182fb8db3a152cfc6a7684d099f3741b5ac2",
+      "bytes": 38171,
+      "projectiles": [
+        "MonolithProjectileMed"
+      ]
+    },
+    "monolithprojectilemax": {
+      "path": "assets/projectiles-native/monolithprojectilemax/graph.json",
+      "sha256": "65c2bf13047d014c119b2394b2be394077b93cda0ae67bd02ae14e5d6ad2e810",
+      "bytes": 36919,
+      "projectiles": [
+        "MonolithProjectileMax"
+      ]
+    },
+    "mergedcannonprojectile": {
+      "path": "assets/projectiles-native/mergedcannonprojectile/graph.json",
+      "sha256": "f043c976867f0720c6f07255261d5ba0802cb07c5d1f7bd762a24450791dc478",
+      "bytes": 60552,
+      "projectiles": [
+        "MergedCannonProjectile"
+      ]
+    },
+    "mergedcannonprojectile-lvl3": {
+      "path": "assets/projectiles-native/mergedcannonprojectile-lvl3/graph.json",
+      "sha256": "52884d9df1fb82af10518c15282d18488d6e269080c1866e09769019f3bd39b5",
+      "bytes": 87760,
+      "projectiles": [
+        "MergedCannonProjectile lvl3"
+      ]
+    },
+    "mergedcannonprojectile-lvl4": {
+      "path": "assets/projectiles-native/mergedcannonprojectile-lvl4/graph.json",
+      "sha256": "fdf209f99b3ed749119df75e3d853feb14805148def2d4baa910bb0ce347db4f",
+      "bytes": 81304,
+      "projectiles": [
+        "MergedCannonProjectile lvl4"
+      ]
+    },
+    "merged-cat-archer-projectile-lvl1": {
+      "path": "assets/projectiles-native/merged-cat-archer-projectile-lvl1/graph.json",
+      "sha256": "f49f7b79da974748d19c39c10c9e22e4320d92459c77db4e4c0360e1fdc5e14b",
+      "bytes": 31654,
+      "projectiles": [
+        "merged_cat_archer_projectile_lvl1"
+      ]
+    },
+    "merged-cat-cannon-projectile-lvl1": {
+      "path": "assets/projectiles-native/merged-cat-cannon-projectile-lvl1/graph.json",
+      "sha256": "71c3feee3a6cd1ded8a6c134bf6f9a07b17ca93147cfcdb2ddd66dc4211ba762",
+      "bytes": 3287,
+      "projectiles": [
+        "merged_cat_cannon_projectile_lvl1"
+      ]
+    },
+    "merged-cat-archer-projectile-lvl2": {
+      "path": "assets/projectiles-native/merged-cat-archer-projectile-lvl2/graph.json",
+      "sha256": "843208e468e69736c857540c1927a6cce0956f7cbad0216f301344920f88c578",
+      "bytes": 43886,
+      "projectiles": [
+        "merged_cat_archer_projectile_lvl2"
+      ]
+    },
+    "merged-cat-archer-projectile-lvl3": {
+      "path": "assets/projectiles-native/merged-cat-archer-projectile-lvl3/graph.json",
+      "sha256": "07fa1c763356c0989521bd4fa5498b9c08560be001d587198dc4a22fd975141e",
+      "bytes": 32093,
+      "projectiles": [
+        "merged_cat_archer_projectile_lvl3"
+      ]
+    },
+    "gatlinggunammo": {
+      "path": "assets/projectiles-native/gatlinggunammo/graph.json",
+      "sha256": "daf2ef943d05fe8168c46775aadebfd12435781899af6414328d809cfdbe09bf",
+      "bytes": 4201,
+      "projectiles": [
+        "GatlingGunAmmo"
+      ]
+    },
+    "revengetowerprojectile1": {
+      "path": "assets/projectiles-native/revengetowerprojectile1/graph.json",
+      "sha256": "b2c8a4c9a1ebd7185873522a674d87eb5db853bdf0331c40f7740731d2e76195",
+      "bytes": 27925,
+      "projectiles": [
+        "RevengeTowerProjectile1"
+      ]
+    },
+    "airtrapballoon": {
+      "path": "assets/projectiles-native/airtrapballoon/graph.json",
+      "sha256": "8c4289e48210fef4010df743f2420ed665812338628b7af5c46f5099904a3e3c",
+      "bytes": 12520,
+      "projectiles": [
+        "AirTrapBalloon"
+      ]
+    },
+    "airtrapballoon-lvl3": {
+      "path": "assets/projectiles-native/airtrapballoon-lvl3/graph.json",
+      "sha256": "f6e9c2af71d7c032f11e39a3d74f9f97fe55b4f784826be06b37abd4b5254446",
+      "bytes": 12867,
+      "projectiles": [
+        "AirTrapBalloon_lvl3"
+      ]
+    },
+    "airtrapballoon-lvl5": {
+      "path": "assets/projectiles-native/airtrapballoon-lvl5/graph.json",
+      "sha256": "653861c2ef82163759edbb64649bb0f0144cc25d46616ec3458edb974da8ae23",
+      "bytes": 13224,
+      "projectiles": [
+        "AirTrapBalloon_lvl5"
+      ]
+    },
+    "airtrapballoon-lvl6": {
+      "path": "assets/projectiles-native/airtrapballoon-lvl6/graph.json",
+      "sha256": "8d188bbac4c04d9ebec0e2add9451cee212c81a6716105f9b168544d53e1a3f9",
+      "bytes": 13382,
+      "projectiles": [
+        "AirTrapBalloon_lvl6"
+      ]
+    },
+    "airtrapballoon-lvl8": {
+      "path": "assets/projectiles-native/airtrapballoon-lvl8/graph.json",
+      "sha256": "288be1662c39016044e22999f6514c889463118c08a27f93fa36be6d47e0967d",
+      "bytes": 23783,
+      "projectiles": [
+        "AirTrapBalloon_lvl8"
+      ]
+    },
+    "airtrapballoon-lvl11": {
+      "path": "assets/projectiles-native/airtrapballoon-lvl11/graph.json",
+      "sha256": "1bfca3f57196ce63810978f3f0757e3c7b598a5969f121423e1264972e280db3",
+      "bytes": 23919,
+      "projectiles": [
+        "AirTrapBalloon_lvl11"
+      ]
+    },
+    "airtrapballoon-lvl13": {
+      "path": "assets/projectiles-native/airtrapballoon-lvl13/graph.json",
+      "sha256": "0a1d3aab75a4eb59ad341a29b20f4c71de86e19effd00e91481967f2ca41a696",
+      "bytes": 19881,
+      "projectiles": [
+        "AirTrapBalloon_lvl13"
+      ]
+    },
+    "largedarkelixirballoon": {
+      "path": "assets/projectiles-native/largedarkelixirballoon/graph.json",
+      "sha256": "ffb2ba058dcfafe408839e5d50db0d13728dd8d3758247d12b12084cb0c43d6c",
+      "bytes": 15604,
+      "projectiles": [
+        "LargeDarkElixirBalloon"
+      ]
+    },
+    "largedarkelixirballoon-lvl3": {
+      "path": "assets/projectiles-native/largedarkelixirballoon-lvl3/graph.json",
+      "sha256": "d3ae7a2621a93eaf3a9f91441fd47737e625f0d702dc6f78818ca46f4bc71322",
+      "bytes": 15613,
+      "projectiles": [
+        "LargeDarkElixirBalloon_lvl3"
+      ]
+    },
+    "largedarkelixirballoon-lvl5": {
+      "path": "assets/projectiles-native/largedarkelixirballoon-lvl5/graph.json",
+      "sha256": "512fa559a125487d43e2ca436d6c2651b63396e568edbaa7dd48883219b6b9bd",
+      "bytes": 15382,
+      "projectiles": [
+        "LargeDarkElixirBalloon_lvl5"
+      ]
+    },
+    "largedarkelixirballoon-lvl7": {
+      "path": "assets/projectiles-native/largedarkelixirballoon-lvl7/graph.json",
+      "sha256": "4817ab5bb46fe9c87c3462c5ef737d6814f44773296046cb54b65dd1b83df3ca",
+      "bytes": 15614,
+      "projectiles": [
+        "LargeDarkElixirBalloon_lvl7"
+      ]
+    },
+    "spelltowerinvisibilityprojectile": {
+      "path": "assets/projectiles-native/spelltowerinvisibilityprojectile/graph.json",
+      "sha256": "848bb82417ca3da24b93f5a87c5c0a7e04bb29a2a831e142ac697c55fe83884b",
+      "bytes": 60348,
+      "projectiles": [
+        "SpellTowerInvisibilityProjectile"
+      ]
+    },
+    "spelltowerpoisonprojectile": {
+      "path": "assets/projectiles-native/spelltowerpoisonprojectile/graph.json",
+      "sha256": "cbfc6264005623cc2dbf792e24e393b4103ff960b93b2c23ca790d79f9b5942d",
+      "bytes": 62607,
+      "projectiles": [
+        "SpellTowerPoisonProjectile"
+      ]
+    },
+    "spelltowerrageprojectile": {
+      "path": "assets/projectiles-native/spelltowerrageprojectile/graph.json",
+      "sha256": "5bc61eba5031b54df45bb8513eb584d077e752229320a199b132e0bc40bb49f3",
+      "bytes": 61992,
+      "projectiles": [
+        "SpellTowerRageProjectile"
+      ]
+    },
+    "th17cannonprojectile": {
+      "path": "assets/projectiles-native/th17cannonprojectile/graph.json",
+      "sha256": "0068c35732e7e18d8a30e53a741e507f01e5849e418fb5627812bab6707de5f3",
+      "bytes": 8140,
+      "projectiles": [
+        "TH17CannonProjectile"
+      ]
+    },
+    "spelltowerearthquakeprojectile": {
+      "path": "assets/projectiles-native/spelltowerearthquakeprojectile/graph.json",
+      "sha256": "a3d6aa4f67aaeeb5e9cae4deabdefae5156338801053be596062ea414dfcba7c",
+      "bytes": 54097,
+      "projectiles": [
+        "SpellTowerEarthquakeProjectile"
+      ]
+    },
+    "frostmitejump": {
+      "path": "assets/projectiles-native/frostmitejump/graph.json",
+      "sha256": "a43740157b3ea650e757904b65f6322cb3128a95e12f3536fa234f41627ada2a",
+      "bytes": 8375,
+      "projectiles": [
+        "FrostmiteJump"
+      ]
+    },
+    "yetimitejump": {
+      "path": "assets/projectiles-native/yetimitejump/graph.json",
+      "sha256": "faeac2edf3a4d1aa785203927598c2b7dc7cc16f6071fb395e0504574594f6af",
+      "bytes": 7681,
+      "projectiles": [
+        "YetimiteJump"
+      ]
+    },
+    "yetimitejump2": {
+      "path": "assets/projectiles-native/yetimitejump2/graph.json",
+      "sha256": "622fbfbdb627c20ac7677fd33d89985076f59c036452647336ecd808b1d70650",
+      "bytes": 7603,
+      "projectiles": [
+        "YetimiteJump2"
+      ]
+    },
+    "yetimitejump3": {
+      "path": "assets/projectiles-native/yetimitejump3/graph.json",
+      "sha256": "d6c7b41d2712d1b71bd8ece5edcf93cbe38d6b4c48a82b044a7756940bc23fc8",
+      "bytes": 7354,
+      "projectiles": [
+        "YetimiteJump3"
+      ]
+    },
+    "yetimitejump4": {
+      "path": "assets/projectiles-native/yetimitejump4/graph.json",
+      "sha256": "4fb9f7c145be9afd45d47c74dbcf68236386ecb027eb03cf22f00391a93aafc0",
+      "bytes": 2430,
+      "projectiles": [
+        "YetimiteJump4"
+      ]
+    },
+    "yetimitejump6": {
+      "path": "assets/projectiles-native/yetimitejump6/graph.json",
+      "sha256": "b69d5e27530add431a9b8e8b318b4304f80a304fea30e1766f6a5db56ce5215d",
+      "bytes": 2418,
+      "projectiles": [
+        "YetimiteJump6"
+      ]
+    },
+    "yetimitejump7": {
+      "path": "assets/projectiles-native/yetimitejump7/graph.json",
+      "sha256": "4e451bbaaf59e3ca030a721e82ce196e6bf02e7e77e5ccae94d5e8b54460b4e6",
+      "bytes": 7371,
+      "projectiles": [
+        "YetimiteJump7"
+      ]
+    },
+    "yetimitejump8": {
+      "path": "assets/projectiles-native/yetimitejump8/graph.json",
+      "sha256": "062826147c874ef7a8707a417e7243874c95bdc07917f495770781e2d31659a3",
+      "bytes": 12377,
+      "projectiles": [
+        "YetimiteJump8"
+      ]
+    },
+    "gw-equipment-lavaloonprojectile1": {
+      "path": "assets/projectiles-native/gw-equipment-lavaloonprojectile1/graph.json",
+      "sha256": "144cdacdd4d696373aead84c0e9e08d63f23332f98531770e281a2d007839f63",
+      "bytes": 15823,
+      "projectiles": [
+        "GW_equipment_LavaloonProjectile1",
+        "GW_equipment_LavaloonProjectile2",
+        "GW_equipment_LavaloonProjectile3",
+        "GW_equipment_LavaloonProjectile4",
+        "GW_equipment_LavaloonProjectile5",
+        "GW_equipment_LavaloonProjectile6",
+        "GW_equipment_LavaloonProjectile7",
+        "GW_equipment_LavaloonProjectile8",
+        "GW_equipment_LavaloonProjectile9",
+        "GW_equipment_LavaloonProjectile10",
+        "GW_equipment_LavaloonProjectile11"
+      ]
+    },
+    "gw-lavaloon-pup-projectile": {
+      "path": "assets/projectiles-native/gw-lavaloon-pup-projectile/graph.json",
+      "sha256": "81f118b7a9b4ea468b9541876a520a52d6afcc5444d19c02a4f95d82681c3e2a",
+      "bytes": 7784,
+      "projectiles": [
+        "GW_Lavaloon Pup Projectile"
+      ]
+    },
+    "revengetowerprojectile2": {
+      "path": "assets/projectiles-native/revengetowerprojectile2/graph.json",
+      "sha256": "36783ebacddffd4286d9eb4e706dc8da90b770acd68a43d0350151fa5eabe96e",
+      "bytes": 36502,
+      "projectiles": [
+        "RevengeTowerProjectile2"
+      ]
+    },
+    "revengetowerprojectile3": {
+      "path": "assets/projectiles-native/revengetowerprojectile3/graph.json",
+      "sha256": "2a924c19d93da08a1d6c102791ac2387b7147686e35d38534b488e05d64b5267",
+      "bytes": 16658,
+      "projectiles": [
+        "RevengeTowerProjectile3"
+      ]
+    }
+  },
+  "projectiles": {
+    "Arrow_small": "arrow-small",
+    "Tower Arrow": "arrow-small",
+    "Goblin Townhall Arrow": "arrow-small",
+    "Arrow_small_fire": "arrow-small-fire",
+    "Tower Arrow Fire": "arrow-small-fire",
+    "Tower Arrow Fire2": "arrow-small-fire",
+    "Tower Arrow Fire2 LOW": "arrow-small-fire",
+    "Tower Arrow Fire3": "arrow-small-fire",
+    "Tower Arrow Fire3 LOW": "arrow-small-fire",
+    "super_archer_tower_projectile": "arrow-small-fire",
+    "Arrow_small_elixirFire": "arrow-small-elixirfire",
+    "Tower Arrow ElixFire": "arrow-small-elixirfire",
+    "Tower Arrow ElixFire LOW": "arrow-small-elixirfire",
+    "Arrow_small_darkElixirFire": "arrow-small-darkelixirfire",
+    "Tower Arrow DarkElixFire": "arrow-small-darkelixirfire",
+    "Tower Arrow DarkElixFire LOW": "arrow-small-darkelixirfire",
+    "Arrow_small_darkElixirFire2": "arrow-small-darkelixirfire2",
+    "ps_chr_WizardAttack_Projectile": "ps-chr-wizardattack-projectile",
+    "ps_chr_WizardAttack_TowerProjectile": "ps-chr-wizardattack-projectile",
+    "ps_chr_WizardAttack_Projectile_lvl2": "ps-chr-wizardattack-projectile-lvl2",
+    "ps_chr_WizardAttack_TowerProjectile_lvl2": "ps-chr-wizardattack-projectile-lvl2",
+    "ps_chr_WizardAttack_Projectile_lvl3": "ps-chr-wizardattack-projectile-lvl3",
+    "ps_chr_WizardAttack_TowerProjectile_lvl3": "ps-chr-wizardattack-projectile-lvl3",
+    "ps_chr_WizardAttack_Projectile_lvl4": "ps-chr-wizardattack-projectile-lvl4",
+    "ps_chr_WizardAttack_TowerProjectile_lvl4": "ps-chr-wizardattack-projectile-lvl4",
+    "HealerEnergy": "healerenergy",
+    "UnicornHealEnergy": "healerenergy",
+    "pet_sneezy_void_attack": "healerenergy",
+    "Air Blaster Ammo1": "healerenergy",
+    "TH18Heal": "healerenergy",
+    "babydragon_projectile": "babydragon-projectile",
+    "babydragon_projectile_lvl2": "babydragon-projectile-lvl2",
+    "babydragon_projectile_lvl3": "babydragon-projectile-lvl3",
+    "babydragon_projectile_lvl10": "babydragon-projectile-lvl10",
+    "DragonRiderProjectile": "dragonriderprojectile",
+    "DragonRiderProjectile 2": "dragonriderprojectile-2",
+    "DragonRiderProjectile 3": "dragonriderprojectile-3",
+    "ThrowerProjectile1": "throwerprojectile1",
+    "ThrowerProjectile2": "throwerprojectile2",
+    "ThrowerProjectile3": "throwerprojectile3",
+    "ThrowerProjectile4": "throwerprojectile4",
+    "MeteoriteGolemProjectile": "meteoritegolemprojectile",
+    "MeteoriteGolemProjectileLvl2": "meteoritegolemprojectilelvl2",
+    "MeteoriteGolemProjectileLvl3": "meteoritegolemprojectilelvl3",
+    "gargoyle_projectile": "gargoyle-projectile",
+    "Witch_projectile": "witch-projectile",
+    "hound_projectile": "hound-projectile",
+    "trollBoulder_lvl1": "trollboulder-lvl1",
+    "trollBoulder_lvl2": "trollboulder-lvl2",
+    "trollBoulder_lvl3": "trollboulder-lvl3",
+    "trollBoulder_lvl5": "trollboulder-lvl5",
+    "trollBoulder_lvl6": "trollboulder-lvl6",
+    "trollBoulder_lvl7": "trollboulder-lvl7",
+    "trollBoulder_lvl8": "trollboulder-lvl8",
+    "trollBoulder_lvl9": "trollboulder-lvl9",
+    "trollBoulder_lvl10": "trollboulder-lvl10",
+    "Headhunter_Card_lvl1": "headhunter-card-lvl1",
+    "Headhunter_Card_lvl2": "headhunter-card-lvl1",
+    "Headhunter_Card_lvl3": "headhunter-card-lvl1",
+    "Headhunter_Card_lvl4": "headhunter-card-lvl1",
+    "ApprenticeWarden_small": "apprenticewarden-small",
+    "ApprenticeWarden_small2": "apprenticewarden-small2",
+    "BattleDruidProjectile": "battledruidprojectile",
+    "magic_archer_projectile": "magic-archer-projectile",
+    "SuperDragonProjectile": "superdragonprojectile",
+    "super_gargoyle_projectile": "super-gargoyle-projectile",
+    "SuperBowlerProjectile": "superbowlerprojectile",
+    "Siege Zeppelin Projectile": "siege-zeppelin-projectile",
+    "RollingLog": "rollinglog",
+    "FireCatapultProjectile1": "firecatapultprojectile1",
+    "FireCatapultProjectile2": "firecatapultprojectile1",
+    "FireCatapultProjectile3": "firecatapultprojectile1",
+    "FireCatapultProjectile4": "firecatapultprojectile1",
+    "FireCatapultProjectile5": "firecatapultprojectile1",
+    "CommandTower Barrel1": "commandtower-barrel1",
+    "CommandTower Barrel2": "commandtower-barrel1",
+    "CommandTower Barrel3": "commandtower-barrel1",
+    "CommandTower Barrel4": "commandtower-barrel1",
+    "GuardianRangedProjectile": "guardianrangedprojectile",
+    "LoggerProjectile": "loggerprojectile",
+    "tinyhound_projectile": "tinyhound-projectile",
+    "FireSpiritJump1": "firespiritjump1",
+    "FireSpiritJump2": "firespiritjump1",
+    "FireSpiritJump3": "firespiritjump1",
+    "FireSpiritJump4": "firespiritjump1",
+    "FireSpiritJump5": "firespiritjump1",
+    "FireSpiritJump1_DEF": "firespiritjump1",
+    "FireSpiritJump2_DEF": "firespiritjump1",
+    "FireSpiritJump3_DEF": "firespiritjump1",
+    "FireSpiritJump4_DEF": "firespiritjump1",
+    "icy_tinyhound_projectile": "icy-tinyhound-projectile",
+    "ArcherQueen arrow lvl1": "archerqueen-arrow-lvl1",
+    "ArcherQueen arrow lvl2": "archerqueen-arrow-lvl2",
+    "ArcherQueen arrow lvl3": "archerqueen-arrow-lvl3",
+    "AmazonQueen_javelin": "amazonqueen-javelin",
+    "MinionHeroAttackProjectile": "minionheroattackprojectile",
+    "PhoenixProjectile": "phoenixprojectile",
+    "PhoenixResurrect": "phoenixresurrect",
+    "fireIguanaProto": "fireiguanaproto",
+    "Frosty_projectile": "frosty-projectile",
+    "Fennec_projectile": "fennec-projectile",
+    "pet_sneezy_projectile_ShockWave": "pet-sneezy-projectile-shockwave",
+    "CrowProjectile": "crowprojectile",
+    "super_gargoyle_projectile_big": "super-gargoyle-projectile-big",
+    "JumpingRiderProjectile1": "jumpingriderprojectile1",
+    "JumpingRiderProjectile2": "jumpingriderprojectile1",
+    "JumpingRiderProjectile3": "jumpingriderprojectile1",
+    "JumpingRiderProjectile4": "jumpingriderprojectile1",
+    "JumpingRiderProjectile5": "jumpingriderprojectile1",
+    "JumpingRiderProjectile6": "jumpingriderprojectile1",
+    "JumpingRiderProjectile7": "jumpingriderprojectile1",
+    "JumpingRiderProjectile8": "jumpingriderprojectile1",
+    "JumpingRiderProjectile9": "jumpingriderprojectile1",
+    "JumpingRiderProjectile10": "jumpingriderprojectile1",
+    "JumpingRiderProjectile11": "jumpingriderprojectile1",
+    "JumpingRiderProjectile12": "jumpingriderprojectile1",
+    "AmazonQueen_shield": "amazonqueen-shield",
+    "RocketSpearProjectile": "rocketspearprojectile",
+    "BarbarianKingGearFootball": "barbariankinggearfootball",
+    "QueenFrostyProjectile": "queenfrostyprojectile",
+    "ArcherQueenMonolithProjectile2": "archerqueenmonolithprojectile2",
+    "ArcherQueenMonolithProjectile1": "archerqueenmonolithprojectile1",
+    "ArcherQueenMonolithProjectile3": "archerqueenmonolithprojectile3",
+    "QueenPierceProjectile": "queenpierceprojectile",
+    "vfx_chr_gw_Fireball_lvl1": "vfx-chr-gw-fireball-lvl1",
+    "vfx_chr_gw_Fireball_lvl2": "vfx-chr-gw-fireball-lvl2",
+    "vfx_chr_gw_Fireball_lvl3": "vfx-chr-gw-fireball-lvl3",
+    "vfx_projectile_DarkOrb": "vfx-projectile-darkorb",
+    "KickedFootball": "kickedfootball",
+    "TurboStartProjectile": "turbostartprojectile",
+    "rc_gear_frostblast_Projectile": "rc-gear-frostblast-projectile",
+    "ddreversalcardprojectile": "ddreversalcardprojectile",
+    "Nail Ammo": "nail-ammo",
+    "Nail Ammo 2": "nail-ammo-2",
+    "Cannonball": "cannonball",
+    "Cannonball2": "cannonball2",
+    "Cannonball4": "cannonball4",
+    "Cannonball5": "cannonball5",
+    "Cannonball7": "cannonball7",
+    "Cannonball10": "cannonball10",
+    "Cannonball12": "cannonball12",
+    "Cannonball13": "cannonball13",
+    "Cannonball14": "cannonball14",
+    "Cannonball15": "cannonball15",
+    "Cannonball16": "cannonball16",
+    "Mortar Ammo1": "mortar-ammo1",
+    "Mortar Ammo2": "mortar-ammo2",
+    "Mortar Ammo3": "mortar-ammo3",
+    "Mortar Ammo4": "mortar-ammo4",
+    "Mortar Ammo5": "mortar-ammo5",
+    "Mortar Ammo6": "mortar-ammo6",
+    "Mortar Ammo8": "mortar-ammo8",
+    "Mortar Ammo9": "mortar-ammo9",
+    "Mortar Ammo10": "mortar-ammo10",
+    "Mortar Ammo11": "mortar-ammo11",
+    "Mortar Ammo lvl16": "mortar-ammo-lvl16",
+    "Mortar Ammo lvl17": "mortar-ammo-lvl17",
+    "Mortar Ammo lvl18": "mortar-ammo-lvl18",
+    "Firework": "firework",
+    "Firework2": "firework2",
+    "Firework3": "firework3",
+    "Firework4": "firework4",
+    "Firework5": "firework5",
+    "Firework6": "firework6",
+    "Firework7": "firework7",
+    "Firework8": "firework8",
+    "Firework9": "firework9",
+    "Firework15": "firework15",
+    "Firework16": "firework16",
+    "Bomb Tower Ammo1": "bomb-tower-ammo1",
+    "Bomb Tower Ammo2": "bomb-tower-ammo2",
+    "Bomb Tower Ammo3": "bomb-tower-ammo3",
+    "X-Bow Projectile 1": "x-bow-projectile-1",
+    "X-Bow Projectile 2": "x-bow-projectile-2",
+    "X-Bow Projectile 3": "x-bow-projectile-3",
+    "X-Bow Projectile 4": "x-bow-projectile-4",
+    "X-Bow Projectile 5": "x-bow-projectile-5",
+    "X-Bow Projectile 6": "x-bow-projectile-6",
+    "X-Bow Projectile 7": "x-bow-projectile-7",
+    "Artillery Ammo1": "artillery-ammo1",
+    "Artillery Ammo2": "artillery-ammo2",
+    "Artillery Ammo3": "artillery-ammo2",
+    "Artillery Ammo4": "artillery-ammo2",
+    "Artillery Ammo5": "artillery-ammo2",
+    "Artillery Ammo6": "artillery-ammo2",
+    "Artillery Ammo7": "artillery-ammo2",
+    "Scattershot Projectile 1": "scattershot-projectile-1",
+    "Scattershot Projectile 2": "scattershot-projectile-2",
+    "Scattershot Projectile 3": "scattershot-projectile-2",
+    "Scattershot Projectile 4": "scattershot-projectile-2",
+    "Scattershot Projectile 5": "scattershot-projectile-5",
+    "Scattershot Projectile 6": "scattershot-projectile-6",
+    "Scattershot Projectile 7": "scattershot-projectile-7",
+    "MonolithProjectileMin": "monolithprojectilemin",
+    "MonolithProjectileMed": "monolithprojectilemed",
+    "MonolithProjectileMax": "monolithprojectilemax",
+    "MergedCannonProjectile": "mergedcannonprojectile",
+    "MergedCannonProjectile lvl3": "mergedcannonprojectile-lvl3",
+    "MergedCannonProjectile lvl4": "mergedcannonprojectile-lvl4",
+    "merged_cat_archer_projectile_lvl1": "merged-cat-archer-projectile-lvl1",
+    "merged_cat_cannon_projectile_lvl1": "merged-cat-cannon-projectile-lvl1",
+    "merged_cat_archer_projectile_lvl2": "merged-cat-archer-projectile-lvl2",
+    "merged_cat_archer_projectile_lvl3": "merged-cat-archer-projectile-lvl3",
+    "GatlingGunAmmo": "gatlinggunammo",
+    "RevengeTowerProjectile1": "revengetowerprojectile1",
+    "AirTrapBalloon": "airtrapballoon",
+    "AirTrapBalloon_lvl3": "airtrapballoon-lvl3",
+    "AirTrapBalloon_lvl5": "airtrapballoon-lvl5",
+    "AirTrapBalloon_lvl6": "airtrapballoon-lvl6",
+    "AirTrapBalloon_lvl8": "airtrapballoon-lvl8",
+    "AirTrapBalloon_lvl11": "airtrapballoon-lvl11",
+    "AirTrapBalloon_lvl13": "airtrapballoon-lvl13",
+    "LargeDarkElixirBalloon": "largedarkelixirballoon",
+    "LargeDarkElixirBalloon_lvl3": "largedarkelixirballoon-lvl3",
+    "LargeDarkElixirBalloon_lvl5": "largedarkelixirballoon-lvl5",
+    "LargeDarkElixirBalloon_lvl7": "largedarkelixirballoon-lvl7",
+    "SpellTowerInvisibilityProjectile": "spelltowerinvisibilityprojectile",
+    "SpellTowerPoisonProjectile": "spelltowerpoisonprojectile",
+    "SpellTowerRageProjectile": "spelltowerrageprojectile",
+    "TH17CannonProjectile": "th17cannonprojectile",
+    "SpellTowerEarthquakeProjectile": "spelltowerearthquakeprojectile",
+    "FrostmiteJump": "frostmitejump",
+    "YetimiteJump": "yetimitejump",
+    "YetimiteJump2": "yetimitejump2",
+    "YetimiteJump3": "yetimitejump3",
+    "YetimiteJump4": "yetimitejump4",
+    "YetimiteJump6": "yetimitejump6",
+    "YetimiteJump7": "yetimitejump7",
+    "YetimiteJump8": "yetimitejump8",
+    "GW_equipment_LavaloonProjectile1": "gw-equipment-lavaloonprojectile1",
+    "GW_equipment_LavaloonProjectile2": "gw-equipment-lavaloonprojectile1",
+    "GW_equipment_LavaloonProjectile3": "gw-equipment-lavaloonprojectile1",
+    "GW_equipment_LavaloonProjectile4": "gw-equipment-lavaloonprojectile1",
+    "GW_equipment_LavaloonProjectile5": "gw-equipment-lavaloonprojectile1",
+    "GW_equipment_LavaloonProjectile6": "gw-equipment-lavaloonprojectile1",
+    "GW_equipment_LavaloonProjectile7": "gw-equipment-lavaloonprojectile1",
+    "GW_equipment_LavaloonProjectile8": "gw-equipment-lavaloonprojectile1",
+    "GW_equipment_LavaloonProjectile9": "gw-equipment-lavaloonprojectile1",
+    "GW_equipment_LavaloonProjectile10": "gw-equipment-lavaloonprojectile1",
+    "GW_equipment_LavaloonProjectile11": "gw-equipment-lavaloonprojectile1",
+    "GW_Lavaloon Pup Projectile": "gw-lavaloon-pup-projectile",
+    "RevengeTowerProjectile2": "revengetowerprojectile2",
+    "RevengeTowerProjectile3": "revengetowerprojectile3"
+  }
+}

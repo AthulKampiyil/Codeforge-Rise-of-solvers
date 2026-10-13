@@ -1,0 +1,542 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "sc/buildings.sc": "f73ec949fc070bc03175d6bb3af8b62d8f607094bf2b343c9846a499a35be0ed",
+    "sc/buildings_66.sctx": "c65a2f6e362edfd51d5fc634d5a6c30ec353bd936fa06fa8775b856aeb7baff0",
+    "logic/traps.csv": "757ca07de02b26b2071b52bb3cb495df2f0ae879731a859d3102ca3552dd528c"
+  },
+  "trap": {
+    "Name": "Halloweenbomb",
+    "GlobalID": "12000003",
+    "Level": "1",
+    "TID": "TID_TRAP_HALLOWEENBOMB",
+    "InfoTID": "TID_TRAP_HALLOWEENBOMB_INFO",
+    "SWF": "sc/buildings.sc",
+    "ExportName": "bomb_halloween_setup",
+    "ExportNameBuildAnim": "bomb_halloween_setup",
+    "ExportNameBroken": "bomb_halloween_setup",
+    "EffectBroken": "Trap broken",
+    "Damage": "25",
+    "DamageRadius": "300",
+    "TriggerRadius": "150",
+    "Width": "1",
+    "Height": "1",
+    "Effect": "Bomb Exposion",
+    "Effect2": "Bomb Exposion ground",
+    "DamageEffect": "Generic Hit",
+    "Passable": "TRUE",
+    "BuildResource": "Gold",
+    "BuildTimeD": "0",
+    "BuildTimeH": "0",
+    "BuildTimeM": "0",
+    "BuildCost": "1000",
+    "TownHallLevel": "1",
+    "EjectVictims": "FALSE",
+    "EjectHousingLimit": "0",
+    "ExportNameTriggered": "bomp_trap_halloween",
+    "ActionFrame": "48",
+    "PickUpEffect": "Generic Pick Up",
+    "PlacingEffect": "Generic Placing",
+    "AppearEffect": "Bomb Appear",
+    "AirTrigger": "FALSE",
+    "GroundTrigger": "TRUE",
+    "EnabledByCalendar": "TRUE"
+  },
+  "clips": {
+    "bomb_halloween_setup": {
+      "id": 24909,
+      "fps": 24,
+      "firstFrame": 0,
+      "count": 1,
+      "labels": []
+    },
+    "bomp_trap_halloween": {
+      "id": 24907,
+      "fps": 24,
+      "firstFrame": 1,
+      "count": 44,
+      "labels": [
+        {
+          "frame": 0,
+          "name": "Init"
+        },
+        {
+          "frame": 19,
+          "name": "Ignite"
+        }
+      ]
+    }
+  },
+  "textureIndices": [
+    66
+  ],
+  "atlas": {
+    "path": "assets/buildings/pumpkin-bomb-native.png",
+    "width": 130,
+    "pixelsPerNativeUnit": 2,
+    "height": 152,
+    "columns": 8,
+    "frames": 45,
+    "bounds": [
+      -36,
+      -28,
+      29,
+      48
+    ],
+    "rgbaSha256": "8e478c270080be474d0633d6e6919c723ed2d92b9056e4c4bc63e079a372f009"
+  },
+  "frames": [
+    {
+      "index": 0,
+      "rgbaSha256": "25c28e3be85ac93c45ef6827ef91355e915fdf5dbf41515ec17e4a2e32528326",
+      "alphaBounds": [
+        19,
+        32,
+        105,
+        128
+      ]
+    },
+    {
+      "index": 1,
+      "rgbaSha256": "eb0c9c0dfd91b725eb03805cb0ffc40e2ebff957e5da4ffec1718ecca322a278",
+      "alphaBounds": null
+    },
+    {
+      "index": 2,
+      "rgbaSha256": "b1abd678f60baa330f111635fe584a3b4c6c4b8a1ff12840391e70fb963452b5",
+      "alphaBounds": [
+        72,
+        93,
+        76,
+        97
+      ]
+    },
+    {
+      "index": 3,
+      "rgbaSha256": "f3f96bcab1b4478a32de16b6177592f3ab4dfa2cbd75b9d5cc82fe7fe8bbc6e0",
+      "alphaBounds": [
+        53,
+        66,
+        90,
+        105
+      ]
+    },
+    {
+      "index": 4,
+      "rgbaSha256": "bef8ab647d4c2e15413bc37f717fa995134b03068a6681068526c860a68c4309",
+      "alphaBounds": [
+        6,
+        39,
+        124,
+        145
+      ]
+    },
+    {
+      "index": 5,
+      "rgbaSha256": "de08e0194b80a9fee7aa0d70b1ee442aed5fd5ecd07cd2c7ae4b5b9d7b6db2a3",
+      "alphaBounds": [
+        6,
+        12,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 6,
+      "rgbaSha256": "e9b91be757dbf92fb9f7894789ee4ff1eb24a1b58958d9ef1babf2f24cc4e339",
+      "alphaBounds": [
+        6,
+        23,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 7,
+      "rgbaSha256": "b807ffa5769d9ca07485f56535b2c72f76288c20f14b87f769334a6ab7d1970d",
+      "alphaBounds": [
+        6,
+        34,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 8,
+      "rgbaSha256": "6980541543bbf0caf1addc3bdb34c7fb93da7d41d3f5b573f92eb87e1bc1c41b",
+      "alphaBounds": [
+        6,
+        45,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 9,
+      "rgbaSha256": "06b8fb64be40822d0a475c1354cfd137844c56bec4aae6e95237b94789e0d471",
+      "alphaBounds": [
+        6,
+        36,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 10,
+      "rgbaSha256": "195d42a7eb66cb6a0a228cfea971c383d265f96df1b77997a8532d73302197c9",
+      "alphaBounds": [
+        6,
+        26,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 11,
+      "rgbaSha256": "a91abeeea4cbf7bbee3575ea0161891f32061d9b6532e073c7f135e0575dbc9f",
+      "alphaBounds": [
+        6,
+        31,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 12,
+      "rgbaSha256": "882b6832c0a4ba22dd6439fbbbbb97336dda95bb164a92a195d768454ef21d1d",
+      "alphaBounds": [
+        6,
+        35,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 13,
+      "rgbaSha256": "882b6832c0a4ba22dd6439fbbbbb97336dda95bb164a92a195d768454ef21d1d",
+      "alphaBounds": [
+        6,
+        35,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 14,
+      "rgbaSha256": "8ba22ddd5c244617dbf8e6e88c06e080090ff2adcdec49ac27a4ed614cec978e",
+      "alphaBounds": [
+        6,
+        32,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 15,
+      "rgbaSha256": "8ba22ddd5c244617dbf8e6e88c06e080090ff2adcdec49ac27a4ed614cec978e",
+      "alphaBounds": [
+        6,
+        32,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 16,
+      "rgbaSha256": "8ba22ddd5c244617dbf8e6e88c06e080090ff2adcdec49ac27a4ed614cec978e",
+      "alphaBounds": [
+        6,
+        32,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 17,
+      "rgbaSha256": "8ba22ddd5c244617dbf8e6e88c06e080090ff2adcdec49ac27a4ed614cec978e",
+      "alphaBounds": [
+        6,
+        32,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 18,
+      "rgbaSha256": "8ba22ddd5c244617dbf8e6e88c06e080090ff2adcdec49ac27a4ed614cec978e",
+      "alphaBounds": [
+        6,
+        32,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 19,
+      "rgbaSha256": "8ba22ddd5c244617dbf8e6e88c06e080090ff2adcdec49ac27a4ed614cec978e",
+      "alphaBounds": [
+        6,
+        32,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 20,
+      "rgbaSha256": "60c35bfeac9656a1370bda0e547a5254b679c84bc411aaaa71ca611104685e65",
+      "alphaBounds": [
+        6,
+        19,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 21,
+      "rgbaSha256": "529ab32bc64524d0bea53302ee927e35d509b5d30550bc03bd5448623f49b0eb",
+      "alphaBounds": [
+        6,
+        17,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 22,
+      "rgbaSha256": "4d7c9986bd4a0cd27b44d285fedbc0a4c1d8311305282dc4b8dd96bcd3eb7b13",
+      "alphaBounds": [
+        6,
+        17,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 23,
+      "rgbaSha256": "4db008b6197ed2fd72f5cabaee8dcf4a1305abd9bef091cdf9c84aaf9906726a",
+      "alphaBounds": [
+        6,
+        17,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 24,
+      "rgbaSha256": "1cecfa2cda075de3d2083f8028835e38ae85bee7e781c1f672e1f13988c23ec9",
+      "alphaBounds": [
+        6,
+        16,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 25,
+      "rgbaSha256": "414eb9c3b3b5f70f28670995683791cdaebcca395222203b7a55780f23ca5b47",
+      "alphaBounds": [
+        6,
+        14,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 26,
+      "rgbaSha256": "d3440ce579eb2345d01b37adf5381158b56bcddea215156f6016d780e11fec31",
+      "alphaBounds": [
+        6,
+        15,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 27,
+      "rgbaSha256": "f396bd0d4986b96be0351768e4baf7320db25bae4709f9f260c9794ea48baf35",
+      "alphaBounds": [
+        6,
+        15,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 28,
+      "rgbaSha256": "60812cf7a012828ef4ca61cda8f893cb83a4e01f8ec1d7533087eb2f2ff0c20d",
+      "alphaBounds": [
+        6,
+        14,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 29,
+      "rgbaSha256": "2e364df7204f006a04cdc2f899ff2cf5ec26ef5de03bd1c3063bc61147a04228",
+      "alphaBounds": [
+        6,
+        15,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 30,
+      "rgbaSha256": "d7884cddf9b7a6672ad1daba444995c6680c5985d1f9e631792214ef5e783e2f",
+      "alphaBounds": [
+        6,
+        14,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 31,
+      "rgbaSha256": "d08f3b6c4793183086ec4012e33e2824c491b8a9e5e9e7dd054342a8c13db34e",
+      "alphaBounds": [
+        6,
+        16,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 32,
+      "rgbaSha256": "9e547c9013130639eb9d3dad9dce90fc92ff73be704aa9edee45bede181aa171",
+      "alphaBounds": [
+        6,
+        21,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 33,
+      "rgbaSha256": "298a9085af53f61d0855dc33b520f7a1c7f446504a0e976007b5143b76039b5f",
+      "alphaBounds": [
+        6,
+        29,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 34,
+      "rgbaSha256": "5cbca8771ba270c2f7ca7076a6d5f10d0255804361632e4644aad942af263818",
+      "alphaBounds": [
+        6,
+        27,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 35,
+      "rgbaSha256": "4f2a34d07d881a88c871b095491b3025ce240de88b35f821e7f2e0401097e83b",
+      "alphaBounds": [
+        6,
+        28,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 36,
+      "rgbaSha256": "7c3a0aa93c4958974644715a39c6967ba4949b86bce1a5592064834c520981aa",
+      "alphaBounds": [
+        6,
+        29,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 37,
+      "rgbaSha256": "8eca56ad1228d867119374b60afceeb3e2039d74be24c53d5f7d2da0cc0e0783",
+      "alphaBounds": [
+        6,
+        28,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 38,
+      "rgbaSha256": "0d5a2b23ebecf5ceb5c31acccabac67271c86bc9bfebd24df5757782964db031",
+      "alphaBounds": [
+        6,
+        27,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 39,
+      "rgbaSha256": "2ee6a5de0a88380cc6cffe79ec8f54682f5e9ca6dfd4c438cf90a6aea03ad72e",
+      "alphaBounds": [
+        6,
+        28,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 40,
+      "rgbaSha256": "44de4524f2c7ff12ab2bc33e1de6f324bbfea5e1ace76dd77e1ae8edbf698bc4",
+      "alphaBounds": [
+        6,
+        28,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 41,
+      "rgbaSha256": "7f232cbeaaa3900e384a8936b0c9e82353a68091047147fb197b608099546fd5",
+      "alphaBounds": [
+        6,
+        28,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 42,
+      "rgbaSha256": "3d814c8383969d7d63139a0ff208de4aba8688ac9958ab06f1dbdd5e75d9a891",
+      "alphaBounds": [
+        6,
+        29,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 43,
+      "rgbaSha256": "de98834d3ae9afb02d1ba5129dc679223651594587b637bd04c9a94de1c3d886",
+      "alphaBounds": [
+        6,
+        28,
+        125,
+        147
+      ]
+    },
+    {
+      "index": 44,
+      "rgbaSha256": "28176449abec8636b46e736f156555d546a9531d8ad30b63a299e3389497713e",
+      "alphaBounds": [
+        6,
+        29,
+        125,
+        147
+      ]
+    }
+  ],
+  "reconstruction": {
+    "sampling": "premultiplied bilinear at pixel centers",
+    "nestedTimelines": "elapsed frames since continuous placement; loop subclips",
+    "nativePlaybackVerified": false
+  }
+}

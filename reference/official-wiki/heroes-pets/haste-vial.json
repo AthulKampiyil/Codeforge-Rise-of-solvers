@@ -1,0 +1,301 @@
+{
+ "title": "Haste Vial",
+ "url": "https://clashofclans.fandom.com/wiki/Haste_Vial",
+ "revid": 621283,
+ "retrieved": "2026-09-15",
+ "clientName": "Haste Vial",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Royal Champion",
+ "summary": "Champion Common active item (Blacksmith 8): 7 → 10 s of +60% → +100% attack speed and a big movement boost; passive DPS and attack speed.",
+ "constants": {
+  "wiki": {
+   "User": "Royal Champion",
+   "Ability Type": "Active",
+   "Rarity": "Common",
+   "Unlock Requirement": "Blacksmith level 8"
+  },
+  "client": {
+   "Rarity": "COMMON",
+   "AllowedCharacters": "Royal Champion;",
+   "MainAbilities": "RoyalChampionHaste",
+   "levelRows": 18,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "abilityDurationSeconds": {
+   "wikiHeader": "Ability Attributes / Ability Duration",
+   "unit": "seconds"
+  },
+  "speedIncrease": {
+   "wikiHeader": "Ability Attributes / Speed Increase",
+   "unit": "wiki movement-speed units (client Speed / 12.5; displayed value truncated)"
+  },
+  "abilityAttackSpeedIncreasePercent": {
+   "wikiHeader": "Ability Attributes / Attack Speed Increase",
+   "unit": "percent"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boosts / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "attackSpeedIncreasePercent": {
+   "wikiHeader": "Hero Boosts / Attack Speed Increase",
+   "unit": "percent"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "abilityDurationSeconds": 7,
+   "speedIncrease": 18,
+   "abilityAttackSpeedIncreasePercent": 60,
+   "damagePerSecondIncrease": 20,
+   "attackSpeedIncreasePercent": 5,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 2,
+   "abilityDurationSeconds": 7,
+   "speedIncrease": 18,
+   "abilityAttackSpeedIncreasePercent": 60,
+   "damagePerSecondIncrease": 24,
+   "attackSpeedIncreasePercent": 6,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 3,
+   "abilityDurationSeconds": 7.5,
+   "speedIncrease": 22.3,
+   "abilityAttackSpeedIncreasePercent": 60,
+   "damagePerSecondIncrease": 28,
+   "attackSpeedIncreasePercent": 6,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 4,
+   "abilityDurationSeconds": 7.5,
+   "speedIncrease": 22.3,
+   "abilityAttackSpeedIncreasePercent": 60,
+   "damagePerSecondIncrease": 32,
+   "attackSpeedIncreasePercent": 7,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 5,
+   "abilityDurationSeconds": 7.5,
+   "speedIncrease": 22.3,
+   "abilityAttackSpeedIncreasePercent": 60,
+   "damagePerSecondIncrease": 36,
+   "attackSpeedIncreasePercent": 8,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 6,
+   "abilityDurationSeconds": 8,
+   "speedIncrease": 25.5,
+   "abilityAttackSpeedIncreasePercent": 80,
+   "damagePerSecondIncrease": 40,
+   "attackSpeedIncreasePercent": 8,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 7,
+   "abilityDurationSeconds": 8,
+   "speedIncrease": 25.5,
+   "abilityAttackSpeedIncreasePercent": 80,
+   "damagePerSecondIncrease": 44,
+   "attackSpeedIncreasePercent": 9,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 8,
+   "abilityDurationSeconds": 8,
+   "speedIncrease": 25.5,
+   "abilityAttackSpeedIncreasePercent": 80,
+   "damagePerSecondIncrease": 48,
+   "attackSpeedIncreasePercent": 10,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 9,
+   "abilityDurationSeconds": 8.5,
+   "speedIncrease": 28.7,
+   "abilityAttackSpeedIncreasePercent": 80,
+   "damagePerSecondIncrease": 52,
+   "attackSpeedIncreasePercent": 10,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 10,
+   "abilityDurationSeconds": 8.5,
+   "speedIncrease": 28.7,
+   "abilityAttackSpeedIncreasePercent": 80,
+   "damagePerSecondIncrease": 56,
+   "attackSpeedIncreasePercent": 11,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 11,
+   "abilityDurationSeconds": 8.5,
+   "speedIncrease": 28.7,
+   "abilityAttackSpeedIncreasePercent": 80,
+   "damagePerSecondIncrease": 60,
+   "attackSpeedIncreasePercent": 12,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 12,
+   "abilityDurationSeconds": 9,
+   "speedIncrease": 32,
+   "abilityAttackSpeedIncreasePercent": 80,
+   "damagePerSecondIncrease": 64,
+   "attackSpeedIncreasePercent": 12,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 13,
+   "abilityDurationSeconds": 9,
+   "speedIncrease": 32,
+   "abilityAttackSpeedIncreasePercent": 80,
+   "damagePerSecondIncrease": 68,
+   "attackSpeedIncreasePercent": 13,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 14,
+   "abilityDurationSeconds": 9,
+   "speedIncrease": 32,
+   "abilityAttackSpeedIncreasePercent": 80,
+   "damagePerSecondIncrease": 72,
+   "attackSpeedIncreasePercent": 14,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 15,
+   "abilityDurationSeconds": 9.5,
+   "speedIncrease": 35.1,
+   "abilityAttackSpeedIncreasePercent": 100,
+   "damagePerSecondIncrease": 76,
+   "attackSpeedIncreasePercent": 14,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 16,
+   "abilityDurationSeconds": 9.5,
+   "speedIncrease": 35.1,
+   "abilityAttackSpeedIncreasePercent": 100,
+   "damagePerSecondIncrease": 80,
+   "attackSpeedIncreasePercent": 15,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 17,
+   "abilityDurationSeconds": 9.5,
+   "speedIncrease": 35.1,
+   "abilityAttackSpeedIncreasePercent": 100,
+   "damagePerSecondIncrease": 84,
+   "attackSpeedIncreasePercent": 16,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 18,
+   "abilityDurationSeconds": 10,
+   "speedIncrease": 38.3,
+   "abilityAttackSpeedIncreasePercent": 100,
+   "damagePerSecondIncrease": 88,
+   "attackSpeedIncreasePercent": 16,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 8
+  }
+ ],
+ "subpages": [],
+ "mismatches": [],
+ "clientColumns": [
+  "MainAbilities:special_abilities[RoyalChampionHaste].DeactivateAfterTime",
+  "MainAbilities:special_abilities[RoyalChampionHaste].SpeedBoost",
+  "character_items.AttackSpeedPercentage",
+  "character_items.DPS",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

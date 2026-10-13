@@ -1,0 +1,333 @@
+{
+ "title": "Archer",
+ "page": "Archer",
+ "url": "https://clashofclans.fandom.com/wiki/Archer",
+ "revid": 624208,
+ "retrieved": "2026-09-15",
+ "clientName": "Archer",
+ "clientVersion": "18.400.21",
+ "category": "elixir-troop",
+ "constants": {
+  "housingSpace": 1,
+  "movementSpeedWiki": 24,
+  "internalSpeed": 300,
+  "tilesPerSecond": 3,
+  "attackRangeTiles": 3.5,
+  "attackRangeTilesClient": 3.5,
+  "attackSeconds": 1,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Ranged (Ground & Air)",
+  "targets": "ground+air",
+  "favoriteTarget": "None",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": false,
+  "unlock": {
+   "building": "Barracks",
+   "level": 2,
+   "townHall": 2
+  },
+  "triggersTraps": true
+ },
+ "client": {
+  "clientName": "Archer",
+  "housingSpace": 1,
+  "internalSpeed": 300,
+  "movementSpeedInGameExact": 24,
+  "movementSpeedInGameRounded": 24,
+  "tilesPerSecond": 3,
+  "attackRangeTiles": 3.5,
+  "attackSeconds": 1,
+  "targets": "ground+air",
+  "flying": false,
+  "jumpsWalls": false,
+  "favoriteTarget": "None",
+  "productionBuilding": "Barracks",
+  "barracksLevel": 2,
+  "unlockTownHall": 2,
+  "triggersTraps": true,
+  "movementOffsetSpeed": 0
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 8,
+   "damagePerHit": 8,
+   "hitpoints": 22,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 10,
+   "damagePerHit": 10,
+   "hitpoints": 26,
+   "researchCost": 20000,
+   "researchSeconds": 3600,
+   "researchTimeText": "1h",
+   "laboratoryLevel": 1
+  },
+  {
+   "level": 3,
+   "dps": 13,
+   "damagePerHit": 13,
+   "hitpoints": 29,
+   "researchCost": 80000,
+   "researchSeconds": 7200,
+   "researchTimeText": "2h",
+   "laboratoryLevel": 3
+  },
+  {
+   "level": 4,
+   "dps": 16,
+   "damagePerHit": 16,
+   "hitpoints": 33,
+   "researchCost": 200000,
+   "researchSeconds": 10800,
+   "researchTimeText": "3h",
+   "laboratoryLevel": 5
+  },
+  {
+   "level": 5,
+   "dps": 20,
+   "damagePerHit": 20,
+   "hitpoints": 40,
+   "researchCost": 500000,
+   "researchSeconds": 28800,
+   "researchTimeText": "8h",
+   "laboratoryLevel": 6
+  },
+  {
+   "level": 6,
+   "dps": 22,
+   "damagePerHit": 22,
+   "hitpoints": 44,
+   "researchCost": 1000000,
+   "researchSeconds": 43200,
+   "researchTimeText": "12h",
+   "laboratoryLevel": 7
+  },
+  {
+   "level": 7,
+   "dps": 25,
+   "damagePerHit": 25,
+   "hitpoints": 48,
+   "researchCost": 1500000,
+   "researchSeconds": 86400,
+   "researchTimeText": "1d",
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 8,
+   "dps": 28,
+   "damagePerHit": 28,
+   "hitpoints": 52,
+   "researchCost": 2300000,
+   "researchSeconds": 129600,
+   "researchTimeText": "1d 12h",
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 9,
+   "dps": 31,
+   "damagePerHit": 31,
+   "hitpoints": 56,
+   "researchCost": 3000000,
+   "researchSeconds": 172800,
+   "researchTimeText": "2d",
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 10,
+   "dps": 34,
+   "damagePerHit": 34,
+   "hitpoints": 60,
+   "researchCost": 4500000,
+   "researchSeconds": 259200,
+   "researchTimeText": "3d",
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 11,
+   "dps": 37,
+   "damagePerHit": 37,
+   "hitpoints": 64,
+   "researchCost": 6500000,
+   "researchSeconds": 345600,
+   "researchTimeText": "4d",
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 12,
+   "dps": 40,
+   "damagePerHit": 40,
+   "hitpoints": 68,
+   "researchCost": 9000000,
+   "researchSeconds": 388800,
+   "researchTimeText": "4d 12h",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 13,
+   "dps": 43,
+   "damagePerHit": 43,
+   "hitpoints": 72,
+   "researchCost": 14000000,
+   "researchSeconds": 777600,
+   "researchTimeText": "9d",
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 14,
+   "dps": 46,
+   "damagePerHit": 46,
+   "hitpoints": 76,
+   "researchCost": 25000000,
+   "researchSeconds": 1166400,
+   "researchTimeText": "13d 12h",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 22,
+   "dps": 8,
+   "damagePerHit": 8
+  },
+  {
+   "level": 2,
+   "hitpoints": 26,
+   "dps": 10,
+   "damagePerHit": 10,
+   "researchCost": 20000,
+   "researchSeconds": 3600,
+   "laboratoryLevel": 1
+  },
+  {
+   "level": 3,
+   "hitpoints": 29,
+   "dps": 13,
+   "damagePerHit": 13,
+   "researchCost": 80000,
+   "researchSeconds": 7200,
+   "laboratoryLevel": 3
+  },
+  {
+   "level": 4,
+   "hitpoints": 33,
+   "dps": 16,
+   "damagePerHit": 16,
+   "researchCost": 200000,
+   "researchSeconds": 10800,
+   "laboratoryLevel": 5
+  },
+  {
+   "level": 5,
+   "hitpoints": 40,
+   "dps": 20,
+   "damagePerHit": 20,
+   "researchCost": 500000,
+   "researchSeconds": 28800,
+   "laboratoryLevel": 6
+  },
+  {
+   "level": 6,
+   "hitpoints": 44,
+   "dps": 22,
+   "damagePerHit": 22,
+   "researchCost": 1000000,
+   "researchSeconds": 43200,
+   "laboratoryLevel": 7
+  },
+  {
+   "level": 7,
+   "hitpoints": 48,
+   "dps": 25,
+   "damagePerHit": 25,
+   "researchCost": 1500000,
+   "researchSeconds": 86400,
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 8,
+   "hitpoints": 52,
+   "dps": 28,
+   "damagePerHit": 28,
+   "researchCost": 2300000,
+   "researchSeconds": 129600,
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 9,
+   "hitpoints": 56,
+   "dps": 31,
+   "damagePerHit": 31,
+   "researchCost": 3000000,
+   "researchSeconds": 172800,
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 10,
+   "hitpoints": 60,
+   "dps": 34,
+   "damagePerHit": 34,
+   "researchCost": 4500000,
+   "researchSeconds": 259200,
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 11,
+   "hitpoints": 64,
+   "dps": 37,
+   "damagePerHit": 37,
+   "researchCost": 6500000,
+   "researchSeconds": 345600,
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 12,
+   "hitpoints": 68,
+   "dps": 40,
+   "damagePerHit": 40,
+   "researchCost": 9000000,
+   "researchSeconds": 388800,
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 13,
+   "hitpoints": 72,
+   "dps": 43,
+   "damagePerHit": 43,
+   "researchCost": 14000000,
+   "researchSeconds": 777600,
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 14,
+   "hitpoints": 76,
+   "dps": 46,
+   "damagePerHit": 46,
+   "researchCost": 25000000,
+   "researchSeconds": 1166400,
+   "laboratoryLevel": 16
+  }
+ ],
+ "superTroopBoost": {
+  "super troop": "Super Archer",
+  "boost cost": "25,000",
+  "archer level required": "8"
+ },
+ "comparison": {
+  "checked": 89,
+  "matched": 89
+ },
+ "mismatches": [],
+ "ambiguities": []
+}

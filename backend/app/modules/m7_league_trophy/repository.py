@@ -1,44 +1,271 @@
 """League & Trophy Progression (REQ-7.x) — data access layer.
 
-Owns: all direct DB queries for this module's tables.
+NOTE: SADD §7.2 / App. D: TrophyLedger is append-only and the ONLY write path
+to mutate league_profiles.trophy_count.
 """
-from typing import Optional
+from datetime import datetime, timezone
+from typing import Any, Dict, List, Optional
+from uuid import UUID
+
+import sqlalchemy as sa
+from sqlalchemy import func
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
-from app.modules.m7_league_trophy.models import Trophy, LeagueTier
+
+from app.modules.m1_auth.models import User
+from app.modules.m7_league_trophy.models import LeagueProfile, LeagueTier, TrophyEventType, TrophyLedger
 
 
-class TrophyRepository:
-    """Data access layer for trophy records."""
-
+class LeagueProfileRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    def get_trophy(self, user_id: str) -> Optional[Trophy]:
-        """Fetch user's trophy record."""
-        return self.db.query(Trophy).filter(Trophy.user_id == user_id).first()
+    def get(self, user_id: str) -> Optional[LeagueProfile]:
+        return self.db.query(LeagueProfile).filter(LeagueProfile.user_id == user_id).first()
 
-    def create_trophy(self, user_id: str, tier: LeagueTier = LeagueTier.bronze) -> Trophy:
-        """Create a new trophy record."""
-        trophy = Trophy(user_id=user_id, tier=tier)
-        self.db.add(trophy)
-        self.db.commit()
-        return trophy
+    def lock_many(self, user_ids: List[str]) -> List[LeagueProfile]:
+        """Lock and refresh existing profile rows in deterministic user-ID order."""
+        ids = sorted({str(user_id) for user_id in user_ids})
+        if not ids:
+            return []
+        return (
+            self.db.query(LeagueProfile)
+            .filter(LeagueProfile.user_id.in_(ids))
+            .order_by(LeagueProfile.user_id.asc())
+            .with_for_update()
+            .populate_existing()
+            .all()
+        )
 
-    def update_trophy(self, user_id: str, points: int, trophy_count: int = None) -> Optional[Trophy]:
-        """Update trophy points and count."""
-        trophy = self.get_trophy(user_id)
-        if trophy:
-            trophy.points = points
-            if trophy_count is not None:
-                trophy.trophy_count = trophy_count
+    def get_all_profiles(self) -> List[LeagueProfile]:
+        """Retrieve all league profiles for reconciliation."""
+        return self.db.query(LeagueProfile).order_by(LeagueProfile.user_id.asc()).all()
+
+    def create(
+        self,
+        user_id: str,
+        trophy_count: int = 300,
+        tier: LeagueTier = LeagueTier.bronze,
+        commit: bool = True,
+    ) -> LeagueProfile:
+        profile = LeagueProfile(
+            user_id=user_id,
+            trophy_count=trophy_count,
+            league_tier=tier,
+            updated_at=datetime.now(timezone.utc),
+        )
+        self.db.add(profile)
+        if commit:
             self.db.commit()
-        return trophy
+        else:
+            self.db.flush()
+        self.db.refresh(profile)
+        return profile
 
-    def update_tier(self, user_id: str, tier: LeagueTier):
-        """Update user's league tier."""
-        trophy = self.get_trophy(user_id)
-        if trophy:
-            trophy.tier = tier
+    def get_or_create(
+        self,
+        user_id: str,
+        starting_trophies: int = 300,
+        starting_tier: LeagueTier = LeagueTier.bronze,
+        commit: bool = True,
+    ) -> LeagueProfile:
+        profile = self.get(user_id)
+        if not profile:
+            try:
+                # Isolate a concurrent first-use insert conflict without poisoning
+                # the caller's surrounding transaction.
+                with self.db.begin_nested():
+                    profile = self.create(
+                        user_id,
+                        trophy_count=starting_trophies,
+                        tier=starting_tier,
+                        commit=False,
+                    )
+                if commit:
+                    self.db.commit()
+            except IntegrityError:
+                profile = (
+                    self.db.query(LeagueProfile)
+                    .filter(LeagueProfile.user_id == user_id)
+                    .populate_existing()
+                    .one()
+                )
+        return profile
+
+    def atomic_update_trophy_count(self, user_id: str, delta: int, commit: bool = True) -> int:
+        """
+        SADD §6.5.1 atomic single-statement increment preventing lost updates.
+        Trophy count cannot drop below 0.
+        """
+        profile = (
+            self.db.query(LeagueProfile)
+            .filter(LeagueProfile.user_id == user_id)
+            .with_for_update()
+            .populate_existing()
+            .first()
+        )
+        if not profile:
+            profile = self.get_or_create(user_id, commit=commit)
+        new_balance = max(0, profile.trophy_count + delta)
+        profile.trophy_count = new_balance
+        profile.updated_at = datetime.now(timezone.utc)
+        if commit:
             self.db.commit()
-        return trophy
+        else:
+            self.db.flush()
+        self.db.refresh(profile)
+        return new_balance
 
+    def set_tier(self, user_id: str, tier: LeagueTier, commit: bool = True) -> Optional[LeagueProfile]:
+        """Idempotent tier update."""
+        profile = self.get(user_id)
+        if profile and profile.league_tier != tier:
+            profile.league_tier = tier
+            profile.updated_at = datetime.now(timezone.utc)
+            if commit:
+                self.db.commit()
+            else:
+                self.db.flush()
+            self.db.refresh(profile)
+        return profile
+
+    def get_all_for_reconcile(self, limit: int = 200) -> List[LeagueProfile]:
+        """
+        Worker reconciliation query: a bounded page of profiles to re-check
+        against the current league thresholds.
+        """
+        return (
+            self.db.query(LeagueProfile)
+            .order_by(LeagueProfile.updated_at.asc(), LeagueProfile.user_id.asc())
+            .limit(limit)
+            .all()
+        )
+
+    def get_profiles_with_ledger_but_no_profile(self, limit: int = 200) -> List[str]:
+        """
+        Worker reconciliation query: users with trophy ledger entries but
+        no league_profiles row (drift from a rolled-back migration or an
+        interrupted write).
+        """
+        rows = (
+            self.db.query(TrophyLedger.user_id)
+            .outerjoin(LeagueProfile, LeagueProfile.user_id == TrophyLedger.user_id)
+            .filter(LeagueProfile.user_id.is_(None))
+            .distinct()
+            .limit(limit)
+            .all()
+        )
+        return [str(row[0]) for row in rows]
+
+    def get_user_rank(self, user_id: str) -> int:
+        """Compute 1-based rank based on trophy count."""
+        profile = self.get(user_id)
+        if not profile:
+            return 1
+        higher_count = (
+            self.db.query(func.count(LeagueProfile.user_id))
+            .filter(LeagueProfile.trophy_count > profile.trophy_count)
+            .scalar()
+            or 0
+        )
+        return higher_count + 1
+
+    def get_leaderboard(
+        self,
+        scope: str = "global",
+        guild_id: Optional[str] = None,
+        limit: int = 50,
+        offset: int = 0,
+    ) -> List[Dict[str, Any]]:
+        """
+        Retrieve global or guild leaderboard entries (REQ-7.5).
+        """
+        query = (
+            self.db.query(
+                User.id.label("user_id"),
+                User.username.label("username"),
+                func.coalesce(LeagueProfile.trophy_count, 300).label("trophy_count"),
+                func.coalesce(LeagueProfile.league_tier, LeagueTier.bronze).label("league_tier"),
+            )
+            .outerjoin(LeagueProfile, User.id == LeagueProfile.user_id)
+            .filter(User.is_active == True, User.is_suspended == False)  # noqa: E712
+        )
+
+        # Never reinterpret an invalid guild-scoped request as global.
+        if scope == "guild":
+            if guild_id is None:
+                raise ValueError("guild_id is required for guild leaderboard")
+            from app.modules.m5_guild_territory.models import GuildMembership
+
+            query = query.join(GuildMembership, User.id == GuildMembership.user_id).filter(
+                GuildMembership.guild_id == guild_id
+            )
+
+        rows = (
+            query.order_by(
+                sa.desc("trophy_count"),
+                User.username.asc(),
+            )
+            .offset(offset)
+            .limit(limit)
+            .all()
+        )
+
+        leaderboard = []
+        for idx, row in enumerate(rows):
+            tier_val = (
+                row.league_tier.value
+                if hasattr(row.league_tier, "value")
+                else str(row.league_tier)
+            )
+            leaderboard.append(
+                {
+                    "user_id": str(row.user_id),
+                    "username": row.username,
+                    "trophy_count": int(row.trophy_count),
+                    "league_tier": tier_val,
+                    "rank": offset + idx + 1,
+                }
+            )
+
+        return leaderboard
+
+
+class TrophyLedgerRepository:
+    def __init__(self, db: Session):
+        self.db = db
+
+    def append(
+        self,
+        user_id: str,
+        event_type: TrophyEventType,
+        delta: int,
+        resulting_balance: Optional[int] = None,
+        source_ref_id: Optional[Any] = None,
+        commit: bool = True,
+    ) -> TrophyLedger:
+        """Append an auditable mutation row to trophy_ledger (SADD App. D)."""
+        entry = TrophyLedger(
+            user_id=user_id,
+            event_type=event_type,
+            delta=delta,
+            resulting_balance=resulting_balance,
+            source_ref_id=source_ref_id,
+            created_at=datetime.now(timezone.utc),
+        )
+        self.db.add(entry)
+        if commit:
+            self.db.commit()
+        else:
+            self.db.flush()
+        self.db.refresh(entry)
+        return entry
+
+    def get_by_user(self, user_id: str, limit: int = 50) -> List[TrophyLedger]:
+        return (
+            self.db.query(TrophyLedger)
+            .filter(TrophyLedger.user_id == user_id)
+            .order_by(TrophyLedger.created_at.desc())
+            .limit(limit)
+            .all()
+        )

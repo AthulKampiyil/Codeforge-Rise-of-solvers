@@ -1,0 +1,27 @@
+{
+ "title": "Town Hall/Giga Inferno (TH13)",
+ "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Giga_Inferno_%28TH13%29",
+ "revid": 620072,
+ "retrieved": "2026-09-15",
+ "category": "townhall-weapon",
+ "clientName": "Townhall13",
+ "clientTable": "weapons.csv",
+ "levels": [],
+ "constants": {
+  "townHall": 13,
+  "range": 10,
+  "attackSeconds": 0.128,
+  "targets": "ground & air",
+  "numberOfTargets": 4,
+  "dpsPerTarget": 220,
+  "damagePerHit": 28.16,
+  "hitpoints": 8200,
+  "deathDamage": 700,
+  "deathDamageRadiusTiles": 4,
+  "activation": "damage taken or 51% destruction",
+  "speedDecrease": 50,
+  "attackRateDecrease": 50,
+  "slowdownTimeWhenDestroyed": 8
+ },
+ "mismatches": []
+}

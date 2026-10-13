@@ -1,0 +1,284 @@
+{
+ "title": "Hero Bell",
+ "url": "https://clashofclans.fandom.com/wiki/Hero_Bell",
+ "revid": 622571,
+ "retrieved": "2026-09-15",
+ "clientName": "HeroBooster",
+ "clientTable": "seasonal_defense_archetypes",
+ "category": "building",
+ "summary": "Crafted (seasonal) defense whose 50-tile aura raises defending heroes' damage and hitpoints until it is destroyed; three 10-level modules.",
+ "constants": {
+  "wiki": {},
+  "client": {
+   "archetype": "seasonal_defense_archetypes[HeroBooster]",
+   "TotalModuleLevelThresholds": "9;18;27",
+   "auraRadius": 5000,
+   "ActiveAfterTime": 2200,
+   "ImmunityGuardians": true,
+   "ImmunityOtherCharacters": true,
+   "BoostTimeMS": 1000
+  },
+  "wikiTables": [
+   {
+    "section": "Common Statistics",
+    "headers": [
+     "Range"
+    ],
+    "rows": [
+     {
+      "rangeTiles": 50
+     }
+    ]
+   },
+   {
+    "section": "Module 1: Hitpoints",
+    "headers": [
+     "Level",
+     "Hitpoints",
+     "Cost",
+     "Build Time",
+     "Experience Gained"
+    ],
+    "rows": [
+     {
+      "level": 1,
+      "hitpoints": 400,
+      "cost": null,
+      "buildTimeSeconds": null,
+      "experienceGained": null
+     },
+     {
+      "level": 2,
+      "hitpoints": 900,
+      "cost": 4000000,
+      "buildTimeSeconds": 86400,
+      "experienceGained": 293
+     },
+     {
+      "level": 3,
+      "hitpoints": 1400,
+      "cost": 5000000,
+      "buildTimeSeconds": 108000,
+      "experienceGained": 328
+     },
+     {
+      "level": 4,
+      "hitpoints": 1900,
+      "cost": 6000000,
+      "buildTimeSeconds": 129600,
+      "experienceGained": 360
+     },
+     {
+      "level": 5,
+      "hitpoints": 2400,
+      "cost": 7000000,
+      "buildTimeSeconds": 151200,
+      "experienceGained": 388
+     },
+     {
+      "level": 6,
+      "hitpoints": 2900,
+      "cost": 8000000,
+      "buildTimeSeconds": 172800,
+      "experienceGained": 415
+     },
+     {
+      "level": 7,
+      "hitpoints": 3400,
+      "cost": 9000000,
+      "buildTimeSeconds": 194400,
+      "experienceGained": 440
+     },
+     {
+      "level": 8,
+      "hitpoints": 3900,
+      "cost": 10000000,
+      "buildTimeSeconds": 216000,
+      "experienceGained": 464
+     },
+     {
+      "level": 9,
+      "hitpoints": 4400,
+      "cost": 11000000,
+      "buildTimeSeconds": 237600,
+      "experienceGained": 487
+     },
+     {
+      "level": 10,
+      "hitpoints": 4900,
+      "cost": 12000000,
+      "buildTimeSeconds": 259200,
+      "experienceGained": 509
+     }
+    ]
+   },
+   {
+    "section": "Module 2: Hero DPS Boost",
+    "headers": [
+     "Level",
+     "Hero DPS Boost",
+     "Cost",
+     "Build Time",
+     "Experience Gained"
+    ],
+    "rows": [
+     {
+      "level": 1,
+      "heroDPSBoostPercent": 4,
+      "cost": null,
+      "buildTimeSeconds": null,
+      "experienceGained": null
+     },
+     {
+      "level": 2,
+      "heroDPSBoostPercent": 5,
+      "cost": 5000000,
+      "buildTimeSeconds": 43200,
+      "experienceGained": 207
+     },
+     {
+      "level": 3,
+      "heroDPSBoostPercent": 7,
+      "cost": 6500000,
+      "buildTimeSeconds": 57600,
+      "experienceGained": 240
+     },
+     {
+      "level": 4,
+      "heroDPSBoostPercent": 8,
+      "cost": 8000000,
+      "buildTimeSeconds": 72000,
+      "experienceGained": 268
+     },
+     {
+      "level": 5,
+      "heroDPSBoostPercent": 10,
+      "cost": 9500000,
+      "buildTimeSeconds": 86400,
+      "experienceGained": 293
+     },
+     {
+      "level": 6,
+      "heroDPSBoostPercent": 11,
+      "cost": 10000000,
+      "buildTimeSeconds": 108000,
+      "experienceGained": 328
+     },
+     {
+      "level": 7,
+      "heroDPSBoostPercent": 13,
+      "cost": 10500000,
+      "buildTimeSeconds": 129600,
+      "experienceGained": 360
+     },
+     {
+      "level": 8,
+      "heroDPSBoostPercent": 14,
+      "cost": 11000000,
+      "buildTimeSeconds": 172800,
+      "experienceGained": 415
+     },
+     {
+      "level": 9,
+      "heroDPSBoostPercent": 16,
+      "cost": 11500000,
+      "buildTimeSeconds": 216000,
+      "experienceGained": 464
+     },
+     {
+      "level": 10,
+      "heroDPSBoostPercent": 17,
+      "cost": 12000000,
+      "buildTimeSeconds": 259200,
+      "experienceGained": 509
+     }
+    ]
+   },
+   {
+    "section": "Module 3: Hero HP Boost",
+    "headers": [
+     "Level",
+     "Hero HP Boost",
+     "Cost",
+     "Build Time",
+     "Experience Gained"
+    ],
+    "rows": [
+     {
+      "level": 1,
+      "heroHPBoostPercent": 8,
+      "cost": null,
+      "buildTimeSeconds": null,
+      "experienceGained": null
+     },
+     {
+      "level": 2,
+      "heroHPBoostPercent": 11,
+      "cost": 25000,
+      "buildTimeSeconds": 129600,
+      "experienceGained": 360
+     },
+     {
+      "level": 3,
+      "heroHPBoostPercent": 14,
+      "cost": 30000,
+      "buildTimeSeconds": 172800,
+      "experienceGained": 415
+     },
+     {
+      "level": 4,
+      "heroHPBoostPercent": 17,
+      "cost": 35000,
+      "buildTimeSeconds": 216000,
+      "experienceGained": 464
+     },
+     {
+      "level": 5,
+      "heroHPBoostPercent": 20,
+      "cost": 40000,
+      "buildTimeSeconds": 223200,
+      "experienceGained": 472
+     },
+     {
+      "level": 6,
+      "heroHPBoostPercent": 23,
+      "cost": 55000,
+      "buildTimeSeconds": 230400,
+      "experienceGained": 480
+     },
+     {
+      "level": 7,
+      "heroHPBoostPercent": 26,
+      "cost": 70000,
+      "buildTimeSeconds": 237600,
+      "experienceGained": 487
+     },
+     {
+      "level": 8,
+      "heroHPBoostPercent": 29,
+      "cost": 85000,
+      "buildTimeSeconds": 244800,
+      "experienceGained": 494
+     },
+     {
+      "level": 9,
+      "heroHPBoostPercent": 32,
+      "cost": 100000,
+      "buildTimeSeconds": 252000,
+      "experienceGained": 501
+     },
+     {
+      "level": 10,
+      "heroHPBoostPercent": 35,
+      "cost": 115000,
+      "buildTimeSeconds": 259200,
+      "experienceGained": 509
+     }
+    ]
+   }
+  ]
+ },
+ "fields": {},
+ "levels": [],
+ "mismatches": []
+}

@@ -1,0 +1,162 @@
+{
+ "title": "Root Rider",
+ "page": "Root Rider",
+ "url": "https://clashofclans.fandom.com/wiki/Root_Rider",
+ "revid": 625331,
+ "retrieved": "2026-09-15",
+ "clientName": "Root Rider",
+ "clientVersion": "18.400.21",
+ "category": "elixir-troop",
+ "constants": {
+  "housingSpace": 20,
+  "movementSpeedWiki": 12,
+  "internalSpeed": 150,
+  "tilesPerSecond": 1.5,
+  "attackRangeTiles": 1,
+  "attackRangeTilesClient": 1,
+  "attackSeconds": 2.2,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Single Target (Ground only)",
+  "targets": "ground",
+  "favoriteTarget": "Defenses",
+  "favoriteTargetTemplate": "Defenses",
+  "favoriteTargetClient": "Defense",
+  "favoriteMultiplier": 1,
+  "flying": false,
+  "jumpsWalls": true,
+  "underground": false,
+  "unlock": {
+   "building": "Barracks",
+   "level": 17,
+   "townHall": 15
+  },
+  "wallAttackSeconds": 0.4,
+  "wallAuraRadiusTilesClient": 0.75,
+  "triggersTraps": true,
+  "cantBeEjected": true
+ },
+ "client": {
+  "clientName": "Root Rider",
+  "housingSpace": 20,
+  "internalSpeed": 150,
+  "movementSpeedInGameExact": 12,
+  "movementSpeedInGameRounded": 12,
+  "tilesPerSecond": 1.5,
+  "attackRangeTiles": 1,
+  "attackSeconds": 2.2,
+  "targets": "ground",
+  "flying": false,
+  "jumpsWalls": true,
+  "favoriteTarget": "Defense",
+  "favoriteMultiplier": 1,
+  "productionBuilding": "Barracks",
+  "barracksLevel": 17,
+  "unlockTownHall": 15,
+  "triggersTraps": true,
+  "movementOffsetSpeed": 0,
+  "cantBeEjected": true,
+  "smoothJump": true,
+  "wallAttackSeconds": 0.4,
+  "wallAuraRadiusTiles": 0.75
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 95,
+   "damagePerHit": 209,
+   "wallDps": 10000,
+   "wallDamagePerHit": 4000,
+   "hitpoints": 6200,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 105,
+   "damagePerHit": 231,
+   "wallDps": 10000,
+   "wallDamagePerHit": 4000,
+   "hitpoints": 6350,
+   "researchCost": 15000000,
+   "researchSeconds": 691200,
+   "researchTimeText": "8d",
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 3,
+   "dps": 115,
+   "damagePerHit": 253,
+   "wallDps": 10000,
+   "wallDamagePerHit": 4000,
+   "hitpoints": 6500,
+   "researchCost": 17600000,
+   "researchSeconds": 864000,
+   "researchTimeText": "10d",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 4,
+   "dps": 125,
+   "damagePerHit": 275,
+   "wallDps": 10000,
+   "wallDamagePerHit": 4000,
+   "hitpoints": 6700,
+   "researchCost": 30000000,
+   "researchSeconds": 1382400,
+   "researchTimeText": "16d",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 6200,
+   "dps": 95,
+   "damagePerHit": 209,
+   "wallDamagePerHit": 4000,
+   "wallDps": 10000
+  },
+  {
+   "level": 2,
+   "hitpoints": 6350,
+   "dps": 105,
+   "damagePerHit": 231,
+   "researchCost": 15000000,
+   "researchSeconds": 691200,
+   "laboratoryLevel": 13,
+   "wallDamagePerHit": 4000,
+   "wallDps": 10000
+  },
+  {
+   "level": 3,
+   "hitpoints": 6500,
+   "dps": 115,
+   "damagePerHit": 253,
+   "researchCost": 17600000,
+   "researchSeconds": 864000,
+   "laboratoryLevel": 14,
+   "wallDamagePerHit": 4000,
+   "wallDps": 10000
+  },
+  {
+   "level": 4,
+   "hitpoints": 6700,
+   "dps": 125,
+   "damagePerHit": 275,
+   "researchCost": 30000000,
+   "researchSeconds": 1382400,
+   "laboratoryLevel": 16,
+   "wallDamagePerHit": 4000,
+   "wallDps": 10000
+  }
+ ],
+ "comparison": {
+  "checked": 38,
+  "matched": 38
+ },
+ "mismatches": [],
+ "ambiguities": []
+}

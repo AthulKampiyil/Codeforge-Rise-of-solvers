@@ -1,0 +1,673 @@
+{
+  "sources": [
+    "reference/official-wiki/defenses/crafting-station.md",
+    "reference/official-wiki/defenses/hot-candle.md",
+    "reference/official-wiki/defenses/hero-hunter.md",
+    "reference/official-wiki/defenses/cake-a-pult.md"
+  ],
+  "scope": "Crafting Station (client: 3x3, 1,000 hitpoints, free, Town Hall 18) and the three Crafted Defenses of Crafting Phase 4 with their module tables.",
+  "station": {
+    "size": 3,
+    "hp": 1000,
+    "townHall": 18,
+    "sparkyStonesPerLevel": 8
+  },
+  "defenses": [
+    {
+      "key": "candle",
+      "name": "Hot Candle",
+      "client": "Inferno Candle",
+      "range": 10.5,
+      "minRange": 0,
+      "attackSeconds": 0.5,
+      "targets": "both",
+      "stageTargets": [
+        6,
+        4,
+        3
+      ],
+      "modules": [
+        {
+          "name": "Hitpoints",
+          "stat": "hp",
+          "resource": "elixir",
+          "levels": [
+            {
+              "value": 1600,
+              "cost": 0,
+              "seconds": 0,
+              "townHall": 12
+            },
+            {
+              "value": 1800,
+              "cost": 3500000,
+              "seconds": 21600,
+              "townHall": 12
+            },
+            {
+              "value": 2150,
+              "cost": 4500000,
+              "seconds": 28800,
+              "townHall": 13
+            },
+            {
+              "value": 2500,
+              "cost": 5500000,
+              "seconds": 36000,
+              "townHall": 14
+            },
+            {
+              "value": 2700,
+              "cost": 6500000,
+              "seconds": 43200,
+              "townHall": 15
+            },
+            {
+              "value": 3150,
+              "cost": 7500000,
+              "seconds": 64800,
+              "townHall": 16
+            },
+            {
+              "value": 3900,
+              "cost": 8500000,
+              "seconds": 154800,
+              "townHall": 17
+            },
+            {
+              "value": 4500,
+              "cost": 10000000,
+              "seconds": 288000,
+              "townHall": 18
+            },
+            {
+              "value": 5200,
+              "cost": 11500000,
+              "seconds": 496800,
+              "townHall": 18
+            },
+            {
+              "value": 6000,
+              "cost": 13000000,
+              "seconds": 820800,
+              "townHall": 18
+            }
+          ]
+        },
+        {
+          "name": "Damage",
+          "stat": "damage",
+          "resource": "gold",
+          "levels": [
+            {
+              "value": 40,
+              "cost": 0,
+              "seconds": 0,
+              "townHall": 12
+            },
+            {
+              "value": 50,
+              "cost": 4000000,
+              "seconds": 28800,
+              "townHall": 12
+            },
+            {
+              "value": 60,
+              "cost": 5000000,
+              "seconds": 36000,
+              "townHall": 13
+            },
+            {
+              "value": 75,
+              "cost": 6000000,
+              "seconds": 39600,
+              "townHall": 14
+            },
+            {
+              "value": 80,
+              "cost": 7500000,
+              "seconds": 46800,
+              "townHall": 15
+            },
+            {
+              "value": 90,
+              "cost": 9000000,
+              "seconds": 68400,
+              "townHall": 16
+            },
+            {
+              "value": 95,
+              "cost": 10500000,
+              "seconds": 165600,
+              "townHall": 17
+            },
+            {
+              "value": 105,
+              "cost": 12000000,
+              "seconds": 298800,
+              "townHall": 18
+            },
+            {
+              "value": 115,
+              "cost": 13500000,
+              "seconds": 532800,
+              "townHall": 18
+            },
+            {
+              "value": 125,
+              "cost": 15000000,
+              "seconds": 864000,
+              "townHall": 18
+            }
+          ]
+        },
+        {
+          "name": "Seconds Active",
+          "stat": "melt",
+          "resource": "dark",
+          "levels": [
+            {
+              "value": 59,
+              "second": 95,
+              "cost": 0,
+              "seconds": 0,
+              "townHall": 12
+            },
+            {
+              "value": 61,
+              "second": 99,
+              "cost": 30000,
+              "seconds": 14400,
+              "townHall": 12
+            },
+            {
+              "value": 63,
+              "second": 103,
+              "cost": 40000,
+              "seconds": 21600,
+              "townHall": 13
+            },
+            {
+              "value": 65,
+              "second": 107,
+              "cost": 50000,
+              "seconds": 28800,
+              "townHall": 14
+            },
+            {
+              "value": 67,
+              "second": 111,
+              "cost": 60000,
+              "seconds": 36000,
+              "townHall": 15
+            },
+            {
+              "value": 69,
+              "second": 115,
+              "cost": 70000,
+              "seconds": 57600,
+              "townHall": 16
+            },
+            {
+              "value": 71,
+              "second": 119,
+              "cost": 80000,
+              "seconds": 144000,
+              "townHall": 17
+            },
+            {
+              "value": 73,
+              "second": 123,
+              "cost": 90000,
+              "seconds": 266400,
+              "townHall": 18
+            },
+            {
+              "value": 75,
+              "second": 127,
+              "cost": 100000,
+              "seconds": 453600,
+              "townHall": 18
+            },
+            {
+              "value": 77,
+              "second": 132,
+              "cost": 110000,
+              "seconds": 777600,
+              "townHall": 18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Hero Hunter",
+      "client": "Headhunter Tower",
+      "range": 9.5,
+      "minRange": 0,
+      "attackSeconds": 0.6,
+      "targets": "both",
+      "heroMultiplier": 2,
+      "poisonSeconds": 3,
+      "modules": [
+        {
+          "name": "Hitpoints",
+          "stat": "hp",
+          "resource": "dark",
+          "levels": [
+            {
+              "value": 1600,
+              "cost": 0,
+              "seconds": 0,
+              "townHall": 12
+            },
+            {
+              "value": 1800,
+              "cost": 40000,
+              "seconds": 28800,
+              "townHall": 12
+            },
+            {
+              "value": 2150,
+              "cost": 50000,
+              "seconds": 36000,
+              "townHall": 13
+            },
+            {
+              "value": 2500,
+              "cost": 60000,
+              "seconds": 39600,
+              "townHall": 14
+            },
+            {
+              "value": 2700,
+              "cost": 70000,
+              "seconds": 46800,
+              "townHall": 15
+            },
+            {
+              "value": 3150,
+              "cost": 80000,
+              "seconds": 68400,
+              "townHall": 16
+            },
+            {
+              "value": 3900,
+              "cost": 90000,
+              "seconds": 165600,
+              "townHall": 17
+            },
+            {
+              "value": 4400,
+              "cost": 100000,
+              "seconds": 298800,
+              "townHall": 18
+            },
+            {
+              "value": 5200,
+              "cost": 110000,
+              "seconds": 532800,
+              "townHall": 18
+            },
+            {
+              "value": 6000,
+              "cost": 120000,
+              "seconds": 864000,
+              "townHall": 18
+            }
+          ]
+        },
+        {
+          "name": "Damage",
+          "stat": "damage",
+          "resource": "elixir",
+          "levels": [
+            {
+              "value": 87,
+              "cost": 0,
+              "seconds": 0,
+              "townHall": 12
+            },
+            {
+              "value": 93,
+              "cost": 3000000,
+              "seconds": 14400,
+              "townHall": 12
+            },
+            {
+              "value": 102,
+              "cost": 4000000,
+              "seconds": 21600,
+              "townHall": 13
+            },
+            {
+              "value": 111,
+              "cost": 5000000,
+              "seconds": 28800,
+              "townHall": 14
+            },
+            {
+              "value": 117,
+              "cost": 6000000,
+              "seconds": 36000,
+              "townHall": 15
+            },
+            {
+              "value": 126,
+              "cost": 7000000,
+              "seconds": 57600,
+              "townHall": 16
+            },
+            {
+              "value": 156,
+              "cost": 8000000,
+              "seconds": 144000,
+              "townHall": 17
+            },
+            {
+              "value": 195,
+              "cost": 9000000,
+              "seconds": 266400,
+              "townHall": 18
+            },
+            {
+              "value": 210,
+              "cost": 10000000,
+              "seconds": 453600,
+              "townHall": 18
+            },
+            {
+              "value": 231,
+              "cost": 11000000,
+              "seconds": 777600,
+              "townHall": 18
+            }
+          ]
+        },
+        {
+          "name": "Poison Level",
+          "stat": "poison",
+          "resource": "gold",
+          "levels": [
+            {
+              "value": 3,
+              "cost": 0,
+              "seconds": 0,
+              "townHall": 12
+            },
+            {
+              "value": 4,
+              "cost": 3500000,
+              "seconds": 21600,
+              "townHall": 12
+            },
+            {
+              "value": 5,
+              "cost": 4500000,
+              "seconds": 28800,
+              "townHall": 13
+            },
+            {
+              "value": 6,
+              "cost": 5500000,
+              "seconds": 36000,
+              "townHall": 14
+            },
+            {
+              "value": 7,
+              "cost": 6500000,
+              "seconds": 43200,
+              "townHall": 15
+            },
+            {
+              "value": 8,
+              "cost": 7500000,
+              "seconds": 64800,
+              "townHall": 16
+            },
+            {
+              "value": 9,
+              "cost": 8500000,
+              "seconds": 154800,
+              "townHall": 17
+            },
+            {
+              "value": 10,
+              "cost": 10000000,
+              "seconds": 288000,
+              "townHall": 18
+            },
+            {
+              "value": 11,
+              "cost": 11500000,
+              "seconds": 496800,
+              "townHall": 18
+            },
+            {
+              "value": 12,
+              "cost": 13000000,
+              "seconds": 820800,
+              "townHall": 18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cake",
+      "name": "Cake-A-Pult",
+      "client": "Cake Thrower",
+      "range": 12,
+      "minRange": 3,
+      "attackSeconds": 3,
+      "targets": "both",
+      "splashRadius": 2.5,
+      "bombRadius": 2.5,
+      "bombDelay": 1.999,
+      "modules": [
+        {
+          "name": "Hitpoints",
+          "stat": "hp",
+          "resource": "gold",
+          "levels": [
+            {
+              "value": 1600,
+              "cost": 0,
+              "seconds": 0,
+              "townHall": 12
+            },
+            {
+              "value": 1800,
+              "cost": 3000000,
+              "seconds": 14400,
+              "townHall": 12
+            },
+            {
+              "value": 2150,
+              "cost": 4000000,
+              "seconds": 21600,
+              "townHall": 13
+            },
+            {
+              "value": 2500,
+              "cost": 5000000,
+              "seconds": 28800,
+              "townHall": 14
+            },
+            {
+              "value": 2700,
+              "cost": 6000000,
+              "seconds": 36000,
+              "townHall": 15
+            },
+            {
+              "value": 3150,
+              "cost": 7000000,
+              "seconds": 57600,
+              "townHall": 16
+            },
+            {
+              "value": 3800,
+              "cost": 8000000,
+              "seconds": 144000,
+              "townHall": 17
+            },
+            {
+              "value": 4300,
+              "cost": 9000000,
+              "seconds": 266400,
+              "townHall": 18
+            },
+            {
+              "value": 4950,
+              "cost": 10000000,
+              "seconds": 453600,
+              "townHall": 18
+            },
+            {
+              "value": 5800,
+              "cost": 11000000,
+              "seconds": 777600,
+              "townHall": 18
+            }
+          ]
+        },
+        {
+          "name": "Damage",
+          "stat": "damage",
+          "resource": "dark",
+          "levels": [
+            {
+              "value": 195,
+              "cost": 0,
+              "seconds": 0,
+              "townHall": 12
+            },
+            {
+              "value": 210,
+              "cost": 35000,
+              "seconds": 21600,
+              "townHall": 12
+            },
+            {
+              "value": 225,
+              "cost": 45000,
+              "seconds": 28800,
+              "townHall": 13
+            },
+            {
+              "value": 246,
+              "cost": 55000,
+              "seconds": 36000,
+              "townHall": 14
+            },
+            {
+              "value": 264,
+              "cost": 65000,
+              "seconds": 43200,
+              "townHall": 15
+            },
+            {
+              "value": 285,
+              "cost": 75000,
+              "seconds": 64800,
+              "townHall": 16
+            },
+            {
+              "value": 315,
+              "cost": 85000,
+              "seconds": 154800,
+              "townHall": 17
+            },
+            {
+              "value": 333,
+              "cost": 95000,
+              "seconds": 288000,
+              "townHall": 18
+            },
+            {
+              "value": 354,
+              "cost": 105000,
+              "seconds": 496800,
+              "townHall": 18
+            },
+            {
+              "value": 375,
+              "cost": 115000,
+              "seconds": 820800,
+              "townHall": 18
+            }
+          ]
+        },
+        {
+          "name": "Explosion Damage",
+          "stat": "bomb",
+          "resource": "elixir",
+          "levels": [
+            {
+              "value": 400,
+              "cost": 0,
+              "seconds": 0,
+              "townHall": 12
+            },
+            {
+              "value": 450,
+              "cost": 4000000,
+              "seconds": 28800,
+              "townHall": 12
+            },
+            {
+              "value": 480,
+              "cost": 5000000,
+              "seconds": 36000,
+              "townHall": 13
+            },
+            {
+              "value": 510,
+              "cost": 6000000,
+              "seconds": 39600,
+              "townHall": 14
+            },
+            {
+              "value": 530,
+              "cost": 7500000,
+              "seconds": 46800,
+              "townHall": 15
+            },
+            {
+              "value": 550,
+              "cost": 9000000,
+              "seconds": 68400,
+              "townHall": 16
+            },
+            {
+              "value": 600,
+              "cost": 10500000,
+              "seconds": 165600,
+              "townHall": 17
+            },
+            {
+              "value": 750,
+              "cost": 12000000,
+              "seconds": 298800,
+              "townHall": 18
+            },
+            {
+              "value": 900,
+              "cost": 13500000,
+              "seconds": 532800,
+              "townHall": 18
+            },
+            {
+              "value": 950,
+              "cost": 15000000,
+              "seconds": 864000,
+              "townHall": 18
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

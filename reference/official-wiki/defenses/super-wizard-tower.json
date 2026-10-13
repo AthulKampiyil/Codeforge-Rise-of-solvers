@@ -1,0 +1,79 @@
+{
+ "title": "Super Wizard Tower/Home Village",
+ "url": "https://clashofclans.fandom.com/wiki/Super_Wizard_Tower/Home_Village",
+ "revid": 624749,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Super Wizard Tower",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 290,
+   "damagePerHitPrimary": 377,
+   "damagePerHitSecondary": 150.8,
+   "hitpoints": 6000,
+   "cost": 29000000,
+   "buildSeconds": 1123200,
+   "xp": 1059,
+   "townHall": 18
+  },
+  {
+   "level": 2,
+   "dps": 320,
+   "damagePerHitPrimary": 416,
+   "damagePerHitSecondary": 166.4,
+   "hitpoints": 6300,
+   "cost": 30000000,
+   "buildSeconds": 1209600,
+   "xp": 1099,
+   "townHall": 18
+  }
+ ],
+ "supercharges": [
+  {
+   "charge": 1,
+   "dps": 327,
+   "damagePerHitPrimary": 425.1,
+   "damagePerHitSecondary": 170.04,
+   "hitpoints": 6300,
+   "cost": 12000000,
+   "buildSeconds": 518400,
+   "xp": 720,
+   "townHall": 18
+  },
+  {
+   "charge": 2,
+   "dps": 327,
+   "damagePerHitPrimary": 425.1,
+   "damagePerHitSecondary": 170.04,
+   "hitpoints": 6450,
+   "cost": 14000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 18,
+  "size": "3x3",
+  "range": 8,
+  "attackSeconds": 1.3,
+  "targets": "ground & air",
+  "damageType": "chain lightning",
+  "chainTargets": 15,
+  "chainRadiusTiles": 4,
+  "chainDamagePercent": 40,
+  "mergeFrom": "2x Wizard Tower level 17"
+ },
+ "mismatches": [
+  {
+   "field": "AltDPS",
+   "level": "1-2",
+   "wiki": "not listed",
+   "client": "250 / 280",
+   "note": "unexplained second DPS column on the Super Wizard Tower rows (not equal to the chain damage); possibly a display/stat-bar value"
+  }
+ ],
+ "progressionMismatches": []
+}

@@ -1,0 +1,430 @@
+{
+ "title": "Electro Boots",
+ "url": "https://clashofclans.fandom.com/wiki/Electro_Boots",
+ "revid": 621042,
+ "retrieved": "2026-09-15",
+ "clientName": "Electro Boots",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Royal Champion",
+ "summary": "Champion Epic passive item: a permanent electric aura hitting nearby enemies every 0.4 s (132 → 200 DPS); passive HP and self-heal.",
+ "constants": {
+  "wiki": {
+   "User": "Royal Champion",
+   "Ability Type": "Passive",
+   "Rarity": "Epic",
+   "Unlock Requirement": "Buy in Toyshop Throwdown event for 3,100 Toy Medal; Buy in Friend or Foe event for 3,100 Champ Medal; Buy in Cosmic Rock event for 3,100 Rock Medal; Buy in Equipment Blast event for 3,100 Relic Medal; or purchasable from the Trader for 1,500 Gem",
+   "Aura Attack Speed": "0.4s",
+   "Aura Radius": "5 tiles"
+  },
+  "client": {
+   "Rarity": "EPIC",
+   "AllowedCharacters": "Royal Champion;",
+   "MainAbilities": "Electro Boots Aura",
+   "ExtraAbilities": "RCElectroRegeneration",
+   "Claimable": "TRUE",
+   "levelRows": 27,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    10
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "auraDamagePerSecond": {
+   "wikiHeader": "Ability Attributes / Aura Damage per Second",
+   "unit": "damage per second"
+  },
+  "auraDamagePerHit": {
+   "wikiHeader": "Ability Attributes / Aura Damage per Hit",
+   "unit": "damage points"
+  },
+  "selfHealingPerSecond": {
+   "wikiHeader": "Hero Boosts / Self Healing per Second",
+   "unit": "hitpoints healed"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostStarryOre": {
+   "wikiHeader": "Upgrade Cost / Starry Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "auraDamagePerSecond": 132,
+   "auraDamagePerHit": 52.8,
+   "selfHealingPerSecond": 6,
+   "hitpointIncrease": 50,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "auraDamagePerSecond": 132,
+   "auraDamagePerHit": 52.8,
+   "selfHealingPerSecond": 8,
+   "hitpointIncrease": 75,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "auraDamagePerSecond": 140,
+   "auraDamagePerHit": 56,
+   "selfHealingPerSecond": 10,
+   "hitpointIncrease": 100,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "auraDamagePerSecond": 140,
+   "auraDamagePerHit": 56,
+   "selfHealingPerSecond": 12,
+   "hitpointIncrease": 125,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "auraDamagePerSecond": 140,
+   "auraDamagePerHit": 56,
+   "selfHealingPerSecond": 14,
+   "hitpointIncrease": 150,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "auraDamagePerSecond": 147,
+   "auraDamagePerHit": 58.8,
+   "selfHealingPerSecond": 16,
+   "hitpointIncrease": 175,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "auraDamagePerSecond": 147,
+   "auraDamagePerHit": 58.8,
+   "selfHealingPerSecond": 18,
+   "hitpointIncrease": 200,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "auraDamagePerSecond": 147,
+   "auraDamagePerHit": 58.8,
+   "selfHealingPerSecond": 20,
+   "hitpointIncrease": 225,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "auraDamagePerSecond": 155,
+   "auraDamagePerHit": 62,
+   "selfHealingPerSecond": 22,
+   "hitpointIncrease": 250,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "upgradeCostStarryOre": 10,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "auraDamagePerSecond": 155,
+   "auraDamagePerHit": 62,
+   "selfHealingPerSecond": 24,
+   "hitpointIncrease": 275,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 11,
+   "auraDamagePerSecond": 155,
+   "auraDamagePerHit": 62,
+   "selfHealingPerSecond": 26,
+   "hitpointIncrease": 300,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 12,
+   "auraDamagePerSecond": 162,
+   "auraDamagePerHit": 64.8,
+   "selfHealingPerSecond": 28,
+   "hitpointIncrease": 325,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "upgradeCostStarryOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 13,
+   "auraDamagePerSecond": 162,
+   "auraDamagePerHit": 64.8,
+   "selfHealingPerSecond": 30,
+   "hitpointIncrease": 350,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 14,
+   "auraDamagePerSecond": 162,
+   "auraDamagePerHit": 64.8,
+   "selfHealingPerSecond": 32,
+   "hitpointIncrease": 375,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 15,
+   "auraDamagePerSecond": 170,
+   "auraDamagePerHit": 68,
+   "selfHealingPerSecond": 33,
+   "hitpointIncrease": 400,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 30,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 16,
+   "auraDamagePerSecond": 170,
+   "auraDamagePerHit": 68,
+   "selfHealingPerSecond": 34,
+   "hitpointIncrease": 425,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 17,
+   "auraDamagePerSecond": 170,
+   "auraDamagePerHit": 68,
+   "selfHealingPerSecond": 35,
+   "hitpointIncrease": 450,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 18,
+   "auraDamagePerSecond": 177,
+   "auraDamagePerHit": 70.8,
+   "selfHealingPerSecond": 36,
+   "hitpointIncrease": 475,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 50,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 19,
+   "auraDamagePerSecond": 177,
+   "auraDamagePerHit": 70.8,
+   "selfHealingPerSecond": 37,
+   "hitpointIncrease": 500,
+   "upgradeCostShinyOre": 2800,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 20,
+   "auraDamagePerSecond": 177,
+   "auraDamagePerHit": 70.8,
+   "selfHealingPerSecond": 38,
+   "hitpointIncrease": 525,
+   "upgradeCostShinyOre": 2900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 21,
+   "auraDamagePerSecond": 185,
+   "auraDamagePerHit": 74,
+   "selfHealingPerSecond": 39,
+   "hitpointIncrease": 550,
+   "upgradeCostShinyOre": 3000,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 100,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 22,
+   "auraDamagePerSecond": 185,
+   "auraDamagePerHit": 74,
+   "selfHealingPerSecond": 40,
+   "hitpointIncrease": 575,
+   "upgradeCostShinyOre": 3100,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 23,
+   "auraDamagePerSecond": 185,
+   "auraDamagePerHit": 74,
+   "selfHealingPerSecond": 41,
+   "hitpointIncrease": 600,
+   "upgradeCostShinyOre": 3200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 24,
+   "auraDamagePerSecond": 192,
+   "auraDamagePerHit": 76.8,
+   "selfHealingPerSecond": 42,
+   "hitpointIncrease": 625,
+   "upgradeCostShinyOre": 3300,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 120,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 25,
+   "auraDamagePerSecond": 192,
+   "auraDamagePerHit": 76.8,
+   "selfHealingPerSecond": 43,
+   "hitpointIncrease": 650,
+   "upgradeCostShinyOre": 3400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 26,
+   "auraDamagePerSecond": 192,
+   "auraDamagePerHit": 76.8,
+   "selfHealingPerSecond": 44,
+   "hitpointIncrease": 675,
+   "upgradeCostShinyOre": 3500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 27,
+   "auraDamagePerSecond": 200,
+   "auraDamagePerHit": 80,
+   "selfHealingPerSecond": 45,
+   "hitpointIncrease": 700,
+   "upgradeCostShinyOre": 3600,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 150,
+   "blacksmithLevelRequired": 9
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "Aura Radius",
+   "level": null,
+   "wiki": "5 tiles",
+   "client": "spells[Electro Boots Aura].Radius 450 (4.5 tiles)",
+   "note": "wiki may add unit hitbox; verify"
+  },
+  {
+   "field": "heroDamage",
+   "level": null,
+   "wiki": "not mentioned",
+   "client": "HeroDamageMultiplier 25",
+   "note": "aura deals 25% damage to heroes"
+  }
+ ],
+ "clientColumns": [
+  "ExtraAbilities:special_abilities[RCElectroRegeneration].Regeneration",
+  "MainAbilities:special_abilities[Electro Boots Aura] → AuraSpell:spells[Electro Boots Aura].Damage",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

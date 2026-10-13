@@ -1,0 +1,540 @@
+{
+ "title": "Snake Bracelet",
+ "url": "https://clashofclans.fandom.com/wiki/Snake_Bracelet",
+ "revid": 621017,
+ "retrieved": "2026-09-15",
+ "clientName": "Snake Bracelet",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Barbarian King",
+ "summary": "King Epic passive item: spawns wall-jumping Snakes for every 300 damage he takes (cap 11 → 54); passive DPS, HP and attack speed.",
+ "constants": {
+  "wiki": {
+   "User": "Barbarian King",
+   "Ability Type": "Passive",
+   "Rarity": "Epic",
+   "Unlock Requirement": "Buy in Snake Festival event for 3,100 Snake Medal; Buy in Dark Deal event for 3,100 Mischief Medal; Buy in Equipment Blast event for 3,100 Relic Medal; or purchasable from the Trader for 1,500 Gem"
+  },
+  "client": {
+   "Rarity": "EPIC",
+   "AllowedCharacters": "Barbarian King;",
+   "MainAbilities": "BarbarianKingSpawnOnTakeDamage",
+   "Claimable": "TRUE",
+   "levelRows": 27,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    10
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "maxSummonedSnakes": {
+   "wikiHeader": "Ability Attributes / Max Summoned Snakes",
+   "unit": "count/points"
+  },
+  "snakeLevel": {
+   "wikiHeader": "Ability Attributes / Snake Level",
+   "unit": "level"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boosts / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "attackSpeedIncreasePercent": {
+   "wikiHeader": "Hero Boosts / Attack Speed Increase",
+   "unit": "percent"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostStarryOre": {
+   "wikiHeader": "Upgrade Cost / Starry Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "maxSummonedSnakes": 11,
+   "snakeLevel": 1,
+   "damagePerSecondIncrease": 10,
+   "hitpointIncrease": 150,
+   "attackSpeedIncreasePercent": 1,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "maxSummonedSnakes": 11,
+   "snakeLevel": 1,
+   "damagePerSecondIncrease": 11,
+   "hitpointIncrease": 300,
+   "attackSpeedIncreasePercent": 1,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "maxSummonedSnakes": 14,
+   "snakeLevel": 2,
+   "damagePerSecondIncrease": 12,
+   "hitpointIncrease": 450,
+   "attackSpeedIncreasePercent": 2,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "maxSummonedSnakes": 14,
+   "snakeLevel": 2,
+   "damagePerSecondIncrease": 14,
+   "hitpointIncrease": 600,
+   "attackSpeedIncreasePercent": 2,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "maxSummonedSnakes": 14,
+   "snakeLevel": 2,
+   "damagePerSecondIncrease": 16,
+   "hitpointIncrease": 750,
+   "attackSpeedIncreasePercent": 2,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "maxSummonedSnakes": 17,
+   "snakeLevel": 3,
+   "damagePerSecondIncrease": 18,
+   "hitpointIncrease": 900,
+   "attackSpeedIncreasePercent": 3,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "maxSummonedSnakes": 17,
+   "snakeLevel": 3,
+   "damagePerSecondIncrease": 20,
+   "hitpointIncrease": 1050,
+   "attackSpeedIncreasePercent": 3,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "maxSummonedSnakes": 17,
+   "snakeLevel": 3,
+   "damagePerSecondIncrease": 22,
+   "hitpointIncrease": 1200,
+   "attackSpeedIncreasePercent": 3,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "maxSummonedSnakes": 20,
+   "snakeLevel": 4,
+   "damagePerSecondIncrease": 24,
+   "hitpointIncrease": 1350,
+   "attackSpeedIncreasePercent": 4,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "upgradeCostStarryOre": 10,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "maxSummonedSnakes": 20,
+   "snakeLevel": 4,
+   "damagePerSecondIncrease": 26,
+   "hitpointIncrease": 1500,
+   "attackSpeedIncreasePercent": 4,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 11,
+   "maxSummonedSnakes": 20,
+   "snakeLevel": 4,
+   "damagePerSecondIncrease": 28,
+   "hitpointIncrease": 1650,
+   "attackSpeedIncreasePercent": 4,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 12,
+   "maxSummonedSnakes": 24,
+   "snakeLevel": 5,
+   "damagePerSecondIncrease": 30,
+   "hitpointIncrease": 1800,
+   "attackSpeedIncreasePercent": 5,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "upgradeCostStarryOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 13,
+   "maxSummonedSnakes": 24,
+   "snakeLevel": 5,
+   "damagePerSecondIncrease": 33,
+   "hitpointIncrease": 1950,
+   "attackSpeedIncreasePercent": 5,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 14,
+   "maxSummonedSnakes": 24,
+   "snakeLevel": 5,
+   "damagePerSecondIncrease": 36,
+   "hitpointIncrease": 2100,
+   "attackSpeedIncreasePercent": 5,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 15,
+   "maxSummonedSnakes": 32,
+   "snakeLevel": 6,
+   "damagePerSecondIncrease": 39,
+   "hitpointIncrease": 2250,
+   "attackSpeedIncreasePercent": 6,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 30,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 16,
+   "maxSummonedSnakes": 32,
+   "snakeLevel": 6,
+   "damagePerSecondIncrease": 42,
+   "hitpointIncrease": 2400,
+   "attackSpeedIncreasePercent": 6,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 17,
+   "maxSummonedSnakes": 32,
+   "snakeLevel": 6,
+   "damagePerSecondIncrease": 45,
+   "hitpointIncrease": 2550,
+   "attackSpeedIncreasePercent": 6,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 18,
+   "maxSummonedSnakes": 40,
+   "snakeLevel": 7,
+   "damagePerSecondIncrease": 48,
+   "hitpointIncrease": 2700,
+   "attackSpeedIncreasePercent": 7,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 50,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 19,
+   "maxSummonedSnakes": 40,
+   "snakeLevel": 7,
+   "damagePerSecondIncrease": 51,
+   "hitpointIncrease": 2850,
+   "attackSpeedIncreasePercent": 7,
+   "upgradeCostShinyOre": 2800,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 20,
+   "maxSummonedSnakes": 40,
+   "snakeLevel": 7,
+   "damagePerSecondIncrease": 54,
+   "hitpointIncrease": 3000,
+   "attackSpeedIncreasePercent": 7,
+   "upgradeCostShinyOre": 2900,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 21,
+   "maxSummonedSnakes": 46,
+   "snakeLevel": 8,
+   "damagePerSecondIncrease": 57,
+   "hitpointIncrease": 3150,
+   "attackSpeedIncreasePercent": 8,
+   "upgradeCostShinyOre": 3000,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 100,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 22,
+   "maxSummonedSnakes": 46,
+   "snakeLevel": 8,
+   "damagePerSecondIncrease": 60,
+   "hitpointIncrease": 3300,
+   "attackSpeedIncreasePercent": 8,
+   "upgradeCostShinyOre": 3100,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 23,
+   "maxSummonedSnakes": 46,
+   "snakeLevel": 8,
+   "damagePerSecondIncrease": 63,
+   "hitpointIncrease": 3450,
+   "attackSpeedIncreasePercent": 8,
+   "upgradeCostShinyOre": 3200,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 24,
+   "maxSummonedSnakes": 50,
+   "snakeLevel": 9,
+   "damagePerSecondIncrease": 66,
+   "hitpointIncrease": 3600,
+   "attackSpeedIncreasePercent": 9,
+   "upgradeCostShinyOre": 3300,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 120,
+   "blacksmithLevelRequired": 8
+  },
+  {
+   "level": 25,
+   "maxSummonedSnakes": 50,
+   "snakeLevel": 9,
+   "damagePerSecondIncrease": 69,
+   "hitpointIncrease": 3750,
+   "attackSpeedIncreasePercent": 9,
+   "upgradeCostShinyOre": 3400,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 26,
+   "maxSummonedSnakes": 50,
+   "snakeLevel": 9,
+   "damagePerSecondIncrease": 72,
+   "hitpointIncrease": 3900,
+   "attackSpeedIncreasePercent": 9,
+   "upgradeCostShinyOre": 3500,
+   "upgradeCostGlowyOre": null,
+   "upgradeCostStarryOre": null,
+   "blacksmithLevelRequired": 9
+  },
+  {
+   "level": 27,
+   "maxSummonedSnakes": 54,
+   "snakeLevel": 10,
+   "damagePerSecondIncrease": 75,
+   "hitpointIncrease": 4050,
+   "attackSpeedIncreasePercent": 10,
+   "upgradeCostShinyOre": 3600,
+   "upgradeCostGlowyOre": 600,
+   "upgradeCostStarryOre": 150,
+   "blacksmithLevelRequired": 9
+  }
+ ],
+ "subpages": [
+  {
+   "title": "Snake Bracelet/Snake",
+   "url": "https://clashofclans.fandom.com/wiki/Snake_Bracelet/Snake",
+   "revid": 619944,
+   "clientName": "BK Equipment Snake",
+   "levels": [
+    {
+     "level": 1,
+     "damagePerSecond": 32,
+     "damagePerAttack": 32,
+     "hitpoints": 260,
+     "snakeBraceletLevelRequired": 1
+    },
+    {
+     "level": 2,
+     "damagePerSecond": 34,
+     "damagePerAttack": 34,
+     "hitpoints": 280,
+     "snakeBraceletLevelRequired": 3
+    },
+    {
+     "level": 3,
+     "damagePerSecond": 36,
+     "damagePerAttack": 36,
+     "hitpoints": 300,
+     "snakeBraceletLevelRequired": 6
+    },
+    {
+     "level": 4,
+     "damagePerSecond": 38,
+     "damagePerAttack": 38,
+     "hitpoints": 320,
+     "snakeBraceletLevelRequired": 9
+    },
+    {
+     "level": 5,
+     "damagePerSecond": 40,
+     "damagePerAttack": 40,
+     "hitpoints": 340,
+     "snakeBraceletLevelRequired": 12
+    },
+    {
+     "level": 6,
+     "damagePerSecond": 42,
+     "damagePerAttack": 42,
+     "hitpoints": 360,
+     "snakeBraceletLevelRequired": 15
+    },
+    {
+     "level": 7,
+     "damagePerSecond": 44,
+     "damagePerAttack": 44,
+     "hitpoints": 380,
+     "snakeBraceletLevelRequired": 18
+    },
+    {
+     "level": 8,
+     "damagePerSecond": 46,
+     "damagePerAttack": 46,
+     "hitpoints": 420,
+     "snakeBraceletLevelRequired": 21
+    },
+    {
+     "level": 9,
+     "damagePerSecond": 48,
+     "damagePerAttack": 48,
+     "hitpoints": 460,
+     "snakeBraceletLevelRequired": 24
+    },
+    {
+     "level": 10,
+     "damagePerSecond": 50,
+     "damagePerAttack": 50,
+     "hitpoints": 500,
+     "snakeBraceletLevelRequired": 27
+    }
+   ],
+   "constants": {
+    "Preferred Target": "None",
+    "Attack Type": "Single Target (Ground only)",
+    "Housing Space": "1",
+    "Movement Speed": "24",
+    "Attack Speed": "1s",
+    "Range": "???"
+   }
+  }
+ ],
+ "mismatches": [
+  {
+   "field": "spawnFirstGroupSize",
+   "level": null,
+   "wiki": "one Snake per 300 damage",
+   "client": "BarbKingEquipSpawn SpawnFirstGroupSize 2",
+   "note": "client may spawn two Snakes on the first trigger; unverified"
+  }
+ ],
+ "clientColumns": [
+  "MainAbilities:special_abilities[BarbarianKingSpawnOnTakeDamage].MaxActivations",
+  "MainAbilities:special_abilities[BarbarianKingSpawnOnTakeDamage].SelfSpellLevel",
+  "character_items.AttackSpeedPercentage",
+  "character_items.DPS",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

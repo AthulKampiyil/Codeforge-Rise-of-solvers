@@ -1,0 +1,457 @@
+{
+  "clientVersion": "18.400.21",
+  "sources": {
+    "fingerprint.json": "ecb5b05d632831cd706e4e993158b63635445257ad254bec97c371b078e3044b",
+    "logic/effects.csv": "5c6d5b67d6407345123b8d55872ed77ee6697b466d20d1fa21e25a723c511e9f",
+    "sfx/balloon_deploy_02.ogg": "5b500926fbd61606eb3afc3991cb85e9636fe1bbc56751a85a7305df4e8c9f66",
+    "sfx/balloon_die_01.ogg": "df9c4635294089581c5f08441bc6365ad2ce384916aa76addd5585dc36d140be",
+    "sfx/balloon_hit_01.ogg": "e5571225ed7054ad0e9825d03c5cfb49d2857a79b073b5b49ca54ac0e656a484",
+    "sfx/cannon_fire3.ogg": "51fc989854ab92f3c2941196f56ef845ec23ebb8966276b2a1515c9d14232e86",
+    "sfx/dragon_attack_01.ogg": "f9016714972eddc5291fd98e597f5c70488ce1cf4994f758386d5fe198b619b6",
+    "sfx/dragon_deploy_01.ogg": "7b48aac8ead8b04989901b50f838dd83c1c09cd1b0c9e87272c742e28e77cd8d",
+    "sfx/dragon_die_01.ogg": "704b6afaa96cbc6f7e5c578c15bbb83749a4ef9bd7a58a1d62f7e5c22b0d0460"
+  },
+  "bindings": {
+    "dragon": {
+      "deploy": "Dragon Deploy",
+      "attack": "Dragon Attack",
+      "hit": "Dragon Hit",
+      "die": "Dragon Die"
+    },
+    "balloon": {
+      "deploy": "Balloon Goblin Deploy",
+      "attack": "Balloon Goblin Attack",
+      "hit": "Balloon Goblin Hit",
+      "die": "Balloon Goblin Die",
+      "deathDamage": "Dark Balloon Exposion"
+    }
+  },
+  "effects": {
+    "Balloon Goblin Attack": [
+      {
+        "Name": "Balloon Goblin Attack",
+        "IsoLayer": "None",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/cannon_fire3.ogg",
+        "Volume": "70",
+        "MinPitch": "90",
+        "MaxPitch": "110",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Balloon Goblin Deploy": [
+      {
+        "Name": "Balloon Goblin Deploy",
+        "IsoLayer": "None",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/balloon_deploy_02.ogg",
+        "Volume": "80",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Balloon Goblin Die": [
+      {
+        "Name": "Balloon Goblin Die",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "TRUE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/balloon_die_01.ogg",
+        "Volume": "80",
+        "MinPitch": "95",
+        "MaxPitch": "105",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Balloon Goblin Hit": [
+      {
+        "Name": "Balloon Goblin Hit",
+        "ParticleEmitter": "Wizard_Tower_lightFlash",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/balloon_hit_01.ogg",
+        "Volume": "80",
+        "MinPitch": "95",
+        "MaxPitch": "105",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Ring",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Stone",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Explosion_3",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Dark Balloon Exposion": [
+      {
+        "Name": "Dark Balloon Exposion",
+        "ParticleEmitter": "Stone",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "8",
+        "MinLifeTime": "0",
+        "Sound": "sfx/cannon_fire3.ogg",
+        "Volume": "60",
+        "MinPitch": "75",
+        "MaxPitch": "85",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Ring",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Wizard_Tower_lightFlash",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Explosion_3",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Fire_balls",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Smoke",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Balloon_Die_wood",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Balloon_Die_darkBloon",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Dragon Attack": [
+      {
+        "Name": "Dragon Attack",
+        "ParticleEmitter": "dragonFire",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "TRUE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "TRUE",
+        "DetachAfterStart": "TRUE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/dragon_attack_01.ogg",
+        "Volume": "70",
+        "MinPitch": "95",
+        "MaxPitch": "105",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "AttachLocator": "attack_pivot",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "dragonFireAdd",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "dragonSpark",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "dragonFireAddStart",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Dragon Deploy": [
+      {
+        "Name": "Dragon Deploy",
+        "IsoLayer": "None",
+        "CameraShake": "20",
+        "CameraShakeTimeMS": "200",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/dragon_deploy_01.ogg",
+        "Volume": "90",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Dragon Die": [
+      {
+        "Name": "Dragon Die",
+        "ParticleEmitter": "SplatBig",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Top",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "TRUE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/dragon_die_01.ogg",
+        "Volume": "90",
+        "MinPitch": "95",
+        "MaxPitch": "105",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Dragon Hit": [
+      {
+        "Name": "Dragon Hit",
+        "IsoLayer": "None",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ]
+  },
+  "sounds": {
+    "sfx/balloon_deploy_02.ogg": {
+      "path": "assets/audio/garrison-native/balloon_deploy_02.ogg",
+      "bytes": 15111,
+      "sha256": "5b500926fbd61606eb3afc3991cb85e9636fe1bbc56751a85a7305df4e8c9f66"
+    },
+    "sfx/balloon_die_01.ogg": {
+      "path": "assets/audio/garrison-native/balloon_die_01.ogg",
+      "bytes": 10764,
+      "sha256": "df9c4635294089581c5f08441bc6365ad2ce384916aa76addd5585dc36d140be"
+    },
+    "sfx/balloon_hit_01.ogg": {
+      "path": "assets/audio/garrison-native/balloon_hit_01.ogg",
+      "bytes": 11302,
+      "sha256": "e5571225ed7054ad0e9825d03c5cfb49d2857a79b073b5b49ca54ac0e656a484"
+    },
+    "sfx/cannon_fire3.ogg": {
+      "path": "assets/audio/garrison-native/cannon_fire3.ogg",
+      "bytes": 10330,
+      "sha256": "51fc989854ab92f3c2941196f56ef845ec23ebb8966276b2a1515c9d14232e86"
+    },
+    "sfx/dragon_attack_01.ogg": {
+      "path": "assets/audio/garrison-native/dragon_attack_01.ogg",
+      "bytes": 11800,
+      "sha256": "f9016714972eddc5291fd98e597f5c70488ce1cf4994f758386d5fe198b619b6"
+    },
+    "sfx/dragon_deploy_01.ogg": {
+      "path": "assets/audio/garrison-native/dragon_deploy_01.ogg",
+      "bytes": 10231,
+      "sha256": "7b48aac8ead8b04989901b50f838dd83c1c09cd1b0c9e87272c742e28e77cd8d"
+    },
+    "sfx/dragon_die_01.ogg": {
+      "path": "assets/audio/garrison-native/dragon_die_01.ogg",
+      "bytes": 10553,
+      "sha256": "704b6afaa96cbc6f7e5c578c15bbb83749a4ef9bd7a58a1d62f7e5c22b0d0460"
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+ "title": "Greedy Raven",
+ "url": "https://clashofclans.fandom.com/wiki/Greedy_Raven",
+ "revid": 624123,
+ "retrieved": "2026-09-15",
+ "clientName": "Crow",
+ "clientTable": "pets",
+ "category": "pet",
+ "summary": "Pet House 12 flying pet that pelts resource buildings near its hero with rapid feathers for 5× damage.",
+ "constants": {
+  "wiki": {
+   "Preferred Target": "Resources (Damage x5)",
+   "Targets": "Ground & Air",
+   "Attack Type": "Single Target",
+   "Movement Speed": "28",
+   "Attack Speed": "0.42s",
+   "Pet House Level Required": "12",
+   "Range": "8 tiles",
+   "Special Ability": "Shine Sweep"
+  },
+  "client": {
+   "HousingSpace": "20",
+   "Speed": "350",
+   "AttackRange": "800",
+   "AttackSpeed": "420",
+   "IsFlying": "TRUE",
+   "AirTargets": "TRUE",
+   "GroundTargets": "TRUE",
+   "IsJumper": "FALSE",
+   "LeashLength": "-100",
+   "PreferedTargetBuildingClass": "Resource",
+   "PreferedTargetDamageMod": "5",
+   "SpecialAbilities": "CrowAbility",
+   "TriggersTraps": "TRUE",
+   "FriendlyGroupWeight": "300",
+   "SpawnDelay": "100",
+   "UpgradeResource": "DarkElixir",
+   "Projectile": "CrowProjectile",
+   "MovementOffsetSpeed": "30",
+   "levelRows": 10,
+   "levelsByPetHouse": {
+    "Pet House 12": "10"
+   }
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "damagePerSecond": {
+   "wikiHeader": "Damage per Second",
+   "unit": "damage per second"
+  },
+  "damagePerHit": {
+   "wikiHeader": "Damage per Hit",
+   "unit": "damage points"
+  },
+  "dpsOnResourceBuildings": {
+   "wikiHeader": "DPS on Resource Buildings",
+   "unit": "damage per second"
+  },
+  "hitpoints": {
+   "wikiHeader": "Hitpoints",
+   "unit": "hitpoints"
+  },
+  "upgradeCost": {
+   "wikiHeader": "Upgrade Cost",
+   "unit": "resource amount"
+  },
+  "upgradeTimeSeconds": {
+   "wikiHeader": "Upgrade Time",
+   "unit": "seconds"
+  },
+  "petHouseLevelRequired": {
+   "wikiHeader": "Pet House Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "damagePerSecond": 110,
+   "damagePerHit": 46.2,
+   "dpsOnResourceBuildings": 550,
+   "hitpoints": 2150,
+   "upgradeCost": null,
+   "upgradeTimeSeconds": null,
+   "petHouseLevelRequired": 12
+  },
+  {
+   "level": 2,
+   "damagePerSecond": 115,
+   "damagePerHit": 48.3,
+   "dpsOnResourceBuildings": 575,
+   "hitpoints": 2300,
+   "upgradeCost": 260000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 12
+  },
+  {
+   "level": 3,
+   "damagePerSecond": 120,
+   "damagePerHit": 50.4,
+   "dpsOnResourceBuildings": 600,
+   "hitpoints": 2450,
+   "upgradeCost": 280000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 12
+  },
+  {
+   "level": 4,
+   "damagePerSecond": 125,
+   "damagePerHit": 52.5,
+   "dpsOnResourceBuildings": 625,
+   "hitpoints": 2600,
+   "upgradeCost": 300000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 12
+  },
+  {
+   "level": 5,
+   "damagePerSecond": 130,
+   "damagePerHit": 54.6,
+   "dpsOnResourceBuildings": 650,
+   "hitpoints": 2750,
+   "upgradeCost": 320000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 12
+  },
+  {
+   "level": 6,
+   "damagePerSecond": 135,
+   "damagePerHit": 56.7,
+   "dpsOnResourceBuildings": 675,
+   "hitpoints": 2900,
+   "upgradeCost": 340000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 12
+  },
+  {
+   "level": 7,
+   "damagePerSecond": 140,
+   "damagePerHit": 58.8,
+   "dpsOnResourceBuildings": 700,
+   "hitpoints": 3050,
+   "upgradeCost": 360000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 12
+  },
+  {
+   "level": 8,
+   "damagePerSecond": 145,
+   "damagePerHit": 60.9,
+   "dpsOnResourceBuildings": 725,
+   "hitpoints": 3200,
+   "upgradeCost": 380000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 12
+  },
+  {
+   "level": 9,
+   "damagePerSecond": 150,
+   "damagePerHit": 63,
+   "dpsOnResourceBuildings": 750,
+   "hitpoints": 3350,
+   "upgradeCost": 400000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 12
+  },
+  {
+   "level": 10,
+   "damagePerSecond": 155,
+   "damagePerHit": 65.1,
+   "dpsOnResourceBuildings": 775,
+   "hitpoints": 3500,
+   "upgradeCost": 420000,
+   "upgradeTimeSeconds": 691200,
+   "petHouseLevelRequired": 12
+  }
+ ],
+ "subpages": [],
+ "mismatches": []
+}

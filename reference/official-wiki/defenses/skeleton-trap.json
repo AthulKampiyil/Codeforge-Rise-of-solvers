@@ -1,0 +1,99 @@
+{
+ "title": "Skeleton Trap",
+ "url": "https://clashofclans.fandom.com/wiki/Skeleton_Trap",
+ "revid": 621660,
+ "retrieved": "2026-09-15",
+ "category": "trap",
+ "clientName": "Skeleton Trap",
+ "clientTable": "traps.csv",
+ "levels": [
+  {
+   "level": 1,
+   "spawnedUnits": 2,
+   "skeletonLevel": 1,
+   "cost": 6000,
+   "townHall": 8
+  },
+  {
+   "level": 2,
+   "spawnedUnits": 3,
+   "skeletonLevel": 1,
+   "cost": 250000,
+   "buildSeconds": 18000,
+   "xp": 134,
+   "townHall": 8
+  },
+  {
+   "level": 3,
+   "spawnedUnits": 4,
+   "skeletonLevel": 1,
+   "cost": 400000,
+   "buildSeconds": 28800,
+   "xp": 169,
+   "townHall": 9
+  },
+  {
+   "level": 4,
+   "spawnedUnits": 5,
+   "skeletonLevel": 1,
+   "cost": 1000000,
+   "buildSeconds": 43200,
+   "xp": 207,
+   "townHall": 10
+  },
+  {
+   "level": 5,
+   "spawnedUnits": 5,
+   "skeletonLevel": 2,
+   "cost": 18000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 8,
+  "size": "1x1",
+  "triggerRadius": 5,
+  "modes": [
+   "ground",
+   "air"
+  ],
+  "favoriteTarget": "none",
+  "skeleton": {
+   "attackSeconds": 0.7,
+   "range": 0.4,
+   "groundMovementSpeed": 24,
+   "airMovementSpeed": 17.6,
+   "levels": {
+    "1": {
+     "dps": 25,
+     "hitpoints": 30
+    },
+    "2": {
+     "dps": 30,
+     "hitpoints": 45
+    }
+   }
+  }
+ },
+ "mismatches": [
+  {
+   "field": "townHall",
+   "level": 1,
+   "wiki": 8,
+   "client": 1,
+   "note": "client trap rows use TownHallLevel 1 for level 1 (availability comes from townhall_levels counts); the wiki lists the unlock Town Hall",
+   "table": "Statistics"
+  }
+ ],
+ "progressionMismatches": [
+  {
+   "field": "townhall",
+   "level": 1,
+   "wiki": 8,
+   "progression": 1,
+   "note": "client trap rows use TownHallLevel 1 for level 1 (availability comes from townhall_levels counts); the wiki lists the unlock Town Hall"
+  }
+ ]
+}

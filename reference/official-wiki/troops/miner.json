@@ -1,0 +1,316 @@
+{
+ "title": "Miner",
+ "page": "Miner",
+ "url": "https://clashofclans.fandom.com/wiki/Miner",
+ "revid": 624732,
+ "retrieved": "2026-09-15",
+ "clientName": "Miner",
+ "clientVersion": "18.400.21",
+ "category": "elixir-troop",
+ "constants": {
+  "housingSpace": 6,
+  "movementSpeedWiki": 32,
+  "internalSpeed": 400,
+  "tilesPerSecond": 4,
+  "attackRangeTiles": 0.5,
+  "attackRangeTilesClient": 0.6,
+  "attackSeconds": 1.7,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Single Target",
+  "targets": "ground",
+  "favoriteTarget": "None",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": true,
+  "unlock": {
+   "building": "Barracks",
+   "level": 12,
+   "townHall": 10
+  },
+  "triggersTraps": true
+ },
+ "client": {
+  "clientName": "Miner",
+  "housingSpace": 6,
+  "internalSpeed": 400,
+  "movementSpeedInGameExact": 32,
+  "movementSpeedInGameRounded": 32,
+  "tilesPerSecond": 4,
+  "attackRangeTiles": 0.6,
+  "attackSeconds": 1.7,
+  "targets": "ground",
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": true,
+  "favoriteTarget": "None",
+  "productionBuilding": "Barracks",
+  "barracksLevel": 12,
+  "unlockTownHall": 10,
+  "triggersTraps": true,
+  "movementOffsetSpeed": 0
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 80,
+   "damagePerHit": 136,
+   "hitpoints": 550,
+   "researchCost": null,
+   "researchSeconds": null,
+   "researchTimeText": "N/A",
+   "laboratoryLevel": null
+  },
+  {
+   "level": 2,
+   "dps": 88,
+   "damagePerHit": 149.6,
+   "hitpoints": 610,
+   "researchCost": 1500000,
+   "researchSeconds": 86400,
+   "researchTimeText": "1d",
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 3,
+   "dps": 96,
+   "damagePerHit": 163.2,
+   "hitpoints": 670,
+   "researchCost": 2600000,
+   "researchSeconds": 172800,
+   "researchTimeText": "2d",
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 4,
+   "dps": 104,
+   "damagePerHit": 176.8,
+   "hitpoints": 730,
+   "researchCost": 3000000,
+   "researchSeconds": 194400,
+   "researchTimeText": "2d 6h",
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 5,
+   "dps": 112,
+   "damagePerHit": 190.4,
+   "hitpoints": 800,
+   "researchCost": 4000000,
+   "researchSeconds": 216000,
+   "researchTimeText": "2d 12h",
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 6,
+   "dps": 120,
+   "damagePerHit": 204,
+   "hitpoints": 900,
+   "researchCost": 4800000,
+   "researchSeconds": 259200,
+   "researchTimeText": "3d",
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 7,
+   "dps": 128,
+   "damagePerHit": 217.6,
+   "hitpoints": 1000,
+   "researchCost": 6000000,
+   "researchSeconds": 345600,
+   "researchTimeText": "4d",
+   "laboratoryLevel": 11
+  },
+  {
+   "level": 8,
+   "dps": 136,
+   "damagePerHit": 231.2,
+   "hitpoints": 1150,
+   "researchCost": 8600000,
+   "researchSeconds": 518400,
+   "researchTimeText": "6d",
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 9,
+   "dps": 144,
+   "damagePerHit": 244.8,
+   "hitpoints": 1350,
+   "researchCost": 10500000,
+   "researchSeconds": 561600,
+   "researchTimeText": "6d 12h",
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 10,
+   "dps": 160,
+   "damagePerHit": 272,
+   "hitpoints": 1550,
+   "researchCost": 12500000,
+   "researchSeconds": 604800,
+   "researchTimeText": "7d",
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 11,
+   "dps": 175,
+   "damagePerHit": 297.5,
+   "hitpoints": 1750,
+   "researchCost": 16500000,
+   "researchSeconds": 820800,
+   "researchTimeText": "9d 12h",
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 12,
+   "dps": 195,
+   "damagePerHit": 331.5,
+   "hitpoints": 2050,
+   "researchCost": 28000000,
+   "researchSeconds": 1252800,
+   "researchTimeText": "14d 12h",
+   "laboratoryLevel": 16
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 550,
+   "dps": 80,
+   "damagePerHit": 136
+  },
+  {
+   "level": 2,
+   "hitpoints": 610,
+   "dps": 88,
+   "damagePerHit": 149.6,
+   "researchCost": 1500000,
+   "researchSeconds": 86400,
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 3,
+   "hitpoints": 670,
+   "dps": 96,
+   "damagePerHit": 163.2,
+   "researchCost": 2600000,
+   "researchSeconds": 172800,
+   "laboratoryLevel": 8
+  },
+  {
+   "level": 4,
+   "hitpoints": 730,
+   "dps": 104,
+   "damagePerHit": 176.8,
+   "researchCost": 3000000,
+   "researchSeconds": 194400,
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 5,
+   "hitpoints": 800,
+   "dps": 112,
+   "damagePerHit": 190.4,
+   "researchCost": 4000000,
+   "researchSeconds": 216000,
+   "laboratoryLevel": 9
+  },
+  {
+   "level": 6,
+   "hitpoints": 900,
+   "dps": 120,
+   "damagePerHit": 204,
+   "researchCost": 4800000,
+   "researchSeconds": 259200,
+   "laboratoryLevel": 10
+  },
+  {
+   "level": 7,
+   "hitpoints": 1000,
+   "dps": 128,
+   "damagePerHit": 217.6,
+   "researchCost": 6000000,
+   "researchSeconds": 345600,
+   "laboratoryLevel": 11
+  },
+  {
+   "level": 8,
+   "hitpoints": 1150,
+   "dps": 136,
+   "damagePerHit": 231.2,
+   "researchCost": 8600000,
+   "researchSeconds": 518400,
+   "laboratoryLevel": 12
+  },
+  {
+   "level": 9,
+   "hitpoints": 1350,
+   "dps": 144,
+   "damagePerHit": 244.8,
+   "researchCost": 10500000,
+   "researchSeconds": 561600,
+   "laboratoryLevel": 13
+  },
+  {
+   "level": 10,
+   "hitpoints": 1550,
+   "dps": 160,
+   "damagePerHit": 272,
+   "researchCost": 12500000,
+   "researchSeconds": 604800,
+   "laboratoryLevel": 14
+  },
+  {
+   "level": 11,
+   "hitpoints": 1750,
+   "dps": 175,
+   "damagePerHit": 297.5,
+   "researchCost": 16500000,
+   "researchSeconds": 820800,
+   "laboratoryLevel": 15
+  },
+  {
+   "level": 12,
+   "hitpoints": 2050,
+   "dps": 195,
+   "damagePerHit": 331.5,
+   "researchCost": 28000000,
+   "researchSeconds": 1252800,
+   "laboratoryLevel": 16
+  }
+ ],
+ "superTroopBoost": {
+  "super troop": "Super Miner",
+  "boost cost": "25,000",
+  "miner level required": "7"
+ },
+ "comparison": {
+  "checked": 77,
+  "matched": 75
+ },
+ "mismatches": [
+  {
+   "field": "attackRangeTiles",
+   "level": null,
+   "wiki": 0.5,
+   "client": 0.6,
+   "clientColumn": "characters.AttackRange/100",
+   "note": "wiki - client = -0.1 tiles; no history entry explains the difference"
+  },
+  {
+   "field": "defensiveWalkSpeed (Troop Movement Speed page)",
+   "level": null,
+   "wiki": "internal 250 (20)",
+   "client": "Speed 400 x UNDERGROUND_UNIT_GROUND_SPEED_PERCENTAGE 70% = 280 (22.4)",
+   "clientColumn": "globals.UNDERGROUND_UNIT_GROUND_SPEED_PERCENTAGE",
+   "note": "unverified whether the global applies to defensive Miners"
+  }
+ ],
+ "ambiguities": [
+  "Range: wiki 0.5 tile vs client AttackRange=60 (0.6 tile).",
+  "Defensive walking speed: wiki 250 internal; client global UNDERGROUND_UNIT_GROUND_SPEED_PERCENTAGE=70 would give 280 (in-game 22.4) if it applies to him."
+ ]
+}

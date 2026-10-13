@@ -1,0 +1,156 @@
+{
+  "title": "Super Wall Breaker",
+  "url": "https://clashofclans.fandom.com/wiki/Super_Wall_Breaker",
+  "revid": 624690,
+  "clientName": "Super Wall Breaker",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Super Wall Breaker",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "Walls (Damage x40)",
+    "attackType": "Melee (Ground Only) Splash (1.6 tiles)",
+    "housingSpace": 8,
+    "movementSpeed": 28,
+    "rangeTiles": 0.6,
+    "specialAbility": "Mega Bomb"
+  },
+  "levels": [
+    {
+      "level": 5,
+      "eventOnly": true,
+      "damage": 34,
+      "deathDamage": 105,
+      "damageVsWalls": 1360,
+      "deathDamageVsWalls": 4200,
+      "hitpoints": 250
+    },
+    {
+      "level": 6,
+      "eventOnly": true,
+      "damage": 56,
+      "deathDamage": 140,
+      "damageVsWalls": 2240,
+      "deathDamageVsWalls": 5600,
+      "hitpoints": 300
+    },
+    {
+      "level": 7,
+      "damage": 78,
+      "deathDamage": 175,
+      "damageVsWalls": 3120,
+      "deathDamageVsWalls": 7000,
+      "hitpoints": 350
+    },
+    {
+      "level": 8,
+      "damage": 100,
+      "deathDamage": 225,
+      "damageVsWalls": 4000,
+      "deathDamageVsWalls": 9000,
+      "hitpoints": 400
+    },
+    {
+      "level": 9,
+      "damage": 120,
+      "deathDamage": 275,
+      "damageVsWalls": 4800,
+      "deathDamageVsWalls": 11000,
+      "hitpoints": 450
+    },
+    {
+      "level": 10,
+      "damage": 130,
+      "deathDamage": 313,
+      "damageVsWalls": 5200,
+      "deathDamageVsWalls": 12520,
+      "hitpoints": 475
+    },
+    {
+      "level": 11,
+      "damage": 140,
+      "deathDamage": 338,
+      "damageVsWalls": 5600,
+      "deathDamageVsWalls": 13520,
+      "hitpoints": 500
+    },
+    {
+      "level": 12,
+      "damage": 150,
+      "deathDamage": 363,
+      "damageVsWalls": 6000,
+      "deathDamageVsWalls": 14520,
+      "hitpoints": 525
+    },
+    {
+      "level": 13,
+      "damage": 160,
+      "deathDamage": 388,
+      "damageVsWalls": 6400,
+      "deathDamageVsWalls": 15520,
+      "hitpoints": 550
+    },
+    {
+      "level": 14,
+      "damage": 170,
+      "deathDamage": 413,
+      "damageVsWalls": 6800,
+      "deathDamageVsWalls": 16520,
+      "hitpoints": 575
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "attackSplashRadiusTiles",
+      "level": null,
+      "wiki": 1.6,
+      "client": 0.8,
+      "note": "DamageRadius 80 (DieDamageRadius 160 matches 1.6)"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "attack",
+      "client": "`DPS` (one hit, `AttackCount` 1), `DamageRadius` 80"
+    },
+    {
+      "mechanic": "death",
+      "client": "`DieDamage`, `DieDamageRadius` 160"
+    },
+    {
+      "mechanic": "wall bonus",
+      "client": "`PreferedTargetBuildingClass` Wall + `PreferedTargetDamageMod` 40"
+    },
+    {
+      "mechanic": "pathing",
+      "client": "`WallMovementCost` 128"
+    }
+  ],
+  "boost": {
+    "wiki": {
+      "baseTroop": "Wall Breaker",
+      "minBaseLevel": 7,
+      "townHallRequired": 11,
+      "clanCastleLevelToReceive": 5,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperWallbreaker",
+      "Original": "Wall Breaker",
+      "MinOriginalLevel_raw": 6,
+      "minBaseLevel": 7,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_WALLBREAKER_INTRO_TH13",
+      "townHallDerived": 11
+    }
+  }
+}

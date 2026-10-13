@@ -1,0 +1,119 @@
+{
+ "title": "Spell Tower",
+ "url": "https://clashofclans.fandom.com/wiki/Spell_Tower",
+ "revid": 624787,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Spell Tower",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "unlocks": "Rage Spell",
+   "hitpoints": 2500,
+   "cost": 9000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 15
+  },
+  {
+   "level": 2,
+   "unlocks": "Poison Spell",
+   "hitpoints": 2800,
+   "cost": 11000000,
+   "buildSeconds": 691200,
+   "xp": 831,
+   "townHall": 15
+  },
+  {
+   "level": 3,
+   "unlocks": "Invisibility Spell",
+   "hitpoints": 3100,
+   "cost": 12000000,
+   "buildSeconds": 734400,
+   "xp": 856,
+   "townHall": 15
+  },
+  {
+   "level": 4,
+   "unlocks": "Earthquake Spell",
+   "hitpoints": 3200,
+   "cost": 27000000,
+   "buildSeconds": 864000,
+   "xp": 929,
+   "townHall": 17
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 15,
+  "size": "2x2",
+  "deployDwellSeconds": 1.2,
+  "rage": {
+   "level": 1,
+   "activationRange": 9,
+   "radius": 5,
+   "durationSeconds": 18,
+   "damageBoostPercent": 60,
+   "heroDamageBoostPercent": 30,
+   "heroSpeedBoost": 15,
+   "rechargeSeconds": 70,
+   "center": "tower",
+   "targets": "ground & air"
+  },
+  "poison": {
+   "level": 2,
+   "activationRange": 9,
+   "radius": 5,
+   "durationSeconds": 12,
+   "maxDps": 60,
+   "speedDecreasePercent": 35,
+   "attackRateDecreasePercent": 25,
+   "rechargeSeconds": 70,
+   "center": "target",
+   "targets": "ground & air"
+  },
+  "invisibility": {
+   "level": 3,
+   "radius": 4.5,
+   "durationSeconds": 4.5,
+   "rechargeSeconds": 50,
+   "trigger": "building in radius damaged by troops",
+   "center": "tower"
+  },
+  "earthquake": {
+   "level": 4,
+   "activationRange": 9,
+   "radius": 4.7,
+   "troopDamagePercentOfMaxHp": 30,
+   "repeatFalloff": "1/(2n-1)",
+   "rechargeSeconds": 50,
+   "center": "target",
+   "targets": "ground"
+  }
+ },
+ "mismatches": [
+  {
+   "field": "range",
+   "level": "all",
+   "wiki": 9,
+   "client": "building AttackRange 800; weapon AttackRange 900 (Invisibility 450)",
+   "note": "the wiki's 9 tiles matches the weapons.csv rows, not the building row"
+  }
+ ],
+ "progressionMismatches": [
+  {
+   "field": "range",
+   "level": "all",
+   "wiki": "9 (Rage/Poison/Earthquake activation), 4.5 (Invisibility)",
+   "progression": 8.0,
+   "note": "progression.json uses the building's AttackRange 800; the spell weapons use 900 / 450"
+  },
+  {
+   "field": "spells",
+   "level": "all",
+   "wiki": "4 spell modes",
+   "progression": "none",
+   "note": "no spell/recharge data derived"
+  }
+ ]
+}

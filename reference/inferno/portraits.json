@@ -1,0 +1,390 @@
+{
+  "sourceSha256": "9eac3c2f1a43dc6639cfec8cf83845f6fb2bc0da82e9a9f928040202576c6c8f",
+  "nativePlaybackVerified": false,
+  "portraits": [
+    {
+      "level": 1,
+      "mode": "single",
+      "path": "assets/catalog-native/inferno-tower/level-1.png",
+      "width": 92,
+      "height": 160,
+      "bounds": [
+        -52,
+        -67,
+        40,
+        93
+      ],
+      "originX": 0.5652173913043478,
+      "originY": 0.41875,
+      "rgbaSha256": "a8aff05376d32a06f1b5cbcff07dd069bdf720c78a24e582e54701f8d1dec7ca"
+    },
+    {
+      "level": 1,
+      "mode": "multi",
+      "path": "assets/inferno-native/portrait/1-multi.png",
+      "width": 92,
+      "height": 160,
+      "bounds": [
+        -52,
+        -67,
+        40,
+        93
+      ],
+      "originX": 0.5652173913043478,
+      "originY": 0.41875,
+      "rgbaSha256": "fd9f78809e9fcf4012b9a12a39f9e8d436c84f0e8f6dac5a5d9f90ed72217e79"
+    },
+    {
+      "level": 2,
+      "mode": "single",
+      "path": "assets/catalog-native/inferno-tower/level-2.png",
+      "width": 91,
+      "height": 142,
+      "bounds": [
+        -52,
+        -67,
+        39,
+        75
+      ],
+      "originX": 0.5714285714285714,
+      "originY": 0.47183098591549294,
+      "rgbaSha256": "40565e3da0b5148374bb0bc2fbf91cd6fb8ebb27d05d8fab706ea447d82b2b7b"
+    },
+    {
+      "level": 2,
+      "mode": "multi",
+      "path": "assets/inferno-native/portrait/2-multi.png",
+      "width": 91,
+      "height": 144,
+      "bounds": [
+        -52,
+        -69,
+        39,
+        75
+      ],
+      "originX": 0.5714285714285714,
+      "originY": 0.4791666666666667,
+      "rgbaSha256": "fd5a342da87194b176b29b950c75a4f592cb1e97374df14fee5ee899633cec5a"
+    },
+    {
+      "level": 3,
+      "mode": "single",
+      "path": "assets/catalog-native/inferno-tower/level-3.png",
+      "width": 94,
+      "height": 142,
+      "bounds": [
+        -54,
+        -67,
+        40,
+        75
+      ],
+      "originX": 0.574468085106383,
+      "originY": 0.47183098591549294,
+      "rgbaSha256": "d8ddca6b18bc6dd3b6972fda18d0fa1f12b677a86678df716e5dc51416fbf849"
+    },
+    {
+      "level": 3,
+      "mode": "multi",
+      "path": "assets/inferno-native/portrait/3-multi.png",
+      "width": 94,
+      "height": 144,
+      "bounds": [
+        -54,
+        -69,
+        40,
+        75
+      ],
+      "originX": 0.574468085106383,
+      "originY": 0.4791666666666667,
+      "rgbaSha256": "56b634bca271b4dc773f74558606148a22f5d26a2cd8e9d51e6fcb8653593526"
+    },
+    {
+      "level": 4,
+      "mode": "single",
+      "path": "assets/catalog-native/inferno-tower/level-4.png",
+      "width": 105,
+      "height": 150,
+      "bounds": [
+        -57,
+        -72,
+        48,
+        78
+      ],
+      "originX": 0.5428571428571428,
+      "originY": 0.48,
+      "rgbaSha256": "c4e9c5d8c734375f350c6f11fd0ed9b863f3815b5652c47afc96f412688852fe"
+    },
+    {
+      "level": 4,
+      "mode": "multi",
+      "path": "assets/inferno-native/portrait/4-multi.png",
+      "width": 105,
+      "height": 152,
+      "bounds": [
+        -57,
+        -74,
+        48,
+        78
+      ],
+      "originX": 0.5428571428571428,
+      "originY": 0.4868421052631579,
+      "rgbaSha256": "74e0c72e4dfc69ab44e3927363d64a6bc96dbdf1b13477faf9881165be051b25"
+    },
+    {
+      "level": 5,
+      "mode": "single",
+      "path": "assets/catalog-native/inferno-tower/level-5.png",
+      "width": 114,
+      "height": 156,
+      "bounds": [
+        -59,
+        -72,
+        55,
+        84
+      ],
+      "originX": 0.5175438596491229,
+      "originY": 0.46153846153846156,
+      "rgbaSha256": "e877dd7cdf900250faae2f634035f435cb34bfae3d113199dd010ce927552174"
+    },
+    {
+      "level": 5,
+      "mode": "multi",
+      "path": "assets/inferno-native/portrait/5-multi.png",
+      "width": 114,
+      "height": 158,
+      "bounds": [
+        -59,
+        -74,
+        55,
+        84
+      ],
+      "originX": 0.5175438596491229,
+      "originY": 0.46835443037974683,
+      "rgbaSha256": "bc81c8cb03bac9f3900e12dabf58bddc0decd002dbf0564f2609d63f7787c23f"
+    },
+    {
+      "level": 6,
+      "mode": "single",
+      "path": "assets/catalog-native/inferno-tower/level-6.png",
+      "width": 99,
+      "height": 149,
+      "bounds": [
+        -54,
+        -72,
+        45,
+        77
+      ],
+      "originX": 0.5454545454545454,
+      "originY": 0.48322147651006714,
+      "rgbaSha256": "1893da71c3ff55d7dcc9d9953ff8f82ca28c366df5ef63ed04265e4524ed755e"
+    },
+    {
+      "level": 6,
+      "mode": "multi",
+      "path": "assets/inferno-native/portrait/6-multi.png",
+      "width": 99,
+      "height": 151,
+      "bounds": [
+        -54,
+        -74,
+        45,
+        77
+      ],
+      "originX": 0.5454545454545454,
+      "originY": 0.4900662251655629,
+      "rgbaSha256": "eada9a0a9a12b6250f69b1b7dd0f03a6bb36c83c8424d5146c529e9701bf1d00"
+    },
+    {
+      "level": 7,
+      "mode": "single",
+      "path": "assets/catalog-native/inferno-tower/level-7.png",
+      "width": 105,
+      "height": 152,
+      "bounds": [
+        -56,
+        -72,
+        49,
+        80
+      ],
+      "originX": 0.5333333333333333,
+      "originY": 0.47368421052631576,
+      "rgbaSha256": "83130178281d5df2402248272ab0e3aa8dd342b8d6f65d149d7b1389e1013c6b"
+    },
+    {
+      "level": 7,
+      "mode": "multi",
+      "path": "assets/inferno-native/portrait/7-multi.png",
+      "width": 105,
+      "height": 154,
+      "bounds": [
+        -56,
+        -74,
+        49,
+        80
+      ],
+      "originX": 0.5333333333333333,
+      "originY": 0.4805194805194805,
+      "rgbaSha256": "fa31ef4c6c0f2ce37e46ba744d4385455d2351c426503e3e79fe5a92ccdccada"
+    },
+    {
+      "level": 8,
+      "mode": "single",
+      "path": "assets/catalog-native/inferno-tower/level-8.png",
+      "width": 124,
+      "height": 166,
+      "bounds": [
+        -63,
+        -72,
+        61,
+        94
+      ],
+      "originX": 0.5080645161290323,
+      "originY": 0.43373493975903615,
+      "rgbaSha256": "df24e9ee8944be4f351af50115e41d4d37b58f066b769432d649699037a92b94"
+    },
+    {
+      "level": 8,
+      "mode": "multi",
+      "path": "assets/inferno-native/portrait/8-multi.png",
+      "width": 124,
+      "height": 168,
+      "bounds": [
+        -63,
+        -74,
+        61,
+        94
+      ],
+      "originX": 0.5080645161290323,
+      "originY": 0.44047619047619047,
+      "rgbaSha256": "cf100bc2022da0b76197adc591015dc616be32ae0c5c2c517a3c2e38fea6a8fe"
+    },
+    {
+      "level": 9,
+      "mode": "single",
+      "path": "assets/catalog-native/inferno-tower/level-9.png",
+      "width": 107,
+      "height": 149,
+      "bounds": [
+        -56,
+        -71,
+        51,
+        78
+      ],
+      "originX": 0.5233644859813084,
+      "originY": 0.47651006711409394,
+      "rgbaSha256": "a382f31d091518beff01acbc49ba3da2c37c18efa57d0f7c78dd184757d05520"
+    },
+    {
+      "level": 9,
+      "mode": "multi",
+      "path": "assets/inferno-native/portrait/9-multi.png",
+      "width": 107,
+      "height": 152,
+      "bounds": [
+        -56,
+        -74,
+        51,
+        78
+      ],
+      "originX": 0.5233644859813084,
+      "originY": 0.4868421052631579,
+      "rgbaSha256": "c1380446a2c13767fafd6ed6110ed2fd058958290598967994daa572873dc7b5"
+    },
+    {
+      "level": 10,
+      "mode": "single",
+      "path": "assets/catalog-native/inferno-tower/level-10.png",
+      "width": 95,
+      "height": 150,
+      "bounds": [
+        -52,
+        -75,
+        43,
+        75
+      ],
+      "originX": 0.5473684210526316,
+      "originY": 0.5,
+      "rgbaSha256": "4eaeedeca16a509da430b34c7361575f4944915fae668f70846eeeef97fd22ad"
+    },
+    {
+      "level": 10,
+      "mode": "multi",
+      "path": "assets/inferno-native/portrait/10-multi.png",
+      "width": 95,
+      "height": 153,
+      "bounds": [
+        -52,
+        -79,
+        43,
+        74
+      ],
+      "originX": 0.5473684210526316,
+      "originY": 0.5163398692810458,
+      "rgbaSha256": "cc1cd8b1daeb3b2057170f7d656f09cef81c9ffea1383bbbf3c8fdf00a6e19e2"
+    },
+    {
+      "level": 11,
+      "mode": "single",
+      "path": "assets/catalog-native/inferno-tower/level-11.png",
+      "width": 97,
+      "height": 150,
+      "bounds": [
+        -53,
+        -75,
+        44,
+        75
+      ],
+      "originX": 0.5463917525773195,
+      "originY": 0.5,
+      "rgbaSha256": "51a30b80a66fe11cb69b35e2a95182e3cabb77bcdb72488ab9427ce065d379c1"
+    },
+    {
+      "level": 11,
+      "mode": "multi",
+      "path": "assets/inferno-native/portrait/11-multi.png",
+      "width": 97,
+      "height": 153,
+      "bounds": [
+        -53,
+        -79,
+        44,
+        74
+      ],
+      "originX": 0.5463917525773195,
+      "originY": 0.5163398692810458,
+      "rgbaSha256": "fd10170b515849797746a9a0f931193960fde651f87d1dd75553341e00dc1d64"
+    },
+    {
+      "level": 12,
+      "mode": "single",
+      "path": "assets/catalog-native/inferno-tower/level-12.png",
+      "width": 173,
+      "height": 178,
+      "bounds": [
+        -92,
+        -78,
+        81,
+        100
+      ],
+      "originX": 0.5317919075144508,
+      "originY": 0.43820224719101125,
+      "rgbaSha256": "a6167d61910801b763ce8dcca1f8ad21f8f54d55663cb804165df18c04830812"
+    },
+    {
+      "level": 12,
+      "mode": "multi",
+      "path": "assets/inferno-native/portrait/12-multi.png",
+      "width": 173,
+      "height": 179,
+      "bounds": [
+        -92,
+        -79,
+        81,
+        100
+      ],
+      "originX": 0.5317919075144508,
+      "originY": 0.441340782122905,
+      "rgbaSha256": "0ce06ea55b75f00ecb4cea186f9472b42a3ca36bff5a3c7b9dc8399b341d1239"
+    }
+  ]
+}

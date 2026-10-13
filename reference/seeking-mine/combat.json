@@ -1,0 +1,129 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "damage": 1500,
+      "cost": 12000,
+      "seconds": 0,
+      "townhall": 1,
+      "setup": "evil_airTrap_setup",
+      "projectile": "LargeDarkElixirBalloon"
+    },
+    {
+      "level": 2,
+      "damage": 1800,
+      "cost": 600000,
+      "seconds": 21600,
+      "townhall": 9,
+      "setup": "evil_airTrap_setup",
+      "projectile": "LargeDarkElixirBalloon"
+    },
+    {
+      "level": 3,
+      "damage": 2100,
+      "cost": 1200000,
+      "seconds": 43200,
+      "townhall": 10,
+      "setup": "evil_airTrap_setup_lvl3",
+      "projectile": "LargeDarkElixirBalloon_lvl3"
+    },
+    {
+      "level": 4,
+      "damage": 2500,
+      "cost": 2500000,
+      "seconds": 129600,
+      "townhall": 13,
+      "setup": "evil_airTrap_setup_lvl3",
+      "projectile": "LargeDarkElixirBalloon_lvl3"
+    },
+    {
+      "level": 5,
+      "damage": 2800,
+      "cost": 5000000,
+      "seconds": 172800,
+      "townhall": 15,
+      "setup": "evil_airTrap_setup_lvl5",
+      "projectile": "LargeDarkElixirBalloon_lvl5"
+    },
+    {
+      "level": 6,
+      "damage": 3000,
+      "cost": 6500000,
+      "seconds": 259200,
+      "townhall": 16,
+      "setup": "evil_airTrap_setup_lvl5",
+      "projectile": "LargeDarkElixirBalloon_lvl5"
+    },
+    {
+      "level": 7,
+      "damage": 3200,
+      "cost": 12000000,
+      "seconds": 432000,
+      "townhall": 17,
+      "setup": "evil_airTrap_setup_lvl7",
+      "projectile": "LargeDarkElixirBalloon_lvl7"
+    },
+    {
+      "level": 8,
+      "damage": 3350,
+      "cost": 19000000,
+      "seconds": 993600,
+      "townhall": 18,
+      "setup": "evil_airTrap_setup_lvl7",
+      "projectile": "LargeDarkElixirBalloon_lvl7"
+    }
+  ],
+  "triggerRadius": 400,
+  "damageRadius": 0,
+  "minHousing": 5,
+  "actionFrame": 7,
+  "triggerFps": 24,
+  "airTrigger": true,
+  "groundTrigger": false,
+  "size": 1,
+  "trigger": "air_trap",
+  "upgrade": "evil_air_trap_upg",
+  "broken": "evil_airTrap_unarmed",
+  "projectiles": {
+    "LargeDarkElixirBalloon": {
+      "export": "evil_airTrap_projectile",
+      "shadow": "simple_shadow_small",
+      "speed": 350,
+      "startHeight": 0,
+      "startOffset": 20,
+      "scale": 100,
+      "playOnce": true,
+      "emitter": "large_airTrap_redSmoke"
+    },
+    "LargeDarkElixirBalloon_lvl3": {
+      "export": "evil_airTrap_projectile_lvl3",
+      "shadow": "simple_shadow_small",
+      "speed": 350,
+      "startHeight": 0,
+      "startOffset": 20,
+      "scale": 100,
+      "playOnce": true,
+      "emitter": "large_airTrap_redSmoke"
+    },
+    "LargeDarkElixirBalloon_lvl5": {
+      "export": "evil_airTrap_projectile_lvl5",
+      "shadow": "simple_shadow_small",
+      "speed": 350,
+      "startHeight": 0,
+      "startOffset": 20,
+      "scale": 100,
+      "playOnce": true,
+      "emitter": "large_airTrap_redSmoke"
+    },
+    "LargeDarkElixirBalloon_lvl7": {
+      "export": "evil_airTrap_projectile_lvl7",
+      "shadow": "simple_shadow_small",
+      "speed": 350,
+      "startHeight": 0,
+      "startOffset": 20,
+      "scale": 100,
+      "playOnce": true,
+      "emitter": "large_airTrap_redSmoke"
+    }
+  }
+}

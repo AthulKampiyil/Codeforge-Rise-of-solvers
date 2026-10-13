@@ -1,0 +1,76 @@
+{
+ "title": "Prospector",
+ "url": "https://clashofclans.fandom.com/wiki/Prospector",
+ "revid": 623235,
+ "retrieved": "2026-09-15",
+ "clientName": "Prospector",
+ "clientTable": "villager_apprentices",
+ "category": "mechanic",
+ "summary": "TH10 Helper (Gold Pass CPoints) who converts up to 2,000 Shiny / 120 Glowy / 2 Starry Ore into another ore type once per helper work day.",
+ "constants": {
+  "wiki": {},
+  "client": {
+   "SourceResource": "CommonOre;RareOre;EpicOre",
+   "TargetResource": "CommonOre;RareOre;EpicOre",
+   "MaxTargetResource": "2000;120;2",
+   "CostResource": "Diamonds",
+   "CostByRow": [
+    "100",
+    "250",
+    "500",
+    "1000",
+    "1000",
+    "1500",
+    "1500"
+   ],
+   "ResourceConvertionMultiplier": "100"
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "oreConversionMaxShinyOre": {
+   "wikiHeader": "Ore Conversion Max (Shiny Ore)",
+   "unit": "count/points"
+  },
+  "oreConversionMaxGlowyOre": {
+   "wikiHeader": "Ore Conversion Max (Glowy Ore)",
+   "unit": "count/points"
+  },
+  "oreConversionMaxStarryOre": {
+   "wikiHeader": "Ore Conversion Max (Starry Ore)",
+   "unit": "count/points"
+  },
+  "townHallLevelRequired": {
+   "wikiHeader": "Town Hall Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "oreConversionMaxShinyOre": 2000,
+   "oreConversionMaxGlowyOre": 120,
+   "oreConversionMaxStarryOre": 2,
+   "townHallLevelRequired": 10
+  }
+ ],
+ "mismatches": [
+  {
+   "field": "levels/cost",
+   "level": null,
+   "wiki": "1 level; unlocked with Gold Pass CPoints",
+   "client": "7 rows with Diamonds Cost 100…1500",
+   "note": "meaning of client rows (per-use or per-level gem price?) unverified"
+  },
+  {
+   "field": "conversionRate",
+   "level": null,
+   "wiki": "not stated",
+   "client": "2000:120:2 via Max*Resource",
+   "note": "rate inferred from client columns"
+  }
+ ]
+}

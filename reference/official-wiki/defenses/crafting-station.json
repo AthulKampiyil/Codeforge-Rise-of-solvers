@@ -1,0 +1,38 @@
+{
+ "title": "Crafting Station",
+ "url": "https://clashofclans.fandom.com/wiki/Crafting_Station",
+ "revid": 624956,
+ "retrieved": "2026-09-15",
+ "category": "building",
+ "clientName": "Crafting Station",
+ "clientTable": "buildings.csv",
+ "levels": [],
+ "constants": {
+  "size": "3x3",
+  "hitpointsBeforeChoice": 1000,
+  "buildCost": 0,
+  "modulesPerDefense": 3,
+  "moduleMaxLevel": 10,
+  "defenseLevelRange": [
+   3,
+   30
+  ],
+  "sparkyStonesPerModuleLevel": 8,
+  "phaseLengthMonths": 4,
+  "unlockTownHallWiki": 11,
+  "currentDefenses": [
+   "Hot Candle",
+   "Hero Hunter",
+   "Cake-A-Pult"
+  ]
+ },
+ "mismatches": [
+  {
+   "field": "unlockTownHall",
+   "level": 1,
+   "wiki": "11 (since Aug 1, 2026; summary text still says 18)",
+   "client": "TownHallLevel 17; townhall_levels count only at TH18",
+   "note": "the client predates (or does not encode) the TH11 availability; module level-1 rows also require TH12 in the client vs TH11 on the wiki"
+  }
+ ]
+}

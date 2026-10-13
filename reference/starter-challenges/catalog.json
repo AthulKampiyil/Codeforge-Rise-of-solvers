@@ -1,0 +1,869 @@
+{
+  "clientVersion": "18.400.21",
+  "bundle": "7f04bdfdc4124b1f49308423bb8f4aa8b137aae3",
+  "baseUrl": "https://game-assets.clashofclans.com/7f04bdfdc4124b1f49308423bb8f4aa8b137aae3/",
+  "sources": {
+    "logic/starter_pass.csv": "b27a61ee12959d23153c3e12ac5f21d688d94be0a9585f504ec2fccda0f657e6",
+    "logic/starter_pass_tasks.csv": "51d2534321c1de2c082125cf484b844c2cfb4215ec03f131268b257d35e24fcd",
+    "logic/buildings.csv": "9aed5fed876e2914a22fa7fed688a651c691ab06170d60e2bda8dc9262fbccb1",
+    "localization/texts.csv": "affdf43926df044cb3c09d833b07365aa01ea99985771afa5fa0dd926f36c569"
+  },
+  "title": "Starter Pass",
+  "endText": "Starter Pass ends when you reach Town Hall 7",
+  "endTownHall": 7,
+  "tiers": [
+    {
+      "score": 100,
+      "reward": {
+        "kind": "elixir",
+        "amount": 2000
+      }
+    },
+    {
+      "score": 200,
+      "reward": {
+        "kind": "gold",
+        "amount": 2000
+      }
+    },
+    {
+      "score": 400,
+      "reward": {
+        "kind": "gems",
+        "amount": 10
+      }
+    },
+    {
+      "score": 600,
+      "reward": {
+        "kind": "gold",
+        "amount": 4000
+      }
+    },
+    {
+      "score": 800,
+      "reward": {
+        "kind": "elixir",
+        "amount": 4000
+      }
+    },
+    {
+      "score": 1000,
+      "reward": {
+        "kind": "gems",
+        "amount": 10
+      }
+    },
+    {
+      "score": 1200,
+      "reward": {
+        "kind": "gold",
+        "amount": 8000
+      }
+    },
+    {
+      "score": 1400,
+      "reward": {
+        "kind": "elixir",
+        "amount": 8000
+      }
+    },
+    {
+      "score": 1600,
+      "reward": {
+        "kind": "gems",
+        "amount": 10
+      }
+    },
+    {
+      "score": 1800,
+      "reward": {
+        "kind": "gold",
+        "amount": 25000
+      }
+    },
+    {
+      "score": 2000,
+      "reward": {
+        "kind": "elixir",
+        "amount": 25000
+      }
+    },
+    {
+      "score": 2200,
+      "reward": {
+        "kind": "gems",
+        "amount": 10
+      }
+    },
+    {
+      "score": 2400,
+      "reward": {
+        "kind": "gold",
+        "amount": 100000
+      }
+    },
+    {
+      "score": 2600,
+      "reward": {
+        "kind": "elixir",
+        "amount": 100000
+      }
+    },
+    {
+      "score": 2800,
+      "reward": {
+        "kind": "gems",
+        "amount": 10
+      }
+    },
+    {
+      "score": 3000,
+      "reward": {
+        "kind": "gold",
+        "amount": 250000
+      }
+    },
+    {
+      "score": 3200,
+      "reward": {
+        "kind": "elixir",
+        "amount": 250000
+      }
+    },
+    {
+      "score": 3400,
+      "reward": {
+        "kind": "item",
+        "item": "Resource Potion",
+        "amount": 2
+      }
+    },
+    {
+      "score": 3600,
+      "reward": {
+        "kind": "gold",
+        "amount": 500000
+      }
+    },
+    {
+      "score": 3800,
+      "reward": {
+        "kind": "elixir",
+        "amount": 500000
+      }
+    },
+    {
+      "score": 4000,
+      "reward": {
+        "kind": "item",
+        "item": "Research Potion",
+        "amount": 2
+      }
+    },
+    {
+      "score": 4200,
+      "reward": {
+        "kind": "gold",
+        "amount": 1000000
+      }
+    },
+    {
+      "score": 4400,
+      "reward": {
+        "kind": "elixir",
+        "amount": 1000000
+      }
+    },
+    {
+      "score": 4600,
+      "reward": {
+        "kind": "item",
+        "item": "Builder Potion",
+        "amount": 1
+      }
+    },
+    {
+      "score": 4800,
+      "reward": {
+        "kind": "item",
+        "item": "Rune of Gold",
+        "amount": 1
+      }
+    },
+    {
+      "score": 5000,
+      "reward": {
+        "kind": "item",
+        "item": "Book of Building",
+        "amount": 1
+      }
+    }
+  ],
+  "challenges": [
+    {
+      "id": "TH2_Battle_LootGold",
+      "title": "Gold Grabber",
+      "info": "Loot 4,000 total Gold from Single Player or Multiplayer Battles.",
+      "type": "LootResources",
+      "progress": "accumulative",
+      "score": 50,
+      "quantity": 4000,
+      "townhall": 2,
+      "subject": "Gold"
+    },
+    {
+      "id": "TH2_Home_UpgradeGoldStorage",
+      "title": "Bigger Coffers",
+      "info": "Upgrade your Gold Storage to level 2.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 25,
+      "quantity": 1,
+      "townhall": 2,
+      "quantity2": 2,
+      "subject": "Gold Storage"
+    },
+    {
+      "id": "TH2_Home_BuildArcherTower",
+      "title": "Sentry Duty",
+      "info": "Get an Archer Tower from the Shop",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 75,
+      "quantity": 1,
+      "townhall": 2,
+      "quantity2": 1,
+      "subject": "Archer Tower"
+    },
+    {
+      "id": "TH2_Home_BuildCannon",
+      "title": "Build Cannon",
+      "info": "Get another Cannon from the Shop!",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 25,
+      "quantity": 2,
+      "townhall": 2,
+      "quantity2": 1,
+      "subject": "Cannon"
+    },
+    {
+      "id": "TH2_Win_Achievement",
+      "title": "Goal Oriented",
+      "info": "Claim 5 Achievements from your Profile.",
+      "type": "ClaimTotalAchievements",
+      "progress": "best",
+      "score": 150,
+      "quantity": 5,
+      "townhall": 2
+    },
+    {
+      "id": "TH2_Destroy_HomeBuildings",
+      "title": "Destroy Anything",
+      "info": "Destroy 50x Buildings in Multiplayer Battles. Anything counts.",
+      "type": "DestroyHomeBuildings",
+      "progress": "accumulative",
+      "score": 125,
+      "quantity": 50,
+      "townhall": 2
+    },
+    {
+      "id": "TH2_Home_UpgradeArmyCamp",
+      "title": "Bigger Camps",
+      "info": "Upgrade your Army Camp to level 2.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 75,
+      "quantity": 1,
+      "townhall": 2,
+      "quantity2": 2,
+      "subject": "Army Camp"
+    },
+    {
+      "id": "TH2_Home_UpgradeGoldMine",
+      "title": "Mining Mania",
+      "info": "Upgrade 2x Gold Mine to level 3.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 100,
+      "quantity": 2,
+      "townhall": 2,
+      "quantity2": 3,
+      "subject": "Gold Mine"
+    },
+    {
+      "id": "TH2_Home_UpgradeElixir",
+      "title": "Pump It Up",
+      "info": "Upgrade 2x Elixir Collector to level 4.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 150,
+      "quantity": 2,
+      "townhall": 2,
+      "quantity2": 4,
+      "subject": "Elixir Collector"
+    },
+    {
+      "id": "TH2_Home_BuildWalls",
+      "title": "Wall Builder",
+      "info": "Get 25x Wall Pieces from the Shop.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 50,
+      "quantity": 25,
+      "townhall": 2,
+      "quantity2": 1,
+      "subject": "Wall"
+    },
+    {
+      "id": "TH2_Home_UpgradeBarracks",
+      "title": "New Muscle",
+      "info": "Upgrade 1x Barracks to level 2.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 50,
+      "quantity": 1,
+      "townhall": 2,
+      "quantity2": 2,
+      "subject": "Barracks"
+    },
+    {
+      "id": "TH2_UpgradeAny",
+      "title": "Upgrade Any Building",
+      "info": "Start 6x Building Upgrades in your Village.",
+      "type": "StartUpgradeHome",
+      "progress": "accumulative",
+      "score": 75,
+      "quantity": 6,
+      "townhall": 2
+    },
+    {
+      "id": "TH2_Win_StarsUsingArchers",
+      "title": "Attacking Archers",
+      "info": "Earn 7x Stars from Multiplayer Battles using 15 Archers.",
+      "type": "WinStarsUsingTroop",
+      "progress": "accumulative",
+      "score": 100,
+      "quantity": 7,
+      "townhall": 2,
+      "quantity2": 15,
+      "subject": "Archer"
+    },
+    {
+      "id": "Social_Home_BuildClanCastle",
+      "title": "Repair Clan Castle",
+      "info": "Rebuild the Clan Castle ruins in your village.",
+      "type": "RepairBuilding",
+      "progress": "best",
+      "score": 200,
+      "quantity": 1,
+      "townhall": 3,
+      "subject": "Clan Castle"
+    },
+    {
+      "id": "Social_JoinClan",
+      "title": "Finding Friends",
+      "info": "Join a Clan! Membership has its benefits, including getting powerful Reinforcement Troops!",
+      "type": "HaveClan",
+      "progress": "best",
+      "score": 150,
+      "quantity": 1,
+      "townhall": 3
+    },
+    {
+      "id": "Social_RequestTroops_TH3",
+      "title": "Request Reinforcements",
+      "info": "Ask your Clan for Reinforcements 3x times. You can request reinforcements through Clan Castle or Training Menu.",
+      "type": "RequestDonations",
+      "progress": "accumulative",
+      "score": 100,
+      "quantity": 3,
+      "townhall": 3
+    },
+    {
+      "id": "TH3_Home_BuildLaboratory",
+      "title": "Mad Science",
+      "info": "Get the Laboratory from the Shop",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 100,
+      "quantity": 1,
+      "townhall": 3,
+      "quantity2": 1,
+      "subject": "Laboratory"
+    },
+    {
+      "id": "TH3_Home_BuildMortar",
+      "title": "Long Range Threat",
+      "info": "Get a Mortar from the Shop",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 75,
+      "quantity": 1,
+      "townhall": 3,
+      "quantity2": 1,
+      "subject": "Mortar"
+    },
+    {
+      "id": "TH3_Win_StarsSinglePlayer",
+      "title": "Get Those Goblins!",
+      "info": "Earn 24x Stars from Single Player Goblin Maps",
+      "type": "GetTotalSinglePlayerStars",
+      "progress": "best",
+      "score": 50,
+      "quantity": 24,
+      "townhall": 3
+    },
+    {
+      "id": "TH3_Home_CollectGold",
+      "title": "Earn Gold!",
+      "info": "Collect 20,000 Gold from your Gold Mines.",
+      "type": "CollectResources",
+      "progress": "accumulative",
+      "score": 50,
+      "quantity": 20000,
+      "townhall": 3,
+      "subject": "Gold"
+    },
+    {
+      "id": "TH3_Battle_LootElixir",
+      "title": "Elixir Stealer",
+      "info": "Loot 100,000 total Elixir from Single Player or Multiplayer Battles.",
+      "type": "LootResources",
+      "progress": "accumulative",
+      "score": 75,
+      "quantity": 100000,
+      "townhall": 3,
+      "subject": "Elixir"
+    },
+    {
+      "id": "TH3_Home_UpgradeBarracks",
+      "title": "Better Barracks",
+      "info": "Upgrade 1x Barracks to level 5.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 100,
+      "quantity": 1,
+      "townhall": 3,
+      "quantity2": 5,
+      "subject": "Barracks"
+    },
+    {
+      "id": "TH3_Home_UpgradeElixirStorage",
+      "title": "Stock Up",
+      "info": "Upgrade 2x Elixir Storage to level 5.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 75,
+      "quantity": 2,
+      "townhall": 3,
+      "quantity2": 5,
+      "subject": "Elixir Storage"
+    },
+    {
+      "id": "TH3_Home_TrainLaboratory",
+      "title": "Upgrading Your Army",
+      "info": "Research 2x Upgrades in your Laboratory",
+      "type": "StartLabUpgradeHome",
+      "progress": "accumulative",
+      "score": 125,
+      "quantity": 2,
+      "townhall": 3
+    },
+    {
+      "id": "TH3_Destroy_ArcherTowers",
+      "title": "Annihilating Archer Towers",
+      "info": "Destroy 5x Archer Towers in Multiplayer Battles.",
+      "type": "DestroyBuilding",
+      "progress": "accumulative",
+      "score": 75,
+      "quantity": 5,
+      "townhall": 3,
+      "subject": "Archer Tower"
+    },
+    {
+      "id": "TH3_Win_StarsUsingWallBreakers",
+      "title": "Break Through!",
+      "info": "Earn 12x Stars from Multiplayer Battles using 3 Wall Breakers.",
+      "type": "WinStarsUsingTroop",
+      "progress": "accumulative",
+      "score": 75,
+      "quantity": 12,
+      "townhall": 3,
+      "quantity2": 3,
+      "subject": "Wall Breaker"
+    },
+    {
+      "id": "TH3_Home_UpgradeGoldStorage",
+      "title": "Bigger Coffers",
+      "info": "Upgrade 2x Gold Storage to level 6.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 75,
+      "quantity": 2,
+      "townhall": 3,
+      "quantity2": 6,
+      "subject": "Gold Storage"
+    },
+    {
+      "id": "TH4_Home_BuildAirDefense",
+      "title": "Defend Your Skies!",
+      "info": "Upgrade 1x Air Defense to level 2.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 50,
+      "quantity": 1,
+      "townhall": 4,
+      "quantity2": 2,
+      "subject": "Air Defense"
+    },
+    {
+      "id": "TH4_Home_UpgradeAny",
+      "title": "Upgrade Any Building",
+      "info": "Start 9x Building Upgrades in your Village.",
+      "type": "StartUpgradeHome",
+      "progress": "accumulative",
+      "score": 100,
+      "quantity": 9,
+      "townhall": 4
+    },
+    {
+      "id": "TH4_Win_StarsPractice",
+      "title": "Learn the Ropes",
+      "info": "Win 3x total Stars from Practice Levels. Find Practice Levels in the Attack Menu!",
+      "type": "GetTotalPracticeStars",
+      "progress": "best",
+      "score": 50,
+      "quantity": 3,
+      "townhall": 4
+    },
+    {
+      "id": "TH4_Home_DonateTroops",
+      "title": "Helping Hand",
+      "info": "Donate a total of 100 Housing Space worth of troops.",
+      "type": "DonateTroopCapacity",
+      "progress": "accumulative",
+      "score": 75,
+      "quantity": 100,
+      "townhall": 4
+    },
+    {
+      "id": "TH4_UpgradeLaboratory",
+      "title": "Laboratory Expansion",
+      "info": "Upgrade 1x Laboratory to level 2.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 75,
+      "quantity": 1,
+      "townhall": 4,
+      "quantity2": 2,
+      "subject": "Laboratory"
+    },
+    {
+      "id": "TH4_Home_TrainLaboratory",
+      "title": "Upgrading Your Army",
+      "info": "Research 2x Upgrades in your Laboratory",
+      "type": "StartLabUpgradeHome",
+      "progress": "accumulative",
+      "score": 100,
+      "quantity": 2,
+      "townhall": 4
+    },
+    {
+      "id": "TH4_Destroy_Mortars",
+      "title": "Mortar Mauler",
+      "info": "Destroy 5x Mortar in Multiplayer Battles.",
+      "type": "DestroyBuilding",
+      "progress": "accumulative",
+      "score": 100,
+      "quantity": 5,
+      "townhall": 4,
+      "subject": "Mortar"
+    },
+    {
+      "id": "TH4_Win_Stars",
+      "title": "Battle for Stars!",
+      "info": "Collect 20x Stars from Multiplayer Battles.",
+      "type": "GetHomeBattleStars",
+      "progress": "accumulative",
+      "score": 125,
+      "quantity": 20,
+      "townhall": 4
+    },
+    {
+      "id": "TH4_Win_StarsUnderTimeLimit",
+      "title": "Speedy Stars",
+      "info": "Collect 10x Stars from Multiplayer Battles. Only Stars earned in the first 60 seconds count.",
+      "type": "GetHomeStarsUnderTimeLimit",
+      "progress": "accumulative",
+      "score": 75,
+      "quantity": 10,
+      "townhall": 4,
+      "quantity2": 60
+    },
+    {
+      "id": "TH4_Home_UpgradeGoldMine",
+      "title": "Mining Mania",
+      "info": "Upgrade 4x Gold Mine to level 7.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 125,
+      "quantity": 4,
+      "townhall": 4,
+      "quantity2": 7,
+      "subject": "Gold Mine"
+    },
+    {
+      "id": "TH4_Home_UpgradeArcherTower",
+      "title": "Better Bows",
+      "info": "Upgrade 2x Archer Tower to level 4.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 50,
+      "quantity": 2,
+      "townhall": 4,
+      "quantity2": 4,
+      "subject": "Archer Tower"
+    },
+    {
+      "id": "TH5_Home_BuildSpellFactory",
+      "title": "Magical Moves",
+      "info": "Unlock Spells with a Spell Factory from the Shop.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 75,
+      "quantity": 1,
+      "townhall": 5,
+      "quantity2": 1,
+      "subject": "Spell Factory"
+    },
+    {
+      "id": "TH5_Home_CollectElixir",
+      "title": "Earn Elixir!",
+      "info": "Collect 1,000,000 Elixir from your Elixir Collectors.",
+      "type": "CollectResources",
+      "progress": "accumulative",
+      "score": 100,
+      "quantity": 1000000,
+      "townhall": 5,
+      "subject": "Elixir"
+    },
+    {
+      "id": "TH5_Home_UpgradeBarracks",
+      "title": "New Muscle",
+      "info": "Upgrade 1x Barracks to level 7.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 50,
+      "quantity": 1,
+      "townhall": 5,
+      "quantity2": 7,
+      "subject": "Barracks"
+    },
+    {
+      "id": "TH5_Home_BuildWizardTower",
+      "title": "Defensive Wizardry",
+      "info": "Build a Wizard Tower to level 2.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 50,
+      "quantity": 1,
+      "townhall": 5,
+      "quantity2": 2,
+      "subject": "Wizard Tower"
+    },
+    {
+      "id": "TH5_Battle_DeployTroops",
+      "title": "Charge!",
+      "info": "Deploy 500 Housing Space worth of Troops in Multiplayer Battles.",
+      "type": "DeployTroopHousingSpace",
+      "progress": "accumulative",
+      "score": 75,
+      "quantity": 500,
+      "townhall": 5
+    },
+    {
+      "id": "TH5_Home_DonateSpells",
+      "title": "Donate Spells",
+      "info": "Donate a total of 5 Housing Space worth of Spells.",
+      "type": "DonateSpellCapacity",
+      "progress": "accumulative",
+      "score": 75,
+      "quantity": 5,
+      "townhall": 5
+    },
+    {
+      "id": "TH5_Battle_DeploySpells",
+      "title": "Magic in the Air",
+      "info": "Deploy 20 Housing Space worth of Spells in Multiplayer Battles.",
+      "type": "DeploySpellHousingSpace",
+      "progress": "accumulative",
+      "score": 100,
+      "quantity": 20,
+      "townhall": 5
+    },
+    {
+      "id": "TH5_Destroy_WizardTowers",
+      "title": "Wizard Tower Warfare",
+      "info": "Destroy 12x Wizard Tower in Multiplayer Battles.",
+      "type": "DestroyBuilding",
+      "progress": "accumulative",
+      "score": 100,
+      "quantity": 12,
+      "townhall": 5,
+      "subject": "Wizard Tower"
+    },
+    {
+      "id": "TH5_Win_StarsUsingWizards",
+      "title": "Blizzard of Wizards",
+      "info": "Earn 10x Stars from Multiplayer Battles using 5 Wizards.",
+      "type": "WinStarsUsingTroop",
+      "progress": "accumulative",
+      "score": 100,
+      "quantity": 10,
+      "townhall": 5,
+      "quantity2": 5,
+      "subject": "Wizard"
+    },
+    {
+      "id": "TH5_Home_UpgradeArmyCamp",
+      "title": "Bigger Camps",
+      "info": "Upgrade 3x Army Camp to level 5.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 150,
+      "quantity": 3,
+      "townhall": 5,
+      "quantity2": 5,
+      "subject": "Army Camp"
+    },
+    {
+      "id": "TH5_Destroy_HomeBuildings",
+      "title": "Destroy Anything",
+      "info": "Destroy 200x Buildings in Multiplayer Battles. Anything counts.",
+      "type": "DestroyHomeBuildings",
+      "progress": "accumulative",
+      "score": 175,
+      "quantity": 200,
+      "townhall": 5
+    },
+    {
+      "id": "TH5_Win_GoldTarget",
+      "title": "Loot Gold!",
+      "info": "Loot at least 250,000 Gold from a single Multiplayer Battle.",
+      "type": "LootResources",
+      "progress": "best",
+      "score": 75,
+      "quantity": 250000,
+      "townhall": 5,
+      "subject": "Gold"
+    },
+    {
+      "id": "TH5_Home_UpgradeBuilderHut",
+      "title": "It's Hammer Time",
+      "info": "Get a third Builder's Hut from the Shop",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 75,
+      "quantity": 3,
+      "townhall": 5,
+      "quantity2": 1,
+      "subject": "Builders Hut"
+    },
+    {
+      "id": "TH4_Home_ClearObstacles",
+      "title": "Yard Work",
+      "info": "Clear 10 obstacles from your Home Village or Builder Base.",
+      "type": "ClearObstacles",
+      "progress": "accumulative",
+      "score": 25,
+      "quantity": 10,
+      "townhall": 6
+    },
+    {
+      "id": "TH6_Home_UpgradeAny",
+      "title": "Upgrade Any Building",
+      "info": "Start 15x Building Upgrades in your Village.",
+      "type": "StartUpgradeHome",
+      "progress": "accumulative",
+      "score": 200,
+      "quantity": 15,
+      "townhall": 6
+    },
+    {
+      "id": "TH6_Home_TrainLaboratory",
+      "title": "Upgrading Your Army",
+      "info": "Research 5x Upgrades in your Laboratory",
+      "type": "StartLabUpgradeHome",
+      "progress": "accumulative",
+      "score": 150,
+      "quantity": 5,
+      "townhall": 6
+    },
+    {
+      "id": "TH6_Home_UpgradeWall",
+      "title": "Putting Up Barricades",
+      "info": "Upgrade Walls 100 times.",
+      "type": "WallUpgradeHome",
+      "progress": "accumulative",
+      "score": 50,
+      "quantity": 100,
+      "townhall": 6
+    },
+    {
+      "id": "TH6_Win_StarsPractice",
+      "title": "Learn the Ropes",
+      "info": "Win 9x total Stars from Practice Levels. Find Practice Levels in the Attack Menu!",
+      "type": "GetTotalPracticeStars",
+      "progress": "best",
+      "score": 75,
+      "quantity": 9,
+      "townhall": 6
+    },
+    {
+      "id": "TH6_Win_Stars",
+      "title": "Battle for Stars!",
+      "info": "Collect 30x Stars from Multiplayer Battles.",
+      "type": "GetHomeBattleStars",
+      "progress": "accumulative",
+      "score": 250,
+      "quantity": 30,
+      "townhall": 6
+    },
+    {
+      "id": "TH6_Win_StarsSinglePlayer",
+      "title": "Get Those Goblins!",
+      "info": "Earn 75x Stars from Single Player Goblin Maps",
+      "type": "GetTotalSinglePlayerStars",
+      "progress": "best",
+      "score": 100,
+      "quantity": 75,
+      "townhall": 6
+    },
+    {
+      "id": "TH6_Home_UpgradeGoldStorage",
+      "title": "Bigger Coffers",
+      "info": "Upgrade 2x Gold Storage to level 10.",
+      "type": "UpgradeBuilding",
+      "progress": "best",
+      "score": 150,
+      "quantity": 2,
+      "townhall": 6,
+      "quantity2": 10,
+      "subject": "Gold Storage"
+    },
+    {
+      "id": "TH6_Win_StarsUsingHealers",
+      "title": "Healing Hands",
+      "info": "Earn 10x Stars from Multiplayer Battles using 2 Healers.",
+      "type": "WinStarsUsingTroop",
+      "progress": "accumulative",
+      "score": 100,
+      "quantity": 10,
+      "townhall": 6,
+      "quantity2": 2,
+      "subject": "Healer"
+    }
+  ]
+}

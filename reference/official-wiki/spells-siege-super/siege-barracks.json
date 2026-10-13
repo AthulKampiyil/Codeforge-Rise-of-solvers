@@ -1,0 +1,98 @@
+{
+  "title": "Siege Barracks",
+  "url": "https://clashofclans.fandom.com/wiki/Siege_Barracks",
+  "revid": 624362,
+  "clientName": "Siege Barracks",
+  "category": "siege-machine",
+  "retrieved": "2026-09-15",
+  "contentPage": "Siege Barracks",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "housingSpace": 1,
+    "movementSpeed": 0,
+    "lifetimeSeconds": 30,
+    "workshopLevel": 4
+  },
+  "levels": [
+    {
+      "level": 1,
+      "hitpoints": 3300,
+      "pekkas": 1,
+      "wizards": 6,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "hitpoints": 3700,
+      "pekkas": 1,
+      "wizards": 8,
+      "researchCost": 3500000,
+      "researchTimeHours": 72,
+      "laboratoryLevel": 10
+    },
+    {
+      "level": 3,
+      "hitpoints": 4100,
+      "pekkas": 1,
+      "wizards": 10,
+      "researchCost": 5000000,
+      "researchTimeHours": 96,
+      "laboratoryLevel": 10
+    },
+    {
+      "level": 4,
+      "hitpoints": 4500,
+      "pekkas": 1,
+      "wizards": 11,
+      "researchCost": 8000000,
+      "researchTimeHours": 168,
+      "laboratoryLevel": 11
+    },
+    {
+      "level": 5,
+      "hitpoints": 4800,
+      "pekkas": 2,
+      "wizards": 11,
+      "researchCost": 18000000,
+      "researchTimeHours": 288,
+      "laboratoryLevel": 14
+    },
+    {
+      "level": 6,
+      "hitpoints": 5100,
+      "pekkas": 2,
+      "wizards": 12,
+      "researchCost": 27000000,
+      "researchTimeHours": 360,
+      "laboratoryLevel": 16
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "spawns",
+      "client": "`BunkerTroops` = [PEKKA, Wizard] (array stored across client rows 1-2) with counts `BunkerTroopCount1` (P.E.K.K.A) and `BunkerTroopCount2` (Wizards)"
+    },
+    {
+      "mechanic": "lifetime",
+      "client": "`BunkerDegenerationTime` 30000 ms"
+    },
+    {
+      "mechanic": "spawn start",
+      "client": "`SpawnIdle` 1300 ms"
+    },
+    {
+      "mechanic": "stationary",
+      "client": "`Speed` 0, `AttackRange` 0, `DPS` 0"
+    },
+    {
+      "mechanic": "manual release",
+      "client": "SiegeMachineCarrierSelfDestruct"
+    }
+  ]
+}

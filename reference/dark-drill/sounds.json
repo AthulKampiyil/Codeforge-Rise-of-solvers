@@ -1,0 +1,150 @@
+{
+  "sources": {
+    "fingerprint.json": "ecb5b05d632831cd706e4e993158b63635445257ad254bec97c371b078e3044b",
+    "sfx/building_destroyed_01.ogg": "fd8295765aa86ff5c7c6be1159cd8fc97aed3c858c29fbdb1af5e3d5c5ce7f04",
+    "sfx/dark_drill_pickup_02.ogg": "0aed0e8230ea083a3970e1072ada56ee59b544c38df5bee9b468ffac579a730f",
+    "sfx/dark_drill_place_07.ogg": "b6162168a5c7204a66f2a6e419c2093e572b2c799f30b39ff8d29665bd0b9585"
+  },
+  "definitionSha256": "f6f3195984075da3841802390344f7c612cee7a9761169388477f07462cb2932",
+  "effects": {
+    "Building Destroyed": [
+      {
+        "Name": "Building Destroyed",
+        "ParticleEmitter": "Building Destroyed",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "Objects",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/building_destroyed_01.ogg",
+        "Volume": "80",
+        "MinPitch": "85",
+        "MaxPitch": "95",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      },
+      {
+        "ParticleEmitter": "Smoke",
+        "EmitterDelayMs": "0"
+      },
+      {
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0"
+      }
+    ],
+    "Dark Elixir Drill Pickup": [
+      {
+        "Name": "Dark Elixir Drill Pickup",
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "None",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/dark_drill_pickup_02.ogg",
+        "Volume": "70",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ],
+    "Dark Elixir Drill Place": [
+      {
+        "Name": "Dark Elixir Drill Place",
+        "ParticleEmitter": "Grass",
+        "EmitterDelayMs": "0",
+        "IsoLayer": "None",
+        "CameraShake": "0",
+        "CameraShakeTimeMS": "0",
+        "CameraShakeInReplay": "FALSE",
+        "AttachToParent": "FALSE",
+        "OrientToParent": "FALSE",
+        "SortInFrontOfParent": "FALSE",
+        "DestroyWhenParentDies": "FALSE",
+        "DetachAfterStart": "FALSE",
+        "Targeted": "FALSE",
+        "Looping": "FALSE",
+        "Beam": "FALSE",
+        "SpawnLimit": "0",
+        "MinLifeTime": "0",
+        "Sound": "sfx/dark_drill_place_07.ogg",
+        "Volume": "70",
+        "MinPitch": "100",
+        "MaxPitch": "100",
+        "SoundDelay": "0",
+        "StopSound": "FALSE",
+        "PitchIncrease": "0",
+        "FadeMusic": "FALSE",
+        "OffsetFromGunBone": "FALSE",
+        "OffsetX": "0",
+        "OffsetY": "0",
+        "OffsetZ": "0",
+        "Scale": "100",
+        "LifeTimeScale": "100",
+        "MaxInstances": "0",
+        "FadeIn": "0",
+        "FadeOut": "0"
+      }
+    ]
+  },
+  "sounds": {
+    "sfx/building_destroyed_01.ogg": {
+      "path": "assets/audio/dark-drill-native/building_destroyed_01.ogg",
+      "bytes": 11925,
+      "sha256": "fd8295765aa86ff5c7c6be1159cd8fc97aed3c858c29fbdb1af5e3d5c5ce7f04"
+    },
+    "sfx/dark_drill_pickup_02.ogg": {
+      "path": "assets/audio/dark-drill-native/dark_drill_pickup_02.ogg",
+      "bytes": 6936,
+      "sha256": "0aed0e8230ea083a3970e1072ada56ee59b544c38df5bee9b468ffac579a730f"
+    },
+    "sfx/dark_drill_place_07.ogg": {
+      "path": "assets/audio/dark-drill-native/dark_drill_place_07.ogg",
+      "bytes": 6792,
+      "sha256": "b6162168a5c7204a66f2a6e419c2093e572b2c799f30b39ff8d29665bd0b9585"
+    }
+  }
+}

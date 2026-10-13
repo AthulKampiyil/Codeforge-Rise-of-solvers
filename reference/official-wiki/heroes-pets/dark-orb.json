@@ -1,0 +1,318 @@
+{
+ "title": "Dark Orb",
+ "url": "https://clashofclans.fandom.com/wiki/Dark_Orb",
+ "revid": 622302,
+ "retrieved": "2026-09-15",
+ "clientName": "Dark Orb",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Minion Prince",
+ "summary": "Prince's starting active item: a slow-moving dark orb that damages and slows everything within 5 tiles along its path; passive DPS and HP.",
+ "constants": {
+  "wiki": {
+   "User": "Minion Prince",
+   "Ability Type": "Active",
+   "Rarity": "Common",
+   "Unlock Requirement": "Available by default",
+   "Damage Radius": "5"
+  },
+  "client": {
+   "Rarity": "COMMON",
+   "AllowedCharacters": "Minion Prince;",
+   "MainAbilities": "MinionAttackAbility",
+   "levelRows": 18,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "projectileDamage": {
+   "wikiHeader": "Ability Attributes / Projectile Damage",
+   "unit": "damage points"
+  },
+  "slowDownPercent": {
+   "wikiHeader": "Ability Attributes / Slow Down",
+   "unit": "percent"
+  },
+  "slowDownDurationSeconds": {
+   "wikiHeader": "Ability Attributes / Slow Down Duration",
+   "unit": "seconds"
+  },
+  "damagePerSecondIncrease": {
+   "wikiHeader": "Hero Boosts / Damage per Second Increase",
+   "unit": "damage per second"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "projectileDamage": 45,
+   "slowDownPercent": 20,
+   "slowDownDurationSeconds": 8,
+   "damagePerSecondIncrease": 10,
+   "hitpointIncrease": 588,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 2,
+   "projectileDamage": 45,
+   "slowDownPercent": 20,
+   "slowDownDurationSeconds": 8,
+   "damagePerSecondIncrease": 13,
+   "hitpointIncrease": 603,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 3,
+   "projectileDamage": 55,
+   "slowDownPercent": 25,
+   "slowDownDurationSeconds": 9,
+   "damagePerSecondIncrease": 18,
+   "hitpointIncrease": 617,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 4,
+   "projectileDamage": 55,
+   "slowDownPercent": 25,
+   "slowDownDurationSeconds": 9,
+   "damagePerSecondIncrease": 21,
+   "hitpointIncrease": 631,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 5,
+   "projectileDamage": 55,
+   "slowDownPercent": 25,
+   "slowDownDurationSeconds": 9,
+   "damagePerSecondIncrease": 24,
+   "hitpointIncrease": 647,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 6,
+   "projectileDamage": 65,
+   "slowDownPercent": 30,
+   "slowDownDurationSeconds": 10,
+   "damagePerSecondIncrease": 29,
+   "hitpointIncrease": 661,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 7,
+   "projectileDamage": 65,
+   "slowDownPercent": 30,
+   "slowDownDurationSeconds": 10,
+   "damagePerSecondIncrease": 32,
+   "hitpointIncrease": 675,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 8,
+   "projectileDamage": 65,
+   "slowDownPercent": 30,
+   "slowDownDurationSeconds": 10,
+   "damagePerSecondIncrease": 35,
+   "hitpointIncrease": 600,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 9,
+   "projectileDamage": 75,
+   "slowDownPercent": 35,
+   "slowDownDurationSeconds": 11,
+   "damagePerSecondIncrease": 40,
+   "hitpointIncrease": 719,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "blacksmithLevelRequired": 1
+  },
+  {
+   "level": 10,
+   "projectileDamage": 75,
+   "slowDownPercent": 35,
+   "slowDownDurationSeconds": 11,
+   "damagePerSecondIncrease": 43,
+   "hitpointIncrease": 766,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 11,
+   "projectileDamage": 75,
+   "slowDownPercent": 35,
+   "slowDownDurationSeconds": 11,
+   "damagePerSecondIncrease": 46,
+   "hitpointIncrease": 813,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 12,
+   "projectileDamage": 100,
+   "slowDownPercent": 40,
+   "slowDownDurationSeconds": 13,
+   "damagePerSecondIncrease": 51,
+   "hitpointIncrease": 859,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "blacksmithLevelRequired": 3
+  },
+  {
+   "level": 13,
+   "projectileDamage": 100,
+   "slowDownPercent": 40,
+   "slowDownDurationSeconds": 13,
+   "damagePerSecondIncrease": 54,
+   "hitpointIncrease": 906,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 14,
+   "projectileDamage": 100,
+   "slowDownPercent": 40,
+   "slowDownDurationSeconds": 13,
+   "damagePerSecondIncrease": 57,
+   "hitpointIncrease": 953,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 15,
+   "projectileDamage": 150,
+   "slowDownPercent": 45,
+   "slowDownDurationSeconds": 15,
+   "damagePerSecondIncrease": 62,
+   "hitpointIncrease": 1000,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 5
+  },
+  {
+   "level": 16,
+   "projectileDamage": 150,
+   "slowDownPercent": 45,
+   "slowDownDurationSeconds": 15,
+   "damagePerSecondIncrease": 65,
+   "hitpointIncrease": 1046,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 17,
+   "projectileDamage": 150,
+   "slowDownPercent": 45,
+   "slowDownDurationSeconds": 15,
+   "damagePerSecondIncrease": 68,
+   "hitpointIncrease": 1093,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 18,
+   "projectileDamage": 200,
+   "slowDownPercent": 50,
+   "slowDownDurationSeconds": 18,
+   "damagePerSecondIncrease": 73,
+   "hitpointIncrease": 1140,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 7
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "hitpointIncrease",
+   "level": 8,
+   "wiki": 600,
+   "client": 690.0,
+   "note": "character_items.HitPoints"
+  },
+  {
+   "field": "direction",
+   "level": null,
+   "wiki": "travels forward in the Prince's facing direction",
+   "client": "PreferedTargetBuildingClass Defense + ProjectileOnActivationCopyTarget",
+   "note": "aiming rule unverified"
+  }
+ ],
+ "clientColumns": [
+  "MainAbilities:special_abilities[MinionAttackAbility].Damage",
+  "MainAbilities:special_abilities[MinionAttackAbility].FrostOnHitPercent",
+  "MainAbilities:special_abilities[MinionAttackAbility].FrostOnHitTime",
+  "character_items.DPS",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

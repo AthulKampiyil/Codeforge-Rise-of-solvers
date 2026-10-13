@@ -1,0 +1,77 @@
+{
+  "title": "Angry Spell",
+  "url": "https://clashofclans.fandom.com/wiki/Angry_Spell",
+  "revid": 625021,
+  "clientName": "AngrySpell",
+  "category": "dark-spell",
+  "retrieved": "2026-09-15",
+  "contentPage": "Angry Spell",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "spells",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "radiusTiles": 6,
+    "effectType": "Area Splash",
+    "targets": "Ground & Air",
+    "housingSpace": 1,
+    "darkSpellFactoryLevel": 8
+  },
+  "levels": [
+    {
+      "level": 1,
+      "angerDurationSeconds": 7,
+      "spellDurationSeconds": 5,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "angerDurationSeconds": 8,
+      "spellDurationSeconds": 5,
+      "researchCost": 150000,
+      "researchTimeHours": 224,
+      "laboratoryLevel": 14
+    },
+    {
+      "level": 3,
+      "angerDurationSeconds": 10,
+      "spellDurationSeconds": 5,
+      "researchCost": 250000,
+      "researchTimeHours": 288,
+      "laboratoryLevel": 15
+    },
+    {
+      "level": 4,
+      "angerDurationSeconds": 12,
+      "spellDurationSeconds": 5,
+      "researchCost": 400000,
+      "researchTimeHours": 360,
+      "laboratoryLevel": 16
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "field duration",
+      "client": "`NumberOfHits` 50 x `TimeBetweenHitsMS` 100 = 5 s"
+    },
+    {
+      "mechanic": "anger duration",
+      "client": "`GiveSpecialAbility` 'AngrySpellAnger' -> `DeactivateAfterTime` 7000/8000/10000/12000"
+    },
+    {
+      "mechanic": "retarget",
+      "client": "ability `PreferedTargetBuildingClass` Defense, `ForceRetargetOnActivation` TRUE, `FightWithGroups` FALSE, `DeactivateOnDeath` TRUE"
+    },
+    {
+      "mechanic": "radius",
+      "client": "`Radius` 600"
+    },
+    {
+      "mechanic": "unexplained",
+      "client": "`BoostTimeMS` = 25000"
+    }
+  ]
+}

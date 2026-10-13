@@ -1,0 +1,101 @@
+{
+ "title": "Army / Elixir Troops / Dark Elixir Troops",
+ "page": "Troops (redirects to Army)",
+ "url": "https://clashofclans.fandom.com/wiki/Army",
+ "revid": 623017,
+ "retrieved": "2026-09-15",
+ "clientName": "characters.ProductionBuilding/BarrackLevel",
+ "clientVersion": "18.400.21",
+ "category": "mechanic",
+ "revids": {
+  "Troops": 623017,
+  "Elixir Troops": 618302,
+  "Dark Elixir Troops": 623641
+ },
+ "wikiLists": {
+  "Elixir Troops": [
+   "Barbarian",
+   "Archer",
+   "Giant",
+   "Goblin",
+   "Wall Breaker",
+   "Balloon",
+   "Wizard",
+   "Healer",
+   "Dragon",
+   "P.E.K.K.A",
+   "Baby Dragon",
+   "Miner",
+   "Electro Dragon",
+   "Yeti",
+   "Dragon Rider",
+   "Electro Titan",
+   "Root Rider",
+   "Thrower",
+   "Meteor Golem"
+  ],
+  "Dark Elixir Troops": [
+   "Minion",
+   "Hog Rider",
+   "Valkyrie",
+   "Golem",
+   "Witch",
+   "Lava Hound",
+   "Bowler",
+   "Ice Golem",
+   "Headhunter",
+   "Apprentice Warden",
+   "Druid",
+   "Furnace",
+   "Ruin Witch"
+  ]
+ },
+ "clientRoster": {
+  "Barracks": [
+   "Barbarian",
+   "Archer",
+   "Giant",
+   "Goblin",
+   "Wall Breaker",
+   "Balloon",
+   "Wizard",
+   "Healer",
+   "Dragon",
+   "PEKKA",
+   "Baby Dragon",
+   "Miner",
+   "Electro Dragon",
+   "Yeti",
+   "Dragon Rider",
+   "Electro Titan",
+   "Root Rider",
+   "Thrower",
+   "Meteor Golem"
+  ],
+  "Dark Barracks": [
+   "Minion",
+   "Hog Rider",
+   "Valkyrie",
+   "Golem",
+   "Witch",
+   "Lava Hound",
+   "Bowler",
+   "Ice Golem",
+   "Headhunter",
+   "Apprentice Warden",
+   "Druid",
+   "Furnace",
+   "Ruin Witch"
+  ]
+ },
+ "armyPageCountText": null,
+ "mismatches": [
+  {
+   "field": "troopCount text",
+   "level": null,
+   "wiki": "Army page: thirty-one troops (nineteen Elixir, twelve Dark)",
+   "client": "19 Barracks + 13 Dark Barracks = 32",
+   "note": "the Dark Elixir Troops list page itself lists 13 (includes Ruin Witch)"
+  }
+ ]
+}

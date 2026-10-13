@@ -1,0 +1,237 @@
+{
+  "clientVersion": "18.400.21",
+  "sources": {
+    "csv/animations.csv": "b0be152c98d06ccd0689320acfa19b07e04dd2a07fc6a1253558592f67bf29d8",
+    "logic/characters.csv": "5c3acc5b46ff9e7978f406b540264e65c93a846b69d03cd43326a9853703cb89",
+    "sc/characters.sc": "0e23bd3745176fe7db3d61e490d9da07c63a42e95462f514d6eac696314c3798",
+    "sc/characters_2.sctx": "8b26f89c67ad4e0d7234caf65253962b92e6a7d8b90389eff7278bd66515bdad",
+    "sc/chr_apprentice_warden.sc": "dc28c0326fbef24cc842f18877f865fdff3559f50e988c53ff7a6a65543d8d62",
+    "sc/chr_apprentice_warden_0.sctx": "f911e3653b6e7486b9c5de5e9a3d0088a8a1ddfbd78d9520a507178bd5279202",
+    "sc/chr_archer.sc": "2acaca98c63b3fef734a424a689ca6cdce5c5af9883a70db455119174833e53d",
+    "sc/chr_archer_0.sctx": "ed7d064ae39b823110d9242714fa8637830e6e96d53db77665b1a6a8b2fa7b61",
+    "sc/chr_baby_dragon.sc": "11a499e8dd7c262f2f6b20ce3bccb8a3a3305ced3a21c5df0af36185d2134943",
+    "sc/chr_baby_dragon_0.sctx": "d46efeaa5cd061b12f0c6ae09a8f905aaaca7b8dfb6ac5ed0873d1875667534b",
+    "sc/chr_balloon.sc": "7db110cf0ed98808a65550d17c240a0c10753db35958c766987f4b21afa5641d",
+    "sc/chr_balloon_0.sctx": "41aeaa3afb6e3da9f33b8c51513f8ae473a1e89c893771b289d219b9a30aa0ef",
+    "sc/chr_barbarian.sc": "71e630447befa772bff3bb2ae2ea359916cc5ddcc05988796710406de7ce9de8",
+    "sc/chr_barbarian_0.sctx": "e145b2268ef3c9312b2fdd7a3c3037ba34a4da7b83ab5ec1d81c2b62458424da",
+    "sc/chr_bowler.sc": "0efb03fbcfdb45cccdb118eaf771427bc54c62a5f154a1d10500f1f8e387178c",
+    "sc/chr_bowler_0.sctx": "15bfaad87cac69010e7b4bc480ad663abba125f2c4537b915981a77e52b01186",
+    "sc/chr_dragon.sc": "9f5a80ca18fe19d9b116c82eaafdde15f326b5d9f4fde51ba542904ec371d9c8",
+    "sc/chr_dragon_0.sctx": "8ac4749ec030e8d22f43f19c2b011ac473120cb495dd2b76b33b42454008f205",
+    "sc/chr_dragon_rider.sc": "5c9a156a5efb5c9da4340c4ec1445c3373e0c206c2dffc5be9b0ed695f77b527",
+    "sc/chr_dragon_rider_0.sctx": "fa42cbbf1906f3d97a5ee16332e4e6fcbdfdb4bca019342a3e6f979d92a93ca2",
+    "sc/chr_druid_bear.sc": "6884a8dbabcbb744bb45e23168af7a3c342a306ce553448671e6b35ea081f49d",
+    "sc/chr_druid_bear_0.sctx": "3bb2cc6c714ca2ccd6a8615d4991d418cf1cfe06716baa7dd48818e78c482876",
+    "sc/chr_druid_bear_1.sctx": "e8c3adfd7acfa06ebf132c31db411e0b03324a218a95112240f9f585ee3157ae",
+    "sc/chr_electro_dragon.sc": "7ea186f126e53981d7ed9ab816ac8eb5e0eaec48e66b3d204ca17ba5a4ad5fca",
+    "sc/chr_electro_dragon_0.sctx": "6117167427d5ce6a6c2f59480412d91ac45beeae76586ab507a8a8ad78871adc",
+    "sc/chr_electro_dragon_1.sctx": "1da851e78819c190ba1ca49bf828108f5f3bd39562ace7852d81c0689c94063c",
+    "sc/chr_electro_titan.sc": "1ccaeaf2c73f59f927c5285340ec728f25a4e3e80719084bec8a5e0883bf6566",
+    "sc/chr_electro_titan_0.sctx": "c03c2b8d0312642c2091528abcdc12802bd7335a11a14303ef37bee73848e83a",
+    "sc/chr_furnace.sc": "85d6cb909e0ce8abc7eb7d7e984497778078a975c49d639ec0c49402c767a6e9",
+    "sc/chr_furnace_0.sctx": "7db3fc8e8a56daa224d8692c24112388df3e3bb95edbd2bfca3da893a2d54ebc",
+    "sc/chr_giant.sc": "35b31b0af761648ca1bb3047006292eb8ee458002a76cc4b1865f689bc08febd",
+    "sc/chr_giant_0.sctx": "244532a8f9e6023b5b95d87fe2f291af1e03a38a6cacd42cef54173b970e6547",
+    "sc/chr_goblin.sc": "93ec098325e99927fa2cb9c76a422347da1e2ef611d14b15e40f8d3af560cbe9",
+    "sc/chr_goblin_0.sctx": "d9338b5b527b972794650abccdacbc4ee5e9f21a22d4779949ab4e00b80b87ae",
+    "sc/chr_golem.sc": "0e2fb6935e7cee3a2dcd36ccd0d3a5e74ee618978fef71e94d732815f4819abc",
+    "sc/chr_golem_0.sctx": "e9ea7073b3a88336d6ca0f719d06be487e372e55115fe256d622f0e595703c40",
+    "sc/chr_headhunter.sc": "20b94df2871a5d467d2662001aa02e10ac63d81c38dc6642cb4571d3dfe0810f",
+    "sc/chr_headhunter_0.sctx": "b1319af66acedfa66078c270dfbe7af8a1fe6781751762465ba00de2a2a2daa4",
+    "sc/chr_healer.sc": "c959ffb13ff3a23f570e13cd2c7b57c4601da984c886f1878a305d4e03fb34af",
+    "sc/chr_healer_0.sctx": "845f7ea4f4316f310bab0f103aa06270fea8b0e337c51daa8b5b19b9cf2bddce",
+    "sc/chr_hog_rider.sc": "bc153dc15254b7b43c28c17a1338c3c5bbf77ac1a1c50be7f2ce1bfb2dbfb843",
+    "sc/chr_hog_rider_0.sctx": "0bd5b894b7c99876ca82e17000ca30476dd5710df21594761d426f2f22380716",
+    "sc/chr_ice_golem.sc": "aae9869e0a8f98f442654dc3f594e6d2c5852b5d06214437267fad94becd332e",
+    "sc/chr_ice_golem_0.sctx": "f01346919404bc618c91740457362ca6d32f4ec1156727d47ba84647412ee5aa",
+    "sc/chr_lava_hound.sc": "ddc9037df98e63dfa6b2743bd3a4349b027aec50f8ac69408e6b16c3f6d3d9d4",
+    "sc/chr_lava_hound_0.sctx": "0446b6b5f8d6732d4f0a1c16b96d6cc48b9bf8697e1d4038e9ee4ef7131ec86d",
+    "sc/chr_miner.sc": "85584538c4fae264d8c0145684249b75e4904ff622708405a9ae3a7fc1d01a80",
+    "sc/chr_miner_0.sctx": "fd484ce4275de0a0995faa6d875a64d48a9766d3fef50d28c2b2ed97afaddce1",
+    "sc/chr_minion.sc": "6cd5a1f523d3aa5639420881849c2594c8c62027783ae44dad5f7ca7b348c97c",
+    "sc/chr_minion_0.sctx": "c6f1769ac1ec5bc0d59ddaa84a0c8c5b89b976a6baa4ba42e771aaff4589aa91",
+    "sc/chr_pekka.sc": "fb6ba238c798c5c119df7ee9764c2338f7eecd3710df0431707c4e2bb0754de9",
+    "sc/chr_pekka_0.sctx": "f20951105380679aa1d9931a1c2020b75d5428d46cabd680dc11f837a23af2e3",
+    "sc/chr_root_rider.sc": "db69c4d40439c21bf9fb81cd36b51737ee966e4279058111d6526e98a5a26477",
+    "sc/chr_root_rider_0.sctx": "38338bd4015e9d807843704b9c44f6948787a1e1c8ad7e09a92ccaf9c0c7139f",
+    "sc/chr_ruin_witch.sc": "3f29373d9483274979adfd1c003ca68983a2cd29f8fcae5137ad062f22c9e93f",
+    "sc/chr_split_golem.sc": "51f3a030648f1377570079cb45aac31f9f92d64087152c2ca7869c57079c7270",
+    "sc/chr_split_golem_0.sctx": "faa7790c4c9d8aee154962dd0d262977122b75c2437f3bc1531bab5d9482a045",
+    "sc/chr_thrower.sc": "bec507fe3c3e03e03f0603b239a65712fee2115cc62058d027c84c5e0a1bd429",
+    "sc/chr_thrower_0.sctx": "7f48346c1a218b198910267e1b813984752fb2dc89342f98ca1e06b80e30843f",
+    "sc/chr_valkyrie.sc": "53d87bb9e6170780a87e1fdd3636902d592faa4daceeffcb74f7e9a867626df9",
+    "sc/chr_valkyrie_0.sctx": "916b87c3b85a64154fec5fe71da3e3912370fd0e0b1f3fd2d2157776c097f521",
+    "sc/chr_wall_breaker.sc": "9f799fe08ffb687e4ca99b6e0ae5bc0cfff102befe9e269b8c598483b985d9bf",
+    "sc/chr_wall_breaker_0.sctx": "7fe00d1f05f74afc8108d8d59547cc0f5fcd945baa13c4f4f9d0b1a700945ca2",
+    "sc/chr_witch.sc": "f9bbd8cbd8f1cafe34857e452780f4984c9395828d382c43b1d3d5cc1146142e",
+    "sc/chr_witch_0.sctx": "2872edd72e19a03a9259e46bd8cecef8e103232f241d82891f59b785d12bfa97",
+    "sc/chr_wizard.sc": "118447ed4ce9c4dfc6c37799ba21d3b68e8f05e66899110f41e4a172b6124b83",
+    "sc/chr_wizard_0.sctx": "d5acfc9be92a2812c1b5aac1d5a8e926f69e0b4d4fc1218143f2e5ff3710157a",
+    "sc/chr_yeti.sc": "601a12b66bc8d66102e57f4f0d027f131a751a996efca3ce611e5a0efd51637f",
+    "sc/chr_yeti_0.sctx": "337a4897ff7e1a6f8ac59fab730db2e32aca2a459f8864e857bfc6b62bc10ff2",
+    "sc/chr_yeti_1.sctx": "82718ffbb0b50130bf28c9eee7057102e20ee0b8e9cf17b3dbca4078b11a6194"
+  },
+  "troops": {
+    "swordsman": {
+      "path": "assets/troops-native/swordsman/graph.json",
+      "sha256": "3a7d4f8b03a819f0c573bb508686331fa982ed0da9b5cebe3210ce7f5917ffbc",
+      "levels": 13
+    },
+    "archer": {
+      "path": "assets/troops-native/archer/graph.json",
+      "sha256": "4a6249cf1cd228ee4410abda346c2c1659bdabfeb8d1afa46f5ca59a653dd4bc",
+      "levels": 14
+    },
+    "giant": {
+      "path": "assets/troops-native/giant/graph.json",
+      "sha256": "5acbfc7ba072c70aef8651231edb1ce3702b70c7be7af4561f17b1b8aef4cc6a",
+      "levels": 14
+    },
+    "wizard": {
+      "path": "assets/troops-native/wizard/graph.json",
+      "sha256": "e29992ecd4eaf8d9693dce33ff0f27fed1973ec0f7ad2636ddbc8d57c03b2914",
+      "levels": 14
+    },
+    "balloon": {
+      "path": "assets/troops-native/balloon/graph.json",
+      "sha256": "8f955e93b25f903aa88f558951e06bf2f8d548ea9b6b17cc6b39ef7944115851",
+      "levels": 13
+    },
+    "goblin": {
+      "path": "assets/troops-native/goblin/graph.json",
+      "sha256": "3ad89ba5e15142dd79843a0de4744390bf7271d77a1de0ff1814b7a78979f230",
+      "levels": 10
+    },
+    "wallbreaker": {
+      "path": "assets/troops-native/wallbreaker/graph.json",
+      "sha256": "9d904485ffa1c2ab2d1a525e99481b3e6ea93088ce8bbcb549ce482272bd4aeb",
+      "levels": 14
+    },
+    "healer": {
+      "path": "assets/troops-native/healer/graph.json",
+      "sha256": "83d084f80c7856d1b4f370d08c688a7771051c094c15efc11323fc8dbab3f53c",
+      "levels": 11
+    },
+    "dragon": {
+      "path": "assets/troops-native/dragon/graph.json",
+      "sha256": "19f079e44f19427310357b75cdbe472f5fb3548e754c7ec605e4ad5efd564cbc",
+      "levels": 13
+    },
+    "pekka": {
+      "path": "assets/troops-native/pekka/graph.json",
+      "sha256": "fb79a51af055192c6136b94b76c445bcff6fdcfd24b5a28567393e7b238ac369",
+      "levels": 13
+    },
+    "babydragon": {
+      "path": "assets/troops-native/babydragon/graph.json",
+      "sha256": "af74e2f715005b228266acc992f13977a9ce7dbb33cbe7107e3b51c2ba091dc2",
+      "levels": 12
+    },
+    "miner": {
+      "path": "assets/troops-native/miner/graph.json",
+      "sha256": "b36f9679ed6daeef207c74daa39cd258b909e83f27d47d2b9bfd27a0371d5b2e",
+      "levels": 12
+    },
+    "electrodragon": {
+      "path": "assets/troops-native/electrodragon/graph.json",
+      "sha256": "2965890347570fadade9f87be71e51875abf4663d7ccb262f7bd88543450960a",
+      "levels": 9
+    },
+    "yeti": {
+      "path": "assets/troops-native/yeti/graph.json",
+      "sha256": "3ae0418264518e1dc80dcc897b20d18854f7207c2acedf9823a3e81c15b89329",
+      "levels": 8
+    },
+    "dragonrider": {
+      "path": "assets/troops-native/dragonrider/graph.json",
+      "sha256": "5023496eb7b5d223ff20a90608f82dbcf0d84422d4c574554c9d4acb0501b73c",
+      "levels": 6
+    },
+    "electrotitan": {
+      "path": "assets/troops-native/electrotitan/graph.json",
+      "sha256": "1781ecf888a653cf7f54492d85c529706a3880a338fe471ec178a7c50c2b2d81",
+      "levels": 5
+    },
+    "rootrider": {
+      "path": "assets/troops-native/rootrider/graph.json",
+      "sha256": "8af06f61462348432a5d28741daf1a2fc6d131271135e15c1010aa43efe74642",
+      "levels": 4
+    },
+    "thrower": {
+      "path": "assets/troops-native/thrower/graph.json",
+      "sha256": "c0fe61a283f0f8a71a4edc06830b61df94b2127092d03ba25a09736dde2246d4",
+      "levels": 4
+    },
+    "meteorgolem": {
+      "path": "assets/troops-native/meteorgolem/graph.json",
+      "sha256": "f7bb99aa0719f48424d72dfc517fc8527fcd141f3a40cb65aecf57155f693eed",
+      "levels": 3
+    },
+    "minion": {
+      "path": "assets/troops-native/minion/graph.json",
+      "sha256": "cedbafe83fb2091d1bf45f0d057c3448f7146c1e42103acc9880fbce1666aeab",
+      "levels": 14
+    },
+    "hogrider": {
+      "path": "assets/troops-native/hogrider/graph.json",
+      "sha256": "abd9735d7f3072a24328bf3f3a2fbed157b7b7d1ccc8a66bdb72736a44a20f5b",
+      "levels": 15
+    },
+    "valkyrie": {
+      "path": "assets/troops-native/valkyrie/graph.json",
+      "sha256": "5aa804a387c89fe593f2ddbf75ab22f8e73064223b71390779c973e0d0a5575c",
+      "levels": 12
+    },
+    "golem": {
+      "path": "assets/troops-native/golem/graph.json",
+      "sha256": "fc19bca6295b54596c0934a47555c9003f56bcdcc62d2ed1941b6f7131c9c8af",
+      "levels": 15
+    },
+    "witch": {
+      "path": "assets/troops-native/witch/graph.json",
+      "sha256": "a79826e2c35c9109585f8d54f958cd5eb2893e5c13dd1b05cb73355b07a9e8ab",
+      "levels": 8
+    },
+    "lavahound": {
+      "path": "assets/troops-native/lavahound/graph.json",
+      "sha256": "b879671c80d99eafb0276e91979a71c85a018234a8bdfe4a95afe609c55f3f97",
+      "levels": 8
+    },
+    "bowler": {
+      "path": "assets/troops-native/bowler/graph.json",
+      "sha256": "e5b06120035abdbee558d9a36af3cf343d570e0aba278c53bc08dfced58e6f35",
+      "levels": 10
+    },
+    "icegolem": {
+      "path": "assets/troops-native/icegolem/graph.json",
+      "sha256": "20e76e67ea43a31eaee8920e8762f4bf2eddbdbdc04eaab0cd5b992f24ce20a0",
+      "levels": 9
+    },
+    "headhunter": {
+      "path": "assets/troops-native/headhunter/graph.json",
+      "sha256": "36f6857a065c08ae8cec92ed4e8d6c5057fa06cb1e60e7faddeebca7c7ebfa96",
+      "levels": 4
+    },
+    "apprenticewarden": {
+      "path": "assets/troops-native/apprenticewarden/graph.json",
+      "sha256": "893a202f344143a2f10814a8a41767d488c84a1e5e6c171bc0f8832834e139a8",
+      "levels": 4
+    },
+    "druid": {
+      "path": "assets/troops-native/druid/graph.json",
+      "sha256": "9671a7c778d47c2532808d4026e2e6f85702bb3220a065defed953cba0d7eb66",
+      "levels": 6
+    },
+    "furnace": {
+      "path": "assets/troops-native/furnace/graph.json",
+      "sha256": "ad216c182219f765fbdf2096d09c55d97d9b25e62f11d00b26a0e8f4cd0a617c",
+      "levels": 4
+    },
+    "ruinwitch": {
+      "path": "assets/troops-native/ruinwitch/graph.json",
+      "sha256": "31416a95a9548a4eb3786b802291299df8039bbb726242d5f76dbc83b7939202",
+      "levels": 4
+    }
+  }
+}

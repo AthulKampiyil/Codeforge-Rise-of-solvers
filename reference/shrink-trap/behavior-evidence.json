@@ -1,0 +1,48 @@
+{
+  "reviewedOn": "2026-09-12",
+  "sourceClient": "18.400.21",
+  "sources": [
+    {
+      "title": "Week 3: Season Of The Witch",
+      "publisher": "Supercell",
+      "publishedOn": "2017-08-17",
+      "url": "https://supercell.com/en/games/clashofclans/blog/news/week-3-season-of-the-witch/",
+      "facts": {
+        "trapDurationSeconds": 20,
+        "originalMovementSpeedReductionPercent": 50,
+        "originalAttackSpeedReductionPercent": 50,
+        "originalHealthReductionPercent": 50
+      },
+      "scope": "Historical event announcement; superseded for health behavior by the 2022 release notes."
+    },
+    {
+      "title": "Bonus Quality Of Life Update (Now Live!)",
+      "publisher": "Supercell",
+      "publishedOn": "2022-02-15",
+      "url": "https://supercell.com/en/games/clashofclans/blog/release-notes/quality-of-life-bonus-update-2/",
+      "excerpt": "Troops affected by Shrink Trap will not have HP reduced.",
+      "scope": "Official removal of the historical health reduction."
+    }
+  ],
+  "integrationRequirements": {
+    "doNotReduceCurrentOrMaximumHp": true,
+    "legacySourceHealthField": { "ShrinkHitpointsRatio": "50" },
+    "doNotInferHealthBehaviorFromLegacyField": true,
+    "preserveBothTrapAndSpellRadiusFieldsUntilTheirRelationshipIsResolved": true,
+    "nativeExecutableVerified": false
+  },
+  "localImplementation": {
+    "documentation": "../../docs/SHRINK-TRAP.md",
+    "campaignStageEnabled": 55,
+    "currentAndMaximumHpPreserved": true,
+    "movementAndAttackSpeedMultiplier": 0.5,
+    "overlapRefreshesWithoutCompounding": true,
+    "nativeExecutableVerified": false
+  },
+  "remainingQuestions": [
+    "How trap ActionFrame 14, the empty final trigger frame, spell charge/hit delays and the 20-second aura combine.",
+    "Whether area membership uses the trap's 300-unit radius, the spell's 400-unit radius, or separate stages of both.",
+    "How the seven-second status field, 75 pulses and leaving/re-entering an aura affect recovery and stacking.",
+    "How movement and attack slowdown combine with heroes, haste, rage, stun and visual scale."
+  ]
+}

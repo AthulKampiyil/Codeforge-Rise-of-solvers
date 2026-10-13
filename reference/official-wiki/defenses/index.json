@@ -1,0 +1,836 @@
+{
+ "retrieved": "2026-09-15",
+ "source": "https://clashofclans.fandom.com (MediaWiki API action=parse, wikitext+revid)",
+ "license": "Wiki text CC BY-SA; mechanics summarized in our own words",
+ "client": "18.400.21 decoded logic tables",
+ "entityCount": 52,
+ "entities": [
+  {
+   "slug": "cannon",
+   "title": "Cannon/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Cannon/Home_Village",
+   "revid": 624457,
+   "clientName": "Cannon",
+   "category": "defense",
+   "summary": "Single-target ground turret (9 tiles, 0.8 s); optional geared-up burst mode (4 shots, 7 tiles); merges into Ricochet Cannon / Multi-Gear Tower.",
+   "files": {
+    "md": "cannon.md",
+    "json": "cannon.json"
+   },
+   "mismatchCount": 13,
+   "progressionMismatchCount": 1
+  },
+  {
+   "slug": "archer-tower",
+   "title": "Archer Tower/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Archer_Tower/Home_Village",
+   "revid": 624456,
+   "clientName": "Archer Tower",
+   "category": "defense",
+   "summary": "Single-target ground+air tower (10 tiles, 0.5 s); geared-up Fast Attack mode doubles fire rate at 8 tiles; merges into Multi-Archer Tower / Multi-Gear Tower.",
+   "files": {
+    "md": "archer-tower.md",
+    "json": "archer-tower.json"
+   },
+   "mismatchCount": 0,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "mortar",
+   "title": "Mortar",
+   "url": "https://clashofclans.fandom.com/wiki/Mortar",
+   "revid": 625094,
+   "clientName": "Mortar",
+   "category": "defense",
+   "summary": "Long-range ground splash artillery (4-11 tiles, 5 s, 1.5-tile splash, knockback); geared-up burst of 3 shells.",
+   "files": {
+    "md": "mortar.md",
+    "json": "mortar.json"
+   },
+   "mismatchCount": 25,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "air-defense",
+   "title": "Air Defense/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Air_Defense/Home_Village",
+   "revid": 624478,
+   "clientName": "Air Defense",
+   "category": "defense",
+   "summary": "Air-only single-target rocket defense (10 tiles, 1 s, very high damage per hit).",
+   "files": {
+    "md": "air-defense.md",
+    "json": "air-defense.json"
+   },
+   "mismatchCount": 0,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "wizard-tower",
+   "title": "Wizard Tower",
+   "url": "https://clashofclans.fandom.com/wiki/Wizard_Tower",
+   "revid": 625327,
+   "clientName": "Wizard Tower",
+   "category": "defense",
+   "summary": "Short-range splash tower hitting ground or air (7 tiles, 1.3 s, 1-tile splash); two level 17 towers merge into a Super Wizard Tower.",
+   "files": {
+    "md": "wizard-tower.md",
+    "json": "wizard-tower.json"
+   },
+   "mismatchCount": 0,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "air-sweeper",
+   "title": "Air Sweeper",
+   "url": "https://clashofclans.fandom.com/wiki/Air_Sweeper",
+   "revid": 624486,
+   "clientName": "Air Sweeper",
+   "category": "defense",
+   "summary": "Damage-less air pushback defense (1-15 tiles, 5 s, faces one of 8 directions, can swivel 45 degrees each way).",
+   "files": {
+    "md": "air-sweeper.md",
+    "json": "air-sweeper.json"
+   },
+   "mismatchCount": 0,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "hidden-tesla",
+   "title": "Hidden Tesla/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Hidden_Tesla/Home_Village",
+   "revid": 624470,
+   "clientName": "Hidden Tesla",
+   "category": "defense",
+   "summary": "Hidden single-target zapper (ground+air, 7 tiles, 0.6 s) that stays invisible until a unit enters 6 tiles or 51% destruction.",
+   "files": {
+    "md": "hidden-tesla.md",
+    "json": "hidden-tesla.json"
+   },
+   "mismatchCount": 0,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "bomb-tower",
+   "title": "Bomb Tower/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Bomb_Tower/Home_Village",
+   "revid": 624487,
+   "clientName": "Bomb Tower",
+   "category": "defense",
+   "summary": "Ground-only splash tower (6 tiles, 1.1 s, 1.5-tile splash) that explodes 1 s after destruction for level-scaled death damage in 2.75 tiles.",
+   "files": {
+    "md": "bomb-tower.md",
+    "json": "bomb-tower.json"
+   },
+   "mismatchCount": 0,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "x-bow",
+   "title": "X-Bow/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/X-Bow/Home_Village",
+   "revid": 624469,
+   "clientName": "X-Bow",
+   "category": "defense",
+   "summary": "Rapid single-target crossbow (0.128 s): Ground mode 14 tiles or Air & Ground mode 11.5 tiles; 1,500-bolt ammo box.",
+   "files": {
+    "md": "x-bow.md",
+    "json": "x-bow.json"
+   },
+   "mismatchCount": 2,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "inferno-tower",
+   "title": "Inferno Tower/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Inferno_Tower/Home_Village",
+   "revid": 624731,
+   "clientName": "Inferno Tower",
+   "category": "defense",
+   "summary": "Flame-beam tower (0.128 s ticks, ground+air): Single-Target mode ramps damage in 3 stages (0/1.5/5.25 s, 9 tiles); Multi-Target mode hits 5-6 units at flat DPS (10 tiles); 1,000-round ammo.",
+   "files": {
+    "md": "inferno-tower.md",
+    "json": "inferno-tower.json"
+   },
+   "mismatchCount": 1,
+   "progressionMismatchCount": 1
+  },
+  {
+   "slug": "eagle-artillery",
+   "title": "Eagle Artillery",
+   "url": "https://clashofclans.fandom.com/wiki/Eagle_Artillery",
+   "revid": 625122,
+   "clientName": "Eagle Artillery",
+   "category": "defense",
+   "summary": "Map-wide artillery (7-50 tiles, ground+air) that stays dormant until 200 housing space is deployed, then fires 3-shell volleys at the densest hitpoint cluster; merged into the TH17 Town Hall.",
+   "files": {
+    "md": "eagle-artillery.md",
+    "json": "eagle-artillery.json"
+   },
+   "mismatchCount": 2,
+   "progressionMismatchCount": 16
+  },
+  {
+   "slug": "scattershot",
+   "title": "Scattershot",
+   "url": "https://clashofclans.fandom.com/wiki/Scattershot",
+   "revid": 624490,
+   "clientName": "Scattershot",
+   "category": "defense",
+   "summary": "Heavy lobbed boulder (3-10 tiles, 3.2 s, ground or air per shot) whose fragments splash in a 90-degree cone up to 5 tiles behind the target with distance falloff; 90-shot ammo.",
+   "files": {
+    "md": "scattershot.md",
+    "json": "scattershot.json"
+   },
+   "mismatchCount": 2,
+   "progressionMismatchCount": 2
+  },
+  {
+   "slug": "builders-hut",
+   "title": "Builder's Hut",
+   "url": "https://clashofclans.fandom.com/wiki/Builder%27s_Hut",
+   "revid": 625149,
+   "clientName": "Builders Hut",
+   "category": "defense",
+   "summary": "Builder housing that, from TH14, becomes a 7-tile ground+air turret (0.4 s) whose Builder repairs nearby buildings during defense.",
+   "files": {
+    "md": "builders-hut.md",
+    "json": "builders-hut.json"
+   },
+   "mismatchCount": 4,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "spell-tower",
+   "title": "Spell Tower",
+   "url": "https://clashofclans.fandom.com/wiki/Spell_Tower",
+   "revid": 624787,
+   "clientName": "Spell Tower",
+   "category": "defense",
+   "summary": "Spell-casting defense (TH15): one loadable spell per level - Rage (self, +60%), Poison (target, 60 DPS), Invisibility (self, 4.5 s), Earthquake (target, 30% max HP); casts again after a 50-70 s recharge and on destruction.",
+   "files": {
+    "md": "spell-tower.md",
+    "json": "spell-tower.json"
+   },
+   "mismatchCount": 1,
+   "progressionMismatchCount": 2
+  },
+  {
+   "slug": "monolith",
+   "title": "Monolith",
+   "url": "https://clashofclans.fandom.com/wiki/Monolith",
+   "revid": 625148,
+   "clientName": "Monolith",
+   "category": "defense",
+   "summary": "Dark Elixir single-target tower (11 tiles, 1.5 s, ground+air) whose shots add 11-15% of the target's maximum HP on top of base damage.",
+   "files": {
+    "md": "monolith.md",
+    "json": "monolith.json"
+   },
+   "mismatchCount": 6,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "multi-archer-tower",
+   "title": "Multi-Archer Tower",
+   "url": "https://clashofclans.fandom.com/wiki/Multi-Archer_Tower",
+   "revid": 624863,
+   "clientName": "Multi Archer Tower",
+   "category": "defense",
+   "summary": "Merged from two level 21 Archer Towers (TH16): 3 archers each hit a different target (or focus fire when fewer are in range), 10 tiles, 0.6 s, ground+air.",
+   "files": {
+    "md": "multi-archer-tower.md",
+    "json": "multi-archer-tower.json"
+   },
+   "mismatchCount": 0,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "ricochet-cannon",
+   "title": "Ricochet Cannon",
+   "url": "https://clashofclans.fandom.com/wiki/Ricochet_Cannon",
+   "revid": 624465,
+   "clientName": "Ricochet Cannon",
+   "category": "defense",
+   "summary": "Merged from two level 21 Cannons (TH16): ground-only 9-tile cannon (0.8 s) whose ball ricochets once to a second unit within 3.5 tiles for 70% damage.",
+   "files": {
+    "md": "ricochet-cannon.md",
+    "json": "ricochet-cannon.json"
+   },
+   "mismatchCount": 0,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "multi-gear-tower",
+   "title": "Multi-Gear Tower",
+   "url": "https://clashofclans.fandom.com/wiki/Multi-Gear_Tower",
+   "revid": 624494,
+   "clientName": "Multi Gear Tower",
+   "category": "defense",
+   "summary": "Merged from a geared-up level 21 Cannon + geared-up level 21 Archer Tower (TH17); switchable Long Range (12 tiles, 1 s single shots) or Fast Attack (8 tiles, 4-ball bursts) mode, ground+air.",
+   "files": {
+    "md": "multi-gear-tower.md",
+    "json": "multi-gear-tower.json"
+   },
+   "mismatchCount": 3,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "firespitter",
+   "title": "Firespitter",
+   "url": "https://clashofclans.fandom.com/wiki/Firespitter",
+   "revid": 624733,
+   "clientName": "Firespitter",
+   "category": "defense",
+   "summary": "Directional flamethrower turret (TH17): 16-tile range in a ~150-degree arc, bursts of 20 piercing fireballs (0.064 s apart) that each hit up to 2 units on ground and air.",
+   "files": {
+    "md": "firespitter.md",
+    "json": "firespitter.json"
+   },
+   "mismatchCount": 6,
+   "progressionMismatchCount": 4
+  },
+  {
+   "slug": "revenge-tower",
+   "title": "Revenge Tower",
+   "url": "https://clashofclans.fandom.com/wiki/Revenge_Tower",
+   "revid": 624636,
+   "clientName": "Revenge Tower",
+   "category": "defense",
+   "summary": "Dark Elixir TH18 defense that starts dormant and escalates through 3 stages as 5 / 25 / 50 of your buildings fall: 1.2 s single shots, then 0.6 s single-bounce, then 0.35 s double-bounce (11 tiles, ground+air).",
+   "files": {
+    "md": "revenge-tower.md",
+    "json": "revenge-tower.json"
+   },
+   "mismatchCount": 2,
+   "progressionMismatchCount": 1
+  },
+  {
+   "slug": "super-wizard-tower",
+   "title": "Super Wizard Tower/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Super_Wizard_Tower/Home_Village",
+   "revid": 624749,
+   "clientName": "Super Wizard Tower",
+   "category": "defense",
+   "summary": "Merged from two level 17 Wizard Towers (TH18): 8-tile, 1.3 s lightning bolt that chains to up to 15 more units within 4 tiles for 40% damage (ground+air).",
+   "files": {
+    "md": "super-wizard-tower.md",
+    "json": "super-wizard-tower.json"
+   },
+   "mismatchCount": 1,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "wall",
+   "title": "Wall/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Wall/Home_Village",
+   "revid": 622801,
+   "clientName": "Wall",
+   "category": "building",
+   "summary": "1x1 blocking segments (TH2+, up to 325 pieces, 19 levels up to 14,000 HP) paid in Gold, Elixir (level 5+) or Wall Rings; they stop most ground pathing but not jumpers or air.",
+   "files": {
+    "md": "wall.md",
+    "json": "wall.json"
+   },
+   "mismatchCount": 1,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "clan-castle",
+   "title": "Clan Castle",
+   "url": "https://clashofclans.fandom.com/wiki/Clan_Castle",
+   "revid": 623293,
+   "clientName": "Clan Castle",
+   "category": "building",
+   "summary": "Reinforcement bunker (troops/spells/siege) whose stored troops pour out to defend when an attacker enters its 13-tile trigger radius; also holds the Treasury.",
+   "files": {
+    "md": "clan-castle.md",
+    "json": "clan-castle.json"
+   },
+   "mismatchCount": 2,
+   "progressionMismatchCount": 0
+  },
+  {
+   "slug": "town-hall",
+   "title": "Town Hall",
+   "url": "https://clashofclans.fandom.com/wiki/Town_Hall",
+   "revid": 624170,
+   "clientName": "Town Hall",
+   "category": "building",
+   "summary": "4x4 core building (1 star when destroyed, stores loot); weaponized at TH12-17 (Giga Tesla, Giga Inferno, Inferno Artillery) and guarded by Guardians at TH18.",
+   "files": {
+    "md": "town-hall.md",
+    "json": "town-hall.json"
+   },
+   "mismatchCount": 2,
+   "progressionMismatchCount": 1
+  },
+  {
+   "slug": "town-hall-giga-weapons",
+   "title": "Town Hall/Giga Weapons",
+   "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Giga_Weapons",
+   "revid": 621287,
+   "clientName": "Townhall12, Townhall13, Townhall14, Townhall15, Townhall16",
+   "category": "mechanic",
+   "summary": "Overview of the TH12-16 Town Hall weapons (Giga Tesla -> Giga Inferno): shared activation rule (damage or 51%), 4 targets, 10 tiles, death bomb that escalates from damage to slow to poison.",
+   "files": {
+    "md": "town-hall-giga-weapons.md",
+    "json": "town-hall-giga-weapons.json"
+   },
+   "mismatchCount": 1
+  },
+  {
+   "slug": "town-hall-giga-tesla",
+   "title": "Town Hall/Giga Tesla",
+   "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Giga_Tesla",
+   "revid": 620077,
+   "clientName": "Townhall12",
+   "category": "townhall-weapon",
+   "summary": "TH12 weapon: dormant until the Town Hall is hit or 51% destruction, then zaps 4 targets (ground+air) for 140 DPS each (0.5 s, 10 tiles); 500 death damage in 4 tiles.",
+   "files": {
+    "md": "town-hall-giga-tesla.md",
+    "json": "town-hall-giga-tesla.json"
+   },
+   "mismatchCount": 0
+  },
+  {
+   "slug": "town-hall-giga-inferno-th13",
+   "title": "Town Hall/Giga Inferno (TH13)",
+   "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Giga_Inferno_%28TH13%29",
+   "revid": 620072,
+   "clientName": "Townhall13",
+   "category": "townhall-weapon",
+   "summary": "TH13 weapon: 4 inferno beams (ground+air, 10 tiles, 0.128 s ticks, 220 DPS each) after damage/51%; 700 death damage in 4 tiles plus a 50% slow for 8 s.",
+   "files": {
+    "md": "town-hall-giga-inferno-th13.md",
+    "json": "town-hall-giga-inferno-th13.json"
+   },
+   "mismatchCount": 0
+  },
+  {
+   "slug": "town-hall-giga-inferno-th14",
+   "title": "Town Hall/Giga Inferno (TH14)",
+   "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Giga_Inferno_%28TH14%29",
+   "revid": 620073,
+   "clientName": "Townhall14",
+   "category": "townhall-weapon",
+   "summary": "TH14 weapon: 4 inferno beams (280 DPS each) after damage/51%; death blast plus a 12 s poison (180 DPS max, 50% slow).",
+   "files": {
+    "md": "town-hall-giga-inferno-th14.md",
+    "json": "town-hall-giga-inferno-th14.json"
+   },
+   "mismatchCount": 1
+  },
+  {
+   "slug": "town-hall-giga-inferno-th15",
+   "title": "Town Hall/Giga Inferno (TH15)",
+   "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Giga_Inferno_%28TH15%29",
+   "revid": 620074,
+   "clientName": "Townhall15",
+   "category": "townhall-weapon",
+   "summary": "TH15 weapon: 4 inferno beams (300 DPS each) after damage/51%; 1,000 death damage in 4.5 tiles plus a 12 s poison.",
+   "files": {
+    "md": "town-hall-giga-inferno-th15.md",
+    "json": "town-hall-giga-inferno-th15.json"
+   },
+   "mismatchCount": 0
+  },
+  {
+   "slug": "town-hall-giga-inferno-th16",
+   "title": "Town Hall/Giga Inferno (TH16)",
+   "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Giga_Inferno_%28TH16%29",
+   "revid": 620864,
+   "clientName": "Townhall16",
+   "category": "townhall-weapon",
+   "summary": "TH16 weapon: 4 inferno beams (300 DPS each) after damage/51%; 1,100 death damage in 4.5 tiles plus a 12 s poison; merged with the Eagle Artillery for TH17.",
+   "files": {
+    "md": "town-hall-giga-inferno-th16.md",
+    "json": "town-hall-giga-inferno-th16.json"
+   },
+   "mismatchCount": 0
+  },
+  {
+   "slug": "town-hall-inferno-artillery",
+   "title": "Town Hall/Inferno Artillery",
+   "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Inferno_Artillery",
+   "revid": 622642,
+   "clientName": "Townhall17",
+   "category": "townhall-weapon",
+   "summary": "TH17 Town Hall weapon (merge of TH16 + level 7 Eagle Artillery): always-active 12-tile launcher firing 4 homing fireballs every 3.5 s that leave 6.8 s fire pools (75 DPS max); 5 levels; no death bomb.",
+   "files": {
+    "md": "town-hall-inferno-artillery.md",
+    "json": "town-hall-inferno-artillery.json"
+   },
+   "mismatchCount": 0
+  },
+  {
+   "slug": "town-hall-guardians",
+   "title": "Town Hall/Guardians",
+   "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Guardians",
+   "revid": 623106,
+   "clientName": "InfernoArtillery (Longshot), MeleeAreaaaa (Smasher), Logger",
+   "category": "townhall-weapon",
+   "summary": "TH18 replaces the Town Hall weapon with one selectable Guardian (Longshot, Smasher or Logger) that waits on the Town Hall and jumps down to defend; Guardians are troops, not Heroes.",
+   "files": {
+    "md": "town-hall-guardians.md",
+    "json": "town-hall-guardians.json"
+   },
+   "mismatchCount": 2
+  },
+  {
+   "slug": "longshot",
+   "title": "Longshot",
+   "url": "https://clashofclans.fandom.com/wiki/Longshot",
+   "revid": 625038,
+   "clientName": "Longshot (guardians.csv InfernoArtillery)",
+   "category": "townhall-weapon",
+   "summary": "TH18 default Guardian: long-range (11 tiles) splash shooter hitting ground or air (1-tile splash on the hit layer), 1.8 s; explodes on death for 1,000 in 3.5 tiles.",
+   "files": {
+    "md": "longshot.md",
+    "json": "longshot.json"
+   },
+   "mismatchCount": 1
+  },
+  {
+   "slug": "smasher",
+   "title": "Smasher",
+   "url": "https://clashofclans.fandom.com/wiki/Smasher",
+   "revid": 625037,
+   "clientName": "Smasher (guardians.csv MeleeAreaaaa)",
+   "category": "townhall-weapon",
+   "summary": "TH18 melee tank Guardian: 1.25-tile club hitting ground+air with 2.5-tile splash (1.8 s); enrages (+60% damage, +12 speed) if the Town Hall falls and drops a defensive Rage Spell on death.",
+   "files": {
+    "md": "smasher.md",
+    "json": "smasher.json"
+   },
+   "mismatchCount": 0
+  },
+  {
+   "slug": "logger",
+   "title": "Logger",
+   "url": "https://clashofclans.fandom.com/wiki/Logger",
+   "revid": 625039,
+   "clientName": "Guardian Logger (guardians.csv Logger)",
+   "category": "townhall-weapon",
+   "summary": "TH18 Guardian (added Apr 27, 2026): slow log thrower (7 tiles, 2.5 s) whose rolling log pierces through ground and air units for 5-6 tiles past the target and pushes them back 1.5 tiles.",
+   "files": {
+    "md": "logger.md",
+    "json": "logger.json"
+   },
+   "mismatchCount": 1
+  },
+  {
+   "slug": "bomb",
+   "title": "Bomb",
+   "url": "https://clashofclans.fandom.com/wiki/Bomb",
+   "revid": 622989,
+   "clientName": "Bomb",
+   "category": "trap",
+   "summary": "Basic hidden ground trap: ~1.5 s after a ground unit comes within 1.5 tiles it explodes for 20-200 splash damage in 3 tiles and knocks back small troops.",
+   "files": {
+    "md": "bomb.md",
+    "json": "bomb.json"
+   },
+   "mismatchCount": 3,
+   "progressionMismatchCount": 2
+  },
+  {
+   "slug": "spring-trap",
+   "title": "Spring Trap/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Spring_Trap/Home_Village",
+   "revid": 623249,
+   "clientName": "Spring Trap",
+   "category": "trap",
+   "summary": "Single-target ground trap (1-tile trigger) that flings the highest-housing unit off the map if it fits the 10-18 capacity; bigger units are launched, stunned and take 250-1,400 damage (halved vs heroes/pets/siege).",
+   "files": {
+    "md": "spring-trap.md",
+    "json": "spring-trap.json"
+   },
+   "mismatchCount": 1,
+   "progressionMismatchCount": 1
+  },
+  {
+   "slug": "air-bomb",
+   "title": "Air Bomb",
+   "url": "https://clashofclans.fandom.com/wiki/Air_Bomb",
+   "revid": 623237,
+   "clientName": "Air Bomb",
+   "category": "trap",
+   "summary": "Air splash trap: triggered by a flyer within 4 tiles, rises and chases the nearest air unit, exploding for 100-425 in 3 tiles.",
+   "files": {
+    "md": "air-bomb.md",
+    "json": "air-bomb.json"
+   },
+   "mismatchCount": 1,
+   "progressionMismatchCount": 2
+  },
+  {
+   "slug": "giant-bomb",
+   "title": "Giant Bomb",
+   "url": "https://clashofclans.fandom.com/wiki/Giant_Bomb",
+   "revid": 622993,
+   "clientName": "Giant Bomb",
+   "category": "trap",
+   "summary": "2x2 hidden ground bomb (2-tile trigger) dealing 175-490 splash in 3-4.2 tiles with knockback for small troops.",
+   "files": {
+    "md": "giant-bomb.md",
+    "json": "giant-bomb.json"
+   },
+   "mismatchCount": 1,
+   "progressionMismatchCount": 1
+  },
+  {
+   "slug": "seeking-air-mine",
+   "title": "Seeking Air Mine",
+   "url": "https://clashofclans.fandom.com/wiki/Seeking_Air_Mine",
+   "revid": 623233,
+   "clientName": "Seeking Air Mine",
+   "category": "trap",
+   "summary": "Single-target air trap (4-tile trigger) that only reacts to air units of 5+ housing space and hits one of them for 1,500-3,350.",
+   "files": {
+    "md": "seeking-air-mine.md",
+    "json": "seeking-air-mine.json"
+   },
+   "mismatchCount": 3,
+   "progressionMismatchCount": 3
+  },
+  {
+   "slug": "skeleton-trap",
+   "title": "Skeleton Trap",
+   "url": "https://clashofclans.fandom.com/wiki/Skeleton_Trap",
+   "revid": 621660,
+   "clientName": "Skeleton Trap",
+   "category": "trap",
+   "summary": "Hidden coffin (5-tile trigger) set to ground or air mode that spawns 2-5 Skeletons (level 5: level-2 Skeletons) to distract and attack that layer.",
+   "files": {
+    "md": "skeleton-trap.md",
+    "json": "skeleton-trap.json"
+   },
+   "mismatchCount": 1,
+   "progressionMismatchCount": 1
+  },
+  {
+   "slug": "tornado-trap",
+   "title": "Tornado Trap",
+   "url": "https://clashofclans.fandom.com/wiki/Tornado_Trap",
+   "revid": 619079,
+   "clientName": "Tornado Trap",
+   "category": "trap",
+   "summary": "One-per-base vortex trap (TH11): pulls ground and air units toward its center for 5-7 s, weaker on bigger units, while ticking ~8 DPS.",
+   "files": {
+    "md": "tornado-trap.md",
+    "json": "tornado-trap.json"
+   },
+   "mismatchCount": 2
+  },
+  {
+   "slug": "giga-bomb",
+   "title": "Giga Bomb",
+   "url": "https://clashofclans.fandom.com/wiki/Giga_Bomb",
+   "revid": 622995,
+   "clientName": "Giga Bomb",
+   "category": "trap",
+   "summary": "Visible TH17 2x2 trap (former Town Hall death bomb): explodes when 18+ housing space of trap-triggering units is inside 3.5 tiles, dealing 1,100-1,400 to ground and air in 4.5 tiles with strong knockback.",
+   "files": {
+    "md": "giga-bomb.md",
+    "json": "giga-bomb.json"
+   },
+   "mismatchCount": 0
+  },
+  {
+   "slug": "crafting-station",
+   "title": "Crafting Station",
+   "url": "https://clashofclans.fandom.com/wiki/Crafting_Station",
+   "revid": 624956,
+   "clientName": "Crafting Station",
+   "category": "building",
+   "summary": "Free 3x3 slot for seasonal Crafted Defenses: pick one of the phase's three defenses (swap freely), upgrade its 3 modules (10 levels each, defense level 3-30); defenses rotate every crafting phase.",
+   "files": {
+    "md": "crafting-station.md",
+    "json": "crafting-station.json"
+   },
+   "mismatchCount": 1
+  },
+  {
+   "slug": "hot-candle",
+   "title": "Hot Candle",
+   "url": "https://clashofclans.fandom.com/wiki/Hot_Candle",
+   "revid": 625219,
+   "clientName": "Inferno Candle (InfernoCandleHPModule / AttackModule / EffectModule)",
+   "category": "defense",
+   "summary": "Phase-4 Crafted Defense: multi-target flame thrower (10.5 tiles, 0.5 s, ground+air) with 6 flames that drop to 4 and then 3 as the candle melts over the battle.",
+   "files": {
+    "md": "hot-candle.md",
+    "json": "hot-candle.json"
+   },
+   "mismatchCount": 4
+  },
+  {
+   "slug": "hero-hunter",
+   "title": "Hero Hunter",
+   "url": "https://clashofclans.fandom.com/wiki/Hero_Hunter",
+   "revid": 625024,
+   "clientName": "Headhunter Tower (HeadhunterTowerHPModule / AttackModule / EffectModule)",
+   "category": "defense",
+   "summary": "Phase-4 Crafted Defense ('Headhunter Tower' in files): 9.5-tile card cannon (0.6 s, ground+air) that prefers Heroes, deals them double damage and poisons every target for 3 s.",
+   "files": {
+    "md": "hero-hunter.md",
+    "json": "hero-hunter.json"
+   },
+   "mismatchCount": 3
+  },
+  {
+   "slug": "cake-a-pult",
+   "title": "Cake-A-Pult",
+   "url": "https://clashofclans.fandom.com/wiki/Cake-A-Pult",
+   "revid": 625029,
+   "clientName": "Cake Thrower (CakeThrowerHPModule / AttackModule / EffectModule)",
+   "category": "defense",
+   "summary": "Phase-4 Crafted Defense ('Cake Thrower' in files): 3-12 tile lobber (3 s) whose cake splashes 2.5 tiles on its target's layer and leaves a delayed bomb that hits ground and air.",
+   "files": {
+    "md": "cake-a-pult.md",
+    "json": "cake-a-pult.json"
+   },
+   "mismatchCount": 4
+  },
+  {
+   "slug": "supercharge",
+   "title": "Supercharge",
+   "url": "https://clashofclans.fandom.com/wiki/Supercharge",
+   "revid": 625336,
+   "clientName": "<Building> Mini Levels",
+   "category": "mechanic",
+   "summary": "Post-max-level 'charges' (TH17-18): 2 charges for defenses (damage then HP; Air Defense damage twice) and 3 for collectors; removed when a new level arrives; each charge gives 10 Sparky Stones.",
+   "files": {
+    "md": "supercharge.md",
+    "json": "supercharge.json"
+   },
+   "mismatchCount": 11
+  },
+  {
+   "slug": "defensive-buildings",
+   "title": "Defensive Buildings/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Defensive_Buildings/Home_Village",
+   "revid": 624965,
+   "clientName": null,
+   "category": "mechanic",
+   "summary": "Navigation list of every Home Village defensive building, Town Hall weapon and trap family covered by this dossier.",
+   "files": {
+    "md": "defensive-buildings.md",
+    "json": "defensive-buildings.json"
+   },
+   "mismatchCount": 0
+  },
+  {
+   "slug": "traps",
+   "title": "Traps/Home Village",
+   "url": "https://clashofclans.fandom.com/wiki/Traps/Home_Village",
+   "revid": 622056,
+   "clientName": "(all trap rows)",
+   "category": "mechanic",
+   "summary": "General trap rules: hidden until triggered, free automatic re-arm (always armed in war/Legend/friendly), no red zone, no builder needed to place or re-arm, not counted in destruction.",
+   "files": {
+    "md": "traps.md",
+    "json": "traps.json"
+   },
+   "mismatchCount": 0
+  },
+  {
+   "slug": "merge",
+   "title": "Merged defenses (synthesized)",
+   "url": null,
+   "revid": null,
+   "sources": [
+    {
+     "title": "Ricochet Cannon",
+     "url": "https://clashofclans.fandom.com/wiki/Ricochet_Cannon",
+     "revid": 624465
+    },
+    {
+     "title": "Multi-Archer Tower",
+     "url": "https://clashofclans.fandom.com/wiki/Multi-Archer_Tower",
+     "revid": 624863
+    },
+    {
+     "title": "Multi-Gear Tower",
+     "url": "https://clashofclans.fandom.com/wiki/Multi-Gear_Tower",
+     "revid": 624494
+    },
+    {
+     "title": "Super Wizard Tower/Home Village",
+     "url": "https://clashofclans.fandom.com/wiki/Super_Wizard_Tower/Home_Village",
+     "revid": 624749
+    },
+    {
+     "title": "Town Hall/Inferno Artillery",
+     "url": "https://clashofclans.fandom.com/wiki/Town_Hall/Inferno_Artillery",
+     "revid": 622642
+    },
+    {
+     "title": "Town Hall",
+     "url": "https://clashofclans.fandom.com/wiki/Town_Hall",
+     "revid": 624170
+    },
+    {
+     "title": "Cannon/Home Village",
+     "url": "https://clashofclans.fandom.com/wiki/Cannon/Home_Village",
+     "revid": 624457
+    },
+    {
+     "title": "Archer Tower/Home Village",
+     "url": "https://clashofclans.fandom.com/wiki/Archer_Tower/Home_Village",
+     "revid": 624456
+    },
+    {
+     "title": "Wizard Tower",
+     "url": "https://clashofclans.fandom.com/wiki/Wizard_Tower",
+     "revid": 625327
+    },
+    {
+     "title": "Eagle Artillery",
+     "url": "https://clashofclans.fandom.com/wiki/Eagle_Artillery",
+     "revid": 625122
+    }
+   ],
+   "clientName": "MergeRequirement column (buildings.csv)",
+   "category": "mechanic",
+   "summary": "Synthesized merge rules (no wiki page): Ricochet Cannon, Multi-Archer Tower (non-geared inputs), Multi-Gear Tower (geared inputs), Inferno Artillery (TH16 + Eagle Artillery 7), Super Wizard Tower; permanent and required before the next Town Hall.",
+   "files": {
+    "md": "merge.md",
+    "json": "merge.json"
+   },
+   "mismatchCount": 0
+  },
+  {
+   "slug": "gear-up",
+   "title": "Gear Up (synthesized)",
+   "url": null,
+   "revid": null,
+   "sources": [
+    {
+     "title": "Cannon/Home Village",
+     "url": "https://clashofclans.fandom.com/wiki/Cannon/Home_Village",
+     "revid": 624457
+    },
+    {
+     "title": "Archer Tower/Home Village",
+     "url": "https://clashofclans.fandom.com/wiki/Archer_Tower/Home_Village",
+     "revid": 624456
+    },
+    {
+     "title": "Mortar",
+     "url": "https://clashofclans.fandom.com/wiki/Mortar",
+     "revid": 625094
+    }
+   ],
+   "clientName": "GearUp* columns (buildings.csv) + townhall_levels <name>_gearup",
+   "category": "mechanic",
+   "summary": "Synthesized Gear Up rules (no wiki page): Master Builder converts one Cannon (burst), one Archer Tower (fast attack) and one Mortar (burst) permanently, gated by Builder Base defense levels.",
+   "files": {
+    "md": "gear-up.md",
+    "json": "gear-up.json"
+   },
+   "mismatchCount": 0
+  }
+ ]
+}

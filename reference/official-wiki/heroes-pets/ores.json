@@ -1,0 +1,515 @@
+{
+ "title": "Ores",
+ "url": "https://clashofclans.fandom.com/wiki/Ores",
+ "revid": 617303,
+ "retrieved": "2026-09-15",
+ "clientName": null,
+ "clientTable": null,
+ "category": "mechanic",
+ "summary": "Shiny, Glowy and Starry Ore: Blacksmith-only currencies earned from Star Bonus, Clan Wars, Hero's Journey, Trader and offers; capped by Blacksmith level.",
+ "constants": {
+  "wiki": {},
+  "client": {
+   "legacyLeagueStarBonusOre": {
+    "Unranked": [
+     "0",
+     "0",
+     "0"
+    ],
+    "Bronze3": [
+     "125",
+     "6",
+     "0"
+    ],
+    "Bronze2": [
+     "175",
+     "7",
+     "0"
+    ],
+    "Bronze1": [
+     "175",
+     "8",
+     "0"
+    ],
+    "Silver3": [
+     "200",
+     "9",
+     "0"
+    ],
+    "Silver2": [
+     "250",
+     "10",
+     "0"
+    ],
+    "Silver1": [
+     "275",
+     "11",
+     "0"
+    ],
+    "Gold3": [
+     "300",
+     "12",
+     "0"
+    ],
+    "Gold2": [
+     "325",
+     "14",
+     "0"
+    ],
+    "Gold1": [
+     "350",
+     "16",
+     "0"
+    ],
+    "Diamond3": [
+     "375",
+     "18",
+     "0"
+    ],
+    "Diamond2": [
+     "400",
+     "20",
+     "0"
+    ],
+    "Diamond1": [
+     "425",
+     "22",
+     "0"
+    ],
+    "Masters3": [
+     "450",
+     "24",
+     "0"
+    ],
+    "Masters2": [
+     "500",
+     "26",
+     "0"
+    ],
+    "Masters1": [
+     "525",
+     "28",
+     "0"
+    ],
+    "Champion3": [
+     "550",
+     "30",
+     "0"
+    ],
+    "Champion2": [
+     "625",
+     "34",
+     "0"
+    ],
+    "Champion1": [
+     "700",
+     "38",
+     "0"
+    ],
+    "Hero3": [
+     "775",
+     "42",
+     "0"
+    ],
+    "Hero2": [
+     "850",
+     "46",
+     "0"
+    ],
+    "Hero1": [
+     "925",
+     "50",
+     "0"
+    ],
+    "Legendary": [
+     "1000",
+     "54",
+     "0"
+    ]
+   },
+   "oreCapsByBlacksmith": [
+    [
+     1,
+     10000,
+     1000,
+     200
+    ],
+    [
+     2,
+     15000,
+     1500,
+     300
+    ],
+    [
+     3,
+     20000,
+     2000,
+     400
+    ],
+    [
+     4,
+     25000,
+     2500,
+     500
+    ],
+    [
+     5,
+     30000,
+     3000,
+     600
+    ],
+    [
+     6,
+     35000,
+     3500,
+     700
+    ],
+    [
+     7,
+     40000,
+     4000,
+     800
+    ],
+    [
+     8,
+     45000,
+     4500,
+     900
+    ],
+    [
+     9,
+     50000,
+     5000,
+     1000
+    ],
+    [
+     10,
+     50000,
+     5000,
+     1000
+    ]
+   ]
+  },
+  "wikiTables": [
+   {
+    "section": "Star Bonus",
+    "headers": [
+     "League",
+     "Shiny Ore Reward",
+     "Glowy Ore Reward",
+     "Starry Ore Reward"
+    ],
+    "rows": [
+     {
+      "league": "Skeleton 1",
+      "shinyOreReward": 300,
+      "glowyOreReward": 20,
+      "starryOreReward": null
+     },
+     {
+      "league": "Skeleton 2",
+      "shinyOreReward": 325,
+      "glowyOreReward": 21,
+      "starryOreReward": null
+     },
+     {
+      "league": "Skeleton 3",
+      "shinyOreReward": 350,
+      "glowyOreReward": 22,
+      "starryOreReward": null
+     },
+     {
+      "league": "Barbarian 4",
+      "shinyOreReward": 375,
+      "glowyOreReward": 23,
+      "starryOreReward": null
+     },
+     {
+      "league": "Barbarian 5",
+      "shinyOreReward": 400,
+      "glowyOreReward": 24,
+      "starryOreReward": null
+     },
+     {
+      "league": "Barbarian 6",
+      "shinyOreReward": 425,
+      "glowyOreReward": 25,
+      "starryOreReward": null
+     },
+     {
+      "league": "Archer 7",
+      "shinyOreReward": 450,
+      "glowyOreReward": 26,
+      "starryOreReward": null
+     },
+     {
+      "league": "Archer 8",
+      "shinyOreReward": 475,
+      "glowyOreReward": 27,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Archer 9",
+      "shinyOreReward": 500,
+      "glowyOreReward": 29,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Wizard 10",
+      "shinyOreReward": 525,
+      "glowyOreReward": 31,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Wizard 11",
+      "shinyOreReward": 550,
+      "glowyOreReward": 33,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Wizard 12",
+      "shinyOreReward": 575,
+      "glowyOreReward": 35,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Valkyrie 13",
+      "shinyOreReward": 600,
+      "glowyOreReward": 37,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Valkyrie 14",
+      "shinyOreReward": 625,
+      "glowyOreReward": 39,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Valkyrie 15",
+      "shinyOreReward": 650,
+      "glowyOreReward": 41,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Witch 16",
+      "shinyOreReward": 675,
+      "glowyOreReward": 43,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Witch 17",
+      "shinyOreReward": 725,
+      "glowyOreReward": 45,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Witch 18",
+      "shinyOreReward": 775,
+      "glowyOreReward": 47,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Golem 19",
+      "shinyOreReward": 825,
+      "glowyOreReward": 49,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Golem 20",
+      "shinyOreReward": 875,
+      "glowyOreReward": 51,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Golem 21",
+      "shinyOreReward": 900,
+      "glowyOreReward": 53,
+      "starryOreReward": 1
+     },
+     {
+      "league": "P.E.K.K.A 22",
+      "shinyOreReward": 925,
+      "glowyOreReward": 54,
+      "starryOreReward": 1
+     },
+     {
+      "league": "P.E.K.K.A 23",
+      "shinyOreReward": 950,
+      "glowyOreReward": 55,
+      "starryOreReward": 1
+     },
+     {
+      "league": "P.E.K.K.A 24",
+      "shinyOreReward": 963,
+      "glowyOreReward": 56,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Titan 25",
+      "shinyOreReward": 1000,
+      "glowyOreReward": 57,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Titan 26",
+      "shinyOreReward": 1010,
+      "glowyOreReward": 58,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Titan 27",
+      "shinyOreReward": 1020,
+      "glowyOreReward": 59,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Dragon 28",
+      "shinyOreReward": 1030,
+      "glowyOreReward": 60,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Dragon 29",
+      "shinyOreReward": 1040,
+      "glowyOreReward": 61,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Dragon 30",
+      "shinyOreReward": 1050,
+      "glowyOreReward": 62,
+      "starryOreReward": 1
+     },
+     {
+      "league": "Electro 31",
+      "shinyOreReward": 1060,
+      "glowyOreReward": 62,
+      "starryOreReward": 2
+     },
+     {
+      "league": "Electro 32",
+      "shinyOreReward": 1070,
+      "glowyOreReward": 63,
+      "starryOreReward": 2
+     },
+     {
+      "league": "Electro 33",
+      "shinyOreReward": 1080,
+      "glowyOreReward": 64,
+      "starryOreReward": 2
+     },
+     {
+      "league": "Legend",
+      "shinyOreReward": 1100,
+      "glowyOreReward": 65,
+      "starryOreReward": 2
+     }
+    ]
+   },
+   {
+    "section": "Clan Wars",
+    "headers": [
+     "Town Hall Level",
+     "Max Available Shiny Ore",
+     "Max Available Glowy Ore",
+     "Max Available Starry Ore"
+    ],
+    "rows": [
+     {
+      "townHallLevel": 8,
+      "maxAvailableShinyOre": 380,
+      "maxAvailableGlowyOre": 15,
+      "maxAvailableStarryOre": null
+     },
+     {
+      "townHallLevel": 9,
+      "maxAvailableShinyOre": 410,
+      "maxAvailableGlowyOre": 18,
+      "maxAvailableStarryOre": null
+     },
+     {
+      "townHallLevel": 10,
+      "maxAvailableShinyOre": 460,
+      "maxAvailableGlowyOre": 21,
+      "maxAvailableStarryOre": 3
+     },
+     {
+      "townHallLevel": 11,
+      "maxAvailableShinyOre": 560,
+      "maxAvailableGlowyOre": 24,
+      "maxAvailableStarryOre": 3
+     },
+     {
+      "townHallLevel": 12,
+      "maxAvailableShinyOre": 610,
+      "maxAvailableGlowyOre": 27,
+      "maxAvailableStarryOre": 4
+     },
+     {
+      "townHallLevel": 13,
+      "maxAvailableShinyOre": 710,
+      "maxAvailableGlowyOre": 30,
+      "maxAvailableStarryOre": 4
+     },
+     {
+      "townHallLevel": 14,
+      "maxAvailableShinyOre": 810,
+      "maxAvailableGlowyOre": 33,
+      "maxAvailableStarryOre": 4
+     },
+     {
+      "townHallLevel": 15,
+      "maxAvailableShinyOre": 960,
+      "maxAvailableGlowyOre": 36,
+      "maxAvailableStarryOre": 5
+     },
+     {
+      "townHallLevel": "16-17",
+      "maxAvailableShinyOre": 1110,
+      "maxAvailableGlowyOre": 39,
+      "maxAvailableStarryOre": 6
+     }
+    ]
+   }
+  ]
+ },
+ "fields": {},
+ "levels": [],
+ "mismatches": [
+  {
+   "field": "clanWar.maxAvailableStarryOre",
+   "level": "TH14",
+   "wiki": 4,
+   "client": 5.0,
+   "note": "townhall_levels.WarPrizeEpicOreCap"
+  },
+  {
+   "field": "clanWar.availability",
+   "level": "TH6",
+   "wiki": "not listed (wiki: ore from war only vs TH8+)",
+   "client": "100/0/0",
+   "note": "client has non-zero war ore caps below TH8"
+  },
+  {
+   "field": "clanWar.availability",
+   "level": "TH7",
+   "wiki": "not listed (wiki: ore from war only vs TH8+)",
+   "client": "150/10/0",
+   "note": "client has non-zero war ore caps below TH8"
+  },
+  {
+   "field": "clanWar.drawMultiplier",
+   "level": null,
+   "wiki": "4/7 of the win amount",
+   "client": "75% (ALLIANCE_WAR_ORE_LOOT_BONUS_PERCENT_DRAW)",
+   "note": "loss = half agrees (LOSE 50)"
+  },
+  {
+   "field": "starBonus.table",
+   "level": null,
+   "wiki": "34 Skeleton→Legend tiers (e.g. Legend 1,100/65/2)",
+   "client": "league_tiers ore columns blank; legacy leagues.csv has 22 tiers (Legendary 1,000/54/0)",
+   "note": "current Star Bonus ore rewards are not present in the decoded client tables"
+  }
+ ]
+}

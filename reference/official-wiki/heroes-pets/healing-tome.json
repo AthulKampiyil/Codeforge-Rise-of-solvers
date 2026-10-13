@@ -1,0 +1,286 @@
+{
+ "title": "Healing Tome",
+ "url": "https://clashofclans.fandom.com/wiki/Healing_Tome",
+ "revid": 621304,
+ "retrieved": "2026-09-15",
+ "clientName": "Healing Tome",
+ "clientTable": "character_items",
+ "category": "equipment",
+ "hero": "Grand Warden",
+ "summary": "Warden Common active item (Blacksmith 6): a 15 → 20 s healing aura that follows him and heals allies (heroes at full rate) 60 → 150 HP/s; passive HP and recovery.",
+ "constants": {
+  "wiki": {
+   "User": "Grand Warden",
+   "Ability Type": "Active",
+   "Rarity": "Common",
+   "Unlock Requirement": "Blacksmith level 6"
+  },
+  "client": {
+   "Rarity": "COMMON",
+   "AllowedCharacters": "Grand Warden;",
+   "MainAbilities": "GrandWardenHealAura",
+   "levelRows": 18,
+   "abilityTierStartLevels": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18
+   ],
+   "mainAbilityLevelByItemLevel": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7
+   ]
+  }
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "healingPerSecond": {
+   "wikiHeader": "Ability Attributes / Healing per Second",
+   "unit": "hitpoints healed"
+  },
+  "abilityDurationSeconds": {
+   "wikiHeader": "Ability Attributes / Ability Duration",
+   "unit": "seconds"
+  },
+  "hitpointIncrease": {
+   "wikiHeader": "Hero Boosts / Hitpoint Increase",
+   "unit": "hitpoints"
+  },
+  "healthRecoveryIncrease": {
+   "wikiHeader": "Hero Boosts / Health Recovery Increase",
+   "unit": "hitpoints"
+  },
+  "upgradeCostShinyOre": {
+   "wikiHeader": "Upgrade Cost / Shiny Ore",
+   "unit": "resource amount"
+  },
+  "upgradeCostGlowyOre": {
+   "wikiHeader": "Upgrade Cost / Glowy Ore",
+   "unit": "resource amount"
+  },
+  "blacksmithLevelRequired": {
+   "wikiHeader": "Blacksmith Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "healingPerSecond": 60,
+   "abilityDurationSeconds": 15,
+   "hitpointIncrease": 92,
+   "healthRecoveryIncrease": 165,
+   "upgradeCostShinyOre": null,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 2,
+   "healingPerSecond": 60,
+   "abilityDurationSeconds": 15,
+   "hitpointIncrease": 107,
+   "healthRecoveryIncrease": 193,
+   "upgradeCostShinyOre": 120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 3,
+   "healingPerSecond": 70,
+   "abilityDurationSeconds": 16,
+   "hitpointIncrease": 122,
+   "healthRecoveryIncrease": 220,
+   "upgradeCostShinyOre": 240,
+   "upgradeCostGlowyOre": 20,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 4,
+   "healingPerSecond": 70,
+   "abilityDurationSeconds": 16,
+   "hitpointIncrease": 137,
+   "healthRecoveryIncrease": 248,
+   "upgradeCostShinyOre": 400,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 5,
+   "healingPerSecond": 70,
+   "abilityDurationSeconds": 16,
+   "hitpointIncrease": 153,
+   "healthRecoveryIncrease": 275,
+   "upgradeCostShinyOre": 600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 6,
+   "healingPerSecond": 80,
+   "abilityDurationSeconds": 17,
+   "hitpointIncrease": 168,
+   "healthRecoveryIncrease": 303,
+   "upgradeCostShinyOre": 840,
+   "upgradeCostGlowyOre": 100,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 7,
+   "healingPerSecond": 80,
+   "abilityDurationSeconds": 17,
+   "hitpointIncrease": 183,
+   "healthRecoveryIncrease": 330,
+   "upgradeCostShinyOre": 1120,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 8,
+   "healingPerSecond": 80,
+   "abilityDurationSeconds": 17,
+   "hitpointIncrease": 198,
+   "healthRecoveryIncrease": 358,
+   "upgradeCostShinyOre": 1440,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 9,
+   "healingPerSecond": 100,
+   "abilityDurationSeconds": 18,
+   "hitpointIncrease": 229,
+   "healthRecoveryIncrease": 413,
+   "upgradeCostShinyOre": 1800,
+   "upgradeCostGlowyOre": 200,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 10,
+   "healingPerSecond": 100,
+   "abilityDurationSeconds": 18,
+   "hitpointIncrease": 280,
+   "healthRecoveryIncrease": 463,
+   "upgradeCostShinyOre": 1900,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 11,
+   "healingPerSecond": 100,
+   "abilityDurationSeconds": 18,
+   "hitpointIncrease": 330,
+   "healthRecoveryIncrease": 513,
+   "upgradeCostShinyOre": 2000,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 12,
+   "healingPerSecond": 120,
+   "abilityDurationSeconds": 19,
+   "hitpointIncrease": 381,
+   "healthRecoveryIncrease": 563,
+   "upgradeCostShinyOre": 2100,
+   "upgradeCostGlowyOre": 400,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 13,
+   "healingPerSecond": 120,
+   "abilityDurationSeconds": 19,
+   "hitpointIncrease": 432,
+   "healthRecoveryIncrease": 613,
+   "upgradeCostShinyOre": 2200,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 14,
+   "healingPerSecond": 120,
+   "abilityDurationSeconds": 19,
+   "hitpointIncrease": 482,
+   "healthRecoveryIncrease": 663,
+   "upgradeCostShinyOre": 2300,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 15,
+   "healingPerSecond": 140,
+   "abilityDurationSeconds": 19.5,
+   "hitpointIncrease": 533,
+   "healthRecoveryIncrease": 713,
+   "upgradeCostShinyOre": 2400,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 6
+  },
+  {
+   "level": 16,
+   "healingPerSecond": 140,
+   "abilityDurationSeconds": 19.5,
+   "hitpointIncrease": 584,
+   "healthRecoveryIncrease": 763,
+   "upgradeCostShinyOre": 2500,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 17,
+   "healingPerSecond": 140,
+   "abilityDurationSeconds": 19.5,
+   "hitpointIncrease": 634,
+   "healthRecoveryIncrease": 813,
+   "upgradeCostShinyOre": 2600,
+   "upgradeCostGlowyOre": null,
+   "blacksmithLevelRequired": 7
+  },
+  {
+   "level": 18,
+   "healingPerSecond": 150,
+   "abilityDurationSeconds": 20,
+   "hitpointIncrease": 685,
+   "healthRecoveryIncrease": 863,
+   "upgradeCostShinyOre": 2700,
+   "upgradeCostGlowyOre": 600,
+   "blacksmithLevelRequired": 7
+  }
+ ],
+ "subpages": [],
+ "mismatches": [
+  {
+   "field": "ExecuteHealthPermil",
+   "level": null,
+   "wiki": "flat 60–150 HP/s only",
+   "client": "ExecuteHealthPermil −60 on the aura",
+   "note": "possible extra 6% max-HP heal per pulse or threshold; unverified"
+  }
+ ],
+ "clientColumns": [
+  "MainAbilities:special_abilities[GrandWardenHealAura].DeactivateAfterTime",
+  "character_items.HealOnActivation",
+  "character_items.HitPoints",
+  "character_items.RequiredBlacksmithLevel"
+ ]
+}

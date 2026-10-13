@@ -1,0 +1,342 @@
+{
+ "title": "Hero Hall",
+ "url": "https://clashofclans.fandom.com/wiki/Hero_Hall",
+ "revid": 623819,
+ "retrieved": "2026-09-15",
+ "clientName": "Hero Hall",
+ "clientTable": "buildings",
+ "category": "building",
+ "summary": "4x4 army building (TH4+) that unlocks heroes, sets hero level caps and hero slots (1/2/3/4 at levels 1/3/5/7), hosts hero upgrades, skins and Hero's Journey.",
+ "constants": {
+  "wiki": {},
+  "client": {
+   "slotGatesHeroHall": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "slotCounts": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "buildingSize": "4x4",
+   "HERO_UPGRADE_CANCEL_MULTIPLIER": "50"
+  },
+  "notes": {
+   "numberAvailable": "1 from TH4",
+   "size": "4x4"
+  },
+  "wikiTables": [
+   {
+    "section": "Hero Hall Level Caps",
+    "headers": [
+     "Hero Hall Level",
+     "Barbarian King",
+     "Archer Queen",
+     "Minion Prince",
+     "Grand Warden",
+     "Royal Champion",
+     "Dragon Duke",
+     "Total Levels"
+    ],
+    "rows": [
+     {
+      "heroHallLevel": 1,
+      "barbarianKing": 10,
+      "archerQueen": null,
+      "minionPrince": null,
+      "grandWarden": null,
+      "royalChampion": null,
+      "dragonDuke": null,
+      "totalLevels": 10
+     },
+     {
+      "heroHallLevel": 2,
+      "barbarianKing": 20,
+      "archerQueen": 10,
+      "minionPrince": null,
+      "grandWarden": null,
+      "royalChampion": null,
+      "dragonDuke": null,
+      "totalLevels": 30
+     },
+     {
+      "heroHallLevel": 3,
+      "barbarianKing": 30,
+      "archerQueen": 30,
+      "minionPrince": 10,
+      "grandWarden": null,
+      "royalChampion": null,
+      "dragonDuke": null,
+      "totalLevels": 70
+     },
+     {
+      "heroHallLevel": 4,
+      "barbarianKing": 40,
+      "archerQueen": 40,
+      "minionPrince": 20,
+      "grandWarden": null,
+      "royalChampion": null,
+      "dragonDuke": null,
+      "totalLevels": 100
+     },
+     {
+      "heroHallLevel": 5,
+      "barbarianKing": 50,
+      "archerQueen": 50,
+      "minionPrince": 30,
+      "grandWarden": 20,
+      "royalChampion": null,
+      "dragonDuke": null,
+      "totalLevels": 150
+     },
+     {
+      "heroHallLevel": 6,
+      "barbarianKing": 65,
+      "archerQueen": 65,
+      "minionPrince": 40,
+      "grandWarden": 40,
+      "royalChampion": null,
+      "dragonDuke": null,
+      "totalLevels": 210
+     },
+     {
+      "heroHallLevel": 7,
+      "barbarianKing": 75,
+      "archerQueen": 75,
+      "minionPrince": 50,
+      "grandWarden": 50,
+      "royalChampion": 25,
+      "dragonDuke": null,
+      "totalLevels": 275
+     },
+     {
+      "heroHallLevel": 8,
+      "barbarianKing": 85,
+      "archerQueen": 85,
+      "minionPrince": 60,
+      "grandWarden": 60,
+      "royalChampion": 30,
+      "dragonDuke": null,
+      "totalLevels": 320
+     },
+     {
+      "heroHallLevel": 9,
+      "barbarianKing": 90,
+      "archerQueen": 90,
+      "minionPrince": 70,
+      "grandWarden": 65,
+      "royalChampion": 40,
+      "dragonDuke": 10,
+      "totalLevels": 365
+     },
+     {
+      "heroHallLevel": 10,
+      "barbarianKing": 95,
+      "archerQueen": 95,
+      "minionPrince": 80,
+      "grandWarden": 70,
+      "royalChampion": 45,
+      "dragonDuke": 15,
+      "totalLevels": 400
+     },
+     {
+      "heroHallLevel": 11,
+      "barbarianKing": 100,
+      "archerQueen": 100,
+      "minionPrince": 90,
+      "grandWarden": 75,
+      "royalChampion": 50,
+      "dragonDuke": 20,
+      "totalLevels": 435
+     },
+     {
+      "heroHallLevel": 12,
+      "barbarianKing": 110,
+      "archerQueen": 110,
+      "minionPrince": 95,
+      "grandWarden": 85,
+      "royalChampion": 55,
+      "dragonDuke": 25,
+      "totalLevels": 480
+     }
+    ]
+   }
+  ]
+ },
+ "fields": {
+  "level": {
+   "wikiHeader": "Level",
+   "unit": "level"
+  },
+  "unlockedHero": {
+   "wikiHeader": "Unlocked Hero",
+   "unit": "count/points"
+  },
+  "heroSlots": {
+   "wikiHeader": "Hero Slots",
+   "unit": "count/points"
+  },
+  "hitpoints": {
+   "wikiHeader": "Hitpoints",
+   "unit": "hitpoints"
+  },
+  "buildCost": {
+   "wikiHeader": "Build Cost",
+   "unit": "resource amount"
+  },
+  "buildTimeSeconds": {
+   "wikiHeader": "Build Time",
+   "unit": "seconds"
+  },
+  "experienceGained": {
+   "wikiHeader": "Experience Gained",
+   "unit": "count/points"
+  },
+  "townHallLevelRequired": {
+   "wikiHeader": "Town Hall Level Required",
+   "unit": "level"
+  }
+ },
+ "levels": [
+  {
+   "level": 1,
+   "unlockedHero": "Barbarian King",
+   "heroSlots": 1,
+   "hitpoints": 800,
+   "buildCost": 30000,
+   "buildTimeSeconds": 3600,
+   "experienceGained": 60,
+   "townHallLevelRequired": 4
+  },
+  {
+   "level": 2,
+   "unlockedHero": "Archer Queen",
+   "heroSlots": 1,
+   "hitpoints": 1600,
+   "buildCost": 1600000,
+   "buildTimeSeconds": 172800,
+   "experienceGained": 415,
+   "townHallLevelRequired": 8
+  },
+  {
+   "level": 3,
+   "unlockedHero": "Minion Prince",
+   "heroSlots": 2,
+   "hitpoints": 2400,
+   "buildCost": 2300000,
+   "buildTimeSeconds": 259200,
+   "experienceGained": 509,
+   "townHallLevelRequired": 9
+  },
+  {
+   "level": 4,
+   "unlockedHero": null,
+   "heroSlots": 2,
+   "hitpoints": 3200,
+   "buildCost": 2500000,
+   "buildTimeSeconds": 345600,
+   "experienceGained": 587,
+   "townHallLevelRequired": 10
+  },
+  {
+   "level": 5,
+   "unlockedHero": "Grand Warden",
+   "heroSlots": 3,
+   "hitpoints": 3600,
+   "buildCost": 4500000,
+   "buildTimeSeconds": 388800,
+   "experienceGained": 623,
+   "townHallLevelRequired": 11
+  },
+  {
+   "level": 6,
+   "unlockedHero": null,
+   "heroSlots": 3,
+   "hitpoints": 3800,
+   "buildCost": 5500000,
+   "buildTimeSeconds": 432000,
+   "experienceGained": 720,
+   "townHallLevelRequired": 12
+  },
+  {
+   "level": 7,
+   "unlockedHero": "Royal Champion",
+   "heroSlots": 4,
+   "hitpoints": 4200,
+   "buildCost": 8500000,
+   "buildTimeSeconds": 518400,
+   "experienceGained": 777,
+   "townHallLevelRequired": 13
+  },
+  {
+   "level": 8,
+   "unlockedHero": null,
+   "heroSlots": 4,
+   "hitpoints": 4600,
+   "buildCost": 9500000,
+   "buildTimeSeconds": 561600,
+   "experienceGained": 749,
+   "townHallLevelRequired": 14
+  },
+  {
+   "level": 9,
+   "unlockedHero": "Dragon Duke",
+   "heroSlots": 4,
+   "hitpoints": 5000,
+   "buildCost": 11000000,
+   "buildTimeSeconds": 604800,
+   "experienceGained": 777,
+   "townHallLevelRequired": 15
+  },
+  {
+   "level": 10,
+   "unlockedHero": null,
+   "heroSlots": 4,
+   "hitpoints": 5400,
+   "buildCost": 13000000,
+   "buildTimeSeconds": 691200,
+   "experienceGained": 831,
+   "townHallLevelRequired": 16
+  },
+  {
+   "level": 11,
+   "unlockedHero": null,
+   "heroSlots": 4,
+   "hitpoints": 5800,
+   "buildCost": 17000000,
+   "buildTimeSeconds": 777600,
+   "experienceGained": 881,
+   "townHallLevelRequired": 17
+  },
+  {
+   "level": 12,
+   "unlockedHero": null,
+   "heroSlots": 4,
+   "hitpoints": 6000,
+   "buildCost": 26000000,
+   "buildTimeSeconds": 1166400,
+   "experienceGained": 1080,
+   "townHallLevelRequired": 18
+  }
+ ],
+ "mismatches": [
+  {
+   "field": "experienceGained",
+   "level": 6,
+   "wiki": 720,
+   "client": 657,
+   "note": "`buildings[Hero Hall]` floor(√(build seconds)) — derived, no XP column"
+  },
+  {
+   "field": "experienceGained",
+   "level": 7,
+   "wiki": 777,
+   "client": 720,
+   "note": "`buildings[Hero Hall]` floor(√(build seconds)) — derived, no XP column"
+  }
+ ]
+}

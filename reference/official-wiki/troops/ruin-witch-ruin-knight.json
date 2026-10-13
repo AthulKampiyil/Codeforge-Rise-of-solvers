@@ -1,0 +1,136 @@
+{
+ "title": "Ruin Knight",
+ "page": "Ruin Witch/Ruin Knight",
+ "url": "https://clashofclans.fandom.com/wiki/Ruin_Witch/Ruin_Knight",
+ "revid": 625189,
+ "retrieved": "2026-09-15",
+ "clientName": "Ruin Knight",
+ "clientVersion": "18.400.21",
+ "category": "secondary-unit",
+ "parent": "ruin-witch",
+ "constants": {
+  "housingSpace": 20,
+  "movementSpeedWiki": 16,
+  "internalSpeed": 200,
+  "tilesPerSecond": 2,
+  "attackRangeTiles": 0.6,
+  "attackRangeTilesClient": 0.6,
+  "attackSeconds": 1,
+  "splashTiles": null,
+  "splashTilesClient": null,
+  "attackTypeWiki": "Single Target",
+  "targets": "ground",
+  "favoriteTarget": "None",
+  "favoriteTargetTemplate": "None",
+  "favoriteTargetClient": "None",
+  "favoriteMultiplier": null,
+  "bonusDamage": {
+   "target": "Wall",
+   "multiplier": 3
+  },
+  "flying": false,
+  "jumpsWalls": false,
+  "underground": false,
+  "hpDecayPerSecondClient": 80,
+  "triggersTraps": true,
+  "healerWeight": 1
+ },
+ "client": {
+  "clientName": "Ruin Knight",
+  "housingSpace": 20,
+  "internalSpeed": 200,
+  "movementSpeedInGameExact": 16,
+  "movementSpeedInGameRounded": 16,
+  "tilesPerSecond": 2,
+  "attackRangeTiles": 0.6,
+  "attackSeconds": 1,
+  "targets": "ground",
+  "flying": false,
+  "jumpsWalls": false,
+  "favoriteTarget": "None",
+  "bonusTarget": "Wall",
+  "bonusMultiplier": 3,
+  "triggersTraps": true,
+  "healerWeight": 1,
+  "movementOffsetSpeed": 0,
+  "isSecondaryTroop": true,
+  "hpDecayPerSecond": 80
+ },
+ "levels": [
+  {
+   "level": 1,
+   "dps": 255,
+   "damagePerHit": 255,
+   "damageVsWalls": 765,
+   "hitpoints": 3100
+  },
+  {
+   "level": 2,
+   "dps": 285,
+   "damagePerHit": 285,
+   "damageVsWalls": 855,
+   "hitpoints": 3400
+  },
+  {
+   "level": 3,
+   "dps": 315,
+   "damagePerHit": 315,
+   "damageVsWalls": 945,
+   "hitpoints": 3700
+  },
+  {
+   "level": 4,
+   "dps": 345,
+   "damagePerHit": 345,
+   "damageVsWalls": 1035,
+   "hitpoints": 4000
+  }
+ ],
+ "clientLevels": [
+  {
+   "level": 1,
+   "hitpoints": 3100,
+   "dps": 255,
+   "damagePerHit": 255,
+   "damageVsWalls": 765
+  },
+  {
+   "level": 2,
+   "hitpoints": 3400,
+   "dps": 285,
+   "damagePerHit": 285,
+   "damageVsWalls": 855
+  },
+  {
+   "level": 3,
+   "hitpoints": 3700,
+   "dps": 315,
+   "damagePerHit": 315,
+   "damageVsWalls": 945
+  },
+  {
+   "level": 4,
+   "hitpoints": 4000,
+   "dps": 345,
+   "damagePerHit": 345,
+   "damageVsWalls": 1035
+  }
+ ],
+ "comparison": {
+  "checked": 24,
+  "matched": 23
+ },
+ "mismatches": [
+  {
+   "field": "hpDecayPerSecond",
+   "level": null,
+   "wiki": "removed 2026-08-31",
+   "client": 80,
+   "clientColumn": "characters.LoseHpPerTick=40 / LoseHpInterval=500",
+   "note": "client predates the removal"
+  }
+ ],
+ "ambiguities": [
+  "Client 18.400.21 still drains 40 HP every 500 ms (LoseHpPerTick=40, LoseHpInterval=500 = 80 HP/s), i.e. pre-2026-08-31 behaviour."
+ ]
+}

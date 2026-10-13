@@ -1,0 +1,165 @@
+{
+  "title": "Flame Flinger",
+  "url": "https://clashofclans.fandom.com/wiki/Flame_Flinger",
+  "revid": 624810,
+  "clientName": "Flame Flinger",
+  "category": "siege-machine",
+  "retrieved": "2026-09-15",
+  "contentPage": "Flame Flinger",
+  "parentPage": null,
+  "parentRevid": null,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "Defenses",
+    "attackType": "Area Splash (Ground Only)",
+    "rangeTiles": 11,
+    "housingSpace": 1,
+    "movementSpeed": 6,
+    "burstIntervalSeconds": 5,
+    "shotsPerBurst": 3,
+    "hpDecayPerSecond": 17,
+    "workshopLevel": 6
+  },
+  "levels": [
+    {
+      "level": 1,
+      "dps": 124,
+      "damagePerHit": 225,
+      "flameMaxDps": 80,
+      "lifetimeSeconds": 100,
+      "hitpoints": 1700,
+      "researchCost": null,
+      "researchTimeHours": null,
+      "laboratoryLevel": null
+    },
+    {
+      "level": 2,
+      "dps": 137,
+      "damagePerHit": 250,
+      "flameMaxDps": 95,
+      "lifetimeSeconds": 105.88,
+      "hitpoints": 1800,
+      "researchCost": 5500000,
+      "researchTimeHours": 72,
+      "laboratoryLevel": 10
+    },
+    {
+      "level": 3,
+      "dps": 151,
+      "damagePerHit": 275,
+      "flameMaxDps": 105,
+      "lifetimeSeconds": 111.76,
+      "hitpoints": 1900,
+      "researchCost": 8000000,
+      "researchTimeHours": 96,
+      "laboratoryLevel": 10
+    },
+    {
+      "level": 4,
+      "dps": 165,
+      "damagePerHit": 300,
+      "flameMaxDps": 120,
+      "lifetimeSeconds": 117.64,
+      "hitpoints": 2000,
+      "researchCost": 10000000,
+      "researchTimeHours": 168,
+      "laboratoryLevel": 11
+    },
+    {
+      "level": 5,
+      "dps": 179,
+      "damagePerHit": 325,
+      "flameMaxDps": 130,
+      "lifetimeSeconds": 123.52,
+      "hitpoints": 2100,
+      "researchCost": 18000000,
+      "researchTimeHours": 288,
+      "laboratoryLevel": 14
+    }
+  ],
+  "mismatches": [
+    {
+      "field": "dps",
+      "level": 1,
+      "wiki": 124,
+      "client": 127,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 2,
+      "wiki": 137,
+      "client": 141,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 3,
+      "wiki": 151,
+      "client": 155,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 4,
+      "wiki": 165,
+      "client": 169,
+      "note": "client DPS"
+    },
+    {
+      "field": "dps",
+      "level": 5,
+      "wiki": 179,
+      "client": 184,
+      "note": "client DPS"
+    },
+    {
+      "field": "rangeTiles",
+      "level": null,
+      "wiki": 11,
+      "client": 10.05,
+      "note": "client AttackRange 1005"
+    },
+    {
+      "field": "burnDurationSeconds",
+      "level": null,
+      "wiki": 22,
+      "client": 30,
+      "note": "wiki summary; wiki history says 30 s since June 2022; client FireSpiritExplosion NumberOfHits 75 x 400 ms"
+    },
+    {
+      "field": "damagePerHit",
+      "level": 1,
+      "wiki": 225,
+      "client": 211.67,
+      "note": "naive DPS*AttackSpeed/BurstCount; exact client derivation unknown"
+    }
+  ],
+  "clientColumnMap": [
+    {
+      "mechanic": "burst",
+      "client": "`AttackSpeed` 5000, `BurstCount` 3, `BurstDelay` 128 ms, `Projectile` FireCatapultProjectile1..5"
+    },
+    {
+      "mechanic": "burn area",
+      "client": "projectile `HitSpell` FireSpiritExplosion (level = machine level): `PoisonDPS` 80..130, `PoisonIncreaseSlowly` TRUE, `Radius` 250, `NumberOfHits` 75 x `TimeBetweenHitsMS` 400 = 30 s, `PreferredTarget` Wall x`PreferredTargetDamageMod` 25"
+    },
+    {
+      "mechanic": "direct hit",
+      "client": "`DPS` 127..184 (no per-projectile damage column), `DamageRadius` 100, `DamageMultiplierTarget` Wall / `DamageMultiplierPercent` 800"
+    },
+    {
+      "mechanic": "range",
+      "client": "`AttackRange` 1005 (10.05 tiles)"
+    },
+    {
+      "mechanic": "decay",
+      "client": "`LoseHpPerTick` 17 / 1000 ms"
+    },
+    {
+      "mechanic": "speed",
+      "client": "`Speed` 80 = 6.4 in-game (wiki 6)"
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+ "title": "Supercharge",
+ "url": "https://clashofclans.fandom.com/wiki/Supercharge",
+ "revid": 625336,
+ "retrieved": "2026-09-15",
+ "category": "mechanic",
+ "clientName": "<Building> Mini Levels",
+ "clientTable": "mini_levels.csv",
+ "levels": [
+  {
+   "level": 1,
+   "baseDamagePerSecond": 235,
+   "baseDamagePerShot": 352.5,
+   "bonusDamagePerShot": 15,
+   "hitpoints": 5959,
+   "cost": 220000,
+   "buildSeconds": 432000,
+   "xp": 657,
+   "townHall": 18,
+   "dps": 400,
+   "damagePerHit": 400
+  },
+  {
+   "level": 2,
+   "baseDamagePerSecond": 235,
+   "baseDamagePerShot": 352.5,
+   "bonusDamagePerShot": 15,
+   "hitpoints": 6161,
+   "cost": 200000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 18,
+   "dps": 400,
+   "damagePerHit": 400
+  }
+ ],
+ "supercharges": [
+  {
+   "charge": 1,
+   "dps": 75,
+   "damagePerHit": 375,
+   "hitpoints": 2550,
+   "cost": 9000000,
+   "buildSeconds": 345600,
+   "xp": 509,
+   "townHall": 18,
+   "dpsStage1": 165,
+   "dpsStage2": 350,
+   "dpsStage3": 3500,
+   "damagePerHitStage1": 21.12,
+   "damagePerHitStage2": 44.8,
+   "damagePerHitStage3": 448,
+   "dpsPerTarget": 165,
+   "numberOfTargets": 6,
+   "damagePerHitMin": 450,
+   "damagePerHitMax": 617.6,
+   "splashDamage": "160-450",
+   "splashDamageMin": 160,
+   "splashDamageMax": 450,
+   "repairPerSecond": 95,
+   "repairPerHit": 71.25,
+   "dpsPerArcher": 126,
+   "damagePerHitPrimary": 336,
+   "secondaryChainDamage": 235.2,
+   "maximumDamagePerSecond": 433,
+   "damagePerHitSecondary": 156,
+   "damagePerHitTertiary": 93.6,
+   "capacity": 436500,
+   "productionRate": "7,857/hr",
+   "boostCost": 11,
+   "timeToFill": "2d 7h 33m 20s",
+   "catchUpPoint": "50d 21h 49m 6s"
+  },
+  {
+   "charge": 2,
+   "dps": 75,
+   "damagePerHit": 375,
+   "hitpoints": 2625,
+   "cost": 7000000,
+   "buildSeconds": 518400,
+   "xp": 720,
+   "townHall": 18,
+   "dpsStage1": 165,
+   "dpsStage2": 350,
+   "dpsStage3": 3500,
+   "damagePerHitStage1": 21.12,
+   "damagePerHitStage2": 44.8,
+   "damagePerHitStage3": 448,
+   "dpsPerTarget": 165,
+   "numberOfTargets": 6,
+   "damagePerHitMin": 450,
+   "damagePerHitMax": 617.6,
+   "splashDamage": "160-450",
+   "splashDamageMin": 160,
+   "splashDamageMax": 450,
+   "repairPerSecond": 95,
+   "repairPerHit": 71.25,
+   "dpsPerArcher": 126,
+   "damagePerHitPrimary": 336,
+   "secondaryChainDamage": 235.2,
+   "maximumDamagePerSecond": 433,
+   "damagePerHitSecondary": 156,
+   "damagePerHitTertiary": 93.6,
+   "capacity": 453000,
+   "productionRate": "8,154/hr",
+   "boostCost": 11,
+   "timeToFill": "2d 7h 33m 20s",
+   "catchUpPoint": "79d 8h 43m 39s"
+  },
+  {
+   "charge": 3,
+   "capacity": 453000,
+   "productionRate": "8,154/hr",
+   "hitpoints": 1450,
+   "boostCost": 11,
+   "timeToFill": "2d 7h 33m 20s",
+   "cost": 1300000,
+   "buildSeconds": 345600,
+   "xp": 587,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "defenseCharges": 2,
+  "collectorCharges": 3,
+  "requiredTownHall": 18,
+  "sparkyStonesPerCharge": 10,
+  "removedOnNewLevel": true
+ },
+ "mismatches": [
+  {
+   "field": "cost",
+   "level": "X-Bow C1",
+   "wiki": 9000000,
+   "client": 14000000,
+   "note": "wiki prices equal the Mortar's (9M/7M) - probable wiki copy error; client times/bonuses match"
+  },
+  {
+   "field": "cost",
+   "level": "X-Bow C2",
+   "wiki": 7000000,
+   "client": 9000000,
+   "note": "wiki prices equal the Mortar's (9M/7M) - probable wiki copy error; client times/bonuses match"
+  },
+  {
+   "field": "townHall",
+   "level": "Builder's Hut C1",
+   "wiki": 18,
+   "client": 17,
+   "note": "client building row has no MiniLevels link (older unlinked mini row compared)"
+  },
+  {
+   "field": "cost",
+   "level": "Builder's Hut C2",
+   "wiki": 8000000,
+   "client": 5000000,
+   "note": "client building row has no MiniLevels link (older unlinked mini row compared)"
+  },
+  {
+   "field": "townHall",
+   "level": "Builder's Hut C2",
+   "wiki": 18,
+   "client": 17,
+   "note": "client building row has no MiniLevels link (older unlinked mini row compared)"
+  },
+  {
+   "field": "MiniLevels link",
+   "level": "Builder's Hut",
+   "wiki": "supercharges available",
+   "client": "Builders Hut rows have no MiniLevels",
+   "note": "added on the live game after the client snapshot (Aug 31, 2026 for Builder's Hut and Monolith)"
+  },
+  {
+   "field": "cost",
+   "level": "Monolith C1",
+   "wiki": 220000,
+   "client": 150000,
+   "note": "client building row has no MiniLevels link (older unlinked mini row compared)"
+  },
+  {
+   "field": "townHall",
+   "level": "Monolith C1",
+   "wiki": 18,
+   "client": 17,
+   "note": "client building row has no MiniLevels link (older unlinked mini row compared)"
+  },
+  {
+   "field": "cost",
+   "level": "Monolith C2",
+   "wiki": 200000,
+   "client": 130000,
+   "note": "client building row has no MiniLevels link (older unlinked mini row compared)"
+  },
+  {
+   "field": "townHall",
+   "level": "Monolith C2",
+   "wiki": 18,
+   "client": 17,
+   "note": "client building row has no MiniLevels link (older unlinked mini row compared)"
+  },
+  {
+   "field": "MiniLevels link",
+   "level": "Monolith",
+   "wiki": "supercharges available",
+   "client": "Monolith rows have no MiniLevels",
+   "note": "added on the live game after the client snapshot (Aug 31, 2026 for Builder's Hut and Monolith)"
+  }
+ ]
+}

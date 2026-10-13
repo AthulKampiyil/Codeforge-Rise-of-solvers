@@ -1,0 +1,118 @@
+{
+  "title": "Super Miner",
+  "url": "https://clashofclans.fandom.com/wiki/Super_Miner/Home_Village",
+  "revid": 622280,
+  "clientName": "Super Miner",
+  "category": "super-troop",
+  "retrieved": "2026-09-15",
+  "contentPage": "Super Miner/Home Village",
+  "parentPage": "Super Miner",
+  "parentRevid": 620353,
+  "clientTable": "characters",
+  "clientVersion": "18.400.21",
+  "constants": {
+    "preferredTarget": "None",
+    "attackType": "Single Target",
+    "housingSpace": 24,
+    "movementSpeed": 32,
+    "attackSpeedSeconds": 0.25,
+    "rangeTiles": 0.6,
+    "specialAbility": "Last Blast",
+    "stage2AfterSeconds": 1.5,
+    "stage3AfterSeconds": 3,
+    "deathDamageRadiusTiles": 2
+  },
+  "levels": [
+    {
+      "level": 7,
+      "dpsInitial": 170,
+      "dpsStage2": 340,
+      "dpsStage3": 520,
+      "deathDamage": 1400,
+      "hitpoints": 3000
+    },
+    {
+      "level": 8,
+      "dpsInitial": 185,
+      "dpsStage2": 370,
+      "dpsStage3": 560,
+      "deathDamage": 1600,
+      "hitpoints": 3300
+    },
+    {
+      "level": 9,
+      "dpsInitial": 205,
+      "dpsStage2": 405,
+      "dpsStage3": 605,
+      "deathDamage": 1800,
+      "hitpoints": 3600
+    },
+    {
+      "level": 10,
+      "dpsInitial": 225,
+      "dpsStage2": 440,
+      "dpsStage3": 650,
+      "deathDamage": 2000,
+      "hitpoints": 4000
+    },
+    {
+      "level": 11,
+      "dpsInitial": 245,
+      "dpsStage2": 475,
+      "dpsStage3": 695,
+      "deathDamage": 2200,
+      "hitpoints": 4400
+    },
+    {
+      "level": 12,
+      "dpsInitial": 265,
+      "dpsStage2": 510,
+      "dpsStage3": 740,
+      "deathDamage": 2400,
+      "hitpoints": 5000
+    }
+  ],
+  "mismatches": [],
+  "clientColumnMap": [
+    {
+      "mechanic": "ramp",
+      "client": "`IncreasingDamage` TRUE, `DPS`/`DPSLv2`/`DPSLv3`, `Lv2SwitchTime` 1500, `Lv3SwitchTime` 3000"
+    },
+    {
+      "mechanic": "death",
+      "client": "`DieDamage`, `DieDamageRadius` 200, `DieDamageDelay` 1000"
+    },
+    {
+      "mechanic": "burrow",
+      "client": "`IsUnderground` TRUE"
+    },
+    {
+      "mechanic": "stats",
+      "client": "`Hitpoints`, `Speed` 400, `AttackSpeed` 250, `AttackRange` 60"
+    }
+  ],
+  "boost": {
+    "wiki": {
+      "baseTroop": "Miner",
+      "minBaseLevel": 7,
+      "townHallRequired": 13,
+      "clanCastleLevelToReceive": 7,
+      "costDarkElixir": 25000,
+      "alternativeCost": "1 Super Potion",
+      "durationDays": 3
+    },
+    "client": {
+      "table": "super_licences",
+      "row": "SuperMiner",
+      "Original": "Miner",
+      "MinOriginalLevel_raw": 6,
+      "minBaseLevel": 7,
+      "DurationH": 72,
+      "CooldownH": 72,
+      "Resource": "DarkElixir",
+      "ResourceCost": 25000,
+      "TrialNPC": "SUPER_MINER_INTRO",
+      "townHallDerived": 13
+    }
+  }
+}

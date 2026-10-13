@@ -1,0 +1,154 @@
+{
+ "title": "Monolith",
+ "url": "https://clashofclans.fandom.com/wiki/Monolith",
+ "revid": 625148,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Monolith",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "baseDamagePerSecond": 150,
+   "baseDamagePerShot": 225,
+   "bonusDamagePerShot": 11,
+   "hitpoints": 4747,
+   "cost": 200000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 15
+  },
+  {
+   "level": 2,
+   "baseDamagePerSecond": 175,
+   "baseDamagePerShot": 262.5,
+   "bonusDamagePerShot": 12,
+   "hitpoints": 5050,
+   "cost": 250000,
+   "buildSeconds": 691200,
+   "xp": 831,
+   "townHall": 15
+  },
+  {
+   "level": 3,
+   "baseDamagePerSecond": 193,
+   "baseDamagePerShot": 289.5,
+   "bonusDamagePerShot": 13,
+   "hitpoints": 5353,
+   "cost": 260000,
+   "buildSeconds": 777600,
+   "xp": 881,
+   "townHall": 16
+  },
+  {
+   "level": 4,
+   "baseDamagePerSecond": 209,
+   "baseDamagePerShot": 313.5,
+   "bonusDamagePerShot": 14,
+   "hitpoints": 5656,
+   "cost": 300000,
+   "buildSeconds": 950400,
+   "xp": 974,
+   "townHall": 17
+  },
+  {
+   "level": 5,
+   "baseDamagePerSecond": 225,
+   "baseDamagePerShot": 337.5,
+   "bonusDamagePerShot": 15,
+   "hitpoints": 5959,
+   "cost": 470000,
+   "buildSeconds": 1296000,
+   "xp": 1138,
+   "townHall": 18
+  }
+ ],
+ "supercharges": [
+  {
+   "baseDamagePerSecond": 235,
+   "baseDamagePerShot": 352.5,
+   "bonusDamagePerShot": 15,
+   "hitpoints": 5959,
+   "cost": 220000,
+   "buildSeconds": 432000,
+   "xp": 657,
+   "townHall": 18,
+   "charge": 1
+  },
+  {
+   "baseDamagePerSecond": 235,
+   "baseDamagePerShot": 352.5,
+   "bonusDamagePerShot": 15,
+   "hitpoints": 6161,
+   "cost": 200000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 18,
+   "charge": 2
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 15,
+  "size": "3x3",
+  "range": 11,
+  "minRange": 0,
+  "attackSeconds": 1.5,
+  "targets": "ground & air",
+  "damageType": "single target + %max HP",
+  "resource": "dark elixir",
+  "projectileBandsMaxHp": [
+   800,
+   3500
+  ]
+ },
+ "mismatches": [
+  {
+   "field": "supercharge",
+   "level": "all",
+   "wiki": "available at max level",
+   "client": "not linked from building row",
+   "note": "Aug 31, 2026 charges are newer than the client snapshot",
+   "table": "Supercharges"
+  },
+  {
+   "field": "cost",
+   "level": "C1",
+   "wiki": 220000,
+   "client": 150000,
+   "note": "unlinked client mini row (older TH17 supercharge) costs 150k / 130k DE; live charges cost 220k / 200k",
+   "table": "Supercharges"
+  },
+  {
+   "field": "townHall",
+   "level": "C1",
+   "wiki": 18,
+   "client": 17,
+   "note": "unlinked client mini row says TH17",
+   "table": "Supercharges"
+  },
+  {
+   "field": "cost",
+   "level": "C2",
+   "wiki": 200000,
+   "client": 130000,
+   "note": "unlinked client mini row (older TH17 supercharge) costs 150k / 130k DE; live charges cost 220k / 200k",
+   "table": "Supercharges"
+  },
+  {
+   "field": "townHall",
+   "level": "C2",
+   "wiki": 18,
+   "client": 17,
+   "note": "unlinked client mini row says TH17",
+   "table": "Supercharges"
+  },
+  {
+   "field": "projectileColorBands",
+   "level": "all",
+   "wiki": "thresholds vary by level",
+   "client": "800;3500 max HP for every level",
+   "note": "ProjectileVariantByTargetMaxHP is only set on level 1 and inherited; cosmetic only"
+  }
+ ],
+ "progressionMismatches": []
+}

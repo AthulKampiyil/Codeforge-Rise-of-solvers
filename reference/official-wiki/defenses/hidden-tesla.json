@@ -1,0 +1,217 @@
+{
+ "title": "Hidden Tesla/Home Village",
+ "url": "https://clashofclans.fandom.com/wiki/Hidden_Tesla/Home_Village",
+ "revid": 624470,
+ "retrieved": "2026-09-15",
+ "category": "defense",
+ "clientName": "Hidden Tesla",
+ "clientTable": "buildings.csv",
+ "levels": [
+  {
+   "level": 1,
+   "dps": 34,
+   "damagePerHit": 20.4,
+   "hitpoints": 600,
+   "cost": 250000,
+   "buildSeconds": 7200,
+   "xp": 84,
+   "townHall": 7
+  },
+  {
+   "level": 2,
+   "dps": 40,
+   "damagePerHit": 24,
+   "hitpoints": 630,
+   "cost": 350000,
+   "buildSeconds": 10800,
+   "xp": 103,
+   "townHall": 7
+  },
+  {
+   "level": 3,
+   "dps": 48,
+   "damagePerHit": 28.8,
+   "hitpoints": 660,
+   "cost": 500000,
+   "buildSeconds": 14400,
+   "xp": 120,
+   "townHall": 7
+  },
+  {
+   "level": 4,
+   "dps": 55,
+   "damagePerHit": 33,
+   "hitpoints": 690,
+   "cost": 600000,
+   "buildSeconds": 21600,
+   "xp": 146,
+   "townHall": 8
+  },
+  {
+   "level": 5,
+   "dps": 64,
+   "damagePerHit": 38.4,
+   "hitpoints": 730,
+   "cost": 800000,
+   "buildSeconds": 43200,
+   "xp": 207,
+   "townHall": 8
+  },
+  {
+   "level": 6,
+   "dps": 75,
+   "damagePerHit": 45,
+   "hitpoints": 770,
+   "cost": 1200000,
+   "buildSeconds": 86400,
+   "xp": 293,
+   "townHall": 8
+  },
+  {
+   "level": 7,
+   "dps": 87,
+   "damagePerHit": 52.2,
+   "hitpoints": 810,
+   "cost": 1400000,
+   "buildSeconds": 108000,
+   "xp": 328,
+   "townHall": 9
+  },
+  {
+   "level": 8,
+   "dps": 99,
+   "damagePerHit": 59.4,
+   "hitpoints": 850,
+   "cost": 1600000,
+   "buildSeconds": 129600,
+   "xp": 360,
+   "townHall": 10
+  },
+  {
+   "level": 9,
+   "dps": 110,
+   "damagePerHit": 66,
+   "hitpoints": 900,
+   "cost": 2100000,
+   "buildSeconds": 151200,
+   "xp": 388,
+   "townHall": 11
+  },
+  {
+   "level": 10,
+   "dps": 120,
+   "damagePerHit": 72,
+   "hitpoints": 980,
+   "cost": 3000000,
+   "buildSeconds": 172800,
+   "xp": 415,
+   "townHall": 12
+  },
+  {
+   "level": 11,
+   "dps": 130,
+   "damagePerHit": 78,
+   "hitpoints": 1100,
+   "cost": 3100000,
+   "buildSeconds": 216000,
+   "xp": 464,
+   "townHall": 13
+  },
+  {
+   "level": 12,
+   "dps": 140,
+   "damagePerHit": 84,
+   "hitpoints": 1200,
+   "cost": 3700000,
+   "buildSeconds": 259200,
+   "xp": 509,
+   "townHall": 13
+  },
+  {
+   "level": 13,
+   "dps": 150,
+   "damagePerHit": 90,
+   "hitpoints": 1350,
+   "cost": 5100000,
+   "buildSeconds": 302400,
+   "xp": 549,
+   "townHall": 14
+  },
+  {
+   "level": 14,
+   "dps": 160,
+   "damagePerHit": 96,
+   "hitpoints": 1450,
+   "cost": 6500000,
+   "buildSeconds": 345600,
+   "xp": 587,
+   "townHall": 15
+  },
+  {
+   "level": 15,
+   "dps": 170,
+   "damagePerHit": 102,
+   "hitpoints": 1550,
+   "cost": 8200000,
+   "buildSeconds": 432000,
+   "xp": 657,
+   "townHall": 16
+  },
+  {
+   "level": 16,
+   "dps": 180,
+   "damagePerHit": 108,
+   "hitpoints": 1650,
+   "cost": 15000000,
+   "buildSeconds": 604800,
+   "xp": 777,
+   "townHall": 17
+  },
+  {
+   "level": 17,
+   "dps": 190,
+   "damagePerHit": 114,
+   "hitpoints": 1750,
+   "cost": 25000000,
+   "buildSeconds": 1123200,
+   "xp": 1059,
+   "townHall": 18
+  }
+ ],
+ "supercharges": [
+  {
+   "charge": 1,
+   "dps": 195,
+   "damagePerHit": 117,
+   "hitpoints": 1750,
+   "cost": 12000000,
+   "buildSeconds": 388800,
+   "xp": 623,
+   "townHall": 18
+  },
+  {
+   "charge": 2,
+   "dps": 195,
+   "damagePerHit": 117,
+   "hitpoints": 1800,
+   "cost": 8000000,
+   "buildSeconds": 561600,
+   "xp": 749,
+   "townHall": 18
+  }
+ ],
+ "constants": {
+  "unlockTownHall": 7,
+  "size": "2x2",
+  "range": 7,
+  "triggerRange": 6,
+  "minRange": 0,
+  "attackSeconds": 0.6,
+  "targets": "ground & air",
+  "damageType": "single target",
+  "hidden": true,
+  "revealAtDestructionPercent": 51
+ },
+ "mismatches": [],
+ "progressionMismatches": []
+}
