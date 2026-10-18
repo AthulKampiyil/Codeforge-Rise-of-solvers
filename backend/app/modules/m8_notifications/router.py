@@ -16,6 +16,9 @@ from app.modules.m1_auth.models import User
 from app.modules.m8_notifications.schemas import NotificationOut
 from app.modules.m8_notifications.service import NotificationService, registry
 
+# Kept in step with src/cp/realtime.ts.
+WS_BEARER_SUBPROTOCOL = "codeforge.bearer"
+
 logger = get_logger(__name__)
 
 router = APIRouter(prefix="/notifications", tags=["m8_notifications"])
@@ -58,22 +61,43 @@ def mark_notification_read(
 ws_router = APIRouter(tags=["m8_notifications"])
 
 
+def _bearer_subprotocol(header: str | None) -> tuple[str | None, str | None]:
+    """Split `Sec-WebSocket-Protocol: codeforge.bearer, <jwt>` into (protocol, token).
+
+    A JWT is a valid RFC 6455 subprotocol token (base64url plus dots), so the browser
+    handshake can carry it in a header instead of the URL.
+    """
+    if not header:
+        return None, None
+    parts = [part.strip() for part in header.split(",")]
+    if len(parts) >= 2 and parts[0] == WS_BEARER_SUBPROTOCOL:
+        return parts[0], parts[1]
+    return None, None
+
+
 @ws_router.websocket("/ws/events")
 async def websocket_events(
     websocket: WebSocket,
-    token: str = Query(...),
+    token: str | None = Query(None),
     db: Session = Depends(get_db),
     redis: Redis = Depends(get_redis),
 ):
     """
     Realtime event channel (SADD Appendix B: WS /ws/events).
 
-    Auth: `?token=<jwt access token>`. On connect, registers this
-    socket in the process-local ConnectionRegistry and a Redis presence
-    key with a heartbeat TTL; on disconnect, both are cleaned up.
+    Auth: the access token travels in the `Sec-WebSocket-Protocol` handshake header
+    as `<protocol>, <jwt>` so it stays out of URLs and access logs; `?token=<jwt>`
+    is still accepted for older clients. On connect, registers this socket in the
+    process-local ConnectionRegistry and a Redis presence key with a heartbeat TTL;
+    on disconnect, both are cleaned up.
     """
+    subprotocol, header_token = _bearer_subprotocol(websocket.headers.get("sec-websocket-protocol"))
+    access_token = header_token or token
+    if not access_token:
+        await websocket.close(code=1008, reason="Missing token")
+        return
     try:
-        payload = verify_access_token(token)
+        payload = verify_access_token(access_token)
         user_id = payload["sub"]
         from app.modules.m1_auth.repository import UserRepository
         user = UserRepository(db).get_by_id(user_id)
@@ -84,7 +108,7 @@ async def websocket_events(
         await websocket.close(code=1008, reason="Invalid token")
         return
 
-    await websocket.accept()
+    await websocket.accept(subprotocol=subprotocol)
     registry.add(user_id, websocket)
     presence_key = f"ws:online:{user_id}"
 

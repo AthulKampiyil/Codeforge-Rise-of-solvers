@@ -2708,14 +2708,17 @@ export class HUD {
     if ((this.panel || this.model.battle?.finished) && e.key === 'Tab') {
       const dialog = document.querySelector<HTMLElement>('[role="dialog"]');
       const items = Array.from(
-        dialog?.querySelectorAll<HTMLElement>('button:not(:disabled),input,a[href]') ?? [],
-      );
+        dialog?.querySelectorAll<HTMLElement>(
+          'button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled),a[href],[tabindex]:not([tabindex="-1"])',
+        ) ?? [],
+      ).filter((element) => element.getClientRects().length > 0);
       const first = items[0],
         last = items.at(-1);
-      if (e.shiftKey && document.activeElement === first) {
+      const outside = !dialog?.contains(document.activeElement);
+      if (e.shiftKey && (document.activeElement === first || outside)) {
         e.preventDefault();
         last?.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
+      } else if (!e.shiftKey && (document.activeElement === last || outside)) {
         e.preventDefault();
         first?.focus();
       }

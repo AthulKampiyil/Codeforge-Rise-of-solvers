@@ -31,9 +31,35 @@ export function openCodeForgeDialog(root: HTMLElement) {
   let closed = false;
   const signal = abort.signal;
 
+  // The dialog declares aria-modal, so the rest of the page must stay unreachable while it is open:
+  // inert every sibling along the ancestor chain, trap Tab inside, and restore both on close.
+  const opener = document.activeElement instanceof HTMLElement && !root.contains(document.activeElement) ? document.activeElement : null;
+  const inertTargets: { element: HTMLElement; inert: boolean }[] = [];
+  for (let node: HTMLElement | null = root; node && node !== document.body; node = node.parentElement) {
+    for (const sibling of Array.from(node.parentElement?.children ?? [])) {
+      if (sibling === node || !(sibling instanceof HTMLElement)) continue;
+      inertTargets.push({ element: sibling, inert: sibling.inert });
+      sibling.inert = true;
+    }
+  }
+  const FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
+  const focusable = () => Array.from(root.querySelectorAll<HTMLElement>(FOCUSABLE)).filter((element) => element.getClientRects().length > 0);
+  const focusDescriptor = (element: Element | null): string | null => {
+    if (!(element instanceof HTMLElement) || !root.contains(element)) return null;
+    for (const attribute of ['data-codeforge-close', 'data-copy-proof', 'data-cf-sync', 'data-cf-refresh', 'data-proof-token']) {
+      if (element.hasAttribute(attribute)) return `[${attribute}]`;
+    }
+    const name = element.getAttribute('name');
+    return name && (element instanceof HTMLInputElement || element instanceof HTMLTextAreaElement) ? `[name="${name}"]` : null;
+  };
+  let focusInitialized = false;
+
   const render = () => {
     if (closed) return;
     const account = accounts.find((a) => a.judge_type === 'codeforces');
+    // Re-renders must not drop what the user typed or where the caret is.
+    const restoreFocusTo = focusDescriptor(document.activeElement);
+    const handleDraft = root.querySelector<HTMLInputElement>('#cf-link-form input[name="handle"]')?.value ?? '';
     const session = getAccessToken() ?? '';
     if (pendingProof && pendingProof.session !== session) pendingProof = null;
     const token = account && pendingProof?.accountId === account.id && pendingProof.session === session ? pendingProof.token : '';
@@ -82,17 +108,32 @@ export function openCodeForgeDialog(root: HTMLElement) {
     root.querySelector('.modal-backdrop')?.addEventListener('click', (event) => {
       if (event.target === event.currentTarget) close();
     }, { signal });
+    const handleField = root.querySelector<HTMLInputElement>('#cf-link-form input[name="handle"]');
+    if (handleField && handleDraft && !handleField.value) handleField.value = handleDraft;
+    const refocus = restoreFocusTo ? root.querySelector<HTMLElement>(restoreFocusTo) : null;
+    if (refocus) refocus.focus();
+    else if (!focusInitialized) { focusInitialized = true; focusable()[0]?.focus(); }
   };
-  const close = () => { if (closed) return; closed = true; abort.abort(); root.innerHTML = ''; if (activeDialog === close) activeDialog = null; };
+  const close = () => { if (closed) return; closed = true; abort.abort(); root.innerHTML = ''; for (const entry of inertTargets) entry.element.inert = entry.inert; if (opener?.isConnected) opener.focus(); if (activeDialog === close) activeDialog = null; };
   activeDialog = close;
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape') close(); }, { signal });
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab') return;
+    const items = focusable();
+    if (!items.length) { event.preventDefault(); return; }
+    const first = items[0];
+    const last = items[items.length - 1];
+    const active = document.activeElement;
+    if (event.shiftKey && (active === first || !root.contains(active))) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && (active === last || !root.contains(active))) { event.preventDefault(); first.focus(); }
+  }, { signal });
   const verify = (account: JudgeAccount) => run(async () => {
     await authApi.verifyJudge(account.id);
     if (pendingProof?.accountId === account.id) pendingProof = null;
     accounts = await authApi.judgeAccounts();
   }, 'Codeforces profile verified.');
   const run = async (fn: () => Promise<void>, success: string) => {
-    if (closed) return;
+    if (closed || busy) return;
     busy = true; error = ''; notice = ''; render();
     try { await fn(); if (closed) return; notice = success; await load(); }
     catch (cause) { if (!closed) error = cause instanceof Error ? cause.message : 'Unable to complete this request.'; }

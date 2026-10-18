@@ -1,6 +1,8 @@
 .cf-layout-controls[role="region"] {
   position: fixed;
-  z-index: 1200;
+  /* Stays above the game HUD layers (z-index 4 and below) but below .modal-backdrop, so an open
+     dialog covers it and its full-viewport backdrop swallows clicks: see docs/UI_UX_AUDIT.md M11. */
+  z-index: 19;
   top: max(12px, env(safe-area-inset-top));
   left: 50%;
   transform: translateX(-50%);

@@ -89,6 +89,27 @@ class TestWebSocketAuth:
         assert exc.value.code == 1008
 
     @pytest.mark.asyncio
+    async def test_access_token_is_accepted_from_the_handshake_subprotocol(self, client, make_user):
+        """The token belongs in the handshake header, not the URL (M9)."""
+        from app.modules.m8_notifications.router import WS_BEARER_SUBPROTOCOL
+
+        _, _, tokens = make_user()
+        with client.websocket_connect(
+            "/ws/events", subprotocols=[WS_BEARER_SUBPROTOCOL, tokens["access_token"]],
+        ) as ws:
+            ws.send_text("ping")
+            assert ws.receive_text() == "pong"
+
+    @pytest.mark.asyncio
+    async def test_websocket_without_any_token_is_rejected(self, client):
+        from fastapi import WebSocketDisconnect
+
+        with pytest.raises(WebSocketDisconnect) as exc:
+            with client.websocket_connect("/ws/events"):
+                pass
+        assert exc.value.code == 1008
+
+    @pytest.mark.asyncio
     async def test_idle_websocket_is_closed_after_session_revocation(self, client, make_user, redis_client):
         import asyncio
         from fastapi import WebSocketDisconnect

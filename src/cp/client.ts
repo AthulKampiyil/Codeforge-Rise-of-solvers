@@ -4,9 +4,19 @@ export interface Tokens { access_token: string; refresh_token: string; token_typ
 export interface RequestOptions extends Omit<RequestInit, "body"> { body?: unknown; skipAuthRetry?: boolean; auth?: boolean }
 interface RequestSession { generation: number; identity: string }
 
+function statusMessage(status: number): string {
+  if (status === 0) return "Cannot reach the server. Check your connection and try again.";
+  if (status === 401) return "Your session ended. Sign in to continue.";
+  if (status === 403) return "You do not have permission to do that.";
+  if (status === 404) return "That could not be found.";
+  if (status === 408 || status === 429) return "The server is busy. Please wait a moment and try again.";
+  if (status >= 500) return "The server could not complete that request. Please try again.";
+  return `That request was rejected (status ${status}).`;
+}
+
 export class ApiError extends Error {
   constructor(readonly status: number, readonly detail?: unknown, readonly code?: string) {
-    super(typeof detail === "string" ? detail : `Request failed with status ${status}`);
+    super(typeof detail === "string" ? detail : statusMessage(status));
     this.name = "ApiError";
   }
 }

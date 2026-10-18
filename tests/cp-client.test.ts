@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY, apiClient, clearTokens, setTokens } from "../src/cp/client";
 import { attacksApi, authApi, villageApi } from "../src/cp/api";
-import { realtimeClient } from "../src/cp/realtime";
+import { WS_BEARER_SUBPROTOCOL, realtimeClient } from "../src/cp/realtime";
 import type { EconomyLedgerEntry, EquippedCosmetic, GuildMembership, TerritoryZone, TrophyLedgerEntry } from "../src/cp/types";
 const data = new Map<string, string>();
 Object.defineProperty(globalThis, "localStorage", { configurable: true, value: {
@@ -106,10 +106,13 @@ describe("CP API client", () => {
       onerror?: () => void;
       send = vi.fn();
       close = vi.fn(() => this.onclose?.({} as CloseEvent));
-      constructor(readonly url: string) { current = this; }
+      constructor(readonly url: string, readonly protocols?: string[]) { current = this; }
     }
     vi.stubGlobal("WebSocket", MockSocket);
     realtimeClient.connect();
+    // M9: the token rides the handshake subprotocols, so it never reaches the URL or access logs.
+    expect(current?.url).not.toContain("ws-token");
+    expect(current?.protocols).toEqual([WS_BEARER_SUBPROTOCOL, "ws-token"]);
     current?.onopen?.();
     vi.advanceTimersByTime(20_000);
     expect(current?.send).toHaveBeenCalledWith("ping");
