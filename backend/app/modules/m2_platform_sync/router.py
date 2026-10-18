@@ -13,6 +13,7 @@ from app.modules.m1_auth.models import User
 from app.modules.m2_platform_sync.models import SyncLog, CodeforcesSyncCheckpoint, SolvedProblem
 from app.modules.m10_economy.models import EconomyLedger
 from app.modules.m2_platform_sync.schemas import SolvedHistoryPageOut
+from app.modules.m2_platform_sync.topic_tagger import TopicTagger
 from app.modules.m1_auth.models import JudgeAccount, JudgeType
 from app.core.config import settings
 from datetime import datetime, timedelta, timezone
@@ -26,6 +27,7 @@ def get_solved_history(
     db: Annotated[Session, Depends(get_db)],
     offset: int = Query(0, ge=0),
     limit: int = Query(50, ge=1, le=100),
+    topic: str | None = Query(None, description="Seeded topic name; keeps only problems tagged for that topic"),
 ) -> SolvedHistoryPageOut:
     """Return bounded, stable history for the user's verified Codeforces account."""
     account = db.query(JudgeAccount).filter(
@@ -36,12 +38,22 @@ def get_solved_history(
     if account is None:
         raise HTTPException(status_code=404, detail="No verified Codeforces account")
 
-    facts = db.query(SolvedProblem).filter(SolvedProblem.judge_account_id == account.id)
-    total = facts.count()
+    conditions = [SolvedProblem.judge_account_id == account.id]
+    if topic is not None:
+        # A village topic is a family of judge tags, so the filter is the topic's
+        # tag set rather than a single stored value.
+        topic_name = TopicTagger.get_topic_by_name(topic)
+        if topic_name is None:
+            raise HTTPException(status_code=400, detail=f"Unknown topic: {topic}")
+        conditions.append(SolvedProblem.topic_tags.op("&&")(
+            [tag for tag, mapped in TopicTagger.TAG_TO_TOPIC.items() if mapped == topic_name]
+        ))
+
+    total = db.query(SolvedProblem).filter(*conditions).count()
     rows = (
         db.query(SolvedProblem, EconomyLedger.id)
         .outerjoin(EconomyLedger, EconomyLedger.solved_problem_id == SolvedProblem.id)
-        .filter(SolvedProblem.judge_account_id == account.id)
+        .filter(*conditions)
         .order_by(SolvedProblem.solved_at.desc(), SolvedProblem.id.desc())
         .offset(offset).limit(limit).all()
     )

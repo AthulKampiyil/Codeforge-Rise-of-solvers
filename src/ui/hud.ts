@@ -230,8 +230,8 @@ import { ACHIEVEMENTS, UNAVAILABLE_ACHIEVEMENTS } from '../game/achievements';
 import { musicScene } from '../game/music';
 import { openCodeForgeDialog } from './codeforge-dialog';
 import './topic-outpost-toolbar.css';
-import { attacksApi } from '../cp/api';
-import type { AttackDetail } from '../cp/types';
+import { attacksApi, villageApi } from '../cp/api';
+import type { AttackDetail, SolvedHistoryItem, VillageTopic } from '../cp/types';
 import { cpVillageStore, type CPVillageSnapshot } from '../cp/store';
 import { decodeLayout, layoutFromLink, layoutLink } from '../game/layout-share';
 import {
@@ -386,6 +386,15 @@ export function codeforcesProblemUrl(problem: Record<string, unknown>) {
     return '';
   }
 }
+/** A solved-history id (`755-C`) addresses the Codeforces problem an attack row would link to. */
+export function codeforcesSolvedProblemUrl(problemId: string) {
+  const match = /^(\d+)-(.+)$/.exec(String(problemId).trim());
+  return match ? codeforcesProblemUrl({ contest_id: match[1], index: match[2] }) : '';
+}
+/** Kept small so the outpost dialog grows in one step the user asked for, not by a screenful. */
+const CODEFORGE_TOPIC_PROBLEMS_PAGE = 12;
+/** Placeholder rows, so the outpost list has its shape before the first village snapshot lands. */
+const codeforgeSkeleton = (rows: number) => `<div class="cf-skeleton" aria-hidden="true">${'<span></span>'.repeat(rows)}</div>`;
 const pct = (v: number) => `${Math.max(0, Math.min(100, Number.isNaN(v) ? 0 : v))}%`;
 /** The one place that says what a building level actually buys you. */
 function statRows(
@@ -814,7 +823,12 @@ export class HUD {
   private codeforgeAttackError = '';
   private codeforgeFocusAttacks = false;
   private codeforgeFocusTopic = false;
+  private codeforgePanelMarkup = new WeakMap<HTMLElement, string>();
   private codeforgeTopicId: string | null = null;
+  private codeforgeTopicProblems: { topicId: string; items: SolvedHistoryItem[]; total: number } | null = null;
+  private codeforgeTopicProblemsBusy = false;
+  private codeforgeTopicProblemsError = '';
+  private codeforgeTopicProblemsGeneration = 0;
   private codeforgeVillageSnapshot: Readonly<CPVillageSnapshot> = cpVillageStore.getSnapshot();
   private codeforgeUpgradeTopic: string | null = null;
   private codeforgeUpgradeError = '';
@@ -847,6 +861,7 @@ export class HUD {
       this.codeforgeTopicId = topicId;
       this.codeforgeFocusTopic = true;
       this.action('codeforge');
+      void this.loadCodeForgeTopicProblems(topicId);
     }, { signal });
     this.root.addEventListener(
       'click',
@@ -1250,13 +1265,11 @@ export class HUD {
       this.renderCodeForgeAttacks();
       this.renderCodeForgeOutposts();
       this.renderCodeForgeLayoutControls();
-      if (this.codeforgeFocusAttacks) {
-        this.codeforgeFocusAttacks = false;
-        panel.scrollIntoView({ block: 'start', behavior: 'smooth' });
-      }
-      if (this.codeforgeFocusTopic) {
+      // Only scroll once the row the tap aimed at exists: scrolling the freshly mounted, still
+      // empty panels is what made the popup jump around for its first second.
+      if (this.codeforgeFocusTopic && outposts.querySelector('[data-topic-details]')) {
         this.codeforgeFocusTopic = false;
-        (outposts.querySelector<HTMLElement>('[data-topic-details]') ?? outposts).scrollIntoView({ block: 'start', behavior: 'smooth' });
+        this.scrollCodeForgeOutpostDetail('start', 'auto');
       }
     };
     this.codeforgeObserver = new MutationObserver(attach);
@@ -1269,7 +1282,7 @@ export class HUD {
     const cooldown = this.codeforgeCooldown;
     const attack = this.codeforgeAttack;
     const pending = !!attack && (attack.pending === true || (attack.pending !== false && ['active', 'in_progress'].includes(attack.status.toLowerCase())));
-    panel.innerHTML = `<h3>Village attacks</h3><p>Challenge another CodeForge village with a Codeforces problem set.</p>${cooldown && !cooldown.can_attack ? `<p role="status">Attacks are on cooldown${cooldown.remaining_seconds != null ? ` · ${Math.ceil(cooldown.remaining_seconds / 60)} min remaining` : ''}${cooldown.next_available_at ? ` · Available ${new Date(cooldown.next_available_at).toLocaleString()}` : ''}.</p>` : ''}${this.codeforgeAttackError ? `<p role="alert">${html(this.codeforgeAttackError)}</p>` : ''}<button class="game-btn stone" data-action="cf-attack-refresh" ${this.codeforgeAttackBusy ? 'disabled' : ''}>${this.codeforgeAttackBusy ? 'Refreshing…' : 'Refresh attacks'}</button>${attack ? `<div class="setting-row"><div><h3>Attack on ${html(attack.target_username || 'opponent village')}</h3><p>${pending ? `Result pending${attack.resolution_state ? ` · ${html(attack.resolution_state.replaceAll('_', ' '))}` : ''}` : `Status: ${html(attack.status)} · Server score: ${n(attack.score)}${attack.solved_fraction == null ? '' : ` · ${Math.round(attack.solved_fraction * 100)}% solved`}`}</p>${attack.problems.map((problem) => { const link = codeforcesProblemUrl(problem); return `<p>${link ? `<a href="${link}" target="_blank" rel="noopener noreferrer">${html(String(problem.name ?? problem.problem_name ?? problem.problem_id ?? 'Codeforces problem'))}</a>` : html(String(problem.name ?? problem.problem_name ?? problem.problem_id ?? 'Codeforces problem'))}</p>`; }).join('')}</div>${pending ? '<button class="game-btn stone" data-action="cf-attack-refresh">Refresh result</button>' : `<button class="game-btn green" data-action="cf-attack-check" ${this.codeforgeAttackBusy ? 'disabled' : ''}>Check result</button>`}</div>` : ''}<h3>Active attacks</h3>${this.codeforgeActive.length ? this.codeforgeActive.map((item) => `<div class="setting-row"><div><h3>${html(item.id.slice(0, 8))} · ${html(item.status)}</h3><p>${html(item.target_user_id)}</p></div><button class="game-btn blue" data-action="cf-attack-open:${html(item.id)}">Open</button></div>`).join('') : '<p>No active attacks.</p>'}<h3>Available villages</h3>${this.codeforgeTargets.length ? this.codeforgeTargets.map((target) => `<div class="setting-row"><div><h3>${html(target.username)}</h3><p>Defence rating ${n(target.defense_rating)}${target.level == null ? '' : ` · Level ${n(target.level)}`}${target.relative_strength ? ` · ${html(target.relative_strength)}` : ''}</p></div><button class="game-btn orange" data-action="cf-attack-launch:${html(target.id)}" ${this.codeforgeAttackBusy || (!!cooldown && !cooldown.can_attack) ? 'disabled' : ''}>Launch</button></div>`).join('') : '<p>No attack targets are available.</p>'}<a class="game-btn blue" href="/?cp=1&amp;return=%2F">Open full CodeForge workflow</a>`;
+    this.paintCodeForgePanel(panel, `<h3>Village attacks</h3><p>Challenge another CodeForge village with a Codeforces problem set.</p>${cooldown && !cooldown.can_attack ? `<p role="status">Attacks are on cooldown${cooldown.remaining_seconds != null ? ` · ${Math.ceil(cooldown.remaining_seconds / 60)} min remaining` : ''}${cooldown.next_available_at ? ` · Available ${new Date(cooldown.next_available_at).toLocaleString()}` : ''}.</p>` : ''}${this.codeforgeAttackError ? `<p role="alert">${html(this.codeforgeAttackError)}</p>` : ''}<button class="game-btn stone" data-action="cf-attack-refresh" ${this.codeforgeAttackBusy ? 'disabled' : ''}>${this.codeforgeAttackBusy ? 'Refreshing…' : 'Refresh attacks'}</button>${attack ? `<div class="setting-row"><div><h3>Attack on ${html(attack.target_username || 'opponent village')}</h3><p>${pending ? `Result pending${attack.resolution_state ? ` · ${html(attack.resolution_state.replaceAll('_', ' '))}` : ''}` : `Status: ${html(attack.status)} · Server score: ${n(attack.score)}${attack.solved_fraction == null ? '' : ` · ${Math.round(attack.solved_fraction * 100)}% solved`}`}</p>${attack.problems.map((problem) => { const link = codeforcesProblemUrl(problem); return `<p>${link ? `<a href="${link}" target="_blank" rel="noopener noreferrer">${html(String(problem.name ?? problem.problem_name ?? problem.problem_id ?? 'Codeforces problem'))}</a>` : html(String(problem.name ?? problem.problem_name ?? problem.problem_id ?? 'Codeforces problem'))}</p>`; }).join('')}</div>${pending ? '<button class="game-btn stone" data-action="cf-attack-refresh">Refresh result</button>' : `<button class="game-btn green" data-action="cf-attack-check" ${this.codeforgeAttackBusy ? 'disabled' : ''}>Check result</button>`}</div>` : ''}<h3>Active attacks</h3>${this.codeforgeActive.length ? this.codeforgeActive.map((item) => `<div class="setting-row"><div><h3>${html(item.id.slice(0, 8))} · ${html(item.status)}</h3><p>${html(item.target_user_id)}</p></div><button class="game-btn blue" data-action="cf-attack-open:${html(item.id)}">Open</button></div>`).join('') : '<p>No active attacks.</p>'}<h3>Available villages</h3>${this.codeforgeTargets.length ? this.codeforgeTargets.map((target) => `<div class="setting-row"><div><h3>${html(target.username)}</h3><p>Defence rating ${n(target.defense_rating)}${target.level == null ? '' : ` · Level ${n(target.level)}`}${target.relative_strength ? ` · ${html(target.relative_strength)}` : ''}</p></div><button class="game-btn orange" data-action="cf-attack-launch:${html(target.id)}" ${this.codeforgeAttackBusy || (!!cooldown && !cooldown.can_attack) ? 'disabled' : ''}>Launch</button></div>`).join('') : '<p>No attack targets are available.</p>'}<a class="game-btn blue" href="/?cp=1&amp;return=%2F">Open full CodeForge workflow</a>`);
   }
   private renderCodeForgeOutposts() {
     const panel = this.modalEl.querySelector<HTMLElement>('.cf-outpost-panel');
@@ -1285,7 +1298,7 @@ export class HUD {
     const costsAvailable = !!outpost && typeof outpost.next_gold_cost === 'number' && typeof outpost.next_elixir_cost === 'number';
     const insufficient = !!outpost && !!wallet && outpost.next_gold_cost !== null && outpost.next_elixir_cost !== null && (wallet.gold < outpost.next_gold_cost || wallet.elixir < outpost.next_elixir_cost);
     const blocked = stale || !selected || !outpost || !wallet || !progressed || maxed || !costsAvailable || insufficient || this.codeforgeUpgradeTopic !== null;
-    panel.innerHTML = `<h3>Topic outposts</h3><p>Topic progress comes from solved problems. Outpost tiers are purchased separately.</p>${snapshot.loading ? '<p role="status">Refreshing village progress…</p>' : ''}${snapshot.stale ? `<p role="status">${html(snapshot.error?.message || 'Progress data is stale. Refresh before upgrading.')}</p>` : ''}${this.codeforgeUpgradeNotice ? `<p role="status">${html(this.codeforgeUpgradeNotice)}</p>` : ''}${this.codeforgeUpgradeError ? `<p role="alert">${html(this.codeforgeUpgradeError)}</p>` : ''}<button class="game-btn stone" data-action="cf-outpost-refresh" ${snapshot.loading ? 'disabled' : ''}>Refresh progress</button>${topics.length ? topics.map((topic) => { const row = snapshot.outposts?.items.find((item) => item.topic_id === topic.id); return `<div class="setting-row"><div><h3>${html(topic.display_name || topic.name)}</h3><p>Topic level ${n(topic.level)} · ${n(topic.progress_points)} solve points · ${Math.round(Number(topic.progress_pct) || 0)}% to next topic level</p>${row ? `<small>Purchased outpost tier ${n(row.tier)}${row.tier < 5 ? ` · Next: ${n(row.next_gold_cost)} gold + ${n(row.next_elixir_cost)} elixir` : ' · Maximum tier'}</small>` : '<small>Outpost purchase data unavailable</small>'}<div class="journey-bar" role="progressbar" aria-label="${html(topic.display_name || topic.name)} solve progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.max(0, Math.min(100, Number(topic.progress_pct) || 0))}"><i style="transform:${fillScale(Number(topic.progress_pct) || 0)}"></i></div></div><button class="game-btn ${this.codeforgeTopicId === topic.id ? 'orange' : 'blue'}" data-action="cf-topic-select:${html(topic.id)}">${this.codeforgeTopicId === topic.id ? 'Selected' : 'Details'}</button></div>`; }).join('') : '<p>No topic progress is available yet.</p>'}${selected ? `<div class="setting-row cf-outpost-detail" data-topic-details><div><h3>${html(selected.display_name || selected.name)} outpost</h3><p>Topic level ${n(selected.level)} · ${n(selected.progress_points)} solve points${outpost ? ` · Purchased tier ${n(outpost.tier)}` : ''}</p>${outpost && !maxed ? `<small>Upgrade cost: ${n(outpost.next_gold_cost)} gold + ${n(outpost.next_elixir_cost)} elixir</small>` : ''}${!progressed ? '<small>Earn progress in this topic before upgrading.</small>' : ''}${maxed ? '<small>Maximum outpost tier reached.</small>' : ''}${insufficient ? '<small>Not enough server-reported gold or elixir.</small>' : ''}${!wallet ? '<small>Server wallet unavailable.</small>' : ''}${!outpost ? '<small>Outpost purchase details are unavailable.</small>' : ''}</div><button class="game-btn green" data-action="cf-outpost-upgrade:${html(selected.id)}" ${blocked ? 'disabled' : ''}>${this.codeforgeUpgradeTopic === selected.id ? 'Upgrading…' : 'Upgrade outpost'}</button></div>` : '<p>Select a topic to view its solve progress and purchased outpost tier.</p>'}`;
+    this.paintCodeForgePanel(panel, `<h3>Topic outposts</h3><p>Topic progress comes from solved problems. Outpost tiers are purchased separately.</p>${snapshot.loading ? '<p role="status">Refreshing village progress…</p>' : ''}${snapshot.stale ? `<p role="status">${html(snapshot.error?.message || 'Progress data is stale. Refresh before upgrading.')}</p>` : ''}${this.codeforgeUpgradeNotice ? `<p role="status">${html(this.codeforgeUpgradeNotice)}</p>` : ''}${this.codeforgeUpgradeError ? `<p role="alert">${html(this.codeforgeUpgradeError)}</p>` : ''}<button class="game-btn stone" data-action="cf-outpost-refresh" ${snapshot.loading ? 'disabled' : ''}>Refresh progress</button>${topics.length ? topics.map((topic) => { const row = snapshot.outposts?.items.find((item) => item.topic_id === topic.id); return `<div class="setting-row"><div><h3>${html(topic.display_name || topic.name)}</h3><p>Topic level ${n(topic.level)} · ${n(topic.progress_points)} solve points · ${Math.round(Number(topic.progress_pct) || 0)}% to next topic level</p>${row ? `<small>Purchased outpost tier ${n(row.tier)}${row.tier < 5 ? ` · Next: ${n(row.next_gold_cost)} gold + ${n(row.next_elixir_cost)} elixir` : ' · Maximum tier'}</small>` : '<small>Outpost purchase data unavailable</small>'}<div class="journey-bar" role="progressbar" aria-label="${html(topic.display_name || topic.name)} solve progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.max(0, Math.min(100, Number(topic.progress_pct) || 0))}"><i style="transform:${fillScale(Number(topic.progress_pct) || 0)}"></i></div></div><button class="game-btn ${this.codeforgeTopicId === topic.id ? 'orange' : 'blue'}" data-action="cf-topic-select:${html(topic.id)}">${this.codeforgeTopicId === topic.id ? 'Selected' : 'Details'}</button></div>`; }).join('') : snapshot.loading ? codeforgeSkeleton(4) : '<p>No topic progress is available yet.</p>'}${selected ? `<div class="setting-row cf-outpost-detail" data-topic-details><div><h3>${html(selected.display_name || selected.name)} outpost</h3><p>Topic level ${n(selected.level)} · ${n(selected.progress_points)} solve points${outpost ? ` · Purchased tier ${n(outpost.tier)}` : ''}</p>${outpost && !maxed ? `<small>Upgrade cost: ${n(outpost.next_gold_cost)} gold + ${n(outpost.next_elixir_cost)} elixir</small>` : ''}${!progressed ? '<small>Earn progress in this topic before upgrading.</small>' : ''}${maxed ? '<small>Maximum outpost tier reached.</small>' : ''}${insufficient ? '<small>Not enough server-reported gold or elixir.</small>' : ''}${!wallet ? '<small>Server wallet unavailable.</small>' : ''}${!outpost ? '<small>Outpost purchase details are unavailable.</small>' : ''}${this.codeforgeTopicProblemsView(selected)}</div><button class="game-btn green" data-action="cf-outpost-upgrade:${html(selected.id)}" ${blocked ? 'disabled' : ''}>${this.codeforgeUpgradeTopic === selected.id ? 'Upgrading…' : 'Upgrade outpost'}</button></div>` : '<p>Select a topic to view its solve progress and purchased outpost tier.</p>'}`);
     this.renderCodeForgeLayoutControls();
   }
   private renderCodeForgeLayoutControls() {
@@ -1355,6 +1368,81 @@ export class HUD {
       this.renderCodeForgeOutposts();
     }
   }
+  /**
+   * A building (and a Details button) names exactly one topic, so the list it opens
+   * holds that topic's solved problems only. The server owns the judge-tag to topic
+   * mapping; nothing is filtered here.
+   */
+  private async loadCodeForgeTopicProblems(topicId: string, append = false) {
+    const topic = this.codeforgeVillageSnapshot.village?.topics.find((item) => item.id === topicId);
+    if (!topic) return;
+    const previous = append && this.codeforgeTopicProblems?.topicId === topicId ? this.codeforgeTopicProblems.items : [];
+    const generation = ++this.codeforgeTopicProblemsGeneration;
+    this.codeforgeTopicProblemsBusy = true;
+    this.codeforgeTopicProblemsError = '';
+    this.renderCodeForgeOutposts();
+    try {
+      const page = await villageApi.solvedHistory(previous.length, CODEFORGE_TOPIC_PROBLEMS_PAGE, topic.name);
+      if (generation !== this.codeforgeTopicProblemsGeneration) return;
+      this.codeforgeTopicProblems = { topicId, items: [...previous, ...page.items], total: page.total };
+    } catch (cause) {
+      if (generation !== this.codeforgeTopicProblemsGeneration) return;
+      if (!append) this.codeforgeTopicProblems = null;
+      this.codeforgeTopicProblemsError = cause instanceof Error ? cause.message : 'Unable to load this topic\u2019s problems.';
+    } finally {
+      if (generation === this.codeforgeTopicProblemsGeneration) {
+        this.codeforgeTopicProblemsBusy = false;
+        this.renderCodeForgeOutposts();
+        this.scrollCodeForgeOutpostDetail(append ? 'nearest' : 'start', this.codeforgeScrollBehavior());
+      }
+    }
+  }
+  /**
+   * One DOM write per real change. The popup renders the same panels from several sources
+   * (mount, the village snapshot, the attack refresh); rewriting identical markup threw away
+   * scroll positions and repainted the list, which is the flicker seen while it loaded.
+   */
+  private paintCodeForgePanel(panel: HTMLElement, markup: string) {
+    if (this.codeforgePanelMarkup.get(panel) === markup) return;
+    this.codeforgePanelMarkup.set(panel, markup);
+    panel.innerHTML = markup;
+  }
+  private codeforgeScrollBehavior(): ScrollBehavior {
+    return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+  }
+  /**
+   * Scrolls the dialog body alone. `scrollIntoView` also scrolled `#ui` and the document, and the
+   * content landing mid-animation shifted the target, so the panel visibly jumped.
+   */
+  private scrollDialogBodyTo(target: HTMLElement | null, align: 'start' | 'nearest', behavior: ScrollBehavior) {
+    const scroller = target?.closest<HTMLElement>('.modal-body');
+    if (!target || !scroller) return;
+    const row = target.getBoundingClientRect();
+    const view = scroller.getBoundingClientRect();
+    const offset = align === 'start' ? row.top - view.top
+      : row.bottom > view.bottom ? row.bottom - view.bottom
+      : row.top < view.top ? row.top - view.top : 0;
+    if (!offset) return;
+    scroller.scrollTo({ top: Math.max(0, scroller.scrollTop + offset), behavior });
+  }
+  private scrollCodeForgeOutpostDetail(align: 'start' | 'nearest', behavior: ScrollBehavior) {
+    this.scrollDialogBodyTo(this.modalEl.querySelector<HTMLElement>('[data-topic-details]'), align, behavior);
+  }
+  private codeforgeTopicProblemsView(selected: VillageTopic): string {
+    const heading = '<h4>Problems in this topic</h4>';
+    const slot = (body: string) => `<div class="cf-topic-problems-slot">${body}</div>`;
+    if (this.codeforgeTopicProblemsError) return slot(`${heading}<p role="alert">${html(this.codeforgeTopicProblemsError)}</p>`);
+    const loaded = this.codeforgeTopicProblems?.topicId === selected.id ? this.codeforgeTopicProblems : null;
+    if (!loaded) return slot(`${heading}${this.codeforgeTopicProblemsBusy ? '<p role="status">Loading solved problems…</p>' : '<p>Refresh progress to load this topic\u2019s problems.</p>'}`);
+    if (!loaded.items.length)
+      return slot(`${heading}<p>No solved problems are recorded for ${html(selected.display_name || selected.name)} yet.</p>`);
+    const rows = loaded.items.map((item) => {
+      const link = codeforcesSolvedProblemUrl(item.problem_id);
+      const label = html(item.problem_id);
+      return `<li>${link ? `<a href="${link}" target="_blank" rel="noopener noreferrer">${label}</a>` : label}${item.rating == null ? '' : `<b>${n(item.rating)}</b>`}<small>${html(new Date(item.solved_at).toLocaleDateString())}</small></li>`;
+    }).join('');
+    return slot(`${heading}<ol class="cf-topic-problems">${rows}</ol><small>${n(loaded.total)} solved in ${html(selected.display_name || selected.name)}${loaded.total > loaded.items.length ? ` · showing ${n(loaded.items.length)}` : ''}</small>${loaded.total > loaded.items.length ? `<button class="game-btn stone" data-action="cf-topic-problems-more" ${this.codeforgeTopicProblemsBusy ? 'disabled' : ''}>${this.codeforgeTopicProblemsBusy ? 'Loading…' : 'Load more'}</button>` : ''}`);
+  }
   private async refreshCodeForgeAttacks() {
     if (this.codeforgeAttackBusy) return;
     const generation = ++this.codeforgeAttackGeneration;
@@ -1373,7 +1461,16 @@ export class HUD {
     } catch (cause) {
       if (generation === this.codeforgeAttackGeneration) this.codeforgeAttackError = cause instanceof Error ? cause.message : 'Unable to refresh attacks.';
     } finally {
-      if (generation === this.codeforgeAttackGeneration) { this.codeforgeAttackBusy = false; this.renderCodeForgeAttacks(); }
+      if (generation === this.codeforgeAttackGeneration) {
+        this.codeforgeAttackBusy = false;
+        this.renderCodeForgeAttacks();
+        // An attack tapped from the village scrolls to its panel once the panel has the result,
+        // not while the dialog is still fading in empty.
+        if (this.codeforgeFocusAttacks) {
+          this.codeforgeFocusAttacks = false;
+          this.scrollDialogBodyTo(this.modalEl.querySelector<HTMLElement>('.cf-attack-panel'), 'start', 'auto');
+        }
+      }
     }
   }
   private async openCodeForgeAttack(id: string) {
@@ -1473,7 +1570,7 @@ export class HUD {
         'zoom-in', 'zoom-out', 'recenter', 'info', 'help',
         'cancel', 'settings-server-workflows', 'select-building', 'codeforge',
         'cf-attack-refresh', 'cf-attack-open', 'cf-attack-check', 'cf-attack-launch',
-        'cf-topic-select', 'cf-outpost-upgrade', 'cf-outpost-refresh', 'cf-layout-edit', 'cf-layout-save', 'cf-layout-cancel', 'cf-layout-flip',
+        'cf-topic-select', 'cf-topic-problems-more', 'cf-outpost-upgrade', 'cf-outpost-refresh', 'cf-layout-edit', 'cf-layout-save', 'cf-layout-cancel', 'cf-layout-flip',
       ]);
       if (!allowed.has(verb)) return;
       if (verb === 'settings-server-workflows') {
@@ -1488,6 +1585,8 @@ export class HUD {
         this.mountCodeForgeAttacks();
         void cpVillageStore.start();
         void this.refreshCodeForgeAttacks();
+        if (this.codeforgeTopicId && this.codeforgeTopicProblems?.topicId !== this.codeforgeTopicId)
+          void this.loadCodeForgeTopicProblems(this.codeforgeTopicId);
         break;
       case 'cf-attack-refresh':
         void this.refreshCodeForgeAttacks();
@@ -1505,7 +1604,10 @@ export class HUD {
         this.codeforgeTopicId = arg;
         this.codeforgeUpgradeError = '';
         this.renderCodeForgeOutposts();
-        this.modalEl.querySelector<HTMLElement>('[data-topic-details]')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        void this.loadCodeForgeTopicProblems(arg);
+        break;
+      case 'cf-topic-problems-more':
+        if (this.codeforgeTopicId) void this.loadCodeForgeTopicProblems(this.codeforgeTopicId, true);
         break;
       case 'cf-outpost-upgrade':
         void this.upgradeCodeForgeOutpost(arg);
@@ -1514,6 +1616,7 @@ export class HUD {
         this.codeforgeUpgradeError = '';
         this.codeforgeUpgradeNotice = '';
         void cpVillageStore.refresh();
+        if (this.codeforgeTopicId) void this.loadCodeForgeTopicProblems(this.codeforgeTopicId);
         break;
       case 'cf-layout-edit':
         this.codeforgeLayoutError = '';

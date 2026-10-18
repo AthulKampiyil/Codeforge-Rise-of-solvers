@@ -40,7 +40,7 @@ export const villageApi = {
     }));
   },
   sync: (judge = "codeforces") => apiClient.post<SyncQueuedResponse>(`/platform_sync/sync${query({ judge })}`),
-  solvedHistory: (offset = 0, limit = 50) => apiClient.get<SolvedHistoryPage>(`/platform_sync/problems${query({ offset, limit })}`),
+  solvedHistory: (offset = 0, limit = 50, topic?: string) => apiClient.get<SolvedHistoryPage>(`/platform_sync/problems${query({ offset, limit, topic })}`),
   wallet: () => apiClient.get<Wallet>("/economy/wallet"),
   ledger: (offset = 0, limit = 50) => apiClient.get<EconomyLedgerPage>(`/economy/ledger${query({ offset, limit })}`),
   catalog: () => apiClient.get<CatalogItem[]>("/economy/catalog"),

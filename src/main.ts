@@ -22,9 +22,11 @@ const TRANSPARENT_PIXEL =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==';
 async function boot() {
     if (new URLSearchParams(location.search).get('cp') === '1') {
-      document.querySelector('#loading')?.remove();
+      // Keep the loading screen up until the control panel has mounted, so the
+      // gap between the two never shows as a blank page.
       const { mountCodeForgeWorkflows } = await import('./cp/main');
       mountCodeForgeWorkflows();
+      document.querySelector('#loading')?.remove();
       return;
     }
     const redirectToControlPanel = () => {

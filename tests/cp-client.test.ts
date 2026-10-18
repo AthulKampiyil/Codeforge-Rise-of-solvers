@@ -40,6 +40,15 @@ describe("CP API client", () => {
     expect(data.get(ACCESS_TOKEN_KEY)).toBe("user-two-access");
     expect(data.get(REFRESH_TOKEN_KEY)).toBe("user-two-refresh");
   });
+  it("asks for one village topic's solved problems and nothing else", async () => {
+    setTokens({ access_token: "access", refresh_token: "refresh" });
+    const fetchMock = vi.spyOn(globalThis, "fetch")
+      .mockImplementation(async () => response({ items: [], offset: 0, limit: 12, total: 0 }));
+    await villageApi.solvedHistory(0, 12, "dynamic-programming");
+    expect(fetchMock.mock.calls[0][0]).toBe("/api/platform_sync/problems?offset=0&limit=12&topic=dynamic-programming");
+    await villageApi.solvedHistory(0, 12);
+    expect(fetchMock.mock.calls[1][0]).toBe("/api/platform_sync/problems?offset=0&limit=12");
+  });
   it("clears tokens after logout", async () => {
     setTokens({ access_token: "access", refresh_token: "refresh" });
     vi.spyOn(globalThis, "fetch").mockImplementation(async () => response({ message: "Logged out" }));

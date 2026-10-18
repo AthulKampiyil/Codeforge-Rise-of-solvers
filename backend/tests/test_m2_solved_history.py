@@ -26,10 +26,10 @@ def _account(db, user, *, verified=True):
     return account
 
 
-def _solve(db, account, problem_id, solved_at):
+def _solve(db, account, problem_id, solved_at, tags=None):
     solve = SolvedProblem(
         id=uuid.uuid4(), judge_account_id=account.id, problem_ext_id=problem_id,
-        topic_tags=["dp", "math"], rating=1200, solved_at=solved_at,
+        topic_tags=["dp", "math"] if tags is None else tags, rating=1200, solved_at=solved_at,
     )
     db.add(solve)
     db.flush()
@@ -81,3 +81,37 @@ def test_solved_history_rejects_unbounded_page_size(client, make_user):
     _, headers, _ = make_user()
     response = client.get("/platform_sync/problems?limit=101", headers=headers)
     assert response.status_code == 422
+
+
+def test_solved_history_filters_to_one_topic(client, make_user, db):
+    """A village topic covers a family of judge tags, so a topic page holds only its own problems."""
+    user, headers, _ = make_user()
+    account = _account(db, db.query(User).filter_by(id=uuid.UUID(user["id"])).one())
+    timestamp = datetime(2026, 1, 1, tzinfo=timezone.utc)
+    _solve(db, account, "200-A", timestamp, tags=["dp", "math"])
+    _solve(db, account, "200-B", timestamp, tags=["greedy"])
+    _solve(db, account, "200-C", timestamp, tags=["math"])
+    _solve(db, account, "200-D", timestamp, tags=["*special"])
+    db.flush()
+
+    dynamic = client.get("/platform_sync/problems?topic=dynamic-programming", headers=headers)
+    assert dynamic.status_code == 200, dynamic.text
+    assert dynamic.json()["total"] == 1
+    assert [item["problem_id"] for item in dynamic.json()["items"]] == ["200-A"]
+
+    # A judge tag resolves to the seeded topic that owns it.
+    alias = client.get("/platform_sync/problems?topic=dp", headers=headers)
+    assert [item["problem_id"] for item in alias.json()["items"]] == ["200-A"]
+
+    # A problem tagged for two topics appears under each of them, and nowhere else.
+    math = client.get("/platform_sync/problems?topic=math", headers=headers)
+    assert sorted(item["problem_id"] for item in math.json()["items"]) == ["200-A", "200-C"]
+    unrelated = client.get("/platform_sync/problems?topic=arrays", headers=headers)
+    assert unrelated.json() == {"items": [], "offset": 0, "limit": 50, "total": 0}
+
+
+def test_solved_history_rejects_an_unknown_topic(client, make_user, db):
+    user, headers, _ = make_user()
+    _account(db, db.query(User).filter_by(id=uuid.UUID(user["id"])).one())
+    response = client.get("/platform_sync/problems?topic=not-a-seeded-topic", headers=headers)
+    assert response.status_code == 400

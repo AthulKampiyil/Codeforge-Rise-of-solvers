@@ -17,6 +17,73 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="CodeForge" />
+    <!-- Critical CSS for the loading screen, inlined so it paints before the main stylesheet
+         (loaded via src/main.ts) arrives. Without it the unstyled #loading markup shows as a
+         white flash on every load. Keep in sync with the #loading rules in src/style.css. -->
+    <style>
+      html,
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: #45623d;
+      }
+      #loading {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff8e8;
+        font-family: 'Nunito Sans', sans-serif;
+        background: radial-gradient(ellipse at center, #638b48, #213c30 85%);
+        transition: opacity 0.5s;
+      }
+      #loading.loaded {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .loading-emblem {
+        font-size: 95px;
+        color: #ffce5a;
+        text-shadow: 0 5px #785b2c;
+      }
+      #loading h1 {
+        margin: 0;
+        font-family: 'Lilita One', 'Trebuchet MS', sans-serif;
+        font-weight: 400;
+        font-size: 48px;
+        letter-spacing: 2px;
+        text-shadow: 0 4px #26391f;
+      }
+      #loading p {
+        margin: 14px 0 40px;
+        color: #e4eacb;
+      }
+      .load-track {
+        width: 270px;
+        height: 13px;
+        background: #1f3826;
+        border: 2px solid #a2ab6b;
+        border-radius: 9px;
+        padding: 2px;
+      }
+      .load-track > div {
+        height: 100%;
+        background: linear-gradient(#b5ed69, #72ae39);
+        border-radius: 4px;
+        width: 5%;
+        transition: width 0.3s;
+      }
+      #loading small {
+        margin-top: 14px;
+        max-width: min(420px, calc(100% - 48px));
+        text-align: center;
+        color: #c1d1b4;
+        font-size: 12px;
+      }
+    </style>
   </head>
   <body>
     <div id="game" aria-label="Interactive isometric village"></div>

@@ -1,5 +1,8 @@
 .modal.codeforge-modal {
   width: 780px;
+  /* A fixed box, not max-height: the popup is centred, so every row that landed while it loaded
+     grew it and re-centred it, which is the jump seen right after tapping a building. */
+  height: min(820px, 100%);
   max-height: min(820px, 100%);
 }
 .modal-backdrop:has(.codeforge-modal) {
@@ -9,6 +12,31 @@
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-color: #9a875f #e9dec0;
+}
+.cf-skeleton {
+  display: grid;
+  gap: 10px;
+  padding: 4px 0;
+}
+.cf-skeleton span {
+  height: 44px;
+  border-radius: 9px;
+  background: linear-gradient(90deg, #e6dcc4, #f4ecd8, #e6dcc4);
+  background-size: 200% 100%;
+  animation: cf-skeleton-sweep 1.2s linear infinite;
+}
+@keyframes cf-skeleton-sweep {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cf-skeleton span {
+    animation: none;
+  }
 }
 .codeforge-modal .settings-body {
   padding: 10px 28px 26px;
@@ -105,6 +133,33 @@
 .codeforge-modal .cf-outpost-detail button {
   flex: 0 0 auto;
   align-self: center;
+}
+.codeforge-modal .cf-topic-problems-slot {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  /* One reserved block, so the dialog does not grow a screenful when the rows land. */
+  min-height: 150px;
+  align-content: start;
+}
+.codeforge-modal .cf-topic-problems {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding: 0 0 0 20px;
+  min-width: 0;
+}
+.codeforge-modal .cf-topic-problems li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 10px;
+  align-items: baseline;
+}
+.codeforge-modal .cf-topic-problems a {
+  overflow-wrap: anywhere;
+}
+.codeforge-modal .cf-topic-problems b {
+  color: #7c5c1e;
 }
 .codeforge-modal .cf-attack-panel,
 .codeforge-modal .cf-outpost-panel {
