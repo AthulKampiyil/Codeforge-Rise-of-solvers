@@ -268,9 +268,13 @@ class AttackService:
             window_hours=window_hours,
         )
 
-        # Curate problem set from target's weakest topics
+        # Curate problem set from target's weakest topics (shuffled & varied)
         problem_set_size = int(self.get_config("attack.problem_set_size", DEFAULT_PROBLEM_SET_SIZE))
-        problems = self.curator.curate_problem_set(target_user_id, set_size=problem_set_size)
+        problems = self.curator.curate_problem_set(
+            target_user_id=target_user_id,
+            set_size=problem_set_size,
+            attacker_user_id=attacker_user_id,
+        )
         
         # Check if attacker already solved any of these
         from app.modules.m2_platform_sync.models import SolvedProblem

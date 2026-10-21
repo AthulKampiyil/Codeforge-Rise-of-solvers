@@ -325,3 +325,29 @@ def test_get_attacks_by_attacker_and_target_history(db):
     assert any(str(a.id) == str(atk1.id) for a in by_target)
     assert service.get_attack_count(str(att.id)) >= 1
 
+
+def test_problem_set_shuffles_across_attacks(db):
+    """Verify consecutive attacks produce shuffled and varied problem sets."""
+    att = _create_solver(db, "shuffle_attacker")
+    tgt1 = _create_solver(db, "shuffle_target_1")
+    tgt2 = _create_solver(db, "shuffle_target_2")
+
+    service = AttackService(db)
+    
+    # 1st attack
+    atk1 = service.start_attack(str(att.id), str(tgt1.id))
+    probs1 = [p.problem_ext_id for p in service.problem_repo.get_by_attack(str(atk1.id))]
+    assert len(probs1) == 3
+
+    # Reset cooldown so attacker can launch a second attack
+    service.cooldown_repo.set_cooldown_expiry(str(att.id), datetime.now(timezone.utc) - timedelta(minutes=1))
+
+    # 2nd attack on a different target
+    atk2 = service.start_attack(str(att.id), str(tgt2.id))
+    probs2 = [p.problem_ext_id for p in service.problem_repo.get_by_attack(str(atk2.id))]
+    assert len(probs2) == 3
+
+    # The problem sets should not be identical (questions shuffle across attacks)
+    assert set(probs1) != set(probs2)
+
+
