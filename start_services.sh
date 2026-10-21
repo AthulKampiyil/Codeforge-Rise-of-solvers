@@ -93,13 +93,13 @@ fi
 
 # Restart API, Worker, and Frontend if needed (or tell the user they are running)
 echo "Starting backend API (port 8000)..."
-(cd backend && source venv312/bin/activate && uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload > ../.logs/api.log 2>&1 &)
+(cd backend && source venv312/bin/activate && nohup uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload > ../.logs/api.log 2>&1 & disown)
 
 echo "Starting backend Worker..."
-(cd backend && source venv312/bin/activate && python -m worker.main > ../.logs/worker.log 2>&1 &)
+(cd backend && source venv312/bin/activate && nohup python -m worker.main > ../.logs/worker.log 2>&1 & disown)
 
 echo "Starting frontend dev server (port 5173)..."
-(cd frontend && mise exec node@26.10.0 -- npm run dev -- --port 5173 > ../.logs/frontend.log 2>&1 &)
+(cd frontend && nohup mise exec node@26.10.0 -- npm run dev -- --port 5173 > ../.logs/frontend.log 2>&1 & disown)
 
 echo "All services started!"
 echo "- API: http://127.0.0.1:8000"
