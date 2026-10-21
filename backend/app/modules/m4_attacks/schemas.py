@@ -37,6 +37,8 @@ class AttackOut(BaseModel):
     started_at: datetime
     window_expires_at: Optional[datetime] = None
     resolved_at: Optional[datetime] = None
+    target_username: Optional[str] = None
+    attacker_username: Optional[str] = None
 
     class Config:
         from_attributes = True

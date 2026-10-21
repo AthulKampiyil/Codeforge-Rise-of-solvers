@@ -60,7 +60,14 @@ def get_my_active_attacks(
     """Get caller's recent attacks."""
     service = AttackService(db)
     attacks = service.attack_repo.get_attacks_by_attacker(str(current_user.id), limit=10)
-    return [AttackOut.model_validate(a) for a in attacks]
+    out = []
+    for a in attacks:
+        item = AttackOut.model_validate(a).model_dump()
+        target = db.query(User).filter(User.id == a.target_user_id).first()
+        item["target_username"] = target.username if target else "Unknown"
+        item["attacker_username"] = current_user.username
+        out.append(AttackOut(**item))
+    return out
 
 
 @router.get("/{attack_id}", response_model=AttackDetailOut)
