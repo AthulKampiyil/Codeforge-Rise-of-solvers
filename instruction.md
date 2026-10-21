@@ -16,11 +16,13 @@ git pull origin athul_integration
 We have created a unified, robust startup script that handles literally everything. If you are cloning this repository for the very first time on a new machine, this script will automatically create the python virtual environment, install the backend python dependencies, install the frontend node modules, auto-generate `.env` files with working local defaults, and start the databases!
 
 1. Open your terminal in the root of the project (the `Codeforge-Rise-of-solvers` folder).
-2. Run the startup script:
+2. Run the startup runner:
 
 ```bash
-./start_services.sh
+./run.sh
 ```
+
+*(You can also use `./start_services.sh`)*
 
 ### What this script does automatically:
 1. **Dependencies:** Auto-creates `venv312`, runs `pip install -r requirements.txt`, and runs `npm install`.
@@ -39,19 +41,9 @@ Because the services run in the background, their output is saved to log files s
 - Frontend logs: `cat .logs/frontend.log`
 
 ## How to Stop the Services
-To stop the services, you can find the running processes and kill them.
-
-To stop the API, Worker, and Frontend:
+To stop all services cleanly in one command:
 ```bash
-pkill -f uvicorn
-pkill -f worker.main
-pkill -f vite
-```
-
-To stop the Databases:
-```bash
-pg_ctl -D .data/postgres stop
-pkill -f redis-server
+./stop.sh
 ```
 
 ## Summary of Applied Fixes in this Branch
