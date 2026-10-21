@@ -57,33 +57,6 @@ def _create_solver(db, username: str, defense_rating: float = 1200.0, trophies: 
     return user
 
 
-def _seed_resolution_proof(db, attack):
-    """Model an EOF proof already produced by the importer in settlement tests."""
-    from app.modules.m1_auth.models import JudgeAccount, JudgeType
-    from app.modules.m2_platform_sync.models import CodeforcesSyncCheckpoint
-
-    account = JudgeAccount(
-        user_id=attack.attacker_user_id,
-        judge_type=JudgeType.codeforces,
-        handle=f"proof_{uuid.uuid4().hex[:12]}",
-        verified_flag=True,
-    )
-    db.add(account)
-    db.flush()
-    db.add(CodeforcesSyncCheckpoint(judge_account_id=account.id))
-    proof_at = datetime.now(timezone.utc)
-    attack.started_at = proof_at - timedelta(seconds=10)
-    attack.resolution_requested_at = proof_at - timedelta(seconds=2)
-    attack.resolution_not_before = attack.resolution_requested_at
-    attack.resolution_generation = 1
-    attack.resolution_account_id = account.id
-    attack.resolution_proof_started_at = attack.resolution_requested_at
-    attack.resolution_proof_generation = 1
-    attack.resolution_proof_at = proof_at
-    attack.resolution_state = "proof_complete"
-    db.commit()
-
-
 def test_tc_atk_02_launch_attack_creates_curated_problems(db):
     """TC-ATK-02: Launching attack creates attack record and curates problem set."""
     attacker = _create_solver(db, "attacker_launch")
@@ -182,7 +155,6 @@ def test_resolution_uses_refreshed_locked_profile_tier_for_k_factor(db, monkeypa
     target = _create_solver(db, "stale_tier_target", trophies=500, tier=LeagueTier.silver)
     service = AttackService(db)
     attack = service.start_attack(str(attacker.id), str(target.id))
-    _seed_resolution_proof(db, attack)
     profile = db.query(LeagueProfile).filter(LeagueProfile.user_id == attacker.id).one()
     db.execute(
         sa.update(LeagueProfile).where(LeagueProfile.user_id == attacker.id)
@@ -228,83 +200,94 @@ def test_late_abandonment_uses_normal_expiry_outcome(db):
     )
 
     result = service.resolve_attack(str(attack.id), actor_user_id=str(attacker.id), is_abandoned=True)
-    assert result.status == AttackStatus.in_progress
-    assert result.resolution_not_before > datetime.now(timezone.utc)
+    assert result.status == AttackStatus.resolved
+    assert result.resolved_at is not None
+    db.refresh(attack)
+    assert attack.solved_fraction == 0.0
     assert db.query(TrophyLedger).filter(
         TrophyLedger.source_ref_id == attack.id,
         TrophyLedger.event_type == TrophyEventType.attack_abandoned,
     ).count() == 0
+    assert db.query(TrophyLedger).filter(
+        TrophyLedger.source_ref_id == attack.id,
+        TrophyLedger.event_type == TrophyEventType.successful_defense,
+    ).count() == 1
 
 
-def test_manual_resolution_waits_for_fresh_scan_proof_and_keeps_attack_open(db):
-    attacker = _create_solver(db, "pending_scan_attacker")
-    target = _create_solver(db, "pending_scan_target")
+def test_manual_resolution_settles_immediately_from_current_evidence(db):
+    """A manual resolve settles on the current solved set, before the window elapses."""
+    attacker = _create_solver(db, "manual_settle_attacker", trophies=500, tier=LeagueTier.silver)
+    target = _create_solver(db, "manual_settle_target", trophies=500, tier=LeagueTier.silver)
     attack = AttackService(db).start_attack(str(attacker.id), str(target.id))
 
     result = AttackService(db).resolve_attack(str(attack.id), actor_user_id=str(attacker.id))
 
-    assert result.status == AttackStatus.in_progress
-    db.refresh(attack)
-    assert attack.resolution_requested_at is not None
-    assert attack.resolution_state == "waiting_for_account"
-    assert attack.resolution_proof_at is None
-    assert db.query(TrophyLedger).filter(TrophyLedger.source_ref_id == attack.id).count() == 0
-
-
-def test_manual_resolution_finishes_early_after_valid_proof(db):
-    attacker = _create_solver(db, "manual_early_proof_attacker")
-    target = _create_solver(db, "manual_early_proof_target")
-    service = AttackService(db)
-    attack = service.start_attack(str(attacker.id), str(target.id))
-    _seed_resolution_proof(db, attack)
-
-    result = service.resolve_attack(str(attack.id), actor_user_id=str(attacker.id))
-
     assert result.status == AttackStatus.resolved
     assert result.window_expires_at > datetime.now(timezone.utc)
+    assert result.solved_fraction == 0.0
+    assert result.score == 0
+    db.refresh(attack)
+    assert attack.resolved_at is not None
+    assert attack.resolution_state is None
+    assert db.query(TrophyLedger).filter(
+        TrophyLedger.source_ref_id == attack.id,
+        TrophyLedger.event_type == TrophyEventType.attack_loss,
+    ).count() == 1
+    assert db.query(TrophyLedger).filter(
+        TrophyLedger.source_ref_id == attack.id,
+        TrophyLedger.event_type == TrophyEventType.successful_defense,
+    ).count() == 1
 
 
-def test_revoked_pinned_account_invalidates_existing_proof_and_blocks_settlement(db):
-    from app.modules.m1_auth.models import JudgeAccount
-
-    attacker = _create_solver(db, "revoked_proof_attacker")
-    target = _create_solver(db, "revoked_proof_target")
+def test_manual_resolution_settles_solved_fraction_immediately(db):
+    attacker = _create_solver(db, "manual_fraction_attacker", trophies=500, tier=LeagueTier.silver)
+    target = _create_solver(db, "manual_fraction_target", trophies=500, tier=LeagueTier.silver)
     service = AttackService(db)
     attack = service.start_attack(str(attacker.id), str(target.id))
-    _seed_resolution_proof(db, attack)
-    account = db.query(JudgeAccount).filter(
-        JudgeAccount.id == attack.resolution_account_id,
-    ).one()
-    account.verified_flag = False
+
+    problems = db.query(AttackProblemSet).filter(AttackProblemSet.attack_id == attack.id).all()
+    solved_at = datetime.now(timezone.utc)
+    for problem in problems[:2]:
+        problem.solved_flag = True
+        problem.solved_at = solved_at
     db.commit()
 
     result = service.resolve_attack(str(attack.id), actor_user_id=str(attacker.id))
 
-    assert result.status == AttackStatus.in_progress
-    assert result.resolution_state == "blocked_account"
-    assert result.resolution_proof_at is None
-    assert db.query(TrophyLedger).filter(TrophyLedger.source_ref_id == attack.id).count() == 0
+    assert result.status == AttackStatus.resolved
+    assert result.solved_fraction == pytest.approx(0.667, abs=1e-2)
+    assert result.score == 67
+    assert db.query(TrophyLedger).filter(
+        TrophyLedger.source_ref_id == attack.id,
+        TrophyLedger.event_type == TrophyEventType.attack_win,
+    ).count() == 1
 
 
-def test_worker_and_get_finish_early_after_valid_proof(db):
-    attacker = _create_solver(db, "worker_early_proof_attacker")
-    target = _create_solver(db, "worker_early_proof_target")
+def test_resolution_ignores_legacy_pinned_proof_state(db):
+    from app.modules.m1_auth.models import JudgeAccount, JudgeType
+
+    attacker = _create_solver(db, "legacy_proof_attacker")
+    target = _create_solver(db, "legacy_proof_target")
     service = AttackService(db)
     attack = service.start_attack(str(attacker.id), str(target.id))
-    _seed_resolution_proof(db, attack)
+    account = JudgeAccount(
+        user_id=attacker.id, judge_type=JudgeType.codeforces,
+        handle=f"legacy_{uuid.uuid4().hex[:10]}", verified_flag=False,
+    )
+    db.add(account)
+    db.flush()
+    attack.resolution_account_id = account.id
     attack.resolution_requested_at = datetime.now(timezone.utc) - timedelta(seconds=2)
+    attack.resolution_state = "waiting_for_account"
     db.commit()
 
-    result = service.resolve_expired_attack(str(attack.id))
+    result = service.resolve_attack(str(attack.id), actor_user_id=str(attacker.id))
+
     assert result.status == AttackStatus.resolved
-
-    other = service.start_attack(str(_create_solver(db, "get_early_proof_attacker").id), str(_create_solver(db, "get_early_proof_target").id))
-    _seed_resolution_proof(db, other)
-    detail = service.get_attack_detail(str(other.id))
-    assert detail["status"] == AttackStatus.resolved.value
+    assert db.query(TrophyLedger).filter(TrophyLedger.source_ref_id == attack.id).count() == 2
 
 
-def test_expired_attack_request_waits_until_five_minute_grace(db):
+def test_expired_attack_resolves_immediately_without_grace(db):
     attacker = _create_solver(db, "expiry_grace_attacker")
     target = _create_solver(db, "expiry_grace_target")
     attack = AttackService(db).start_attack(str(attacker.id), str(target.id))
@@ -316,66 +299,48 @@ def test_expired_attack_request_waits_until_five_minute_grace(db):
     )
     db.commit()
 
-    result = AttackService(db).resolve_expired_attack(str(attack.id))
+    result = AttackService(db).resolve_attack(str(attack.id), actor_user_id=str(attacker.id))
 
-    assert result.status == AttackStatus.in_progress
+    assert result.status == AttackStatus.resolved
     db.refresh(attack)
-    assert abs((attack.resolution_not_before - (expiry + timedelta(minutes=5))).total_seconds()) < 1
-    assert attack.resolution_proof_at is None
+    assert attack.resolved_at is not None
+    assert db.query(TrophyLedger).filter(TrophyLedger.source_ref_id == attack.id).count() == 2
 
 
 @pytest.mark.parametrize("system", [False, True])
-def test_finalizer_rechecks_deadline_after_waiting_on_attack_lock(engine, monkeypatch, system):
-    """A resolver that observed a live deadline cannot bypass expired grace."""
+def test_resolver_rechecks_deadline_after_waiting_on_attack_lock(engine, system):
+    """A resolver that observed a live deadline settles once the locked row shows an elapsed window."""
     from sqlalchemy import event
     from sqlalchemy.orm import sessionmaker
-    from app.modules.m1_auth.models import JudgeAccount, JudgeType
-    from app.modules.m2_platform_sync.models import CodeforcesSyncCheckpoint
 
     SessionLocal = sessionmaker(bind=engine, expire_on_commit=False)
     setup = SessionLocal()
     first = second = None
-    account_id = attack_id = None
+    attack_id = None
     user_ids = []
     lock_attempted = threading.Event()
     outcome = []
     errors = []
     listener = None
     second_connection = None
-    locked_expiries = []
     try:
         attacker = _create_solver(setup, "expiry_race_attacker")
         target = _create_solver(setup, "expiry_race_target")
         user_ids = [attacker.id, target.id]
-        account = JudgeAccount(
-            user_id=attacker.id, judge_type=JudgeType.codeforces,
-            handle=f"expiry_{uuid.uuid4().hex[:10]}", verified_flag=True,
-        )
-        setup.add(account)
-        setup.flush()
-        setup.add(CodeforcesSyncCheckpoint(judge_account_id=account.id))
         attack = Attack(
             attacker_user_id=attacker.id,
             target_user_id=target.id,
             status=AttackStatus.in_progress,
             started_at=datetime.now(timezone.utc) - timedelta(hours=1),
             window_expires_at=datetime.now(timezone.utc) + timedelta(minutes=5),
-            resolution_account_id=account.id,
         )
         setup.add(attack)
         setup.commit()
-        account_id, attack_id = account.id, attack.id
+        attack_id = attack.id
 
         first = SessionLocal()
         second = SessionLocal()
         second_connection = second.connection()
-        original_ensure = AttackService._ensure_finalization_request
-
-        def capture_ensure(service, candidate, abandoned):
-            locked_expiries.append(candidate.window_expires_at)
-            return original_ensure(service, candidate, abandoned)
-
-        monkeypatch.setattr(AttackService, "_ensure_finalization_request", capture_ensure)
 
         def before_sql(conn, cursor, statement, parameters, context, executemany):
             if "FOR UPDATE" in statement.upper() and "ATTACKS" in statement.upper():
@@ -385,7 +350,7 @@ def test_finalizer_rechecks_deadline_after_waiting_on_attack_lock(engine, monkey
         event.listen(second_connection, "before_cursor_execute", listener)
 
         # Own the row lock before the resolver starts. It can read the future
-        # expiry but must wait on this row after it has locked owner/checkpoint.
+        # expiry but must wait on this row after it has locked it.
         first.query(Attack).filter(Attack.id == attack_id).with_for_update().one()
 
         def resolve_in_second_connection():
@@ -416,11 +381,10 @@ def test_finalizer_rechecks_deadline_after_waiting_on_attack_lock(engine, monkey
         worker.join(timeout=10)
         assert not worker.is_alive(), "resolver remained blocked after deadline update"
         assert not errors, errors
-        assert locked_expiries and locked_expiries[0] <= datetime.now(timezone.utc)
-        assert outcome and outcome[0].status == AttackStatus.in_progress
+        assert outcome and outcome[0].status == AttackStatus.resolved
         second.refresh(outcome[0])
-        assert outcome[0].resolution_not_before >= expired_at + timedelta(minutes=5) - timedelta(seconds=1)
-        assert second.query(TrophyLedger).filter(TrophyLedger.source_ref_id == attack_id).count() == 0
+        assert outcome[0].resolved_at is not None
+        assert second.query(TrophyLedger).filter(TrophyLedger.source_ref_id == attack_id).count() == 2
         assert second.query(TrophyLedger).filter(
             TrophyLedger.source_ref_id == attack_id,
             TrophyLedger.event_type == TrophyEventType.attack_abandoned,
@@ -441,10 +405,6 @@ def test_finalizer_rechecks_deadline_after_waiting_on_attack_lock(engine, monkey
                 cleanup.query(TrophyLedger).filter(TrophyLedger.source_ref_id == attack_id).delete(synchronize_session=False)
                 cleanup.query(AttackProblemSet).filter(AttackProblemSet.attack_id == attack_id).delete(synchronize_session=False)
                 cleanup.query(Attack).filter(Attack.id == attack_id).delete(synchronize_session=False)
-            if account_id is not None:
-                from app.modules.m2_platform_sync.models import CodeforcesSyncCheckpoint
-                cleanup.query(CodeforcesSyncCheckpoint).filter(CodeforcesSyncCheckpoint.judge_account_id == account_id).delete(synchronize_session=False)
-                cleanup.query(JudgeAccount).filter(JudgeAccount.id == account_id).delete(synchronize_session=False)
             for user_id in user_ids:
                 cleanup.query(LeagueProfile).filter(LeagueProfile.user_id == user_id).delete(synchronize_session=False)
                 cleanup.query(VillageProfile).filter(VillageProfile.user_id == user_id).delete(synchronize_session=False)
@@ -491,11 +451,10 @@ def test_tc_atk_04_attack_resolution_and_trophy_ledger_audit(db):
 
     service = AttackService(db)
     attack = service.start_attack(str(attacker.id), str(target.id))
-    _seed_resolution_proof(db, attack)
 
     # Mark 2 problems solved (f = 2/3 = 0.667)
     problems = db.query(AttackProblemSet).filter(AttackProblemSet.attack_id == attack.id).all()
-    solved_at = attack.resolution_requested_at - timedelta(seconds=1)
+    solved_at = datetime.now(timezone.utc)
     problems[0].solved_flag = True
     problems[0].solved_at = solved_at
     problems[1].solved_flag = True
@@ -547,7 +506,6 @@ def test_tc_atk_05_successful_defense_and_abandon(db):
 
     service = AttackService(db)
     attack1 = service.start_attack(str(att1.id), str(tgt1.id))
-    _seed_resolution_proof(db, attack1)
 
     # 0 problems solved
     resolved1 = service.resolve_attack(str(attack1.id), actor_user_id=str(att1.id))
@@ -589,7 +547,6 @@ def test_resolution_rejects_unrelated_user(db):
     unrelated = _create_solver(db, "resolve_unrelated")
     service = AttackService(db)
     attack = service.start_attack(str(attacker.id), str(target.id))
-    _seed_resolution_proof(db, attack)
 
     from app.core.errors import ForbiddenError
     with pytest.raises(ForbiddenError):
@@ -605,7 +562,6 @@ def test_resolution_rolls_back_all_writes_when_second_ledger_fails(db, monkeypat
     target = _create_solver(db, "resolve_rollback_target", trophies=500, tier=LeagueTier.silver)
     service = AttackService(db)
     attack = service.start_attack(str(attacker.id), str(target.id))
-    _seed_resolution_proof(db, attack)
     original = service.league_svc.record_trophy_event
     calls = 0
 
@@ -682,12 +638,14 @@ def test_due_attacks_query_and_resolution(db):
 
     # Batch resolution executes and marks expired attack as resolved
     resolved_count = service.resolve_due_attacks()
-    assert resolved_count == 0
+    assert resolved_count == 1
 
     db.refresh(expired_attack)
     db.refresh(active_attack)
-    assert expired_attack.status == AttackStatus.in_progress
+    assert expired_attack.status == AttackStatus.resolved
+    assert expired_attack.resolved_at is not None
     assert active_attack.status == AttackStatus.in_progress
+    assert db.query(TrophyLedger).filter(TrophyLedger.source_ref_id == expired_attack.id).count() == 2
 
 
 def test_get_attack_detail_auto_resolves_expired_window(db):
@@ -708,9 +666,9 @@ def test_get_attack_detail_auto_resolves_expired_window(db):
     db.refresh(attack)
 
     detail = service.get_attack_detail(str(attack.id))
-    assert detail["status"] == AttackStatus.in_progress.value
-    assert detail["pending"] is True
-    assert detail["resolved_at"] is None
+    assert detail["status"] == AttackStatus.resolved.value
+    assert detail["pending"] is False
+    assert detail["resolved_at"] is not None
     assert detail["attacker_username"] == "att_detail_exp"
     assert detail["target_username"] == "tgt_detail_exp"
 

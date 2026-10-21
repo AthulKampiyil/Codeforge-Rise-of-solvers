@@ -1,5 +1,5 @@
 import { authApi, villageApi } from '../cp/api';
-import { getAccessToken } from '../cp/client';
+import { clearTokens, getAccessToken, getRefreshToken } from '../cp/client';
 import type { JudgeAccount, SyncStatus, User, VillageProfile, Wallet } from '../cp/types';
 import { icon } from './icons';
 import './codeforge-dialog.css';
@@ -46,7 +46,7 @@ export function openCodeForgeDialog(root: HTMLElement) {
   const focusable = () => Array.from(root.querySelectorAll<HTMLElement>(FOCUSABLE)).filter((element) => element.getClientRects().length > 0);
   const focusDescriptor = (element: Element | null): string | null => {
     if (!(element instanceof HTMLElement) || !root.contains(element)) return null;
-    for (const attribute of ['data-codeforge-close', 'data-copy-proof', 'data-cf-sync', 'data-cf-refresh', 'data-proof-token']) {
+    for (const attribute of ['data-codeforge-close', 'data-copy-proof', 'data-cf-sync', 'data-cf-refresh', 'data-cf-signout', 'data-proof-token']) {
       if (element.hasAttribute(attribute)) return `[${attribute}]`;
     }
     const name = element.getAttribute('name');
@@ -65,7 +65,7 @@ export function openCodeForgeDialog(root: HTMLElement) {
     const token = account && pendingProof?.accountId === account.id && pendingProof.session === session ? pendingProof.token : '';
     const codeforcesSync = sync.find((s) => s.judge_name === 'codeforces');
     const authenticated = !!getAccessToken();
-    root.innerHTML = `<div class="modal-backdrop"><section class="modal small-modal codeforge-modal" role="dialog" aria-modal="true" aria-labelledby="codeforge-title"><header class="modal-header"><div><small>CODEFORGE</small><h1 id="codeforge-title">Your progress</h1><p>Codeforces history, village rewards and topic growth.</p></div><button class="square-btn small close-btn" data-codeforge-close aria-label="Close dialog">${icon('X', 25)}</button></header><div class="modal-body settings-body"><div class="setting-row"><div><h3>Account</h3><p>${authenticated ? `Signed in as ${escapeHtml(user?.username ?? 'Loading…')}` : 'Sign in to connect your Codeforces account and sync progress.'}</p></div>${authenticated ? '' : '<a class="game-btn blue" href="/?cp=1&amp;return=%2F">Sign in</a>'}</div>${authenticated ? `<div class="setting-row"><div><h3>Codeforces handle</h3><p>${account ? `${escapeHtml(account.handle)} · ${account.verified_flag ? 'Verified' : 'Not verified'}` : 'Link a handle to import solved problems.'}</p></div>${account?.verified_flag ? '<span>Verified</span>' : ''}</div>${account?.verified_flag ? '' : `<form id="cf-link-form" class="setting-row cf-link-form"><div><h3>${account ? 'Verify your handle' : 'Link your handle'}</h3><p>${account ? 'Add the proof token to the First Name field on your Codeforces profile, save it, then verify it here.' : 'We will provide a proof token to add to the First Name field on your Codeforces profile.'}</p></div>${account ? '' : '<input name="handle" required autocomplete="off" aria-label="Codeforces handle" placeholder="Codeforces handle">'}<button class="game-btn blue" type="submit" ${busy ? 'disabled' : ''}>${account ? 'Verify' : 'Link handle'}</button></form>${token ? `<p class="settings-note" role="status">Add this exact token to your Codeforces profile: <b>${escapeHtml(token)}</b>. Then select Verify.</p>` : ''}`}${notice ? `<p role="status">${escapeHtml(notice)}</p>` : ''}${error ? `<p role="alert">${escapeHtml(error)}</p>` : ''}<div class="setting-row cf-sync-row"><div><h3>Problem history sync</h3><p>${codeforcesSync ? `${escapeHtml(codeforcesSync.history_state.replaceAll('_', ' '))} · ${escapeHtml(codeforcesSync.history_rows)} solved rows imported` : 'No history sync status is available yet.'}${codeforcesSync?.last_error ? `<br>${escapeHtml(codeforcesSync.last_error)}` : ''}</p></div><button class="game-btn stone" data-cf-refresh ${busy ? 'disabled' : ''}>Refresh status</button><button class="game-btn green" data-cf-sync ${busy || !account?.verified_flag ? 'disabled' : ''}>${busy ? 'Working…' : 'Sync history'}</button></div><div class="setting-row"><div><h3>Village rewards</h3><p>${wallet ? `${n(wallet.gold)} gold · ${n(wallet.elixir)} elixir · ${n(wallet.gems)} gems` : 'Unavailable until your account is connected.'}</p></div></div><h3>Topic progress</h3>${profile?.topics.length ? profile.topics.map((topic) => `<div class="setting-row"><div><h3>${escapeHtml(topic.display_name || topic.name)} · Level ${n(topic.level)}</h3><p>${n(topic.progress_points)} points · ${n(topic.points_to_next_level)} to next level</p></div><b>${Math.round(Number(topic.progress_pct) || 0)}%</b></div>`).join('') : '<p>No topic progress is available yet.</p>'}<h3>Solved history <small>${n(historyTotal)} records</small></h3>${history.length ? history.map((item) => `<div class="setting-row"><div><h3>${escapeHtml(item.problem_id)}</h3><p>${item.tags.map(escapeHtml).join(' · ') || 'No tags'}${item.rating == null ? '' : ` · Rating ${n(item.rating)}`}</p><small>${escapeHtml(new Date(item.solved_at).toLocaleDateString())} · ${item.credited ? 'Reward credited' : 'No reward credited'}</small></div></div>`).join('') : '<p>No solved-history records are available.</p>'}<p class="settings-note">Village attacks are available below. More CodeForge tools are available in the full workflow.</p><a class="game-btn blue" href="/?cp=1&amp;return=%2F">Open CodeForge workflows</a>` : ''}</div></section></div>`;
+    root.innerHTML = `<div class="modal-backdrop"><section class="modal small-modal codeforge-modal" role="dialog" aria-modal="true" aria-labelledby="codeforge-title"><header class="modal-header"><div><small>CODEFORGE</small><h1 id="codeforge-title">Your progress</h1><p>Codeforces history, village rewards and topic growth.</p></div><button class="square-btn small close-btn" data-codeforge-close aria-label="Close dialog">${icon('X', 25)}</button></header><div class="modal-body settings-body"><div class="setting-row"><div><h3>Account</h3><p>${authenticated ? `Signed in as ${escapeHtml(user?.username ?? 'Loading…')}` : 'Sign in to connect your Codeforces account and sync progress.'}</p></div>${authenticated ? `<button class="game-btn stone" data-cf-signout ${busy ? 'disabled' : ''}>Sign out</button>` : '<a class="game-btn blue" href="/?cp=1&amp;return=%2F">Sign in</a>'}</div>${authenticated ? `<div class="setting-row"><div><h3>Codeforces handle</h3><p>${account ? `${escapeHtml(account.handle)} · ${account.verified_flag ? 'Verified' : 'Not verified'}` : 'Link a handle to import solved problems.'}</p></div>${account?.verified_flag ? '<span>Verified</span>' : ''}</div>${account?.verified_flag ? '' : `<form id="cf-link-form" class="setting-row cf-link-form"><div><h3>${account ? 'Verify your handle' : 'Link your handle'}</h3><p>${account ? 'Add the proof token to the First Name field on your Codeforces profile, save it, then verify it here.' : 'We will provide a proof token to add to the First Name field on your Codeforces profile.'}</p></div>${account ? '' : '<input name="handle" required autocomplete="off" aria-label="Codeforces handle" placeholder="Codeforces handle">'}<button class="game-btn blue" type="submit" ${busy ? 'disabled' : ''}>${account ? 'Verify' : 'Link handle'}</button></form>${token ? `<p class="settings-note" role="status">Add this exact token to your Codeforces profile: <b>${escapeHtml(token)}</b>. Then select Verify.</p>` : ''}`}${notice ? `<p role="status">${escapeHtml(notice)}</p>` : ''}${error ? `<p role="alert">${escapeHtml(error)}</p>` : ''}<div class="setting-row cf-sync-row"><div><h3>Problem history sync</h3><p>${codeforcesSync ? `${escapeHtml(codeforcesSync.history_state.replaceAll('_', ' '))} · ${escapeHtml(codeforcesSync.history_rows)} solved rows imported` : 'No history sync status is available yet.'}${codeforcesSync?.last_error ? `<br>${escapeHtml(codeforcesSync.last_error)}` : ''}</p></div><button class="game-btn stone" data-cf-refresh ${busy ? 'disabled' : ''}>Refresh status</button><button class="game-btn green" data-cf-sync ${busy || !account?.verified_flag ? 'disabled' : ''}>${busy ? 'Working…' : 'Sync history'}</button></div><div class="setting-row"><div><h3>Village rewards</h3><p>${wallet ? `${n(wallet.gold)} gold · ${n(wallet.elixir)} elixir · ${n(wallet.gems)} gems` : 'Unavailable until your account is connected.'}</p></div></div><h3>Topic progress</h3>${profile?.topics.length ? profile.topics.map((topic) => `<div class="setting-row"><div><h3>${escapeHtml(topic.display_name || topic.name)} · Level ${n(topic.level)}</h3><p>${n(topic.progress_points)} points · ${n(topic.points_to_next_level)} to next level</p></div><b>${Math.round(Number(topic.progress_pct) || 0)}%</b></div>`).join('') : '<p>No topic progress is available yet.</p>'}<h3>Solved history <small>${n(historyTotal)} records</small></h3>${history.length ? history.map((item) => `<div class="setting-row"><div><h3>${escapeHtml(item.problem_id)}</h3><p>${item.tags.map(escapeHtml).join(' · ') || 'No tags'}${item.rating == null ? '' : ` · Rating ${n(item.rating)}`}</p><small>${escapeHtml(new Date(item.solved_at).toLocaleDateString())} · ${item.credited ? 'Reward credited' : 'No reward credited'}</small></div></div>`).join('') : '<p>No solved-history records are available.</p>'}<p class="settings-note">Village attacks are available below. More CodeForge tools are available in the full workflow.</p><a class="game-btn blue" href="/?cp=1&amp;return=%2F">Open CodeForge workflows</a>` : ''}</div></section></div>`;
     const proofMessage = account && !account.verified_flag
       ? Array.from(root.querySelectorAll<HTMLElement>('.settings-note')).find((item) => item.textContent?.startsWith('Add this exact token'))
       : null;
@@ -105,6 +105,7 @@ export function openCodeForgeDialog(root: HTMLElement) {
     root.querySelector('[data-cf-refresh]')?.addEventListener('click', () => void run(async () => {
       sync = await villageApi.syncOverview();
     }, 'Sync status refreshed.'), { signal });
+    root.querySelector('[data-cf-signout]')?.addEventListener('click', signOut, { signal });
     root.querySelector('.modal-backdrop')?.addEventListener('click', (event) => {
       if (event.target === event.currentTarget) close();
     }, { signal });
@@ -138,6 +139,29 @@ export function openCodeForgeDialog(root: HTMLElement) {
     try { await fn(); if (closed) return; notice = success; await load(); }
     catch (cause) { if (!closed) error = cause instanceof Error ? cause.message : 'Unable to complete this request.'; }
     finally { busy = false; render(); }
+  };
+  // Sign-out cannot reuse `run`: a declined local-only fallback must not report "Signed out",
+  // and a success must land on the sign-in page instead of a panel that still looks signed in.
+  const signOut = () => {
+    if (closed || busy) return;
+    busy = true; error = ''; notice = ''; render();
+    void (async () => {
+      try {
+        await authApi.logout(getRefreshToken() ?? undefined);
+      } catch {
+        if (closed || !window.confirm('The server could not end this session. Sign out on this device only?')) return;
+        clearTokens();
+      }
+      if (closed) return;
+      user = null; accounts = []; profile = null; wallet = null; sync = [];
+      history = []; historyTotal = 0; pendingProof = null; copyNotice = '';
+      window.location.assign('/?cp=1&return=%2F');
+    })().catch((cause) => {
+      if (!closed) error = cause instanceof Error ? cause.message : 'Unable to sign out.';
+    }).finally(() => {
+      if (closed) return;
+      busy = false; render();
+    });
   };
   const load = async () => {
     if (closed) return;

@@ -340,7 +340,7 @@ async def test_late_accepted_verdict_is_imported_and_later_nonaccepted_reconcile
 
 
 @pytest.mark.asyncio
-async def test_two_attacks_on_one_account_queue_scan_proof_and_settle_independently(db, monkeypatch):
+async def test_two_attacks_on_one_account_settle_independently(db):
     user = _make_user(db)
     account = _make_judge_account(db, user.id)
     targets = [_make_user(db), _make_user(db)]
@@ -359,49 +359,19 @@ async def test_two_attacks_on_one_account_queue_scan_proof_and_settle_independen
 
     service = AttackService(db)
     for attack in attacks:
-        assert service.resolve_attack(str(attack.id), actor_user_id=str(user.id)).status == AttackStatus.in_progress
-    db.refresh(attacks[0])
-    db.refresh(attacks[1])
-    assert attacks[0].resolution_state == "pending_scan"
-    assert attacks[1].resolution_state == "queued"
-    assert attacks[0].resolution_generation != attacks[1].resolution_generation
-    checkpoint = db.query(CodeforcesSyncCheckpoint).filter_by(judge_account_id=account.id).one()
-    assert checkpoint.finalization_attack_id == attacks[0].id
+        assert service.resolve_attack(str(attack.id), actor_user_id=str(user.id)).status == AttackStatus.resolved
 
-    async def eof(*args, **kwargs):
-        return _raw_page([])
-
-    monkeypatch.setattr(
-        "app.modules.m2_platform_sync.judge_adapters.codeforces.CodeforcesAdapter.fetch_submission_page",
-        eof,
-    )
-    monkeypatch.setattr("app.core.redis.get_async_redis", lambda: _LockRedis())
-    from worker import main as worker_main
-
-    # First scan completes the active assignment. Make the checkpoint and
-    # account otherwise fully current so the queued attack itself must make
-    # the real worker due selector return this account again.
-    assert await worker_main.job_sync_due_accounts(db) == {
-        "due": 1, "succeeded": 1, "failed": 0, "busy": 0,
-    }
-    db.refresh(checkpoint)
-    account.last_sync_at = datetime.now(timezone.utc)
-    checkpoint.history_status = "complete"
-    checkpoint.head_status = "complete"
-    checkpoint.full_reconciled_at = datetime.now(timezone.utc) + timedelta(days=1)
-    checkpoint.head_reconciled_at = datetime.now(timezone.utc)
-    db.commit()
-
-    assert await worker_main.job_sync_due_accounts(db) == {
-        "due": 1, "succeeded": 1, "failed": 0, "busy": 0,
-    }
     for expected in attacks:
         db.refresh(expected)
-        assert expected.resolution_proof_at is not None
-        assert expected.resolution_proof_generation == expected.resolution_generation
-        assert service.resolve_attack(str(expected.id), actor_user_id=str(user.id)).status == AttackStatus.resolved
+        assert expected.resolved_at is not None
+        assert expected.resolution_state is None
+        assert expected.resolution_proof_at is None
 
     assert db.query(Attack).filter(
         Attack.id.in_([attack.id for attack in attacks]),
         Attack.status == AttackStatus.resolved,
     ).count() == 2
+
+    # Settlement never schedules a judge-account scan for the attacker.
+    checkpoint = db.query(CodeforcesSyncCheckpoint).filter_by(judge_account_id=account.id).first()
+    assert checkpoint is None or checkpoint.finalization_attack_id is None

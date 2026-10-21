@@ -15,8 +15,6 @@ from sqlalchemy.orm import Session
 from app.core.errors import CooldownActive, ForbiddenError, InvalidAttackTarget, NotFoundError
 from app.core.logging import get_logger
 from app.modules.m1_auth.models import User
-from app.modules.m1_auth.models import JudgeAccount, JudgeType
-from app.modules.m2_platform_sync.models import CodeforcesSyncCheckpoint
 from app.modules.m3_village.service import VillageService
 from app.modules.m4_attacks.models import Attack, AttackProblemSet, AttackStatus
 from app.modules.m4_attacks.problem_curator import ProblemSetCurator
@@ -383,9 +381,8 @@ class AttackService:
         """
         if not system and actor_user_id is None:
             raise ForbiddenError("An authenticated attack owner or trusted system actor is required")
-        # Read identity without a lock, then follow the global order used by M2:
-        # JudgeAccount -> checkpoint -> Attack. The scan itself is always HTTP
-        # outside a transaction; this path only records or consumes its proof.
+        # Authorization is decided on an unlocked read so an unrelated caller
+        # never waits for a row it is not allowed to settle.
         candidate = self.attack_repo.get_by_id(attack_id)
         if not candidate:
             raise NotFoundError("Attack not found")
@@ -394,38 +391,6 @@ class AttackService:
         if candidate.status in (AttackStatus.resolved, AttackStatus.abandoned):
             self.db.rollback()
             return candidate
-        # Decisions based on the initial identity-map read are unsafe: an
-        # importer or another finalizer may have changed the deadline/request.
-        candidate = self.attack_repo.get_by_id(attack_id)
-        if not candidate:
-            raise NotFoundError("Attack not found")
-        if candidate.status in (AttackStatus.resolved, AttackStatus.abandoned):
-            self.db.rollback()
-            return candidate
-        expires = candidate.window_expires_at
-        if expires and expires.tzinfo is None:
-            expires = expires.replace(tzinfo=timezone.utc)
-        now = datetime.now(timezone.utc)
-        early_abandon = not system and is_abandoned and (expires is None or now < expires)
-        should_wait = not early_abandon and (
-            (not system and not is_abandoned)
-            or (expires is not None and now >= expires)
-        )
-        should_wait = should_wait or (system and self._has_qualifying_proof(candidate, now))
-        request_ready = False
-        if should_wait:
-            request_ready = self._ensure_finalization_request(candidate, abandoned=is_abandoned and not system)
-            if not request_ready:
-                attack = self.attack_repo.get_by_id(attack_id, for_update=True)
-                self.db.commit()
-                return attack
-        elif system:
-            self._lock_resolution_context(candidate)
-        elif not system and is_abandoned:
-            # An early abandon must use the same account -> checkpoint ->
-            # attack lock order as finalization. Its deadline can expire while
-            # it waits, in which case it must become a proof-gated resolution.
-            self._lock_resolution_context(candidate)
         attack = self.attack_repo.get_by_id(attack_id, for_update=True)
         if not attack:
             raise NotFoundError("Attack not found")
@@ -443,32 +408,13 @@ class AttackService:
         if expires_at and expires_at.tzinfo is None:
             expires_at = expires_at.replace(tzinfo=timezone.utc)
         now = datetime.now(timezone.utc)
-        early_abandon = not system and is_abandoned and (expires_at is None or now < expires_at)
-        if system and (expires_at is None or now < expires_at) and not self._has_qualifying_proof(attack, now):
+        if system and (expires_at is None or now < expires_at):
             # The trusted expiry entry point is safe to call for stale worker
             # batches, but never settles an attack before its locked deadline.
             self.db.rollback()
             return attack
-        if not early_abandon and expires_at is not None and now >= expires_at:
-            is_abandoned = False
-            if not request_ready:
-                request_ready = self._ensure_finalization_request(attack, abandoned=False)
-                attack = self.attack_repo.get_by_id(attack_id, for_update=True)
-                if attack is None:
-                    raise NotFoundError("Attack not found")
-                expires_at = attack.window_expires_at
-                if expires_at and expires_at.tzinfo is None:
-                    expires_at = expires_at.replace(tzinfo=timezone.utc)
-                now = datetime.now(timezone.utc)
-        # Every ordinary settlement, including a worker that waited past its
-        # deadline, consumes a fresh proof. Only a refreshed early abandon is
-        # permitted to bypass proof.
-        if not early_abandon and (
-            not request_ready or not self._has_qualifying_proof(attack, now)
-        ):
-            self.db.commit()
-            return attack
-        if not system and is_abandoned and expires_at is not None and now >= expires_at:
+        early_abandon = not system and is_abandoned and (expires_at is None or now < expires_at)
+        if not early_abandon and is_abandoned and expires_at is not None and now >= expires_at:
             # Stable late-abandonment contract: after expiry, abandon is treated
             # as ordinary window resolution, not the early-abandon penalty.
             is_abandoned = False
@@ -592,140 +538,6 @@ class AttackService:
             logger.exception("attack_resolved_outbox_delivery_deferred")
         return attack
 
-    def _ensure_finalization_request(self, candidate: Attack, abandoned: bool) -> bool:
-        """Persist once-only request identity and schedule a fresh full head scan."""
-        now = datetime.now(timezone.utc)
-        account_query = self.db.query(JudgeAccount).filter(
-            JudgeAccount.id == candidate.resolution_account_id
-        ) if candidate.resolution_account_id is not None else self.db.query(JudgeAccount).filter(
-            JudgeAccount.user_id == candidate.attacker_user_id,
-            JudgeAccount.judge_type == JudgeType.codeforces,
-            JudgeAccount.verified_flag.is_(True),
-        ).order_by(JudgeAccount.id.asc())
-        account = account_query.with_for_update().populate_existing().first()
-        if account is None or account.user_id != candidate.attacker_user_id or account.judge_type != JudgeType.codeforces or not account.verified_flag:
-            # A previously pinned/revoked identity is not replaceable, and its
-            # old proof must never authorize settlement.
-            attack = self.attack_repo.get_by_id(str(candidate.id), for_update=True)
-            if attack:
-                had_proof = attack.resolution_proof_at is not None
-                attack.resolution_proof_at = None
-                attack.resolution_proof_started_at = None
-                attack.resolution_proof_generation = None
-                attack.resolution_state = (
-                    "blocked_account" if had_proof or candidate.resolution_account_id is not None
-                    else "waiting_for_account"
-                )
-                expires = attack.window_expires_at
-                if expires and expires.tzinfo is None:
-                    expires = expires.replace(tzinfo=timezone.utc)
-                not_before = expires + timedelta(minutes=5) if expires and now >= expires else now
-                attack.resolution_requested_at = attack.resolution_requested_at or now
-                attack.resolution_not_before = attack.resolution_not_before or not_before
-                attack.resolution_abandoned = abandoned
-                self.db.flush()
-            return False
-        if candidate.resolution_proof_at is not None and candidate.resolution_account_id is None:
-            attack = self.attack_repo.get_by_id(str(candidate.id), for_update=True)
-            if attack:
-                attack.resolution_state = "blocked_account"
-                attack.resolution_proof_at = None
-                attack.resolution_proof_started_at = None
-                attack.resolution_proof_generation = None
-                self.db.flush()
-            return False
-        from sqlalchemy.dialects.postgresql import insert as pg_insert
-        self.db.execute(pg_insert(CodeforcesSyncCheckpoint).values(
-            judge_account_id=account.id,
-        ).on_conflict_do_nothing(constraint="uq_cf_sync_checkpoints_account"))
-        checkpoint = self.db.query(CodeforcesSyncCheckpoint).filter(
-            CodeforcesSyncCheckpoint.judge_account_id == account.id,
-        ).with_for_update().populate_existing().first()
-        attack = self.attack_repo.get_by_id(str(candidate.id), for_update=True)
-        if not attack or attack.status not in (AttackStatus.created, AttackStatus.in_progress):
-            self.db.rollback()
-            return False
-        expires = attack.window_expires_at
-        if expires and expires.tzinfo is None:
-            expires = expires.replace(tzinfo=timezone.utc)
-        now = datetime.now(timezone.utc)
-        not_before = expires + timedelta(minutes=5) if expires and now >= expires else now
-        if attack.resolution_proof_at is not None and self._has_qualifying_proof(attack, now):
-            return True
-        attack.resolution_requested_at = attack.resolution_requested_at or now
-        attack.resolution_not_before = attack.resolution_not_before or not_before
-        attack.resolution_abandoned = abandoned
-        if attack.resolution_account_id is None:
-            attack.resolution_account_id = account.id
-        if checkpoint.finalization_attack_id not in (None, attack.id):
-            # The checkpoint has one durable cursor. Preserve this request as
-            # an independent FIFO item rather than overwriting its owner.
-            attack.resolution_state = "queued"
-            self.db.flush()
-            return True
-        if attack.resolution_generation is None:
-            checkpoint.request_generation += 1
-            checkpoint.revision += 1  # invalidate any page fetched before this request
-            generation = checkpoint.request_generation
-            checkpoint.finalization_attack_id = attack.id
-            checkpoint.finalization_not_before = not_before
-            checkpoint.finalization_generation = generation
-            checkpoint.head_scan_offset = 1
-            checkpoint.head_scan_max_submission_id = None
-            checkpoint.head_scan_generation = generation
-            checkpoint.head_scan_started_at = None
-            checkpoint.head_status = "in_progress"
-            attack.resolution_state = "pending_scan"
-            attack.resolution_generation = generation
-        self.db.flush()
-        return True
-
-    def _lock_resolution_context(self, candidate: Attack) -> None:
-        """Acquire verified owner account and checkpoint locks before Attack."""
-        account_query = self.db.query(JudgeAccount)
-        if candidate.resolution_account_id is not None:
-            account_query = account_query.filter(JudgeAccount.id == candidate.resolution_account_id)
-        else:
-            account_query = account_query.filter(
-                JudgeAccount.user_id == candidate.attacker_user_id,
-                JudgeAccount.judge_type == JudgeType.codeforces,
-                JudgeAccount.verified_flag.is_(True),
-            ).order_by(JudgeAccount.id.asc())
-        account = account_query.with_for_update().populate_existing().first()
-        if (
-            account is None or account.user_id != candidate.attacker_user_id
-            or account.judge_type != JudgeType.codeforces or not account.verified_flag
-        ):
-            return
-        from sqlalchemy.dialects.postgresql import insert as pg_insert
-        self.db.execute(pg_insert(CodeforcesSyncCheckpoint).values(
-            judge_account_id=account.id,
-        ).on_conflict_do_nothing(constraint="uq_cf_sync_checkpoints_account"))
-        self.db.query(CodeforcesSyncCheckpoint).filter(
-            CodeforcesSyncCheckpoint.judge_account_id == account.id,
-        ).with_for_update().populate_existing().first()
-
-    @staticmethod
-    def _has_qualifying_proof(attack: Attack, now: datetime) -> bool:
-        started = attack.resolution_proof_started_at
-        if started is not None and started.tzinfo is None:
-            started = started.replace(tzinfo=timezone.utc)
-        completed = attack.resolution_proof_at
-        if completed is not None and completed.tzinfo is None:
-            completed = completed.replace(tzinfo=timezone.utc)
-        minimum = attack.resolution_not_before or attack.resolution_requested_at
-        if minimum is not None and minimum.tzinfo is None:
-            minimum = minimum.replace(tzinfo=timezone.utc)
-        return bool(
-            started
-            and completed
-            and attack.resolution_proof_generation == attack.resolution_generation
-            and minimum
-            and started >= minimum
-            and completed >= started
-            and now >= minimum
-        )
-
     def _queue_attack_resolved(self, attack: Attack, solved_fraction: float, delta_attacker: int, delta_target: int) -> None:
         from app.modules.m8_notifications.service import NotificationService
         NotificationService(self.db).enqueue(EventType.ATTACK_RESOLVED, {
@@ -758,16 +570,6 @@ class AttackService:
             and now >= attack.window_expires_at
         ):
             attack = self.resolve_expired_attack(attack_id)
-        elif (
-            attack.status == AttackStatus.in_progress
-            and attack.resolution_requested_at is not None
-            and self._has_qualifying_proof(attack, now)
-        ):
-            attack = self.resolve_attack(
-                attack_id,
-                actor_user_id=str(attack.attacker_user_id),
-                is_abandoned=bool(attack.resolution_abandoned),
-            )
 
         problems = self.problem_repo.get_by_attack(attack_id)
         attacker = self.db.query(User).filter(User.id == attack.attacker_user_id).first()
