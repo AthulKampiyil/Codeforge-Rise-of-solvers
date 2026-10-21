@@ -155,7 +155,7 @@
   display: grid;
   place-items: center;
   min-width: 0;
-  background: radial-gradient(circle at 50% 50%, #1e293b, #0f172a 80%);
+  background: #173829;
 }
 
 .village-canvas {
