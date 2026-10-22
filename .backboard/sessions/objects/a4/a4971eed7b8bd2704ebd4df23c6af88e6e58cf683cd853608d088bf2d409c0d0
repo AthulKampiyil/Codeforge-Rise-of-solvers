@@ -1,0 +1,9 @@
+#!/bin/sh
+'''exec' "/run/media/niranjan/E8BA8138BA810472/My Folders/Codeforge-Rise-of-solvers/backend/.venv313/bin/python" "$0" "$@"
+' '''
+import sys
+from httpx import main
+if __name__ == '__main__':
+    if sys.argv[0].endswith('.exe'):
+        sys.argv[0] = sys.argv[0][:-4]
+    sys.exit(main())

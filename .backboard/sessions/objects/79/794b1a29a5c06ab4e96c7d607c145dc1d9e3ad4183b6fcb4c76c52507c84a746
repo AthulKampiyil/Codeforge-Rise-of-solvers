@@ -1,0 +1,16 @@
+{"tick_seconds": 30, "jobs": [{"name": "sync_due_accounts", "interval_seconds": 21600}, {"name": "retry_dlq", "interval_seconds": 900}, {"name": "resolve_expired_attacks", "interval_seconds": 30}, {"name": "recalculate_territory", "interval_seconds": 3600}, {"name": "reconcile_league", "interval_seconds": 600}], "event": "worker_started", "level": "info", "timestamp": "2026-10-21T13:42:52.177569Z"}
+{"job": "sync_due_accounts", "due": 0, "succeeded": 0, "failed": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:42:53.047899Z"}
+{"job": "retry_dlq", "retried": 0, "succeeded": 0, "failed": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:42:53.057642Z"}
+{"job": "resolve_expired_attacks", "resolved": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:42:53.145904Z"}
+{"job": "recalculate_territory", "due": 0, "rescored": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:42:53.302275Z"}
+{"job": "reconcile_league", "repaired": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:42:53.334573Z"}
+{"job": "resolve_expired_attacks", "resolved": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:43:23.371957Z"}
+{"job": "resolve_expired_attacks", "resolved": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:43:53.418691Z"}
+{"job": "resolve_expired_attacks", "resolved": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:44:23.453766Z"}
+{"job": "resolve_expired_attacks", "resolved": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:44:53.486875Z"}
+{"job": "resolve_expired_attacks", "resolved": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:45:23.523317Z"}
+{"job": "resolve_expired_attacks", "resolved": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:45:53.557701Z"}
+{"job": "resolve_expired_attacks", "resolved": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:46:23.591342Z"}
+{"job": "resolve_expired_attacks", "resolved": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:46:53.629603Z"}
+{"job": "resolve_expired_attacks", "resolved": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:47:23.666586Z"}
+{"job": "resolve_expired_attacks", "resolved": 0, "event": "job_completed", "level": "info", "timestamp": "2026-10-21T13:47:53.702159Z"}

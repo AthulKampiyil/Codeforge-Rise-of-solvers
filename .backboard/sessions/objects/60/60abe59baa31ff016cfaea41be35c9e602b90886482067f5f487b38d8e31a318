@@ -1,0 +1,14 @@
+[
+  "backend/tests/test_attack_finalization_migration.py::test_populated_014_proofs_are_repaired_by_017_without_fabricating_start",
+  "backend/tests/test_auth_assignment.py::test_tc_py_01_register_student_specific_user",
+  "backend/tests/test_auth_assignment.py::test_tc_py_02_wrong_password_returns_generic_error",
+  "backend/tests/test_m2_router.py::test_failed_sync_stays_failed_while_reconciliation_is_pending",
+  "backend/tests/test_m2_router.py::test_suspended_user_cannot_request_manual_sync",
+  "backend/tests/test_m2_router.py::test_sync_status_exposes_pending_request_head_history_and_full_reconciliation",
+  "backend/tests/test_m2_router.py::test_unsupported_judge_is_not_reported_as_up_to_date",
+  "backend/tests/test_m2_router.py::test_up_to_date_status_is_not_masked_by_due_reconciliation",
+  "backend/tests/test_worker_sync_dispatch.py::test_dlq_retry_batch_is_bounded_and_busy_does_not_abort_batch",
+  "backend/tests/test_worker_sync_dispatch.py::test_due_dispatch_continues_after_busy_account",
+  "backend/tests/test_worker_sync_dispatch.py::test_pending_requests_are_read_from_database_not_redis",
+  "backend/tests/test_worker_sync_dispatch.py::test_real_due_selector_includes_queued_finalization_and_keeps_dlq_backoff"
+]

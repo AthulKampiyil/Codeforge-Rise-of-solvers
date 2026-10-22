@@ -1,0 +1,8 @@
+# Browser-driven end-to-end tests. Deliberately NOT in backend/requirements.txt:
+# these need a real browser and a running dev server, not Postgres/Redis.
+#
+# Install into a dedicated venv so the backend's pinned pytest isn't touched:
+#   python -m venv e2e/.venv
+#   e2e/.venv/bin/pip install -r e2e/requirements.txt
+selenium==4.49.0
+pytest>=8.0

@@ -1,0 +1,7 @@
+{$PUBLIC_HOST} {
+    @api {
+        path /auth* /platform_sync* /village* /attacks* /guilds* /war_room* /league* /notifications* /admin* /health* /docs* /openapi.json* /ws*
+    }
+    reverse_proxy @api api:8000
+    reverse_proxy frontend:80
+}

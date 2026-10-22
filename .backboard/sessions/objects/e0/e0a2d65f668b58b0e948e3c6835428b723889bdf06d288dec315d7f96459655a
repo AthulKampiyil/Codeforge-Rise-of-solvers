@@ -1,0 +1,11 @@
+
+> codeforge-frontend@0.1.0 dev
+> vite --port 5173
+
+
+  VITE v5.4.21  ready in 748 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+7:18:03 PM [vite] hmr update /src/index.css, /src/features/village/components/VillageDashboard.jsx
+7:18:09 PM [vite] hmr update /src/index.css, /src/features/village/components/VillageDashboard.jsx

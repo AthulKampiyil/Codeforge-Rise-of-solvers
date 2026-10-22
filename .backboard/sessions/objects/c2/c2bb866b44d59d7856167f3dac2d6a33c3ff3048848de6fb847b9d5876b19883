@@ -1,0 +1,64 @@
+**CodeForge: Rise of Solvers**
+
+Team Work Split & Accelerated Schedule
+
+_Group 7 - IIIT Kottayam | Prepared August 13, 2026_
+
+# **1\. Work Split — Person → Module Assignment**
+
+Modules are grouped so each person owns full-stack work (backend module + matching frontend feature) for their lane, minimizing cross-person handoffs. Grouping follows the SADD's M1–M9 module decomposition rather than splitting evenly, so each lane reflects a real dependency boundary, not just a headcount split.
+
+| **Person**                | **Owns**                                                  | **Why This Grouping**                                                                                                                                                                                                                |
+| ------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **P1 — Foundation**       | M1 Auth, M9 Admin/Config, repo infra (CI, Docker, deploy) | M1 is the hard blocker for everyone else — needs to ship first, fast. M9 is low-dependency CRUD, a good fit for whoever is also babysitting infra.                                                                                   |
+| **P2 — Core Engine**      | M2 Platform Sync (judge adapters), M3 Village             | M3 directly consumes M2's output (topic progress → village levels). Same-person ownership means no cross-person handoff for that data flow.                                                                                          |
+| **P3 — Battle Systems**   | M4 Attacks, M7 League & Trophy                            | M7's trophy events are driven almost entirely by M4's attack outcomes (win/loss/defense). Same-person ownership avoids a two-person sync tax on every trophy rule change.                                                            |
+| **P4 — Guild & Realtime** | M5 Guild & Territory, M6 War Room, M8 Notifications       | M6 is a read view on top of M5's data, and M8 (WebSocket gateway) is needed earliest by guild/territory events (live zone changes) — bundling it here means P4 builds the realtime pipe once and everyone else just publishes to it. |
+
+**Dependency chain:** M1 → M2 → M3 → {M4, M5} → {M6, M7}. M8 must exist early (even as a stub) since M4, M5, and M6 all publish through it.
+
+_This is a starting assignment based on module dependencies, not a judgment on who should do what — swap names in freely; the module logic is what matters, not the labels._
+
+# **2\. Sync Points — the "Obviously Connected" Parts**
+
+These are the only moments the team must coordinate. Outside of these four checkpoints, each person can work in their own module folder without waiting on anyone.
+
+| **Date**         | **Sync Point**                | **What Happens**                                                                                                                                              |
+| ---------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Aug 20, 2026** | Auth contract freeze          | P1 publishes the final /auth request/response shapes and how a JWT/session is validated. Everyone else codes against that contract from here on.              |
+| **Aug 27, 2026** | Village data contract freeze  | P2 publishes the shape of a "topic progress" object. P3 and P4 both need this (attacks read weak topics, territory reads aggregate scores).                   |
+| **Sep 3, 2026**  | WebSocket event schema freeze | P4 publishes the event payload shapes (attack notification, territory change, war-room update) — matches SADD Appendix B.1. P3 and P4 both emit through this. |
+| **Sep 10, 2026** | Integration day               | Everyone merges into develop and the four modules get wired together for the first time as a whole app.                                                       |
+
+# **3\. Master Schedule — Internal Targets vs. Official Sheet**
+
+Starting from Aug 13, running the same 30% / 60% / 80% / integrate / test / deploy / document sequence as the official timeline, but compressed roughly one week ahead at every milestone.
+
+| **Sprint**   | **Our Dates** | **Our Target**                                                                                                                                                                                           | **Official Deadline**                 | **Buffer**         |
+| ------------ | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ------------------ |
+| **Sprint 0** | Aug 13–17     | Repo scaffold, DB schema draft, task board set up                                                                                                                                                        | (not on official sheet)               | —                  |
+| **Sprint 1** | Aug 18–24     | 30%: Auth working end-to-end, all module DB models stubbed, one live judge adapter (Codeforces), village level calc, WebSocket skeleton, admin config skeleton                                           | Aug 25 / Sep 1, 2026                  | ~1 week            |
+| **Sprint 2** | Aug 25–31     | 60%: full judge linking + verification, all 3 judge adapters, village dashboard rendering, matchmaking + curated problem sets, guild create/join + territory scoring, real events flowing over WebSocket | Sep 8, 2026                           | ~1 week            |
+| **Sprint 3** | Sep 1–7       | 80%: War Room, league/trophy + promotion logic, admin panel, cooldown enforcement, frontend polish across all features                                                                                   | Sep 15, 2026                          | ~1 week            |
+| **Sprint 4** | Sep 8–14      | Integration: all modules wired end-to-end, cross-module bug bash                                                                                                                                         | Sep 22, 2026                          | ~1 week            |
+| **Sprint 5** | Sep 15–21     | Testing: unit/integration/system tests, fix defects, Test Report drafted                                                                                                                                 | Sep 29, 2026                          | ~1 week            |
+| **Sprint 6** | Sep 22–28     | Deploy: real host (not localhost), demo running on a machine that isn't the developer's                                                                                                                  | Oct 6, 2026                           | ~1 week            |
+| **Sprint 7** | Sep 29–Oct 5  | Docs: finalize SRS/SADD, User Manual, final presentation deck                                                                                                                                            | Oct 13, 2026                          | ~1 week            |
+| **Buffer**   | Oct 6–20      | Pure buffer — polish, rehearsal, address any late feedback                                                                                                                                               | Oct 13–20, 2026 (official final demo) | 2 full weeks spare |
+
+# **4\. Weekly Per-Person Breakdown**
+
+Detailed task assignments for each sprint, by person. Each row is one week; each column is one person's concrete deliverables for that week.
+
+| **Sprint**                         | **P1 — Auth/Admin**                                                                                           | **P2 — Sync/Village**                                                                            | **P3 — Attacks/League**                                                                         | **P4 — Guild/Realtime**                                                                           |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Sprint 0**<br><br>(Aug 13–17)    | Set up repo scaffold, CI pipeline, Docker Compose baseline                                                    | DB schema draft for Topic / VillageTopicProgress                                                 | DB schema draft for Attack / Trophy                                                             | DB schema draft for Guild / Territory; WebSocket connection manager skeleton                      |
+| **Sprint 1**<br><br>(Aug 18–24)    | Register/login/JWT endpoints; judge-link verification flow; FREEZE auth contract (Aug 20) and publish to team | Codeforces adapter (fetch + parse); topic-level calc from solve history                          | Stub matchmaking (random target); cooldown model (schema only)                                  | Guild create/join models; publish a test event end-to-end through M8                              |
+| **Sprint 2**<br><br>(Aug 25–31)    | Link/unlink additional judges; session management (7-day persistence, logout)                                 | LeetCode + CodeChef adapters; village dashboard rendering; FREEZE village data contract (Aug 27) | Real matchmaking (comparable-strength targets); curated problem-set generation from weak topics | Territory scoring aggregation; zone ownership updates; guild join approve/reject flow             |
+| **Sprint 3**<br><br>(Sep 1–7)      | Admin panel: manage users/guilds; attack/cooldown rule config (UC-11, UC-12)                                  | Sync-status indicator UI; graceful handling of unavailable/rate-limited judges                   | Attack scoring + outcome notification; trophy count adjustment; league tier promotion/demotion  | War Room: per-member topic-strength summary; FREEZE WebSocket event schema (Sep 3)                |
+| **Sprint 4**<br><br>(Sep 8–14)     | Integration support: auth edge cases surfaced by other modules                                                | Integration support: sync/village edge cases                                                     | Integration support: attack/league edge cases                                                   | Integration support: guild/realtime edge cases; INTEGRATION DAY (Sep 10) — merge all into develop |
+| **Sprint 5**<br><br>(Sep 15–21)    | Unit + integration tests for M1/M9; fix defects                                                               | Unit + integration tests for M2/M3; fix defects                                                  | Unit + integration tests for M4/M7; fix defects                                                 | Unit + integration tests for M5/M6/M8; fix defects; compile Test Report                           |
+| **Sprint 6**<br><br>(Sep 22–28)    | Deploy backend + Postgres/Redis to real host; env/secrets setup                                               | Verify judge sync works against real host (not localhost)                                        | Load-test matchmaking + attack scoring on deployed environment                                  | Deploy frontend; verify WebSocket works over real network; run full demo pass                     |
+| **Sprint 7**<br><br>(Sep 29–Oct 5) | Finalize SRS/SADD sections owned; User Manual — auth & admin                                                  | User Manual — sync & village                                                                     | User Manual — attacks & league; presentation deck draft                                         | User Manual — guild & realtime; assemble final presentation deck                                  |
+
+**Note:** _This is a starting plan. Update the module ownership, sync-point dates, and weekly targets as the team's actual pace becomes clear — the goal is staying ~1 week ahead of the official timeline, not hitting these exact dates._

@@ -1,0 +1,49 @@
+INFO:     Will watch for changes in these directories: ['/run/media/niranjan/E8BA8138BA810472/My Folders/Codeforge-Rise-of-solvers/backend']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [228531] using WatchFiles
+INFO:     Started server process [228574]
+INFO:     Waiting for application startup.
+{"project": "CodeForge: Rise of Solvers", "event": "app_startup", "level": "info", "timestamp": "2026-10-21T13:42:53.894214Z"}
+INFO:     Application startup complete.
+{"channel": "codeforge:events", "event": "realtime_subscriber_started", "level": "info", "timestamp": "2026-10-21T13:42:53.902843Z"}
+INFO:     127.0.0.1:34720 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34734 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34720 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34720 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34720 - "OPTIONS /platform_sync/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34734 - "GET /platform_sync/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34734 - "OPTIONS /village/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34720 - "OPTIONS /league/me HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 33188) - "WebSocket /ws/events?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmMjAwZWNiYy1kOTg4LTQ5YmYtYmQ4My1jYTcwOWE2ZTJlZjQiLCJqdGkiOiIxNGY2ZTM2Yy05MGRlLTQ0NmItOTA2Ny0wOTdmZDFjMTc3ODkiLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzMTk0MjI0fQ.qUiTk79h7ER0hyRuKbVwat_foKqCQfmM4s_hjtWs86o" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:34734 - "GET /platform_sync/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34738 - "GET /village/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33192 - "GET /league/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33192 - "GET /village/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34738 - "GET /league/me HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:33520 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33520 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33520 - "GET /platform_sync/status HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 33540) - "WebSocket /ws/events?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmMjAwZWNiYy1kOTg4LTQ5YmYtYmQ4My1jYTcwOWE2ZTJlZjQiLCJqdGkiOiIxNGY2ZTM2Yy05MGRlLTQ0NmItOTA2Ny0wOTdmZDFjMTc3ODkiLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzMTk0MjI0fQ.qUiTk79h7ER0hyRuKbVwat_foKqCQfmM4s_hjtWs86o" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:33520 - "GET /village/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33554 - "GET /platform_sync/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33524 - "GET /league/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33524 - "GET /village/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33554 - "GET /league/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46034 - "GET /village/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46048 - "GET /league/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46434 - "GET /village/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46450 - "GET /league/me HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:44074 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44088 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44088 - "GET /platform_sync/status HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 44094) - "WebSocket /ws/events?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmMjAwZWNiYy1kOTg4LTQ5YmYtYmQ4My1jYTcwOWE2ZTJlZjQiLCJqdGkiOiIxNGY2ZTM2Yy05MGRlLTQ0NmItOTA2Ny0wOTdmZDFjMTc3ODkiLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzMTk0MjI0fQ.qUiTk79h7ER0hyRuKbVwat_foKqCQfmM4s_hjtWs86o" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:44088 - "GET /village/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44108 - "GET /platform_sync/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44074 - "GET /league/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44122 - "GET /village/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44108 - "GET /league/me HTTP/1.1" 200 OK

@@ -1,0 +1,5 @@
+home = /home/niranjan/.local/share/mise/installs/python/3.12/bin
+include-system-site-packages = false
+version = 3.12.15
+executable = /home/niranjan/.local/share/mise/installs/python/3.12.15/bin/python3.12
+command = /home/niranjan/.local/share/mise/installs/python/3.12/bin/python -m venv /run/media/niranjan/E8BA8138BA810472/My Folders/Codeforge-Rise-of-solvers/backend/venv312

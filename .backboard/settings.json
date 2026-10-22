@@ -1,0 +1,13 @@
+{
+	"permissions": {
+		"allow": [
+			"grep",
+			"glob",
+			"read",
+			"apply_patch(=/run/media/niranjan/E8BA8138BA810472/My\\ Folders/Codeforge-Rise-of-solvers/frontend/src/game/VillageScene.js)",
+			"execute(npm run:*)",
+			"execute(git diff -- frontend/src/game/VillageScene.js)",
+			"execute(git status --short)"
+		]
+	}
+}

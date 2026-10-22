@@ -1,4 +1,11 @@
 import Phaser from "phaser";
+import {
+  computeTopicCloseButtonRect,
+  TOPIC_PANEL_HEIGHT,
+  TOPIC_PANEL_MARGIN,
+  TOPIC_PANEL_TOP,
+  TOPIC_PANEL_WIDTH,
+} from "./topicPanelGeometry";
 
 const TILE_WIDTH = 104;
 const TILE_HEIGHT = 52;
@@ -66,6 +73,7 @@ export default class VillageScene extends Phaser.Scene {
     this.selectedTopicSlug = null;
     this.selectedHalo = null;
     this.topicPanel = null;
+    this.topicCloseButton = null;
     this.dragStart = null;
     this.dragged = false;
     this.activePointers = new Map();
@@ -105,7 +113,8 @@ export default class VillageScene extends Phaser.Scene {
     this.resizeHandler = () => {
       this.fitVillageCamera();
       if (this.topicPanel) {
-        this.topicPanel.x = Math.max(20, this.scale.width - 344);
+        this.topicPanel.x = Math.max(20, this.scale.width - TOPIC_PANEL_WIDTH - TOPIC_PANEL_MARGIN);
+        this.syncTopicPanelCloseButton();
       }
     };
     this.scale.on(Phaser.Scale.Events.RESIZE, this.resizeHandler, this);
@@ -123,6 +132,8 @@ export default class VillageScene extends Phaser.Scene {
       }
     };
     window.addEventListener("codeforge:village-state", this.stateListener);
+    this.closeTopicListener = () => this.closeTopic(true);
+    window.addEventListener("codeforge:close-topic", this.closeTopicListener);
 
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, this.teardown, this);
     this.events.once(Phaser.Scenes.Events.DESTROY, this.teardown, this);
@@ -408,10 +419,10 @@ export default class VillageScene extends Phaser.Scene {
     const pointsToNext = topic?.points_to_next_level ?? "—";
     const pct = Math.max(0, Math.min(100, topic?.progress_pct ?? 0));
 
-    const panelWidth = 320;
-    const panelHeight = 175;
-    const panelX = Math.max(20, this.scale.width - panelWidth - 24);
-    const panelY = 20;
+    const panelWidth = TOPIC_PANEL_WIDTH;
+    const panelHeight = TOPIC_PANEL_HEIGHT;
+    const panelX = Math.max(20, this.scale.width - panelWidth - TOPIC_PANEL_MARGIN);
+    const panelY = TOPIC_PANEL_TOP;
 
     const panel = this.add.container(panelX, panelY).setScrollFactor(0).setDepth(20000);
     this.topicPanel = panel;
@@ -419,7 +430,6 @@ export default class VillageScene extends Phaser.Scene {
     const bg = this.add.graphics();
     bg.fillStyle(0x10281e, 0.95).fillRoundedRect(0, 0, panelWidth, panelHeight, 10);
     bg.lineStyle(1.5, 0xd6c677, 0.9).strokeRoundedRect(0, 0, panelWidth, panelHeight, 10);
-
     const title = this.add.text(20, 18, displayName, {
       fontFamily: "Inter, sans-serif",
       fontSize: "18px",
@@ -438,10 +448,8 @@ export default class VillageScene extends Phaser.Scene {
       fontFamily: "sans-serif",
       fontSize: "18px",
       color: "#94a3b8",
-    }).setInteractive({ useHandCursor: true })
-      .on("pointerover", () => closeBtn.setColor("#ffffff"))
-      .on("pointerout", () => closeBtn.setColor("#94a3b8"))
-      .on("pointerdown", () => this.closeTopic(true));
+    });
+    this.topicCloseButton = closeBtn;
 
     const details = this.add.text(20, 74, `Progress: ${progressPoints} points\nRequired for next level: ${pointsToNext}`, {
       fontFamily: "Inter, sans-serif",
@@ -469,6 +477,51 @@ export default class VillageScene extends Phaser.Scene {
     panel.setAlpha(0);
     panel.setScale(0.95);
     this.tweens.add({ targets: panel, alpha: 1, scale: 1, duration: 160, ease: "Back.Out" });
+    this.syncTopicPanelCloseButton();
+  }
+
+  syncTopicPanelCloseButton() {
+    if (typeof window === "undefined") return;
+    const rect = this.getTopicCloseButtonRect();
+    window.dispatchEvent(new CustomEvent("codeforge:topic-panel-position", {
+      detail: rect,
+    }));
+  }
+
+  /**
+   * Screen-space rectangle of the drawn "✕", so the DOM hit target can sit
+   * exactly on top of it. The panel is zoomed by the camera, so the raw panel
+   * coordinates are not usable on their own.
+   */
+  getTopicCloseButtonRect() {
+    const panel = this.topicPanel;
+    const closeButton = this.topicCloseButton;
+    if (!panel || !closeButton) return null;
+
+    const camera = this.cameras.main;
+
+    return computeTopicCloseButtonRect({
+      panelX: panel.x,
+      panelY: panel.y,
+      panelScaleX: panel.scaleX,
+      panelScaleY: panel.scaleY,
+      localX: closeButton.x,
+      localY: closeButton.y,
+      zoomX: camera.zoomX,
+      zoomY: camera.zoomY,
+      originX: camera.width * camera.originX,
+      originY: camera.height * camera.originY,
+      cameraX: camera.x,
+      cameraY: camera.y,
+    });
+  }
+
+  update() {
+    // The camera zoom and the panel intro tween both move the close glyph, so
+    // the overlay has to follow the panel every frame.
+    if (this.topicPanel) {
+      this.syncTopicPanelCloseButton();
+    }
   }
 
   closeTopic(deselect = true) {
@@ -477,9 +530,11 @@ export default class VillageScene extends Phaser.Scene {
       this.selectedHalo?.destroy();
       this.selectedHalo = null;
     }
-    if (this.topicPanel) {
-      const panelToDestroy = this.topicPanel;
-      this.topicPanel = null;
+    const panelToDestroy = this.topicPanel;
+    this.topicPanel = null;
+    this.topicCloseButton = null;
+    this.syncTopicPanelCloseButton();
+    if (panelToDestroy) {
       this.tweens.add({
         targets: panelToDestroy,
         alpha: 0,
@@ -579,6 +634,10 @@ export default class VillageScene extends Phaser.Scene {
     if (this.stateListener && typeof window !== "undefined") {
       window.removeEventListener("codeforge:village-state", this.stateListener);
       this.stateListener = null;
+    }
+    if (this.closeTopicListener && typeof window !== "undefined") {
+      window.removeEventListener("codeforge:close-topic", this.closeTopicListener);
+      this.closeTopicListener = null;
     }
     this.input.removeAllListeners();
     this.input.setDefaultCursor("default");
