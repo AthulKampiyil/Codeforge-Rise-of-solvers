@@ -6,6 +6,11 @@
   background: #0f172a;
   color: #f8fafc;
   font-family: 'Inter', system-ui, sans-serif;
+  transition: grid-template-columns 220ms ease;
+}
+
+.village-layout.is-collapsed {
+  grid-template-columns: 52px 1fr;
 }
 
 .village-sidebar {
@@ -15,6 +20,52 @@
   overflow-y: auto;
   box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
   z-index: 10;
+  transition: padding 220ms ease;
+}
+
+.village-sidebar.is-collapsed {
+  padding: 12px 8px;
+}
+
+.village-sidebar.is-collapsed > *:not(.village-sidebar-head) {
+  display: none;
+}
+
+.village-sidebar-head {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.village-sidebar.is-collapsed .village-sidebar-head {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.village-sidebar-toggle {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #cbd5e1;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+
+.village-sidebar-toggle:hover {
+  color: #fbbf24;
+  border-color: #fbbf24;
+}
+
+.village-sidebar-toggle:focus-visible {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
 }
 
 .player-card {
@@ -190,10 +241,19 @@
   .village-layout {
     grid-template-columns: 1fr;
   }
+  .village-layout.is-collapsed {
+    grid-template-columns: 1fr;
+  }
   .village-sidebar {
     border-right: 0;
     border-bottom: 1px solid #334155;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  .village-sidebar.is-collapsed {
+    padding: 8px 12px;
+  }
+  .village-sidebar-head {
+    justify-content: center;
   }
   .village-stage {
     min-height: 480px;

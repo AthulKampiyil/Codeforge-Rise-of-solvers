@@ -2,10 +2,28 @@ import React from "react";
 import { SyncStatus } from "../../sync-status/components/SyncStatus";
 import "./village.css";
 
-export function VillageSidebar({ village, trophies = 0, attacks = "—" }) {
+export function VillageSidebar({
+  village,
+  trophies = 0,
+  attacks = "—",
+  collapsed = false,
+  onToggleCollapsed = () => {},
+}) {
   const topics = village?.topics || [];
   return (
-    <aside className="village-sidebar">
+    <aside className={`village-sidebar${collapsed ? " is-collapsed" : ""}`}>
+      <div className="village-sidebar-head">
+        <button
+          type="button"
+          className="village-sidebar-toggle"
+          onClick={onToggleCollapsed}
+          aria-expanded={!collapsed}
+          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+          title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+        >
+          {collapsed ? "›" : "‹"}
+        </button>
+      </div>
       <div className="player-card">
         <div className="avatar-chip">{(village?.username || "S").slice(0, 1).toUpperCase()}</div>
         <div><strong>{village?.username || "Solver"}</strong><span>Level {Math.max(1, Math.round(village?.average_level || 0))} · Strategist</span></div>

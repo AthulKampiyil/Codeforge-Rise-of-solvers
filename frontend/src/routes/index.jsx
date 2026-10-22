@@ -9,7 +9,6 @@ import RegisterPage from "../features/auth/pages/RegisterPage.jsx";
 import OnboardingPage from "../features/auth/pages/OnboardingPage.jsx";
 import AdminPage from "../features/admin/pages/AdminPage.jsx";
 import { VillageDashboard } from "../features/village/components/VillageDashboard.jsx";
-import WarMap from "../features/war-room/components/WarMap.jsx";
 import GuildDashboard from "../features/guild-territory/components/GuildDashboard.jsx";
 import WarRoom from "../features/war-room/components/WarRoom.jsx";
 import AttackPage from "../features/attacks/pages/AttackPage.jsx";
@@ -45,14 +44,6 @@ export const router = createBrowserRouter([
         element: (
           <RequireAuth>
             <VillageDashboard />
-          </RequireAuth>
-        ),
-      },
-      {
-        path: "war-map",
-        element: (
-          <RequireAuth>
-            <WarMap />
           </RequireAuth>
         ),
       },

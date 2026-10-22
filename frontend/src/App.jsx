@@ -10,7 +10,6 @@ import { realtimeClient } from "./shared/websocket/client.js";
 
 const NAV_LINKS = [
   { to: "/village", label: "Village" },
-  { to: "/war-map", label: "War Map" },
   { to: "/guild", label: "Guild" },
   { to: "/league", label: "Season" },
   { to: "/attack", label: "Events" },

@@ -8,24 +8,10 @@ export function useMyGuild() {
     });
 }
 
-export function useAllGuilds() {
-    return useQuery({
-        queryKey: ['allGuilds'],
-        queryFn: api.fetchAllGuilds
-    });
-}
-
 export function useJoinRequests(guildId, isOfficer) {
     return useQuery({
         queryKey: ['joinRequests', guildId],
         queryFn: () => api.fetchJoinRequests(guildId),
         enabled: !!guildId && isOfficer
-    });
-}
-
-export function useTerritoryZones() {
-    return useQuery({
-        queryKey: ['territory'],
-        queryFn: api.fetchTerritoryZones
     });
 }

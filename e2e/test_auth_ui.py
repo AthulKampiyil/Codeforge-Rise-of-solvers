@@ -29,7 +29,6 @@ HEADER_SIGN_IN = '//header//a[normalize-space()="Sign in"]'
 
 AUTHED_NAV_LABELS = (
     "Village",
-    "War Map",
     "Guild",
     "Season",
     "Events",

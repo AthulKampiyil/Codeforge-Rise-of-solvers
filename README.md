@@ -22,7 +22,7 @@ backend/
 frontend/
   src/
     features/          # mirrors backend modules 1:1 (see table below)
-    game/               # Phaser scenes — Village + War Map (shared across M3/M5)
+    game/               # Phaser scenes — Village (M3)
     shared/             # api client, websocket client, shared UI
 
 infra/                 # reverse proxy / deployment configs (staging, prod)
@@ -42,7 +42,7 @@ the same feature stays in one lane and PRs don't collide:
 | M2 | Coding Platform Sync | `backend/app/modules/m2_platform_sync` | `frontend/src/features/sync-status` |
 | M3 | Personal Code Village | `backend/app/modules/m3_village` | `frontend/src/features/village` + `game/scenes/VillageScene.js` |
 | M4 | Async Village Attacks | `backend/app/modules/m4_attacks` | `frontend/src/features/attacks` |
-| M5 | Guild & Territory Control | `backend/app/modules/m5_guild_territory` | `frontend/src/features/guild-territory` + `game/scenes/WarMapScene.js` |
+| M5 | Guild & Territory Control | `backend/app/modules/m5_guild_territory` | `frontend/src/features/guild-territory` |
 | M6 | Guild War Room | `backend/app/modules/m6_war_room` | `frontend/src/features/war-room` |
 | M7 | League & Trophy Progression | `backend/app/modules/m7_league_trophy` | `frontend/src/features/league` |
 | M8 | Notification & Realtime Gateway | `backend/app/modules/m8_notifications` | `frontend/src/shared/websocket` |

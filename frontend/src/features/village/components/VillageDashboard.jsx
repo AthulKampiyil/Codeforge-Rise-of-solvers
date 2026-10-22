@@ -5,9 +5,21 @@ import { useRealtimeEvent } from "../../../shared/websocket/client";
 import VillageScene from "../../../game/VillageScene";
 import { VillageSidebar } from "./VillageSidebar";
 
+const SIDEBAR_COLLAPSED_KEY = "codeforge.villageSidebarCollapsed";
+
+function readSidebarCollapsed() {
+  if (typeof window === "undefined") return false;
+  try {
+    return window.localStorage.getItem(SIDEBAR_COLLAPSED_KEY) === "true";
+  } catch {
+    return false;
+  }
+}
+
 export function VillageDashboard({ SceneComponent }) {
   const [village, setVillage] = useState(null);
   const [trophies, setTrophies] = useState(0);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(readSidebarCollapsed);
   const refresh = () =>
     getVillage()
       .then((data) => {
@@ -28,9 +40,22 @@ export function VillageDashboard({ SceneComponent }) {
   // App.jsx — this just subscribes to the event this screen cares about.
   useRealtimeEvent("VILLAGE_UPDATED", refresh);
 
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(SIDEBAR_COLLAPSED_KEY, String(sidebarCollapsed));
+    } catch {
+      // Storage unavailable (private mode): the sidebar just won't remember it.
+    }
+  }, [sidebarCollapsed]);
+
   return (
-    <main className="village-layout">
-      <VillageSidebar village={village} trophies={trophies} />
+    <main className={`village-layout${sidebarCollapsed ? " is-collapsed" : ""}`}>
+      <VillageSidebar
+        village={village}
+        trophies={trophies}
+        collapsed={sidebarCollapsed}
+        onToggleCollapsed={() => setSidebarCollapsed((collapsed) => !collapsed)}
+      />
       <section className="village-stage">
         {SceneComponent ? <SceneComponent village={village} /> : <VillageCanvas village={village} />}
       </section>

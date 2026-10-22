@@ -89,7 +89,7 @@ def driver(base_url):
         "--disable-dev-shm-usage",
         "--disable-gpu",
         # Phaser wants WebGL; without this the page falls back to software
-        # rendering and logs a deprecation on every village/war-map load.
+        # rendering and logs a deprecation on every village load.
         "--enable-unsafe-swiftshader",
     ):
         options.add_argument(argument)
